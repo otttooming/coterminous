@@ -1,0 +1,7 @@
+{
+  "name": "coterminous",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.4.0"
+  }
+}
