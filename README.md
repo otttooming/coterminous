@@ -4,6 +4,13 @@
 
 ## Packages
 
-* Ecommerce frontend
+- Ecommerce frontend
 
-* UI components
+- UI components
+
+## Structure
+
+- `[package-name]-frontend` - frontend services
+- `[package-name]-backend` - backend services
+- `[package-name]-library` - reusable library
+- `[package-name]-design` - design resources
