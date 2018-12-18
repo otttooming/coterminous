@@ -1,5 +1,5 @@
-import * as React from "react";
-import { TextInputStyle } from "./textInput.style";
+import * as React from 'react';
+import { TextInputStyle } from './textInput.style';
 
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
@@ -9,18 +9,18 @@ import {
   StyledComponentClass, // Required for tsconfig declaration export
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
   Styles, // Required for tsconfig declaration export
-} from "coterminous-styled";
+} from 'coterminous-styled';
 import {
   ControlWrapperInternalProps, // Required due to TS export requirements. https://github.com/Microsoft/TypeScript/issues/9944
   ControlWrapper,
   ControlWrapperProps,
-} from "../ControlWrapper/ControlWrapper";
-import { extractControlWrapperProps } from "../ControlWrapper/controlWrapperHelper";
+} from '../ControlWrapper/ControlWrapper';
+import { extractControlWrapperProps } from '../ControlWrapper/controlWrapperHelper';
 
 // Enum must be exported or 'has or is using private name' error will occur
 export enum TagName {
-  Input = "input",
-  TextArea = "textarea",
+  Input = 'input',
+  TextArea = 'textarea',
 }
 
 export interface Props {

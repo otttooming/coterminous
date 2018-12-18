@@ -9,7 +9,7 @@ import {
   InterpolationFunction, // Required for tsconfig declaration export
   ThemeProps, // Required for tsconfig declaration export
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
-} from "coterminous-styled";
+} from 'coterminous-styled';
 
 const common = css`
   margin: 0 0 ${props => props.theme.spacing.medium} 0;

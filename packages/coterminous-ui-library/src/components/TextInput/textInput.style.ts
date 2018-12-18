@@ -9,7 +9,7 @@ import {
   InterpolationFunction, // Required for tsconfig declaration export
   ThemeProps, // Required for tsconfig declaration export
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
-} from "coterminous-styled";
+} from 'coterminous-styled';
 
 const reset = css`
   margin: 0;

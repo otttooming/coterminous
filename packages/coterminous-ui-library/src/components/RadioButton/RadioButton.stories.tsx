@@ -1,5 +1,5 @@
-import * as React from "react";
-import { storiesOf } from "@storybook/react";
+import * as React from 'react';
+import { storiesOf } from '@storybook/react';
 import {
   GlobalStyle,
   ThemeProvider,
@@ -11,11 +11,11 @@ import {
   CheckboxField,
   FormContext,
   RadioButtonField,
-} from "coterminous-styled";
+} from 'coterminous-styled';
 
-storiesOf("RadioButton", module)
-  .addDecorator(story => <div style={{ background: "#fff" }}>{story()}</div>)
-  .add("RadioButtonField", () => (
+storiesOf('RadioButton', module)
+  .addDecorator(story => <div style={{ background: '#fff' }}>{story()}</div>)
+  .add('RadioButtonField', () => (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
@@ -27,7 +27,7 @@ storiesOf("RadioButton", module)
               name="test_field"
               label="Label title"
               inputLabel="Input label"
-              value={{ test: "value" }}
+              value={{ test: 'value' }}
             />
 
             <RadioButtonField

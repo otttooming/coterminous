@@ -1,6 +1,6 @@
-import * as React from "react";
-import { LocationChangeProps } from "../../common/products/typings";
-import { Heading } from "coterminous-styled";
+import * as React from 'react';
+import { LocationChangeProps } from '../../common/products/typings';
+import { Heading } from 'coterminous-styled';
 
 interface Props {
   onLocationChange?: (props: LocationChangeProps) => void;
@@ -29,7 +29,7 @@ const LandingView = ({ onLocationChange }: Props) => {
             <p className="simple-image" />
             <figure
               className="aspect-ratio"
-              style={{ paddingBottom: "30.081300813008%" }}
+              style={{ paddingBottom: '30.081300813008%' }}
             >
               <img
                 width={1230}

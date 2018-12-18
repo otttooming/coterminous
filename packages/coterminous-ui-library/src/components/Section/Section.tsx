@@ -1,5 +1,5 @@
-import * as React from "react";
-import { sectionStyle } from "./section.style";
+import * as React from 'react';
+import { sectionStyle } from './section.style';
 
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
@@ -9,7 +9,7 @@ import {
   StyledComponentClass, // Required for tsconfig declaration export
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
   Styles, // Required for tsconfig declaration export
-} from "coterminous-styled";
+} from 'coterminous-styled';
 
 export const Section = styled.section`
   ${sectionStyle};

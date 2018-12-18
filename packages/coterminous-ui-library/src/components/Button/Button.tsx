@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
@@ -9,7 +9,7 @@ import {
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
   Styles, // Required for tsconfig declaration export
   css,
-} from "coterminous-styled";
+} from 'coterminous-styled';
 
 const StyledButton = css`
   border: 0;

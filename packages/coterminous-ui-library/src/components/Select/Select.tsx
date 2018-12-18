@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Manager, Reference, Popper } from "react-popper";
+import * as React from 'react';
+import { Manager, Reference, Popper } from 'react-popper';
 
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
@@ -11,20 +11,20 @@ import {
   Styles, // Required for tsconfig declaration export
   css,
   Popover,
-} from "coterminous-styled";
+} from 'coterminous-styled';
 import {
   ControlWrapperInternalProps, // Required due to TS export requirements. https://github.com/Microsoft/TypeScript/issues/9944
   ControlWrapper,
   ControlWrapperProps,
-} from "../ControlWrapper/ControlWrapper";
-import { extractControlWrapperProps } from "../ControlWrapper/controlWrapperHelper";
+} from '../ControlWrapper/ControlWrapper';
+import { extractControlWrapperProps } from '../ControlWrapper/controlWrapperHelper';
 import Downshift, {
   GetItemPropsOptions,
   ControllerStateAndHelpers,
   DownshiftState,
   StateChangeOptions,
-} from "downshift";
-import { selectInputStyle } from "./select.style";
+} from 'downshift';
+import { selectInputStyle } from './select.style';
 
 export interface SelectGroupProps {
   label: string;
@@ -61,7 +61,7 @@ export interface SelectGroupedNodes {
 }
 
 export enum SELECT_GROUP {
-  NOT_GROUPED = "NOT_GROUPED",
+  NOT_GROUPED = 'NOT_GROUPED',
 }
 
 export class SelectBase extends React.Component<SelectProps, State> {
@@ -77,7 +77,7 @@ export class SelectBase extends React.Component<SelectProps, State> {
     return this.renderControlWrapper(
       <Downshift
         onChange={this.handleDownshiftChange}
-        itemToString={item => (!!item ? item.label : "")}
+        itemToString={item => (!!item ? item.label : '')}
         stateReducer={this.stateReducer}
       >
         {options => {
@@ -210,8 +210,8 @@ export class SelectBase extends React.Component<SelectProps, State> {
           index,
           item: selectItem,
           style: {
-            backgroundColor: highlightedIndex === index ? "lightgray" : "white",
-            fontWeight: selectedItem === selectItem ? "bold" : "normal",
+            backgroundColor: highlightedIndex === index ? 'lightgray' : 'white',
+            fontWeight: selectedItem === selectItem ? 'bold' : 'normal',
           },
         })}
       >
@@ -286,7 +286,7 @@ export class SelectBase extends React.Component<SelectProps, State> {
 
     searchTermLabels.push(label);
 
-    return !!searchTermLabels.join(" ").match(new RegExp(inputValue, "gi"));
+    return !!searchTermLabels.join(' ').match(new RegExp(inputValue, 'gi'));
   };
 }
 

@@ -1,5 +1,5 @@
-import * as Routing from "../services/routing/routing";
-import { getMainMenu, getSideMenu } from "../services/menuApi/menuApi";
+import * as Routing from '../services/routing/routing';
+import { getMainMenu, getSideMenu } from '../services/menuApi/menuApi';
 
 import {
   ORDER_SLUGS,
@@ -12,49 +12,49 @@ import {
   CATEGORY_SLUGS,
   VIEW_NAMES,
   PAGE_SLUGS,
-} from "../common/products/constants";
+} from '../common/products/constants';
 
-import * as React from "react";
-import "isomorphic-unfetch";
-import Main from "../layouts/Main";
+import * as React from 'react';
+import 'isomorphic-unfetch';
+import Main from '../layouts/Main';
 
-import * as ReactPaginate from "react-paginate";
-import ProductsListing from "../components/productsListing/ProductsListing";
+import * as ReactPaginate from 'react-paginate';
+import ProductsListing from '../components/productsListing/ProductsListing';
 import CategoriesListing, {
   CategoryProps,
-} from "../components/categoriesListing/CategoriesListing";
-import CheckoutView from "../components/checkoutView/CheckoutView";
-import LandingView from "../components/landingView/LandingView";
+} from '../components/categoriesListing/CategoriesListing';
+import CheckoutView from '../components/checkoutView/CheckoutView';
+import LandingView from '../components/landingView/LandingView';
 
-import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
-import ProductItem from "../components/productItem/ProductItem";
-import Loader from "../components/loader/Loader";
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+import ProductItem from '../components/productItem/ProductItem';
+import Loader from '../components/loader/Loader';
 
 import {
   FormValues,
   LocationChangeProps,
   ProductProps,
   ShoppingCartPrice,
-} from "../common/products/typings";
+} from '../common/products/typings';
 
-import { initStore } from "../store";
-import PageView from "../components/pageView/PageView";
-import { PageProps } from "../services/pageApi/pageApi";
-import { getMultipleSingleProducts } from "../services/productApi/singleProductApi";
-import { calculateShoppingCartPrice } from "../services/pricing/pricing";
+import { initStore } from '../store';
+import PageView from '../components/pageView/PageView';
+import { PageProps } from '../services/pageApi/pageApi';
+import { getMultipleSingleProducts } from '../services/productApi/singleProductApi';
+import { calculateShoppingCartPrice } from '../services/pricing/pricing';
 import {
   buildOrder,
   handleCreateOrderRequest,
-} from "../services/orderApi/helpers";
-import { createOrder } from "../services/orderApi/orderApi";
+} from '../services/orderApi/helpers';
+import { createOrder } from '../services/orderApi/orderApi';
 import {
   CreateOrderResponse,
   WCRestApiError,
-} from "../common/woocommerce/typings";
-import OrderView from "../components/orderView/OrderView";
-import { ShippingLocations } from "../services/shippingApi/shippingApi";
-import { connect } from "react-redux";
+} from '../common/woocommerce/typings';
+import OrderView from '../components/orderView/OrderView';
+import { ShippingLocations } from '../services/shippingApi/shippingApi';
+import { connect } from 'react-redux';
 
 interface Props {
   categories: CategoryProps[];
@@ -88,7 +88,7 @@ class IndexPage extends React.Component<Props, State> {
     const categories = await getSideMenu();
 
     const navRouting: LocationChangeProps = Routing.createNavRoutingFromQuery(
-      query
+      query,
     );
 
     const initialProps: State = {
@@ -134,7 +134,7 @@ class IndexPage extends React.Component<Props, State> {
     const query = { path: window.location.pathname };
 
     const navRouting: LocationChangeProps = Routing.createNavRoutingFromQuery(
-      query
+      query,
     );
 
     this.handleLocationChange(navRouting);
@@ -185,14 +185,14 @@ class IndexPage extends React.Component<Props, State> {
       {
         productsInCart: products,
       },
-      () => this.calculatePrice(nextProps)
+      () => this.calculatePrice(nextProps),
     );
   };
 
   calculatePrice = (nextProps: Props) => {
     const price = calculateShoppingCartPrice(
       nextProps.formValues,
-      this.state.productsInCart
+      this.state.productsInCart,
     );
 
     this.setState({
@@ -209,7 +209,7 @@ class IndexPage extends React.Component<Props, State> {
     const order = buildOrder(formValues, productsInCart);
 
     const response: CreateOrderResponse | WCRestApiError = await createOrder(
-      order
+      order,
     );
 
     const nextState = handleCreateOrderRequest(response, this.state);
@@ -249,19 +249,19 @@ class IndexPage extends React.Component<Props, State> {
             navRouting.view === CATEGORY_SLUGS.DEFAULT
           ) && (
             <ReactPaginate
-              previousLabel={"<"}
-              nextLabel={">"}
+              previousLabel={'<'}
+              nextLabel={'>'}
               breakLabel={<a href="">...</a>}
-              breakClassName={"pagination__btn button medium"}
+              breakClassName={'pagination__btn button medium'}
               pageCount={totalPages}
               marginPagesDisplayed={2}
               pageRangeDisplayed={5}
               onPageChange={this.handlePagination}
-              containerClassName={"pagination"}
-              pageClassName={"pagination__btn button medium"}
-              nextClassName={"pagination__btn button medium"}
-              previousClassName={"pagination__btn button medium"}
-              activeClassName={"active"}
+              containerClassName={'pagination'}
+              pageClassName={'pagination__btn button medium'}
+              nextClassName={'pagination__btn button medium'}
+              previousClassName={'pagination__btn button medium'}
+              activeClassName={'active'}
             />
           )
         }

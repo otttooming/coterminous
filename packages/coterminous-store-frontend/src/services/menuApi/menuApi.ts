@@ -1,10 +1,10 @@
-import * as api from "../api/Api";
-import { fetchRequest } from "../fetchApi/fetchApi";
+import * as api from '../api/Api';
+import { fetchRequest } from '../fetchApi/fetchApi';
 
 export async function getMainMenu() {
   const url = api.buildUrl(
-    { paths: [api.WPMENUS, "menus", api.WP_MAIN_MENU_ID.toString()] },
-    api.SITEURL
+    { paths: [api.WPMENUS, 'menus', api.WP_MAIN_MENU_ID.toString()] },
+    api.SITEURL,
   );
 
   const response = await fetchRequest({ url });
@@ -22,8 +22,8 @@ export async function getMainMenu() {
 
 export async function getSideMenu() {
   const url = api.buildUrl(
-    { paths: [api.WC, "products", "categories"], parameters: ["per_page=100"] },
-    api.SITEURL
+    { paths: [api.WC, 'products', 'categories'], parameters: ['per_page=100'] },
+    api.SITEURL,
   );
 
   const response = await fetchRequest({ url });

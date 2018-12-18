@@ -1,7 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 /* tslint:disable */
-import * as styledComponents from "styled-components";
+import * as styledComponents from 'styled-components';
 
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
@@ -12,10 +12,10 @@ import {
   StyledComponentClass, // Required for tsconfig declaration export
   InterpolationFunction, // Required for tsconfig declaration export
   ThemeProps, // Required for tsconfig declaration export
-} from "styled-components";
+} from 'styled-components';
 /* tslint:enable */
 
-import { CoterminousStyledThemeProps } from "./theme";
+import { CoterminousStyledThemeProps } from './theme';
 
 const {
   default: styled,

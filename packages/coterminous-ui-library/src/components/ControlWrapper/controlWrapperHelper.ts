@@ -1,4 +1,4 @@
-import { ControlWrapperProps } from "./ControlWrapper";
+import { ControlWrapperProps } from './ControlWrapper';
 
 export function extractControlWrapperProps(
   props: Partial<ControlWrapperProps>,

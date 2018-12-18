@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
@@ -9,8 +9,8 @@ import {
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
   Styles, // Required for tsconfig declaration export
   injectGlobal,
-} from "coterminous-styled";
-import { globalStyleCss } from "./globalStyle.style";
+} from 'coterminous-styled';
+import { globalStyleCss } from './globalStyle.style';
 
 /* tslint:disable */
 injectGlobal`
@@ -22,6 +22,6 @@ export interface Props {}
 
 export class GlobalStyle extends React.Component<Props, {}> {
   render() {
-    return "";
+    return '';
   }
 }

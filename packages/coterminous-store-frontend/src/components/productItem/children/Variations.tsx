@@ -1,9 +1,9 @@
-import * as React from "react";
-import Icon from "../../../components/icon/Icon";
-import Quantity from "../../../components/form/Quantity";
-import styled from "styled-components";
-import { SingleProductVariationProps } from "../../../services/productApi/singleProductApi";
-import { CartItemProps } from "../../../common/products/typings";
+import * as React from 'react';
+import Icon from '../../../components/icon/Icon';
+import Quantity from '../../../components/form/Quantity';
+import styled from 'styled-components';
+import { SingleProductVariationProps } from '../../../services/productApi/singleProductApi';
+import { CartItemProps } from '../../../common/products/typings';
 
 const VariationItem = styled.li`
   list-style: none;
@@ -44,7 +44,7 @@ const Variations = (props: any) => {
           /> */}
         </VariationItem>
       );
-    }
+    },
   );
 
   return <ul className="product-variations">{items}</ul>;

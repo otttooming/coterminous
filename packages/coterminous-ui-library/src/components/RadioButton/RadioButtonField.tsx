@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   FormContext,
   FormState,
@@ -6,8 +6,8 @@ import {
   ExternalWithFormConsumerProps,
   Checkbox,
   CheckboxProps,
-} from "coterminous-styled";
-import { CheckboxType } from "../Checkbox/Checkbox";
+} from 'coterminous-styled';
+import { CheckboxType } from '../Checkbox/Checkbox';
 
 export interface Props {}
 interface State {}

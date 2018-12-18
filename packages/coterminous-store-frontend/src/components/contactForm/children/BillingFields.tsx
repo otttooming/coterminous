@@ -1,5 +1,5 @@
-import * as React from "react";
-import { TextInputField, Heading, Section } from "coterminous-styled";
+import * as React from 'react';
+import { TextInputField, Heading, Section } from 'coterminous-styled';
 
 const BillingFields = () => {
   return (

@@ -1,10 +1,10 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   CheckboxStyle,
   InputWrapperStyle,
   HiddenInput,
   CheckboxLabelWrapper,
-} from "./checkbox.style";
+} from './checkbox.style';
 
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
@@ -15,17 +15,17 @@ import {
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
   Styles,
   CSSIcons, // Required for tsconfig declaration export
-} from "coterminous-styled";
+} from 'coterminous-styled';
 import {
   ControlWrapperInternalProps, // Required due to TS export requirements. https://github.com/Microsoft/TypeScript/issues/9944
   ControlWrapper,
   ControlWrapperProps,
-} from "../ControlWrapper/ControlWrapper";
-import { extractControlWrapperProps } from "../ControlWrapper/controlWrapperHelper";
+} from '../ControlWrapper/ControlWrapper';
+import { extractControlWrapperProps } from '../ControlWrapper/controlWrapperHelper';
 
 export enum CheckboxType {
-  CHECKBOX = "checkbox",
-  RADIO = "radio",
+  CHECKBOX = 'checkbox',
+  RADIO = 'radio',
 }
 
 export interface Props {

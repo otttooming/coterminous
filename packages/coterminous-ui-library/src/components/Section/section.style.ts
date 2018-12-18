@@ -1,4 +1,4 @@
-import { border } from "./../../common/styles/constants";
+import { border } from './../../common/styles/constants';
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
 // https://github.com/Microsoft/TypeScript/issues/9944
@@ -10,7 +10,7 @@ import {
   InterpolationFunction, // Required for tsconfig declaration export
   ThemeProps, // Required for tsconfig declaration export
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
-} from "coterminous-styled";
+} from 'coterminous-styled';
 
 const common = css`
   background-color: ${props => props.theme.background.section};

@@ -21,11 +21,11 @@ export interface ColorProps {
 }
 
 export const color: ColorProps = {
-  dark: "#000",
-  red: "#a30000",
-  warm: "#ffc000",
-  white: "#fff",
-  green: "#31e184",
+  dark: '#000',
+  red: '#a30000',
+  warm: '#ffc000',
+  white: '#fff',
+  green: '#31e184',
 };
 
 export interface BackgroundProps {
@@ -34,9 +34,9 @@ export interface BackgroundProps {
   section: string;
 }
 export const background: BackgroundProps = {
-  main: "rgba(186, 0, 251, .15)",
-  input: "#9109c7",
-  section: "#670b88",
+  main: 'rgba(186, 0, 251, .15)',
+  input: '#9109c7',
+  section: '#670b88',
 };
 
 export interface BorderProps {
@@ -50,7 +50,7 @@ export interface BorderRadiusProps {
 }
 
 export const border: BorderProps = {
-  radius: { small: "4px", medium: "16px", large: "24px" },
+  radius: { small: '4px', medium: '16px', large: '24px' },
 };
 
 export interface SpacingProps {
@@ -115,4 +115,4 @@ export interface ShadowProps {
   main: string;
 }
 
-export const shadow: ShadowProps = { main: "none" };
+export const shadow: ShadowProps = { main: 'none' };

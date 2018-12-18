@@ -1,12 +1,12 @@
-import * as React from "react";
-import Head from "next/head";
-import CartButton from "./children/CartButton";
-import MainMenu from "./children/MainMenu";
-import Logo from "./children/Logo";
+import * as React from 'react';
+import Head from 'next/head';
+import CartButton from './children/CartButton';
+import MainMenu from './children/MainMenu';
+import Logo from './children/Logo';
 import {
   LocationChangeProps,
   ShoppingCartPrice,
-} from "../../common/products/typings";
+} from '../../common/products/typings';
 
 interface Props {
   title: string;
@@ -19,7 +19,7 @@ const Header = ({ title, menuItems, handleLocationChange, price }: Props) => {
   return (
     <header className="container">
       <Head>
-        <title>{!!title ? title : ""}</title>
+        <title>{!!title ? title : ''}</title>
       </Head>
 
       <div className="row header middle-xs">

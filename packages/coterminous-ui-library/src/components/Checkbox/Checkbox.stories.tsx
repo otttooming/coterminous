@@ -1,5 +1,5 @@
-import * as React from "react";
-import { storiesOf } from "@storybook/react";
+import * as React from 'react';
+import { storiesOf } from '@storybook/react';
 import {
   GlobalStyle,
   ThemeProvider,
@@ -10,11 +10,11 @@ import {
   Section,
   CheckboxField,
   FormContext,
-} from "coterminous-styled";
+} from 'coterminous-styled';
 
-storiesOf("Checkbox", module)
-  .addDecorator(story => <div style={{ background: "#fff" }}>{story()}</div>)
-  .add("CheckboxField", () => (
+storiesOf('Checkbox', module)
+  .addDecorator(story => <div style={{ background: '#fff' }}>{story()}</div>)
+  .add('CheckboxField', () => (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />

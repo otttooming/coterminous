@@ -1,6 +1,6 @@
-import * as React from "react";
-import { FormContext, FormState } from "./Form";
-import { Subtract } from "utility-types";
+import * as React from 'react';
+import { FormContext, FormState } from './Form';
+import { Subtract } from 'utility-types';
 
 export interface ExternalWithFormConsumerProps {
   name: string;

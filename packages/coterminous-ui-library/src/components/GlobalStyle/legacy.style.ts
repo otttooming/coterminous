@@ -9,54 +9,54 @@ import {
   InterpolationFunction, // Required for tsconfig declaration export
   ThemeProps, // Required for tsconfig declaration export
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
-} from "coterminous-styled";
-import { typeface, color } from "../../common/styles/constants";
+} from 'coterminous-styled';
+import { typeface, color } from '../../common/styles/constants';
 
 export const legacy = css`
   @font-face {
-    font-family: "Oswald";
-    src: url("/static/fonts/oswald-extralight.woff2") format("woff2"),
-      url("/static/fonts/oswald-extralight.woff") format("woff");
+    font-family: 'Oswald';
+    src: url('/static/fonts/oswald-extralight.woff2') format('woff2'),
+      url('/static/fonts/oswald-extralight.woff') format('woff');
     font-style: normal;
     font-weight: 200;
   }
 
   @font-face {
-    font-family: "Oswald";
-    src: url("/static/fonts/oswald-light.woff2") format("woff2"),
-      url("/static/fonts/oswald-light.woff") format("woff");
+    font-family: 'Oswald';
+    src: url('/static/fonts/oswald-light.woff2') format('woff2'),
+      url('/static/fonts/oswald-light.woff') format('woff');
     font-style: normal;
     font-weight: 300;
   }
 
   @font-face {
-    font-family: "Oswald";
-    src: url("/static/fonts/oswald-regular.woff2") format("woff2"),
-      url("/static/fonts/oswald-regular.woff") format("woff");
+    font-family: 'Oswald';
+    src: url('/static/fonts/oswald-regular.woff2') format('woff2'),
+      url('/static/fonts/oswald-regular.woff') format('woff');
     font-style: normal;
     font-weight: 400;
   }
 
   @font-face {
-    font-family: "Oswald";
-    src: url("/static/fonts/oswald-medium.woff2") format("woff2"),
-      url("/static/fonts/oswald-medium.woff") format("woff");
+    font-family: 'Oswald';
+    src: url('/static/fonts/oswald-medium.woff2') format('woff2'),
+      url('/static/fonts/oswald-medium.woff') format('woff');
     font-style: normal;
     font-weight: 500;
   }
 
   @font-face {
-    font-family: "Oswald";
-    src: url("/static/fonts/oswald-demibold.woff2") format("woff2"),
-      url("/static/fonts/oswald-demibold.woff") format("woff");
+    font-family: 'Oswald';
+    src: url('/static/fonts/oswald-demibold.woff2') format('woff2'),
+      url('/static/fonts/oswald-demibold.woff') format('woff');
     font-style: normal;
     font-weight: 600;
   }
 
   @font-face {
-    font-family: "Oswald";
-    src: url("/static/fonts/oswald-bold.woff2") format("woff2"),
-      url("/static/fonts/oswald-bold.woff") format("woff");
+    font-family: 'Oswald';
+    src: url('/static/fonts/oswald-bold.woff2') format('woff2'),
+      url('/static/fonts/oswald-bold.woff') format('woff');
     font-style: normal;
     font-weight: 700;
   }
@@ -81,7 +81,7 @@ export const legacy = css`
     overflow-x: hidden;
     margin: 0;
     text-shadow: none;
-    font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
     color: #fff;
     font-size: 0.875rem;
   }
@@ -113,7 +113,7 @@ export const legacy = css`
 
   p,
   td {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
   }
 
   p {
@@ -135,7 +135,7 @@ export const legacy = css`
   table {
     width: 100%;
     border-collapse: collapse;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
   }
 
   tr.alt {
@@ -193,19 +193,19 @@ export const legacy = css`
     margin: 8px 0;
     padding: 0;
   }
-  input[type="text"] {
+  input[type='text'] {
     min-height: 30px;
   }
-  input[type="number"] {
+  input[type='number'] {
     text-align: center;
   }
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
-  input[type="checkbox"],
-  input[type="radio"] {
+  input[type='checkbox'],
+  input[type='radio'] {
     position: relative;
     width: 20px;
     height: 20px;
@@ -217,16 +217,16 @@ export const legacy = css`
     text-shadow: none;
     -webkit-appearance: none;
   }
-  input[type="checkbox"]:checked,
-  input[type="radio"]:checked {
+  input[type='checkbox']:checked,
+  input[type='radio']:checked {
     background: #00b31a;
   }
-  input[type="checkbox"]:checked:after,
-  input[type="radio"]:checked:after {
+  input[type='checkbox']:checked:after,
+  input[type='radio']:checked:after {
     position: absolute;
     top: 50%;
     left: 50%;
-    content: "✔";
+    content: '✔';
     transform: translate3d(-50%, -50%, 0);
   }
 
@@ -280,7 +280,7 @@ export const legacy = css`
     left: 50%;
     display: block;
     width: 75%;
-    content: "";
+    content: '';
     transform: translate3d(-50%, 0, 0);
     border-top: 3px solid #340644;
     border-radius: 4px;
@@ -293,7 +293,7 @@ export const legacy = css`
   }
 
   address {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
   }
 
   blockquote {
@@ -306,7 +306,7 @@ export const legacy = css`
     padding-left: 48px;
   }
   blockquote:before {
-    content: "\“";
+    content: '\“';
     position: absolute;
     left: 16px;
     font-size: 40px;
@@ -328,7 +328,7 @@ export const legacy = css`
     border-radius: 4px;
     background: linear-gradient(to left, #9f2af8, #f82a53);
     box-shadow: none;
-    font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
     line-height: normal;
   }
   .product__price-block .amount {
@@ -349,7 +349,7 @@ export const legacy = css`
   }
 
   .content__common {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     text-shadow: none;
   }
 
@@ -1639,12 +1639,12 @@ export const legacy = css`
   }
   .addto td {
     padding: 0;
-    font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
   }
   .addto td.value {
     text-align: right;
   }
-  .addto input[type="submit"] {
+  .addto input[type='submit'] {
     display: none;
   }
   .addto .qty-block {
@@ -1885,7 +1885,7 @@ export const legacy = css`
     background: linear-gradient(45deg, #ff00f6, #00a99d);
     box-shadow: none;
     text-shadow: none;
-    font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
     font-size: 0.875em;
     line-height: 1.5;
     -webkit-appearance: none;
@@ -2379,9 +2379,9 @@ export const legacy = css`
     box-shadow: none;
   }
 
-  .checkout input[type="email"],
-  .checkout input[type="tel"],
-  .checkout input[type="text"] {
+  .checkout input[type='email'],
+  .checkout input[type='tel'],
+  .checkout input[type='text'] {
     width: 50%;
   }
 
@@ -2426,7 +2426,7 @@ export const legacy = css`
   .pswp__top-bar .pswp__button,
   .pswp__button--arrow--left:before,
   .pswp__button--arrow--right:before {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjY0IiBoZWlnaHQ9Ijg4IiB2aWV3Qm94PSIwIDAgMjY0IDg4 IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5kZWZh dWx0LXNraW4gMjwvdGl0bGU+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVu b2RkIj48cGF0aCBkPSJNNjcuMDAyIDU5LjV2My43NjhjLTYuMzA3Ljg0LTkuMTg0 IDUuNzUtMTAuMDAyIDkuNzMyIDIuMjItMi44MyA1LjU2NC01LjA5OCAxMC4wMDIt NS4wOThWNzEuNUw3MyA2NS41ODUgNjcuMDAyIDU5LjV6TTEzIDI5di01aDJ2M2gz djJoLTV6bTAtMTRoNXYyaC0zdjNoLTJ2LTV6bTE4IDB2NWgtMnYtM2gtM3YtMmg1 em0wIDE0aC01di0yaDN2LTNoMnY1em0zMS01djVoLTJ2LTNoLTN2LTJoNXptMC00 aC01di0yaDN2LTNoMnY1em04IDB2LTVoMnYzaDN2MmgtNXptMCA0aDV2MmgtM3Yz aC0ydi01ek0yMC41ODYgNjZsLTUuNjU2LTUuNjU2IDEuNDE0LTEuNDE0TDIyIDY0 LjU4Nmw1LjY1Ni01LjY1NiAxLjQxNCAxLjQxNEwyMy40MTQgNjZsNS42NTYgNS42 NTYtMS40MTQgMS40MTRMMjIgNjcuNDE0bC01LjY1NiA1LjY1Ni0xLjQxNC0xLjQx NEwyMC41ODYgNjZ6bTkxLjItLjk3TDExMCA2My41bDMtMy41aC0xMHYtMmgxMGwt My0zLjUgMS43ODUtMS40NjhMMTE3IDU5bC01LjIxNSA2LjAzem00MC40MyAwTDE1 NCA2My41bC0zLTMuNWgxMHYtMmgtMTBsMy0zLjUtMS43ODUtMS40NjhMMTQ3IDU5 bDUuMjE1IDYuMDN6bTguNzQtMzYuNDg3bC0zLjI1LTMuMjUtMS40MTIgMS40MTQg My4yNSAzLjI1eiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0xNTIuNSAyN2E1LjUg NS41IDAgMCAwIDAtMTEgNS41IDUuNSAwIDAgMCAwIDExeiIgc3Ryb2tlPSIjZmZm IiBzdHJva2Utd2lkdGg9IjEuNSIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xNTAg MjFoNXYxaC01em0tMzMuMDQzIDcuNTQzbC0xLjQxNCAxLjQxNC0zLjI1LTMuMjUg MS40MTQtMS40MTQgMy4yNSAzLjI1eiIvPjxwYXRoIGQ9Ik0xMDguNSAyN2E1LjUg NS41IDAgMCAwIDAtMTEgNS41IDUuNSAwIDAgMCAwIDExeiIgc3Ryb2tlPSIjZmZm IiBzdHJva2Utd2lkdGg9IjEuNSIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xMDYg MjFoNXYxaC01eiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xMDkuMDQzIDE5LjAw OGwtLjA4NSA1LTEtLjAxNy4wODUtNXoiLz48L2c+PC9zdmc+") !important;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjY0IiBoZWlnaHQ9Ijg4IiB2aWV3Qm94PSIwIDAgMjY0IDg4 IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5kZWZh dWx0LXNraW4gMjwvdGl0bGU+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVu b2RkIj48cGF0aCBkPSJNNjcuMDAyIDU5LjV2My43NjhjLTYuMzA3Ljg0LTkuMTg0 IDUuNzUtMTAuMDAyIDkuNzMyIDIuMjItMi44MyA1LjU2NC01LjA5OCAxMC4wMDIt NS4wOThWNzEuNUw3MyA2NS41ODUgNjcuMDAyIDU5LjV6TTEzIDI5di01aDJ2M2gz djJoLTV6bTAtMTRoNXYyaC0zdjNoLTJ2LTV6bTE4IDB2NWgtMnYtM2gtM3YtMmg1 em0wIDE0aC01di0yaDN2LTNoMnY1em0zMS01djVoLTJ2LTNoLTN2LTJoNXptMC00 aC01di0yaDN2LTNoMnY1em04IDB2LTVoMnYzaDN2MmgtNXptMCA0aDV2MmgtM3Yz aC0ydi01ek0yMC41ODYgNjZsLTUuNjU2LTUuNjU2IDEuNDE0LTEuNDE0TDIyIDY0 LjU4Nmw1LjY1Ni01LjY1NiAxLjQxNCAxLjQxNEwyMy40MTQgNjZsNS42NTYgNS42 NTYtMS40MTQgMS40MTRMMjIgNjcuNDE0bC01LjY1NiA1LjY1Ni0xLjQxNC0xLjQx NEwyMC41ODYgNjZ6bTkxLjItLjk3TDExMCA2My41bDMtMy41aC0xMHYtMmgxMGwt My0zLjUgMS43ODUtMS40NjhMMTE3IDU5bC01LjIxNSA2LjAzem00MC40MyAwTDE1 NCA2My41bC0zLTMuNWgxMHYtMmgtMTBsMy0zLjUtMS43ODUtMS40NjhMMTQ3IDU5 bDUuMjE1IDYuMDN6bTguNzQtMzYuNDg3bC0zLjI1LTMuMjUtMS40MTIgMS40MTQg My4yNSAzLjI1eiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0xNTIuNSAyN2E1LjUg NS41IDAgMCAwIDAtMTEgNS41IDUuNSAwIDAgMCAwIDExeiIgc3Ryb2tlPSIjZmZm IiBzdHJva2Utd2lkdGg9IjEuNSIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xNTAg MjFoNXYxaC01em0tMzMuMDQzIDcuNTQzbC0xLjQxNCAxLjQxNC0zLjI1LTMuMjUg MS40MTQtMS40MTQgMy4yNSAzLjI1eiIvPjxwYXRoIGQ9Ik0xMDguNSAyN2E1LjUg NS41IDAgMCAwIDAtMTEgNS41IDUuNSAwIDAgMCAwIDExeiIgc3Ryb2tlPSIjZmZm IiBzdHJva2Utd2lkdGg9IjEuNSIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xMDYg MjFoNXYxaC01eiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xMDkuMDQzIDE5LjAw OGwtLjA4NSA1LTEtLjAxNy4wODUtNXoiLz48L2c+PC9zdmc+') !important;
     background-size: 264px 88px;
   }
 
@@ -2774,7 +2774,7 @@ export const legacy = css`
 
   .pswp__button--arrow--left:before,
   .pswp__button--arrow--right:before {
-    content: "";
+    content: '';
     top: 35px;
     background-color: rgba(0, 0, 0, 0.3);
     height: 30px;
@@ -2872,7 +2872,7 @@ export const legacy = css`
   }
 
   a.pswp__share--facebook:before {
-    content: "";
+    content: '';
     display: block;
     width: 0;
     height: 0;
@@ -3160,7 +3160,7 @@ export const legacy = css`
 
   .desc-tooltip-theme .tippy-tooltip-content {
     text-align: left;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     max-width: 300px;
     max-height: 50vh;
     overflow-y: scroll;

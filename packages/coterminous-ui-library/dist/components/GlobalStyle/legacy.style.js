@@ -1,10 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
 // https://github.com/Microsoft/TypeScript/issues/9944
-const coterminous_styled_1 = require("coterminous-styled");
-exports.legacy = coterminous_styled_1.css `
+const coterminous_styled_1 = require('coterminous-styled');
+exports.legacy = coterminous_styled_1.css`
   @font-face {
     font-family: "Oswald";
     src: url("/static/fonts/oswald-extralight.woff2") format("woff2"),

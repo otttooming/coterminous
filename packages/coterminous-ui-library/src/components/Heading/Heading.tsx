@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   H1Style,
   H2Style,
@@ -6,7 +6,7 @@ import {
   H4Style,
   H5Style,
   H6Style,
-} from "./Heading.style";
+} from './Heading.style';
 
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
@@ -16,16 +16,16 @@ import {
   StyledComponentClass, // Required for tsconfig declaration export
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
   Styles, // Required for tsconfig declaration export
-} from "coterminous-styled";
+} from 'coterminous-styled';
 
 // Enum must be exported or 'has or is using private name' error will occur
 export enum TagName {
-  H1 = "h1",
-  H2 = "h2",
-  H3 = "h3",
-  H4 = "h4",
-  H5 = "h5",
-  H6 = "h6",
+  H1 = 'h1',
+  H2 = 'h2',
+  H3 = 'h3',
+  H4 = 'h4',
+  H5 = 'h5',
+  H6 = 'h6',
 }
 
 export interface Props

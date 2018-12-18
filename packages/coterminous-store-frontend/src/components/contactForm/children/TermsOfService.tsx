@@ -1,9 +1,9 @@
-import * as React from "react";
-import styled from "styled-components";
-import Link from "../../../components/link/Link";
-import { LOCATION_TYPES, PAGE_SLUGS } from "../../../common/products/constants";
-import { LocationChangeProps } from "../../../common/products/typings";
-import { Section, Heading, CheckboxField } from "coterminous-styled";
+import * as React from 'react';
+import styled from 'styled-components';
+import Link from '../../../components/link/Link';
+import { LOCATION_TYPES, PAGE_SLUGS } from '../../../common/products/constants';
+import { LocationChangeProps } from '../../../common/products/typings';
+import { Section, Heading, CheckboxField } from 'coterminous-styled';
 
 interface Props {
   onLocationChange: (props: LocationChangeProps) => void;
@@ -34,7 +34,7 @@ const TermsOfService = ({ onLocationChange }: Props) => {
         location={{
           type: LOCATION_TYPES.PAGE,
           view: PAGE_SLUGS.DEFAULT,
-          pathName: ["tos"],
+          pathName: ['tos'],
         }}
         onLocationChange={onLocationChange}
       >

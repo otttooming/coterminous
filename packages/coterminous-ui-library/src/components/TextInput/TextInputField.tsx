@@ -1,11 +1,11 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   FormContext,
   FormState,
   withFormConsumer,
   ExternalWithFormConsumerProps,
-} from "coterminous-styled";
-import { TextInput, TextInputProps, TagName } from "./TextInput";
+} from 'coterminous-styled';
+import { TextInput, TextInputProps, TagName } from './TextInput';
 
 export interface Props {}
 

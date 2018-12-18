@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
@@ -8,14 +8,14 @@ import {
   StyledComponentClass, // Required for tsconfig declaration export
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
   Styles, // Required for tsconfig declaration export
-} from "coterminous-styled";
+} from 'coterminous-styled';
 import {
   ControlWrapperInternalProps, // Required due to TS export requirements. https://github.com/Microsoft/TypeScript/issues/9944
   ControlWrapper,
   ControlWrapperProps,
-} from "../ControlWrapper/ControlWrapper";
-import { extractControlWrapperProps } from "../ControlWrapper/controlWrapperHelper";
-import { Dropdown, arrowStyle } from "./popover.style";
+} from '../ControlWrapper/ControlWrapper';
+import { extractControlWrapperProps } from '../ControlWrapper/controlWrapperHelper';
+import { Dropdown, arrowStyle } from './popover.style';
 
 interface ArrowProps {
   passedRef: (ref: HTMLElement | null) => void;

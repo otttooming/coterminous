@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
@@ -11,7 +11,7 @@ import {
   InterpolationFunction, // Required for tsconfig declaration export
   ThemeProps, // Required for tsconfig declaration export
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
-} from "coterminous-styled";
+} from 'coterminous-styled';
 
 export const Checkmark = styled.span`
   display: inline-block;
@@ -19,7 +19,7 @@ export const Checkmark = styled.span`
   width: 16px;
   height: 16px;
   &:after {
-    content: "";
+    content: '';
     display: block;
     width: 3px;
     height: 6px;

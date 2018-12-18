@@ -1,5 +1,5 @@
-import * as React from "react";
-import { storiesOf } from "@storybook/react";
+import * as React from 'react';
+import { storiesOf } from '@storybook/react';
 import {
   GlobalStyle,
   ThemeProvider,
@@ -11,11 +11,11 @@ import {
   CheckboxField,
   FormContext,
   TextInputField,
-} from "coterminous-styled";
+} from 'coterminous-styled';
 
-storiesOf("Form", module)
-  .addDecorator(story => <div style={{ background: "#fff" }}>{story()}</div>)
-  .add("Submit", () => (
+storiesOf('Form', module)
+  .addDecorator(story => <div style={{ background: '#fff' }}>{story()}</div>)
+  .add('Submit', () => (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
@@ -39,7 +39,7 @@ storiesOf("Form", module)
                 <Button
                   onClick={() => {
                     /* tslint:disable */
-                    console.log("1", props.actions.submit());
+                    console.log('1', props.actions.submit());
                     /* tslint:enable */
                   }}
                 >

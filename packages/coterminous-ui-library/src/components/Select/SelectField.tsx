@@ -1,11 +1,11 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   FormContext,
   FormState,
   withFormConsumer,
   ExternalWithFormConsumerProps,
-} from "coterminous-styled";
-import { Select, SelectProps } from "./Select";
+} from 'coterminous-styled';
+import { Select, SelectProps } from './Select';
 
 export interface Props {}
 interface State {}

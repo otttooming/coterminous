@@ -1,15 +1,15 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   ShippingLocations,
   ShippingLocationItems,
-} from "../../services/shippingApi/shippingApi";
+} from '../../services/shippingApi/shippingApi';
 import {
   Section,
   Heading,
   SelectField,
   SelectItemProps,
   RadioButtonField,
-} from "coterminous-styled";
+} from 'coterminous-styled';
 
 interface ShippingMethodsProps {
   shippingLocations: ShippingLocations | undefined;
@@ -73,7 +73,7 @@ class ShippingMethodInternal extends React.Component<ShippingMethodsProps, {}> {
   }
 
   renderSelectSection(
-    items: ShippingLocationItems[]
+    items: ShippingLocationItems[],
   ): SelectItemProps[] | null {
     const arr: SelectItemProps[] = [];
 
@@ -94,7 +94,7 @@ class ShippingMethodInternal extends React.Component<ShippingMethodsProps, {}> {
               };
 
               return re;
-            }
+            },
           );
 
           return [...acc, ...state];

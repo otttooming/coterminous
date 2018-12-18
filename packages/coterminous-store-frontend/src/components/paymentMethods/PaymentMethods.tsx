@@ -1,6 +1,6 @@
-import * as React from "react";
-import { PaymentMethods } from "../../services/paymentMethodsApi/paymentMethodsApi";
-import { Section, Heading, RadioButtonField } from "coterminous-styled";
+import * as React from 'react';
+import { PaymentMethods } from '../../services/paymentMethodsApi/paymentMethodsApi';
+import { Section, Heading, RadioButtonField } from 'coterminous-styled';
 
 interface PaymentMethodsProps {
   paymentMethods: PaymentMethods | undefined;

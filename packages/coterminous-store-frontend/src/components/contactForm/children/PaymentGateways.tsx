@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Section, Heading, CheckboxField } from "coterminous-styled";
+import * as React from 'react';
+import { Section, Heading, CheckboxField } from 'coterminous-styled';
 
 const PaymentGateways = (props: any) => {
   const listPaymentGateways = props.paymentGateways.map(
@@ -26,7 +26,7 @@ const PaymentGateways = (props: any) => {
           </li>
         );
       }
-    }
+    },
   );
 
   return (

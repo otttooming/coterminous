@@ -13,7 +13,7 @@ import {
   typeface,
   transition,
   shadow,
-} from "./constants";
+} from './constants';
 
 export interface CoterminousStyledThemeProps {
   color: ColorProps;

@@ -1,5 +1,5 @@
-import * as React from "react";
-import { storiesOf } from "@storybook/react";
+import * as React from 'react';
+import { storiesOf } from '@storybook/react';
 import {
   GlobalStyle,
   ThemeProvider,
@@ -10,11 +10,11 @@ import {
   Section,
   TextInputField,
   FormContext,
-} from "coterminous-styled";
+} from 'coterminous-styled';
 
-storiesOf("TextInput", module)
-  .addDecorator(story => <div style={{ background: "#fff" }}>{story()}</div>)
-  .add("TextInputField", () => (
+storiesOf('TextInput', module)
+  .addDecorator(story => <div style={{ background: '#fff' }}>{story()}</div>)
+  .add('TextInputField', () => (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />

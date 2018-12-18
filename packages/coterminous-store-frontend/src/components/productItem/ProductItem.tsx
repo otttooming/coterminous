@@ -1,19 +1,19 @@
-import * as React from "react";
-import Media from "../../components/media/Media";
-import { MediaItemProps } from "../../services/mediaApi/mediaApi";
-import Variations from "./children/Variations";
-import Details from "./children/Details";
-import Gallery from "./children/Gallery";
-import { PhotoSwipe } from "react-photoswipe";
+import * as React from 'react';
+import Media from '../../components/media/Media';
+import { MediaItemProps } from '../../services/mediaApi/mediaApi';
+import Variations from './children/Variations';
+import Details from './children/Details';
+import Gallery from './children/Gallery';
+import { PhotoSwipe } from 'react-photoswipe';
 
 function buildGalleryItems(images: MediaItemProps[]) {
   const slides = images.map(item => {
     return {
-      src: item.imageSizes.reduce(
-        (prev, current) => (prev.width > current.width ? prev : current)
+      src: item.imageSizes.reduce((prev, current) =>
+        prev.width > current.width ? prev : current,
       ).source_url,
-      thumbs: item.imageSizes.reduce(
-        (prev, current) => (prev.width < current.width ? prev : current)
+      thumbs: item.imageSizes.reduce((prev, current) =>
+        prev.width < current.width ? prev : current,
       ).source_url,
       w: item.dimensions.width,
       h: item.dimensions.height,
@@ -89,8 +89,9 @@ export default class ProductItem extends React.Component<Props, any> {
               onClick={this.handleGalleryOpen}
               isProduct={true}
             />
-            {!!images &&
-              images.length !== 1 && <Gallery images={images} alt={name} />}
+            {!!images && images.length !== 1 && (
+              <Gallery images={images} alt={name} />
+            )}
           </div>
 
           <div className="col-xs-12 col-md-7">
@@ -111,7 +112,7 @@ export default class ProductItem extends React.Component<Props, any> {
 
                 {in_stock && (
                   <div className="product-stock in-stock">
-                    <span className="stock__header">Availability</span>{" "}
+                    <span className="stock__header">Availability</span>{' '}
                     <span className="stock__number">In stock</span>
                   </div>
                 )}

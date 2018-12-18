@@ -1,5 +1,5 @@
-import * as React from "react";
-import { ThemeProvider, theme, GlobalStyle } from "coterminous-styled";
+import * as React from 'react';
+import { ThemeProvider, theme, GlobalStyle } from 'coterminous-styled';
 
 interface Props {
   children: React.ReactNode;
@@ -36,7 +36,7 @@ const Main = ({
 
             <div
               className={`col-xs-12 ${
-                !!renderSidebar ? "col-lg-9" : "col-lg-12"
+                !!renderSidebar ? 'col-lg-9' : 'col-lg-12'
               }`}
             >
               <main>{children}</main>

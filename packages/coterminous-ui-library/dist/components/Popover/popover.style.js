@@ -1,11 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
 // https://github.com/Microsoft/TypeScript/issues/9944
-const coterminous_styled_1 = require("coterminous-styled");
-exports.arrowCorrection = "15px";
-exports.dropdownStyle = coterminous_styled_1.css `
+const coterminous_styled_1 = require('coterminous-styled');
+exports.arrowCorrection = '15px';
+exports.dropdownStyle = coterminous_styled_1.css`
   background: #fff;
   border-radius: ${props => props.theme.border.radius.small};
   padding: ${props => props.theme.spacing.medium};
@@ -28,10 +28,10 @@ exports.dropdownStyle = coterminous_styled_1.css `
     right: ${exports.arrowCorrection};
   }
 `;
-exports.Dropdown = coterminous_styled_1.styled("div") `
+exports.Dropdown = coterminous_styled_1.styled('div')`
   ${exports.dropdownStyle};
 `;
-exports.arrowStyle = coterminous_styled_1.css `
+exports.arrowStyle = coterminous_styled_1.css`
   position: absolute;
   width: 3em;
   height: 3em;
