@@ -8,6 +8,11 @@ export async function getMainMenu() {
   );
 
   const response = await fetchRequest({ url });
+
+  if (!response) {
+    return null;
+  }
+
   const { payload } = response;
 
   const mainMenuItems = payload;
@@ -22,6 +27,11 @@ export async function getSideMenu() {
   );
 
   const response = await fetchRequest({ url });
+
+  if (!response) {
+    return null;
+  }
+
   const { payload } = response;
 
   const subCategoryItems = payload

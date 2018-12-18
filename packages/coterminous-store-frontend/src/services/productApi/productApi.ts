@@ -27,6 +27,11 @@ export async function getProducts(
   );
 
   const response = await fetchRequest({ url });
+
+  if (!response) {
+    return null;
+  }
+
   const { payload, meta } = response;
   const { totalPages } = meta;
 
