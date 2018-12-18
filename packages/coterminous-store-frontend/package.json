@@ -77,7 +77,7 @@
     "test:watch": "jest --watch",
     "sprite": "svg-sprite-generate -d ./static/assets -o ./static/sprite.svg",
     "get:omniva": "curl https://www.omniva.ee/locations.json -o ./static/shipping/omniva.json",
-    "get:smartpost": "curl http://uus.smartpost.ee/places.json -o ./static/shipping/smartpost.json"
+    "get:smartpost": "curl https://uus.smartpost.ee/places.json -o ./static/shipping/smartpost.json"
   },
   "jest": {
     "moduleFileExtensions": [
