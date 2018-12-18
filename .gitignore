@@ -66,5 +66,8 @@ dist/
 # WebStorm/IntelliJ
 .idea/
 
-# macOS
-.DS_Store
+# Static remotely fetched assets
+packages/coterminous-store-frontend/static/shipping/*
+
+# Retain specific files
+!*.keep
