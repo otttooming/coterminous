@@ -34,7 +34,7 @@ function getLocation(type: string, TYPES: any) {
 }
 
 const MainMenu = ({ items, onLocationChange }: Props) => {
-  if (!!items.length) {
+  if (Array.isArray(items)) {
     const menuItems = items.map(({ id, title, object, object_slug }) => (
       <li key={id} className="menu__item">
         <Link
