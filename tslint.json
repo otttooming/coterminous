@@ -1,5 +1,5 @@
 {
-  "defaultSeverity": "error",
+  "defaultSeverity": "warning",
   "jsRules": {},
   "rules": {
     "prettier": true,
