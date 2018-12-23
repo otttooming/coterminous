@@ -13,7 +13,7 @@ var __rest =
   };
 Object.defineProperty(exports, '__esModule', { value: true });
 const React = require('react');
-const coterminous_styled_1 = require('coterminous-styled');
+const __1 = require('../../');
 const Select_1 = require('./Select');
 class SelectFieldBase extends React.Component {
   constructor(props) {
@@ -26,8 +26,6 @@ class SelectFieldBase extends React.Component {
     return React.createElement(Select_1.Select, Object.assign({}, rest));
   }
 }
-const SelectFieldWithFormConsumer = coterminous_styled_1.withFormConsumer(
-  SelectFieldBase,
-);
+const SelectFieldWithFormConsumer = __1.withFormConsumer(SelectFieldBase);
 exports.SelectField = props =>
   React.createElement(SelectFieldWithFormConsumer, Object.assign({}, props));

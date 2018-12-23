@@ -3,9 +3,9 @@ Object.defineProperty(exports, '__esModule', { value: true });
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
 // https://github.com/Microsoft/TypeScript/issues/9944
-const coterminous_styled_1 = require('coterminous-styled');
+const __1 = require('../../');
 exports.arrowCorrection = '15px';
-exports.dropdownStyle = coterminous_styled_1.css`
+exports.dropdownStyle = __1.css`
   background: #fff;
   border-radius: ${props => props.theme.border.radius.small};
   padding: ${props => props.theme.spacing.medium};
@@ -15,27 +15,27 @@ exports.dropdownStyle = coterminous_styled_1.css`
   box-shadow: 0 41px 66px 0 rgba(0, 0, 0, 0.2);
   max-height: 300px;
   overflow-y: scroll;
-  &[data-placement*="bottom"] {
+  &[data-placement*='bottom'] {
     top: ${exports.arrowCorrection};
   }
-  &[data-placement*="top"] {
+  &[data-placement*='top'] {
     bottom: ${exports.arrowCorrection};
   }
-  &[data-placement*="right"] {
+  &[data-placement*='right'] {
     left: ${exports.arrowCorrection};
   }
-  &[data-placement*="left"] {
+  &[data-placement*='left'] {
     right: ${exports.arrowCorrection};
   }
 `;
-exports.Dropdown = coterminous_styled_1.styled('div')`
+exports.Dropdown = __1.styled('div')`
   ${exports.dropdownStyle};
 `;
-exports.arrowStyle = coterminous_styled_1.css`
+exports.arrowStyle = __1.css`
   position: absolute;
   width: 3em;
   height: 3em;
-  &[data-placement*="bottom"] {
+  &[data-placement*='bottom'] {
     top: ${exports.arrowCorrection};
     left: 0;
     margin-top: -0.9em;
@@ -46,7 +46,7 @@ exports.arrowStyle = coterminous_styled_1.css`
       border-color: transparent transparent #fff transparent;
     }
   }
-  &[data-placement*="top"] {
+  &[data-placement*='top'] {
     bottom: ${exports.arrowCorrection};
     left: 0;
     margin-bottom: -0.9em;
@@ -57,7 +57,7 @@ exports.arrowStyle = coterminous_styled_1.css`
       border-color: #fff transparent transparent transparent;
     }
   }
-  &[data-placement*="right"] {
+  &[data-placement*='right'] {
     left: ${exports.arrowCorrection};
     margin-left: -0.9em;
     height: 3em;
@@ -67,7 +67,7 @@ exports.arrowStyle = coterminous_styled_1.css`
       border-color: transparent #fff transparent transparent;
     }
   }
-  &[data-placement*="left"] {
+  &[data-placement*='left'] {
     right: ${exports.arrowCorrection};
     margin-right: -0.9em;
     height: 3em;
@@ -78,7 +78,7 @@ exports.arrowStyle = coterminous_styled_1.css`
     }
   }
   &::before {
-    content: "";
+    content: '';
     margin: auto;
     display: block;
     width: 0;

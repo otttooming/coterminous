@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { ExternalWithFormConsumerProps } from 'coterminous-styled';
+import { ExternalWithFormConsumerProps } from '../../';
 import { TextInputProps } from './TextInput';
 export interface Props {}
 export declare type TextInputFieldProps = Props &

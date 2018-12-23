@@ -6,7 +6,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
-      'coterminous-styled': path.join(__dirname, '../src'),
+      '@coterminous/ui-library': path.join(__dirname, '../src'),
     },
   },
   module: {

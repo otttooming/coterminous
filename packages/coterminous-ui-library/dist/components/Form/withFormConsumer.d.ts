@@ -13,6 +13,66 @@ export declare function withFormConsumer<
     Subtract<P, ExternalWithFormConsumerProps> & ComponentProps
   >,
 ): {
+  new (props: Readonly<P & ComponentProps>): {
+    render(): JSX.Element;
+    setState<K extends never>(
+      state:
+        | {}
+        | ((
+            prevState: Readonly<{}>,
+            props: Readonly<P & ComponentProps>,
+          ) => {} | Pick<{}, K>)
+        | Pick<{}, K>,
+      callback?: () => void,
+    ): void;
+    forceUpdate(callBack?: () => void): void;
+    readonly props: Readonly<{
+      children?: React.ReactNode;
+    }> &
+      Readonly<P & ComponentProps>;
+    state: Readonly<{}>;
+    context: any;
+    refs: {
+      [key: string]: React.ReactInstance;
+    };
+    componentDidMount?(): void;
+    shouldComponentUpdate?(
+      nextProps: Readonly<P & ComponentProps>,
+      nextState: Readonly<{}>,
+      nextContext: any,
+    ): boolean;
+    componentWillUnmount?(): void;
+    componentDidCatch?(error: Error, errorInfo: React.ErrorInfo): void;
+    getSnapshotBeforeUpdate?(
+      prevProps: Readonly<P & ComponentProps>,
+      prevState: Readonly<{}>,
+    ): any;
+    componentDidUpdate?(
+      prevProps: Readonly<P & ComponentProps>,
+      prevState: Readonly<{}>,
+      snapshot?: any,
+    ): void;
+    componentWillMount?(): void;
+    UNSAFE_componentWillMount?(): void;
+    componentWillReceiveProps?(
+      nextProps: Readonly<P & ComponentProps>,
+      nextContext: any,
+    ): void;
+    UNSAFE_componentWillReceiveProps?(
+      nextProps: Readonly<P & ComponentProps>,
+      nextContext: any,
+    ): void;
+    componentWillUpdate?(
+      nextProps: Readonly<P & ComponentProps>,
+      nextState: Readonly<{}>,
+      nextContext: any,
+    ): void;
+    UNSAFE_componentWillUpdate?(
+      nextProps: Readonly<P & ComponentProps>,
+      nextState: Readonly<{}>,
+      nextContext: any,
+    ): void;
+  };
   new (props: P & ComponentProps, context?: any): {
     render(): JSX.Element;
     setState<K extends never>(
@@ -20,13 +80,13 @@ export declare function withFormConsumer<
         | {}
         | ((
             prevState: Readonly<{}>,
-            props: P & ComponentProps,
+            props: Readonly<P & ComponentProps>,
           ) => {} | Pick<{}, K>)
         | Pick<{}, K>,
       callback?: () => void,
     ): void;
     forceUpdate(callBack?: () => void): void;
-    props: Readonly<{
+    readonly props: Readonly<{
       children?: React.ReactNode;
     }> &
       Readonly<P & ComponentProps>;

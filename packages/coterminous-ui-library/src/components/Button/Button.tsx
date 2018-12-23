@@ -9,7 +9,7 @@ import {
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
   Styles, // Required for tsconfig declaration export
   css,
-} from 'coterminous-styled';
+} from '../../';
 
 const StyledButton = css`
   border: 0;

@@ -19,16 +19,4 @@ export default class MyDocument extends Document {
       styles: [...initialProps.styles, ...sheet.getStyleElement()],
     };
   }
-
-  render() {
-    return (
-      <html>
-        <Head>{this.props.styleTags}</Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </html>
-    );
-  }
 }

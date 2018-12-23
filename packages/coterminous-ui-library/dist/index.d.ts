@@ -1,7 +1,6 @@
 export {
   styled,
   css,
-  injectGlobal,
   keyframes,
   ThemeProvider,
   Styles,
@@ -9,6 +8,7 @@ export {
   InterpolationFunction,
   ThemeProps,
   CoterminousStyledThemeProps,
+  createGlobalStyle,
 } from './common/styles/styledComponents';
 export { theme } from './common/styles/theme';
 export { GlobalStyle } from './components/GlobalStyle/GlobalStyle';

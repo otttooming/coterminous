@@ -4,7 +4,7 @@ const React = require('react');
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
 // https://github.com/Microsoft/TypeScript/issues/9944
-const coterminous_styled_1 = require('coterminous-styled');
+const __1 = require('../../');
 const ControlWrapper_1 = require('../ControlWrapper/ControlWrapper');
 const controlWrapperHelper_1 = require('../ControlWrapper/controlWrapperHelper');
 const downshift_1 = require('downshift');
@@ -95,7 +95,7 @@ class SelectBase extends React.Component {
             'div',
             null,
             React.createElement(
-              coterminous_styled_1.Popover,
+              __1.Popover,
               {
                 isOpen: isOpen,
                 popoverChildren: () =>
@@ -197,6 +197,6 @@ class SelectBase extends React.Component {
   }
 }
 exports.SelectBase = SelectBase;
-exports.Select = coterminous_styled_1.styled(SelectBase)`
+exports.Select = __1.styled(SelectBase)`
   ${select_style_1.selectInputStyle};
 `;

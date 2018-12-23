@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { ThemeProvider, theme, Button } from 'coterminous-styled';
+import { ThemeProvider, theme, Button } from '../../';
 import { text, boolean, number } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Button', module);

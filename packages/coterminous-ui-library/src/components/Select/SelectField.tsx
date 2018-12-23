@@ -4,7 +4,7 @@ import {
   FormState,
   withFormConsumer,
   ExternalWithFormConsumerProps,
-} from 'coterminous-styled';
+} from '../../';
 import { Select, SelectProps } from './Select';
 
 export interface Props {}

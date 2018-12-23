@@ -13,7 +13,7 @@ var __rest =
   };
 Object.defineProperty(exports, '__esModule', { value: true });
 const React = require('react');
-const coterminous_styled_1 = require('coterminous-styled');
+const __1 = require('../../');
 const TextInput_1 = require('./TextInput');
 class TextInputFieldBase extends React.Component {
   constructor(props) {
@@ -39,9 +39,7 @@ class TextInputFieldBase extends React.Component {
     }
   }
 }
-const TextInputFieldWithFormConsumer = coterminous_styled_1.withFormConsumer(
-  TextInputFieldBase,
-);
+const TextInputFieldWithFormConsumer = __1.withFormConsumer(TextInputFieldBase);
 exports.TextInputField = {
   Input: props =>
     React.createElement(

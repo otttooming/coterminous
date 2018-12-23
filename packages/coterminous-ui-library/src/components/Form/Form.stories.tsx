@@ -11,7 +11,7 @@ import {
   CheckboxField,
   FormContext,
   TextInputField,
-} from 'coterminous-styled';
+} from '../../';
 
 storiesOf('Form', module)
   .addDecorator(story => <div style={{ background: '#fff' }}>{story()}</div>)

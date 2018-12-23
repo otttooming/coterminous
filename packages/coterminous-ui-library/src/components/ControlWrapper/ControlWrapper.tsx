@@ -7,7 +7,7 @@ import {
   StyledComponentClass, // Required for tsconfig declaration export
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
   Styles, // Required for tsconfig declaration export
-} from 'coterminous-styled';
+} from '../../';
 import { ControlWrapperStyle, LabelWrapper } from './controlWrapper.style';
 
 export interface ControlWrapperInternalProps {
@@ -20,7 +20,7 @@ export type ControlWrapperProps = ControlWrapperInternalProps;
 
 interface State {}
 
-class ControlWrapperBase extends React.Component<ControlWrapperProps, State> {
+class ControlWrapperBase extends React.Component<any, State> {
   render() {
     const { children, className, label, isRequired } = this.props;
 

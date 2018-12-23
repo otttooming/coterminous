@@ -4,7 +4,7 @@ import {
   FormState,
   withFormConsumer,
   ExternalWithFormConsumerProps,
-} from 'coterminous-styled';
+} from '../../';
 import { TextInput, TextInputProps, TagName } from './TextInput';
 
 export interface Props {}

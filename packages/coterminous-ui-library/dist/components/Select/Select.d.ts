@@ -1,8 +1,4 @@
 import * as React from 'react';
-import {
-  StyledComponentClass, // Required for tsconfig declaration export
-  CoterminousStyledThemeProps,
-} from 'coterminous-styled';
 import { ControlWrapperProps } from '../ControlWrapper/ControlWrapper';
 import {
   ControllerStateAndHelpers,
@@ -69,13 +65,4 @@ export declare class SelectBase extends React.Component<SelectProps, State> {
     inputValue: string,
   ) => (item: SelectItemProps) => boolean;
 }
-export declare const Select: StyledComponentClass<
-  SelectProps,
-  CoterminousStyledThemeProps,
-  Pick<
-    SelectProps,
-    'className' | 'onChange' | 'label' | 'isRequired' | 'items'
-  > & {
-    theme?: CoterminousStyledThemeProps;
-  }
->;
+export declare const Select: any;

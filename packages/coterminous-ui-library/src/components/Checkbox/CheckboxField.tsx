@@ -4,7 +4,7 @@ import {
   FormState,
   withFormConsumer,
   ExternalWithFormConsumerProps,
-} from 'coterminous-styled';
+} from '../../';
 import { Checkbox, CheckboxProps } from './Checkbox';
 
 export interface Props {}

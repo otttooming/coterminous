@@ -3,8 +3,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
 // https://github.com/Microsoft/TypeScript/issues/9944
-const coterminous_styled_1 = require('coterminous-styled');
-const reset = coterminous_styled_1.css`
+const __1 = require('../../');
+const reset = __1.css`
   margin: 0;
   border: 0;
   padding: 0;
@@ -19,7 +19,7 @@ const reset = coterminous_styled_1.css`
     outline: none;
   }
 `;
-const common = coterminous_styled_1.css`
+const common = __1.css`
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
@@ -27,7 +27,7 @@ const common = coterminous_styled_1.css`
   border-radius: ${props => props.theme.border.radius.small};
   background-color: ${props => props.theme.background.input};
 `;
-exports.TextInputStyle = coterminous_styled_1.css`
+exports.TextInputStyle = __1.css`
   ${reset};
   ${common};
   line-height: 48px;

@@ -17,7 +17,7 @@ const textInput_style_1 = require('./textInput.style');
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
 // https://github.com/Microsoft/TypeScript/issues/9944
-const coterminous_styled_1 = require('coterminous-styled');
+const __1 = require('../../');
 const ControlWrapper_1 = require('../ControlWrapper/ControlWrapper');
 const controlWrapperHelper_1 = require('../ControlWrapper/controlWrapperHelper');
 // Enum must be exported or 'has or is using private name' error will occur
@@ -77,12 +77,12 @@ class TextInputBase extends React.Component {
   }
 }
 exports.TextInput = {
-  Input: coterminous_styled_1.styled(TextInputBase).attrs({
+  Input: __1.styled(TextInputBase).attrs({
     tagName: TagName.Input,
   })`
     ${textInput_style_1.TextInputStyle};
   `,
-  TextArea: coterminous_styled_1.styled(TextInputBase).attrs({
+  TextArea: __1.styled(TextInputBase).attrs({
     tagName: TagName.TextArea,
   })`
     ${textInput_style_1.TextInputStyle};

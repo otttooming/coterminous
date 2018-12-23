@@ -17,6 +17,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dev": "lerna run --parallel dev",
+    "dist": "lerna run dist",
     "start": "npm run bootstrap && lerna run --parallel dev",
     "lint": "npm run lint:ts && echo 'tslint check: OK'",
     "lint:ts": "tslint --project ./tsconfig.json",

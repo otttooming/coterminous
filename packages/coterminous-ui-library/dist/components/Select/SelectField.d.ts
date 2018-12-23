@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { ExternalWithFormConsumerProps } from 'coterminous-styled';
+import { ExternalWithFormConsumerProps } from '../../';
 import { SelectProps } from './Select';
 export interface Props {}
 export declare type SelectFieldProps = Props &

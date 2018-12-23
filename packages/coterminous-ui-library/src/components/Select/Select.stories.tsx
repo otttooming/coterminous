@@ -12,7 +12,7 @@ import {
   FormContext,
   SelectItemProps,
   Select,
-} from 'coterminous-styled';
+} from '../../';
 
 const selectItems: SelectItemProps[] = [
   {

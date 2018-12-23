@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { ThemeProvider, theme, Button, Heading } from 'coterminous-styled';
+import { ThemeProvider, theme, Button, Heading } from '../../';
 
 storiesOf('Heading', module)
   .addDecorator(story => <div style={{ background: 'black' }}>{story()}</div>)

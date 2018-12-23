@@ -12,6 +12,8 @@ import {
   StyledComponentClass, // Required for tsconfig declaration export
   InterpolationFunction, // Required for tsconfig declaration export
   ThemeProps, // Required for tsconfig declaration export
+  // @ts-ignore
+  createGlobalStyle,
 } from 'styled-components';
 /* tslint:enable */
 
@@ -20,17 +22,23 @@ import { CoterminousStyledThemeProps } from './theme';
 const {
   default: styled,
   css,
-  injectGlobal,
   keyframes,
   ThemeProvider,
-} = styledComponents as ThemedStyledComponentsModule<
-  CoterminousStyledThemeProps
->;
+  createGlobalStyle,
+} = styledComponents as any;
+
+// const {
+//   default: styled,
+//   css,
+//   keyframes,
+//   ThemeProvider,
+// } = styledComponents as ThemedStyledComponentsModule<
+//   CoterminousStyledThemeProps
+// >;
 
 export {
   styled,
   css,
-  injectGlobal,
   keyframes,
   ThemeProvider,
   Styles,
@@ -38,4 +46,5 @@ export {
   InterpolationFunction,
   ThemeProps,
   CoterminousStyledThemeProps,
+  createGlobalStyle,
 };

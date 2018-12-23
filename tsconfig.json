@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "noImplicitAny": true,
-    "strictNullChecks": true
+    "noImplicitAny": false,
+    "strictNullChecks": false
   },
   "exclude": ["./node_modules"]
 }

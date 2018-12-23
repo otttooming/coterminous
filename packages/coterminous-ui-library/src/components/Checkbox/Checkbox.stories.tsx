@@ -10,7 +10,7 @@ import {
   Section,
   CheckboxField,
   FormContext,
-} from 'coterminous-styled';
+} from '../../';
 
 storiesOf('Checkbox', module)
   .addDecorator(story => <div style={{ background: '#fff' }}>{story()}</div>)

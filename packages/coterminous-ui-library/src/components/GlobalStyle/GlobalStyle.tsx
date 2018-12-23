@@ -8,20 +8,10 @@ import {
   StyledComponentClass, // Required for tsconfig declaration export
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
   Styles, // Required for tsconfig declaration export
-  injectGlobal,
-} from 'coterminous-styled';
+  createGlobalStyle,
+} from '../../';
 import { globalStyleCss } from './globalStyle.style';
 
-/* tslint:disable */
-injectGlobal`
+export const GlobalStyle = createGlobalStyle`
   ${globalStyleCss}
 `;
-/* tslint:enable */
-
-export interface Props {}
-
-export class GlobalStyle extends React.Component<Props, {}> {
-  render() {
-    return '';
-  }
-}

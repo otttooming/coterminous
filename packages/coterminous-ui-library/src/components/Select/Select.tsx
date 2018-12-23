@@ -11,7 +11,7 @@ import {
   Styles, // Required for tsconfig declaration export
   css,
   Popover,
-} from 'coterminous-styled';
+} from '../../';
 import {
   ControlWrapperInternalProps, // Required due to TS export requirements. https://github.com/Microsoft/TypeScript/issues/9944
   ControlWrapper,

@@ -3,7 +3,7 @@ import {
   FormState,
   ExternalWithFormConsumerProps,
   CheckboxProps,
-} from 'coterminous-styled';
+} from '../../';
 export interface Props {}
 export declare type RadioButtonFieldProps = Props &
   CheckboxProps &

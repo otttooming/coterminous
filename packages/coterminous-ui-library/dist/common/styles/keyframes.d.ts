@@ -1,1 +1,1 @@
-export declare const rotate360: string;
+export declare const rotate360: any;

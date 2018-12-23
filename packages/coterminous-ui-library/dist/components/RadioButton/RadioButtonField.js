@@ -1,7 +1,7 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 const React = require('react');
-const coterminous_styled_1 = require('coterminous-styled');
+const __1 = require('../../');
 const Checkbox_1 = require('../Checkbox/Checkbox');
 class RadioButtonFieldBase extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class RadioButtonFieldBase extends React.Component {
     const { fields, name, value, label, inputLabel, onChange } = this.props;
     const checked =
       fields && fields[name] ? value === fields[name].state : false;
-    return React.createElement(coterminous_styled_1.Checkbox, {
+    return React.createElement(__1.Checkbox, {
       type: Checkbox_1.CheckboxType.RADIO,
       name: name,
       label: label,
@@ -22,7 +22,7 @@ class RadioButtonFieldBase extends React.Component {
     });
   }
 }
-const RadioButtonFieldWithFormConsumer = coterminous_styled_1.withFormConsumer(
+const RadioButtonFieldWithFormConsumer = __1.withFormConsumer(
   RadioButtonFieldBase,
 );
 exports.RadioButtonField = props =>

@@ -13,7 +13,7 @@ var __rest =
   };
 Object.defineProperty(exports, '__esModule', { value: true });
 const React = require('react');
-const coterminous_styled_1 = require('coterminous-styled');
+const __1 = require('../../');
 const Checkbox_1 = require('./Checkbox');
 class CheckboxFieldBase extends React.Component {
   constructor(props) {
@@ -24,8 +24,6 @@ class CheckboxFieldBase extends React.Component {
     return React.createElement(Checkbox_1.Checkbox, Object.assign({}, rest));
   }
 }
-const CheckboxFieldWithFormConsumer = coterminous_styled_1.withFormConsumer(
-  CheckboxFieldBase,
-);
+const CheckboxFieldWithFormConsumer = __1.withFormConsumer(CheckboxFieldBase);
 exports.CheckboxField = props =>
   React.createElement(CheckboxFieldWithFormConsumer, Object.assign({}, props));

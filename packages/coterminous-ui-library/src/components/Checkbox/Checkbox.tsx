@@ -15,7 +15,7 @@ import {
   CoterminousStyledThemeProps, // Required for tsconfig declaration export
   Styles,
   CSSIcons, // Required for tsconfig declaration export
-} from 'coterminous-styled';
+} from '../../';
 import {
   ControlWrapperInternalProps, // Required due to TS export requirements. https://github.com/Microsoft/TypeScript/issues/9944
   ControlWrapper,
@@ -114,6 +114,6 @@ class CheckboxBase extends React.Component<CheckboxProps, State> {
   };
 }
 
-export const Checkbox = styled(CheckboxBase)`
+export const Checkbox = styled(CheckboxBase)<any>`
   ${CheckboxStyle};
 `;

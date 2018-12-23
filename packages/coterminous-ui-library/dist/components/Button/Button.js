@@ -16,8 +16,8 @@ const React = require('react');
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
 // https://github.com/Microsoft/TypeScript/issues/9944
-const coterminous_styled_1 = require('coterminous-styled');
-const StyledButton = coterminous_styled_1.css`
+const __1 = require('../../');
+const StyledButton = __1.css`
   border: 0;
   box-shadow: 0 4px 16px 0 rgba(44, 44, 44, 0.26);
   border-radius: 4px;
@@ -32,7 +32,7 @@ const StyledButton = coterminous_styled_1.css`
   overflow: hidden;
   position: relative;
 `;
-const StyledGlow = coterminous_styled_1.css`
+const StyledGlow = __1.css`
   opacity: 0.25;
   position: absolute;
   background: radial-gradient(circle closest-side, #fff, transparent);
@@ -109,9 +109,9 @@ const GlowBase = props => {
     props.children,
   );
 };
-exports.Glow = coterminous_styled_1.styled(GlowBase)`
+exports.Glow = __1.styled(GlowBase)`
   ${StyledGlow};
 `;
-exports.Button = coterminous_styled_1.styled(ButtonBase)`
+exports.Button = __1.styled(ButtonBase)`
   ${StyledButton};
 `;

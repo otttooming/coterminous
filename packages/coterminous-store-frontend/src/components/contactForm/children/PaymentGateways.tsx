@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Section, Heading, CheckboxField } from 'coterminous-styled';
+import { Section, Heading, CheckboxField } from '@coterminous/ui-library';
 
 const PaymentGateways = (props: any) => {
   const listPaymentGateways = props.paymentGateways.map(

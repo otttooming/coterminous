@@ -11,7 +11,7 @@ import {
   CheckboxField,
   FormContext,
   RadioButtonField,
-} from 'coterminous-styled';
+} from '../../';
 
 storiesOf('RadioButton', module)
   .addDecorator(story => <div style={{ background: '#fff' }}>{story()}</div>)

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Section, Heading, TextInputField } from 'coterminous-styled';
+import { Section, Heading, TextInputField } from '@coterminous/ui-library';
 
 const AdditionalInformation = () => {
   return (

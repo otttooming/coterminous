@@ -10,7 +10,7 @@ import {
   Section,
   TextInputField,
   FormContext,
-} from 'coterminous-styled';
+} from '../../';
 
 storiesOf('TextInput', module)
   .addDecorator(story => <div style={{ background: '#fff' }}>{story()}</div>)

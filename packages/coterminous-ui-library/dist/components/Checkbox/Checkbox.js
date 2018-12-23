@@ -17,7 +17,7 @@ const checkbox_style_1 = require('./checkbox.style');
 // TS error if some components not explicitly imported for tsconfig declaration export
 // https://github.com/styled-components/styled-components/issues/1063
 // https://github.com/Microsoft/TypeScript/issues/9944
-const coterminous_styled_1 = require('coterminous-styled');
+const __1 = require('../../');
 const ControlWrapper_1 = require('../ControlWrapper/ControlWrapper');
 const controlWrapperHelper_1 = require('../ControlWrapper/controlWrapperHelper');
 var CheckboxType;
@@ -74,7 +74,7 @@ class CheckboxBase extends React.Component {
           checkbox_style_1.InputWrapperStyle,
           null,
           (type === CheckboxType.RADIO ? checked : this.state.isChecked) &&
-            React.createElement(coterminous_styled_1.CSSIcons.Checkmark, null),
+            React.createElement(__1.CSSIcons.Checkmark, null),
         ),
         React.createElement(
           checkbox_style_1.HiddenInput,
@@ -91,6 +91,6 @@ class CheckboxBase extends React.Component {
 CheckboxBase.defaultProps = {
   type: CheckboxType.CHECKBOX,
 };
-exports.Checkbox = coterminous_styled_1.styled(CheckboxBase)`
+exports.Checkbox = __1.styled(CheckboxBase)`
   ${checkbox_style_1.CheckboxStyle};
 `;
