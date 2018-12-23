@@ -15,6 +15,7 @@ export declare function withFormConsumer<
 ): {
   new (props: Readonly<P & ComponentProps>): {
     render(): JSX.Element;
+    context: any;
     setState<K extends never>(
       state:
         | {}
@@ -31,7 +32,6 @@ export declare function withFormConsumer<
     }> &
       Readonly<P & ComponentProps>;
     state: Readonly<{}>;
-    context: any;
     refs: {
       [key: string]: React.ReactInstance;
     };
@@ -75,6 +75,7 @@ export declare function withFormConsumer<
   };
   new (props: P & ComponentProps, context?: any): {
     render(): JSX.Element;
+    context: any;
     setState<K extends never>(
       state:
         | {}
@@ -91,7 +92,6 @@ export declare function withFormConsumer<
     }> &
       Readonly<P & ComponentProps>;
     state: Readonly<{}>;
-    context: any;
     refs: {
       [key: string]: React.ReactInstance;
     };
@@ -133,4 +133,5 @@ export declare function withFormConsumer<
       nextContext: any,
     ): void;
   };
+  contextType?: React.Context<any>;
 };

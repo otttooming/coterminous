@@ -6,6 +6,5 @@ Object.defineProperty(exports, '__esModule', { value: true });
 const __1 = require('../../');
 const globalStyle_style_1 = require('./globalStyle.style');
 exports.GlobalStyle = __1.createGlobalStyle`
-${globalStyle_style_1.globalStyleCss}
-
+  ${globalStyle_style_1.globalStyleCss}
 `;
