@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { ThemeProvider, theme, Button } from '../../';
+import { theme, Button } from '../../';
 import { text, boolean, number } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Button', module);
@@ -11,10 +11,8 @@ stories.add('Button', () => {
   const content = `My name is ${name}.`;
 
   return (
-    <ThemeProvider theme={theme}>
-      <>
-        <Button>{content}</Button>
-      </>
-    </ThemeProvider>
+    <>
+      <Button>{content}</Button>
+    </>
   );
 });

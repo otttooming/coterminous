@@ -1,15 +1,9 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
-  GlobalStyle,
-  ThemeProvider,
   FormProvider,
-  theme,
-  Button,
-  Heading,
   Section,
   SelectField,
-  FormContext,
   SelectItemProps,
   Select,
 } from '../../';
@@ -46,24 +40,16 @@ const selectItems: SelectItemProps[] = [
 storiesOf('Select', module)
   .addDecorator(story => <div style={{ background: '#fff' }}>{story()}</div>)
   .add('Select', () => (
-    <ThemeProvider theme={theme}>
-      <>
-        <Section>
-          <Select label="Enter address" items={selectItems} />
-        </Section>
-      </>
-    </ThemeProvider>
+    <>
+      <Section>
+        <Select label="Enter address" items={selectItems} />
+      </Section>
+    </>
   ))
   .add('SelectField', () => (
-    <ThemeProvider theme={theme}>
-      <FormProvider>
-        <Section>
-          <SelectField
-            name="select"
-            label="Enter address"
-            items={selectItems}
-          />
-        </Section>
-      </FormProvider>
-    </ThemeProvider>
+    <FormProvider>
+      <Section>
+        <SelectField name="select" label="Enter address" items={selectItems} />
+      </Section>
+    </FormProvider>
   ));

@@ -14,12 +14,10 @@ var __rest =
 Object.defineProperty(exports, '__esModule', { value: true });
 const React = require('react');
 const checkbox_style_1 = require('./checkbox.style');
-// TS error if some components not explicitly imported for tsconfig declaration export
-// https://github.com/styled-components/styled-components/issues/1063
-// https://github.com/Microsoft/TypeScript/issues/9944
-const __1 = require('../../');
+const styled_components_1 = require('styled-components');
 const ControlWrapper_1 = require('../ControlWrapper/ControlWrapper');
 const controlWrapperHelper_1 = require('../ControlWrapper/controlWrapperHelper');
+const Icons_1 = require('../Icons/Icons');
 var CheckboxType;
 (function(CheckboxType) {
   CheckboxType['CHECKBOX'] = 'checkbox';
@@ -29,7 +27,6 @@ class CheckboxBase extends React.Component {
   constructor(props) {
     super(props);
     this.renderControlWrapper = element => {
-      const { label } = this.props;
       return React.createElement(
         ControlWrapper_1.ControlWrapper,
         Object.assign(
@@ -64,7 +61,6 @@ class CheckboxBase extends React.Component {
         'name',
         'checked',
       ]);
-    const { isChecked } = this.state;
     const attributes = { className, name };
     return this.renderControlWrapper(
       React.createElement(
@@ -74,7 +70,7 @@ class CheckboxBase extends React.Component {
           checkbox_style_1.InputWrapperStyle,
           null,
           (type === CheckboxType.RADIO ? checked : this.state.isChecked) &&
-            React.createElement(__1.CSSIcons.Checkmark, null),
+            React.createElement(Icons_1.CSSIcons.Checkmark, null),
         ),
         React.createElement(
           checkbox_style_1.HiddenInput,
@@ -91,6 +87,6 @@ class CheckboxBase extends React.Component {
 CheckboxBase.defaultProps = {
   type: CheckboxType.CHECKBOX,
 };
-exports.Checkbox = __1.styled(CheckboxBase)`
+exports.Checkbox = styled_components_1.default(CheckboxBase)`
   ${checkbox_style_1.CheckboxStyle};
 `;

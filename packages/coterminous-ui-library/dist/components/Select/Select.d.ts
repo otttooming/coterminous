@@ -65,4 +65,9 @@ export declare class SelectBase extends React.Component<SelectProps, State> {
     inputValue: string,
   ) => (item: SelectItemProps) => boolean;
 }
-export declare const Select: any;
+export declare const Select: import('styled-components').StyledComponent<
+  typeof SelectBase,
+  any,
+  {},
+  never
+>;

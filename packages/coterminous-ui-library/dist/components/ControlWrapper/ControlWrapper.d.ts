@@ -5,4 +5,14 @@ export interface ControlWrapperInternalProps {
   className?: string;
 }
 export declare type ControlWrapperProps = ControlWrapperInternalProps;
-export declare const ControlWrapper: any;
+interface State {}
+declare class ControlWrapperBase extends React.Component<any, State> {
+  render(): JSX.Element;
+}
+export declare const ControlWrapper: import('styled-components').StyledComponent<
+  typeof ControlWrapperBase,
+  any,
+  {},
+  never
+>;
+export {};

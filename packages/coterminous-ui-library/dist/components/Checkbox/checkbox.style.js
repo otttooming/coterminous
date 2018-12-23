@@ -1,28 +1,26 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 const display_style_1 = require('./../../common/styles/atoms/display.style');
-// TS error if some components not explicitly imported for tsconfig declaration export
-// https://github.com/styled-components/styled-components/issues/1063
-// https://github.com/Microsoft/TypeScript/issues/9944
 const __1 = require('../../');
-const common = __1.css`
-  margin: 0 0 ${props => props.theme.spacing.medium} 0;
+const styled_components_1 = require('styled-components');
+const common = styled_components_1.css`
+  margin: 0 0 ${__1.theme.spacing.medium} 0;
 `;
-exports.CheckboxStyle = __1.css`
+exports.CheckboxStyle = styled_components_1.css`
   ${common};
 `;
-exports.InputWrapperStyle = __1.styled.span`
+exports.InputWrapperStyle = styled_components_1.default.span`
   display: inline-block;
   width: 16px;
   height: 16px;
   background-color: white;
-  border-radius: ${props => props.theme.border.radius.small};
-  margin-right: ${props => props.theme.spacing.medium};
+  border-radius: ${__1.theme.border.radius.small};
+  margin-right: ${__1.theme.spacing.medium};
 `;
-exports.CheckboxLabelWrapper = __1.styled.label`
+exports.CheckboxLabelWrapper = styled_components_1.default.label`
   display: flex;
   align-items: center;
 `;
-exports.HiddenInput = __1.styled.input`
+exports.HiddenInput = styled_components_1.default.input`
   ${display_style_1.visuallyHidden};
 `;

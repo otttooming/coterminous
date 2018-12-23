@@ -14,10 +14,7 @@ var __rest =
 Object.defineProperty(exports, '__esModule', { value: true });
 const React = require('react');
 const textInput_style_1 = require('./textInput.style');
-// TS error if some components not explicitly imported for tsconfig declaration export
-// https://github.com/styled-components/styled-components/issues/1063
-// https://github.com/Microsoft/TypeScript/issues/9944
-const __1 = require('../../');
+const styled_components_1 = require('styled-components');
 const ControlWrapper_1 = require('../ControlWrapper/ControlWrapper');
 const controlWrapperHelper_1 = require('../ControlWrapper/controlWrapperHelper');
 // Enum must be exported or 'has or is using private name' error will occur
@@ -77,12 +74,12 @@ class TextInputBase extends React.Component {
   }
 }
 exports.TextInput = {
-  Input: __1.styled(TextInputBase).attrs({
+  Input: styled_components_1.default(TextInputBase).attrs({
     tagName: TagName.Input,
   })`
     ${textInput_style_1.TextInputStyle};
   `,
-  TextArea: __1.styled(TextInputBase).attrs({
+  TextArea: styled_components_1.default(TextInputBase).attrs({
     tagName: TagName.TextArea,
   })`
     ${textInput_style_1.TextInputStyle};

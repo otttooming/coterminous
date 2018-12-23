@@ -1,18 +1,10 @@
 import * as React from 'react';
-import {
-  FormContext,
-  FormState,
-  withFormConsumer,
-  ExternalWithFormConsumerProps,
-} from '../../';
+import { withFormConsumer, ExternalWithFormConsumerProps } from '../../';
 import { Checkbox, CheckboxProps } from './Checkbox';
 
-export interface Props {}
 interface State {}
 
-export type CheckboxFieldProps = Props &
-  CheckboxProps &
-  ExternalWithFormConsumerProps;
+export type CheckboxFieldProps = CheckboxProps & ExternalWithFormConsumerProps;
 
 class CheckboxFieldBase extends React.Component<CheckboxFieldProps, State> {
   constructor(props: CheckboxFieldProps) {

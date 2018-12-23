@@ -1,16 +1,5 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-// To use ThemedStyledComponentsModule, instead of importing the styled functions from the styled-components module, we import it from our custom module
-var styledComponents_1 = require('./common/styles/styledComponents');
-exports.styled = styledComponents_1.styled;
-exports.css = styledComponents_1.css;
-exports.keyframes = styledComponents_1.keyframes;
-exports.ThemeProvider = styledComponents_1.ThemeProvider;
-exports.Styles = styledComponents_1.Styles;
-exports.StyledComponentClass = styledComponents_1.StyledComponentClass;
-exports.InterpolationFunction = styledComponents_1.InterpolationFunction;
-exports.ThemeProps = styledComponents_1.ThemeProps;
-exports.createGlobalStyle = styledComponents_1.createGlobalStyle;
 var theme_1 = require('./common/styles/theme');
 exports.theme = theme_1.theme;
 var GlobalStyle_1 = require('./components/GlobalStyle/GlobalStyle');

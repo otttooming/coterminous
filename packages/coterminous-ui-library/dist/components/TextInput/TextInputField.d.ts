@@ -1,9 +1,7 @@
 /// <reference types="react" />
 import { ExternalWithFormConsumerProps } from '../../';
 import { TextInputProps } from './TextInput';
-export interface Props {}
-export declare type TextInputFieldProps = Props &
-  TextInputProps &
+export declare type TextInputFieldProps = TextInputProps &
   ExternalWithFormConsumerProps;
 export declare const TextInputField: {
   Input: (props: TextInputFieldProps) => JSX.Element;

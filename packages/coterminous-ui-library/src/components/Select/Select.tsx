@@ -1,25 +1,13 @@
 import * as React from 'react';
-import { Manager, Reference, Popper } from 'react-popper';
-
-// TS error if some components not explicitly imported for tsconfig declaration export
-// https://github.com/styled-components/styled-components/issues/1063
-// https://github.com/Microsoft/TypeScript/issues/9944
-import {
-  styled,
-  StyledComponentClass, // Required for tsconfig declaration export
-  CoterminousStyledThemeProps, // Required for tsconfig declaration export
-  Styles, // Required for tsconfig declaration export
-  css,
-  Popover,
-} from '../../';
+import styled from 'styled-components';
 import {
   ControlWrapperInternalProps, // Required due to TS export requirements. https://github.com/Microsoft/TypeScript/issues/9944
   ControlWrapper,
   ControlWrapperProps,
 } from '../ControlWrapper/ControlWrapper';
+import { Popover } from '../../';
 import { extractControlWrapperProps } from '../ControlWrapper/controlWrapperHelper';
 import Downshift, {
-  GetItemPropsOptions,
   ControllerStateAndHelpers,
   DownshiftState,
   StateChangeOptions,
@@ -69,10 +57,6 @@ export class SelectBase extends React.Component<SelectProps, State> {
 
   render() {
     const { items, className } = this.props;
-    const label =
-      this.state.selected && this.state.selected.label
-        ? this.state.selected.label
-        : undefined;
 
     return this.renderControlWrapper(
       <Downshift
@@ -81,17 +65,7 @@ export class SelectBase extends React.Component<SelectProps, State> {
         stateReducer={this.stateReducer}
       >
         {options => {
-          const {
-            getInputProps,
-            getItemProps,
-            getLabelProps,
-            isOpen,
-            inputValue,
-            highlightedIndex,
-            selectedItem,
-            setState,
-            clearSelection,
-          } = options;
+          const { getInputProps, isOpen, setState } = options;
 
           return (
             <div>
@@ -131,15 +105,7 @@ export class SelectBase extends React.Component<SelectProps, State> {
     options: ControllerStateAndHelpers<any>,
     items: SelectItemProps[],
   ): React.ReactNode {
-    const {
-      getInputProps,
-      getItemProps,
-      getLabelProps,
-      isOpen,
-      inputValue,
-      highlightedIndex,
-      selectedItem,
-    } = options;
+    const { inputValue } = options;
 
     const ob: SelectGroupedNodes = {};
 
@@ -193,15 +159,7 @@ export class SelectBase extends React.Component<SelectProps, State> {
     selectItem: SelectItemProps,
     index: number,
   ): JSX.Element {
-    const {
-      getInputProps,
-      getItemProps,
-      getLabelProps,
-      isOpen,
-      inputValue,
-      highlightedIndex,
-      selectedItem,
-    } = options;
+    const { getItemProps, highlightedIndex, selectedItem } = options;
 
     return (
       <div

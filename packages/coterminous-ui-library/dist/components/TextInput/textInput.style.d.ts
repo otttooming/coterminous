@@ -1,1 +1,1 @@
-export declare const TextInputStyle: any;
+export declare const TextInputStyle: import('styled-components').FlattenSimpleInterpolation;

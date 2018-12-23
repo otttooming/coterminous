@@ -1,18 +1,10 @@
 import * as React from 'react';
-import {
-  FormContext,
-  FormState,
-  withFormConsumer,
-  ExternalWithFormConsumerProps,
-} from '../../';
+import { withFormConsumer, ExternalWithFormConsumerProps } from '../../';
 import { TextInput, TextInputProps, TagName } from './TextInput';
-
-export interface Props {}
 
 interface State {}
 
-export type TextInputFieldProps = Props &
-  TextInputProps &
+export type TextInputFieldProps = TextInputProps &
   ExternalWithFormConsumerProps;
 
 class TextInputFieldBase extends React.Component<TextInputFieldProps, State> {

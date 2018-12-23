@@ -1,18 +1,10 @@
 import * as React from 'react';
-import {
-  FormContext,
-  FormState,
-  withFormConsumer,
-  ExternalWithFormConsumerProps,
-} from '../../';
+import { withFormConsumer, ExternalWithFormConsumerProps } from '../../';
 import { Select, SelectProps } from './Select';
 
-export interface Props {}
 interface State {}
 
-export type SelectFieldProps = Props &
-  SelectProps &
-  ExternalWithFormConsumerProps;
+export type SelectFieldProps = SelectProps & ExternalWithFormConsumerProps;
 
 class SelectFieldBase extends React.Component<SelectFieldProps, State> {
   constructor(props: SelectFieldProps) {

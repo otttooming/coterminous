@@ -1,11 +1,9 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 const React = require('react');
-// TS error if some components not explicitly imported for tsconfig declaration export
-// https://github.com/styled-components/styled-components/issues/1063
-// https://github.com/Microsoft/TypeScript/issues/9944
-const __1 = require('../../');
+const styled_components_1 = require('styled-components');
 const ControlWrapper_1 = require('../ControlWrapper/ControlWrapper');
+const __1 = require('../../');
 const controlWrapperHelper_1 = require('../ControlWrapper/controlWrapperHelper');
 const downshift_1 = require('downshift');
 const select_style_1 = require('./select.style');
@@ -67,10 +65,6 @@ class SelectBase extends React.Component {
   }
   render() {
     const { items, className } = this.props;
-    const label =
-      this.state.selected && this.state.selected.label
-        ? this.state.selected.label
-        : undefined;
     return this.renderControlWrapper(
       React.createElement(
         downshift_1.default,
@@ -80,17 +74,7 @@ class SelectBase extends React.Component {
           stateReducer: this.stateReducer,
         },
         options => {
-          const {
-            getInputProps,
-            getItemProps,
-            getLabelProps,
-            isOpen,
-            inputValue,
-            highlightedIndex,
-            selectedItem,
-            setState,
-            clearSelection,
-          } = options;
+          const { getInputProps, isOpen, setState } = options;
           return React.createElement(
             'div',
             null,
@@ -117,15 +101,7 @@ class SelectBase extends React.Component {
     );
   }
   renderPopoverChildren(options, items) {
-    const {
-      getInputProps,
-      getItemProps,
-      getLabelProps,
-      isOpen,
-      inputValue,
-      highlightedIndex,
-      selectedItem,
-    } = options;
+    const { inputValue } = options;
     const ob = {};
     const reduc = items
       .filter(this.getFilteredResults(inputValue))
@@ -161,15 +137,7 @@ class SelectBase extends React.Component {
     return React.createElement('div', null, groupedItems);
   }
   renderSelectItem(options, selectItem, index) {
-    const {
-      getInputProps,
-      getItemProps,
-      getLabelProps,
-      isOpen,
-      inputValue,
-      highlightedIndex,
-      selectedItem,
-    } = options;
+    const { getItemProps, highlightedIndex, selectedItem } = options;
     return React.createElement(
       'div',
       Object.assign(
@@ -197,6 +165,6 @@ class SelectBase extends React.Component {
   }
 }
 exports.SelectBase = SelectBase;
-exports.Select = __1.styled(SelectBase)`
+exports.Select = styled_components_1.default(SelectBase)`
   ${select_style_1.selectInputStyle};
 `;

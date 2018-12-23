@@ -13,5 +13,23 @@ export interface Props {
   type?: CheckboxType;
   checked?: boolean;
 }
+interface State {
+  isChecked: boolean;
+}
 export declare type CheckboxProps = Props & ControlWrapperProps;
-export declare const Checkbox: any;
+declare class CheckboxBase extends React.Component<CheckboxProps, State> {
+  static defaultProps: {
+    type: CheckboxType;
+  };
+  constructor(props: CheckboxProps);
+  render(): JSX.Element;
+  renderControlWrapper: (element: React.ReactNode) => JSX.Element;
+  handleChange: (event: React.FormEvent<HTMLInputElement>) => void;
+}
+export declare const Checkbox: import('styled-components').StyledComponent<
+  typeof CheckboxBase,
+  any,
+  any,
+  never
+>;
+export {};

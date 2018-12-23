@@ -13,5 +13,15 @@ export interface GlowProps
   y: number;
   size: number;
 }
-export declare const Glow: any;
-export declare const Button: any;
+export declare const Glow: import('styled-components').StyledComponent<
+  React.FunctionComponent<GlowProps>,
+  any,
+  {},
+  never
+>;
+export declare const Button: import('styled-components').StyledComponent<
+  any,
+  any,
+  {},
+  string | number | symbol
+>;

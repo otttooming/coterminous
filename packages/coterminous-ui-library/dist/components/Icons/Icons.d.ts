@@ -1,3 +1,8 @@
 export declare const CSSIcons: {
-  Checkmark: any;
+  Checkmark: import('styled-components').StyledComponent<
+    'span',
+    any,
+    {},
+    never
+  >;
 };

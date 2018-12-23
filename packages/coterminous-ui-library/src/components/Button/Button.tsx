@@ -1,15 +1,5 @@
 import * as React from 'react';
-
-// TS error if some components not explicitly imported for tsconfig declaration export
-// https://github.com/styled-components/styled-components/issues/1063
-// https://github.com/Microsoft/TypeScript/issues/9944
-import {
-  styled,
-  StyledComponentClass, // Required for tsconfig declaration export
-  CoterminousStyledThemeProps, // Required for tsconfig declaration export
-  Styles, // Required for tsconfig declaration export
-  css,
-} from '../../';
+import styled, { css } from 'styled-components';
 
 const StyledButton = css`
   border: 0;
@@ -139,6 +129,6 @@ export const Glow = styled(GlowBase)`
   ${StyledGlow};
 `;
 
-export const Button = styled(ButtonBase)`
+export const Button = styled<any>(ButtonBase)`
   ${StyledButton};
 `;

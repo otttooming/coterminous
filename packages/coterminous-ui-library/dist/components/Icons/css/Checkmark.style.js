@@ -1,10 +1,7 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-// TS error if some components not explicitly imported for tsconfig declaration export
-// https://github.com/styled-components/styled-components/issues/1063
-// https://github.com/Microsoft/TypeScript/issues/9944
-const __1 = require('../../../');
-exports.Checkmark = __1.styled.span`
+const styled_components_1 = require('styled-components');
+exports.Checkmark = styled_components_1.default.span`
   display: inline-block;
   position: relative;
   width: 16px;

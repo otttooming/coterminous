@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { ThemeProvider, theme, GlobalStyle } from '@coterminous/ui-library';
 
 interface Props {
   children: React.ReactNode;
@@ -16,40 +15,36 @@ const Main = ({
   renderAfterMain,
   renderFooter,
 }: Props) => (
-  <ThemeProvider theme={theme}>
-    <>
-      <div className="wrapper">
-        {!!renderHeader && renderHeader}
+  <>
+    <div className="wrapper">
+      {!!renderHeader && renderHeader}
 
-        <div className="container">
-          <div className="row">
-            {!!renderSidebar && (
-              <aside className="col-lg-3 sidebar_grid hidden-md-down">
-                <div className="widget-container widget_desirees-subcategories">
-                  <div className="widget-container cat-list">
-                    {renderSidebar}
-                  </div>
-                </div>
-              </aside>
-            )}
+      <div className="container">
+        <div className="row">
+          {!!renderSidebar && (
+            <aside className="col-lg-3 sidebar_grid hidden-md-down">
+              <div className="widget-container widget_desirees-subcategories">
+                <div className="widget-container cat-list">{renderSidebar}</div>
+              </div>
+            </aside>
+          )}
 
-            <div
-              className={`col-xs-12 ${
-                !!renderSidebar ? 'col-lg-9' : 'col-lg-12'
-              }`}
-            >
-              <main>{children}</main>
+          <div
+            className={`col-xs-12 ${
+              !!renderSidebar ? 'col-lg-9' : 'col-lg-12'
+            }`}
+          >
+            <main>{children}</main>
 
-              {!!renderAfterMain && renderAfterMain}
-            </div>
+            {!!renderAfterMain && renderAfterMain}
           </div>
         </div>
-        {!!renderFooter && renderFooter}
       </div>
+      {!!renderFooter && renderFooter}
+    </div>
 
-      <div className="bg__site" />
-    </>
-  </ThemeProvider>
+    <div className="bg__site" />
+  </>
 );
 
 export default Main;

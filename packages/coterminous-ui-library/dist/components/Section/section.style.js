@@ -1,15 +1,13 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-// TS error if some components not explicitly imported for tsconfig declaration export
-// https://github.com/styled-components/styled-components/issues/1063
-// https://github.com/Microsoft/TypeScript/issues/9944
 const __1 = require('../../');
-const common = __1.css`
-  background-color: ${props => props.theme.background.section};
-  border-radius: ${props => props.theme.border.radius.small};
-  margin-bottom: ${props => props.theme.spacing.normal};
-  padding: ${props => props.theme.spacing.large};
+const styled_components_1 = require('styled-components');
+const common = styled_components_1.css`
+  background-color: ${__1.theme.background.section};
+  border-radius: ${__1.theme.border.radius.small};
+  margin-bottom: ${__1.theme.spacing.normal};
+  padding: ${__1.theme.spacing.large};
 `;
-exports.sectionStyle = __1.css`
+exports.sectionStyle = styled_components_1.css`
   ${common};
 `;

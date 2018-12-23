@@ -1,10 +1,7 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-// TS error if some components not explicitly imported for tsconfig declaration export
-// https://github.com/styled-components/styled-components/issues/1063
-// https://github.com/Microsoft/TypeScript/issues/9944
-const __1 = require('../../');
-exports.legacy = __1.css`
+const styled_components_1 = require('styled-components');
+exports.legacy = styled_components_1.css`
   @font-face {
     font-family: 'Oswald';
     src: url('/static/fonts/oswald-extralight.woff2') format('woff2'),

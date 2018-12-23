@@ -1,15 +1,13 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-// TS error if some components not explicitly imported for tsconfig declaration export
-// https://github.com/styled-components/styled-components/issues/1063
-// https://github.com/Microsoft/TypeScript/issues/9944
 const __1 = require('../../');
+const styled_components_1 = require('styled-components');
 exports.arrowCorrection = '15px';
-exports.dropdownStyle = __1.css`
+exports.dropdownStyle = styled_components_1.css`
   background: #fff;
-  border-radius: ${props => props.theme.border.radius.small};
-  padding: ${props => props.theme.spacing.medium};
-  color: ${props => props.theme.color.dark};
+  border-radius: ${__1.theme.border.radius.small};
+  padding: ${__1.theme.spacing.medium};
+  color: ${__1.theme.color.dark};
   position: relative;
   min-width: 300px;
   box-shadow: 0 41px 66px 0 rgba(0, 0, 0, 0.2);
@@ -28,10 +26,10 @@ exports.dropdownStyle = __1.css`
     right: ${exports.arrowCorrection};
   }
 `;
-exports.Dropdown = __1.styled('div')`
+exports.Dropdown = styled_components_1.default('div')`
   ${exports.dropdownStyle};
 `;
-exports.arrowStyle = __1.css`
+exports.arrowStyle = styled_components_1.css`
   position: absolute;
   width: 3em;
   height: 3em;

@@ -13,11 +13,75 @@ export interface Props
   tagName?: TagName;
   className?: string;
 }
+declare class HeadingBase extends React.Component<Props, {}> {
+  render(): JSX.Element;
+  renderChildren: () =>
+    | string
+    | number
+    | React.ReactElement<any>
+    | (string & React.ReactElement<any>)
+    | (number & React.ReactElement<any>)
+    | (false & React.ReactElement<any>)
+    | (true & React.ReactElement<any>)
+    | ({} & string)
+    | ({} & number)
+    | (React.ReactElement<any> & string)
+    | (React.ReactElement<any> & number)
+    | (React.ReactNodeArray & string)
+    | (React.ReactNodeArray & number)
+    | (React.ReactNodeArray & React.ReactElement<any>)
+    | (React.ReactPortal & string)
+    | (React.ReactPortal & number)
+    | (React.ReactPortal & React.ReactElement<any>);
+}
 export declare const Heading: {
-  H1: any;
-  H2: any;
-  H3: any;
-  H4: any;
-  H5: any;
-  H6: any;
+  H1: import('styled-components').StyledComponent<
+    typeof HeadingBase,
+    any,
+    {
+      tagName: TagName.H1;
+    },
+    'tagName'
+  >;
+  H2: import('styled-components').StyledComponent<
+    typeof HeadingBase,
+    any,
+    {
+      tagName: TagName.H2;
+    },
+    'tagName'
+  >;
+  H3: import('styled-components').StyledComponent<
+    typeof HeadingBase,
+    any,
+    {
+      tagName: TagName.H3;
+    },
+    'tagName'
+  >;
+  H4: import('styled-components').StyledComponent<
+    typeof HeadingBase,
+    any,
+    {
+      tagName: TagName.H4;
+    },
+    'tagName'
+  >;
+  H5: import('styled-components').StyledComponent<
+    typeof HeadingBase,
+    any,
+    {
+      tagName: TagName.H5;
+    },
+    'tagName'
+  >;
+  H6: import('styled-components').StyledComponent<
+    typeof HeadingBase,
+    any,
+    {
+      tagName: TagName.H6;
+    },
+    'tagName'
+  >;
 };
+export {};

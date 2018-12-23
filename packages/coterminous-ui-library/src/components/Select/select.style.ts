@@ -1,16 +1,5 @@
-import { border } from './../../common/styles/constants';
-// TS error if some components not explicitly imported for tsconfig declaration export
-// https://github.com/styled-components/styled-components/issues/1063
-// https://github.com/Microsoft/TypeScript/issues/9944
-import {
-  css,
-  styled, // Required for tsconfig declaration export
-  Styles, // Required for tsconfig declaration export
-  StyledComponentClass, // Required for tsconfig declaration export
-  InterpolationFunction, // Required for tsconfig declaration export
-  ThemeProps, // Required for tsconfig declaration export
-  CoterminousStyledThemeProps, // Required for tsconfig declaration export
-} from '../../';
+import { theme } from '../../';
+import { css } from 'styled-components';
 
 const reset = css`
   margin: 0;
@@ -32,9 +21,9 @@ const common = css`
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
-  padding-left: ${props => props.theme.spacing.medium};
-  border-radius: ${props => props.theme.border.radius.small};
-  background-color: ${props => props.theme.background.input};
+  padding-left: ${theme.spacing.medium};
+  border-radius: ${theme.border.radius.small};
+  background-color: ${theme.background.input};
 `;
 
 export const selectInputStyle = css`

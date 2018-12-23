@@ -1,25 +1,14 @@
 import * as React from 'react';
-import { border } from './../../common/styles/constants';
-// TS error if some components not explicitly imported for tsconfig declaration export
-// https://github.com/styled-components/styled-components/issues/1063
-// https://github.com/Microsoft/TypeScript/issues/9944
-import {
-  css,
-  styled, // Required for tsconfig declaration export
-  Styles, // Required for tsconfig declaration export
-  StyledComponentClass, // Required for tsconfig declaration export
-  InterpolationFunction, // Required for tsconfig declaration export
-  ThemeProps, // Required for tsconfig declaration export
-  CoterminousStyledThemeProps, // Required for tsconfig declaration export
-} from '../../';
+import { theme } from '../../';
+import styled, { css } from 'styled-components';
 
 export const arrowCorrection = '15px';
 
 export const dropdownStyle = css`
   background: #fff;
-  border-radius: ${props => props.theme.border.radius.small};
-  padding: ${props => props.theme.spacing.medium};
-  color: ${props => props.theme.color.dark};
+  border-radius: ${theme.border.radius.small};
+  padding: ${theme.spacing.medium};
+  color: ${theme.color.dark};
   position: relative;
   min-width: 300px;
   box-shadow: 0 41px 66px 0 rgba(0, 0, 0, 0.2);

@@ -1,15 +1,3 @@
-export {
-  styled,
-  css,
-  keyframes,
-  ThemeProvider,
-  Styles,
-  StyledComponentClass,
-  InterpolationFunction,
-  ThemeProps,
-  CoterminousStyledThemeProps,
-  createGlobalStyle,
-} from './common/styles/styledComponents';
 export { theme } from './common/styles/theme';
 export { GlobalStyle } from './components/GlobalStyle/GlobalStyle';
 export { rotate360 } from './common/styles/keyframes';

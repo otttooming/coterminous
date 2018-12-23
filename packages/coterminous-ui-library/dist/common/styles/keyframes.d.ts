@@ -1,1 +1,1 @@
-export declare const rotate360: any;
+export declare const rotate360: import('styled-components').Keyframes;

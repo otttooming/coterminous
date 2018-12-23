@@ -1,1 +1,6 @@
-export declare const Section: any;
+export declare const Section: import('styled-components').StyledComponent<
+  'section',
+  any,
+  {},
+  never
+>;

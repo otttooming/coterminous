@@ -1,1 +1,6 @@
-export declare const Checkmark: any;
+export declare const Checkmark: import('styled-components').StyledComponent<
+  'span',
+  any,
+  {},
+  never
+>;

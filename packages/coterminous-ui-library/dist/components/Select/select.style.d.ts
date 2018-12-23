@@ -1,1 +1,1 @@
-export declare const selectInputStyle: any;
+export declare const selectInputStyle: import('styled-components').FlattenSimpleInterpolation;
