@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { GlobalStyle } from '@coterminous/ui-library';
 
 interface Props {
   children: React.ReactNode;
@@ -16,6 +17,8 @@ const Main = ({
   renderFooter,
 }: Props) => (
   <>
+    <GlobalStyle />
+
     <div className="wrapper">
       {!!renderHeader && renderHeader}
 
