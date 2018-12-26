@@ -12,7 +12,7 @@
     "baseUrl": "./",
     "outDir": "./dist",
     "paths": {
-      "@coterminous/ui-library": ["./src"]
+      "@coterminous/ui-lib": ["./src"]
     }
   },
   "exclude": ["./node_modules"]

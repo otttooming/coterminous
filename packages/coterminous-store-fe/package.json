@@ -1,5 +1,5 @@
 {
-  "name": "@coterminous/store-frontend",
+  "name": "@coterminous/store-fe",
   "version": "1.0.0",
   "description": "React ecommerce project",
   "repository": {
@@ -9,7 +9,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "1.10.0",
     "classnames": "2.2.6",
-    "@coterminous/ui-library": "*",
+    "@coterminous/ui-lib": "*",
     "downshift": "^3.1.8",
     "express": "4.16.4",
     "front-matter": "3.0.1",

@@ -1,10 +1,10 @@
 {
-  "name": "@coterminous/ui-library",
+  "name": "@coterminous/ui-lib",
   "version": "1.0.0",
   "description": "Reusable components for React projects",
   "repository": {
     "type": "git",
-    "url": "https://github.com/otttooming/@coterminous/ui-library.git"
+    "url": "https://github.com/otttooming/@coterminous/ui-lib.git"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -93,7 +93,7 @@
       "js"
     ],
     "moduleNameMapper": {
-      "@coterminous/ui-library": "<rootDir>/src/index.ts"
+      "@coterminous/ui-lib": "<rootDir>/src/index.ts"
     },
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { LocationChangeProps } from '../../common/products/typings';
-import { Heading } from '@coterminous/ui-library';
+import { Heading } from '@coterminous/ui-lib';
 
 interface Props {
   onLocationChange?: (props: LocationChangeProps) => void;

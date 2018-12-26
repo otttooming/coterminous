@@ -9,7 +9,7 @@ import {
   SelectField,
   SelectItemProps,
   RadioButtonField,
-} from '@coterminous/ui-library';
+} from '@coterminous/ui-lib';
 
 interface ShippingMethodsProps {
   shippingLocations: ShippingLocations | undefined;

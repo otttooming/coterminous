@@ -6,7 +6,7 @@ import AdditionalInformation from './children/AdditionalInformation';
 import { LocationChangeProps } from '../../common/products/typings';
 import ShippingMethods from '../../components/shippingMethods/ShippingMethodsWrapper';
 import PaymentMethods from '../../components/paymentMethods/PaymentMethodsWrapper';
-import { FormProvider } from '@coterminous/ui-library';
+import { FormProvider } from '@coterminous/ui-lib';
 
 interface Props {
   handleSubmit?: (event: React.FormEvent<HTMLFormElement>) => void;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from '../../../components/link/Link';
 import { LOCATION_TYPES, PAGE_SLUGS } from '../../../common/products/constants';
 import { LocationChangeProps } from '../../../common/products/typings';
-import { Section, Heading, CheckboxField } from '@coterminous/ui-library';
+import { Section, Heading, CheckboxField } from '@coterminous/ui-lib';
 
 interface Props {
   onLocationChange: (props: LocationChangeProps) => void;
