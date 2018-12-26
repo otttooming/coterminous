@@ -14,5 +14,6 @@
 
 - `[package-name]-fe` - frontend services
 - `[package-name]-be` - backend services
+- `[package-name]-gw` - api gateway
 - `[package-name]-lib` - reusable library
 - `[package-name]-design` - design resources
