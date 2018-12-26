@@ -12,7 +12,7 @@
 
 ## Structure
 
-- `[package-name]-frontend` - frontend services
-- `[package-name]-backend` - backend services
-- `[package-name]-library` - reusable library
+- `[package-name]-fe` - frontend services
+- `[package-name]-be` - backend services
+- `[package-name]-lib` - reusable library
 - `[package-name]-design` - design resources
