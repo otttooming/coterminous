@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { withFormConsumer, ExternalWithFormConsumerProps } from '../../';
+import { withFormConsumer } from '../../';
 import { Checkbox, CheckboxProps } from './Checkbox';
+import { ExternalWithFormConsumerProps } from '../Form/withFormConsumer';
 
 interface State {}
 

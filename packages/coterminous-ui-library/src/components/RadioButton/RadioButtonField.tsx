@@ -1,19 +1,12 @@
 import * as React from 'react';
-import {
-  FormContext,
-  FormState,
-  withFormConsumer,
-  ExternalWithFormConsumerProps,
-  Checkbox,
-  CheckboxProps,
-} from '../../';
-import { CheckboxType } from '../Checkbox/Checkbox';
+import { withFormConsumer, Checkbox } from '../../';
+import { CheckboxType, CheckboxProps } from '../Checkbox/Checkbox';
+import { ExternalWithFormConsumerProps } from '../Form/withFormConsumer';
+import { FormState } from '../Form/Form';
 
-export interface Props {}
 interface State {}
 
-export type RadioButtonFieldProps = Props &
-  CheckboxProps &
+export type RadioButtonFieldProps = CheckboxProps &
   ExternalWithFormConsumerProps &
   Partial<FormState>;
 
