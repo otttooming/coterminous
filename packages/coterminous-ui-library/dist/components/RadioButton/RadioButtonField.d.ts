@@ -1,12 +1,8 @@
 /// <reference types="react" />
-import {
-  FormState,
-  ExternalWithFormConsumerProps,
-  CheckboxProps,
-} from '../../';
-export interface Props {}
-export declare type RadioButtonFieldProps = Props &
-  CheckboxProps &
+import { CheckboxProps } from '../Checkbox/Checkbox';
+import { ExternalWithFormConsumerProps } from '../Form/withFormConsumer';
+import { FormState } from '../Form/Form';
+export declare type RadioButtonFieldProps = CheckboxProps &
   ExternalWithFormConsumerProps &
   Partial<FormState>;
 export declare const RadioButtonField: (
