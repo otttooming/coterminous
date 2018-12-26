@@ -70,7 +70,7 @@ dist/
 .DS_Store
 
 # Static remotely fetched assets
-packages/coterminous-store-frontend/static/shipping/*
+packages/coterminous-store-fe/static/shipping/*
 
 # Retain specific files
 !*.keep
