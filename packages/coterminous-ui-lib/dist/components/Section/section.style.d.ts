@@ -1,1 +1,1 @@
-export declare const sectionStyle: import('styled-components').FlattenSimpleInterpolation;
+export declare const sectionStyle: import("styled-components").FlattenSimpleInterpolation;

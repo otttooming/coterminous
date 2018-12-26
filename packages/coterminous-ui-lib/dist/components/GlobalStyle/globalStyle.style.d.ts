@@ -1,1 +1,1 @@
-export declare const globalStyleCss: import('styled-components').FlattenSimpleInterpolation;
+export declare const globalStyleCss: import("styled-components").FlattenSimpleInterpolation;

@@ -1,1 +1,1 @@
-export declare const legacy: import('styled-components').FlattenSimpleInterpolation;
+export declare const legacy: import("styled-components").FlattenSimpleInterpolation;
