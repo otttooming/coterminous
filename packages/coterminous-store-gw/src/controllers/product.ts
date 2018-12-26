@@ -1,8 +1,6 @@
-
-
 class ProductController {
   private Router = new Router({
-    prefix: "/search",
+    prefix: '/search',
   });
 
   private renderCtx = new RenderCtx();
@@ -11,7 +9,7 @@ class ProductController {
   constructor() {}
 
   public router(): Router {
-    return this.Router.post("/", this.list.bind(this));
+    return this.Router.post('/', this.list.bind(this));
   }
 
   private async list(ctx: Koa.Context) {
@@ -23,21 +21,21 @@ class ProductController {
     }: PageableRequest = request;
 
     const totalElements: number = await Person.find({}).count();
-    const modelQuery = !query ? {} : { name: new RegExp(query.name, "i") };
+    const modelQuery = !query ? {} : { name: new RegExp(query.name, 'i') };
 
     const books: Array<IPersonModel> = await Person.find(modelQuery)
       .limit(size)
       .skip(number);
 
     const booksData: Array<IPerson> = books.map((book: IPersonModel) =>
-      book.toPlainObject()
+      book.toPlainObject(),
     );
 
     this.pageableResource.setPage(request, booksData, totalElements);
 
     const data = this.pageableResource.createPage();
 
-    this.renderCtx.renderSuccess(ctx, 200, "status", data);
+    this.renderCtx.renderSuccess(ctx, 200, 'status', data);
   }
 }
 

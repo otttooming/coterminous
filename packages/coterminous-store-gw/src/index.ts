@@ -13,7 +13,6 @@
 //   }
 // `
 
-
 // const resolvers = {
 //   Query: {
 //     hello: (_, { name }) => {
@@ -30,12 +29,11 @@
 
 // server.start(() => console.log('Server is running on http://localhost:4000'))
 
-
-import * as Koa from "koa";
+import * as Koa from 'koa';
 import { ApolloServer, gql, makeExecutableSchema } from 'apollo-server-koa';
 
 import { ProductResolver, ProductType } from './modules/product';
-import { DocumentNode } from "../node_modules/@types/graphql";
+import { DocumentNode } from '../node_modules/@types/graphql';
 
 // Construct a schema, using GraphQL schema language
 const rootTypeDefs = gql`
@@ -61,12 +59,12 @@ class Server {
     this.app = new Koa();
     this.setTypeDefs();
     this.setResolvers();
-    
+
     const typeDefs = this.typeDefs;
     const resolvers = this.resolvers;
 
     console.log(resolvers, 'resolvers');
-    
+
     this.server = new ApolloServer({ typeDefs, resolvers, playground: true });
     this.middelwares();
   }
@@ -77,14 +75,14 @@ class Server {
   }
 
   private setTypeDefs() {
-    this.typeDefs = [rootTypeDefs, ProductType]
+    this.typeDefs = [rootTypeDefs, ProductType];
   }
 
   private setResolvers() {
-    this.resolvers = [rootResolvers, ProductResolver]
+    this.resolvers = [rootResolvers, ProductResolver];
   }
 }
 
 new Server().app.listen(4000);
 
-console.log("listening on 4000");
+console.log('listening on 4000');

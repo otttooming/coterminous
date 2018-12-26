@@ -15,7 +15,7 @@
 - **No configuration overhead**: Preconfigured [`graphql-config`](https://github.com/prisma/graphql-config) setup
 
 Read more about the idea behind GraphQL boilerplates [here](https://blog.graph.cool/graphql-boilerplates-graphql-create-how-to-setup-a-graphql-project-6428be2f3a5).
-  
+
 ## Requirements
 
 You need to have the [GraphQL CLI](https://github.com/graphql-cli/graphql-cli) installed to bootstrap your GraphQL server using `graphql create`:
@@ -45,16 +45,15 @@ yarn dev
 
 ### Commands
 
-* `yarn start` or `npm run start` starts GraphQL server on `http://localhost:4000`
-* `yarn dev` or `npm run dev` starts GraphQL server on `http://localhost:4000` _and_ opens GraphQL Playground
+- `yarn start` or `npm run start` starts GraphQL server on `http://localhost:4000`
+- `yarn dev` or `npm run dev` starts GraphQL server on `http://localhost:4000` _and_ opens GraphQL Playground
 
 ### Project structure
 
-| File name 　　　　　　　　　　　　　　| Description 　　　　　　　　<br><br>| 
-| :--  | :--         |
-| `└── src ` (_directory_) | _Contains the source files for your GraphQL server_ |
-| `　　├── index.ts` | The entry point for your GraphQL server |
-
+| File name 　　　　　　　　　　　　　　 | Description 　　　　　　　　<br><br>                |
+| :------------------------------------- | :-------------------------------------------------- |
+| `└── src` (_directory_)                | _Contains the source files for your GraphQL server_ |
+| `├── index.ts`                         | The entry point for your GraphQL server             |
 
 ## Contributing
 

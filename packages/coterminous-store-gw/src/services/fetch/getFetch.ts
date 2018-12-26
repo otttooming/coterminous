@@ -13,8 +13,8 @@ interface Options {
 }
 
 export enum FETCH_TYPE {
-  JSON = "JSON",
-  TEXT = "TEXT",
+  JSON = 'JSON',
+  TEXT = 'TEXT',
 }
 
 export async function getFetch({ url, options }: Props): Promise<Response> {
@@ -27,7 +27,7 @@ export async function getFetch({ url, options }: Props): Promise<Response> {
 
     const headers = response.headers;
 
-    const totalPages = parseInt(headers.get("X-WP-TotalPages"), 10);
+    const totalPages = parseInt(headers.get('X-WP-TotalPages'), 10);
 
     const meta = { totalPages };
 

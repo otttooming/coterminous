@@ -2,16 +2,16 @@ import { gql } from 'apollo-server-koa';
 
 const Product = gql`
   type ProductsListing {
-    cursor: Int!,
+    cursor: Int!
     edges: [ProductNode]
   }
 
   type ProductNode {
-    node: Product,
+    node: Product
   }
 
   type Product {
-    name: String,
+    name: String
     createdAt: String
   }
 
