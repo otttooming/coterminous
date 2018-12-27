@@ -16,7 +16,7 @@ const Product = gql`
   }
 
   extend type Query {
-    productsListing(cursor: String): ProductsListing
+    productsListing(cursor: Int): ProductsListing
   }
 `;
 
