@@ -1,39 +1,7 @@
-// import { GraphQLServer } from 'graphql-yoga';
-
-// import * as WPAPI from 'wpapi';
-
-// const wp = new WPAPI({ endpoint: 'http://src.wordpress-develop.dev/wp-json' });
-// wp.myCustomResource = wp.registerRoute( 'myplugin/v1', '/ott/(?P<id>)' )
-
-// wp.media().get().then();
-
-// const typeDefs = `
-//   type Query {
-//     hello(name: String): String
-//   }
-// `
-
-// const resolvers = {
-//   Query: {
-//     hello: (_, { name }) => {
-//       const returnValue = name ? `Hello ${name || 'World!'}` : wp.myCustomResource().o
-//       return returnValue
-//     }
-//   }
-// }
-
-// const server = new GraphQLServer({
-//   typeDefs,
-//   resolvers
-// })
-
-// server.start(() => console.log('Server is running on http://localhost:4000'))
-
 import * as Koa from 'koa';
-import { ApolloServer, gql, makeExecutableSchema } from 'apollo-server-koa';
+import { ApolloServer, gql } from 'apollo-server-koa';
 
 import { ProductResolver, ProductType } from './modules/product';
-import { DocumentNode } from '../node_modules/@types/graphql';
 
 // Construct a schema, using GraphQL schema language
 const rootTypeDefs = gql`
