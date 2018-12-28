@@ -1,0 +1,12 @@
+# Write your query or mutation here
+query productsListing {
+  productsListing(cursor: 1) {
+    cursor
+    edges {
+      node {
+        name
+        createdAt
+      }
+    }
+  }
+}
