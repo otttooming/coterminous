@@ -55,6 +55,8 @@ import {
 import OrderView from '../components/orderView/OrderView';
 import { ShippingLocations } from '../services/shippingApi/shippingApi';
 import { connect } from 'react-redux';
+import withRedux from 'next-redux-wrapper';
+import withApollo from '../lib/withApollo';
 
 interface Props {
   categories: CategoryProps[];
@@ -320,4 +322,4 @@ class IndexPage extends React.Component<Props, State> {
   }
 }
 
-export default IndexPage;
+export default withApollo(withRedux(initStore, null, null)(IndexPage));

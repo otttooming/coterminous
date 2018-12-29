@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { LocationChangeProps } from '../../common/products/typings';
 import { Heading } from '@coterminous/ui-lib';
+import ProductsListing from '../productsListing/ProductsListing';
+import { ProductsListingComponent } from '../../generated-models';
 
 interface Props {
   onLocationChange?: (props: LocationChangeProps) => void;
@@ -174,7 +176,18 @@ const LandingView = ({ onLocationChange }: Props) => {
         <div className="col-xs-12 col-sm-6 col-md-3 d__flex">
           <div className="bg__common p1 w100">
             <div id="text-35" className="widget-container widget_text">
-              <Heading.H2>CHEAP PRICES</Heading.H2>
+              <ProductsListingComponent>
+                {({ loading, data, error }) => {
+                  console.log('====================================');
+                  console.log(loading, data, error);
+                  console.log('====================================');
+                  return (
+                    <div>
+                      <Heading.H2>CHEAP PRICES</Heading.H2>
+                    </div>
+                  );
+                }}
+              </ProductsListingComponent>
               <div className="textwidget" />
             </div>
           </div>
