@@ -3,12 +3,13 @@ import { LocationChangeProps } from '../../common/products/typings';
 import { Heading } from '@coterminous/ui-lib';
 import ProductsListing from '../productsListing/ProductsListing';
 import { ProductsListingComponent } from '../../generated-models';
+import { setProductListing } from '../../store';
 
 interface Props {
   onLocationChange?: (props: LocationChangeProps) => void;
 }
 
-const LandingView = ({ onLocationChange }: Props) => {
+const LandingView = ({ onLocationChange, dispatch }: Props) => {
   return (
     <div className="container container__content">
       <div className="row">
@@ -178,12 +179,18 @@ const LandingView = ({ onLocationChange }: Props) => {
             <div id="text-35" className="widget-container widget_text">
               <ProductsListingComponent>
                 {({ loading, data, error }) => {
+                  dispatch(setProductListing(data));
                   console.log('====================================');
                   console.log(loading, data, error);
                   console.log('====================================');
+                  const name =
+                    !!data &&
+                    !!data.productsListing &&
+                    data.productsListing.edges[0].node.name;
+
                   return (
                     <div>
-                      <Heading.H2>CHEAP PRICES</Heading.H2>
+                      <Heading.H2>CHEAP PRICES {name}</Heading.H2>
                     </div>
                   );
                 }}

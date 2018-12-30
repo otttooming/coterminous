@@ -220,7 +220,7 @@ class IndexPage extends React.Component<Props, State> {
   };
 
   render() {
-    const { menuItems, categories, formValues } = this.props;
+    const { menuItems, categories, formValues, dispatch } = this.props;
     const { navRouting } = this.state;
     const { totalPages = 1, page = 1 } = navRouting;
 
@@ -272,7 +272,10 @@ class IndexPage extends React.Component<Props, State> {
         <Loader isLoaderActive={this.state.isLoaderActive} />
 
         {(!navRouting.view || navRouting.view === LANDING_SLUGS.DEFAULT) && (
-          <LandingView onLocationChange={this.handleLocationChange} />
+          <LandingView
+            onLocationChange={this.handleLocationChange}
+            dispatch={dispatch}
+          />
         )}
 
         {navRouting.view === PRODUCT_SLUGS.DEFAULT && (
@@ -322,4 +325,4 @@ class IndexPage extends React.Component<Props, State> {
   }
 }
 
-export default withApollo(withRedux(initStore, null, null)(IndexPage));
+export default withApollo(connect()(IndexPage));
