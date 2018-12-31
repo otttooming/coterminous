@@ -2,7 +2,7 @@ import { gql } from 'apollo-server-koa';
 
 const Product = gql`
   type ProductsListing {
-    cursor: Int!
+    cursor: String
     edges: [ProductNode]
   }
 
@@ -16,7 +16,7 @@ const Product = gql`
   }
 
   extend type Query {
-    productsListing(cursor: Int): ProductsListing
+    productsListing(cursor: String): ProductsListing
   }
 `;
 
