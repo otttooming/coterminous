@@ -6,9 +6,23 @@
 
 ## Packages
 
-- Ecommerce frontend
+### Store frontend
 
-- UI components
+[@coterminous/store-fe](./packages/coterminous-store-fe)
+
+React frontend for facilitating ecommerce transactions to end users.
+
+### Store gateway
+
+[@coterminous/store-gw](./packages/coterminous-store-gw)
+
+GraphQL API gateway for wrapping WooCommerce REST API.
+
+### User interface library
+
+[@coterminous/ui-lib](./packages/coterminous-ui-lib)
+
+Visual primitives using [styled-components](https://www.styled-components.com/) for common usage to different frontend services.
 
 ## Structure
 
