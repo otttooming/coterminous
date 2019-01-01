@@ -16,7 +16,11 @@ React frontend for facilitating ecommerce transactions to end users.
 
 [@coterminous/store-gw](./packages/coterminous-store-gw)
 
-GraphQL API gateway for wrapping WooCommerce REST API.
+### Wordpress library
+
+[@coterminous/wp-lib](./packages/coterminous-wp-lib)
+
+Wordpress and WooCommerce REST API helpers.
 
 ### User interface library
 

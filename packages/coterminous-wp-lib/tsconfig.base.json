@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "moduleResolution": "node",
+    "lib": ["dom", "esnext"],
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "outDir": "./dist"
+  },
+  "exclude": ["./node_modules"]
+}

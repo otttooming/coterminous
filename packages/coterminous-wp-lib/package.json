@@ -1,0 +1,21 @@
+{
+    "name": "@coterminous/wp-lib",
+    "version": "0.1.0",
+    "description": "Wordpress and WooCommerce REST API helpers",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+      "dist"
+    ],
+    "scripts": {
+      "start": "npm run dev",
+      "dev": "nodemon",
+      "build": "tsc -p tsconfig.dist.json",
+      "clean": "rm -rf dist",
+      "dist": "npm run clean && npm run build"
+    },
+    "devDependencies": {
+      "nodemon": "1.18.9"
+    }
+  }
+  
