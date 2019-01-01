@@ -1,6 +1,6 @@
 {
-  "name": "coterminous-store-gw",
-  "version": "0.0.0",
+  "name": "@coterminous/store-gw",
+  "version": "0.1.0",
   "description": "",
   "main": "index.ts",
   "scripts": {
