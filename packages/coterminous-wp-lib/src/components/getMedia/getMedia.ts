@@ -1,4 +1,4 @@
-import { getUrl, WP, SITEURL } from '../getUrl/getUrl';
+import { getUrl, ENDPOINT, SITE } from '../getUrl/getUrl';
 
 import { MediaItemResponseTypes } from './media.types';
 import { fetchRequest } from '../fetchRequest/fetchRequest';
@@ -30,7 +30,7 @@ export async function getAllMedia(ids: number[]) {
 
 export async function getMedia(id: number) {
   try {
-    const url = getUrl({ paths: [WP, 'media', id.toString()] }, SITEURL);
+    const url = getUrl({ paths: [ENDPOINT.WP, 'media', id.toString()] }, SITE);
 
     const response = await fetchRequest({ url });
 
