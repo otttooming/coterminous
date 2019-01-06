@@ -1,5 +1,4 @@
-import { getUrl, ENDPOINT, SITE } from '../getUrl/getUrl';
-
+import { ENDPOINT, SITE, GetUrlProps } from '../getUrl/getUrl';
 import { MediaItemResponseTypes } from './media.types';
 import { fetchRequest } from '../fetchRequest/fetchRequest';
 
@@ -24,9 +23,12 @@ export interface MediaItemProps {
 
 export async function getMedia(id: number) {
   try {
-    const url = getUrl({ paths: [ENDPOINT.WP, 'media', id.toString()] }, SITE);
+    const url: GetUrlProps = {
+      host: SITE,
+      paths: [ENDPOINT.WP, 'media', String(id)],
+    };
 
-    const response = await fetchRequest({ url });
+    const response = await fetchRequest<MediaItemResponseTypes>({ url });
 
     if (!response) {
       throw Error('No response');
