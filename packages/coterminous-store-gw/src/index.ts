@@ -1,7 +1,7 @@
 import * as Koa from 'koa';
 import { ApolloServer, gql } from 'apollo-server-koa';
 
-import { ProductResolver, ProductType } from './modules/product';
+import { ProductResolver, ProductType } from './components/product';
 
 // Construct a schema, using GraphQL schema language
 const rootTypeDefs = gql`
