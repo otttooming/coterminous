@@ -22,12 +22,6 @@ export interface MediaItemProps {
   imageSizes: ImageSizes[];
 }
 
-export async function getAllMedia(ids: number[]) {
-  const mediaItems = ids.map((id: number) => getMedia(id));
-
-  return Promise.all(mediaItems);
-}
-
 export async function getMedia(id: number) {
   try {
     const url = getUrl({ paths: [ENDPOINT.WP, 'media', id.toString()] }, SITE);
@@ -40,7 +34,7 @@ export async function getMedia(id: number) {
 
     const { payload } = response;
 
-    const data: MediaItemResponseTypes = { ...payload };
+    const data: any = { ...payload };
 
     const media: MediaItemProps = {
       dimensions: {
