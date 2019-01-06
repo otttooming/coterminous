@@ -1,3 +1,5 @@
+import 'isomorphic-unfetch';
+
 interface Props {
   url: string;
   options?: Options;
