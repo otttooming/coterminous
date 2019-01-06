@@ -1,7 +1,8 @@
 import 'isomorphic-unfetch';
+import { GetUrlProps, getUrl } from '../getUrl/getUrl';
 
 interface Props {
-  url: string;
+  url: GetUrlProps;
   options?: Options;
 }
 
@@ -24,7 +25,9 @@ export async function fetchRequest<P>({
   options,
 }: Props): Promise<Response<P> | null> {
   try {
-    const response = await fetch(url);
+    const requestUrl: string = getUrl(url);
+
+    const response = await fetch(requestUrl);
     const payload =
       options && options.type && options.type === FETCH_TYPE.TEXT
         ? await response.text()
