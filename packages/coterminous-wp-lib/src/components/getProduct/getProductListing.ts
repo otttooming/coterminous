@@ -44,13 +44,11 @@ export async function getProductListing({
     per_page: 16,
   };
 
-  const url = getUrl(
-    {
-      paths: [ENDPOINT.WC, 'products'],
-      parameters: { ...defaultParameters, ...parameters },
-    },
-    SITE,
-  );
+  const url = getUrl({
+    host: SITE,
+    paths: [ENDPOINT.WC, 'products'],
+    parameters: { ...defaultParameters, ...parameters },
+  });
 
   const response = await fetchRequest<SingleProductProps[]>({ url });
   console.log(url, response);

@@ -31,6 +31,7 @@ export interface Parameters {
 export const WP_MAIN_MENU_ID = 828;
 
 interface GetUrlProps {
+  host: HostProps;
   paths?: string[];
   parameters?: Parameters;
 }
@@ -41,8 +42,8 @@ interface HostProps {
   consumerSecret: string;
 }
 
-export function getUrl(props: GetUrlProps, host: HostProps) {
-  const { paths = [], parameters = {} } = props;
+export function getUrl(props: GetUrlProps) {
+  const { host, paths = [], parameters = {} } = props;
 
   const path = [host.host, 'wp-json', ...paths].join('/');
   const params: string[] = getParameters(parameters);
