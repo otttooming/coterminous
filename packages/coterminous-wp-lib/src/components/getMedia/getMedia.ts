@@ -36,18 +36,16 @@ export async function getMedia(id: number) {
 
     const { payload } = response;
 
-    const data: any = { ...payload };
-
     const media: MediaItemProps = {
       dimensions: {
-        width: data.media_details.width,
-        height: data.media_details.height,
+        width: payload.media_details.width,
+        height: payload.media_details.height,
         aspectRatio: calcAspectRatio(
-          data.media_details.width,
-          data.media_details.height,
+          payload.media_details.width,
+          payload.media_details.height,
         ),
       },
-      imageSizes: Object.values(data.media_details.sizes),
+      imageSizes: Object.values(payload.media_details.sizes),
     };
 
     return media;
