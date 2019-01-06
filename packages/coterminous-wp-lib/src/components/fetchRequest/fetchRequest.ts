@@ -5,8 +5,8 @@ interface Props {
   options?: Options;
 }
 
-interface Response {
-  payload: any;
+interface Response<P> {
+  payload: P;
   meta: any;
 }
 
@@ -19,10 +19,10 @@ export enum FETCH_TYPE {
   TEXT = 'TEXT',
 }
 
-export async function fetchRequest({
+export async function fetchRequest<P>({
   url,
   options,
-}: Props): Promise<Response | null> {
+}: Props): Promise<Response<P> | null> {
   try {
     const response = await fetch(url);
     const payload =
