@@ -1,3 +1,5 @@
+import { getParameters } from './getUrl.helper';
+
 export const SITE = {
   host: 'https://dev-spiceflow.pantheonsite.io',
   consumerKey: 'ck_a67345603373570cfc213659c53f941e2dc8c64f',
@@ -10,11 +12,27 @@ export const ENDPOINT = {
   WP_API_MENUS: 'wp-api-menus/v2',
 };
 
+export enum UrlPaths {
+  PRODUCTS = 'products',
+}
+
+export type ParameterValue =
+  | number
+  | number[]
+  | string
+  | string[]
+  | boolean
+  | undefined;
+
+export interface Parameters {
+  [key: string]: ParameterValue;
+}
+
 export const WP_MAIN_MENU_ID = 828;
 
 interface GetUrlProps {
   paths?: string[];
-  parameters?: string[];
+  parameters?: Parameters;
 }
 
 interface HostProps {
@@ -24,12 +42,13 @@ interface HostProps {
 }
 
 export function getUrl(props: GetUrlProps, host: HostProps) {
-  const { paths = [], parameters = [] } = props;
+  const { paths = [], parameters = {} } = props;
 
   const path = [host.host, 'wp-json', ...paths].join('/');
+  const params: string[] = getParameters(parameters);
 
   const parameter = [
-    ...parameters,
+    ...params,
     `consumer_key=${host.consumerKey}`,
     `consumer_secret=${host.consumerSecret}`,
   ].join('&');
