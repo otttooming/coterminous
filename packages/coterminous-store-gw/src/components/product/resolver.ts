@@ -7,10 +7,10 @@ import {
 } from '../../codegen/types';
 
 async function getConnection(props: ProductsListingQueryArgs) {
-  const { first = 16, before } = props;
+  const { page = 1, first = 16, before } = props;
 
   const response = await getProductListing({
-    parameters: { before, per_page: first },
+    parameters: { page, before, per_page: first },
   });
 
   return {

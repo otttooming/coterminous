@@ -58,7 +58,9 @@ export interface Product {
 // ====================================================
 
 export interface ProductsListingQueryArgs {
-  before?: Maybe<string>;
+  page?: Maybe<number>;
 
   first?: Maybe<number>;
+
+  before?: Maybe<string>;
 }

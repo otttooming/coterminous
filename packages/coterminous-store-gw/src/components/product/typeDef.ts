@@ -25,7 +25,7 @@ const Product = gql`
   # }
 
   extend type Query {
-    productsListing(before: String, first: Int): ProductsListing
+    productsListing(page: Int, first: Int, before: String): ProductsListing
   }
 `;
 
