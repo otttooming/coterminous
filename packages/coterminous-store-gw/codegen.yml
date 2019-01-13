@@ -1,4 +1,5 @@
 schema: http://localhost:4000/graphql
+overwrite: true
 generates:
   src/codegen/types.ts:
     - typescript-common
