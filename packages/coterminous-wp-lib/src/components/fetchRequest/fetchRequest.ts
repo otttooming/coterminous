@@ -9,6 +9,7 @@ interface Props {
 export interface ResponseMetaProps {
   url: GetUrlProps;
   options?: Options;
+  total: number;
   totalPages: number;
 }
 
@@ -42,10 +43,12 @@ export async function fetchRequest<P>({
     const headers = response.headers;
 
     const wpTotalPages = headers.get('X-WP-TotalPages');
+    const wpTotal = headers.get('X-WP-Total');
 
     const totalPages = parseInt(wpTotalPages || '0', 10);
+    const total = parseInt(wpTotal || '0', 10);
 
-    const meta: ResponseMetaProps = { totalPages, url };
+    const meta: ResponseMetaProps = { totalPages, total, url };
 
     const data: Response<P> = { payload, meta };
 
