@@ -2,6 +2,7 @@ import { ENDPOINT, SITE } from '../getUrl';
 import { getAllMedia } from '../getMedia/';
 import { fetchRequest } from '../fetchRequest';
 import { Parameters, GetUrlProps } from '../getUrl/getUrl';
+import { ResponseMetaProps } from '../fetchRequest/fetchRequest';
 
 export interface ProductListingParameters extends Parameters {
   page?: number;
@@ -31,7 +32,7 @@ export interface ProductListingItem {
 
 export interface ProductListing {
   listing: ProductListingItem[];
-  totalPages: number;
+  meta: ResponseMetaProps;
 }
 
 export async function getProductListing({
@@ -58,7 +59,6 @@ export async function getProductListing({
   }
 
   const { payload, meta } = response;
-  const { totalPages } = meta;
 
   const listing: ProductListingItem[] = await Promise.all(
     payload.map(item => getProductsItem(item)),
@@ -66,7 +66,7 @@ export async function getProductListing({
 
   return {
     listing,
-    totalPages,
+    meta,
   };
 }
 

@@ -6,7 +6,7 @@ interface Props {
   options?: Options;
 }
 
-interface ResponseMetaProps {
+export interface ResponseMetaProps {
   url: GetUrlProps;
   options?: Options;
   totalPages: number;
