@@ -5,13 +5,13 @@ const Product = gql`
   ${PageInfo}
 
   type ProductsListing {
-    cursor: String
     pageInfo: PageInfo
     edges: [ProductNode]
   }
 
   type ProductNode {
     node: Product
+    cursor: String
   }
 
   type Product {
@@ -25,7 +25,7 @@ const Product = gql`
   # }
 
   extend type Query {
-    productsListing(cursor: String, first: Int): ProductsListing
+    productsListing(before: String, first: Int): ProductsListing
   }
 `;
 

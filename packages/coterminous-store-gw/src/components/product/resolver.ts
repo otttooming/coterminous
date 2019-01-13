@@ -7,26 +7,31 @@ import {
 } from '../../codegen/types';
 
 async function getConnection(props: ProductsListingQueryArgs) {
-  const { cursor = new Date().toISOString(), first = 16 } = props;
+  const { first = 16, before } = props;
 
   const response = await getProductListing({
-    parameters: { before: cursor, per_page: first },
+    parameters: { before, per_page: first },
   });
 
   return {
-    cursor,
     pageInfo: getPageInfo(response),
-    edges: getEdges(response),
+    edges: getEdges(props, response),
   };
 }
 
-function getEdges(response: ProductListing): ProductNode[] {
+function getEdges(
+  props: ProductsListingQueryArgs,
+  response: ProductListing,
+): ProductNode[] {
+  const { before } = props;
+
   return response.listing.map(({ product }) => {
     return {
       node: {
         name: product.name,
         createdAt: product.date_created_gmt,
       },
+      cursor: before ? product.date_created_gmt : undefined,
     };
   });
 }

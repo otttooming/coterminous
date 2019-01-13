@@ -22,8 +22,6 @@ export interface Query {
 }
 
 export interface ProductsListing {
-  cursor?: Maybe<string>;
-
   pageInfo?: Maybe<PageInfo>;
 
   edges?: Maybe<(Maybe<ProductNode>)[]>;
@@ -45,6 +43,8 @@ export interface PageInfo {
 
 export interface ProductNode {
   node?: Maybe<Product>;
+
+  cursor?: Maybe<string>;
 }
 
 export interface Product {
@@ -58,7 +58,7 @@ export interface Product {
 // ====================================================
 
 export interface ProductsListingQueryArgs {
-  cursor?: Maybe<string>;
+  before?: Maybe<string>;
 
   first?: Maybe<number>;
 }
