@@ -37,6 +37,8 @@ export interface PageInfo {
   startCursor?: Maybe<string>;
 
   endCursor?: Maybe<string>;
+
+  totalPages?: Maybe<number>;
 }
 
 export interface ProductNode {

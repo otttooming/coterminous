@@ -1,8 +1,12 @@
 import { gql } from 'apollo-server-koa';
+import { PageInfo } from '../../common/fragments';
 
 const Product = gql`
+  ${PageInfo}
+
   type ProductsListing {
     cursor: String
+    pageInfo: PageInfo
     edges: [ProductNode]
   }
 
