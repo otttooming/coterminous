@@ -39,6 +39,8 @@ export interface PageInfo {
   endCursor?: Maybe<string>;
 
   totalPages?: Maybe<number>;
+
+  total?: Maybe<number>;
 }
 
 export interface ProductNode {
@@ -57,4 +59,6 @@ export interface Product {
 
 export interface ProductsListingQueryArgs {
   cursor?: Maybe<string>;
+
+  first?: Maybe<number>;
 }

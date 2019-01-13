@@ -1,11 +1,17 @@
 import { getProductListing } from '@coterminous/wp-lib';
 import { ProductListing } from '@coterminous/wp-lib/dist/components/getProduct/getProductListing';
-import { PageInfo, ProductNode } from '../../codegen/types';
+import {
+  PageInfo,
+  ProductNode,
+  ProductsListingQueryArgs,
+} from '../../codegen/types';
 
-async function getConnection(props) {
-  const { cursor = new Date().toISOString() } = props;
+async function getConnection(props: ProductsListingQueryArgs) {
+  const { cursor = new Date().toISOString(), first = 16 } = props;
 
-  const response = await getProductListing({ parameters: { before: cursor } });
+  const response = await getProductListing({
+    parameters: { before: cursor, per_page: first },
+  });
 
   return {
     cursor,
@@ -27,15 +33,13 @@ function getEdges(response: ProductListing): ProductNode[] {
 
 function getPageInfo(response: ProductListing): PageInfo {
   const {
-    listing,
-    meta: { totalPages, options },
+    meta: { totalPages, total, hasNextPage, hasPreviousPage },
   } = response;
 
-  const hasNextPage = listing.length !== 0;
-
   return {
-    hasNextPage: true,
-    hasPreviousPage: true,
+    hasNextPage,
+    hasPreviousPage,
+    total,
     totalPages,
   };
 }

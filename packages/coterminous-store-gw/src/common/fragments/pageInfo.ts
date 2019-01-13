@@ -7,5 +7,6 @@ export const PageInfo = gql`
     startCursor: String
     endCursor: String
     totalPages: Int
+    total: Int
   }
 `;

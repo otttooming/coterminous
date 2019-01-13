@@ -19,8 +19,13 @@ const Product = gql`
     createdAt: String
   }
 
+  # input ProductsListingQuery {
+  #   cursor: String
+  #   perPage: Int
+  # }
+
   extend type Query {
-    productsListing(cursor: String): ProductsListing
+    productsListing(cursor: String, first: Int): ProductsListing
   }
 `;
 
