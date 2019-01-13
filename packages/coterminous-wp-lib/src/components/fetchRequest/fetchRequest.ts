@@ -11,6 +11,8 @@ export interface ResponseMetaProps {
   options?: Options;
   total: number;
   totalPages: number;
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
 }
 
 interface Response<P> {
@@ -48,7 +50,17 @@ export async function fetchRequest<P>({
     const totalPages = parseInt(wpTotalPages || '0', 10);
     const total = parseInt(wpTotal || '0', 10);
 
-    const meta: ResponseMetaProps = { totalPages, total, url };
+    const link = headers.get('link') || '';
+    const hasNextPage = link.includes('rel="next"');
+    const hasPreviousPage = link.includes('rel="prev"');
+
+    const meta: ResponseMetaProps = {
+      totalPages,
+      total,
+      url,
+      hasNextPage,
+      hasPreviousPage,
+    };
 
     const data: Response<P> = { payload, meta };
 
