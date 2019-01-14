@@ -9,7 +9,9 @@ export type Upload = any;
 // Documents
 // ====================================================
 
-export type ProductsListingVariables = {};
+export type ProductsListingVariables = {
+  page?: number | null;
+};
 
 export type ProductsListingQuery = {
   __typename?: 'Query';
@@ -19,8 +21,6 @@ export type ProductsListingQuery = {
 
 export type ProductsListingProductsListing = {
   __typename?: 'ProductsListing';
-
-  cursor: number;
 
   edges: ProductsListingEdges[] | null;
 };
@@ -49,9 +49,8 @@ import gql from 'graphql-tag';
 // ====================================================
 
 export const ProductsListingDocument = gql`
-  query productsListing {
-    productsListing(cursor: 1) {
-      cursor
+  query productsListing($page: Int) {
+    productsListing(page: $page) {
       edges {
         node {
           name

@@ -177,7 +177,7 @@ const LandingView = ({ onLocationChange, dispatch }: Props) => {
         <div className="col-xs-12 col-sm-6 col-md-3 d__flex">
           <div className="bg__common p1 w100">
             <div id="text-35" className="widget-container widget_text">
-              <ProductsListingComponent>
+              <ProductsListingComponent variables={{ page: 1 }}>
                 {({ loading, data, error }) => {
                   dispatch(setProductListing(data));
                   console.log('====================================');

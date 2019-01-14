@@ -1,7 +1,6 @@
 # Write your query or mutation here
-query productsListing {
-  productsListing(cursor: 1) {
-    cursor
+query productsListing($page: Int) {
+  productsListing(page: $page) {
     edges {
       node {
         name
