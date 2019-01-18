@@ -49,9 +49,8 @@ export async function getMedia(id: number) {
     };
 
     return media;
-  } catch (e) {
-    // tslint:disable-next-line
-    console.log(e);
+  } catch (error) {
+    throw new Error('Could not fetch media item');
   }
 }
 
