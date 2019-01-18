@@ -183,7 +183,7 @@ export interface MediaItemResponseTypes {
   source_url: string;
 }
 
-interface Sizes {
+export interface Sizes {
   file: string;
   height: number;
   width: number;

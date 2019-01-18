@@ -4,7 +4,10 @@ import {
   PageInfo,
   ProductNode,
   ProductsListingQueryArgs,
+  Product,
+  ProductImages,
 } from '../../codegen/types';
+import { MediaItemProps } from '@coterminous/wp-lib/dist/components/getMedia/getMedia';
 
 async function getConnection(props: ProductsListingQueryArgs) {
   const { page = 1, first = 16, before } = props;
@@ -25,15 +28,22 @@ function getEdges(
 ): ProductNode[] {
   const { before } = props;
 
-  return response.listing.map(({ product }) => {
+  return response.listing.map<ProductNode>(({ product, images }) => {
+    const node: Product = {
+      name: product.name,
+      createdAt: product.date_created_gmt,
+      images: getImages(images),
+    };
+
     return {
-      node: {
-        name: product.name,
-        createdAt: product.date_created_gmt,
-      },
+      node,
       cursor: before ? product.date_created_gmt : undefined,
     };
   });
+}
+
+function getImages(images: MediaItemProps[]): ProductImages[] {
+  return images;
 }
 
 function getPageInfo(response: ProductListing): PageInfo {

@@ -51,6 +51,16 @@ export interface Product {
   name?: Maybe<string>;
 
   createdAt?: Maybe<string>;
+
+  images?: Maybe<(Maybe<ProductImages>)[]>;
+}
+
+export interface ProductImages {
+  width?: Maybe<number>;
+
+  height?: Maybe<number>;
+
+  aspectRatio?: Maybe<number>;
 }
 
 // ====================================================

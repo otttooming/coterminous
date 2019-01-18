@@ -14,9 +14,16 @@ const Product = gql`
     cursor: String
   }
 
+  type ProductImages {
+    width: Int
+    height: Int
+    aspectRatio: Float
+  }
+
   type Product {
     name: String
     createdAt: String
+    images: [ProductImages]
   }
 
   # input ProductsListingQuery {
