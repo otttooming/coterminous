@@ -18,11 +18,17 @@ interface Props {
   parameters: ProductListingParameters;
 }
 
+export interface SingleProductImage {
+  id: number;
+}
+
 export interface SingleProductProps {
   id: number;
   name: string;
+  slug: string;
   date_created_gmt: string;
-  images: any;
+  images: SingleProductImage[];
+  price: number;
 }
 
 export interface ProductListingItem {
@@ -61,7 +67,7 @@ export async function getProductListing({
   const { payload, meta } = response;
 
   const listing: ProductListingItem[] = await Promise.all(
-    payload.map(item => getProductsItem(item)),
+    payload.map(product => getProductsItem(product)),
   );
 
   return {
@@ -73,11 +79,13 @@ export async function getProductListing({
 async function getProductsItem(
   product: SingleProductProps,
 ): Promise<ProductListingItem> {
-  const imageIds = product.images
-    .map((item: any) => item.id)
-    .filter((item: any) => item !== 0);
+  const { images: productImages } = product;
 
-  const images = await getAllMedia(imageIds);
+  const getImageId = ({ id }: SingleProductProps) => id;
+  const removeWCPlaceholderImage = (id: number) => id !== 0;
+
+  const ids = productImages.map(getImageId).filter(removeWCPlaceholderImage);
+  const images = await getAllMedia(ids);
 
   return {
     product,
