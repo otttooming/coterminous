@@ -14,10 +14,17 @@ const Product = gql`
     cursor: String
   }
 
+  type ProductImageSizes {
+    url: String
+    width: Int
+    height: Int
+  }
+
   type ProductImages {
     width: Int
     height: Int
     aspectRatio: Float
+    sizes: [ProductImageSizes]
   }
 
   type Product {

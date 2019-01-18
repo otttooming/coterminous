@@ -61,6 +61,16 @@ export interface ProductImages {
   height?: Maybe<number>;
 
   aspectRatio?: Maybe<number>;
+
+  sizes?: Maybe<(Maybe<ProductImageSizes>)[]>;
+}
+
+export interface ProductImageSizes {
+  url?: Maybe<string>;
+
+  width?: Maybe<number>;
+
+  height?: Maybe<number>;
 }
 
 // ====================================================
