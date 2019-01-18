@@ -21,7 +21,7 @@ export interface MediaItemProps {
   imageSizes: ImageSizes[];
 }
 
-export async function getMedia(id: number) {
+export async function getMedia(id: number): Promise<MediaItemProps> {
   try {
     const url: GetUrlProps = {
       host: SITE,

@@ -3,6 +3,7 @@ import { getAllMedia } from '../getMedia/';
 import { fetchRequest } from '../fetchRequest';
 import { Parameters, GetUrlProps } from '../getUrl/getUrl';
 import { ResponseMetaProps } from '../fetchRequest/fetchRequest';
+import { MediaItemProps } from '../getMedia/getMedia';
 
 export interface ProductListingParameters extends Parameters {
   page?: number;
@@ -33,7 +34,7 @@ export interface SingleProductProps {
 
 export interface ProductListingItem {
   product: SingleProductProps;
-  images: any;
+  images: MediaItemProps[];
 }
 
 export interface ProductListing {
