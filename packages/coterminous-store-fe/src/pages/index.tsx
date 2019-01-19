@@ -18,7 +18,7 @@ import * as React from 'react';
 import 'isomorphic-unfetch';
 import Main from '../layouts/Main';
 
-import * as ReactPaginate from 'react-paginate';
+import ReactPaginate from 'react-paginate';
 import ProductsListing from '../components/productsListing/ProductsListing';
 import CategoriesListing, {
   CategoryProps,
@@ -165,6 +165,10 @@ class IndexPage extends React.Component<Props, State> {
     const props = { ...this.state, navRouting };
 
     const routing = await Routing.handleRouting(props);
+
+    console.log('====================================');
+    console.log(navRouting, routing);
+    console.log('====================================');
 
     this.setState({ navRouting, ...routing }, () => {
       this.handleHistoryChange(this.state.navRouting);
