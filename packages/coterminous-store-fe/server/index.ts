@@ -14,7 +14,6 @@ app.prepare().then(() => {
     '/static',
     express.static(path.join(__dirname.replace('server', '') + 'static')),
   );
-  console.log(path.join(__dirname.replace('server', '') + 'static'));
 
   server.get('*', (req, res) => {
     const q = {

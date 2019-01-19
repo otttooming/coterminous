@@ -59,7 +59,6 @@ export async function getProductListing({
   };
 
   const response = await fetchRequest<SingleProductProps[]>({ url });
-  console.log(url, response);
 
   if (!response) {
     return null;
