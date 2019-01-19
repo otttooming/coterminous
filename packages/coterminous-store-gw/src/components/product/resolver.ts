@@ -28,19 +28,21 @@ function getEdges(
 ): ProductNode[] {
   const { before } = props;
 
-  return response.listing.map<ProductNode>(({ product, images }) => {
-    const node: Product = {
-      id: product.id,
-      name: product.name,
-      createdAt: product.date_created_gmt,
-      images: getImages(images),
-    };
+  return response.listing.map<ProductNode>(
+    ({ product: { id, name, date_created_gmt }, images }) => {
+      const node: Product = {
+        id,
+        name,
+        createdAt: date_created_gmt,
+        images: getImages(images),
+      };
 
-    return {
-      node,
-      cursor: before ? product.date_created_gmt : undefined,
-    };
-  });
+      return {
+        node,
+        cursor: before ? date_created_gmt : undefined,
+      };
+    },
+  );
 }
 
 function getImages(images: MediaItemProps[]): ProductImages[] {
