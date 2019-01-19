@@ -30,6 +30,7 @@ function getEdges(
 
   return response.listing.map<ProductNode>(({ product, images }) => {
     const node: Product = {
+      id: product.id,
       name: product.name,
       createdAt: product.date_created_gmt,
       images: getImages(images),

@@ -28,6 +28,7 @@ const Product = gql`
   }
 
   type Product {
+    id: Int
     name: String
     createdAt: String
     images: [ProductImages]

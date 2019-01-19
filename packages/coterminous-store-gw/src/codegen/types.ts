@@ -48,6 +48,8 @@ export interface ProductNode {
 }
 
 export interface Product {
+  id?: Maybe<number>;
+
   name?: Maybe<string>;
 
   createdAt?: Maybe<string>;
