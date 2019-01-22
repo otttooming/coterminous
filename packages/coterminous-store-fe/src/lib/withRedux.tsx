@@ -4,10 +4,15 @@ import { initializeStore } from '../store';
 const isServer = typeof window === 'undefined';
 const __NEXT_REDUX_STORE__ = '__NEXT_REDUX_STORE__';
 
+/**
+ * TODO: Take getInitialProps and create a user specific store. otherwise its shared
+ */
+const staticStore = initializeStore({});
+
 function getOrCreateStore(initialState) {
   // Always make a new store if server, otherwise state is shared between requests
   if (isServer) {
-    return initializeStore(initialState);
+    return staticStore;
   }
 
   // Create store if unavailable on the client and set it on the window object
@@ -40,6 +45,7 @@ export default App => {
 
     constructor(props) {
       super(props);
+
       this.reduxStore = getOrCreateStore(props.initialReduxState);
     }
 

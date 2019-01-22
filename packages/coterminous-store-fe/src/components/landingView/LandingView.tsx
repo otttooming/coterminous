@@ -4,6 +4,7 @@ import { Heading } from '@coterminous/ui-lib';
 import ProductsListing from '../productsListing/ProductsListing';
 import { ProductsListingComponent } from '../../generated-models';
 import { setProductListing } from '../../store';
+import ProductsListingLayer from '../../layers/productsListingLayer';
 
 interface Props {
   onLocationChange?: (props: LocationChangeProps) => void;
@@ -170,6 +171,18 @@ const LandingView = ({ onLocationChange, dispatch }: Props) => {
           <div className="bg__common p1 w100">
             <div id="text-33" className="widget-container widget_text">
               <h2 className="widget-title">DISCRETE SERVICE</h2>
+              <ProductsListingLayer>
+                {(productsListing: any) => {
+                  return (
+                    <div>
+                      a
+                      {!!productsListing &&
+                        !!productsListing.edges &&
+                        productsListing.edges[0].node.name}
+                    </div>
+                  );
+                }}
+              </ProductsListingLayer>
               <div className="textwidget" />
             </div>
           </div>
@@ -177,24 +190,7 @@ const LandingView = ({ onLocationChange, dispatch }: Props) => {
         <div className="col-xs-12 col-sm-6 col-md-3 d__flex">
           <div className="bg__common p1 w100">
             <div id="text-35" className="widget-container widget_text">
-              <ProductsListingComponent variables={{ page: 1 }}>
-                {({ loading, data, error }) => {
-                  dispatch(setProductListing(data));
-                  console.log('====================================');
-                  console.log(loading, data, error);
-                  console.log('====================================');
-                  const name =
-                    !!data &&
-                    !!data.productsListing &&
-                    data.productsListing.edges[0].node.name;
-
-                  return (
-                    <div>
-                      <Heading.H2>CHEAP PRICES {name}</Heading.H2>
-                    </div>
-                  );
-                }}
-              </ProductsListingComponent>
+              a
               <div className="textwidget" />
             </div>
           </div>

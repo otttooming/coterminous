@@ -15,6 +15,8 @@ function getComponentDisplayName(Component: any) {
   return Component.displayName || Component.name || 'Unknown';
 }
 
+export let apolloRoot = initApollo({});
+
 export default (ComposedComponent: any) => {
   return class WithData extends React.Component<WithDataProps> {
     static displayName = `WithData(${getComponentDisplayName(
@@ -81,12 +83,13 @@ export default (ComposedComponent: any) => {
 
     constructor(props: WithDataProps) {
       super(props);
-      this.apollo = initApollo(this.props.serverState.apollo.data);
+
+      apolloRoot = initApollo(props.serverState.apollo.data);
     }
 
     render() {
       return (
-        <ApolloProvider client={this.apollo}>
+        <ApolloProvider client={apolloRoot}>
           <ComposedComponent {...this.props} />
         </ApolloProvider>
       );
