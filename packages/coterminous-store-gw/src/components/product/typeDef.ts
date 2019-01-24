@@ -30,6 +30,7 @@ const Product = gql`
   type Product {
     id: Int
     name: String
+    slug: String
     createdAt: String
     images: [ProductImages]
   }

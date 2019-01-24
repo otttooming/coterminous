@@ -52,6 +52,8 @@ export interface Product {
 
   name?: Maybe<string>;
 
+  slug?: Maybe<string>;
+
   createdAt?: Maybe<string>;
 
   images?: Maybe<(Maybe<ProductImages>)[]>;

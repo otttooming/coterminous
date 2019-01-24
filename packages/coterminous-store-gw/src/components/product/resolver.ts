@@ -29,10 +29,11 @@ function getEdges(
   const { before } = props;
 
   return response.listing.map<ProductNode>(
-    ({ product: { id, name, date_created_gmt }, images }) => {
+    ({ product: { id, name, date_created_gmt, slug }, images }) => {
       const node: Product = {
         id,
         name,
+        slug,
         createdAt: date_created_gmt,
         images: getImages(images),
       };
