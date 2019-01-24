@@ -2,6 +2,7 @@
   "name": "coterminous",
   "private": true,
   "dependencies": {
+    "graphql": "14.0.2",
     "react": "16.7.0",
     "react-dom": "16.7.0",
     "styled-components": "4.1.3"
