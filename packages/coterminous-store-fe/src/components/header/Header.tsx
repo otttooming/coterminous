@@ -9,10 +9,10 @@ import {
 } from '../../common/products/typings';
 
 interface Props {
-  title: string;
-  menuItems: any;
-  handleLocationChange: (props: LocationChangeProps) => void;
-  price: ShoppingCartPrice | undefined;
+  title?: string;
+  menuItems?: any;
+  handleLocationChange?: (props: LocationChangeProps) => void;
+  price?: ShoppingCartPrice | undefined;
 }
 
 const Header = ({ title, menuItems, handleLocationChange, price }: Props) => {
