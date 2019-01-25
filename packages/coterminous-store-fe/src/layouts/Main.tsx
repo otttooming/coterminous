@@ -1,4 +1,6 @@
 import * as React from 'react';
+// @ts-ignore
+// eslint-disable-next-line
 import { GlobalStyle } from '@coterminous/ui-lib';
 
 interface Props {

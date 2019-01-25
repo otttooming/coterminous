@@ -1,5 +1,7 @@
 import { graphql, Link } from 'gatsby';
 import * as React from 'react';
+import Main from '../layouts/Main';
+import Header from '../components/header/Header';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -40,7 +42,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
     const { data } = this.props;
     const { siteName } = this.props.data.site.siteMetadata;
     return (
-      <div>
+      <Main renderHeader={<Header />}>
         <h1>{this.hello} Typescript world!</h1>
         <p>
           This site is named <strong>{siteName}</strong>
@@ -60,7 +62,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
             </Link>
           </div>
         ))}
-      </div>
+      </Main>
     );
   }
 }

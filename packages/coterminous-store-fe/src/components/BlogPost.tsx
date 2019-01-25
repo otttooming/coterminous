@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import Main from '../layouts/Main';
+import Header from './header/Header';
 
 export default ({ data }: any) => {
   return (
-    <div>
+    <Main renderHeader={<Header />}>
       <h1>a</h1>
-    </div>
+    </Main>
   );
 };
 
