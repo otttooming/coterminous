@@ -12,7 +12,8 @@
     "dist"
   ],
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "npm run storybook",
+    "dev": "npm run start",
     "docs": "NODE_ENV=production webpack -p",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build": "NODE_ENV=production webpack && npm run build:types",
