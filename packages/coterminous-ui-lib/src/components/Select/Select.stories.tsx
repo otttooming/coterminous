@@ -1,12 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import {
-  FormProvider,
-  Section,
-  SelectField,
-  SelectItemProps,
-  Select,
-} from '../../';
+import { FormProvider, Section, SelectField, Select } from '../../';
+import { SelectItemProps } from './Select';
 
 const selectItems: SelectItemProps[] = [
   {
