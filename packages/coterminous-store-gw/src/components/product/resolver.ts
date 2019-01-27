@@ -1,3 +1,4 @@
+import Bottleneck from 'bottleneck';
 import { getProductListing } from '@coterminous/wp-lib';
 import { ProductListing } from '@coterminous/wp-lib/dist/components/getProduct/getProductListing';
 import {
@@ -9,12 +10,23 @@ import {
 } from '../../codegen/types';
 import { MediaItemProps } from '@coterminous/wp-lib/dist/components/getMedia/getMedia';
 
+const requestLimiter = new Bottleneck({
+  reservoir: 100,
+  reservoirRefreshAmount: 100,
+  reservoirRefreshInterval: 60 * 1000,
+
+  maxConcurrent: 1,
+  minTime: 333,
+});
+
 async function getConnection(props: ProductsListingQueryArgs) {
   const { page = 1, first = 16, before } = props;
 
-  const response = await getProductListing({
-    parameters: { page, before, per_page: first },
-  });
+  const response = await requestLimiter.schedule(() =>
+    getProductListing({
+      parameters: { page, before, per_page: first },
+    }),
+  );
 
   return {
     pageInfo: getPageInfo(response),
