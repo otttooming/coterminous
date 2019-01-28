@@ -50,30 +50,22 @@ class ButtonBase extends React.Component<Props, State> {
 
     const x = e.nativeEvent.offsetX - this.buttonElement.current.clientLeft;
     const y = e.nativeEvent.offsetY - this.buttonElement.current.clientTop;
+
     this.setState(state => {
       return {
         ...state,
         x,
         y,
+        size: 100,
       };
     });
   };
 
-  onMouseEnter(e: React.SyntheticEvent<HTMLButtonElement>) {
-    this.setState(state => {
-      return {
-        ...state,
-        size: 100,
-      };
-    });
-  }
-
   onMouseLeave(e: React.SyntheticEvent<HTMLButtonElement>) {
-    this.setState(state => {
-      return {
-        ...state,
-        size: 0,
-      };
+    this.setState({
+      x: 0,
+      y: 0,
+      size: 0,
     });
   }
 
@@ -91,7 +83,6 @@ class ButtonBase extends React.Component<Props, State> {
       <button
         ref={this.buttonElement}
         onMouseMove={e => this.onMouseMove(e)}
-        onMouseEnter={e => this.onMouseEnter(e)}
         onMouseLeave={e => this.onMouseLeave(e)}
         onClick={this.handleClick}
         {...other}
@@ -111,6 +102,8 @@ export interface GlowProps
 }
 
 const GlowBase: React.StatelessComponent<GlowProps> = props => {
+  const isGlowVisible: boolean = props.size !== 0;
+
   const inlineStyle = {
     left: `${props.x}px`,
     top: `${props.y}px`,
@@ -118,8 +111,10 @@ const GlowBase: React.StatelessComponent<GlowProps> = props => {
     height: `${props.size}px`,
   };
 
+  const style = isGlowVisible ? inlineStyle : undefined;
+
   return (
-    <span className={props.className} style={inlineStyle}>
+    <span className={props.className} style={style}>
       {props.children}
     </span>
   );
@@ -127,6 +122,7 @@ const GlowBase: React.StatelessComponent<GlowProps> = props => {
 
 export const Glow = styled(GlowBase)`
   ${StyledGlow};
+  pointer-events: none;
 `;
 
 export const Button = styled<any>(ButtonBase)`
