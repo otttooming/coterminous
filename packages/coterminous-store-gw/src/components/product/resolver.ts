@@ -1,10 +1,10 @@
 import Bottleneck from 'bottleneck';
-import { getProductListing } from '@coterminous/wp-lib';
-import { ProductListing } from '@coterminous/wp-lib/dist/components/getProduct/getProductListing';
+import { getProductList } from '@coterminous/wp-lib';
+import { ProductList } from '@coterminous/wp-lib/dist/components/getProduct/getProductList';
 import {
   PageInfo,
   ProductNode,
-  ProductsListingQueryArgs,
+  ProductListQueryArgs,
   Product,
   ProductImages,
 } from '../../codegen/types';
@@ -19,11 +19,11 @@ const requestLimiter = new Bottleneck({
   minTime: 333,
 });
 
-async function getConnection(props: ProductsListingQueryArgs) {
+async function getConnection(props: ProductListQueryArgs) {
   const { page = 1, first = 16, before } = props;
 
   const response = await requestLimiter.schedule(() =>
-    getProductListing({
+    getProductList({
       parameters: { page, before, per_page: first },
     }),
   );
@@ -35,12 +35,12 @@ async function getConnection(props: ProductsListingQueryArgs) {
 }
 
 function getEdges(
-  props: ProductsListingQueryArgs,
-  response: ProductListing,
+  props: ProductListQueryArgs,
+  response: ProductList,
 ): ProductNode[] {
   const { before } = props;
 
-  return response.listing.map<ProductNode>(
+  return response.list.map<ProductNode>(
     ({ product: { id, name, date_created_gmt, slug }, images }) => {
       const node: Product = {
         id,
@@ -62,7 +62,7 @@ function getImages(images: MediaItemProps[]): ProductImages[] {
   return images;
 }
 
-function getPageInfo(response: ProductListing): PageInfo {
+function getPageInfo(response: ProductList): PageInfo {
   const {
     meta: { totalPages, total, hasNextPage, hasPreviousPage },
   } = response;
@@ -77,7 +77,7 @@ function getPageInfo(response: ProductListing): PageInfo {
 
 const Product = {
   Query: {
-    productsListing: (channel, props) => getConnection(props),
+    productList: (channel, props) => getConnection(props),
   },
 };
 

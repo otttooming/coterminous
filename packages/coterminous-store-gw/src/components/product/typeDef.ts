@@ -4,7 +4,7 @@ import { PageInfo } from '../../common/fragments';
 const Product = gql`
   ${PageInfo}
 
-  type ProductsListing {
+  type ProductList {
     pageInfo: PageInfo
     edges: [ProductNode]
   }
@@ -35,13 +35,13 @@ const Product = gql`
     images: [ProductImages]
   }
 
-  # input ProductsListingQuery {
+  # input ProductListQuery {
   #   cursor: String
   #   perPage: Int
   # }
 
   extend type Query {
-    productsListing(page: Int, first: Int, before: String): ProductsListing
+    productList(page: Int, first: Int, before: String): ProductList
   }
 `;
 

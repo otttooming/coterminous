@@ -5,7 +5,7 @@ import { Parameters, GetUrlProps } from '../getUrl/getUrl';
 import { ResponseMetaProps } from '../fetchRequest/fetchRequest';
 import { MediaItemProps } from '../getMedia/getMedia';
 
-export interface ProductListingParameters extends Parameters {
+export interface ProductListParameters extends Parameters {
   page?: number;
   category?: string;
   include?: number[];
@@ -16,7 +16,7 @@ export interface ProductListingParameters extends Parameters {
 }
 
 interface Props {
-  parameters: ProductListingParameters;
+  parameters: ProductListParameters;
 }
 
 export interface SingleProductImage {
@@ -32,20 +32,20 @@ export interface SingleProductProps {
   price: number;
 }
 
-export interface ProductListingItem {
+export interface ProductListItem {
   product: SingleProductProps;
   images: MediaItemProps[];
 }
 
-export interface ProductListing {
-  listing: ProductListingItem[];
+export interface ProductList {
+  list: ProductListItem[];
   meta: ResponseMetaProps;
 }
 
-export async function getProductListing({
+export async function getProductList({
   parameters,
-}: Props): Promise<ProductListing | null> {
-  const defaultParameters: ProductListingParameters = {
+}: Props): Promise<ProductList | null> {
+  const defaultParameters: ProductListParameters = {
     page: 1,
     in_stock: true,
     status: 'publish',
@@ -66,19 +66,19 @@ export async function getProductListing({
 
   const { payload, meta } = response;
 
-  const listing: ProductListingItem[] = await Promise.all(
+  const list: ProductListItem[] = await Promise.all(
     payload.map(product => getProductsItem(product)),
   );
 
   return {
-    listing,
+    list,
     meta,
   };
 }
 
 async function getProductsItem(
   product: SingleProductProps,
-): Promise<ProductListingItem> {
+): Promise<ProductListItem> {
   const { images: productImages } = product;
 
   const getImageId = ({ id }: SingleProductProps) => id;

@@ -24,7 +24,7 @@ export const pageQuery = graphql`
       }
     }
     cms {
-      productsListing {
+      productList {
         edges {
           node {
             name
@@ -47,7 +47,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
         <p>
           This site is named <strong>{siteName}</strong>
         </p>
-        {data.cms.productsListing.edges.map((item: any, index: number) => (
+        {data.cms.productList.edges.map((item: any, index: number) => (
           <div key={index}>
             <Link
               to={`/${item.node.slug}/`}

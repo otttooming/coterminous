@@ -18,10 +18,10 @@ export type Upload = any;
 export interface Query {
   hello?: Maybe<string>;
 
-  productsListing?: Maybe<ProductsListing>;
+  productList?: Maybe<ProductList>;
 }
 
-export interface ProductsListing {
+export interface ProductList {
   pageInfo?: Maybe<PageInfo>;
 
   edges?: Maybe<(Maybe<ProductNode>)[]>;
@@ -81,7 +81,7 @@ export interface ProductImageSizes {
 // Arguments
 // ====================================================
 
-export interface ProductsListingQueryArgs {
+export interface ProductListQueryArgs {
   page?: Maybe<number>;
 
   first?: Maybe<number>;
