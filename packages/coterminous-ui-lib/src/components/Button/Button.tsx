@@ -101,21 +101,27 @@ export interface GlowProps
   size: number;
 }
 
-const GlowBase: React.StatelessComponent<GlowProps> = props => {
-  const isGlowVisible: boolean = props.size !== 0;
+const GlowBase: React.StatelessComponent<GlowProps> = ({
+  x,
+  y,
+  size,
+  className,
+  children,
+}) => {
+  const isGlowVisible: boolean = size !== 0;
 
   const inlineStyle = {
-    left: `${props.x}px`,
-    top: `${props.y}px`,
-    width: `${props.size}px`,
-    height: `${props.size}px`,
+    left: `${x}px`,
+    top: `${y}px`,
+    width: `${size}px`,
+    height: `${size}px`,
   };
 
   const style = isGlowVisible ? inlineStyle : undefined;
 
   return (
-    <span className={props.className} style={style}>
-      {props.children}
+    <span className={className} style={style}>
+      {children}
     </span>
   );
 };
