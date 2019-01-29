@@ -15,6 +15,12 @@ const StyledButton = css`
   align-items: center;
   overflow: hidden;
   position: relative;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(23, 198, 113, 0.15),
+      0 3px 15px rgba(23, 198, 113, 0.2), 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
 `;
 
 const StyledGlow = css`
