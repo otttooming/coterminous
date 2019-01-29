@@ -15,7 +15,7 @@ export const InputWrapperStyle = styled.span`
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-color: white;
+  background-color: #333;
   border-radius: ${theme.border.radius.small};
   margin-right: ${theme.spacing.medium};
 `;
@@ -23,6 +23,8 @@ export const InputWrapperStyle = styled.span`
 export const CheckboxLabelWrapper = styled.label`
   display: flex;
   align-items: center;
+  color: #333;
+  font-size: 16px;
 `;
 
 export const HiddenInput = styled.input`
