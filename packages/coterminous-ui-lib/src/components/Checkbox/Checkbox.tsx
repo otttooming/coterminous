@@ -60,32 +60,26 @@ class CheckboxBase extends React.Component<CheckboxProps, State> {
     } = this.props;
     const attributes = { className, name };
 
-    return this.renderControlWrapper(
-      <CheckboxLabelWrapper>
-        <InputWrapperStyle>
-          {(type === CheckboxType.RADIO ? checked : this.state.isChecked) && (
-            <CSSIcons.Checkmark />
-          )}
-        </InputWrapperStyle>
-
-        <HiddenInput
-          type={type}
-          {...attributes}
-          checked={this.props.checked}
-          onChange={this.handleChange}
-        />
-        <span>{inputLabel}</span>
-      </CheckboxLabelWrapper>,
-    );
-  }
-
-  renderControlWrapper = (element: React.ReactNode) => {
     return (
       <ControlWrapper {...extractControlWrapperProps(this.props)}>
-        {element}
+        <CheckboxLabelWrapper>
+          <InputWrapperStyle>
+            {(type === CheckboxType.RADIO ? checked : this.state.isChecked) && (
+              <CSSIcons.Checkmark />
+            )}
+          </InputWrapperStyle>
+
+          <HiddenInput
+            type={type}
+            {...attributes}
+            checked={this.props.checked}
+            onChange={this.handleChange}
+          />
+          <span>{inputLabel}</span>
+        </CheckboxLabelWrapper>
       </ControlWrapper>
     );
-  };
+  }
 
   handleChange = (event: React.FormEvent<HTMLInputElement>) => {
     const { onChange, value } = this.props;
