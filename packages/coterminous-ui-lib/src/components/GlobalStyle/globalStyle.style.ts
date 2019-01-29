@@ -21,6 +21,7 @@ export const globalStyleCss = css`
     line-height: 1.2;
     font-family: ${typeface.name.primary};
     color: ${color.white};
+    background-color: #f2f5f7;
   }
 
   ${legacy};
