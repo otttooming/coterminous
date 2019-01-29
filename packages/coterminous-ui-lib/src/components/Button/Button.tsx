@@ -1,7 +1,28 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 
-const StyledButton = css`
+export enum ButtonSize {
+  NORMAL = 'normal',
+  LARGE = 'large',
+  SMALL = 'small',
+}
+
+const large = css`
+  padding: 24px 32px;
+  font-size: 1.5em;
+`;
+
+const normal = css`
+  padding: 16px 24px;
+  font-size: 1.25em;
+`;
+
+const small = css`
+  padding: 8px 16px;
+  font-size: 1em;
+`;
+
+const StyledButton = styled.button<StyleProps>`
   border: 0;
   box-shadow: 0 4px 16px 0 rgba(44, 44, 44, 0.26);
   border-radius: 4px;
@@ -17,6 +38,10 @@ const StyledButton = css`
   position: relative;
   outline: none;
 
+  ${({ size }) => size === ButtonSize.SMALL && small}
+  ${({ size }) => size === ButtonSize.LARGE && large}
+  ${({ size }) => size === ButtonSize.NORMAL && normal}
+
   &:focus {
     box-shadow: 0 0 0 3px rgba(23, 198, 113, 0.15),
       0 3px 15px rgba(23, 198, 113, 0.2), 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -31,6 +56,10 @@ const StyledGlow = css`
   transition: all 0.1s ease-out;
 `;
 
+export interface StyleProps {
+  size: ButtonSize;
+}
+
 export interface Props {
   onClick?: () => void;
 }
@@ -40,7 +69,13 @@ export interface State {
   size: number;
 }
 
-class ButtonBase extends React.Component<Props, State> {
+export type ButtonProps = Props & StyleProps;
+
+class Button extends React.Component<ButtonProps, State> {
+  static defaultProps = {
+    size: ButtonSize.NORMAL,
+  };
+
   state = {
     x: 0,
     y: 0,
@@ -75,7 +110,7 @@ class ButtonBase extends React.Component<Props, State> {
     });
   }
 
-  handleClick = (e: React.SyntheticEvent<HTMLButtonElement>) => {
+  handleClick = (event: React.SyntheticEvent<HTMLButtonElement>) => {
     const { onClick } = this.props;
 
     if (onClick) {
@@ -86,7 +121,7 @@ class ButtonBase extends React.Component<Props, State> {
   render() {
     const { children, ...other } = this.props;
     return (
-      <button
+      <StyledButton
         ref={this.buttonElement}
         onMouseMove={e => this.onMouseMove(e)}
         onMouseLeave={e => this.onMouseLeave(e)}
@@ -95,7 +130,7 @@ class ButtonBase extends React.Component<Props, State> {
       >
         {children}
         <Glow {...this.state} />
-      </button>
+      </StyledButton>
     );
   }
 }
@@ -137,6 +172,4 @@ export const Glow = styled(GlowBase)`
   pointer-events: none;
 `;
 
-export const Button = styled<any>(ButtonBase)`
-  ${StyledButton};
-`;
+export { Button };
