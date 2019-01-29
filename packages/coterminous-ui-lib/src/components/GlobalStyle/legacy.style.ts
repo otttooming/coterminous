@@ -177,47 +177,6 @@ export const legacy = css`
     padding: 0;
   }
 
-  input {
-    margin: 8px 0;
-    padding: 0;
-  }
-  input[type='text'] {
-    min-height: 30px;
-  }
-  input[type='number'] {
-    text-align: center;
-  }
-  input[type='number']::-webkit-inner-spin-button,
-  input[type='number']::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  input[type='checkbox'],
-  input[type='radio'] {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    color: #fff;
-    border: 1px solid #00b31a;
-    border-radius: 50%;
-    background: rgba(52, 6, 68, 0.5);
-    box-shadow: none;
-    text-shadow: none;
-    -webkit-appearance: none;
-  }
-  input[type='checkbox']:checked,
-  input[type='radio']:checked {
-    background: #00b31a;
-  }
-  input[type='checkbox']:checked:after,
-  input[type='radio']:checked:after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    content: '✔';
-    transform: translate3d(-50%, -50%, 0);
-  }
-
   textarea::-webkit-input-placeholder,
   input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.5);
@@ -1851,59 +1810,6 @@ export const legacy = css`
     bottom: 0;
     background-color: #ffc000;
     border-radius: 15px;
-  }
-
-  .button {
-    display: inline-block;
-    overflow: hidden;
-    box-sizing: border-box;
-    max-width: 100%;
-    height: auto;
-    padding: 8px 24px;
-    margin: 8px 0;
-    cursor: pointer;
-    user-select: none;
-    transition: background-color 500ms;
-    text-align: center;
-    text-transform: uppercase;
-    text-overflow: ellipsis;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    background: linear-gradient(45deg, #ff00f6, #00a99d);
-    box-shadow: none;
-    text-shadow: none;
-    font-family: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.875em;
-    line-height: 1.5;
-    -webkit-appearance: none;
-  }
-  .button:hover {
-    background: #00b31a;
-  }
-  .button.active {
-    background: linear-gradient(to left, #9f2af8, #f82a53);
-  }
-  .button.medium {
-    padding: 8px 16px;
-    font-size: 0.875em;
-  }
-  .button.alt,
-  .button.big {
-    font-size: 1.5rem;
-    padding: 1rem;
-  }
-  .button__icon {
-    width: 1em;
-    height: 1em;
-    margin: 0 0 0 1em;
-  }
-  .button__disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  .button__disabled:hover {
-    background: linear-gradient(45deg, #ff00f6, #00a99d);
   }
 
   .menu {
