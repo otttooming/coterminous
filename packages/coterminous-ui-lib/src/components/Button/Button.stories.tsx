@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { theme, Button } from '../../';
+import Button from './';
 import { text, boolean, number } from '@storybook/addon-knobs';
 import { Section } from '../Section/Section';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';

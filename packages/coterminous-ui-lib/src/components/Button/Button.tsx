@@ -172,4 +172,4 @@ export const Glow = styled(GlowBase)`
   pointer-events: none;
 `;
 
-export { Button };
+export default Button;
