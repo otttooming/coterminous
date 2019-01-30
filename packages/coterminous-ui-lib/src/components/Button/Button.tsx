@@ -37,7 +37,9 @@ const StyledButton = styled.button<StyleProps>`
   overflow: hidden;
   position: relative;
   outline: none;
-
+  min-width: 128px;
+  justify-content: center;
+  
   ${({ size }) => size === ButtonSize.SMALL && small}
   ${({ size }) => size === ButtonSize.LARGE && large}
   ${({ size }) => size === ButtonSize.NORMAL && normal}
