@@ -30,6 +30,7 @@ export interface SingleProductProps {
   date_created_gmt: string;
   images: SingleProductImage[];
   price: number;
+  variations: number[];
 }
 
 export interface ProductListItem {
@@ -76,7 +77,7 @@ export async function getProductList({
   };
 }
 
-async function getProductsItem(
+export async function getProductsItem(
   product: SingleProductProps,
 ): Promise<ProductListItem> {
   const { images: productImages } = product;
