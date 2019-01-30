@@ -4,13 +4,6 @@ import { GetUrlProps } from '../getUrl/getUrl';
 import { SingleProductProps, getProductsItem } from './getProductList';
 import { MediaItemProps } from '../getMedia/getMedia';
 
-export interface SingleProductVariationProps {
-  id: number;
-  price: string;
-  attributes: any;
-  name: string;
-}
-
 export interface Product {
   product: SingleProductProps;
   images: MediaItemProps[];
