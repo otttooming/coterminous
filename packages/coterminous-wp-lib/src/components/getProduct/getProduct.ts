@@ -1,11 +1,14 @@
 import { ENDPOINT, SITE, getUrl } from '../getUrl';
 import { fetchRequest } from '../fetchRequest';
 import { GetUrlProps } from '../getUrl/getUrl';
-import { SingleProductProps, getProductsItem } from './getProductList';
+import { SingleProductProps } from './getProductList';
 import { MediaItemProps } from '../getMedia/getMedia';
+import { getAllMedia } from '../getMedia';
+import { getProductVariations, ProductVariation } from './getProductVariation';
 
 export interface Product {
   product: SingleProductProps;
+  variations: ProductVariation[];
   images: MediaItemProps[];
 }
 
@@ -23,7 +26,25 @@ export async function getSingleProduct(id: number): Promise<Product | null> {
 
   const { payload } = response;
 
-  const data = getProductsItem(payload);
+  const data = getRequiredData(payload);
 
   return data;
+}
+
+async function getRequiredData(product: SingleProductProps): Promise<Product> {
+  const { images: productImages, variations: variationIds } = product;
+
+  const getImageId = ({ id }: SingleProductProps) => id;
+  const removeWCPlaceholderImage = (id: number) => id !== 0;
+
+  const ids = productImages.map(getImageId).filter(removeWCPlaceholderImage);
+  const images = await getAllMedia(ids);
+
+  const variations = await getProductVariations(product, variationIds);
+
+  return {
+    product,
+    variations,
+    images,
+  };
 }
