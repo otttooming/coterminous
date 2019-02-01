@@ -12,7 +12,7 @@ export interface Product {
   images: MediaItemProps[];
 }
 
-export async function getSingleProduct(id: number): Promise<Product | null> {
+export async function getProduct(id: number): Promise<Product | null> {
   const url: GetUrlProps = {
     host: SITE,
     paths: [ENDPOINT.WC, 'products', String(id)],
