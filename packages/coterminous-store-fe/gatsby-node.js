@@ -23,7 +23,7 @@ exports.createPages = async ({ actions, graphql }) => {
   data.cms.productList.edges.forEach(blog => {
     actions.createPage({
       path: blog.node.slug,
-      component: path.resolve(`./src/components/BlogPost.tsx`),
+      component: path.resolve(`./src/templates/product/Product.tsx`),
       context: {
         id: blog.node.id,
       },

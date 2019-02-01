@@ -1,14 +1,11 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import Main from '../layouts/Main';
-import Header from './header/Header';
+import Main from '../../layouts/Main';
+import Header from '../../components/header/Header';
+import ProductItem from '../../components/productItem/ProductItem';
 
 export default ({ data }: any) => {
-  return (
-    <Main renderHeader={<Header />}>
-      <h1>a</h1>
-    </Main>
-  );
+  return <Main renderHeader={<Header />}>{/* <ProductItem /> */}a</Main>;
 };
 
 export const query = graphql`
