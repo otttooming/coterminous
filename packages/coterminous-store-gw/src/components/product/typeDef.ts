@@ -42,6 +42,7 @@ const Product = gql`
 
   extend type Query {
     productList(page: Int, first: Int, before: String): ProductList
+    product(id: Int!): Product
   }
 `;
 

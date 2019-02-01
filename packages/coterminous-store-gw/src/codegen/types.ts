@@ -19,6 +19,8 @@ export interface Query {
   hello?: Maybe<string>;
 
   productList?: Maybe<ProductList>;
+
+  product?: Maybe<Product>;
 }
 
 export interface ProductList {
@@ -87,4 +89,7 @@ export interface ProductListQueryArgs {
   first?: Maybe<number>;
 
   before?: Maybe<string>;
+}
+export interface ProductQueryArgs {
+  id: number;
 }
