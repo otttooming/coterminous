@@ -16,11 +16,13 @@ export async function getProduct({
 
   const {
     product: { id: wcId, name },
+    images,
   } = response;
 
   const product: Product = {
     id: wcId,
     name,
+    images,
   };
 
   return product;
