@@ -12,6 +12,10 @@ const VariationItem = styled.li`
 const Variations = (props: any) => {
   const { product, variations } = props;
 
+  if (!Array.isArray(variations)) {
+    return null;
+  }
+
   const items = variations.map(
     (variation: SingleProductVariationProps, index: number) => {
       const { attributes, price, id } = variation;

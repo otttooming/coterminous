@@ -7,6 +7,10 @@ import Gallery from './children/Gallery';
 import { PhotoSwipe } from 'react-photoswipe';
 
 function buildGalleryItems(images: MediaItemProps[]) {
+  if (!images) {
+    return null;
+  }
+
   const slides = images.map(item => {
     return {
       src: item.imageSizes.reduce((prev, current) =>
@@ -63,19 +67,21 @@ export default class ProductItem extends React.Component<Props, any> {
     } = product;
 
     const isDetailsPopulated =
-      !!attributes.length ||
-      !!categories.length ||
+      Array.isArray(attributes) ||
+      Array.isArray(categories) ||
       !!description ||
-      !!tags.length;
+      Array.isArray(tags);
 
     return (
       <div className="container container--no-gutters">
-        <PhotoSwipe
-          isOpen={this.state.isGalleryOpen}
-          items={this.state.gallery}
-          options={this.state.galleryOptions}
-          onClose={this.handleGalleryClose}
-        />
+        {!!images && (
+          <PhotoSwipe
+            isOpen={this.state.isGalleryOpen}
+            items={this.state.gallery}
+            options={this.state.galleryOptions}
+            onClose={this.handleGalleryClose}
+          />
+        )}
 
         <div
           itemScope={true}
