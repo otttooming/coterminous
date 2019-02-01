@@ -7,6 +7,7 @@ exports.createPages = async ({ actions, graphql }) => {
         productList {
           edges {
             node {
+              id
               name
               slug
             }
@@ -24,7 +25,7 @@ exports.createPages = async ({ actions, graphql }) => {
       path: blog.node.slug,
       component: path.resolve(`./src/components/BlogPost.tsx`),
       context: {
-        blogId: blog.node.name,
+        id: blog.node.id,
       },
     });
   });

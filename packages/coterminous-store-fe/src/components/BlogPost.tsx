@@ -12,7 +12,7 @@ export default ({ data }: any) => {
 };
 
 export const query = graphql`
-  query {
+  query($id: Int!) {
     site {
       siteMetadata {
         siteName
@@ -28,5 +28,10 @@ export const query = graphql`
     #     }
     #   }
     # }
+    cms {
+      product(id: $id) {
+        name
+      }
+    }
   }
 `;
