@@ -26,3 +26,5 @@ export { SelectField } from './components/Select/SelectField';
 export { Popover } from './components/Popover/Popover';
 
 export { default as Lightbox } from './components/Lightbox';
+
+export { default as Image } from './components/Image';
