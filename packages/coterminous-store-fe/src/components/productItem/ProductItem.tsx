@@ -49,13 +49,11 @@ export default class ProductItem extends React.Component<Props, any> {
 
     return (
       <div className="container container--no-gutters">
-        {!!images && (
-          <Lightbox
-            isOpen={this.state.isGalleryOpen}
-            images={images as any}
-            onClose={this.handleGalleryClose}
-          />
-        )}
+        <Lightbox
+          isOpen={this.state.isGalleryOpen}
+          images={images as any}
+          onClose={this.handleGalleryClose}
+        />
 
         <div
           itemScope={true}
@@ -64,7 +62,7 @@ export default class ProductItem extends React.Component<Props, any> {
         >
           <div className="col-xs-12 col-md-5 product__left-wrap">
             <Image
-              image={!!images && (images[0] as any)}
+              image={images[0] as any}
               onClick={this.handleGalleryOpen}
               isProduct={true}
             />
