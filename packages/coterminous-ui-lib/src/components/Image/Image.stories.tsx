@@ -12,36 +12,24 @@ stories.add('Image', () => {
 
   const content = `My name is ${name}.`;
 
-  const images = [
-    {
-      width: 1200,
-      height: 1200,
-      aspectRatio: 100,
-      sizes: [
-        {
-          url: 'https://via.placeholder.com/1200',
-          width: 1200,
-          height: 1200,
-        },
-      ],
-    },
-    {
-      width: 1100,
-      height: 1100,
-      aspectRatio: 100,
-      sizes: [
-        {
-          url: 'https://via.placeholder.com/1100',
-          width: 1100,
-          height: 1100,
-        },
-      ],
-    },
-  ];
+  const image = {
+    width: 1200,
+    height: 1200,
+    aspectRatio: 100,
+    sizes: [
+      {
+        url: 'https://via.placeholder.com/1200',
+        width: 1200,
+        height: 1200,
+      },
+    ],
+  };
 
   return (
     <StorybookWrapper>
-      <Image image={images[0]} />
+      <Section>
+        <Image image={image} />
+      </Section>
     </StorybookWrapper>
   );
 });

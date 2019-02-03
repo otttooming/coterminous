@@ -9,7 +9,7 @@ export default ({ data }: any) => {
     <Main renderHeader={<Header />}>
       <ProductItem
         product={data.cms.product}
-        // images={data.cms.product.images}
+        images={data.cms.product.images}
       />
     </Main>
   );
@@ -38,6 +38,8 @@ export const query = graphql`
         name
         images {
           aspectRatio
+          width
+          height
           sizes {
             url
             width
