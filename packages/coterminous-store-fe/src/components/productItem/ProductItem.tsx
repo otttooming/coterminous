@@ -5,10 +5,11 @@ import Variations from './children/Variations';
 import Details from './children/Details';
 import Gallery from './children/Gallery';
 import { Lightbox, Image } from '@coterminous/ui-lib';
+import { ProductTemplateImages } from '../../generated-models';
 
 interface Props {
   product: any;
-  images: MediaItemProps[];
+  images: ProductTemplateImages[];
   variations: any;
 }
 
@@ -51,7 +52,7 @@ export default class ProductItem extends React.Component<Props, any> {
       <div className="container container--no-gutters">
         <Lightbox
           isOpen={this.state.isGalleryOpen}
-          images={images as any}
+          images={images}
           onClose={this.handleGalleryClose}
         />
 
@@ -62,7 +63,7 @@ export default class ProductItem extends React.Component<Props, any> {
         >
           <div className="col-xs-12 col-md-5 product__left-wrap">
             <Image
-              image={images[0] as any}
+              image={images[0]}
               onClick={this.handleGalleryOpen}
               isProduct={true}
             />
