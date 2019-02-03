@@ -4,28 +4,7 @@ import { MediaItemProps } from '../../services/mediaApi/mediaApi';
 import Variations from './children/Variations';
 import Details from './children/Details';
 import Gallery from './children/Gallery';
-import { PhotoSwipe } from 'react-photoswipe';
-
-function buildGalleryItems(images: MediaItemProps[]) {
-  if (!images) {
-    return null;
-  }
-
-  const slides = images.map(item => {
-    return {
-      src: item.imageSizes.reduce((prev, current) =>
-        prev.width > current.width ? prev : current,
-      ).source_url,
-      thumbs: item.imageSizes.reduce((prev, current) =>
-        prev.width < current.width ? prev : current,
-      ).source_url,
-      w: item.dimensions.width,
-      h: item.dimensions.height,
-    };
-  });
-
-  return slides;
-}
+import { Lightbox, Image } from '@coterminous/ui-lib';
 
 interface Props {
   product: any;
@@ -38,10 +17,6 @@ export default class ProductItem extends React.Component<Props, any> {
     super(props);
 
     this.state = {
-      gallery: buildGalleryItems(props.images),
-      galleryOptions: {
-        history: false,
-      },
       isGalleryOpen: false,
     };
   }
@@ -56,7 +31,7 @@ export default class ProductItem extends React.Component<Props, any> {
   };
 
   render() {
-    const { images = null, product, variations } = this.props;
+    const { images = [], product, variations } = this.props;
     const {
       attributes,
       categories,
@@ -75,10 +50,9 @@ export default class ProductItem extends React.Component<Props, any> {
     return (
       <div className="container container--no-gutters">
         {!!images && (
-          <PhotoSwipe
+          <Lightbox
             isOpen={this.state.isGalleryOpen}
-            items={this.state.gallery}
-            options={this.state.galleryOptions}
+            images={images as any}
             onClose={this.handleGalleryClose}
           />
         )}
@@ -89,15 +63,14 @@ export default class ProductItem extends React.Component<Props, any> {
           className="row product"
         >
           <div className="col-xs-12 col-md-5 product__left-wrap">
-            <Media
-              image={!!images ? images[0] : null}
-              className="main-image product__main-image"
+            <Image
+              image={!!images && (images[0] as any)}
               onClick={this.handleGalleryOpen}
               isProduct={true}
             />
-            {!!images && images.length !== 1 && (
+            {/* {!!images && images.length !== 1 && (
               <Gallery images={images} alt={name} />
-            )}
+            )} */}
           </div>
 
           <div className="col-xs-12 col-md-7">
