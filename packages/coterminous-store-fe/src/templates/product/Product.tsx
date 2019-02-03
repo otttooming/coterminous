@@ -3,8 +3,13 @@ import { graphql } from 'gatsby';
 import Main from '../../layouts/Main';
 import Header from '../../components/header/Header';
 import ProductItem from '../../components/productItem/ProductItem';
+import { ProductTemplateQuery } from '../../generated-models';
 
-export default ({ data }: any) => {
+interface Props {
+  data: ProductTemplateQuery;
+}
+
+const ProductTemplate: React.FC<Props> = ({ data }) => {
   return (
     <Main renderHeader={<Header />}>
       <ProductItem
@@ -16,22 +21,12 @@ export default ({ data }: any) => {
 };
 
 export const query = graphql`
-  query($id: Int!) {
+  query ProductTemplate($id: Int!) {
     site {
       siteMetadata {
         siteName
       }
     }
-    # cms {
-    #   productsListing {
-    #     edges {
-    #       node {
-    #         name
-    #         slug
-    #       }
-    #     }
-    #   }
-    # }
     cms {
       product(id: $id) {
         id
@@ -50,3 +45,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default ProductTemplate;
