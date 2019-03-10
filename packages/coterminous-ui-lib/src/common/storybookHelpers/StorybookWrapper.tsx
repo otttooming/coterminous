@@ -6,14 +6,20 @@ const Wrapper = styled.div`
   margin: 32px;
 `;
 
-export interface StorybookWrapperProps {}
+export interface StorybookWrapperProps {
+  style: React.CSSProperties;
+}
 
 class StorybookWrapper extends React.Component<StorybookWrapperProps, any> {
+  static defaultProps = {
+    style: {},
+  };
+
   render() {
-    const { children } = this.props;
+    const { children, style } = this.props;
 
     return (
-      <Wrapper>
+      <Wrapper style={style}>
         <GlobalStyle />
 
         {children}
