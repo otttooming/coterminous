@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { PhotoSwipe, PhotoSwipeGalleryItem } from 'react-photoswipe';
+import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
+import Image from '../Image';
+import { Section } from '../Section/Section';
 
 interface ImageSizes {
   height: number;
@@ -50,6 +53,12 @@ class Lightbox extends React.Component<Props, any> {
     });
   };
 
+  handleImageClick = () => {
+    this.setState({
+      isOpen: true,
+    });
+  };
+
   render() {
     const { options, isOpen, images, onClose } = this.props;
 
@@ -59,15 +68,34 @@ class Lightbox extends React.Component<Props, any> {
       return null;
     }
 
+    const image = {
+      width: 1200,
+      height: 1200,
+      aspectRatio: 100,
+      sizes: [
+        {
+          url: 'https://via.placeholder.com/1200',
+          width: 1200,
+          height: 1200,
+        },
+      ],
+    };
+
     const gallery = this.buildGalleryItems(images);
 
     return (
-      <PhotoSwipe
-        isOpen={isOpen}
-        items={gallery}
-        options={options}
-        onClose={onClose}
-      />
+      <StorybookWrapper style={{ width: 420 }}>
+        <Section>
+          <Image image={image} onClick={this.handleImageClick} />
+        </Section>
+
+        <PhotoSwipe
+          isOpen={isOpen}
+          items={gallery}
+          options={options}
+          onClose={onClose}
+        />
+      </StorybookWrapper>
     );
   }
 }
