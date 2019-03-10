@@ -26,7 +26,7 @@ stories.add('Image', () => {
   };
 
   return (
-    <StorybookWrapper>
+    <StorybookWrapper style={{ width: 420 }}>
       <Section>
         <Image image={image} />
       </Section>
