@@ -21,7 +21,6 @@ export const legacy = css`
     overflow-x: hidden;
     margin: 0;
     text-shadow: none;
-    color: #fff;
     font-size: 0.875rem;
   }
 
