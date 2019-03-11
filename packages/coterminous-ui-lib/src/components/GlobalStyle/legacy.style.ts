@@ -1,54 +1,6 @@
 import { css } from 'styled-components';
 
 export const legacy = css`
-  @font-face {
-    font-family: 'Oswald';
-    src: url('/static/fonts/oswald-extralight.woff2') format('woff2'),
-      url('/static/fonts/oswald-extralight.woff') format('woff');
-    font-style: normal;
-    font-weight: 200;
-  }
-
-  @font-face {
-    font-family: 'Oswald';
-    src: url('/static/fonts/oswald-light.woff2') format('woff2'),
-      url('/static/fonts/oswald-light.woff') format('woff');
-    font-style: normal;
-    font-weight: 300;
-  }
-
-  @font-face {
-    font-family: 'Oswald';
-    src: url('/static/fonts/oswald-regular.woff2') format('woff2'),
-      url('/static/fonts/oswald-regular.woff') format('woff');
-    font-style: normal;
-    font-weight: 400;
-  }
-
-  @font-face {
-    font-family: 'Oswald';
-    src: url('/static/fonts/oswald-medium.woff2') format('woff2'),
-      url('/static/fonts/oswald-medium.woff') format('woff');
-    font-style: normal;
-    font-weight: 500;
-  }
-
-  @font-face {
-    font-family: 'Oswald';
-    src: url('/static/fonts/oswald-demibold.woff2') format('woff2'),
-      url('/static/fonts/oswald-demibold.woff') format('woff');
-    font-style: normal;
-    font-weight: 600;
-  }
-
-  @font-face {
-    font-family: 'Oswald';
-    src: url('/static/fonts/oswald-bold.woff2') format('woff2'),
-      url('/static/fonts/oswald-bold.woff') format('woff');
-    font-style: normal;
-    font-weight: 700;
-  }
-
   * {
     box-sizing: border-box;
   }
@@ -69,7 +21,6 @@ export const legacy = css`
     overflow-x: hidden;
     margin: 0;
     text-shadow: none;
-    font-family: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
     color: #fff;
     font-size: 0.875rem;
   }

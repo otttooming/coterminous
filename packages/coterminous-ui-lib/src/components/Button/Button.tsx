@@ -31,7 +31,6 @@ const StyledButton = styled.button<StyleProps>`
   color: #fff;
   cursor: pointer;
   padding: 12px 24px;
-  font: 400 12px/24px sans-serif;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -39,6 +38,7 @@ const StyledButton = styled.button<StyleProps>`
   outline: none;
   min-width: 128px;
   justify-content: center;
+  font-family: inherit;
   
   ${({ size }) => size === ButtonSize.SMALL && small}
   ${({ size }) => size === ButtonSize.LARGE && large}

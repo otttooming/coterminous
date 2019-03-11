@@ -3,6 +3,8 @@ import { typeface, color } from '../../common/styles/constants';
 import { legacy } from './legacy.style';
 
 export const globalStyleCss = css`
+  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
   * {
     box-sizing: border-box;
   }

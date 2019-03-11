@@ -91,7 +91,7 @@ export interface TypefaceProps {
 
 export const typeface: TypefaceProps = {
   name: {
-    primary: `'Oswald', 'Helvetica Neue', Arial, sans-serif`,
+    primary: `'Montserrat', 'Helvetica Neue', Arial, sans-serif`,
     secondary: `'Helvetica Neue', Arial, sans-serif`,
   },
   weight: { thin: 100, light: 300, normal: 400, bold: 700 },
