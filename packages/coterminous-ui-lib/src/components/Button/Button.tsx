@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
+import { theme } from '../../';
 
 export enum ButtonSize {
   NORMAL = 'normal',
@@ -39,6 +40,7 @@ const StyledButton = styled.button<StyleProps>`
   min-width: 128px;
   justify-content: center;
   font-family: inherit;
+  margin-top: ${theme.spacing.medium};
   
   ${({ size }) => size === ButtonSize.SMALL && small}
   ${({ size }) => size === ButtonSize.LARGE && large}
@@ -47,6 +49,10 @@ const StyledButton = styled.button<StyleProps>`
   &:focus {
     box-shadow: 0 0 0 3px rgba(23, 198, 113, 0.15),
       0 3px 15px rgba(23, 198, 113, 0.2), 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  &:first-child {
+    margin-top: 0;
   }
 `;
 

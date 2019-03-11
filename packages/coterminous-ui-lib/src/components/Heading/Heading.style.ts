@@ -2,8 +2,12 @@ import { css } from 'styled-components';
 import { theme } from '../../';
 
 const common = css`
-  margin: 0 0 ${theme.spacing.medium} 0;
+  margin: ${theme.spacing.medium} 0 0 0;
   font-weight: ${theme.typeface.weight.bold};
+
+  &:first-child {
+    margin-top: 0;
+  }
 `;
 
 export const H1Style = css`
