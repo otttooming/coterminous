@@ -1,6 +1,6 @@
 const path = require('path');
 
-module.exports = (baseConfig, env, config) => {
+module.exports = ({ config, mode }) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
     exclude: path.resolve(__dirname, 'node_modules'),
@@ -12,6 +12,5 @@ module.exports = (baseConfig, env, config) => {
   });
 
   config.resolve.extensions.push('.ts', '.tsx');
-
   return config;
 };
