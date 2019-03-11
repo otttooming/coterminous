@@ -2,6 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { FormProvider, Section, SelectField, Select } from '../../';
 import { SelectItemProps } from './Select';
+import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 
 const selectItems: SelectItemProps[] = [
   {
@@ -33,18 +34,23 @@ const selectItems: SelectItemProps[] = [
 ];
 
 storiesOf('Select', module)
-  .addDecorator(story => <div style={{ background: '#fff' }}>{story()}</div>)
   .add('Select', () => (
-    <>
+    <StorybookWrapper>
       <Section>
         <Select label="Enter address" items={selectItems} />
       </Section>
-    </>
+    </StorybookWrapper>
   ))
   .add('SelectField', () => (
-    <FormProvider>
-      <Section>
-        <SelectField name="select" label="Enter address" items={selectItems} />
-      </Section>
-    </FormProvider>
+    <StorybookWrapper>
+      <FormProvider>
+        <Section>
+          <SelectField
+            name="select"
+            label="Enter address"
+            items={selectItems}
+          />
+        </Section>
+      </FormProvider>
+    </StorybookWrapper>
   ));
