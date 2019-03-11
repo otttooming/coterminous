@@ -1,18 +1,12 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import {
-  GlobalStyle,
-  FormProvider,
-  Heading,
-  Section,
-  RadioButtonField,
-} from '../../';
+import { FormProvider, Heading, Section, RadioButtonField } from '../../';
+import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 
 storiesOf('RadioButton', module)
   .addDecorator(story => <div style={{ background: '#fff' }}>{story()}</div>)
   .add('RadioButtonField', () => (
-    <>
-      <GlobalStyle />
+    <StorybookWrapper>
       <FormProvider>
         <Section>
           <Heading.H1>RadioButtonField</Heading.H1>
@@ -32,5 +26,5 @@ storiesOf('RadioButton', module)
           />
         </Section>
       </FormProvider>
-    </>
+    </StorybookWrapper>
   ));
