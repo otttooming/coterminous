@@ -32,7 +32,7 @@ const StyledButton = styled.button<StyleProps>`
   color: #fff;
   cursor: pointer;
   padding: 12px 24px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   overflow: hidden;
   position: relative;
@@ -40,6 +40,7 @@ const StyledButton = styled.button<StyleProps>`
   min-width: 128px;
   justify-content: center;
   font-family: inherit;
+  margin-right: ${theme.spacing.medium};
   margin-top: ${theme.spacing.medium};
   
   ${({ size }) => size === ButtonSize.SMALL && small}
