@@ -8,13 +8,19 @@ import { ButtonSize } from './Button';
 
 const stories = storiesOf('Button', module);
 stories.add('Button', () => {
-  const groupId = 'GROUP-ID1';
-  const name = text('Name', 'Arunoda Susiripala', groupId);
+  const groupId = 'buttonText';
+  const name = text('Text', 'To continue, please click me', groupId);
 
-  const content = `My name is ${name}.`;
+  const content = `${name}`;
 
   return (
     <StorybookWrapper>
+      <Section>
+        <Button size={ButtonSize.LARGE}>Click me</Button>
+        <Button size={ButtonSize.NORMAL}>Click me</Button>
+        <Button size={ButtonSize.SMALL}>Click me</Button>
+      </Section>
+
       <Section>
         <Button size={ButtonSize.LARGE}>{content}</Button>
       </Section>
