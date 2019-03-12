@@ -55,7 +55,7 @@ class Image extends React.Component<Props, any> {
         <img
           width={width}
           height={height}
-          className="product__image aspect-ratio__img lazyloaded"
+          className="aspect-ratio__img lazyloaded"
           alt={alt}
           itemProp="thumbnail"
           srcSet={srcSet.join()}
