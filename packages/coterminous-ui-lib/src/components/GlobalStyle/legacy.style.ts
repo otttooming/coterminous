@@ -43,12 +43,6 @@ export const legacy = css`
     line-height: 1.2;
   }
 
-  h1,
-  h2 {
-    text-transform: uppercase;
-    font-weight: 400;
-  }
-
   p,
   td {
     font-family: 'Helvetica Neue', Arial, sans-serif;
