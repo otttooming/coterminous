@@ -28,3 +28,5 @@ export { Popover } from './components/Popover/Popover';
 export { default as Lightbox } from './components/Lightbox';
 
 export { default as Image } from './components/Image';
+
+export { default as Card, CardType } from './molecules/Card';
