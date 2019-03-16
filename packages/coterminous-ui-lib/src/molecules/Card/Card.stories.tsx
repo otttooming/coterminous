@@ -35,6 +35,10 @@ const ListItem = styled.li`
   list-style: none;
 `;
 
+const CardStyled = styled(Card)`
+  max-width: 320px;
+`;
+
 const stories = storiesOf('Card', module);
 stories
   .add('Default', () => {
@@ -82,6 +86,13 @@ stories
     return (
       <StorybookWrapper>
         <Card footer={footer} />
+      </StorybookWrapper>
+    );
+  })
+  .add('Card with expanded styled attributes', () => {
+    return (
+      <StorybookWrapper>
+        <CardStyled footer={footer} image={image} />
       </StorybookWrapper>
     );
   });
