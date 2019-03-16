@@ -30,3 +30,5 @@ export { default as Lightbox } from './components/Lightbox';
 export { default as Image } from './components/Image';
 
 export { default as Card, CardType } from './molecules/Card';
+
+export { default as List, ListItem } from './atoms/List';
