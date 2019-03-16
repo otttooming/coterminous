@@ -6,8 +6,10 @@ interface WrapperProps {
 }
 
 export interface GridProps
-  extends React.HTMLAttributes<HTMLUListElement>,
-    WrapperProps {}
+  extends React.HTMLAttributes<HTMLElement>,
+    WrapperProps {
+  as: keyof JSX.IntrinsicElements;
+}
 
 const Wrapper = styled.ul<WrapperProps>`
   display: grid;
@@ -18,6 +20,7 @@ const Wrapper = styled.ul<WrapperProps>`
 
 class Grid extends React.PureComponent<GridProps, any> {
   static defaultProps = {
+    as: 'div',
     min: '320px',
   };
 

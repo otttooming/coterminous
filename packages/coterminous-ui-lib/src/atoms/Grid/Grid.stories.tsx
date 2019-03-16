@@ -28,23 +28,23 @@ export const GridStoryDefault = () => {
   return (
     <StorybookWrapper>
       <Heading.H1>Product list</Heading.H1>
-      <Grid>
-        <GridItem>
+      <Grid as="ul">
+        <GridItem as="li">
           <Card footer={footer} image={image} />
         </GridItem>
-        <GridItem>
+        <GridItem as="li">
           <Card footer={footer} image={image} />
         </GridItem>
-        <GridItem>
+        <GridItem as="li">
           <Card footer={footer} image={image} />
         </GridItem>
-        <GridItem>
+        <GridItem as="li">
           <Card footer={footer} image={image} />
         </GridItem>
-        <GridItem>
+        <GridItem as="li">
           <Card footer={footer} image={image} />
         </GridItem>
-        <GridItem>
+        <GridItem as="li">
           <Card footer={footer} image={image} />
         </GridItem>
       </Grid>
