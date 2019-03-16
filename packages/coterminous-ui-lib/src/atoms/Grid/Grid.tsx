@@ -2,7 +2,6 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 interface WrapperProps {
-  min: string;
   gap: string;
   columns: string;
   rows: string;
@@ -27,7 +26,6 @@ const Wrapper = styled.ul<WrapperProps>`
 class Grid extends React.PureComponent<GridProps, any> {
   static defaultProps = {
     as: 'div',
-    min: '320px',
     gap: '32px',
     columns: '',
     rows: '',
