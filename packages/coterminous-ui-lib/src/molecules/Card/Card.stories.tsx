@@ -4,6 +4,7 @@ import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import Card from './';
 import { Heading, Button, ButtonSize, Section } from '../../';
 import styled from 'styled-components';
+import { ListStoryDefault } from '../../atoms/List/List.stories';
 
 const image = {
   width: 1200,
@@ -25,17 +26,6 @@ const footer = (
   </>
 );
 
-const ListRoot = styled.ul`
-  display: grid;
-  grid-gap: 32px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  margin-top: 16px;
-`;
-
-const ListItem = styled.li`
-  list-style: none;
-`;
-
 const CardStyled = styled(Card)`
   max-width: 320px;
 `;
@@ -49,33 +39,7 @@ stories
       </StorybookWrapper>
     );
   })
-  .add('List', () => {
-    return (
-      <StorybookWrapper>
-        <Heading.H1>Product list</Heading.H1>
-        <ListRoot>
-          <ListItem>
-            <Card footer={footer} image={image} />
-          </ListItem>
-          <ListItem>
-            <Card footer={footer} image={image} />
-          </ListItem>
-          <ListItem>
-            <Card footer={footer} image={image} />
-          </ListItem>
-          <ListItem>
-            <Card footer={footer} image={image} />
-          </ListItem>
-          <ListItem>
-            <Card footer={footer} image={image} />
-          </ListItem>
-          <ListItem>
-            <Card footer={footer} image={image} />
-          </ListItem>
-        </ListRoot>
-      </StorybookWrapper>
-    );
-  })
+  .add('List', ListStoryDefault)
   .add('Without title', () => {
     return (
       <StorybookWrapper>
