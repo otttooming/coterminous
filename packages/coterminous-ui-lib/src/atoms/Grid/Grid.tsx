@@ -1,22 +1,22 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-interface GridProps {
+interface WrapperProps {
   min: string;
 }
 
-export interface ListProps
+export interface GridProps
   extends React.HTMLAttributes<HTMLUListElement>,
-    GridProps {}
+    WrapperProps {}
 
-const Wrapper = styled.ul<GridProps>`
+const Wrapper = styled.ul<WrapperProps>`
   display: grid;
   grid-gap: 32px;
   grid-template-columns: repeat(auto-fill, minmax(${props => props.min}, 1fr));
   margin-top: 16px;
 `;
 
-class List extends React.PureComponent<ListProps, any> {
+class Grid extends React.PureComponent<GridProps, any> {
   static defaultProps = {
     min: '320px',
   };
@@ -28,4 +28,4 @@ class List extends React.PureComponent<ListProps, any> {
   }
 }
 
-export default List;
+export default Grid;

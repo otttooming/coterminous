@@ -4,7 +4,7 @@ import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import Card from './';
 import { Heading, Button, ButtonSize, Section } from '../../';
 import styled from 'styled-components';
-import { ListStoryDefault } from '../../atoms/List/List.stories';
+import { GridStoryDefault } from '../../atoms/Grid/Grid.stories';
 
 const image = {
   width: 1200,
@@ -39,7 +39,7 @@ stories
       </StorybookWrapper>
     );
   })
-  .add('List', ListStoryDefault)
+  .add('Grid', GridStoryDefault)
   .add('Without title', () => {
     return (
       <StorybookWrapper>
