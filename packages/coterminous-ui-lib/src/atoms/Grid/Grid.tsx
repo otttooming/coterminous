@@ -22,6 +22,10 @@ const Wrapper = styled.ul<WrapperProps>`
   grid-template-rows: ${({ rows }) => rows};
   grid-template-areas: "${({ areas }) => areas}";
   margin-top: ${theme.spacing.large};
+
+  &:first-child {
+    margin-top: 0;
+  }
 `;
 
 class Grid extends React.PureComponent<GridProps, any> {
