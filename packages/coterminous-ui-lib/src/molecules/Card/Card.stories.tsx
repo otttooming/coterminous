@@ -29,6 +29,7 @@ const ListRoot = styled.ul`
   display: grid;
   grid-gap: 32px;
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 16px;
 `;
 
 const ListItem = styled.li`
