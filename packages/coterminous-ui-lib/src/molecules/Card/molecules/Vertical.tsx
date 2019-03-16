@@ -20,10 +20,10 @@ const Footer = styled.div`
 
 class Vertical extends React.Component<VerticalProps, any> {
   public render() {
-    const { as, footer, image } = this.props;
+    const { as, footer, image, ...restProps } = this.props;
 
     return (
-      <Wrapper as={as}>
+      <Wrapper as={as} {...restProps}>
         {!!image && <Image image={image} />}
 
         {!!footer && <Footer>{footer}</Footer>}

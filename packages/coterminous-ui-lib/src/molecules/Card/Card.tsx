@@ -6,7 +6,7 @@ export enum CardType {
   PORTRAIT = 'PORTRAIT',
 }
 
-export interface CardProps {
+export interface CardProps extends React.HTMLAttributes<HTMLElement> {
   as: keyof JSX.IntrinsicElements;
   type: CardType;
   image?: MediaItemProps;
