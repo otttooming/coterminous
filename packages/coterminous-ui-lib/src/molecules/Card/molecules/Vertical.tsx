@@ -9,13 +9,11 @@ const Wrapper = styled.div`
   background-color: ${theme.background.section};
   border-radius: ${theme.border.radius.small};
   box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1);
-  max-width: 320px;
   overflow: hidden;
 `;
 
 const Footer = styled.div`
   padding: ${theme.spacing.large};
-  max-width: 320px;
 `;
 
 class Vertical extends React.Component<VerticalProps, any> {
