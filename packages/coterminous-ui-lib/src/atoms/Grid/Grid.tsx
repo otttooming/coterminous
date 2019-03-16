@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 interface WrapperProps {
   min: string;
+  gap: string;
 }
 
 export interface GridProps
@@ -13,7 +14,7 @@ export interface GridProps
 
 const Wrapper = styled.ul<WrapperProps>`
   display: grid;
-  grid-gap: 32px;
+  grid-gap: ${props => props.gap};
   grid-template-columns: repeat(auto-fill, minmax(${props => props.min}, 1fr));
   margin-top: 16px;
 `;
@@ -22,6 +23,7 @@ class Grid extends React.PureComponent<GridProps, any> {
   static defaultProps = {
     as: 'div',
     min: '320px',
+    gap: '32px',
   };
 
   public render() {
