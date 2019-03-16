@@ -9,6 +9,7 @@ import {
   Grid,
   GridItem,
   Section,
+  Image,
 } from '../../';
 
 const image = {
@@ -20,6 +21,19 @@ const image = {
       url: 'https://via.placeholder.com/1200',
       width: 1200,
       height: 1200,
+    },
+  ],
+};
+
+const logo = {
+  width: 640,
+  height: 360,
+  aspectRatio: 1,
+  sizes: [
+    {
+      url: 'https://dummyimage.com/640x360/fff/aaa',
+      width: 640,
+      height: 360,
     },
   ],
 };
@@ -38,6 +52,8 @@ stories.add('Default', () => (
     <Grid areas="sidebar content" columns="20rem 1fr">
       <GridItem area="sidebar">
         <div>
+          <Card image={logo} />
+
           <Heading.H1>Menu</Heading.H1>
 
           <Section>Menu link</Section>
@@ -46,7 +62,7 @@ stories.add('Default', () => (
 
       <GridItem area="content">
         <div>
-          <Heading.H1>Product list</Heading.H1>
+          {/* <Heading.H1>Product list</Heading.H1> */}
 
           <Grid as="ul" columns="repeat(auto-fill, minmax(20rem, 1fr))">
             {[...Array(16)].map((item, index) => (
