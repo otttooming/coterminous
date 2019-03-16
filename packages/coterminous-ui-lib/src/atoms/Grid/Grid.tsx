@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { theme } from '../../common/styles/theme';
 
 interface WrapperProps {
   gap: string;
@@ -20,7 +21,7 @@ const Wrapper = styled.ul<WrapperProps>`
   grid-template-columns: ${({ columns }) => columns};
   grid-template-rows: ${({ rows }) => rows};
   grid-template-areas: "${({ areas }) => areas}";
-  margin-top: 16px;
+  margin-top: ${theme.spacing.large};
 `;
 
 class Grid extends React.PureComponent<GridProps, any> {
