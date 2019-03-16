@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 import { theme } from '../../';
 
 const common = css`
-  margin: ${theme.spacing.medium} 0 0 0;
+  margin: ${theme.spacing.large} 0 0 0;
   font-weight: ${theme.typeface.weight.bold};
 
   &:first-child {
