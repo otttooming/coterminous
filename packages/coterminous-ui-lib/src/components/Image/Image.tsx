@@ -49,7 +49,7 @@ class Image extends React.Component<Props, any> {
         itemProp="associatedMedia"
         itemType="http://schema.org/ImageObject"
         className="aspect-ratio"
-        style={{ paddingBottom: `${(width / height) * 100}%` }}
+        style={{ paddingBottom: `${(height / width) * 100}%` }}
         onClick={onClick}
       >
         <img
