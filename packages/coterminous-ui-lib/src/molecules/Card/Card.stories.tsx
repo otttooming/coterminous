@@ -28,7 +28,7 @@ const footer = (
 const ListRoot = styled.ul`
   display: grid;
   grid-gap: 32px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   margin-top: 16px;
 `;
 
