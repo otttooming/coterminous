@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-export interface ListProps {}
+export interface ListProps extends React.HTMLAttributes<HTMLUListElement> {}
 
 const Wrapper = styled.ul`
   display: grid;
@@ -12,9 +12,9 @@ const Wrapper = styled.ul`
 
 class List extends React.PureComponent<ListProps, any> {
   public render() {
-    const { children } = this.props;
+    const { children, ...restProps } = this.props;
 
-    return <Wrapper>{children}</Wrapper>;
+    return <Wrapper {...restProps}>{children}</Wrapper>;
   }
 }
 
