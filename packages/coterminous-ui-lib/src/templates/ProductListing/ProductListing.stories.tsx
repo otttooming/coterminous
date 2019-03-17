@@ -50,7 +50,7 @@ const stories = storiesOf('Product listing', module);
 
 stories.add('Default', () => (
   <StorybookWrapper style={{ margin: 0 }}>
-    <Grid areas="sidebar content" columns="20rem 1fr" gap="0">
+    <Grid areas="sidebar content" columns="16rem 1fr" gap="0">
       <GridItem
         area="sidebar"
         style={{ padding: theme.spacing.large, backgroundColor: '#ffa5e3' }}
