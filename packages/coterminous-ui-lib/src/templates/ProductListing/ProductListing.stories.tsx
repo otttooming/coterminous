@@ -42,7 +42,17 @@ const logo = {
 const footer = (
   <>
     <Heading.H1>Title of the card</Heading.H1>
-    <Button size={ButtonSize.SMALL}>Click me</Button>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginTop: theme.spacing.medium,
+      }}
+    >
+      20$
+      <Button size={ButtonSize.SMALL}>Click me</Button>
+    </div>
   </>
 );
 
