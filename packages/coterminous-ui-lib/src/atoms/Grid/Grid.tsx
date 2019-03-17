@@ -31,7 +31,7 @@ const Wrapper = styled.ul<WrapperProps>`
 class Grid extends React.PureComponent<GridProps, any> {
   static defaultProps = {
     as: 'div',
-    gap: '32px',
+    gap: theme.spacing.large,
     columns: '',
     rows: '',
     areas: '',
