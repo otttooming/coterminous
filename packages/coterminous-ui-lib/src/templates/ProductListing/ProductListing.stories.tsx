@@ -10,6 +10,7 @@ import {
   GridItem,
   Section,
   Image,
+  theme,
 } from '../../';
 
 const image = {
@@ -48,9 +49,12 @@ const footer = (
 const stories = storiesOf('Product listing', module);
 
 stories.add('Default', () => (
-  <StorybookWrapper>
-    <Grid areas="sidebar content" columns="20rem 1fr">
-      <GridItem area="sidebar">
+  <StorybookWrapper style={{ margin: 0 }}>
+    <Grid areas="sidebar content" columns="20rem 1fr" gap="0">
+      <GridItem
+        area="sidebar"
+        style={{ padding: theme.spacing.large, backgroundColor: '#ffa5e3' }}
+      >
         <div>
           <Card image={logo} />
 
@@ -60,7 +64,7 @@ stories.add('Default', () => (
         </div>
       </GridItem>
 
-      <GridItem area="content">
+      <GridItem area="content" style={{ padding: theme.spacing.large }}>
         <div>
           {/* <Heading.H1>Product list</Heading.H1> */}
 
