@@ -58,12 +58,14 @@ export interface SpacingProps {
   normal: string;
   medium: string;
   large: string;
+  huge: string;
 }
 export const spacing: SpacingProps = {
   small: convertPxToRem(4, rootSize),
   normal: convertPxToRem(8, rootSize),
   medium: convertPxToRem(16, rootSize),
   large: convertPxToRem(24, rootSize),
+  huge: convertPxToRem(48, rootSize),
 };
 
 export interface TypefaceNameProps {
