@@ -66,8 +66,7 @@ stories.add('Default', () => (
         style={{
           padding: theme.spacing.large,
           paddingRight: theme.spacing.huge,
-          backgroundColor: 'rgb(165, 209, 255)',
-          boxShadow: '8px 0px 20px 0px #9ad1ff85',
+          backgroundColor: '#E6EDF3',
         }}
       >
         <div>
