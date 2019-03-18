@@ -87,7 +87,11 @@ stories.add('Default', () => (
         }}
       >
         <div>
-          {/* <Heading.H1>Product list</Heading.H1> */}
+          <Card
+            footer={<>Search</>}
+            style={{ marginBottom: theme.spacing.huge }}
+          />
+          <Heading.H1>Product list</Heading.H1>
 
           <Grid as="ul" columns="repeat(auto-fill, minmax(20rem, 1fr))">
             {[...Array(16)].map((item, index) => (
