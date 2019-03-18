@@ -63,7 +63,12 @@ stories.add('Default', () => (
     <Grid areas="sidebar content" columns="16rem 1fr" gap="0">
       <GridItem
         area="sidebar"
-        style={{ padding: theme.spacing.large, backgroundColor: '#ffa5e3' }}
+        style={{
+          padding: theme.spacing.large,
+          paddingRight: theme.spacing.huge,
+          backgroundColor: 'rgb(165, 209, 255)',
+          boxShadow: '8px 0px 20px 0px #9ad1ff85',
+        }}
       >
         <div>
           <Card image={logo} />
@@ -74,7 +79,13 @@ stories.add('Default', () => (
         </div>
       </GridItem>
 
-      <GridItem area="content" style={{ padding: theme.spacing.large }}>
+      <GridItem
+        area="content"
+        style={{
+          padding: theme.spacing.large,
+          paddingLeft: theme.spacing.huge,
+        }}
+      >
         <div>
           {/* <Heading.H1>Product list</Heading.H1> */}
 
