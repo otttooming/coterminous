@@ -4,7 +4,7 @@ export { GlobalStyle } from './components/GlobalStyle/GlobalStyle';
 
 export { rotate360 } from './common/styles/keyframes';
 
-export { Heading } from './components/Heading/Heading';
+export { default as Heading } from './components/Heading';
 export { default as Button, ButtonSize } from './components/Button';
 
 export { FormProvider, FormContext } from './components/Form/Form';
