@@ -26,7 +26,7 @@ const LinkWithStyle = styled(Link)`
 const TermsOfService = ({ onLocationChange }: Props) => {
   return (
     <Section>
-      <Heading.H1>Terms and conditions</Heading.H1>
+      <Heading as="h1">Terms and conditions</Heading>
 
       <Text>I’ve read and accept the</Text>
 

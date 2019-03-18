@@ -11,7 +11,7 @@ const PaymentMethodsInternal = (props: PaymentMethodsProps) => {
 
   return !paymentMethods ? null : (
     <Section>
-      <Heading.H1>Payment</Heading.H1>
+      <Heading as="h1">Payment</Heading>
 
       <ul className="list-style-none">
         {paymentMethods.swedbank && (

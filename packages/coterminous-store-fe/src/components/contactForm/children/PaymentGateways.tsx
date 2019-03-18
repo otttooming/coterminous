@@ -31,7 +31,7 @@ const PaymentGateways = (props: any) => {
 
   return (
     <Section>
-      <Heading.H1>Pay</Heading.H1>
+      <Heading as="h1">Pay</Heading>
 
       <ul className="wc_payment_methods payment_methods methods list-style-none">
         {listPaymentGateways}

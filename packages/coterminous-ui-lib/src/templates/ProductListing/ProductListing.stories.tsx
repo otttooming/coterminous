@@ -41,7 +41,7 @@ const logo = {
 
 const footer = (
   <>
-    <Heading.H1>Title of the card</Heading.H1>
+    <Heading as="h1">Title of the card</Heading>
     <div
       style={{
         display: 'flex',
@@ -72,7 +72,7 @@ stories.add('Default', () => (
         <div>
           <Card image={logo} />
 
-          <Heading.H1>Menu</Heading.H1>
+          <Heading as="h1">Menu</Heading>
 
           <Section>Menu link</Section>
         </div>
@@ -90,7 +90,7 @@ stories.add('Default', () => (
             footer={<>Search</>}
             style={{ marginBottom: theme.spacing.huge }}
           />
-          <Heading.H1>Product list</Heading.H1>
+          <Heading as="h1">Product list</Heading>
 
           <Grid as="ul" columns="repeat(auto-fill, minmax(20rem, 1fr))">
             {[...Array(16)].map((item, index) => (

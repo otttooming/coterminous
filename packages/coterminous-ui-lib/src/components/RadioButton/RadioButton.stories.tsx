@@ -7,7 +7,7 @@ storiesOf('RadioButton', module).add('RadioButtonField', () => (
   <StorybookWrapper>
     <FormProvider>
       <Section>
-        <Heading.H1>RadioButtonField</Heading.H1>
+        <Heading as="h1">RadioButtonField</Heading>
 
         <RadioButtonField
           name="test_field"

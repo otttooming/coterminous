@@ -14,7 +14,7 @@ storiesOf('TextInput', module).add('TextInputField', () => (
   <StorybookWrapper>
     <FormProvider>
       <Section>
-        <Heading.H1>TextInputField</Heading.H1>
+        <Heading as="h1">TextInputField</Heading>
 
         <TextInputField.Input name="test_field" label="Label title" />
         <TextInputField.TextArea
@@ -25,7 +25,7 @@ storiesOf('TextInput', module).add('TextInputField', () => (
       </Section>
 
       <Section>
-        <Heading.H1>Submit form</Heading.H1>
+        <Heading as="h1">Submit form</Heading>
 
         <FormContext.Consumer>
           {props => <Button onClick={props.actions.submit}>Submit</Button>}

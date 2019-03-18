@@ -19,7 +19,7 @@ const image = {
 
 const footer = (
   <>
-    <Heading.H1>Title of the card</Heading.H1>
+    <Heading as="h1">Title of the card</Heading>
     <Button size={ButtonSize.SMALL}>Click me</Button>
   </>
 );
@@ -27,7 +27,7 @@ const footer = (
 export const GridStoryDefault = () => {
   return (
     <StorybookWrapper>
-      <Heading.H1>Product list</Heading.H1>
+      <Heading as="h1">Product list</Heading>
       <Grid as="ul">
         <GridItem as="li">
           <Card footer={footer} image={image} />

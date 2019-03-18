@@ -4,7 +4,7 @@ import { Section, Heading, TextInputField } from '@coterminous/ui-lib';
 const AdditionalInformation = () => {
   return (
     <Section>
-      <Heading.H2>Order notes</Heading.H2>
+      <Heading as="h2">Order notes</Heading>
 
       <TextInputField.TextArea label={null} name="comments" />
     </Section>

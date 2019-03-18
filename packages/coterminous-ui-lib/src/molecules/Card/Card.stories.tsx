@@ -21,7 +21,7 @@ const image = {
 
 const footer = (
   <>
-    <Heading.H1>Title of the card</Heading.H1>
+    <Heading as="h1">Title of the card</Heading>
     <Button size={ButtonSize.SMALL}>Click me</Button>
   </>
 );
