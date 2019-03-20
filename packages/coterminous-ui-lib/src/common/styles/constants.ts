@@ -53,13 +53,16 @@ export const border: BorderProps = {
   radius: { small: '4px', medium: '16px', large: '24px' },
 };
 
-export interface SpacingProps {
-  small: string;
-  normal: string;
-  medium: string;
-  large: string;
-  huge: string;
+export enum SpacingSize {
+  SMALL = 'small',
+  NORMAL = 'normal',
+  MEDIUM = 'medium',
+  LARGE = 'large',
+  HUGE = 'huge',
 }
+
+export type SpacingProps = { [valueof in SpacingSize]: string };
+
 export const spacing: SpacingProps = {
   small: convertPxToRem(4, rootSize),
   normal: convertPxToRem(8, rootSize),
