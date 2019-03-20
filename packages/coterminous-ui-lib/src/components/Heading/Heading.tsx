@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { common } from './Heading.style';
 import styled from 'styled-components';
+import {
+  componentSpacing,
+  ComponentSpacingProps,
+} from '../../common/styles/atoms/spacing.style';
 
 // Enum must be exported or 'has or is using private name' error will occur
 export enum TagName {
@@ -12,7 +16,7 @@ export enum TagName {
   H6 = 'h6',
 }
 
-export interface WrapperProps {
+export interface WrapperProps extends ComponentSpacingProps {
   as: keyof JSX.IntrinsicElements;
 }
 
@@ -22,6 +26,7 @@ export interface Props extends React.HTMLAttributes<HTMLElement>, WrapperProps {
 
 const Wrapper = styled.h1<WrapperProps>`
   ${common}
+  ${componentSpacing}
 `;
 
 class Heading extends React.PureComponent<Props, any> {
