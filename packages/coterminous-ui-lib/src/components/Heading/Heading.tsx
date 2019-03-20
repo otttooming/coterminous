@@ -1,13 +1,6 @@
 import * as React from 'react';
-import {
-  H1Style,
-  H2Style,
-  H3Style,
-  H4Style,
-  H5Style,
-  H6Style,
-} from './Heading.style';
-import styled, { FlattenSimpleInterpolation } from 'styled-components';
+import { common } from './Heading.style';
+import styled from 'styled-components';
 
 // Enum must be exported or 'has or is using private name' error will occur
 export enum TagName {
@@ -19,7 +12,7 @@ export enum TagName {
   H6 = 'h6',
 }
 
-interface WrapperProps {
+export interface WrapperProps {
   as: keyof JSX.IntrinsicElements;
 }
 
@@ -27,17 +20,8 @@ export interface Props extends React.HTMLAttributes<HTMLElement>, WrapperProps {
   as: keyof JSX.IntrinsicElements;
 }
 
-const styles: { [key in string]: FlattenSimpleInterpolation } = {
-  h1: H1Style,
-  h2: H2Style,
-  h3: H3Style,
-  h4: H4Style,
-  h5: H5Style,
-  h6: H6Style,
-};
-
 const Wrapper = styled.h1<WrapperProps>`
-  ${({ as }) => styles[as]}
+  ${common}
 `;
 
 class Heading extends React.PureComponent<Props, any> {
