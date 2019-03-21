@@ -15,7 +15,7 @@ storiesOf('Heading', module).add('Heading', () => (
       <Heading as="h5">Heading</Heading>
       <Heading as="h6">Heading</Heading>
 
-      <Heading as="h1" ml={SpacingSize.SMALL}>
+      <Heading as="h1" ml={[0, 42]}>
         Heading
       </Heading>
     </Section>
