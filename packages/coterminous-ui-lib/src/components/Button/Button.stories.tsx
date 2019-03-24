@@ -4,7 +4,7 @@ import Button from './';
 import { text, boolean, number } from '@storybook/addon-knobs';
 import { Section } from '../Section/Section';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
-import { ButtonSize } from './Button';
+import { ButtonSize, ButtonType } from './Button';
 import { Camera } from 'react-feather';
 
 const ButtonIcon = () => <Camera />;
@@ -49,6 +49,59 @@ stories.add('With icon', () => {
           Click me
         </Button>
         <Button size={ButtonSize.SMALL} icon={<ButtonIcon />}>
+          Click me
+        </Button>
+      </Section>
+    </StorybookWrapper>
+  );
+});
+stories.add('Flat', () => {
+  return (
+    <StorybookWrapper>
+      <Section>
+        <Button
+          size={ButtonSize.LARGE}
+          icon={<ButtonIcon />}
+          type={ButtonType.FLAT}
+        >
+          Click me
+        </Button>
+        <Button
+          size={ButtonSize.NORMAL}
+          icon={<ButtonIcon />}
+          type={ButtonType.FLAT}
+        >
+          Click me
+        </Button>
+        <Button
+          size={ButtonSize.SMALL}
+          icon={<ButtonIcon />}
+          type={ButtonType.FLAT}
+        >
+          Click me
+        </Button>
+      </Section>
+
+      <Section>
+        <Button
+          size={ButtonSize.LARGE}
+          icon={<ButtonIcon />}
+          type={ButtonType.FLAT}
+        >
+          Click me
+        </Button>
+        <Button
+          size={ButtonSize.NORMAL}
+          icon={<ButtonIcon />}
+          type={ButtonType.FLAT}
+        >
+          Click me
+        </Button>
+        <Button
+          size={ButtonSize.SMALL}
+          icon={<ButtonIcon />}
+          type={ButtonType.FLAT}
+        >
           Click me
         </Button>
       </Section>

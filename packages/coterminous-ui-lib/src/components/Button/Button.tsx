@@ -8,6 +8,11 @@ export enum ButtonSize {
   SMALL = 'small',
 }
 
+export enum ButtonType {
+  NORMAL = 'normal',
+  FLAT = 'flat',
+}
+
 const large = css`
   padding: 24px 32px;
   font-size: 1.5em;
@@ -23,13 +28,30 @@ const small = css`
   font-size: 1em;
 `;
 
+const normalType = css`
+  color: #fff;
+
+  background: #7f00ff;
+  box-shadow: 0 4px 16px 0 rgba(44, 44, 44, 0.26);
+  background: linear-gradient(to right, #7f00ff, #e100ff);
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(23, 198, 113, 0.15),
+      0 3px 15px rgba(23, 198, 113, 0.2), 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+`;
+
+const flatType = css`
+  color: #333;
+  background: transparent;
+  padding-right: 0;
+  padding-left: 0;
+  min-width: 0;
+`;
+
 const StyledButton = styled.button<StyleProps>`
   border: 0;
-  box-shadow: 0 4px 16px 0 rgba(44, 44, 44, 0.26);
   border-radius: 4px;
-  background: #7f00ff;
-  background: linear-gradient(to right, #7f00ff, #e100ff);
-  color: #fff;
   cursor: pointer;
   padding: 12px 24px;
   display: inline-flex;
@@ -47,10 +69,8 @@ const StyledButton = styled.button<StyleProps>`
   ${({ size }) => size === ButtonSize.LARGE && large}
   ${({ size }) => size === ButtonSize.NORMAL && normal}
 
-  &:focus {
-    box-shadow: 0 0 0 3px rgba(23, 198, 113, 0.15),
-      0 3px 15px rgba(23, 198, 113, 0.2), 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+  ${({ type }) => type === ButtonType.NORMAL && normalType}
+  ${({ type }) => type === ButtonType.FLAT && flatType}
 
   &:first-child {
     margin-top: 0;
@@ -79,6 +99,7 @@ const IconWrapper = styled.span`
 
 export interface StyleProps {
   size: ButtonSize;
+  type: ButtonType;
 }
 
 export interface Props {
@@ -96,6 +117,7 @@ export type ButtonProps = Props & StyleProps;
 class Button extends React.Component<ButtonProps, State> {
   static defaultProps = {
     size: ButtonSize.NORMAL,
+    type: ButtonType.NORMAL,
   };
 
   state = {
