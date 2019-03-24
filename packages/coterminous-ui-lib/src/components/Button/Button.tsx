@@ -52,6 +52,18 @@ const flatType = css`
   min-width: 0;
 `;
 
+const topSpacing = css`
+  &:first-child {
+    margin-top: 0;
+  }
+`;
+
+const defaultSpacing = css<StyleProps>`
+  margin-top: ${theme.spacing.medium};
+
+  ${({ m, mt }) => !Boolean(m) && !Boolean(mt) && topSpacing}
+`;
+
 const StyledButton = styled.button<StyleProps>`
   border: 0;
   border-radius: 4px;
@@ -65,7 +77,7 @@ const StyledButton = styled.button<StyleProps>`
   min-width: 128px;
   justify-content: center;
   font-family: inherit;
-
+  
   ${({ size }) => size === ButtonSize.SMALL && small}
   ${({ size }) => size === ButtonSize.LARGE && large}
   ${({ size }) => size === ButtonSize.NORMAL && normal}
@@ -73,6 +85,7 @@ const StyledButton = styled.button<StyleProps>`
   ${({ type }) => type === ButtonType.NORMAL && normalType}
   ${({ type }) => type === ButtonType.FLAT && flatType}
 
+  ${defaultSpacing}
   ${styleSystem}
 `;
 
