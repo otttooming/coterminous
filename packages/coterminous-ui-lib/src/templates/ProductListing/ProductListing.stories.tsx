@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
+import { ShoppingCart } from 'react-feather';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import {
   Heading,
@@ -12,6 +13,7 @@ import {
   Image,
   theme,
 } from '../../';
+import { ButtonType } from '../../components/Button/Button';
 
 const image = {
   width: 1200,
@@ -41,17 +43,19 @@ const logo = {
 
 const footer = (
   <>
-    <Heading as="h1">Title of the card</Heading>
+    <Heading as="h2">Title of the card</Heading>
     <div
       style={{
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop: theme.spacing.medium,
+        marginTop: theme.spacing.small,
       }}
     >
       20$
-      <Button size={ButtonSize.SMALL}>Click me</Button>
+      <Button size={ButtonSize.SMALL} icon={<ShoppingCart />}>
+        Click me
+      </Button>
     </div>
   </>
 );
@@ -70,11 +74,39 @@ stories.add('Default', () => (
         }}
       >
         <div>
-          <Card image={logo} />
+          <Image image={logo} />
 
-          <Heading as="h1">Menu</Heading>
+          <Heading as="h2">Menu</Heading>
 
-          <Section>Menu link</Section>
+          <ul>
+            <li>
+              <Button
+                size={ButtonSize.SMALL}
+                type={ButtonType.FLAT}
+                icon={<ShoppingCart />}
+              >
+                Click me
+              </Button>
+            </li>
+            <li>
+              <Button
+                size={ButtonSize.SMALL}
+                type={ButtonType.FLAT}
+                icon={<ShoppingCart />}
+              >
+                Click me
+              </Button>
+            </li>
+            <li>
+              <Button
+                size={ButtonSize.SMALL}
+                type={ButtonType.FLAT}
+                icon={<ShoppingCart />}
+              >
+                Click me
+              </Button>
+            </li>
+          </ul>
         </div>
       </GridItem>
 
@@ -92,7 +124,11 @@ stories.add('Default', () => (
           />
           <Heading as="h1">Product list</Heading>
 
-          <Grid as="ul" columns="repeat(auto-fill, minmax(20rem, 1fr))">
+          <Grid
+            as="ul"
+            columns="repeat(auto-fill, minmax(20rem, 1fr))"
+            gap="48px"
+          >
             {[...Array(16)].map((item, index) => (
               <GridItem as="li" key={index}>
                 <Card footer={footer} image={image} />
