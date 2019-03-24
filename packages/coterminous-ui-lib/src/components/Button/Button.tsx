@@ -1,6 +1,10 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { theme } from '../../';
+import {
+  styleSystem,
+  StyleSystemProps,
+} from '../../common/styles/molecules/styledSystem';
 
 export enum ButtonSize {
   NORMAL = 'normal',
@@ -62,9 +66,7 @@ const StyledButton = styled.button<StyleProps>`
   min-width: 128px;
   justify-content: center;
   font-family: inherit;
-  margin-right: ${theme.spacing.medium};
-  margin-top: ${theme.spacing.medium};
-  
+
   ${({ size }) => size === ButtonSize.SMALL && small}
   ${({ size }) => size === ButtonSize.LARGE && large}
   ${({ size }) => size === ButtonSize.NORMAL && normal}
@@ -72,9 +74,7 @@ const StyledButton = styled.button<StyleProps>`
   ${({ type }) => type === ButtonType.NORMAL && normalType}
   ${({ type }) => type === ButtonType.FLAT && flatType}
 
-  &:first-child {
-    margin-top: 0;
-  }
+  ${styleSystem}
 `;
 
 const StyledGlow = css`
@@ -97,7 +97,7 @@ const IconWrapper = styled.span`
   }
 `;
 
-export interface StyleProps {
+export interface StyleProps extends StyleSystemProps {
   size: ButtonSize;
   type: ButtonType;
 }
