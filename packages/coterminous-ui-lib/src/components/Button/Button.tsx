@@ -86,8 +86,8 @@ const StyledGlow = css`
 `;
 
 const IconWrapper = styled.span`
-  width: 1.5em;
-  height: 1.5em;
+  width: 1em;
+  height: 1em;
   margin-right: 0.5em;
   pointer-events: none;
 
