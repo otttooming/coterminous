@@ -65,11 +65,24 @@ const StyledGlow = css`
   transition: all 0.1s ease-out;
 `;
 
+const IconWrapper = styled.span`
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.5em;
+  pointer-events: none;
+
+  > * {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
 export interface StyleProps {
   size: ButtonSize;
 }
 
 export interface Props {
+  icon?: React.ReactChild;
   onClick?: () => void;
 }
 export interface State {
@@ -128,7 +141,7 @@ class Button extends React.Component<ButtonProps, State> {
   };
 
   render() {
-    const { children, ...other } = this.props;
+    const { children, icon, ...other } = this.props;
     return (
       <StyledButton
         ref={this.buttonElement}
@@ -137,6 +150,8 @@ class Button extends React.Component<ButtonProps, State> {
         onClick={this.handleClick}
         {...other}
       >
+        {icon && <IconWrapper>{icon}</IconWrapper>}
+
         {children}
         <Glow {...this.state} />
       </StyledButton>
