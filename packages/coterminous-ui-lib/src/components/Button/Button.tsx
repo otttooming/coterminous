@@ -40,8 +40,7 @@ const normalType = css`
   /* background: linear-gradient(to right, #7f00ff, #e100ff); */
 
   &:focus {
-    box-shadow: 0 0 0 3px rgba(23, 198, 113, 0.15),
-      0 3px 15px rgba(23, 198, 113, 0.2), 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 3px rgba(127, 0, 255, 0.3);
   }
 `;
 
