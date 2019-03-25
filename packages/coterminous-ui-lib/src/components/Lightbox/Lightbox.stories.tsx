@@ -19,7 +19,7 @@ stories.add('Lightbox', () => {
       aspectRatio: 100,
       sizes: [
         {
-          url: 'https://via.placeholder.com/1200',
+          url: 'https://dummyimage.com/1200x1200/fff/aaa',
           width: 1200,
           height: 1200,
         },
@@ -31,7 +31,7 @@ stories.add('Lightbox', () => {
       aspectRatio: 100,
       sizes: [
         {
-          url: 'https://via.placeholder.com/1100',
+          url: 'https://dummyimage.com/1100x1100/fff/aaa',
           width: 1100,
           height: 1100,
         },

@@ -74,7 +74,7 @@ class Lightbox extends React.Component<Props, any> {
       aspectRatio: 100,
       sizes: [
         {
-          url: 'https://via.placeholder.com/1200',
+          url: 'https://dummyimage.com/1200x1200/fff/aaa',
           width: 1200,
           height: 1200,
         },
