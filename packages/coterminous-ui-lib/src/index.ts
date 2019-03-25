@@ -32,3 +32,5 @@ export { default as Image } from './components/Image';
 export { default as Card, CardType } from './molecules/Card';
 
 export { default as Grid, GridItem } from './atoms/Grid';
+
+export { default as List, ListItem } from './atoms/List';
