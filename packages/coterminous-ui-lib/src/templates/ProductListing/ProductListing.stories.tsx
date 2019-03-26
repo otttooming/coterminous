@@ -11,6 +11,8 @@ import {
   GridItem,
   Section,
   Image,
+  Menu,
+  MenuItem,
   theme,
 } from '../../';
 import { ButtonType } from '../../components/Button/Button';
@@ -60,6 +62,18 @@ const footer = (
   </>
 );
 
+const content = (
+  <>
+    <Button
+      size={ButtonSize.SMALL}
+      type={ButtonType.FLAT}
+      icon={<ShoppingCart />}
+    >
+      Click me
+    </Button>
+  </>
+);
+
 const stories = storiesOf('Product listing', module);
 
 stories.add('Default', () => (
@@ -78,35 +92,15 @@ stories.add('Default', () => (
 
           <Heading as="h2">Menu</Heading>
 
-          <ul>
-            <li>
-              <Button
-                size={ButtonSize.SMALL}
-                type={ButtonType.FLAT}
-                icon={<ShoppingCart />}
-              >
-                Click me
-              </Button>
-            </li>
-            <li>
-              <Button
-                size={ButtonSize.SMALL}
-                type={ButtonType.FLAT}
-                icon={<ShoppingCart />}
-              >
-                Click me
-              </Button>
-            </li>
-            <li>
-              <Button
-                size={ButtonSize.SMALL}
-                type={ButtonType.FLAT}
-                icon={<ShoppingCart />}
-              >
-                Click me
-              </Button>
-            </li>
-          </ul>
+          <Menu>
+            <MenuItem mt="8px">{content}</MenuItem>
+            <MenuItem>{content}</MenuItem>
+            <MenuItem>{content}</MenuItem>
+            <MenuItem>{content}</MenuItem>
+            <MenuItem>{content}</MenuItem>
+            <MenuItem>{content}</MenuItem>
+            <MenuItem>{content}</MenuItem>
+          </Menu>
         </div>
       </GridItem>
 
