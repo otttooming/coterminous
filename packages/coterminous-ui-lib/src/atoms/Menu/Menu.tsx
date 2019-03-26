@@ -31,9 +31,9 @@ const Wrapper = styled.ul`
 
 class Menu extends React.PureComponent<MenuProps, any> {
   public render() {
-    const { children } = this.props;
+    const { children, ...restProps } = this.props;
 
-    return <Wrapper>{children}</Wrapper>;
+    return <Wrapper {...restProps}>{children}</Wrapper>;
   }
 }
 

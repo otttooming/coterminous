@@ -31,9 +31,9 @@ const Wrapper = styled.li`
 
 class MenuItem extends React.PureComponent<MenuItemProps, any> {
   public render() {
-    const { children } = this.props;
+    const { children, ...restProps } = this.props;
 
-    return <Wrapper>{children}</Wrapper>;
+    return <Wrapper {...restProps}>{children}</Wrapper>;
   }
 }
 
