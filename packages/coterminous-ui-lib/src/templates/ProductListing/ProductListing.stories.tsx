@@ -78,7 +78,11 @@ const stories = storiesOf('Product listing', module);
 
 stories.add('Default', () => (
   <StorybookWrapper style={{ margin: 0 }}>
-    <Grid areas="sidebar content" columns="16rem 1fr" gap="0">
+    <Grid
+      gridTemplateAreas="'sidebar content'"
+      gridTemplateColumns="16rem 1fr"
+      gridGap="0"
+    >
       <GridItem
         area="sidebar"
         style={{
@@ -120,8 +124,8 @@ stories.add('Default', () => (
 
           <Grid
             as="ul"
-            columns="repeat(auto-fill, minmax(20rem, 1fr))"
-            gap="48px"
+            gridTemplateColumns="repeat(auto-fill, minmax(20rem, 1fr))"
+            gridGap="48px"
           >
             {[...Array(16)].map((item, index) => (
               <GridItem as="li" key={index}>
