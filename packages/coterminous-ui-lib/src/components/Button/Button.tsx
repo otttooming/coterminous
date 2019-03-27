@@ -126,7 +126,7 @@ export interface State {
 
 export type ButtonProps = Props & StyleProps;
 
-class Button extends React.Component<ButtonProps, State> {
+class Button extends React.PureComponent<ButtonProps, State> {
   static defaultProps = {
     size: ButtonSize.NORMAL,
     type: ButtonType.NORMAL,

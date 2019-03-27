@@ -7,7 +7,7 @@ interface State {}
 
 export type SelectFieldProps = SelectProps & ExternalWithFormConsumerProps;
 
-class SelectFieldBase extends React.Component<SelectFieldProps, State> {
+class SelectFieldBase extends React.PureComponent<SelectFieldProps, State> {
   constructor(props: SelectFieldProps) {
     super(props);
   }

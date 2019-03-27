@@ -10,7 +10,7 @@ export type RadioButtonFieldProps = CheckboxProps &
   ExternalWithFormConsumerProps &
   Partial<FormState>;
 
-class RadioButtonFieldBase extends React.Component<
+class RadioButtonFieldBase extends React.PureComponent<
   RadioButtonFieldProps,
   State
 > {

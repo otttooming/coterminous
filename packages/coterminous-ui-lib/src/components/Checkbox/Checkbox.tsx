@@ -35,7 +35,7 @@ interface State {
 
 export type CheckboxProps = Props & ControlWrapperProps;
 
-class CheckboxBase extends React.Component<CheckboxProps, State> {
+class CheckboxBase extends React.PureComponent<CheckboxProps, State> {
   static defaultProps = {
     type: CheckboxType.CHECKBOX,
   };

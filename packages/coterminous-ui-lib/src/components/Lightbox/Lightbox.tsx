@@ -27,7 +27,7 @@ interface Props {
   onClose: () => void;
 }
 
-class Lightbox extends React.Component<Props, any> {
+class Lightbox extends React.PureComponent<Props, any> {
   static defaultProps = {
     images: [],
     options: {

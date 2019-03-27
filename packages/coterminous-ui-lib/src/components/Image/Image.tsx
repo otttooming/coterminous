@@ -19,7 +19,7 @@ const Figure = styled.figure`
   border-radius: ${(props: FigureProps) => (props.isProduct ? '4px' : '0')};
 `;
 
-class Image extends React.Component<Props, any> {
+class Image extends React.PureComponent<Props, any> {
   render() {
     const { image, alt, isProduct, onClick } = this.props;
 

@@ -19,7 +19,7 @@ export interface State {}
 
 export type PopoverProps = Props;
 
-export class PopoverBase extends React.Component<PopoverProps, State> {
+export class PopoverBase extends React.PureComponent<PopoverProps, State> {
   constructor(props: PopoverProps) {
     super(props);
   }

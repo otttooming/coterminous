@@ -7,7 +7,7 @@ interface State {}
 
 export type CheckboxFieldProps = CheckboxProps & ExternalWithFormConsumerProps;
 
-class CheckboxFieldBase extends React.Component<CheckboxFieldProps, State> {
+class CheckboxFieldBase extends React.PureComponent<CheckboxFieldProps, State> {
   constructor(props: CheckboxFieldProps) {
     super(props);
   }

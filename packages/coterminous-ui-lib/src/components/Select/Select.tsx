@@ -52,7 +52,7 @@ export enum SELECT_GROUP {
   NOT_GROUPED = 'NOT_GROUPED',
 }
 
-export class SelectBase extends React.Component<SelectProps, State> {
+export class SelectBase extends React.PureComponent<SelectProps, State> {
   state: State = { selected: undefined };
 
   render() {

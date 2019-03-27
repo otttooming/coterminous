@@ -35,7 +35,7 @@ const defaultValue: FormState = {
 
 export const FormContext = React.createContext(defaultValue);
 
-export class FormProvider extends React.Component<FormProps, FormState> {
+export class FormProvider extends React.PureComponent<FormProps, FormState> {
   constructor(props: FormProps) {
     super(props);
     this.state = {

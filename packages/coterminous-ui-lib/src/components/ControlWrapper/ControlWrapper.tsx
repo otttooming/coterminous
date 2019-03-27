@@ -12,7 +12,7 @@ export type ControlWrapperProps = ControlWrapperInternalProps;
 
 interface State {}
 
-class ControlWrapperBase extends React.Component<any, State> {
+class ControlWrapperBase extends React.PureComponent<any, State> {
   render() {
     const { children, className, label, isRequired } = this.props;
 
