@@ -12,7 +12,6 @@ interface GridItemProps
 }
 
 const Wrapper = styled.div<WrapperProps>`
-  display: grid;
   grid-area: ${({ area }) => area};
   list-style: none;
 `;
