@@ -82,6 +82,7 @@ stories.add('Default', () => (
       gridTemplateAreas="'sidebar content'"
       gridTemplateColumns="16rem 1fr"
       gridGap="0"
+      style={{ minHeight: '100vh' }}
     >
       <GridItem
         area="sidebar"
