@@ -35,7 +35,7 @@ stories
   .add('Default', () => {
     return (
       <StorybookWrapper>
-        <Card footer={footer} image={image} />
+        <Card image={image}>{footer}</Card>
       </StorybookWrapper>
     );
   })
@@ -43,21 +43,21 @@ stories
   .add('Without title', () => {
     return (
       <StorybookWrapper>
-        <Card image={image} />
+        <Card image={image}>{footer}</Card>
       </StorybookWrapper>
     );
   })
   .add('Without image', () => {
     return (
       <StorybookWrapper>
-        <Card footer={footer} />
+        <Card>{footer}</Card>
       </StorybookWrapper>
     );
   })
   .add('Card with expanded styled attributes', () => {
     return (
       <StorybookWrapper>
-        <CardStyled footer={footer} image={image} />
+        <CardStyled image={image}>{footer}</CardStyled>
       </StorybookWrapper>
     );
   });

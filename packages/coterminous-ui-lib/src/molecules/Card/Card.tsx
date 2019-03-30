@@ -10,7 +10,6 @@ export interface CardProps extends React.HTMLAttributes<HTMLElement> {
   as: keyof JSX.IntrinsicElements;
   type: CardType;
   image?: MediaItemProps;
-  footer?: React.ReactChild;
 }
 
 class Card extends React.PureComponent<CardProps, any> {

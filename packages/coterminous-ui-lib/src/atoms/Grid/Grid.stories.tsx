@@ -30,22 +30,22 @@ export const GridStoryDefault = () => {
       <Heading as="h1">Product list</Heading>
       <Grid as="ul">
         <GridItem as="li">
-          <Card footer={footer} image={image} />
+          <Card image={image}>{footer}</Card>
         </GridItem>
         <GridItem as="li">
-          <Card footer={footer} image={image} />
+          <Card image={image}>{footer}</Card>
         </GridItem>
         <GridItem as="li">
-          <Card footer={footer} image={image} />
+          <Card image={image}>{footer}</Card>
         </GridItem>
         <GridItem as="li">
-          <Card footer={footer} image={image} />
+          <Card image={image}>{footer}</Card>
         </GridItem>
         <GridItem as="li">
-          <Card footer={footer} image={image} />
+          <Card image={image}>{footer}</Card>
         </GridItem>
         <GridItem as="li">
-          <Card footer={footer} image={image} />
+          <Card image={image}>{footer}</Card>
         </GridItem>
       </Grid>
     </StorybookWrapper>

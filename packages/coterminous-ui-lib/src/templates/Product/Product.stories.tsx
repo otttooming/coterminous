@@ -118,7 +118,7 @@ stories.add('Default', () => (
       >
         <div>
           <Card
-            footer={<>Search</>}
+            children={<>Search</>}
             style={{ marginBottom: theme.spacing.huge }}
           />
 
