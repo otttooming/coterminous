@@ -116,27 +116,16 @@ stories.add('Default', () => (
           paddingLeft: theme.spacing.huge,
         }}
       >
-        <div>
-          <Card
-            children={<>Search</>}
-            style={{ marginBottom: theme.spacing.huge }}
-          />
+        <Grid gridTemplateColumns="minmax(320px, 1fr) 1fr" gridGap="48px">
+          <GridItem>
+            <Image image={image} />
+          </GridItem>
+          <GridItem>
+            <Heading as="h1">Product name</Heading>
 
-          <Grid
-            gridTemplateAreas="'image description'"
-            gridTemplateColumns="30rem 1fr"
-            gridGap="48px"
-          >
-            <GridItem area="image">
-              <Image image={image} />
-            </GridItem>
-            <GridItem area="description">
-              <Heading as="h1">Product name</Heading>
-
-              <p>Description</p>
-            </GridItem>
-          </Grid>
-        </div>
+            <p>Description</p>
+          </GridItem>
+        </Grid>
       </GridItem>
     </Grid>
   </StorybookWrapper>
