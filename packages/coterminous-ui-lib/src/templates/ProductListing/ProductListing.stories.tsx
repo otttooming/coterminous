@@ -88,16 +88,16 @@ stories.add('Default', () => (
         style={{
           padding: theme.spacing.large,
           paddingRight: theme.spacing.huge,
-          backgroundColor: '#E6EDF3',
+          // backgroundColor: '#E6EDF3',
         }}
       >
-        <div>
-          <Image image={logo} />
+        <Image image={logo} />
 
-          <Heading as="h2">Menu</Heading>
+        <Heading as="h2">Menu</Heading>
 
+        <Section>
           <Menu>
-            <MenuItem mt="8px">{content}</MenuItem>
+            <MenuItem>{content}</MenuItem>
             <MenuItem>{content}</MenuItem>
             <MenuItem>{content}</MenuItem>
             <MenuItem>{content}</MenuItem>
@@ -105,7 +105,7 @@ stories.add('Default', () => (
             <MenuItem>{content}</MenuItem>
             <MenuItem>{content}</MenuItem>
           </Menu>
-        </div>
+        </Section>
       </GridItem>
 
       <GridItem
@@ -116,20 +116,18 @@ stories.add('Default', () => (
         }}
       >
         <div>
-          <Card
-            children={<>Search</>}
-            style={{ marginBottom: theme.spacing.huge }}
-          />
-          <Heading as="h1">Product list</Heading>
+          <Heading as="h2">Product list</Heading>
 
           <Grid
             as="ul"
-            gridTemplateColumns="repeat(auto-fill, minmax(20rem, 1fr))"
-            gridGap="48px"
+            gridTemplateColumns="repeat(auto-fill, minmax(14rem, 1fr))"
+            gridGap="64px"
           >
             {[...Array(16)].map((item, index) => (
               <GridItem as="li" key={index}>
-                <Card footer={footer} image={image} />
+                <Card content={footer}>
+                  <Image image={image} />
+                </Card>
               </GridItem>
             ))}
           </Grid>
