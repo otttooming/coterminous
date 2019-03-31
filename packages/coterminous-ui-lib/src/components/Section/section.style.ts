@@ -6,7 +6,6 @@ const common = css`
   border-radius: ${theme.border.radius.small};
   margin-top: ${theme.spacing.large};
   padding: ${theme.spacing.large};
-  box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1);
 
   &:first-child {
     margin-top: 0;
