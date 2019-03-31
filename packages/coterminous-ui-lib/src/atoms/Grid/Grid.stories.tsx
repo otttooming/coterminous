@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import { Heading, Button, ButtonSize, Card } from '../../';
 import Grid, { GridItem } from './';
+import Image from '../../components/Image';
 
 const image = {
   width: 1200,
@@ -19,7 +20,7 @@ const image = {
 
 const footer = (
   <>
-    <Heading as="h1">Title of the card</Heading>
+    <Heading as="h2">Title of the card</Heading>
     <Button size={ButtonSize.SMALL}>Click me</Button>
   </>
 );
@@ -28,24 +29,40 @@ export const GridStoryDefault = () => {
   return (
     <StorybookWrapper>
       <Heading as="h1">Product list</Heading>
-      <Grid as="ul">
+      <Grid
+        as="ul"
+        gridTemplateColumns="repeat(auto-fill, minmax(14rem, 1fr))"
+        gridGap="64px"
+      >
         <GridItem as="li">
-          <Card image={image}>{footer}</Card>
+          <Card content={footer}>
+            <Image image={image} />
+          </Card>
         </GridItem>
         <GridItem as="li">
-          <Card image={image}>{footer}</Card>
+          <Card content={footer}>
+            <Image image={image} />
+          </Card>
         </GridItem>
         <GridItem as="li">
-          <Card image={image}>{footer}</Card>
+          <Card content={footer}>
+            <Image image={image} />
+          </Card>
         </GridItem>
         <GridItem as="li">
-          <Card image={image}>{footer}</Card>
+          <Card content={footer}>
+            <Image image={image} />
+          </Card>
         </GridItem>
         <GridItem as="li">
-          <Card image={image}>{footer}</Card>
+          <Card content={footer}>
+            <Image image={image} />
+          </Card>
         </GridItem>
         <GridItem as="li">
-          <Card image={image}>{footer}</Card>
+          <Card content={footer}>
+            <Image image={image} />
+          </Card>
         </GridItem>
       </Grid>
     </StorybookWrapper>
