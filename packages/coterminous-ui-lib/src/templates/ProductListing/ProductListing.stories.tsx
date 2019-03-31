@@ -81,16 +81,16 @@ stories.add('Default', () => (
     <Grid
       gridTemplateAreas="'sidebar content'"
       gridTemplateColumns="16rem 1fr"
-      gridGap="0"
+      gridGap="48px"
+      maxWidth={1680}
+      ml="auto"
+      mr="auto"
+      pt={64}
+      pb={64}
+      pl={32}
+      pr={32}
     >
-      <GridItem
-        area="sidebar"
-        style={{
-          padding: theme.spacing.large,
-          paddingRight: theme.spacing.huge,
-          // backgroundColor: '#E6EDF3',
-        }}
-      >
+      <GridItem area="sidebar">
         <Image image={logo} />
 
         <Heading as="h2">Menu</Heading>
@@ -108,30 +108,22 @@ stories.add('Default', () => (
         </Section>
       </GridItem>
 
-      <GridItem
-        area="content"
-        style={{
-          padding: theme.spacing.large,
-          paddingLeft: theme.spacing.huge,
-        }}
-      >
-        <div>
-          <Heading as="h2">Product list</Heading>
+      <GridItem area="content">
+        <Heading as="h2">Product list</Heading>
 
-          <Grid
-            as="ul"
-            gridTemplateColumns="repeat(auto-fill, minmax(14rem, 1fr))"
-            gridGap="64px"
-          >
-            {[...Array(16)].map((item, index) => (
-              <GridItem as="li" key={index}>
-                <Card content={footer}>
-                  <Image image={image} />
-                </Card>
-              </GridItem>
-            ))}
-          </Grid>
-        </div>
+        <Grid
+          as="ul"
+          gridTemplateColumns="repeat(auto-fill, minmax(14rem, 1fr))"
+          gridGap="64px"
+        >
+          {[...Array(16)].map((item, index) => (
+            <GridItem as="li" key={index}>
+              <Card content={footer}>
+                <Image image={image} />
+              </Card>
+            </GridItem>
+          ))}
+        </Grid>
       </GridItem>
     </Grid>
   </StorybookWrapper>
