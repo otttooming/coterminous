@@ -1,11 +1,14 @@
 import * as React from 'react';
 import Vertical from './molecules/Vertical';
+import { StyleSystemProps } from '../../common/styles/molecules/styledSystem';
 
 export enum CardType {
   PORTRAIT = 'PORTRAIT',
 }
 
-export interface CardProps extends React.HTMLAttributes<HTMLElement> {
+export interface CardProps
+  extends React.HTMLAttributes<HTMLElement>,
+    StyleSystemProps {
   as: keyof JSX.IntrinsicElements;
   type: CardType;
   content: React.ReactNode;

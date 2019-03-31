@@ -1,16 +1,17 @@
 import * as React from 'react';
-import { Image, theme } from '../../../';
+import { theme } from '../../../';
 import styled from 'styled-components';
 import { CardProps } from '../Card';
+import { styleSystem } from '../../../common/styles/molecules/styledSystem';
 
 export interface VerticalProps extends CardProps {}
 
 const Wrapper = styled.div`
-  /* background-color: ${theme.background.section}; */
-  /* box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1); */
+  ${styleSystem}
 `;
 
 const ChildrenWrapper = styled.div`
+  background-color: ${theme.color.white};
   overflow: hidden;
   border-radius: ${theme.border.radius.small};
 `;
