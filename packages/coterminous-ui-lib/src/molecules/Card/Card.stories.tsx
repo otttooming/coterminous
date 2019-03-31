@@ -5,6 +5,7 @@ import Card from './';
 import { Heading, Button, ButtonSize, Section } from '../../';
 import styled from 'styled-components';
 import { GridStoryDefault } from '../../atoms/Grid/Grid.stories';
+import Image from '../../components/Image';
 
 const image = {
   width: 1200,
@@ -35,7 +36,9 @@ stories
   .add('Default', () => {
     return (
       <StorybookWrapper>
-        <Card image={image}>{footer}</Card>
+        <Card content={footer}>
+          <Image image={image} />
+        </Card>
       </StorybookWrapper>
     );
   })
@@ -43,21 +46,27 @@ stories
   .add('Without title', () => {
     return (
       <StorybookWrapper>
-        <Card image={image}>{footer}</Card>
+        <Card content={footer}>
+          <Image image={image} />
+        </Card>
       </StorybookWrapper>
     );
   })
   .add('Without image', () => {
     return (
       <StorybookWrapper>
-        <Card>{footer}</Card>
+        <Card>
+          <Image image={image} />
+        </Card>
       </StorybookWrapper>
     );
   })
   .add('Card with expanded styled attributes', () => {
     return (
       <StorybookWrapper>
-        <CardStyled image={image}>{footer}</CardStyled>
+        <CardStyled content={footer}>
+          <Image image={image} />
+        </CardStyled>
       </StorybookWrapper>
     );
   });

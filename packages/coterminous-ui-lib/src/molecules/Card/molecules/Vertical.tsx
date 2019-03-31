@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   /* box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1); */
 `;
 
-const TopWrapper = styled.div`
+const ChildrenWrapper = styled.div`
   overflow: hidden;
   border-radius: ${theme.border.radius.small};
 `;
@@ -21,17 +21,13 @@ const Footer = styled.div`
 
 class Vertical extends React.Component<VerticalProps, any> {
   public render() {
-    const { as, image, children, ...restProps } = this.props;
+    const { as, content, children, ...restProps } = this.props;
 
     return (
       <Wrapper as={as} {...restProps}>
-        {!!image && (
-          <TopWrapper>
-            <Image image={image} />
-          </TopWrapper>
-        )}
+        {!!children && <ChildrenWrapper>{children}</ChildrenWrapper>}
 
-        {!!children && <Footer>{children}</Footer>}
+        {!!content && <Footer>{content}</Footer>}
       </Wrapper>
     );
   }
