@@ -24,11 +24,26 @@ class Vertical extends React.Component<VerticalProps, any> {
   public render() {
     const { as, content, children, ...restProps } = this.props;
 
+    const hasNoContent = !children && !content;
+    const hasOnlyChildren = !!children && !content;
+
+    if (hasNoContent) {
+      return null;
+    }
+
+    if (hasOnlyChildren) {
+      return (
+        <ChildrenWrapper as={as} {...restProps}>
+          {children}
+        </ChildrenWrapper>
+      );
+    }
+
     return (
       <Wrapper as={as} {...restProps}>
-        {!!children && <ChildrenWrapper>{children}</ChildrenWrapper>}
+        <ChildrenWrapper>{children}</ChildrenWrapper>
 
-        {!!content && <Footer>{content}</Footer>}
+        <Footer>{content}</Footer>
       </Wrapper>
     );
   }
