@@ -1,6 +1,5 @@
 import { css } from 'styled-components';
 import { typeface, color } from '../../common/styles/constants';
-import { legacy } from './legacy.style';
 
 export const globalStyleCss = css`
   @import url('https://fonts.googleapis.com/css?family=Montserrat');
@@ -25,6 +24,4 @@ export const globalStyleCss = css`
     color: ${color.dark};
     background-color: #f2f5f7;
   }
-
-  ${legacy};
 `;
