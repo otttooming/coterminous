@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { PhotoSwipe, PhotoSwipeGalleryItem } from 'react-photoswipe';
-import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import Image from '../Image';
 import { Section } from '../Section/Section';
+import { Lightbox as LightboxStyled } from './Lightbox.style';
 
 interface ImageSizes {
   height: number;
@@ -84,18 +84,20 @@ class Lightbox extends React.PureComponent<Props, any> {
     const gallery = this.buildGalleryItems(images);
 
     return (
-      <StorybookWrapper style={{ width: 420 }}>
+      <>
         <Section>
           <Image image={image} onClick={this.handleImageClick} />
         </Section>
 
-        <PhotoSwipe
-          isOpen={isOpen}
-          items={gallery}
-          options={options}
-          onClose={onClose}
-        />
-      </StorybookWrapper>
+        <LightboxStyled>
+          <PhotoSwipe
+            isOpen={isOpen}
+            items={gallery}
+            options={options}
+            onClose={onClose}
+          />
+        </LightboxStyled>
+      </>
     );
   }
 }
