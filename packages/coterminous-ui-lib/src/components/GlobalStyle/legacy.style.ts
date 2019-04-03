@@ -2815,13 +2815,4 @@ export const legacy = css`
   .pswp--minimal--dark .pswp__top-bar {
     background: none;
   }
-
-  .desc-tooltip-theme .tippy-tooltip-content {
-    text-align: left;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    max-width: 300px;
-    max-height: 50vh;
-    overflow-y: scroll;
-    font-size: 12px;
-  }
 `;
