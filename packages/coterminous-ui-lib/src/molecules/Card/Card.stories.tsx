@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import Card from './';
-import { Heading, Button, ButtonSize, Section } from '../../';
+import { Heading, Button, ButtonSize } from '../../';
 import styled from 'styled-components';
 import { GridStoryDefault } from '../../atoms/Grid/Grid.stories';
 import Image from '../../components/Image';
