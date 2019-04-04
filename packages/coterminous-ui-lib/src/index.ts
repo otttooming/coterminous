@@ -18,7 +18,7 @@ export { CheckboxField } from './components/Checkbox/CheckboxField';
 
 export { RadioButtonField } from './components/RadioButton/RadioButtonField';
 
-export { Section } from './components/Section/Section';
+export { default as Section } from './components/Section';
 export { CSSIcons } from './components/Icons/Icons';
 
 export { Select } from './components/Select/Select';
