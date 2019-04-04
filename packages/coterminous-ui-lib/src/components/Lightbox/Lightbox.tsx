@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { PhotoSwipe, PhotoSwipeGalleryItem } from 'react-photoswipe';
 import Image from '../Image';
-import { Section } from '../Section/Section';
+import Section from '../Section';
 import { Lightbox as LightboxStyled } from './Lightbox.style';
 
 interface ImageSizes {
