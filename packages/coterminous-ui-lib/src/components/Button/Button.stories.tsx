@@ -19,12 +19,6 @@ stories.add('Button', () => {
   return (
     <StorybookWrapper>
       <Section>
-        <Button size={ButtonSize.LARGE}>Click me</Button>
-        <Button size={ButtonSize.NORMAL}>Click me</Button>
-        <Button size={ButtonSize.SMALL}>Click me</Button>
-      </Section>
-
-      <Section>
         <Button size={ButtonSize.LARGE}>{content}</Button>
       </Section>
 
