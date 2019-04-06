@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import Button from './';
 import { text, boolean, number } from '@storybook/addon-knobs';
-import { Section } from '../Section/Section';
+import Section from '../Section';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import { ButtonSize, ButtonType } from './Button';
 import { Camera } from 'react-feather';
