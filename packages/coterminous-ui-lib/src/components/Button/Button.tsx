@@ -64,7 +64,7 @@ const defaultSpacing = css<StyleProps>`
   ${({ m, mt }) => !Boolean(m) && !Boolean(mt) && topSpacing}
 `;
 
-const StyledButton = styled.button<StyleProps>`
+const StyledButton = styled.button<any>`
   border: 0;
   border-radius: 4px;
   cursor: pointer;
@@ -89,14 +89,6 @@ const StyledButton = styled.button<StyleProps>`
   ${styleSystem}
 `;
 
-const StyledGlow = css`
-  opacity: 0.25;
-  position: absolute;
-  background: radial-gradient(circle closest-side, #fff, transparent);
-  transform: translate(-50%, -50%);
-  transition: all 0.1s ease-out;
-`;
-
 const IconWrapper = styled.span`
   width: 1em;
   height: 1em;
@@ -116,13 +108,9 @@ export interface StyleProps extends StyleSystemProps {
 
 export interface Props {
   icon?: React.ReactChild;
-  onClick?: () => void;
+  onClick: () => void;
 }
-export interface State {
-  x: number;
-  y: number;
-  size: number;
-}
+export interface State {}
 
 export type ButtonProps = Props & StyleProps;
 
@@ -130,104 +118,28 @@ class Button extends React.PureComponent<ButtonProps, State> {
   static defaultProps = {
     size: ButtonSize.NORMAL,
     type: ButtonType.NORMAL,
+    onClick: () => null,
   };
-
-  state = {
-    x: 0,
-    y: 0,
-    size: 0,
-  };
-
-  private buttonElement = React.createRef<HTMLButtonElement>();
-
-  onMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (!this.buttonElement.current) {
-      return;
-    }
-
-    const x = e.nativeEvent.offsetX - this.buttonElement.current.clientLeft;
-    const y = e.nativeEvent.offsetY - this.buttonElement.current.clientTop;
-
-    this.setState(state => {
-      return {
-        ...state,
-        x,
-        y,
-        size: 100,
-      };
-    });
-  };
-
-  onMouseLeave(e: React.SyntheticEvent<HTMLButtonElement>) {
-    this.setState({
-      x: 0,
-      y: 0,
-      size: 0,
-    });
-  }
 
   handleClick = (event: React.SyntheticEvent<HTMLButtonElement>) => {
     const { onClick } = this.props;
 
-    if (onClick) {
-      onClick();
-    }
+    event.preventDefault();
+
+    onClick();
   };
 
   render() {
     const { children, icon, ...other } = this.props;
+
     return (
-      <StyledButton
-        ref={this.buttonElement}
-        onMouseMove={e => this.onMouseMove(e)}
-        onMouseLeave={e => this.onMouseLeave(e)}
-        onClick={this.handleClick}
-        {...other}
-      >
+      <StyledButton {...other}>
         {icon && <IconWrapper>{icon}</IconWrapper>}
 
         {children}
-        <Glow {...this.state} />
       </StyledButton>
     );
   }
 }
-
-export interface GlowProps
-  extends Partial<React.HTMLAttributes<HTMLSpanElement>> {
-  x: number;
-  y: number;
-  size: number;
-}
-
-const GlowBase: React.StatelessComponent<GlowProps> = ({
-  x,
-  y,
-  size,
-  className,
-  children,
-}) => {
-  const isGlowVisible: boolean = size !== 0;
-
-  const inlineStyle = {
-    left: `${x}px`,
-    top: `${y}px`,
-    width: `${size}px`,
-    height: `${size}px`,
-  };
-
-  const style = isGlowVisible ? inlineStyle : undefined;
-
-  return (
-    <span className={className} style={style}>
-      {children}
-    </span>
-  );
-};
-
-export const Glow = styled(GlowBase)`
-  ${StyledGlow};
-  pointer-events: none;
-`;
 
 export default Button;
