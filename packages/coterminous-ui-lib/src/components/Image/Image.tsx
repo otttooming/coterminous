@@ -16,21 +16,8 @@ const Figure = styled.figure`
 class Image extends React.PureComponent<Props, any> {
   render() {
     const { image, alt, onClick } = this.props;
-
-    if (!image) {
-      return (
-        <Figure
-          className="aspect-ratio"
-          style={{ paddingBottom: `100%` }}
-          onClick={onClick}
-        >
-          No image
-        </Figure>
-      );
-    }
-
     const { sizes, width, height } = image;
-    const srcSet = sizes.map(item => `${item.url} ${item.width}w`);
+    const srcSet = sizes.map(item => `${item.url} ${item.width}w`).join();
 
     return (
       <Figure
@@ -44,7 +31,7 @@ class Image extends React.PureComponent<Props, any> {
           className="aspect-ratio__img lazyloaded"
           alt={alt}
           itemProp="thumbnail"
-          srcSet={srcSet.join()}
+          srcSet={srcSet}
         />
       </Figure>
     );
