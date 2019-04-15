@@ -34,10 +34,7 @@ const small = css`
 
 const normalType = css`
   color: #fff;
-
   background: #7f00ff;
-  /* box-shadow: 0 4px 16px 0 rgba(44, 44, 44, 0.26); */
-  /* background: linear-gradient(to right, #7f00ff, #e100ff); */
 
   &:focus {
     box-shadow: 0 0 0 3px rgba(127, 0, 255, 0.3);
