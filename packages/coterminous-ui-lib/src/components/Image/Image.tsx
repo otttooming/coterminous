@@ -6,30 +6,20 @@ interface Props {
   image: MediaItemProps;
   alt?: string;
   onClick?: (e: React.SyntheticEvent<HTMLElement>) => void;
-  isProduct?: boolean;
-}
-
-interface FigureProps {
-  isProduct?: boolean;
 }
 
 const Figure = styled.figure`
-  background-color: ${(props: FigureProps) =>
-    props.isProduct ? '#fff' : 'transparent'};
-  border-radius: ${(props: FigureProps) => (props.isProduct ? '4px' : '0')};
+  background-color: #fff;
+  border-radius: 8px;
 `;
 
 class Image extends React.PureComponent<Props, any> {
   render() {
-    const { image, alt, isProduct, onClick } = this.props;
+    const { image, alt, onClick } = this.props;
 
     if (!image) {
       return (
         <Figure
-          isProduct={isProduct}
-          itemScope={true}
-          itemProp="associatedMedia"
-          itemType="http://schema.org/ImageObject"
           className="aspect-ratio"
           style={{ paddingBottom: `100%` }}
           onClick={onClick}
@@ -44,10 +34,6 @@ class Image extends React.PureComponent<Props, any> {
 
     return (
       <Figure
-        isProduct={isProduct}
-        itemScope={true}
-        itemProp="associatedMedia"
-        itemType="http://schema.org/ImageObject"
         className="aspect-ratio"
         style={{ paddingBottom: `${(height / width) * 100}%` }}
         onClick={onClick}
