@@ -1,7 +1,10 @@
 import { css } from 'styled-components';
 import { typeface, color } from '../../common/styles/constants';
+import { customProperties } from './customProperties';
 
 export const globalStyleCss = css`
+  ${customProperties}
+
   @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
   * {
