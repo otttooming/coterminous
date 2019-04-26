@@ -1,13 +1,17 @@
 import { css } from 'styled-components';
 
-export interface CustomProperty {
-  [key: string]: {
+type CustomPropertyValues = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'xxxl';
+
+export type CustomProperty<T extends CustomPropertyValues = never> = {
+  [K in Exclude<CustomPropertyValues, T>]: {
     name: string;
     value: string;
-  };
-}
+  }
+};
 
-function setCustomProperties(obj: CustomProperty) {
+function setCustomProperties(
+  obj: CustomProperty<Partial<CustomPropertyValues>>,
+) {
   return Object.values(obj).map(({ name, value }) => `${name}: ${value};`);
 }
 
@@ -42,7 +46,7 @@ export const fontSize: CustomProperty = {
   },
 };
 
-export const lineHeight: CustomProperty = {
+export const lineHeight: CustomProperty<'l' | 'xl' | 'xxl' | 'xxxl'> = {
   xs: {
     name: '--line-height-xs',
     value: '1.25',
@@ -57,7 +61,9 @@ export const lineHeight: CustomProperty = {
   },
 };
 
-export const borderRadius: CustomProperty = {
+export const borderRadius: CustomProperty<
+  'xs' | 'l' | 'xl' | 'xxl' | 'xxxl'
+> = {
   s: {
     name: '--border-radius-s',
     value: '0.25em',
@@ -68,7 +74,7 @@ export const borderRadius: CustomProperty = {
   },
 };
 
-export const space: CustomProperty = {
+export const space: CustomProperty<'xs' | 'xxl' | 'xxxl'> = {
   s: {
     name: '--space-s',
     value: '0.5rem',
