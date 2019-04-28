@@ -106,6 +106,41 @@ export const space: CustomSizeProperty<'xs' | 'xxl' | 'xxxl'> = {
   },
 };
 
+interface CustomPropertyGenerator<K extends string> {
+  key: K;
+  value: string;
+}
+
+interface CustomPropertyGeneratorReturn<K extends string> {
+  value: CustomPropertyGenerator<K>['value'];
+  property: string;
+  variable: string;
+}
+
+type CustomPropertyGeneratorReturnObject<K extends string> = {
+  [Key in K]: CustomPropertyGeneratorReturn<K>
+};
+
+function setCustomPropertyGenerator<K extends string>(
+  name: string,
+  values: CustomPropertyGenerator<K>[],
+): CustomPropertyGeneratorReturnObject<K> {
+  return values.reduce(
+    (acc, { key, value }) => {
+      const customProperty = `--${name}-${key}`;
+
+      acc[key] = {
+        value,
+        property: customProperty,
+        variable: `var(${customProperty})`,
+      };
+
+      return acc;
+    },
+    {} as CustomPropertyGeneratorReturnObject<K>,
+  );
+}
+
 export const customProperties = css`
   :root {
     ${setCustomProperties(fontSize)}
