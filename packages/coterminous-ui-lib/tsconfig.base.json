@@ -10,10 +10,7 @@
     "lib": ["dom", "es2015", "es2017"],
     "experimentalDecorators": true,
     "baseUrl": "./",
-    "outDir": "./dist",
-    "paths": {
-      "@coterminous/ui-lib": ["./src"]
-    }
+    "outDir": "./dist"
   },
   "exclude": ["./node_modules"]
 }
