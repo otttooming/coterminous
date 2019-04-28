@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { GlobalStyle } from '../../components/GlobalStyle/GlobalStyle';
-import styled from 'styled-components';
+import {
+  mapCustomPropertyToStyleSystem,
+  space,
+} from '../../components/GlobalStyle/customProperties';
+import styled, { ThemeProvider } from 'styled-components';
 
 const Wrapper = styled.div`
   margin: 32px;
@@ -19,11 +23,13 @@ class StorybookWrapper extends React.Component<StorybookWrapperProps, any> {
     const { children, style } = this.props;
 
     return (
-      <Wrapper style={style}>
-        <GlobalStyle />
+      <ThemeProvider theme={{ space: mapCustomPropertyToStyleSystem(space) }}>
+        <Wrapper style={style}>
+          <GlobalStyle />
 
-        {children}
-      </Wrapper>
+          {children}
+        </Wrapper>
+      </ThemeProvider>
     );
   }
 }
