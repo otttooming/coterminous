@@ -2,11 +2,13 @@ import { css } from 'styled-components';
 
 type CustomPropertySizeValues = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'xxxl';
 
+interface CustomSizePropertyObject {
+  name: string;
+  value: string;
+}
+
 export type CustomSizeProperty<T extends CustomPropertySizeValues = never> = {
-  [K in Exclude<CustomPropertySizeValues, T>]: {
-    name: string;
-    value: string;
-  }
+  [K in Exclude<CustomPropertySizeValues, T>]: CustomSizePropertyObject
 };
 
 function setCustomProperties(
