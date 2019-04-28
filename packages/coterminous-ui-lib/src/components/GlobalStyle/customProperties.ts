@@ -17,6 +17,17 @@ function setCustomProperties(
   return Object.values(obj).map(({ name, value }) => `${name}: ${value};`);
 }
 
+export function mapCustomPropertyToStyleSystem(
+  obj: CustomSizeProperty<Partial<CustomPropertySizeValues>>,
+) {
+  return Object.entries<CustomSizePropertyObject>(obj).reduce<{
+    [K: string]: string;
+  }>((acc, [key, { name }]) => {
+    acc[key] = `var(${name})`;
+    return acc;
+  }, {});
+}
+
 export const fontSize: CustomSizeProperty = {
   xs: {
     name: '--font-size-xx',
