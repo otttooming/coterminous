@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import Heading from './';
-import { Section } from '../Section/Section';
+import Section from '../Section/Section';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import { SpacingSize } from '../../common/styles/constants';
 
