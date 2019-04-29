@@ -14,6 +14,7 @@ import {
 import {
   styleSystem,
   StyleSystemProps,
+  withSpace,
 } from '../../common/styles/molecules/styledSystem';
 
 interface WrapperProps
@@ -32,13 +33,9 @@ export interface GridProps
 const Wrapper = styled.ul<WrapperProps>`
   margin: 0;
   padding: 0;
-  margin-top: ${theme.spacing.large};
-
-  &:first-child {
-    margin-top: 0;
-  }
 
   ${styleSystem}
+  ${withSpace}
   ${gridGap}
   ${gridTemplateAreas}
   ${gridTemplateRows}
