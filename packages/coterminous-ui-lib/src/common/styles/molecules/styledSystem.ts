@@ -11,10 +11,7 @@ import {
 } from 'styled-system';
 import { theme } from '../theme';
 
-export type StyleSystemProps = SpaceProps &
-  WidthProps &
-  MaxWidthProps &
-  DisplayProps;
+export type StyleSystemProps = WidthProps & MaxWidthProps & DisplayProps;
 
 export type WithSpaceProps = SpaceProps;
 

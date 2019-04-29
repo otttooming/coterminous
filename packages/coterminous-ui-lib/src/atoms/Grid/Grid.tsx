@@ -15,10 +15,12 @@ import {
   styleSystem,
   StyleSystemProps,
   withSpace,
+  WithSpaceProps,
 } from '../../common/styles/molecules/styledSystem';
 
 interface WrapperProps
   extends StyleSystemProps,
+    WithSpaceProps,
     GridGapProps,
     GridTemplatesAreasProps,
     GridTemplatesRowsProps,
