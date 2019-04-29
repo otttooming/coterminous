@@ -2,109 +2,13 @@ import { css } from 'styled-components';
 
 type CustomPropertySizeValues = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'xxxl';
 
-interface CustomSizePropertyObject {
-  name: string;
-  value: string;
-}
-
-export type CustomSizeProperty<T extends CustomPropertySizeValues = never> = {
-  [K in Exclude<CustomPropertySizeValues, T>]: CustomSizePropertyObject
-};
-
-function setCustomProperties(
-  obj: CustomSizeProperty<Partial<CustomPropertySizeValues>>,
+function setCustomProperties<K extends string>(
+  obj: CustomPropertyGeneratorReturnObject<K>,
 ) {
-  return Object.values(obj).map(({ name, value }) => `${name}: ${value};`);
+  const values: CustomPropertyGeneratorReturn<K>[] = Object.values(obj);
+
+  return values.map(({ property, value }) => `${property}: ${value};`);
 }
-
-export function mapCustomPropertyToStyleSystem(
-  obj: CustomSizeProperty<Partial<CustomPropertySizeValues>>,
-) {
-  return Object.entries<CustomSizePropertyObject>(obj).reduce<{
-    [K: string]: string;
-  }>((acc, [key, { name }]) => {
-    acc[key] = `var(${name})`;
-    return acc;
-  }, {});
-}
-
-export const fontSize: CustomSizeProperty = {
-  xs: {
-    name: '--font-size-xx',
-    value: '0.75rem',
-  },
-  s: {
-    name: '--font-size-s',
-    value: '0.875rem',
-  },
-  m: {
-    name: '--font-size-m',
-    value: '1rem',
-  },
-  l: {
-    name: '--font-size-l',
-    value: '1.125rem',
-  },
-  xl: {
-    name: '--font-size-xl',
-    value: '1.375rem',
-  },
-  xxl: {
-    name: '--font-size-xxl',
-    value: '1.75rem',
-  },
-  xxxl: {
-    name: '--font-size-xxxl',
-    value: '2.5rem',
-  },
-};
-
-export const lineHeight: CustomSizeProperty<'l' | 'xl' | 'xxl' | 'xxxl'> = {
-  xs: {
-    name: '--line-height-xs',
-    value: '1.25',
-  },
-  s: {
-    name: '--line-height-s',
-    value: '1.375',
-  },
-  m: {
-    name: '--line-height-m',
-    value: '1.625',
-  },
-};
-
-export const borderRadius: CustomSizeProperty<
-  'xs' | 'l' | 'xl' | 'xxl' | 'xxxl'
-> = {
-  s: {
-    name: '--border-radius-s',
-    value: '0.25em',
-  },
-  m: {
-    name: '--border-radius-m',
-    value: '0.5em',
-  },
-};
-
-export const space: CustomSizeProperty<'xs' | 'xxl' | 'xxxl'> = {
-  s: {
-    name: '--space-s',
-    value: '0.5rem',
-  },
-  m: {
-    name: '--space-m',
-    value: '1rem',
-  },
-  l: {
-    name: '--space-l',
-    value: '1.5rem',
-  },
-  xl: {
-    name: '--space-xl',
-    value: '2.5rem',
-  },
-};
 
 interface CustomPropertyGenerator<K extends string> {
   key: K;
@@ -149,6 +53,64 @@ function setCustomPropertyGenerator<K extends string>(
     {} as CustomPropertyGeneratorReturnObject<K>,
   );
 }
+
+export const space = setCustomPropertyGenerator<
+  Exclude<CustomPropertySizeValues, 'xs' | 'xxl' | 'xxxl'>
+>('space', [
+  { key: 's', value: '0.5rem' },
+  { key: 'm', value: '1rem' },
+  { key: 'l', value: '1.5rem' },
+  { key: 'xl', value: '2.5rem' },
+]);
+
+export const borderRadius = setCustomPropertyGenerator<
+  Exclude<CustomPropertySizeValues, 'xs' | 'l' | 'xl' | 'xxl' | 'xxxl'>
+>('border-radius', [
+  { key: 's', value: '0.25em' },
+  { key: 'm', value: '0.5em' },
+]);
+
+export const lineHeight = setCustomPropertyGenerator<
+  Exclude<CustomPropertySizeValues, 'l' | 'xl' | 'xxl' | 'xxxl'>
+>('line-height', [
+  { key: 'xs', value: '1.25' },
+  { key: 's', value: '1.375' },
+  { key: 'm', value: '1.625' },
+]);
+
+export const fontSize = setCustomPropertyGenerator<CustomPropertySizeValues>(
+  'font-size',
+  [
+    {
+      key: 'xs',
+      value: '0.75rem',
+    },
+    {
+      key: 's',
+      value: '0.875rem',
+    },
+    {
+      key: 'm',
+      value: '1rem',
+    },
+    {
+      key: 'l',
+      value: '1.125rem',
+    },
+    {
+      key: 'xl',
+      value: '1.375rem',
+    },
+    {
+      key: 'xxl',
+      value: '1.75rem',
+    },
+    {
+      key: 'xxxl',
+      value: '2.5rem',
+    },
+  ],
+);
 
 export const customProperties = css`
   :root {
