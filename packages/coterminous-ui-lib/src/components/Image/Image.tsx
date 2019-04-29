@@ -8,8 +8,18 @@ interface Props {
 }
 
 const Figure = styled.figure`
+  position: relative;
   background-color: #fff;
-  border-radius: 8px;
+  margin: 0;
+`;
+
+const ImageElement = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
 `;
 
 class Image extends React.PureComponent<Props, any> {
@@ -20,11 +30,10 @@ class Image extends React.PureComponent<Props, any> {
 
     return (
       <Figure
-        className="aspect-ratio"
         style={{ paddingBottom: `${(height / width) * 100}%` }}
         onClick={onClick}
       >
-        <img width={width} height={height} srcSet={srcSet} />
+        <ImageElement width={width} height={height} srcSet={srcSet} />
       </Figure>
     );
   }
