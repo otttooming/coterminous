@@ -30,6 +30,8 @@ export interface GridProps
 }
 
 const Wrapper = styled.ul<WrapperProps>`
+  margin: 0;
+  padding: 0;
   margin-top: ${theme.spacing.large};
 
   &:first-child {
