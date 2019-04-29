@@ -4,7 +4,6 @@ import { MediaItemProps } from '../Lightbox/Lightbox';
 
 interface Props {
   image: MediaItemProps;
-  alt?: string;
   onClick?: (e: React.SyntheticEvent<HTMLElement>) => void;
 }
 
@@ -15,7 +14,7 @@ const Figure = styled.figure`
 
 class Image extends React.PureComponent<Props, any> {
   render() {
-    const { image, alt, onClick } = this.props;
+    const { image, onClick } = this.props;
     const { sizes, width, height } = image;
     const srcSet = sizes.map(item => `${item.url} ${item.width}w`).join();
 
@@ -25,14 +24,7 @@ class Image extends React.PureComponent<Props, any> {
         style={{ paddingBottom: `${(height / width) * 100}%` }}
         onClick={onClick}
       >
-        <img
-          width={width}
-          height={height}
-          className="aspect-ratio__img lazyloaded"
-          alt={alt}
-          itemProp="thumbnail"
-          srcSet={srcSet}
-        />
+        <img width={width} height={height} srcSet={srcSet} />
       </Figure>
     );
   }
