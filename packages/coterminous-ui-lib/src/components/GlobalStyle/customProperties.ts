@@ -112,8 +112,17 @@ interface CustomPropertyGenerator<K extends string> {
 }
 
 interface CustomPropertyGeneratorReturn<K extends string> {
+  /**
+   * Value of property in applicable unit. E.g. 1rem.
+   */
   value: CustomPropertyGenerator<K>['value'];
+  /**
+   * Property in the form of '--space-l'
+   */
   property: string;
+  /**
+   * Variable in the form of 'var(--space-l)'
+   */
   variable: string;
 }
 
