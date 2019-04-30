@@ -14,6 +14,7 @@ import {
   space,
   setThemeVariable,
   fontFamily,
+  fontWeight,
 } from './customProperties';
 
 export interface CoterminousStyledThemeProps {
@@ -32,4 +33,5 @@ export const theme = {
   lineHeight: setThemeVariable(lineHeight),
   fontSize: setThemeVariable(fontSize),
   fontFamily: setThemeVariable(fontFamily),
+  fontWeight: setThemeVariable(fontWeight),
 };

@@ -145,10 +145,28 @@ export const fontFamily = setCustomPropertyGenerator<'primary' | 'secondary'>(
   ],
 );
 
+export const fontWeight = setCustomPropertyGenerator<
+  'light' | 'normal' | 'bold'
+>('font-weight', [
+  {
+    key: 'light',
+    value: '300',
+  },
+  {
+    key: 'normal',
+    value: '400',
+  },
+  {
+    key: 'bold',
+    value: '700',
+  },
+]);
+
 export const customProperties = css`
   :root {
     ${setCustomProperties(fontSize)}
     ${setCustomProperties(fontFamily)}
+    ${setCustomProperties(fontWeight)}
     ${setCustomProperties(lineHeight)}
     ${setCustomProperties(borderRadius)}
     ${setCustomProperties(space)}
