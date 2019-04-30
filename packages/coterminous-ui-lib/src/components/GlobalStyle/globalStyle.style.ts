@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { typeface, color } from '../../common/styles/constants';
+import { theme } from '../../common/styles/theme';
 import { customProperties } from '../../common/styles/customProperties';
 
 export const globalStyleCss = css`
@@ -23,8 +23,8 @@ export const globalStyleCss = css`
     overflow-x: hidden;
     margin: 0;
     line-height: 1.2;
-    font-family: ${typeface.name.primary};
-    color: ${color.dark};
+    font-family: ${theme.fontFamily.primary};
+    color: ${theme.color.dark};
     background-color: #f2f5f7;
   }
 `;
