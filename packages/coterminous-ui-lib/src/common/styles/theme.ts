@@ -1,14 +1,12 @@
 import {
   ColorProps,
   BackgroundProps,
-  BorderProps,
   SpacingProps,
   TypefaceProps,
   TransitionProps,
   ShadowProps,
   color,
   background,
-  border,
   typeface,
   transition,
   shadow,
@@ -24,7 +22,6 @@ import {
 export interface CoterminousStyledThemeProps {
   color: ColorProps;
   background: BackgroundProps;
-  border: BorderProps;
   spacing: SpacingProps;
   typeface: TypefaceProps;
   transition: TransitionProps;
@@ -34,7 +31,6 @@ export interface CoterminousStyledThemeProps {
 export const theme = {
   color,
   background,
-  border,
   typeface,
   transition,
   shadow,

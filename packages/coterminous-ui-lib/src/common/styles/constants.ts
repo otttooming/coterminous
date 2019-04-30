@@ -39,20 +39,6 @@ export const background: BackgroundProps = {
   section: '#fff',
 };
 
-export interface BorderProps {
-  radius: BorderRadiusProps;
-}
-
-export interface BorderRadiusProps {
-  small: string;
-  medium: string;
-  large: string;
-}
-
-export const border: BorderProps = {
-  radius: { small: '4px', medium: '16px', large: '24px' },
-};
-
 export enum SpacingSize {
   SMALL = 'small',
   NORMAL = 'normal',
