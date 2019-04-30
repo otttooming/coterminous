@@ -3,12 +3,10 @@ import {
   BackgroundProps,
   SpacingProps,
   TypefaceProps,
-  TransitionProps,
   ShadowProps,
   color,
   background,
   typeface,
-  transition,
   shadow,
 } from './constants';
 import {
@@ -24,7 +22,6 @@ export interface CoterminousStyledThemeProps {
   background: BackgroundProps;
   spacing: SpacingProps;
   typeface: TypefaceProps;
-  transition: TransitionProps;
   shadow: ShadowProps;
 }
 
@@ -32,7 +29,6 @@ export const theme = {
   color,
   background,
   typeface,
-  transition,
   shadow,
   space: setThemeVariable(space),
   borderRadius: setThemeVariable(borderRadius),

@@ -92,16 +92,6 @@ export const typeface: TypefaceProps = {
   },
 };
 
-export interface TransitionSpeedProps {
-  normal: number;
-}
-
-export interface TransitionProps {
-  speed: TransitionSpeedProps;
-}
-
-export const transition: TransitionProps = { speed: { normal: 500 } };
-
 export interface ShadowProps {
   main: string;
 }
