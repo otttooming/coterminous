@@ -1,32 +1,21 @@
 import * as React from 'react';
-import styled, { css } from 'styled-components';
-import { theme } from '../../';
+import styled from 'styled-components';
 import {
-  styleSystem,
   StyleSystemProps,
+  withSpace,
+  WithSpaceProps,
 } from '../../common/styles/molecules/styledSystem';
 
-export interface WrapperProps extends StyleSystemProps {}
+export interface WrapperProps extends StyleSystemProps, WithSpaceProps {}
 
 export interface MenuProps extends WrapperProps {}
 
-const topSpacing = css`
-  &:first-child {
-    margin-top: 0;
-  }
-`;
-
-const defaultSpacing = css<WrapperProps>`
-  margin-top: ${theme.space.m};
-
-  ${({ m, mt }) => !Boolean(m) && !Boolean(mt) && topSpacing}
-`;
-
 const Wrapper = styled.ul`
   list-style: none;
+  margin: 0;
+  padding: 0;
 
-  ${defaultSpacing}
-  ${styleSystem}
+  ${withSpace}
 `;
 
 class Menu extends React.PureComponent<MenuProps, any> {
