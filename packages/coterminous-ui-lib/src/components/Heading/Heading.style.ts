@@ -4,7 +4,7 @@ import { WrapperProps } from './Heading';
 
 export const common = css<WrapperProps>`
   margin: ${theme.space.l} 0 0 0;
-  font-weight: ${theme.typeface.weight.bold};
+  font-weight: ${theme.fontWeight.bold};
 
   ${({ as }) => as === 'h1' && H1Style}
   ${({ as }) => as === 'h2' && H2Style}
