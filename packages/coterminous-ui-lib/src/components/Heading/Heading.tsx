@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import {
   styleSystem,
   StyleSystemProps,
+  WithSpaceProps,
+  withSpace,
 } from '../../common/styles/molecules/styledSystem';
 
 // Enum must be exported or 'has or is using private name' error will occur
@@ -16,7 +18,7 @@ export enum TagName {
   H6 = 'h6',
 }
 
-export interface WrapperProps extends StyleSystemProps {
+export interface WrapperProps extends StyleSystemProps, WithSpaceProps {
   as: keyof JSX.IntrinsicElements;
 }
 
@@ -27,6 +29,7 @@ export interface Props extends React.HTMLAttributes<HTMLElement>, WrapperProps {
 const Wrapper = styled.h1<WrapperProps>`
   ${common}
   ${styleSystem}
+  ${withSpace}
 `;
 
 class Heading extends React.PureComponent<Props, any> {
