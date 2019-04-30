@@ -16,7 +16,7 @@ export const InputWrapperStyle = styled.span`
   width: 16px;
   height: 16px;
   background-color: #333;
-  border-radius: ${theme.border.radius.small};
+  border-radius: ${theme.borderRadius.s};
   margin-right: ${theme.space.m};
 `;
 

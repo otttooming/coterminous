@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 
 const common = css`
   background-color: ${theme.background.section};
-  border-radius: ${theme.border.radius.small};
+  border-radius: ${theme.borderRadius.s};
   margin-top: ${theme.space.l};
   padding: ${theme.space.l};
 

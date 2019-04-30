@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 const ChildrenWrapper = styled.div`
   background-color: ${theme.color.white};
   overflow: hidden;
-  border-radius: ${theme.border.radius.small};
+  border-radius: ${theme.borderRadius.s};
 `;
 
 const Footer = styled.div`

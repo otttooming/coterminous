@@ -6,7 +6,7 @@ export const arrowCorrection = '15px';
 
 export const dropdownStyle = css`
   background: #fff;
-  border-radius: ${theme.border.radius.small};
+  border-radius: ${theme.borderRadius.s};
   padding: ${theme.space.m};
   color: ${theme.color.dark};
   position: relative;

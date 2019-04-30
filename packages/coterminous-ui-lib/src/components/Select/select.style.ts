@@ -22,7 +22,7 @@ const common = css`
   font-weight: 500;
   line-height: 1.2;
   padding-left: ${theme.space.m};
-  border-radius: ${theme.border.radius.small};
+  border-radius: ${theme.borderRadius.s};
   background-color: ${theme.background.input};
 `;
 
