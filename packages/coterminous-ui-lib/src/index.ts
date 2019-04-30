@@ -2,8 +2,6 @@ export { theme } from './common/styles/theme';
 
 export { GlobalStyle } from './components/GlobalStyle/GlobalStyle';
 
-export { rotate360 } from './common/styles/keyframes';
-
 export { default as Heading } from './components/Heading';
 export { default as Button, ButtonSize } from './components/Button';
 
