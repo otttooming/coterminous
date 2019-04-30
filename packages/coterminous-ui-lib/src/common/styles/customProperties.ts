@@ -54,6 +54,25 @@ function setCustomPropertyGenerator<K extends string>(
   );
 }
 
+type ThemeVariableReturn<K extends string> = {
+  [Key in K]: CustomPropertyGeneratorReturn<K>['variable']
+};
+
+export function setThemeVariable<K extends string>(
+  obj: CustomPropertyGeneratorReturnObject<K>,
+): ThemeVariableReturn<K> {
+  return Object.entries<CustomPropertyGeneratorReturn<K>>(obj).reduce(
+    (acc, [key, values]) => {
+      const k = key as K;
+
+      acc[k] = values.variable;
+
+      return acc;
+    },
+    {} as ThemeVariableReturn<K>,
+  );
+}
+
 export const space = setCustomPropertyGenerator<
   Exclude<CustomPropertySizeValues, 'xs' | 'xxl' | 'xxxl'>
 >('space', [
