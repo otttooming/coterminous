@@ -22,7 +22,7 @@ export const styleSystem = css`
 `;
 
 const topSpacing = css`
-  margin-top: ${theme.spacing.medium};
+  margin-top: ${theme.space.m};
 
   &:first-child {
     margin-top: 0;

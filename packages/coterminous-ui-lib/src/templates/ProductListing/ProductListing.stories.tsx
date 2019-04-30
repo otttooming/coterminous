@@ -51,7 +51,7 @@ const footer = (
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop: theme.spacing.small,
+        marginTop: theme.space.s,
       }}
     >
       20$

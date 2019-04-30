@@ -51,7 +51,7 @@ const footer = (
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop: theme.spacing.small,
+        marginTop: theme.space.s,
       }}
     >
       20$
@@ -87,8 +87,8 @@ stories.add('Default', () => (
       <GridItem
         area="sidebar"
         style={{
-          padding: theme.spacing.large,
-          paddingRight: theme.spacing.huge,
+          padding: theme.space.l,
+          paddingRight: theme.space.xl,
           backgroundColor: '#E6EDF3',
         }}
       >
@@ -112,8 +112,8 @@ stories.add('Default', () => (
       <GridItem
         area="content"
         style={{
-          padding: theme.spacing.large,
-          paddingLeft: theme.spacing.huge,
+          padding: theme.space.l,
+          paddingLeft: theme.space.xl,
         }}
       >
         <Grid gridTemplateColumns="minmax(320px, 1fr) 1fr" gridGap="48px">

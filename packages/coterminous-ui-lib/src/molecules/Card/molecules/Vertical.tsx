@@ -17,7 +17,7 @@ const ChildrenWrapper = styled.div`
 `;
 
 const Footer = styled.div`
-  padding-top: ${theme.spacing.normal};
+  padding-top: ${theme.space.s};
 `;
 
 class Vertical extends React.Component<VerticalProps, any> {

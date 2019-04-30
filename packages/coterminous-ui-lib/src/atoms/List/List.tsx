@@ -17,7 +17,7 @@ const topSpacing = css`
 `;
 
 const defaultSpacing = css<WrapperProps>`
-  margin-top: ${theme.spacing.medium};
+  margin-top: ${theme.space.m};
 
   ${({ m, mt }) => !Boolean(m) && !Boolean(mt) && topSpacing}
 `;

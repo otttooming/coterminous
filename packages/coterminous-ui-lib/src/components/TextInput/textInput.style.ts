@@ -21,7 +21,7 @@ const common = css`
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
-  padding-left: ${theme.spacing.medium};
+  padding-left: ${theme.space.m};
   border-radius: ${theme.border.radius.small};
   background-color: ${theme.background.input};
 `;

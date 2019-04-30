@@ -4,7 +4,7 @@ import { theme } from '../../';
 import styled, { css } from 'styled-components';
 
 const common = css`
-  margin: 0 0 ${theme.spacing.medium} 0;
+  margin: 0 0 ${theme.space.m} 0;
 `;
 
 export const CheckboxStyle = css`
@@ -17,7 +17,7 @@ export const InputWrapperStyle = styled.span`
   height: 16px;
   background-color: #333;
   border-radius: ${theme.border.radius.small};
-  margin-right: ${theme.spacing.medium};
+  margin-right: ${theme.space.m};
 `;
 
 export const CheckboxLabelWrapper = styled.label`

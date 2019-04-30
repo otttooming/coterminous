@@ -3,9 +3,9 @@ import { theme } from '../../';
 import { WrapperProps } from './Heading';
 
 export const common = css<WrapperProps>`
-  margin: ${theme.spacing.large} 0 0 0;
+  margin: ${theme.space.l} 0 0 0;
   font-weight: ${theme.typeface.weight.bold};
-  
+
   ${({ as }) => as === 'h1' && H1Style}
   ${({ as }) => as === 'h2' && H2Style}
   ${({ as }) => as === 'h3' && H3Style}

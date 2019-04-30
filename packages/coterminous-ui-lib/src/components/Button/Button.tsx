@@ -56,7 +56,7 @@ const topSpacing = css`
 `;
 
 const defaultSpacing = css<StyleProps>`
-  margin-top: ${theme.spacing.medium};
+  margin-top: ${theme.space.m};
 
   ${({ m, mt }) => !Boolean(m) && !Boolean(mt) && topSpacing}
 `;
@@ -74,7 +74,7 @@ const StyledButton = styled.button<any>`
   min-width: 128px;
   justify-content: center;
   font-family: inherit;
-  
+
   ${({ size }) => size === ButtonSize.SMALL && small}
   ${({ size }) => size === ButtonSize.LARGE && large}
   ${({ size }) => size === ButtonSize.NORMAL && normal}

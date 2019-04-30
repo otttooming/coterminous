@@ -29,11 +29,7 @@ export const GridStoryDefault = () => {
   return (
     <StorybookWrapper>
       <Heading as="h1">Product list</Heading>
-      <Grid
-        as="ul"
-        gridTemplateColumns="repeat(auto-fill, minmax(14rem, 1fr))"
-        gridGap="64px"
-      >
+      <Grid as="ul" gridTemplateColumns="repeat(auto-fill, minmax(14rem, 1fr))">
         <GridItem as="li">
           <Card content={footer}>
             <Image image={image} />

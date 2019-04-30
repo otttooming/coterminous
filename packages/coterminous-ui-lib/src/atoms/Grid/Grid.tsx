@@ -48,7 +48,7 @@ class Grid extends React.PureComponent<GridProps, any> {
   static defaultProps = {
     display: 'grid',
     as: 'div',
-    gridGap: theme.spacing.large,
+    gridGap: theme.space.l,
   };
 
   public render() {
