@@ -13,6 +13,7 @@ import {
   borderRadius,
   space,
   setThemeVariable,
+  fontFamily,
 } from './customProperties';
 
 export interface CoterminousStyledThemeProps {
@@ -30,4 +31,5 @@ export const theme = {
   borderRadius: setThemeVariable(borderRadius),
   lineHeight: setThemeVariable(lineHeight),
   fontSize: setThemeVariable(fontSize),
+  fontFamily: setThemeVariable(fontFamily),
 };

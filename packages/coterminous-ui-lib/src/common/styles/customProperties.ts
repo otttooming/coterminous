@@ -131,9 +131,24 @@ export const fontSize = setCustomPropertyGenerator<CustomPropertySizeValues>(
   ],
 );
 
+export const fontFamily = setCustomPropertyGenerator<'primary' | 'secondary'>(
+  'font-family',
+  [
+    {
+      key: 'primary',
+      value: `'Montserrat', 'Helvetica Neue', Arial, sans-serif`,
+    },
+    {
+      key: 'secondary',
+      value: `'Helvetica Neue', Arial, sans-serif`,
+    },
+  ],
+);
+
 export const customProperties = css`
   :root {
     ${setCustomProperties(fontSize)}
+    ${setCustomProperties(fontFamily)}
     ${setCustomProperties(lineHeight)}
     ${setCustomProperties(borderRadius)}
     ${setCustomProperties(space)}
