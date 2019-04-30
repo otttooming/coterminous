@@ -91,9 +91,3 @@ export const typeface: TypefaceProps = {
     normal: convertPxToEm(16, rootSize),
   },
 };
-
-export interface ShadowProps {
-  main: string;
-}
-
-export const shadow: ShadowProps = { main: 'none' };
