@@ -1,10 +1,4 @@
-import {
-  ColorProps,
-  BackgroundProps,
-  SpacingProps,
-  color,
-  background,
-} from './constants';
+import { ColorProps, BackgroundProps, color, background } from './constants';
 import {
   fontSize,
   lineHeight,
@@ -18,7 +12,6 @@ import {
 export interface CoterminousStyledThemeProps {
   color: ColorProps;
   background: BackgroundProps;
-  spacing: SpacingProps;
 }
 
 export const theme = {

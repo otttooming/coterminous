@@ -38,21 +38,3 @@ export const background: BackgroundProps = {
   input: '#9109c7',
   section: '#fff',
 };
-
-export enum SpacingSize {
-  SMALL = 'small',
-  NORMAL = 'normal',
-  MEDIUM = 'medium',
-  LARGE = 'large',
-  HUGE = 'huge',
-}
-
-export type SpacingProps = { [valueof in SpacingSize]: string };
-
-export const spacing: SpacingProps = {
-  small: convertPxToRem(4, rootSize),
-  normal: convertPxToRem(8, rootSize),
-  medium: convertPxToRem(16, rootSize),
-  large: convertPxToRem(24, rootSize),
-  huge: convertPxToRem(48, rootSize),
-};
