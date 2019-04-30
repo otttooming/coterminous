@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import Section from '../Section/Section';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
-import { fontSize, space } from './customProperties';
+import { fontSize, space } from '../../common/styles/customProperties';
 import Heading from '../Heading';
 
 storiesOf('Custom properties', module).add('Variables', () => (

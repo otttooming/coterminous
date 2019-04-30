@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 import { typeface, color } from '../../common/styles/constants';
-import { customProperties } from './customProperties';
+import { customProperties } from '../../common/styles/customProperties';
 
 export const globalStyleCss = css`
   ${customProperties}
