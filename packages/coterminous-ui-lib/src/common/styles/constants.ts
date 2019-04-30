@@ -56,38 +56,3 @@ export const spacing: SpacingProps = {
   large: convertPxToRem(24, rootSize),
   huge: convertPxToRem(48, rootSize),
 };
-
-export interface TypefaceNameProps {
-  primary: string;
-  secondary: string;
-}
-
-export interface TypefaceWeightProps {
-  thin: number;
-  light: number;
-  normal: number;
-  bold: number;
-}
-
-export interface TypefaceSizeProps {
-  small: string;
-  normal: string;
-}
-
-export interface TypefaceProps {
-  name: TypefaceNameProps;
-  weight: TypefaceWeightProps;
-  size: TypefaceSizeProps;
-}
-
-export const typeface: TypefaceProps = {
-  name: {
-    primary: `'Montserrat', 'Helvetica Neue', Arial, sans-serif`,
-    secondary: `'Helvetica Neue', Arial, sans-serif`,
-  },
-  weight: { thin: 100, light: 300, normal: 400, bold: 700 },
-  size: {
-    small: convertPxToEm(12, rootSize),
-    normal: convertPxToEm(16, rootSize),
-  },
-};

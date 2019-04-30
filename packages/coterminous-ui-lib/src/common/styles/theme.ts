@@ -2,10 +2,8 @@ import {
   ColorProps,
   BackgroundProps,
   SpacingProps,
-  TypefaceProps,
   color,
   background,
-  typeface,
 } from './constants';
 import {
   fontSize,
@@ -21,13 +19,11 @@ export interface CoterminousStyledThemeProps {
   color: ColorProps;
   background: BackgroundProps;
   spacing: SpacingProps;
-  typeface: TypefaceProps;
 }
 
 export const theme = {
   color,
   background,
-  typeface,
   space: setThemeVariable(space),
   borderRadius: setThemeVariable(borderRadius),
   lineHeight: setThemeVariable(lineHeight),
