@@ -14,6 +14,13 @@ import {
   transition,
   shadow,
 } from './constants';
+import {
+  fontSize,
+  lineHeight,
+  borderRadius,
+  space,
+  setThemeVariable,
+} from './customProperties';
 
 export interface CoterminousStyledThemeProps {
   color: ColorProps;
@@ -25,7 +32,7 @@ export interface CoterminousStyledThemeProps {
   shadow: ShadowProps;
 }
 
-export const theme: CoterminousStyledThemeProps = {
+export const theme = {
   color,
   background,
   border,
@@ -33,4 +40,8 @@ export const theme: CoterminousStyledThemeProps = {
   typeface,
   transition,
   shadow,
+  space: setThemeVariable(space),
+  borderRadius: setThemeVariable(borderRadius),
+  lineHeight: setThemeVariable(lineHeight),
+  fontSize: setThemeVariable(fontSize),
 };
