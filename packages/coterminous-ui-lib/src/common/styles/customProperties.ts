@@ -1,5 +1,7 @@
 import { css } from 'styled-components';
 
+const rootSize: number = 16;
+
 type CustomPropertySizeValues = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'xxxl';
 
 function setCustomProperties<K extends string>(
