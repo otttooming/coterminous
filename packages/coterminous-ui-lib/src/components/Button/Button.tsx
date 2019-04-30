@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
-import { theme } from '../../';
 import {
-  styleSystem,
   StyleSystemProps,
+  withSpace,
+  WithSpaceProps,
 } from '../../common/styles/molecules/styledSystem';
 
 export enum ButtonSize {
@@ -49,19 +49,8 @@ const flatType = css`
   min-width: 0;
 `;
 
-const topSpacing = css`
-  &:first-child {
-    margin-top: 0;
-  }
-`;
-
-const defaultSpacing = css<StyleProps>`
-  margin-top: ${theme.space.m};
-
-  ${({ m, mt }) => !Boolean(m) && !Boolean(mt) && topSpacing}
-`;
-
 const StyledButton = styled.button<any>`
+  margin: 0;
   border: 0;
   border-radius: 4px;
   cursor: pointer;
@@ -82,8 +71,7 @@ const StyledButton = styled.button<any>`
   ${({ type }) => type === ButtonType.NORMAL && normalType}
   ${({ type }) => type === ButtonType.FLAT && flatType}
 
-  ${defaultSpacing}
-  ${styleSystem}
+  ${withSpace}
 `;
 
 const IconWrapper = styled.span`
@@ -109,7 +97,7 @@ export interface Props {
 }
 export interface State {}
 
-export type ButtonProps = Props & StyleProps;
+export type ButtonProps = Props & StyleProps & WithSpaceProps;
 
 class Button extends React.PureComponent<ButtonProps, State> {
   static defaultProps = {

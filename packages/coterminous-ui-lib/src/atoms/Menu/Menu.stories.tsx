@@ -25,7 +25,6 @@ const content = (
       size={ButtonSize.SMALL}
       type={ButtonType.FLAT}
       icon={<ShoppingCart />}
-      mt="8px"
     >
       Click me
     </Button>
