@@ -18,14 +18,26 @@ export const common = css<WrapperProps>`
   }
 `;
 
-export const H1Style = css``;
+export const H1Style = css`
+  font-size: ${theme.fontSize.xxl};
+`;
 
-export const H2Style = css``;
+export const H2Style = css`
+  font-size: ${theme.fontSize.xl};
+`;
 
-export const H3Style = css``;
+export const H3Style = css`
+  font-size: ${theme.fontSize.l};
+`;
 
-export const H4Style = css``;
+export const H4Style = css`
+  font-size: ${theme.fontSize.m};
+`;
 
-export const H5Style = css``;
+export const H5Style = css`
+  font-size: ${theme.fontSize.s};
+`;
 
-export const H6Style = css``;
+export const H6Style = css`
+  font-size: ${theme.fontSize.xs};
+`;
