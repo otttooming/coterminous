@@ -7,14 +7,13 @@ import Image from '../../components/Image';
 import { theme } from '../../common/styles/theme';
 
 const image = {
-  width: 1200,
-  height: 1200,
-  aspectRatio: 100,
+  width: 360,
+  height: 480,
   sizes: [
     {
-      url: 'https://via.placeholder.com/1200',
-      width: 1200,
-      height: 1200,
+      url: 'https://dummyimage.com/360x480/fff',
+      width: 360,
+      height: 480,
     },
   ],
 };
