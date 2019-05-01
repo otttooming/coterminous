@@ -3,25 +3,14 @@ import { PhotoSwipe, PhotoSwipeGalleryItem } from 'react-photoswipe';
 import Image from '../Image';
 import Section from '../Section';
 import { Lightbox as LightboxStyled } from './Lightbox.style';
-
-interface ImageSizes {
-  height: number;
-  width: number;
-  url: string;
-}
-export interface MediaItemProps {
-  width: number;
-  height: number;
-  aspectRatio: number;
-  sizes: ImageSizes[];
-}
+import { ImageProps } from '../Image/Image.types';
 
 interface PhotoSwipeGalleryOptions {
   history: boolean;
 }
 
 interface Props {
-  images: MediaItemProps[];
+  images: ImageProps[];
   options: PhotoSwipeGalleryOptions;
   isOpen: boolean;
   onClose: () => void;
@@ -37,7 +26,7 @@ class Lightbox extends React.PureComponent<Props, any> {
     onClose: () => {},
   };
 
-  buildGalleryItems = (images: MediaItemProps[]): PhotoSwipeGalleryItem[] => {
+  buildGalleryItems = (images: ImageProps[]): PhotoSwipeGalleryItem[] => {
     return images.map(({ width: w, height: h, sizes }) => {
       return {
         title: '',

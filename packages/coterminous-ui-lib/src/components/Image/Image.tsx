@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { MediaItemProps } from '../Lightbox/Lightbox';
+import { ImageProps } from './Image.types';
 
 interface Props {
-  image: MediaItemProps;
+  image: ImageProps;
   onClick?: (e: React.SyntheticEvent<HTMLElement>) => void;
 }
 
