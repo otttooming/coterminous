@@ -3,7 +3,7 @@ import { theme } from '../../';
 import { WrapperProps } from './Heading';
 
 export const common = css<WrapperProps>`
-  margin: ${theme.space.l} 0 0 0;
+  margin-bottom: 0;
   font-weight: ${theme.fontWeight.bold};
 
   ${({ as }) => as === 'h1' && H1Style}
@@ -12,10 +12,6 @@ export const common = css<WrapperProps>`
   ${({ as }) => as === 'h4' && H4Style}
   ${({ as }) => as === 'h5' && H5Style}
   ${({ as }) => as === 'h6' && H6Style}
-
-  &:first-child {
-    margin-top: 0;
-  }
 `;
 
 export const H1Style = css`
