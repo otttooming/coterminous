@@ -4,6 +4,7 @@ import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import { Heading, Button, ButtonSize, Card } from '../../';
 import Grid, { GridItem } from './';
 import Image from '../../components/Image';
+import { theme } from '../../common/styles/theme';
 
 const image = {
   width: 1200,
@@ -21,7 +22,9 @@ const image = {
 const footer = (
   <>
     <Heading as="h2">Title of the card</Heading>
-    <Button size={ButtonSize.SMALL}>Click me</Button>
+    <Button size={ButtonSize.SMALL} mt={theme.space.s}>
+      Click me
+    </Button>
   </>
 );
 
