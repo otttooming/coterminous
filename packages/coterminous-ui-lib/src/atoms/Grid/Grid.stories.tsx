@@ -11,7 +11,8 @@ const image = {
   height: 480,
   sizes: [
     {
-      url: 'https://dummyimage.com/360x480/fff',
+      url:
+        'https://images.unsplash.com/photo-1523368355248-14a82c28c8f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80',
       width: 360,
       height: 480,
     },

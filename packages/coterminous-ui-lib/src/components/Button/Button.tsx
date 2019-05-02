@@ -24,7 +24,6 @@ const Wrapper = styled.button`
   font: inherit;
   height: ${theme.space.xl};
   line-height: ${theme.space.xl};
-  text-transform: uppercase;
   font-size: ${theme.fontSize.s};
   font-weight: ${theme.fontWeight.bold};
   background-color: ${theme.color.primary};

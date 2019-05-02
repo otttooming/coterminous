@@ -15,14 +15,15 @@ import {
 } from '../../';
 
 const image = {
-  width: 1200,
-  height: 1200,
+  width: 1234,
+  height: 1851,
   aspectRatio: 100,
   sizes: [
     {
-      url: 'https://dummyimage.com/1200x1200/fff/aaa',
-      width: 1200,
-      height: 1200,
+      url:
+        'https://images.unsplash.com/photo-1523368355248-14a82c28c8f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80',
+      width: 1234,
+      height: 1851,
     },
   ],
 };
@@ -42,18 +43,7 @@ const logo = {
 
 const footer = (
   <>
-    <Heading as="h2">Title of the card</Heading>
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginTop: theme.space.s,
-      }}
-    >
-      20$
-      <Button>Click me</Button>
-    </div>
+    <Heading as="h3">Title of the card</Heading>
   </>
 );
 
@@ -70,7 +60,7 @@ stories.add('Default', () => (
     <Grid
       gridTemplateAreas="'sidebar content'"
       gridTemplateColumns="16rem 1fr"
-      gridGap="48px"
+      gridGap={theme.space.xl}
       maxWidth={1680}
       ml="auto"
       mr="auto"
@@ -80,7 +70,9 @@ stories.add('Default', () => (
       pr={32}
     >
       <GridItem area="sidebar">
-        <Image image={logo} />
+        <Section>
+          <Image image={logo} />
+        </Section>
 
         <Heading as="h2">Menu</Heading>
 
@@ -103,7 +95,7 @@ stories.add('Default', () => (
         <Grid
           as="ul"
           gridTemplateColumns="repeat(auto-fill, minmax(14rem, 1fr))"
-          gridGap="64px"
+          gridGap={theme.space.xl}
         >
           {[...Array(16)].map((item, index) => (
             <GridItem as="li" key={index}>
