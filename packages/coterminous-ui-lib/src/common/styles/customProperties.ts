@@ -87,8 +87,8 @@ export const space = setCustomPropertyGenerator<
 export const borderRadius = setCustomPropertyGenerator<
   Exclude<CustomPropertySizeValues, 'xs' | 'l' | 'xl' | 'xxl' | 'xxxl'>
 >('border-radius', [
-  { key: 's', value: '0.25em' },
-  { key: 'm', value: '0.5em' },
+  { key: 's', value: '0.25rem' },
+  { key: 'm', value: '0.5rem' },
 ]);
 
 export const lineHeight = setCustomPropertyGenerator<
