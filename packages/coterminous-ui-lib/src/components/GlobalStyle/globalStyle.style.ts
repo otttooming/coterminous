@@ -22,7 +22,7 @@ export const globalStyleCss = css`
   body {
     overflow-x: hidden;
     margin: 0;
-    line-height: 1.2;
+    line-height: ${theme.lineHeight.s};
     font-family: ${theme.fontFamily.primary};
     color: ${theme.color.dark};
     background-color: #f2f5f7;
