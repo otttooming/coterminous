@@ -23,7 +23,7 @@ const common = css`
   line-height: 1.2;
   padding-left: ${theme.space.m};
   border-radius: ${theme.borderRadius.s};
-  background-color: ${theme.background.input};
+  background-color: ${theme.backgroundColor.secondary};
 `;
 
 export const selectInputStyle = css`

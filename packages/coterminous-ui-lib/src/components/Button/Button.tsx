@@ -27,6 +27,9 @@ const Wrapper = styled.button`
   text-transform: uppercase;
   font-size: ${theme.fontSize.s};
   font-weight: ${theme.fontWeight.bold};
+  background-color: ${theme.color.primary};
+  color: ${theme.textColor.secondary};
+  user-select: none;
 
   ${withSpace}
 `;

@@ -24,7 +24,7 @@ export const globalStyleCss = css`
     margin: 0;
     line-height: ${theme.lineHeight.s};
     font-family: ${theme.fontFamily.primary};
-    color: ${theme.color.dark};
-    background-color: #f2f5f7;
+    color: ${theme.textColor.primary};
+    background-color: ${theme.backgroundColor.primary};
   }
 `;

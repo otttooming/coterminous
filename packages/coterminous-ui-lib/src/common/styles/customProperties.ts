@@ -164,6 +164,64 @@ export const fontWeight = setCustomPropertyGenerator<
   },
 ]);
 
+type CustomPropertyColorValues = 'primary' | 'warning' | 'danger' | 'success';
+
+export const color = setCustomPropertyGenerator<CustomPropertyColorValues>(
+  'color',
+  [
+    {
+      key: 'primary',
+      value: '#3880ff',
+    },
+    {
+      key: 'warning',
+      value: '#10dc60',
+    },
+    {
+      key: 'success',
+      value: '#ffce00',
+    },
+    {
+      key: 'danger',
+      value: '#f04141',
+    },
+  ],
+);
+
+type CustomPropertyTextColorValues = 'header' | 'primary' | 'secondary';
+
+export const textColor = setCustomPropertyGenerator<
+  CustomPropertyTextColorValues
+>('text-color', [
+  {
+    key: 'header',
+    value: 'hsl(214, 35%, 15%)',
+  },
+  {
+    key: 'primary',
+    value: 'hsla(214, 40%, 16%, 0.94)',
+  },
+  {
+    key: 'secondary',
+    value: '#fff',
+  },
+]);
+
+type CustomPropertyBackgroundColorValues = 'primary' | 'secondary';
+
+export const backgroundColor = setCustomPropertyGenerator<
+  CustomPropertyBackgroundColorValues
+>('background-color', [
+  {
+    key: 'primary',
+    value: 'hsla(214, 57%, 24%, 0.1)',
+  },
+  {
+    key: 'secondary',
+    value: '#fff',
+  },
+]);
+
 export const customProperties = css`
   :root {
     ${setCustomProperties(fontSize)}
@@ -172,5 +230,8 @@ export const customProperties = css`
     ${setCustomProperties(lineHeight)}
     ${setCustomProperties(borderRadius)}
     ${setCustomProperties(space)}
+    ${setCustomProperties(color)}
+    ${setCustomProperties(textColor)}
+    ${setCustomProperties(backgroundColor)}
   }
 `;

@@ -2,7 +2,7 @@ import { theme } from '../../';
 import { css } from 'styled-components';
 
 const common = css`
-  background-color: ${theme.background.section};
+  background-color: ${theme.backgroundColor.secondary};
   border-radius: ${theme.borderRadius.s};
   margin-top: ${theme.space.l};
   padding: ${theme.space.l};

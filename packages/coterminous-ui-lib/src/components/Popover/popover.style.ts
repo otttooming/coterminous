@@ -8,7 +8,7 @@ export const dropdownStyle = css`
   background: #fff;
   border-radius: ${theme.borderRadius.s};
   padding: ${theme.space.m};
-  color: ${theme.color.dark};
+  color: ${theme.color.primary};
   position: relative;
   min-width: 300px;
   box-shadow: 0 41px 66px 0 rgba(0, 0, 0, 0.2);

@@ -1,4 +1,3 @@
-import { ColorProps, BackgroundProps, color, background } from './constants';
 import {
   fontSize,
   lineHeight,
@@ -7,16 +6,15 @@ import {
   setThemeVariable,
   fontFamily,
   fontWeight,
+  color,
+  textColor,
+  backgroundColor,
 } from './customProperties';
 
-export interface CoterminousStyledThemeProps {
-  color: ColorProps;
-  background: BackgroundProps;
-}
-
 export const theme = {
-  color,
-  background,
+  color: setThemeVariable(color),
+  textColor: setThemeVariable(textColor),
+  backgroundColor: setThemeVariable(backgroundColor),
   space: setThemeVariable(space),
   borderRadius: setThemeVariable(borderRadius),
   lineHeight: setThemeVariable(lineHeight),
