@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
-import { Section, Button, ButtonSize, Heading } from '../../';
+import { Section, Button, Heading } from '../../';
 import List, { ListItem } from './';
 import { ShoppingCart } from 'react-feather';
 import { ButtonType } from '../../components/Button/Button';
@@ -21,14 +21,7 @@ const image = {
 
 const content = (
   <>
-    <Button
-      size={ButtonSize.SMALL}
-      type={ButtonType.FLAT}
-      icon={<ShoppingCart />}
-      mt="8px"
-    >
-      Click me
-    </Button>
+    <Button mt="8px">Click me</Button>
   </>
 );
 

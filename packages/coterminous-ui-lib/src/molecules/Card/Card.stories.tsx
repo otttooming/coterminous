@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import Card from './';
-import { Heading, Button, ButtonSize } from '../../';
+import { Heading, Button } from '../../';
 import styled from 'styled-components';
 import { GridStoryDefault } from '../../atoms/Grid/Grid.stories';
 import Image from '../../components/Image';
@@ -23,7 +23,7 @@ const image = {
 const footer = (
   <>
     <Heading as="h1">Title of the card</Heading>
-    <Button size={ButtonSize.SMALL}>Click me</Button>
+    <Button>Click me</Button>
   </>
 );
 

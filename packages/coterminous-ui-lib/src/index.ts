@@ -3,7 +3,7 @@ export { theme } from './common/styles/theme';
 export { GlobalStyle } from './components/GlobalStyle/GlobalStyle';
 
 export { default as Heading } from './components/Heading';
-export { default as Button, ButtonSize } from './components/Button';
+export { default as Button } from './components/Button';
 
 export { FormProvider, FormContext } from './components/Form/Form';
 

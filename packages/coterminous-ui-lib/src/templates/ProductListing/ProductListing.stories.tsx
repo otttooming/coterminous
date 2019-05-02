@@ -1,11 +1,9 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { ShoppingCart } from 'react-feather';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import {
   Heading,
   Button,
-  ButtonSize,
   Card,
   Grid,
   GridItem,
@@ -15,7 +13,6 @@ import {
   MenuItem,
   theme,
 } from '../../';
-import { ButtonType } from '../../components/Button/Button';
 
 const image = {
   width: 1200,
@@ -55,22 +52,14 @@ const footer = (
       }}
     >
       20$
-      <Button size={ButtonSize.SMALL} icon={<ShoppingCart />}>
-        Click me
-      </Button>
+      <Button>Click me</Button>
     </div>
   </>
 );
 
 const content = (
   <>
-    <Button
-      size={ButtonSize.SMALL}
-      type={ButtonType.FLAT}
-      icon={<ShoppingCart />}
-    >
-      Click me
-    </Button>
+    <Button>Click me</Button>
   </>
 );
 
