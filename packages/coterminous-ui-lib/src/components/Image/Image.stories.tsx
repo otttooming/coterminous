@@ -40,7 +40,7 @@ stories.add('Image', () => {
 
   return (
     <StorybookWrapper>
-      <Section style={{ width: 420 }}>
+      <Section p={0} style={{ width: 420 }}>
         <Image {...image} />
       </Section>
       <Section style={{ width: 420 }}>
