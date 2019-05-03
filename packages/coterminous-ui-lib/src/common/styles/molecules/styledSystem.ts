@@ -36,5 +36,4 @@ const defaultSpacing = css<WithSpaceProps>`
 export const withSpace = css`
   ${defaultSpacing}
   ${space}
-  ${styleSystem}
 `;
