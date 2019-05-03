@@ -6,15 +6,16 @@ import {
   styleSystemSpace,
 } from '../../common/styleSystem';
 
-type SectionProps = StyleSystemSpaceProps;
+export type SectionProps = StyleSystemSpaceProps &
+  React.HTMLAttributes<HTMLElement>;
 
 const Wrapper = styled.section`
   ${sectionStyle};
   ${styleSystemSpace}
 `;
 
-const Section: React.FC<SectionProps> = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
+const Section: React.FC<SectionProps> = ({ children, ...restProps }) => {
+  return <Wrapper {...restProps}>{children}</Wrapper>;
 };
 
 export default Section;
