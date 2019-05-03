@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `;
 
 const ChildrenWrapper = styled.div`
-  background-color: ${theme.color.white};
+  background-color: ${theme.backgroundColor.secondary};
   overflow: hidden;
   border-radius: ${theme.borderRadius.s};
 `;
@@ -22,7 +22,7 @@ const Footer = styled.div`
 
 class Vertical extends React.Component<VerticalProps, any> {
   public render() {
-    const { as, content, children, ...restProps } = this.props;
+    const { as, content, children, type, ...restProps } = this.props;
 
     const hasNoContent = !children && !content;
     const hasOnlyChildren = !!children && !content;
