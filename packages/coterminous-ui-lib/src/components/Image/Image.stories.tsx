@@ -41,10 +41,10 @@ stories.add('Image', () => {
   return (
     <StorybookWrapper>
       <Section style={{ width: 420 }}>
-        <Image image={image} />
+        <Image {...image} />
       </Section>
       <Section style={{ width: 420 }}>
-        <Image image={landscape} />
+        <Image {...landscape} />
       </Section>
     </StorybookWrapper>
   );

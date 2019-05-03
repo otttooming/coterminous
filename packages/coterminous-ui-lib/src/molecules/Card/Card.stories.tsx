@@ -37,7 +37,7 @@ stories
     return (
       <StorybookWrapper>
         <Card content={footer}>
-          <Image image={image} />
+          <Image {...image} />
         </Card>
       </StorybookWrapper>
     );
@@ -47,7 +47,7 @@ stories
     return (
       <StorybookWrapper>
         <Card content={footer}>
-          <Image image={image} />
+          <Image {...image} />
         </Card>
       </StorybookWrapper>
     );
@@ -56,7 +56,7 @@ stories
     return (
       <StorybookWrapper>
         <Card>
-          <Image image={image} />
+          <Image {...image} />
         </Card>
       </StorybookWrapper>
     );
@@ -65,7 +65,7 @@ stories
     return (
       <StorybookWrapper>
         <CardStyled content={footer}>
-          <Image image={image} />
+          <Image {...image} />
         </CardStyled>
       </StorybookWrapper>
     );

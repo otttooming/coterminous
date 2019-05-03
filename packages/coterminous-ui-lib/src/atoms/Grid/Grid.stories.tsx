@@ -33,32 +33,32 @@ export const GridStoryDefault = () => {
       <Grid as="ul" gridTemplateColumns="repeat(auto-fill, minmax(14rem, 1fr))">
         <GridItem as="li">
           <Card content={footer}>
-            <Image image={image} />
+            <Image {...image} />
           </Card>
         </GridItem>
         <GridItem as="li">
           <Card content={footer}>
-            <Image image={image} />
+            <Image {...image} />
           </Card>
         </GridItem>
         <GridItem as="li">
           <Card content={footer}>
-            <Image image={image} />
+            <Image {...image} />
           </Card>
         </GridItem>
         <GridItem as="li">
           <Card content={footer}>
-            <Image image={image} />
+            <Image {...image} />
           </Card>
         </GridItem>
         <GridItem as="li">
           <Card content={footer}>
-            <Image image={image} />
+            <Image {...image} />
           </Card>
         </GridItem>
         <GridItem as="li">
           <Card content={footer}>
-            <Image image={image} />
+            <Image {...image} />
           </Card>
         </GridItem>
       </Grid>

@@ -4,7 +4,7 @@ interface ImageSizes {
   url: string;
 }
 
-export interface ImageProps {
+export interface Image {
   width: number;
   height: number;
   sizes: ImageSizes[];

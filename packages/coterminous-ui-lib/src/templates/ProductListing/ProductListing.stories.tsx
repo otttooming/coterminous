@@ -71,7 +71,7 @@ stories.add('Default', () => (
     >
       <GridItem area="sidebar">
         <Section>
-          <Image image={logo} />
+          <Image {...logo} />
         </Section>
 
         <Heading as="h2">Menu</Heading>
@@ -100,7 +100,7 @@ stories.add('Default', () => (
           {[...Array(16)].map((item, index) => (
             <GridItem as="li" key={index}>
               <Card content={footer}>
-                <Image image={image} />
+                <Image {...image} />
               </Card>
             </GridItem>
           ))}

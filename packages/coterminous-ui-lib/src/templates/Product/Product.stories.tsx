@@ -80,7 +80,7 @@ stories.add('Default', () => (
         }}
       >
         <div>
-          <Image image={logo} />
+          <Image {...logo} />
 
           <Heading as="h2">Menu</Heading>
 
@@ -105,7 +105,7 @@ stories.add('Default', () => (
       >
         <Grid gridTemplateColumns="minmax(320px, 1fr) 1fr" gridGap="48px">
           <GridItem>
-            <Image image={image} />
+            <Image {...image} />
           </GridItem>
           <GridItem>
             <Heading as="h1">Product name</Heading>
