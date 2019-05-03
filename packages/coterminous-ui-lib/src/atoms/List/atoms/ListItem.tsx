@@ -2,11 +2,11 @@ import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { theme } from '../../../';
 import {
-  styleSystem,
-  StyleSystemProps,
-} from '../../../common/styles/molecules/styledSystem';
+  styleSystemCommon,
+  StyleSystemCommonProps,
+} from '../../../common/styleSystem';
 
-export interface WrapperProps extends StyleSystemProps {}
+export interface WrapperProps extends StyleSystemCommonProps {}
 
 export interface ListItemProps extends WrapperProps {}
 
@@ -26,7 +26,7 @@ const Wrapper = styled.li`
   list-style: none;
 
   ${defaultSpacing}
-  ${styleSystem}
+  ${styleSystemCommon}
 `;
 
 class ListItem extends React.PureComponent<ListItemProps, any> {

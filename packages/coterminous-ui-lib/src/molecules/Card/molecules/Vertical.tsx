@@ -2,12 +2,12 @@ import * as React from 'react';
 import { theme } from '../../../';
 import styled from 'styled-components';
 import { CardProps } from '../Card';
-import { styleSystem } from '../../../common/styles/molecules/styledSystem';
+import { styleSystemCommon } from '../../../common/styleSystem';
 
 export interface VerticalProps extends CardProps {}
 
 const Wrapper = styled.div`
-  ${styleSystem}
+  ${styleSystemCommon}
 `;
 
 const ChildrenWrapper = styled.div`

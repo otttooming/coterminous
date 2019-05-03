@@ -12,15 +12,15 @@ import {
   gridTemplateAreas,
 } from 'styled-system';
 import {
-  styleSystem,
-  StyleSystemProps,
-  withSpace,
-  WithSpaceProps,
-} from '../../common/styles/molecules/styledSystem';
+  styleSystemCommon,
+  StyleSystemCommonProps,
+  styleSystemSpace,
+  StyleSystemSpaceProps,
+} from '../../common/styleSystem';
 
 interface WrapperProps
-  extends StyleSystemProps,
-    WithSpaceProps,
+  extends StyleSystemCommonProps,
+    StyleSystemSpaceProps,
     GridGapProps,
     GridTemplatesAreasProps,
     GridTemplatesRowsProps,
@@ -36,8 +36,8 @@ const Wrapper = styled.ul<WrapperProps>`
   margin: 0;
   padding: 0;
 
-  ${styleSystem}
-  ${withSpace}
+  ${styleSystemCommon}
+  ${styleSystemSpace}
   ${gridGap}
   ${gridTemplateAreas}
   ${gridTemplateRows}

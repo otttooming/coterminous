@@ -2,11 +2,11 @@ import * as React from 'react';
 import { common } from './Heading.style';
 import styled from 'styled-components';
 import {
-  styleSystem,
-  StyleSystemProps,
-  WithSpaceProps,
-  withSpace,
-} from '../../common/styles/molecules/styledSystem';
+  styleSystemCommon,
+  StyleSystemCommonProps,
+  StyleSystemSpaceProps,
+  styleSystemSpace,
+} from '../../common/styleSystem';
 
 // Enum must be exported or 'has or is using private name' error will occur
 export enum TagName {
@@ -18,7 +18,9 @@ export enum TagName {
   H6 = 'h6',
 }
 
-export interface WrapperProps extends StyleSystemProps, WithSpaceProps {
+export interface WrapperProps
+  extends StyleSystemCommonProps,
+    StyleSystemSpaceProps {
   as: keyof JSX.IntrinsicElements;
 }
 
@@ -28,8 +30,8 @@ export interface Props extends React.HTMLAttributes<HTMLElement>, WrapperProps {
 
 const Wrapper = styled.h1<WrapperProps>`
   ${common}
-  ${styleSystem}
-  ${withSpace}
+  ${styleSystemCommon}
+  ${styleSystemSpace}
 `;
 
 class Heading extends React.PureComponent<Props, any> {

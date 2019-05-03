@@ -2,15 +2,15 @@ import * as React from 'react';
 import { sectionStyle } from './section.style';
 import styled from 'styled-components';
 import {
-  WithSpaceProps,
-  withSpace,
-} from '../../common/styles/molecules/styledSystem';
+  StyleSystemSpaceProps,
+  styleSystemSpace,
+} from '../../common/styleSystem';
 
-type SectionProps = WithSpaceProps;
+type SectionProps = StyleSystemSpaceProps;
 
 const Wrapper = styled.section`
   ${sectionStyle};
-  ${withSpace}
+  ${styleSystemSpace}
 `;
 
 const Section: React.FC<SectionProps> = ({ children }) => {

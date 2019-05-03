@@ -1,10 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import {
-  StyleSystemProps,
-  withSpace,
-  WithSpaceProps,
-} from '../../common/styles/molecules/styledSystem';
+  StyleSystemCommonProps,
+  styleSystemSpace,
+  StyleSystemSpaceProps,
+} from '../../common/styleSystem';
 import { theme } from '../../common/styles/theme';
 import { Omit } from 'utility-types';
 
@@ -30,7 +30,7 @@ const Wrapper = styled.button`
   color: ${theme.textColor.secondary};
   user-select: none;
 
-  ${withSpace}
+  ${styleSystemSpace}
 `;
 
 interface Props {
@@ -44,8 +44,8 @@ type PartialAttributes = Omit<
 
 export type ButtonProps = Props &
   PartialAttributes &
-  WithSpaceProps &
-  StyleSystemProps;
+  StyleSystemSpaceProps &
+  StyleSystemCommonProps;
 
 const Button: React.FC<ButtonProps> = ({ children, onClick, ...restProps }) => {
   const handleClick = (event: React.SyntheticEvent<HTMLButtonElement>) => {

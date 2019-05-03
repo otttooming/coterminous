@@ -1,12 +1,14 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import {
-  StyleSystemProps,
-  withSpace,
-  WithSpaceProps,
-} from '../../common/styles/molecules/styledSystem';
+  StyleSystemCommonProps,
+  styleSystemSpace,
+  StyleSystemSpaceProps,
+} from '../../common/styleSystem';
 
-export interface WrapperProps extends StyleSystemProps, WithSpaceProps {}
+export interface WrapperProps
+  extends StyleSystemCommonProps,
+    StyleSystemSpaceProps {}
 
 export interface MenuProps extends WrapperProps {}
 
@@ -15,7 +17,7 @@ const Wrapper = styled.ul`
   margin: 0;
   padding: 0;
 
-  ${withSpace}
+  ${styleSystemSpace}
 `;
 
 class Menu extends React.PureComponent<MenuProps, any> {
