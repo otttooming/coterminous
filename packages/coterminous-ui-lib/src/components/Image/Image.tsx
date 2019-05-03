@@ -7,10 +7,15 @@ interface Props {
   onClick?: (e: React.SyntheticEvent<HTMLElement>) => void;
 }
 
-const Figure = styled.figure`
+interface WrapperProps {
+  aspectRatio: string;
+}
+
+const Figure = styled.figure<WrapperProps>`
   position: relative;
   background-color: #fff;
   margin: 0;
+  padding-bottom: ${({ aspectRatio }) => aspectRatio};
 `;
 
 const ImageElement = styled.img`
@@ -27,12 +32,10 @@ class Image extends React.PureComponent<Props, any> {
     const { image, onClick } = this.props;
     const { sizes, width, height } = image;
     const srcSet = sizes.map(item => `${item.url} ${item.width}w`).join();
+    const aspectRatio = `${(height / width) * 100}%`;
 
     return (
-      <Figure
-        style={{ paddingBottom: `${(height / width) * 100}%` }}
-        onClick={onClick}
-      >
+      <Figure aspectRatio={aspectRatio} onClick={onClick}>
         <ImageElement width={width} height={height} srcSet={srcSet} />
       </Figure>
     );
