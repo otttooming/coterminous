@@ -13,13 +13,13 @@ import { theme } from '../theme';
 
 export type StyleSystemProps = WidthProps & MaxWidthProps & DisplayProps;
 
-export type WithSpaceProps = SpaceProps;
-
 export const styleSystem = css`
   ${width}
   ${maxWidth}
   ${display}
 `;
+
+export type WithSpaceProps = SpaceProps;
 
 const topSpacing = css`
   margin-top: ${theme.space.m};
