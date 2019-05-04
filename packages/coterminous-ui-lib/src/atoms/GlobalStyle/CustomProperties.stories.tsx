@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import Section from '../Section/Section';
+import Section from '../../components/Section/Section';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import { fontSize, space } from '../../common/styles/customProperties';
-import Heading from '../Heading';
+import Heading from '../../components/Heading';
 
 storiesOf('Custom properties', module).add('Variables', () => (
   <StorybookWrapper>

@@ -1,6 +1,6 @@
 export { theme } from './common/styles/theme';
 
-export { default as GlobalStyle } from './components/GlobalStyle/GlobalStyle';
+export { default as GlobalStyle } from './atoms/GlobalStyle';
 
 export { default as Heading } from './components/Heading';
 export { default as Button } from './atoms/Button';
