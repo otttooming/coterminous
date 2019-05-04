@@ -11,8 +11,7 @@ export { withFormConsumer } from './components/Form/withFormConsumer';
 
 export { TextInputField } from './components/TextInput/TextInputField';
 
-export { Checkbox } from './components/Checkbox/Checkbox';
-export { CheckboxField } from './components/Checkbox/CheckboxField';
+export { default as Checkbox } from './components/Checkbox/Checkbox';
 
 export { RadioButtonField } from './components/RadioButton/RadioButtonField';
 

@@ -1,30 +1,30 @@
 import { visuallyHidden } from './../../common/styles/atoms/display.style';
-import * as React from 'react';
 import { theme } from '../../';
 import styled, { css } from 'styled-components';
+import { State } from './Checkbox';
+import { styleSystemSpace } from '../../common/styleSystem';
 
-const common = css`
+export const CheckboxStyle = css`
   margin: 0 0 ${theme.space.m} 0;
 `;
 
-export const CheckboxStyle = css`
-  ${common};
-`;
-
-export const InputWrapperStyle = styled.span`
+export const VisibleInput = styled.span<State>`
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-color: #333;
+  width: ${theme.space.l};
+  height: ${theme.space.l};
+  background-color: ${({ isChecked }) =>
+    isChecked ? theme.color.primary : theme.backgroundColor.primary};
   border-radius: ${theme.borderRadius.s};
   margin-right: ${theme.space.m};
 `;
 
-export const CheckboxLabelWrapper = styled.label`
+export const Wrapper = styled.label`
   display: flex;
   align-items: center;
-  color: #333;
-  font-size: 16px;
+  user-select: none;
+  cursor: pointer;
+
+  ${styleSystemSpace}
 `;
 
 export const HiddenInput = styled.input`

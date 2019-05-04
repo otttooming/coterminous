@@ -1,101 +1,40 @@
 import * as React from 'react';
-import {
-  CheckboxStyle,
-  InputWrapperStyle,
-  HiddenInput,
-  CheckboxLabelWrapper,
-} from './checkbox.style';
-import styled from 'styled-components';
-import {
-  ControlWrapperInternalProps, // Required due to TS export requirements. https://github.com/Microsoft/TypeScript/issues/9944
-  ControlWrapper,
-  ControlWrapperProps,
-} from '../ControlWrapper/ControlWrapper';
-import { extractControlWrapperProps } from '../ControlWrapper/controlWrapperHelper';
-import { CSSIcons } from '../Icons/Icons';
+import { VisibleInput, HiddenInput, Wrapper } from './checkbox.style';
+import { Omit } from 'utility-types';
 
 export enum CheckboxType {
   CHECKBOX = 'checkbox',
-  RADIO = 'radio',
 }
 
-export interface Props {
-  onChange?: (value: boolean) => void;
-  className?: string;
-  inputLabel: React.ReactNode;
-  name: string;
-  value: any;
-  type?: CheckboxType;
-  checked?: boolean;
+export type CheckedState = boolean | undefined;
+
+type Attributes = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'>;
+
+export interface State {
+  isChecked: CheckedState;
 }
 
-interface State {
-  isChecked: boolean;
-}
+export type CheckboxProps = Attributes;
 
-export type CheckboxProps = Props & ControlWrapperProps;
-
-class CheckboxBase extends React.PureComponent<CheckboxProps, State> {
-  static defaultProps = {
-    type: CheckboxType.CHECKBOX,
+const Checkbox: React.FC<CheckboxProps> = ({ children }) => {
+  const [isChecked, setState] = React.useState<CheckedState>(false);
+  const handleChange = () => {
+    setState(!isChecked);
   };
 
-  constructor(props: CheckboxProps) {
-    super(props);
+  return (
+    <Wrapper>
+      <VisibleInput isChecked={isChecked} />
 
-    this.state = {
-      isChecked: false,
-    };
-  }
+      <HiddenInput
+        type={CheckboxType.CHECKBOX}
+        checked={isChecked}
+        onChange={handleChange}
+      />
 
-  render() {
-    const {
-      className,
-      children,
-      inputLabel,
-      type,
-      name,
-      checked,
-      ...restProps
-    } = this.props;
-    const attributes = { className, name };
+      <span>{children}</span>
+    </Wrapper>
+  );
+};
 
-    return (
-      <ControlWrapper {...extractControlWrapperProps(this.props)}>
-        <CheckboxLabelWrapper>
-          <InputWrapperStyle>
-            {(type === CheckboxType.RADIO ? checked : this.state.isChecked) && (
-              <CSSIcons.Checkmark />
-            )}
-          </InputWrapperStyle>
-
-          <HiddenInput
-            type={type}
-            {...attributes}
-            checked={this.props.checked}
-            onChange={this.handleChange}
-          />
-          <span>{inputLabel}</span>
-        </CheckboxLabelWrapper>
-      </ControlWrapper>
-    );
-  }
-
-  handleChange = (event: React.FormEvent<HTMLInputElement>) => {
-    const { onChange, value } = this.props;
-
-    const checked: boolean = Boolean(event.currentTarget.checked);
-
-    this.setState({
-      isChecked: checked,
-    });
-
-    if (onChange) {
-      onChange(checked ? value : undefined);
-    }
-  };
-}
-
-export const Checkbox = styled(CheckboxBase)<any>`
-  ${CheckboxStyle};
-`;
+export default Checkbox;
