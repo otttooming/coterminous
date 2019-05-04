@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, boolean, number } from '@storybook/addon-knobs';
-import Section from '../../components/Section/Section';
+import Section from '../Section';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import Image from './Image';
 

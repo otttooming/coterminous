@@ -1,5 +1,5 @@
-import { theme } from '../../';
 import { css } from 'styled-components';
+import { theme } from '../../common/styles/theme';
 
 const common = css`
   background-color: ${theme.backgroundColor.secondary};

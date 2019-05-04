@@ -7,7 +7,7 @@ export { default as Button } from './atoms/Button';
 
 export { default as Checkbox } from './atoms/Checkbox/';
 
-export { default as Section } from './components/Section';
+export { default as Section } from './atoms/Section';
 
 export { Select } from './components/Select/Select';
 export { Popover } from './components/Popover/Popover';

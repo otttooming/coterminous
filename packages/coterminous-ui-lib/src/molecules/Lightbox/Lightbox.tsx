@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { PhotoSwipe, PhotoSwipeGalleryItem } from 'react-photoswipe';
 import Image from '../../atoms/Image';
-import Section from '../../components/Section';
+import Section from '../../atoms/Section';
 import { Lightbox as LightboxStyled } from './Lightbox.style';
 import { Image as ImageItem } from '../../atoms/Image/Image.types';
 

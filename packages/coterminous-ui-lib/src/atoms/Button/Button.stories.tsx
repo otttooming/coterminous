@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import Button from '.';
 import { text } from '@storybook/addon-knobs';
-import Section from '../../components/Section';
+import Section from '../Section';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 
 const stories = storiesOf('Button', module);
