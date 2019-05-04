@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import Section from '../../components/Section/Section';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import { fontSize, space } from '../../common/styles/customProperties';
-import Heading from '../../components/Heading';
+import Heading from '../Heading';
 
 storiesOf('Custom properties', module).add('Variables', () => (
   <StorybookWrapper>

@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { theme } from '../../';
+import { theme } from '../..';
 import { WrapperProps } from './Heading';
 
 export const common = css<WrapperProps>`
