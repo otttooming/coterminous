@@ -1,12 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import {
-  ControlWrapperInternalProps, // Required due to TS export requirements. https://github.com/Microsoft/TypeScript/issues/9944
-  ControlWrapper,
-  ControlWrapperProps,
-} from '../ControlWrapper/ControlWrapper';
 import { Popover } from '../../';
-import { extractControlWrapperProps } from '../ControlWrapper/controlWrapperHelper';
 import Downshift, {
   ControllerStateAndHelpers,
   DownshiftState,
@@ -42,7 +36,7 @@ export interface State {
   selected: SelectItemProps | undefined;
 }
 
-export type SelectProps = Props & ControlWrapperProps;
+export type SelectProps = Props;
 
 export interface SelectGroupedNodes {
   [key: string]: React.ReactNode[];
@@ -94,11 +88,7 @@ export class SelectBase extends React.PureComponent<SelectProps, State> {
   renderControlWrapper = (element: React.ReactNode) => {
     const { label } = this.props;
 
-    return (
-      <ControlWrapper {...extractControlWrapperProps(this.props)}>
-        {element}
-      </ControlWrapper>
-    );
+    return element;
   };
 
   renderPopoverChildren(

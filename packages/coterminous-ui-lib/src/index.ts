@@ -5,17 +5,12 @@ export { default as GlobalStyle } from './components/GlobalStyle/GlobalStyle';
 export { default as Heading } from './components/Heading';
 export { default as Button } from './components/Button';
 
-export { TextInputField } from './components/TextInput/TextInputField';
-
 export { default as Checkbox } from './components/Checkbox/Checkbox';
-
-export { RadioButtonField } from './components/RadioButton/RadioButtonField';
 
 export { default as Section } from './components/Section';
 export { CSSIcons } from './components/Icons/Icons';
 
 export { Select } from './components/Select/Select';
-export { SelectField } from './components/Select/SelectField';
 export { Popover } from './components/Popover/Popover';
 
 export { default as Lightbox } from './components/Lightbox';

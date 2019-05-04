@@ -1,12 +1,6 @@
 import * as React from 'react';
 import { TextInputStyle } from './textInput.style';
 import styled from 'styled-components';
-import {
-  ControlWrapperInternalProps, // Required due to TS export requirements. https://github.com/Microsoft/TypeScript/issues/9944
-  ControlWrapper,
-  ControlWrapperProps,
-} from '../ControlWrapper/ControlWrapper';
-import { extractControlWrapperProps } from '../ControlWrapper/controlWrapperHelper';
 
 // Enum must be exported or 'has or is using private name' error will occur
 export enum TagName {
@@ -22,7 +16,7 @@ export interface Props {
 
 interface State {}
 
-export type TextInputProps = Props & ControlWrapperProps;
+export type TextInputProps = Props;
 
 class TextInputBase extends React.Component<TextInputProps, State> {
   constructor(props: TextInputProps) {
@@ -56,11 +50,7 @@ class TextInputBase extends React.Component<TextInputProps, State> {
   renderControlWrapper = (element: React.ReactNode) => {
     const { label } = this.props;
 
-    return (
-      <ControlWrapper {...extractControlWrapperProps(this.props)}>
-        {element}
-      </ControlWrapper>
-    );
+    return element;
   };
 
   handleChange = (
