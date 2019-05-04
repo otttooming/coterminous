@@ -12,7 +12,7 @@ export { default as Section } from './components/Section';
 export { Select } from './components/Select/Select';
 export { Popover } from './components/Popover/Popover';
 
-export { default as Lightbox } from './components/Lightbox';
+export { default as Lightbox } from './molecules/Lightbox';
 
 export { default as Image } from './atoms/Image';
 
