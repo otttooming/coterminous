@@ -5,7 +5,7 @@ export { default as GlobalStyle } from './components/GlobalStyle/GlobalStyle';
 export { default as Heading } from './components/Heading';
 export { default as Button } from './atoms/Button';
 
-export { default as Checkbox } from './components/Checkbox/Checkbox';
+export { default as Checkbox } from './atoms/Checkbox/';
 
 export { default as Section } from './components/Section';
 export { CSSIcons } from './components/Icons/Icons';
