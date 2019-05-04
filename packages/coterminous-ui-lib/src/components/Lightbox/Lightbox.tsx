@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { PhotoSwipe, PhotoSwipeGalleryItem } from 'react-photoswipe';
-import Image from '../Image';
+import Image from '../../atoms/Image';
 import Section from '../Section';
 import { Lightbox as LightboxStyled } from './Lightbox.style';
-import { Image as ImageItem } from '../Image/Image.types';
+import { Image as ImageItem } from '../../atoms/Image/Image.types';
 
 interface PhotoSwipeGalleryOptions {
   history: boolean;

@@ -5,7 +5,7 @@ import Card from './';
 import { Heading, Button } from '../../';
 import styled from 'styled-components';
 import { GridStoryDefault } from '../../atoms/Grid/Grid.stories';
-import Image from '../../components/Image';
+import Image from '../../atoms/Image';
 
 const image = {
   width: 1200,

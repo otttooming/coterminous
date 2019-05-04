@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import { Heading, Button, Card } from '../../';
 import Grid, { GridItem } from './';
-import Image from '../../components/Image';
+import Image from '../Image';
 import { theme } from '../../common/styles/theme';
 
 const image = {
