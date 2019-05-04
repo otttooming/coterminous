@@ -5,10 +5,6 @@ export { GlobalStyle } from './components/GlobalStyle/GlobalStyle';
 export { default as Heading } from './components/Heading';
 export { default as Button } from './components/Button';
 
-export { FormProvider, FormContext } from './components/Form/Form';
-
-export { withFormConsumer } from './components/Form/withFormConsumer';
-
 export { TextInputField } from './components/TextInput/TextInputField';
 
 export { default as Checkbox } from './components/Checkbox/Checkbox';
