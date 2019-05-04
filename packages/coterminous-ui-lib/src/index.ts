@@ -3,7 +3,7 @@ export { theme } from './common/styles/theme';
 export { default as GlobalStyle } from './components/GlobalStyle/GlobalStyle';
 
 export { default as Heading } from './components/Heading';
-export { default as Button } from './components/Button';
+export { default as Button } from './atoms/Button';
 
 export { default as Checkbox } from './components/Checkbox/Checkbox';
 

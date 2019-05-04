@@ -4,7 +4,6 @@ import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 import { Section, Button, Heading } from '../../';
 import List, { ListItem } from './';
 import { ShoppingCart } from 'react-feather';
-import { ButtonType } from '../../components/Button/Button';
 
 const image = {
   width: 1200,
