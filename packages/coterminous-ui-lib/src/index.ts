@@ -23,3 +23,5 @@ export { default as Grid, GridItem } from './atoms/Grid';
 export { default as List, ListItem } from './atoms/List';
 
 export { default as Menu, MenuItem } from './atoms/Menu';
+
+export { default as Input } from './atoms/Input';
