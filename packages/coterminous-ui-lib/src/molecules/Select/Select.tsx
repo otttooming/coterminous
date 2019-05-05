@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Popover } from '../../';
+import { Popover } from '../..';
 import Downshift, {
   ControllerStateAndHelpers,
   DownshiftState,
@@ -30,6 +30,7 @@ export interface SelectItemProps {
 export interface Props {
   items: SelectItemProps[];
   onChange?: (value: SelectItemProps) => void;
+  className?: string;
 }
 
 export interface State {
@@ -86,8 +87,6 @@ export class SelectBase extends React.PureComponent<SelectProps, State> {
   }
 
   renderControlWrapper = (element: React.ReactNode) => {
-    const { label } = this.props;
-
     return element;
   };
 
@@ -238,6 +237,8 @@ export class SelectBase extends React.PureComponent<SelectProps, State> {
   };
 }
 
-export const Select = styled(SelectBase)`
+const Select = styled(SelectBase)`
   ${selectInputStyle};
 `;
+
+export default Select;

@@ -9,7 +9,7 @@ export { default as Checkbox } from './atoms/Checkbox/';
 
 export { default as Section } from './atoms/Section';
 
-export { Select } from './components/Select/Select';
+export { default as Select } from './molecules/Select';
 
 export { default as Popover } from './atoms/Popover';
 

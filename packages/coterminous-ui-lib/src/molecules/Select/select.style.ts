@@ -1,5 +1,5 @@
-import { theme } from '../../';
 import { css } from 'styled-components';
+import { theme } from '../../common/styles/theme';
 
 const reset = css`
   margin: 0;

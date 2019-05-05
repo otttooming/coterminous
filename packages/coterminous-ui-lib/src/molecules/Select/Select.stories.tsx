@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Section, Select } from '../../';
+import { Section, Select } from '../..';
 import { SelectItemProps } from './Select';
 import StorybookWrapper from '../../common/storybookHelpers/StorybookWrapper';
 
@@ -36,7 +36,7 @@ const selectItems: SelectItemProps[] = [
 storiesOf('Select', module).add('Select', () => (
   <StorybookWrapper>
     <Section>
-      <Select label="Enter address" items={selectItems} />
+      <Select items={selectItems} />
     </Section>
   </StorybookWrapper>
 ));
