@@ -10,7 +10,8 @@ export { default as Checkbox } from './atoms/Checkbox/';
 export { default as Section } from './atoms/Section';
 
 export { Select } from './components/Select/Select';
-export { Popover } from './components/Popover/Popover';
+
+export { default as Popover } from './components/Popover';
 
 export { default as Lightbox } from './molecules/Lightbox';
 

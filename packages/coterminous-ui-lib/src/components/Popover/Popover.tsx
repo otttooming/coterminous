@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Manager, Reference, Popper } from 'react-popper';
 import { Dropdown } from './popover.style';
-import { Arrow } from './Arrow';
 
 export type RefHandler = (ref: HTMLElement | null) => void;
 
@@ -19,7 +18,7 @@ export interface State {}
 
 export type PopoverProps = Props;
 
-export class PopoverBase extends React.PureComponent<PopoverProps, State> {
+class Popover extends React.PureComponent<PopoverProps, State> {
   constructor(props: PopoverProps) {
     super(props);
   }
@@ -36,13 +35,8 @@ export class PopoverBase extends React.PureComponent<PopoverProps, State> {
               flip: { enabled: false },
             }}
           >
-            {({ ref, style, placement, arrowProps }) => (
+            {({ ref, style, placement }) => (
               <aside ref={ref} style={style} data-placement={placement}>
-                <Arrow
-                  passedRef={arrowProps.ref}
-                  style={arrowProps.style}
-                  placement={placement}
-                />
                 <Dropdown data-placement={placement}>
                   {this.props.popoverChildren()}
                 </Dropdown>
@@ -55,4 +49,4 @@ export class PopoverBase extends React.PureComponent<PopoverProps, State> {
   }
 }
 
-export const Popover = PopoverBase;
+export default Popover;
