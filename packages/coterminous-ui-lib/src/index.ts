@@ -11,7 +11,7 @@ export { default as Section } from './atoms/Section';
 
 export { Select } from './components/Select/Select';
 
-export { default as Popover } from './components/Popover';
+export { default as Popover } from './atoms/Popover';
 
 export { default as Lightbox } from './molecules/Lightbox';
 

@@ -1,5 +1,5 @@
-import { theme } from '../../';
 import styled, { css } from 'styled-components';
+import { theme } from '../../common/styles/theme';
 
 export const arrowCorrection = '15px';
 
