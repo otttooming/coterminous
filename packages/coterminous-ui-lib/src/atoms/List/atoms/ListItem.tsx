@@ -4,29 +4,21 @@ import { theme } from '../../../';
 import {
   styleSystemCommon,
   StyleSystemCommonProps,
+  StyleSystemSpaceProps,
+  styleSystemSpace,
 } from '../../../common/styleSystem';
 
-export interface WrapperProps extends StyleSystemCommonProps {}
+export interface WrapperProps
+  extends StyleSystemCommonProps,
+    StyleSystemSpaceProps {}
 
 export interface ListItemProps extends WrapperProps {}
-
-const topSpacing = css`
-  &:first-child {
-    margin-top: 0;
-  }
-`;
-
-const defaultSpacing = css<WrapperProps>`
-  margin-top: ${theme.space.s};
-
-  ${({ m, mt }) => !Boolean(m) && !Boolean(mt) && topSpacing}
-`;
 
 const Wrapper = styled.li`
   list-style: none;
 
-  ${defaultSpacing}
   ${styleSystemCommon}
+  ${styleSystemSpace}
 `;
 
 class ListItem extends React.PureComponent<ListItemProps, any> {
