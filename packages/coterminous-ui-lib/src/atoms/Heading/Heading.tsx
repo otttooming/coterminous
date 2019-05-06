@@ -5,16 +5,6 @@ import { styleSystemCommon, styleSystemSpace } from '../../common/styleSystem';
 import { StyleSystemCommonProps } from '../../common/styleSystem/molecules/common';
 import { StyleSystemSpaceProps } from '../../common/styleSystem/molecules/space';
 
-// Enum must be exported or 'has or is using private name' error will occur
-export enum TagName {
-  H1 = 'h1',
-  H2 = 'h2',
-  H3 = 'h3',
-  H4 = 'h4',
-  H5 = 'h5',
-  H6 = 'h6',
-}
-
 export interface WrapperProps
   extends StyleSystemCommonProps,
     StyleSystemSpaceProps {
