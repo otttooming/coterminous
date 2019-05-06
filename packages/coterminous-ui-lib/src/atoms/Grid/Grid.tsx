@@ -11,12 +11,9 @@ import {
   GridTemplatesRowsProps,
   gridTemplateAreas,
 } from 'styled-system';
-import {
-  styleSystemCommon,
-  StyleSystemCommonProps,
-  styleSystemSpace,
-  StyleSystemSpaceProps,
-} from '../../common/styleSystem';
+import { styleSystemCommon, styleSystemSpace } from '../../common/styleSystem';
+import { StyleSystemCommonProps } from '../../common/styleSystem/molecules/common';
+import { StyleSystemSpaceProps } from '../../common/styleSystem/molecules/space';
 
 interface WrapperProps
   extends StyleSystemCommonProps,

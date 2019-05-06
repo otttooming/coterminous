@@ -1,10 +1,8 @@
 import * as React from 'react';
 import { sectionStyle } from './section.style';
 import styled from 'styled-components';
-import {
-  StyleSystemSpaceProps,
-  styleSystemSpace,
-} from '../../common/styleSystem';
+import { styleSystemSpace } from '../../common/styleSystem';
+import { StyleSystemSpaceProps } from '../../common/styleSystem/molecules/space';
 
 export type SectionProps = StyleSystemSpaceProps &
   React.HTMLAttributes<HTMLElement>;

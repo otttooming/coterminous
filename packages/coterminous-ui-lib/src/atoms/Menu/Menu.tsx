@@ -1,10 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import {
-  StyleSystemCommonProps,
-  styleSystemSpace,
-  StyleSystemSpaceProps,
-} from '../../common/styleSystem';
+import { styleSystemSpace } from '../../common/styleSystem';
+import { StyleSystemCommonProps } from '../../common/styleSystem/molecules/common';
+import { StyleSystemSpaceProps } from '../../common/styleSystem/molecules/space';
 
 export interface WrapperProps
   extends StyleSystemCommonProps,

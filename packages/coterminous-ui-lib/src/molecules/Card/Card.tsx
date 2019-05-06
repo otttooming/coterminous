@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Vertical from './molecules/Vertical';
-import { StyleSystemCommonProps } from '../../common/styleSystem';
+import { StyleSystemCommonProps } from '../../common/styleSystem/molecules/common';
 
 export enum CardType {
   PORTRAIT = 'PORTRAIT',
