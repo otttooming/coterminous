@@ -1,5 +1,5 @@
 import Bottleneck from 'bottleneck';
-import { ProductList } from '@coterminous/wp-lib/dist/components/getProduct/getProductList';
+import { ProductList } from '@coterminous/wp-lib';
 import { PageInfo } from '../../codegen/types';
 import { getProductList } from './getProductList';
 import { getProduct } from './getProduct';

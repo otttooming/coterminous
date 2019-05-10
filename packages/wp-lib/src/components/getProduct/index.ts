@@ -1,2 +1,2 @@
 export { getProduct } from './getProduct';
-export { getProductList } from './getProductList';
+export { getProductList, ProductList } from './getProductList';

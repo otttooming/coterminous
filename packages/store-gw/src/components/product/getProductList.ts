@@ -1,6 +1,9 @@
 import Bottleneck from 'bottleneck';
-import { getProductList as getWCProductList } from '@coterminous/wp-lib';
-import { ProductList } from '@coterminous/wp-lib/dist/components/getProduct/getProductList';
+import {
+  getProductList as getWCProductList,
+  ProductList,
+  MediaItemProps,
+} from '@coterminous/wp-lib';
 import {
   PageInfo,
   ProductNode,
@@ -8,7 +11,6 @@ import {
   Product,
   ProductImages,
 } from '../../codegen/types';
-import { MediaItemProps } from '@coterminous/wp-lib/dist/components/getMedia/getMedia';
 import { getPageInfo, requestLimiter } from './resolver';
 
 export async function getProductList(props: ProductListQueryArgs) {

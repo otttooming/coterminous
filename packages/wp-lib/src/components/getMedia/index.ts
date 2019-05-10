@@ -1,2 +1,2 @@
-export { getMedia } from './getMedia';
+export { getMedia, MediaItemProps } from './getMedia';
 export { getAllMedia } from './getAllMedia';
