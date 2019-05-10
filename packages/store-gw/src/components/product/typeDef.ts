@@ -23,7 +23,6 @@ const Product = gql`
   type ProductImages {
     width: Int
     height: Int
-    aspectRatio: Float
     sizes: [ProductImageSizes]
   }
 

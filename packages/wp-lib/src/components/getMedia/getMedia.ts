@@ -13,7 +13,6 @@ interface ImageSizes {
 export interface MediaItemProps {
   width: number;
   height: number;
-  aspectRatio: number;
   sizes: ImageSizes[];
 }
 
@@ -35,10 +34,6 @@ export async function getMedia(id: number): Promise<MediaItemProps> {
     const media: MediaItemProps = {
       width: payload.media_details.width,
       height: payload.media_details.height,
-      aspectRatio: calcAspectRatio(
-        payload.media_details.width,
-        payload.media_details.height,
-      ),
       sizes: getImageSizes(payload.media_details.sizes),
     };
 
@@ -62,10 +57,4 @@ function getImageSizes(sizes: Sizes[]): ImageSizes[] {
       };
     },
   );
-}
-
-function calcAspectRatio(width: number, height: number) {
-  const aspectRatio = (height / width) * 100;
-
-  return aspectRatio;
 }
