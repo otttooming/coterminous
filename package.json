@@ -31,7 +31,7 @@
     "bootstrap": "lerna bootstrap",
     "dev": "lerna run --parallel dev",
     "dist": "lerna run dist",
-    "start": "npm run bootstrap && npm run dist && lerna run --parallel dev",
+    "start": "lerna run --parallel dev",
     "storybook": "npm run bootstrap && lerna run --parallel storybook",
     "clean:build": "lerna exec -- rimraf dist",
     "clean:node": "lerna exec -- rimraf node_modules",
