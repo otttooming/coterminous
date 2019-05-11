@@ -30,7 +30,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dev": "lerna run --parallel dev",
-    "dist": "lerna run dist",
+    "build": "lerna run build",
     "start": "lerna run --parallel dev",
     "storybook": "npm run bootstrap && lerna run --parallel storybook",
     "clean:build": "lerna exec -- rimraf dist",

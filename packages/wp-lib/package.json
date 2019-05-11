@@ -10,13 +10,11 @@
     "scripts": {
       "start": "npm run dev",
       "dev": "nodemon",
-      "build": "tsc -p tsconfig.dist.json",
-      "clean": "rm -rf dist",
-      "dist": "npm run clean && npm run build"
+      "build": "npm run clean && tsc -p tsconfig.dist.json",
+      "clean": "rm -rf dist"
     },
     "devDependencies": {
       "isomorphic-unfetch": "3.0.0",
       "nodemon": "1.18.9"
     }
   }
-  
