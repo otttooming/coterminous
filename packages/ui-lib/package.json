@@ -15,7 +15,7 @@
     "start": "npm run storybook",
     "dev": "npm run start",
     "docs": "NODE_ENV=production webpack -p",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9001 -c .storybook --ci",
     "build": "NODE_ENV=production npm run clean && webpack && npm run build:types",
     "build:types": "tsc -p tsconfig.dist.json",
     "clean": "rm -rf dist",
