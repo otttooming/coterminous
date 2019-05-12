@@ -29,9 +29,10 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "dev": "lerna run --parallel dev",
     "build": "lerna run build",
-    "storybook": "npm run bootstrap && lerna run --parallel storybook",
+    "start:ui": "lerna run storybook --scope @coterminous/ui-lib --stream",
+    "start:gw": "lerna run dev --scope @coterminous/store-gw --stream",
+    "start:fe": "lerna run start --scope @coterminous/store-fe --stream",
     "clean:build": "lerna exec -- rimraf dist",
     "clean:node": "lerna exec -- rimraf node_modules",
     "lint": "npm run lint:ts && echo 'tslint check: OK'",
