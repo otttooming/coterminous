@@ -12,10 +12,11 @@ interface Props {
 const ProductTemplate: React.FC<Props> = ({ data }) => {
   return (
     <Main renderHeader={<Header />}>
-      <ProductItem
+      {/* <ProductItem
         product={data.cms.product}
         images={data.cms.product.images}
-      />
+      /> */}
+      {data.cms.product.name}
     </Main>
   );
 };
@@ -32,7 +33,6 @@ export const query = graphql`
         id
         name
         images {
-          aspectRatio
           width
           height
           sizes {
