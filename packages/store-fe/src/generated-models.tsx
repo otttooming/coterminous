@@ -1,2781 +1,775 @@
-export interface SitePageConnectionSort {
-  fields: SitePageConnectionSortByFieldsEnum[];
+export type Maybe<T> = T | null;
 
-  order?: SitePageConnectionSortOrderValues | null;
-}
-/** Filter connection on its fields */
-export interface FilterSitePage {
-  jsonName?: SitePageConnectionJsonNameQueryString | null;
-
-  internalComponentName?: SitePageConnectionInternalComponentNameQueryString | null;
-
-  path?: SitePageConnectionPathQueryString_2 | null;
-
-  component?: SitePageConnectionComponentQueryString | null;
-
-  componentChunkName?: SitePageConnectionComponentChunkNameQueryString | null;
-
-  context?: SitePageConnectionContextInputObject | null;
-
-  pluginCreator?: SitePageConnectionPluginCreatorInputObject | null;
-
-  pluginCreatorId?: SitePageConnectionPluginCreatorIdQueryString_2 | null;
-
-  componentPath?: SitePageConnectionComponentPathQueryString | null;
-
-  id?: SitePageConnectionIdQueryString_2 | null;
-
-  internal?: SitePageConnectionInternalInputObject_2 | null;
-}
-
-export interface SitePageConnectionJsonNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionInternalComponentNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPathQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionComponentQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionComponentChunkNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionContextInputObject {
-  id?: SitePageConnectionContextIdQueryInteger | null;
-}
-
-export interface SitePageConnectionContextIdQueryInteger {
-  eq?: number | null;
-
-  ne?: number | null;
-
-  gt?: number | null;
-
-  gte?: number | null;
-
-  lt?: number | null;
-
-  lte?: number | null;
-
-  in?: number[] | null;
-
-  nin?: number[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorInputObject {
-  resolve?: SitePageConnectionPluginCreatorResolveQueryString | null;
-
-  id?: SitePageConnectionPluginCreatorIdQueryString | null;
-
-  name?: SitePageConnectionPluginCreatorNameQueryString | null;
-
-  version?: SitePageConnectionPluginCreatorVersionQueryString | null;
-
-  pluginOptions?: SitePageConnectionPluginCreatorPluginOptionsInputObject | null;
-
-  nodeAPIs?: SitePageConnectionPluginCreatorNodeApIsQueryList | null;
-
-  ssrAPIs?: SitePageConnectionPluginCreatorSsrApIsQueryList | null;
-
-  pluginFilepath?: SitePageConnectionPluginCreatorPluginFilepathQueryString | null;
-
-  packageJson?: SitePageConnectionPluginCreatorPackageJsonInputObject | null;
-
-  internal?: SitePageConnectionPluginCreatorInternalInputObject | null;
-}
-
-export interface SitePageConnectionPluginCreatorResolveQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorIdQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorVersionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
-  fieldName?: SitePageConnectionPluginCreatorPluginOptionsFieldNameQueryString | null;
-
-  url?: SitePageConnectionPluginCreatorPluginOptionsUrlQueryString | null;
-
-  typeName?: SitePageConnectionPluginCreatorPluginOptionsTypeNameQueryString | null;
-
-  refetchInterval?: SitePageConnectionPluginCreatorPluginOptionsRefetchIntervalQueryInteger | null;
-
-  options?: SitePageConnectionPluginCreatorPluginOptionsOptionsInputObject | null;
-
-  path?: SitePageConnectionPluginCreatorPluginOptionsPathQueryString | null;
-
-  pathCheck?: SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean | null;
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsFieldNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsUrlQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsTypeNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsRefetchIntervalQueryInteger {
-  eq?: number | null;
-
-  ne?: number | null;
-
-  gt?: number | null;
-
-  gte?: number | null;
-
-  lt?: number | null;
-
-  lte?: number | null;
-
-  in?: number[] | null;
-
-  nin?: number[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsOptionsInputObject {
-  emitWarning?: SitePageConnectionPluginCreatorPluginOptionsOptionsEmitWarningQueryBoolean | null;
-
-  failOnError?: SitePageConnectionPluginCreatorPluginOptionsOptionsFailOnErrorQueryBoolean | null;
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsOptionsEmitWarningQueryBoolean {
-  eq?: boolean | null;
-
-  ne?: boolean | null;
-
-  in?: boolean[] | null;
-
-  nin?: boolean[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsOptionsFailOnErrorQueryBoolean {
-  eq?: boolean | null;
-
-  ne?: boolean | null;
-
-  in?: boolean[] | null;
-
-  nin?: boolean[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsPathQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean {
-  eq?: boolean | null;
-
-  ne?: boolean | null;
-
-  in?: boolean[] | null;
-
-  nin?: boolean[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorNodeApIsQueryList {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorSsrApIsQueryList {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPluginFilepathQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonInputObject {
-  name?: SitePageConnectionPluginCreatorPackageJsonNameQueryString | null;
-
-  description?: SitePageConnectionPluginCreatorPackageJsonDescriptionQueryString | null;
-
-  version?: SitePageConnectionPluginCreatorPackageJsonVersionQueryString | null;
-
-  main?: SitePageConnectionPluginCreatorPackageJsonMainQueryString | null;
-
-  license?: SitePageConnectionPluginCreatorPackageJsonLicenseQueryString | null;
-
-  dependencies?: SitePageConnectionPluginCreatorPackageJsonDependenciesQueryList | null;
-
-  devDependencies?: SitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList | null;
-
-  peerDependencies?: SitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList | null;
-
-  keywords?: SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonDescriptionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonVersionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonMainQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonLicenseQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonDependenciesQueryList {
-  elemMatch?: SitePageConnectionPluginCreatorPackageJsonDependenciesInputObject | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonDependenciesInputObject {
-  name?: SitePageConnectionPluginCreatorPackageJsonDependenciesNameQueryString | null;
-
-  version?: SitePageConnectionPluginCreatorPackageJsonDependenciesVersionQueryString | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonDependenciesNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonDependenciesVersionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList {
-  elemMatch?: SitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject {
-  name?: SitePageConnectionPluginCreatorPackageJsonDevDependenciesNameQueryString | null;
-
-  version?: SitePageConnectionPluginCreatorPackageJsonDevDependenciesVersionQueryString | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonDevDependenciesNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonDevDependenciesVersionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList {
-  elemMatch?: SitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject {
-  name?: SitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQueryString | null;
-
-  version?: SitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorInternalInputObject {
-  contentDigest?: SitePageConnectionPluginCreatorInternalContentDigestQueryString | null;
-
-  type?: SitePageConnectionPluginCreatorInternalTypeQueryString | null;
-
-  owner?: SitePageConnectionPluginCreatorInternalOwnerQueryString | null;
-}
-
-export interface SitePageConnectionPluginCreatorInternalContentDigestQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorInternalTypeQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorInternalOwnerQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionPluginCreatorIdQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionComponentPathQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionIdQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionInternalInputObject_2 {
-  type?: SitePageConnectionInternalTypeQueryString_2 | null;
-
-  contentDigest?: SitePageConnectionInternalContentDigestQueryString_2 | null;
-
-  description?: SitePageConnectionInternalDescriptionQueryString | null;
-
-  owner?: SitePageConnectionInternalOwnerQueryString_2 | null;
-}
-
-export interface SitePageConnectionInternalTypeQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionInternalContentDigestQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionInternalDescriptionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageConnectionInternalOwnerQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionSort {
-  fields: SitePluginConnectionSortByFieldsEnum[];
-
-  order?: SitePluginConnectionSortOrderValues | null;
-}
-/** Filter connection on its fields */
-export interface FilterSitePlugin {
-  resolve?: SitePluginConnectionResolveQueryString_2 | null;
-
-  id?: SitePluginConnectionIdQueryString_2 | null;
-
-  name?: SitePluginConnectionNameQueryString_2 | null;
-
-  version?: SitePluginConnectionVersionQueryString_2 | null;
-
-  pluginOptions?: SitePluginConnectionPluginOptionsInputObject_2 | null;
-
-  nodeAPIs?: SitePluginConnectionNodeApIsQueryList_2 | null;
-
-  ssrAPIs?: SitePluginConnectionSsrApIsQueryList_2 | null;
-
-  pluginFilepath?: SitePluginConnectionPluginFilepathQueryString_2 | null;
-
-  packageJson?: SitePluginConnectionPackageJsonInputObject_2 | null;
-
-  internal?: SitePluginConnectionInternalInputObject_2 | null;
-}
-
-export interface SitePluginConnectionResolveQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionIdQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionNameQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionVersionQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPluginOptionsInputObject_2 {
-  fieldName?: SitePluginConnectionPluginOptionsFieldNameQueryString_2 | null;
-
-  url?: SitePluginConnectionPluginOptionsUrlQueryString_2 | null;
-
-  typeName?: SitePluginConnectionPluginOptionsTypeNameQueryString_2 | null;
-
-  refetchInterval?: SitePluginConnectionPluginOptionsRefetchIntervalQueryInteger_2 | null;
-
-  options?: SitePluginConnectionPluginOptionsOptionsInputObject_2 | null;
-
-  path?: SitePluginConnectionPluginOptionsPathQueryString_2 | null;
-
-  pathCheck?: SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 | null;
-}
-
-export interface SitePluginConnectionPluginOptionsFieldNameQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPluginOptionsUrlQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPluginOptionsTypeNameQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPluginOptionsRefetchIntervalQueryInteger_2 {
-  eq?: number | null;
-
-  ne?: number | null;
-
-  gt?: number | null;
-
-  gte?: number | null;
-
-  lt?: number | null;
-
-  lte?: number | null;
-
-  in?: number[] | null;
-
-  nin?: number[] | null;
-}
-
-export interface SitePluginConnectionPluginOptionsOptionsInputObject_2 {
-  emitWarning?: SitePluginConnectionPluginOptionsOptionsEmitWarningQueryBoolean_2 | null;
-
-  failOnError?: SitePluginConnectionPluginOptionsOptionsFailOnErrorQueryBoolean_2 | null;
-}
-
-export interface SitePluginConnectionPluginOptionsOptionsEmitWarningQueryBoolean_2 {
-  eq?: boolean | null;
-
-  ne?: boolean | null;
-
-  in?: boolean[] | null;
-
-  nin?: boolean[] | null;
-}
-
-export interface SitePluginConnectionPluginOptionsOptionsFailOnErrorQueryBoolean_2 {
-  eq?: boolean | null;
-
-  ne?: boolean | null;
-
-  in?: boolean[] | null;
-
-  nin?: boolean[] | null;
-}
-
-export interface SitePluginConnectionPluginOptionsPathQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 {
-  eq?: boolean | null;
-
-  ne?: boolean | null;
-
-  in?: boolean[] | null;
-
-  nin?: boolean[] | null;
-}
-
-export interface SitePluginConnectionNodeApIsQueryList_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionSsrApIsQueryList_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPluginFilepathQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPackageJsonInputObject_2 {
-  name?: SitePluginConnectionPackageJsonNameQueryString_2 | null;
-
-  description?: SitePluginConnectionPackageJsonDescriptionQueryString_2 | null;
-
-  version?: SitePluginConnectionPackageJsonVersionQueryString_2 | null;
-
-  main?: SitePluginConnectionPackageJsonMainQueryString_2 | null;
-
-  license?: SitePluginConnectionPackageJsonLicenseQueryString_2 | null;
-
-  dependencies?: SitePluginConnectionPackageJsonDependenciesQueryList_2 | null;
-
-  devDependencies?: SitePluginConnectionPackageJsonDevDependenciesQueryList_2 | null;
-
-  peerDependencies?: SitePluginConnectionPackageJsonPeerDependenciesQueryList_2 | null;
-
-  keywords?: SitePluginConnectionPackageJsonKeywordsQueryList_2 | null;
-}
-
-export interface SitePluginConnectionPackageJsonNameQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPackageJsonDescriptionQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPackageJsonVersionQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPackageJsonMainQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPackageJsonLicenseQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPackageJsonDependenciesQueryList_2 {
-  elemMatch?: SitePluginConnectionPackageJsonDependenciesInputObject_2 | null;
-}
-
-export interface SitePluginConnectionPackageJsonDependenciesInputObject_2 {
-  name?: SitePluginConnectionPackageJsonDependenciesNameQueryString_2 | null;
-
-  version?: SitePluginConnectionPackageJsonDependenciesVersionQueryString_2 | null;
-}
-
-export interface SitePluginConnectionPackageJsonDependenciesNameQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPackageJsonDependenciesVersionQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPackageJsonDevDependenciesQueryList_2 {
-  elemMatch?: SitePluginConnectionPackageJsonDevDependenciesInputObject_2 | null;
-}
-
-export interface SitePluginConnectionPackageJsonDevDependenciesInputObject_2 {
-  name?: SitePluginConnectionPackageJsonDevDependenciesNameQueryString_2 | null;
-
-  version?: SitePluginConnectionPackageJsonDevDependenciesVersionQueryString_2 | null;
-}
-
-export interface SitePluginConnectionPackageJsonDevDependenciesNameQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPackageJsonDevDependenciesVersionQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPackageJsonPeerDependenciesQueryList_2 {
-  elemMatch?: SitePluginConnectionPackageJsonPeerDependenciesInputObject_2 | null;
-}
-
-export interface SitePluginConnectionPackageJsonPeerDependenciesInputObject_2 {
-  name?: SitePluginConnectionPackageJsonPeerDependenciesNameQueryString_2 | null;
-
-  version?: SitePluginConnectionPackageJsonPeerDependenciesVersionQueryString_2 | null;
-}
-
-export interface SitePluginConnectionPackageJsonPeerDependenciesNameQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPackageJsonPeerDependenciesVersionQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionPackageJsonKeywordsQueryList_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionInternalInputObject_2 {
-  contentDigest?: SitePluginConnectionInternalContentDigestQueryString_2 | null;
-
-  type?: SitePluginConnectionInternalTypeQueryString_2 | null;
-
-  owner?: SitePluginConnectionInternalOwnerQueryString_2 | null;
-}
-
-export interface SitePluginConnectionInternalContentDigestQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionInternalTypeQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginConnectionInternalOwnerQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageJsonNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageInternalComponentNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePathQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageComponentQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageComponentChunkNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageContextInputObject {
-  id?: SitePageContextIdQueryInteger | null;
-}
-
-export interface SitePageContextIdQueryInteger {
-  eq?: number | null;
-
-  ne?: number | null;
-
-  gt?: number | null;
-
-  gte?: number | null;
-
-  lt?: number | null;
-
-  lte?: number | null;
-
-  in?: number[] | null;
-
-  nin?: number[] | null;
-}
-
-export interface SitePagePluginCreatorInputObject {
-  resolve?: SitePagePluginCreatorResolveQueryString | null;
-
-  id?: SitePagePluginCreatorIdQueryString | null;
-
-  name?: SitePagePluginCreatorNameQueryString | null;
-
-  version?: SitePagePluginCreatorVersionQueryString | null;
-
-  pluginOptions?: SitePagePluginCreatorPluginOptionsInputObject | null;
-
-  nodeAPIs?: SitePagePluginCreatorNodeApIsQueryList | null;
-
-  ssrAPIs?: SitePagePluginCreatorSsrApIsQueryList | null;
-
-  pluginFilepath?: SitePagePluginCreatorPluginFilepathQueryString | null;
-
-  packageJson?: SitePagePluginCreatorPackageJsonInputObject | null;
-
-  internal?: SitePagePluginCreatorInternalInputObject | null;
-}
-
-export interface SitePagePluginCreatorResolveQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorIdQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorVersionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPluginOptionsInputObject {
-  fieldName?: SitePagePluginCreatorPluginOptionsFieldNameQueryString | null;
-
-  url?: SitePagePluginCreatorPluginOptionsUrlQueryString | null;
-
-  typeName?: SitePagePluginCreatorPluginOptionsTypeNameQueryString | null;
-
-  refetchInterval?: SitePagePluginCreatorPluginOptionsRefetchIntervalQueryInteger | null;
-
-  options?: SitePagePluginCreatorPluginOptionsOptionsInputObject | null;
-
-  path?: SitePagePluginCreatorPluginOptionsPathQueryString | null;
-
-  pathCheck?: SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean | null;
-}
-
-export interface SitePagePluginCreatorPluginOptionsFieldNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPluginOptionsUrlQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPluginOptionsTypeNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPluginOptionsRefetchIntervalQueryInteger {
-  eq?: number | null;
-
-  ne?: number | null;
-
-  gt?: number | null;
-
-  gte?: number | null;
-
-  lt?: number | null;
-
-  lte?: number | null;
-
-  in?: number[] | null;
-
-  nin?: number[] | null;
-}
-
-export interface SitePagePluginCreatorPluginOptionsOptionsInputObject {
-  emitWarning?: SitePagePluginCreatorPluginOptionsOptionsEmitWarningQueryBoolean | null;
-
-  failOnError?: SitePagePluginCreatorPluginOptionsOptionsFailOnErrorQueryBoolean | null;
-}
-
-export interface SitePagePluginCreatorPluginOptionsOptionsEmitWarningQueryBoolean {
-  eq?: boolean | null;
-
-  ne?: boolean | null;
-
-  in?: boolean[] | null;
-
-  nin?: boolean[] | null;
-}
-
-export interface SitePagePluginCreatorPluginOptionsOptionsFailOnErrorQueryBoolean {
-  eq?: boolean | null;
-
-  ne?: boolean | null;
-
-  in?: boolean[] | null;
-
-  nin?: boolean[] | null;
-}
-
-export interface SitePagePluginCreatorPluginOptionsPathQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean {
-  eq?: boolean | null;
-
-  ne?: boolean | null;
-
-  in?: boolean[] | null;
-
-  nin?: boolean[] | null;
-}
-
-export interface SitePagePluginCreatorNodeApIsQueryList {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorSsrApIsQueryList {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPluginFilepathQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonInputObject {
-  name?: SitePagePluginCreatorPackageJsonNameQueryString | null;
-
-  description?: SitePagePluginCreatorPackageJsonDescriptionQueryString | null;
-
-  version?: SitePagePluginCreatorPackageJsonVersionQueryString | null;
-
-  main?: SitePagePluginCreatorPackageJsonMainQueryString | null;
-
-  license?: SitePagePluginCreatorPackageJsonLicenseQueryString | null;
-
-  dependencies?: SitePagePluginCreatorPackageJsonDependenciesQueryList | null;
-
-  devDependencies?: SitePagePluginCreatorPackageJsonDevDependenciesQueryList | null;
-
-  peerDependencies?: SitePagePluginCreatorPackageJsonPeerDependenciesQueryList | null;
-
-  keywords?: SitePagePluginCreatorPackageJsonKeywordsQueryList | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonDescriptionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonVersionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonMainQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonLicenseQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonDependenciesQueryList {
-  elemMatch?: SitePagePluginCreatorPackageJsonDependenciesInputObject | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonDependenciesInputObject {
-  name?: SitePagePluginCreatorPackageJsonDependenciesNameQueryString | null;
-
-  version?: SitePagePluginCreatorPackageJsonDependenciesVersionQueryString | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonDependenciesNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonDependenciesVersionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonDevDependenciesQueryList {
-  elemMatch?: SitePagePluginCreatorPackageJsonDevDependenciesInputObject | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonDevDependenciesInputObject {
-  name?: SitePagePluginCreatorPackageJsonDevDependenciesNameQueryString | null;
-
-  version?: SitePagePluginCreatorPackageJsonDevDependenciesVersionQueryString | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonDevDependenciesNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonDevDependenciesVersionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonPeerDependenciesQueryList {
-  elemMatch?: SitePagePluginCreatorPackageJsonPeerDependenciesInputObject | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonPeerDependenciesInputObject {
-  name?: SitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString | null;
-
-  version?: SitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorPackageJsonKeywordsQueryList {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorInternalInputObject {
-  contentDigest?: SitePagePluginCreatorInternalContentDigestQueryString | null;
-
-  type?: SitePagePluginCreatorInternalTypeQueryString | null;
-
-  owner?: SitePagePluginCreatorInternalOwnerQueryString | null;
-}
-
-export interface SitePagePluginCreatorInternalContentDigestQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorInternalTypeQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
+export interface StringQueryOperatorInput {
+  eq?: Maybe<string>;
 
-  regex?: string | null;
+  ne?: Maybe<string>;
 
-  glob?: string | null;
+  in?: Maybe<(Maybe<string>)[]>;
 
-  in?: string[] | null;
+  nin?: Maybe<(Maybe<string>)[]>;
 
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorInternalOwnerQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePagePluginCreatorIdQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageComponentPathQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageIdQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageInternalInputObject_2 {
-  type?: SitePageInternalTypeQueryString_2 | null;
-
-  contentDigest?: SitePageInternalContentDigestQueryString_2 | null;
-
-  description?: SitePageInternalDescriptionQueryString | null;
-
-  owner?: SitePageInternalOwnerQueryString_2 | null;
-}
-
-export interface SitePageInternalTypeQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageInternalContentDigestQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageInternalDescriptionQueryString {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePageInternalOwnerQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginResolveQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginIdQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginNameQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginVersionQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginPluginOptionsInputObject_2 {
-  fieldName?: SitePluginPluginOptionsFieldNameQueryString_2 | null;
-
-  url?: SitePluginPluginOptionsUrlQueryString_2 | null;
-
-  typeName?: SitePluginPluginOptionsTypeNameQueryString_2 | null;
-
-  refetchInterval?: SitePluginPluginOptionsRefetchIntervalQueryInteger_2 | null;
-
-  options?: SitePluginPluginOptionsOptionsInputObject_2 | null;
-
-  path?: SitePluginPluginOptionsPathQueryString_2 | null;
-
-  pathCheck?: SitePluginPluginOptionsPathCheckQueryBoolean_2 | null;
-}
-
-export interface SitePluginPluginOptionsFieldNameQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginPluginOptionsUrlQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginPluginOptionsTypeNameQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginPluginOptionsRefetchIntervalQueryInteger_2 {
-  eq?: number | null;
-
-  ne?: number | null;
-
-  gt?: number | null;
-
-  gte?: number | null;
-
-  lt?: number | null;
-
-  lte?: number | null;
-
-  in?: number[] | null;
-
-  nin?: number[] | null;
-}
+  regex?: Maybe<string>;
 
-export interface SitePluginPluginOptionsOptionsInputObject_2 {
-  emitWarning?: SitePluginPluginOptionsOptionsEmitWarningQueryBoolean_2 | null;
-
-  failOnError?: SitePluginPluginOptionsOptionsFailOnErrorQueryBoolean_2 | null;
-}
-
-export interface SitePluginPluginOptionsOptionsEmitWarningQueryBoolean_2 {
-  eq?: boolean | null;
-
-  ne?: boolean | null;
-
-  in?: boolean[] | null;
-
-  nin?: boolean[] | null;
-}
-
-export interface SitePluginPluginOptionsOptionsFailOnErrorQueryBoolean_2 {
-  eq?: boolean | null;
-
-  ne?: boolean | null;
-
-  in?: boolean[] | null;
-
-  nin?: boolean[] | null;
-}
-
-export interface SitePluginPluginOptionsPathQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
-}
-
-export interface SitePluginPluginOptionsPathCheckQueryBoolean_2 {
-  eq?: boolean | null;
-
-  ne?: boolean | null;
-
-  in?: boolean[] | null;
-
-  nin?: boolean[] | null;
-}
-
-export interface SitePluginNodeApIsQueryList_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
+  glob?: Maybe<string>;
 }
-
-export interface SitePluginSsrApIsQueryList_2 {
-  eq?: string | null;
-
-  ne?: string | null;
 
-  regex?: string | null;
+export interface NodeFilterInput {
+  id?: Maybe<StringQueryOperatorInput>;
 
-  glob?: string | null;
+  parent?: Maybe<NodeFilterInput>;
 
-  in?: string[] | null;
+  children?: Maybe<NodeFilterListInput>;
 
-  nin?: string[] | null;
+  internal?: Maybe<InternalFilterInput>;
 }
 
-export interface SitePluginPluginFilepathQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
+export interface NodeFilterListInput {
+  elemMatch?: Maybe<NodeFilterInput>;
 }
-
-export interface SitePluginPackageJsonInputObject_2 {
-  name?: SitePluginPackageJsonNameQueryString_2 | null;
 
-  description?: SitePluginPackageJsonDescriptionQueryString_2 | null;
+export interface InternalFilterInput {
+  content?: Maybe<StringQueryOperatorInput>;
 
-  version?: SitePluginPackageJsonVersionQueryString_2 | null;
+  contentDigest?: Maybe<StringQueryOperatorInput>;
 
-  main?: SitePluginPackageJsonMainQueryString_2 | null;
+  description?: Maybe<StringQueryOperatorInput>;
 
-  license?: SitePluginPackageJsonLicenseQueryString_2 | null;
+  fieldOwners?: Maybe<StringQueryOperatorInput>;
 
-  dependencies?: SitePluginPackageJsonDependenciesQueryList_2 | null;
+  ignoreType?: Maybe<BooleanQueryOperatorInput>;
 
-  devDependencies?: SitePluginPackageJsonDevDependenciesQueryList_2 | null;
+  mediaType?: Maybe<StringQueryOperatorInput>;
 
-  peerDependencies?: SitePluginPackageJsonPeerDependenciesQueryList_2 | null;
+  owner?: Maybe<StringQueryOperatorInput>;
 
-  keywords?: SitePluginPackageJsonKeywordsQueryList_2 | null;
+  type?: Maybe<StringQueryOperatorInput>;
 }
-
-export interface SitePluginPackageJsonNameQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
 
-  regex?: string | null;
+export interface BooleanQueryOperatorInput {
+  eq?: Maybe<boolean>;
 
-  glob?: string | null;
+  ne?: Maybe<boolean>;
 
-  in?: string[] | null;
+  in?: Maybe<(Maybe<boolean>)[]>;
 
-  nin?: string[] | null;
+  nin?: Maybe<(Maybe<boolean>)[]>;
 }
 
-export interface SitePluginPackageJsonDescriptionQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
+export interface SitePageContextFilterInput {
+  id?: Maybe<IntQueryOperatorInput>;
 }
-
-export interface SitePluginPackageJsonVersionQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
 
-  glob?: string | null;
+export interface IntQueryOperatorInput {
+  eq?: Maybe<number>;
 
-  in?: string[] | null;
+  ne?: Maybe<number>;
 
-  nin?: string[] | null;
-}
-
-export interface SitePluginPackageJsonMainQueryString_2 {
-  eq?: string | null;
+  gt?: Maybe<number>;
 
-  ne?: string | null;
+  gte?: Maybe<number>;
 
-  regex?: string | null;
+  lt?: Maybe<number>;
 
-  glob?: string | null;
+  lte?: Maybe<number>;
 
-  in?: string[] | null;
+  in?: Maybe<(Maybe<number>)[]>;
 
-  nin?: string[] | null;
+  nin?: Maybe<(Maybe<number>)[]>;
 }
-
-export interface SitePluginPackageJsonLicenseQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
 
-  regex?: string | null;
+export interface SitePluginFilterInput {
+  id?: Maybe<StringQueryOperatorInput>;
 
-  glob?: string | null;
+  parent?: Maybe<NodeFilterInput>;
 
-  in?: string[] | null;
+  children?: Maybe<NodeFilterListInput>;
 
-  nin?: string[] | null;
-}
-
-export interface SitePluginPackageJsonDependenciesQueryList_2 {
-  elemMatch?: SitePluginPackageJsonDependenciesInputObject_2 | null;
-}
+  internal?: Maybe<InternalFilterInput>;
 
-export interface SitePluginPackageJsonDependenciesInputObject_2 {
-  name?: SitePluginPackageJsonDependenciesNameQueryString_2 | null;
+  resolve?: Maybe<StringQueryOperatorInput>;
 
-  version?: SitePluginPackageJsonDependenciesVersionQueryString_2 | null;
-}
+  name?: Maybe<StringQueryOperatorInput>;
 
-export interface SitePluginPackageJsonDependenciesNameQueryString_2 {
-  eq?: string | null;
+  version?: Maybe<StringQueryOperatorInput>;
 
-  ne?: string | null;
+  pluginOptions?: Maybe<SitePluginPluginOptionsFilterInput>;
 
-  regex?: string | null;
+  nodeAPIs?: Maybe<StringQueryOperatorInput>;
 
-  glob?: string | null;
+  ssrAPIs?: Maybe<StringQueryOperatorInput>;
 
-  in?: string[] | null;
+  pluginFilepath?: Maybe<StringQueryOperatorInput>;
 
-  nin?: string[] | null;
+  packageJson?: Maybe<SitePluginPackageJsonFilterInput>;
 }
 
-export interface SitePluginPackageJsonDependenciesVersionQueryString_2 {
-  eq?: string | null;
+export interface SitePluginPluginOptionsFilterInput {
+  fieldName?: Maybe<StringQueryOperatorInput>;
 
-  ne?: string | null;
+  url?: Maybe<StringQueryOperatorInput>;
 
-  regex?: string | null;
+  typeName?: Maybe<StringQueryOperatorInput>;
 
-  glob?: string | null;
+  refetchInterval?: Maybe<IntQueryOperatorInput>;
 
-  in?: string[] | null;
+  options?: Maybe<SitePluginPluginOptionsOptionsFilterInput>;
 
-  nin?: string[] | null;
-}
+  path?: Maybe<StringQueryOperatorInput>;
 
-export interface SitePluginPackageJsonDevDependenciesQueryList_2 {
-  elemMatch?: SitePluginPackageJsonDevDependenciesInputObject_2 | null;
+  pathCheck?: Maybe<BooleanQueryOperatorInput>;
 }
 
-export interface SitePluginPackageJsonDevDependenciesInputObject_2 {
-  name?: SitePluginPackageJsonDevDependenciesNameQueryString_2 | null;
+export interface SitePluginPluginOptionsOptionsFilterInput {
+  emitWarning?: Maybe<BooleanQueryOperatorInput>;
 
-  version?: SitePluginPackageJsonDevDependenciesVersionQueryString_2 | null;
+  failOnError?: Maybe<BooleanQueryOperatorInput>;
 }
-
-export interface SitePluginPackageJsonDevDependenciesNameQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
 
-  glob?: string | null;
+export interface SitePluginPackageJsonFilterInput {
+  name?: Maybe<StringQueryOperatorInput>;
 
-  in?: string[] | null;
+  description?: Maybe<StringQueryOperatorInput>;
 
-  nin?: string[] | null;
-}
-
-export interface SitePluginPackageJsonDevDependenciesVersionQueryString_2 {
-  eq?: string | null;
+  version?: Maybe<StringQueryOperatorInput>;
 
-  ne?: string | null;
+  main?: Maybe<StringQueryOperatorInput>;
 
-  regex?: string | null;
+  license?: Maybe<StringQueryOperatorInput>;
 
-  glob?: string | null;
+  dependencies?: Maybe<SitePluginPackageJsonDependenciesFilterListInput>;
 
-  in?: string[] | null;
+  devDependencies?: Maybe<SitePluginPackageJsonDevDependenciesFilterListInput>;
 
-  nin?: string[] | null;
-}
+  peerDependencies?: Maybe<
+    SitePluginPackageJsonPeerDependenciesFilterListInput
+  >;
 
-export interface SitePluginPackageJsonPeerDependenciesQueryList_2 {
-  elemMatch?: SitePluginPackageJsonPeerDependenciesInputObject_2 | null;
+  keywords?: Maybe<StringQueryOperatorInput>;
 }
-
-export interface SitePluginPackageJsonPeerDependenciesInputObject_2 {
-  name?: SitePluginPackageJsonPeerDependenciesNameQueryString_2 | null;
 
-  version?: SitePluginPackageJsonPeerDependenciesVersionQueryString_2 | null;
+export interface SitePluginPackageJsonDependenciesFilterListInput {
+  elemMatch?: Maybe<SitePluginPackageJsonDependenciesFilterInput>;
 }
 
-export interface SitePluginPackageJsonPeerDependenciesNameQueryString_2 {
-  eq?: string | null;
+export interface SitePluginPackageJsonDependenciesFilterInput {
+  name?: Maybe<StringQueryOperatorInput>;
 
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
+  version?: Maybe<StringQueryOperatorInput>;
 }
-
-export interface SitePluginPackageJsonPeerDependenciesVersionQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
 
-  in?: string[] | null;
-
-  nin?: string[] | null;
+export interface SitePluginPackageJsonDevDependenciesFilterListInput {
+  elemMatch?: Maybe<SitePluginPackageJsonDevDependenciesFilterInput>;
 }
-
-export interface SitePluginPackageJsonKeywordsQueryList_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
 
-  glob?: string | null;
+export interface SitePluginPackageJsonDevDependenciesFilterInput {
+  name?: Maybe<StringQueryOperatorInput>;
 
-  in?: string[] | null;
-
-  nin?: string[] | null;
+  version?: Maybe<StringQueryOperatorInput>;
 }
-
-export interface SitePluginInternalInputObject_2 {
-  contentDigest?: SitePluginInternalContentDigestQueryString_2 | null;
 
-  type?: SitePluginInternalTypeQueryString_2 | null;
-
-  owner?: SitePluginInternalOwnerQueryString_2 | null;
+export interface SitePluginPackageJsonPeerDependenciesFilterListInput {
+  elemMatch?: Maybe<SitePluginPackageJsonPeerDependenciesFilterInput>;
 }
-
-export interface SitePluginInternalContentDigestQueryString_2 {
-  eq?: string | null;
 
-  ne?: string | null;
+export interface SitePluginPackageJsonPeerDependenciesFilterInput {
+  name?: Maybe<StringQueryOperatorInput>;
 
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
+  version?: Maybe<StringQueryOperatorInput>;
 }
-
-export interface SitePluginInternalTypeQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
 
-  nin?: string[] | null;
-}
+export interface SitePageFilterInput {
+  id?: Maybe<StringQueryOperatorInput>;
 
-export interface SitePluginInternalOwnerQueryString_2 {
-  eq?: string | null;
+  parent?: Maybe<NodeFilterInput>;
 
-  ne?: string | null;
+  children?: Maybe<NodeFilterListInput>;
 
-  regex?: string | null;
+  internal?: Maybe<InternalFilterInput>;
 
-  glob?: string | null;
+  path?: Maybe<StringQueryOperatorInput>;
 
-  in?: string[] | null;
+  jsonName?: Maybe<StringQueryOperatorInput>;
 
-  nin?: string[] | null;
-}
+  internalComponentName?: Maybe<StringQueryOperatorInput>;
 
-export interface SiteSiteMetadataInputObject_2 {
-  siteName?: SiteSiteMetadataSiteNameQueryString_2 | null;
-}
+  component?: Maybe<StringQueryOperatorInput>;
 
-export interface SiteSiteMetadataSiteNameQueryString_2 {
-  eq?: string | null;
+  componentChunkName?: Maybe<StringQueryOperatorInput>;
 
-  ne?: string | null;
+  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
 
-  regex?: string | null;
+  context?: Maybe<SitePageContextFilterInput>;
 
-  glob?: string | null;
+  pluginCreator?: Maybe<SitePluginFilterInput>;
 
-  in?: string[] | null;
+  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
 
-  nin?: string[] | null;
+  componentPath?: Maybe<StringQueryOperatorInput>;
 }
-
-export interface SitePortQueryString_2 {
-  eq?: string | null;
 
-  ne?: string | null;
+export interface SitePageSortInput {
+  fields?: Maybe<(Maybe<SitePageFieldsEnum>)[]>;
 
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
+  order?: (Maybe<SortOrderEnum>)[];
 }
-
-export interface SiteHostQueryString_2 {
-  eq?: string | null;
 
-  ne?: string | null;
+export interface SitePluginSortInput {
+  fields?: Maybe<(Maybe<SitePluginFieldsEnum>)[]>;
 
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
+  order?: (Maybe<SortOrderEnum>)[];
 }
-
-export interface SitePathPrefixQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
 
-  nin?: string[] | null;
+export interface SiteSiteMetadataFilterInput {
+  siteName?: Maybe<StringQueryOperatorInput>;
 }
 
-export interface SitePolyfillQueryBoolean_2 {
-  eq?: boolean | null;
+export interface DateQueryOperatorInput {
+  eq?: Maybe<Date>;
 
-  ne?: boolean | null;
+  ne?: Maybe<Date>;
 
-  in?: boolean[] | null;
+  gt?: Maybe<Date>;
 
-  nin?: boolean[] | null;
-}
-
-export interface SiteBuildTimeQueryString_2 {
-  eq?: string | null;
+  gte?: Maybe<Date>;
 
-  ne?: string | null;
+  lt?: Maybe<Date>;
 
-  regex?: string | null;
+  lte?: Maybe<Date>;
 
-  glob?: string | null;
+  in?: Maybe<(Maybe<Date>)[]>;
 
-  in?: string[] | null;
-
-  nin?: string[] | null;
+  nin?: Maybe<(Maybe<Date>)[]>;
 }
-
-export interface SiteIdQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
-
-  regex?: string | null;
-
-  glob?: string | null;
-
-  in?: string[] | null;
 
-  nin?: string[] | null;
-}
+export interface SiteFilterInput {
+  id?: Maybe<StringQueryOperatorInput>;
 
-export interface SiteInternalInputObject_2 {
-  contentDigest?: SiteInternalContentDigestQueryString_2 | null;
+  parent?: Maybe<NodeFilterInput>;
 
-  type?: SiteInternalTypeQueryString_2 | null;
+  children?: Maybe<NodeFilterListInput>;
 
-  owner?: SiteInternalOwnerQueryString_2 | null;
-}
+  internal?: Maybe<InternalFilterInput>;
 
-export interface SiteInternalContentDigestQueryString_2 {
-  eq?: string | null;
+  siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
 
-  ne?: string | null;
+  port?: Maybe<IntQueryOperatorInput>;
 
-  regex?: string | null;
+  host?: Maybe<StringQueryOperatorInput>;
 
-  glob?: string | null;
+  pathPrefix?: Maybe<StringQueryOperatorInput>;
 
-  in?: string[] | null;
+  polyfill?: Maybe<BooleanQueryOperatorInput>;
 
-  nin?: string[] | null;
+  buildTime?: Maybe<DateQueryOperatorInput>;
 }
-
-export interface SiteInternalTypeQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
 
-  regex?: string | null;
+export interface SiteSortInput {
+  fields?: Maybe<(Maybe<SiteFieldsEnum>)[]>;
 
-  glob?: string | null;
-
-  in?: string[] | null;
-
-  nin?: string[] | null;
+  order?: (Maybe<SortOrderEnum>)[];
 }
-
-export interface SiteInternalOwnerQueryString_2 {
-  eq?: string | null;
-
-  ne?: string | null;
 
-  regex?: string | null;
+export interface GraphQlSourceFilterInput {
+  id?: Maybe<StringQueryOperatorInput>;
 
-  glob?: string | null;
+  parent?: Maybe<NodeFilterInput>;
 
-  in?: string[] | null;
+  children?: Maybe<NodeFilterListInput>;
 
-  nin?: string[] | null;
-}
-
-export enum SitePageConnectionSortByFieldsEnum {
-  jsonName = 'jsonName',
-  internalComponentName = 'internalComponentName',
-  path = 'path',
-  component = 'component',
-  componentChunkName = 'componentChunkName',
-  context___id = 'context___id',
-  pluginCreator___NODE = 'pluginCreator___NODE',
-  pluginCreatorId = 'pluginCreatorId',
-  componentPath = 'componentPath',
-  id = 'id',
-  internal___type = 'internal___type',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___description = 'internal___description',
-  internal___owner = 'internal___owner',
-}
-
-export enum SitePageConnectionSortOrderValues {
-  ASC = 'ASC',
-  DESC = 'DESC',
-}
-
-export enum SitePageDistinctEnum {
-  jsonName = 'jsonName',
-  internalComponentName = 'internalComponentName',
-  path = 'path',
-  component = 'component',
-  componentChunkName = 'componentChunkName',
-  context___id = 'context___id',
-  pluginCreator___NODE = 'pluginCreator___NODE',
-  pluginCreatorId = 'pluginCreatorId',
-  componentPath = 'componentPath',
-  id = 'id',
-  internal___type = 'internal___type',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___description = 'internal___description',
-  internal___owner = 'internal___owner',
-}
+  internal?: Maybe<InternalFilterInput>;
 
-export enum SitePageGroupEnum {
-  jsonName = 'jsonName',
-  internalComponentName = 'internalComponentName',
-  path = 'path',
-  component = 'component',
-  componentChunkName = 'componentChunkName',
-  context___id = 'context___id',
-  pluginCreator___NODE = 'pluginCreator___NODE',
-  pluginCreatorId = 'pluginCreatorId',
-  componentPath = 'componentPath',
-  id = 'id',
-  internal___type = 'internal___type',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___description = 'internal___description',
-  internal___owner = 'internal___owner',
-}
+  typeName?: Maybe<StringQueryOperatorInput>;
 
-export enum SitePluginConnectionSortByFieldsEnum {
-  resolve = 'resolve',
-  id = 'id',
-  name = 'name',
-  version = 'version',
-  pluginOptions___fieldName = 'pluginOptions___fieldName',
-  pluginOptions___url = 'pluginOptions___url',
-  pluginOptions___typeName = 'pluginOptions___typeName',
-  pluginOptions___refetchInterval = 'pluginOptions___refetchInterval',
-  pluginOptions___options___emitWarning = 'pluginOptions___options___emitWarning',
-  pluginOptions___options___failOnError = 'pluginOptions___options___failOnError',
-  pluginOptions___path = 'pluginOptions___path',
-  pluginOptions___pathCheck = 'pluginOptions___pathCheck',
-  nodeAPIs = 'nodeAPIs',
-  ssrAPIs = 'ssrAPIs',
-  pluginFilepath = 'pluginFilepath',
-  packageJson___name = 'packageJson___name',
-  packageJson___description = 'packageJson___description',
-  packageJson___version = 'packageJson___version',
-  packageJson___main = 'packageJson___main',
-  packageJson___author = 'packageJson___author',
-  packageJson___license = 'packageJson___license',
-  packageJson___dependencies = 'packageJson___dependencies',
-  packageJson___devDependencies = 'packageJson___devDependencies',
-  packageJson___peerDependencies = 'packageJson___peerDependencies',
-  packageJson___keywords = 'packageJson___keywords',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
+  fieldName?: Maybe<StringQueryOperatorInput>;
 }
 
-export enum SitePluginConnectionSortOrderValues {
-  ASC = 'ASC',
-  DESC = 'DESC',
-}
+export interface GraphQlSourceSortInput {
+  fields?: Maybe<(Maybe<GraphQlSourceFieldsEnum>)[]>;
 
-export enum SitePluginDistinctEnum {
-  resolve = 'resolve',
-  id = 'id',
-  name = 'name',
-  version = 'version',
-  pluginOptions___fieldName = 'pluginOptions___fieldName',
-  pluginOptions___url = 'pluginOptions___url',
-  pluginOptions___typeName = 'pluginOptions___typeName',
-  pluginOptions___refetchInterval = 'pluginOptions___refetchInterval',
-  pluginOptions___options___emitWarning = 'pluginOptions___options___emitWarning',
-  pluginOptions___options___failOnError = 'pluginOptions___options___failOnError',
-  pluginOptions___path = 'pluginOptions___path',
-  pluginOptions___pathCheck = 'pluginOptions___pathCheck',
-  nodeAPIs = 'nodeAPIs',
-  ssrAPIs = 'ssrAPIs',
-  pluginFilepath = 'pluginFilepath',
-  packageJson___name = 'packageJson___name',
-  packageJson___description = 'packageJson___description',
-  packageJson___version = 'packageJson___version',
-  packageJson___main = 'packageJson___main',
-  packageJson___author = 'packageJson___author',
-  packageJson___license = 'packageJson___license',
-  packageJson___dependencies = 'packageJson___dependencies',
-  packageJson___devDependencies = 'packageJson___devDependencies',
-  packageJson___peerDependencies = 'packageJson___peerDependencies',
-  packageJson___keywords = 'packageJson___keywords',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
+  order?: (Maybe<SortOrderEnum>)[];
 }
 
-export enum SitePluginGroupEnum {
-  resolve = 'resolve',
-  id = 'id',
-  name = 'name',
-  version = 'version',
-  pluginOptions___fieldName = 'pluginOptions___fieldName',
-  pluginOptions___url = 'pluginOptions___url',
-  pluginOptions___typeName = 'pluginOptions___typeName',
-  pluginOptions___refetchInterval = 'pluginOptions___refetchInterval',
-  pluginOptions___options___emitWarning = 'pluginOptions___options___emitWarning',
-  pluginOptions___options___failOnError = 'pluginOptions___options___failOnError',
-  pluginOptions___path = 'pluginOptions___path',
-  pluginOptions___pathCheck = 'pluginOptions___pathCheck',
-  nodeAPIs = 'nodeAPIs',
-  ssrAPIs = 'ssrAPIs',
-  pluginFilepath = 'pluginFilepath',
-  packageJson___name = 'packageJson___name',
-  packageJson___description = 'packageJson___description',
-  packageJson___version = 'packageJson___version',
-  packageJson___main = 'packageJson___main',
-  packageJson___author = 'packageJson___author',
-  packageJson___license = 'packageJson___license',
-  packageJson___dependencies = 'packageJson___dependencies',
-  packageJson___devDependencies = 'packageJson___devDependencies',
-  packageJson___peerDependencies = 'packageJson___peerDependencies',
-  packageJson___keywords = 'packageJson___keywords',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
+export enum SitePageFieldsEnum {
+  Id = 'id',
+  ParentId = 'parent___id',
+  ParentParentId = 'parent___parent___id',
+  ParentParentParentId = 'parent___parent___parent___id',
+  ParentParentParentChildren = 'parent___parent___parent___children',
+  ParentParentChildren = 'parent___parent___children',
+  ParentParentChildrenId = 'parent___parent___children___id',
+  ParentParentChildrenChildren = 'parent___parent___children___children',
+  ParentParentInternalContent = 'parent___parent___internal___content',
+  ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalDescription = 'parent___parent___internal___description',
+  ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
+  ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
+  ParentParentInternalMediaType = 'parent___parent___internal___mediaType',
+  ParentParentInternalOwner = 'parent___parent___internal___owner',
+  ParentParentInternalType = 'parent___parent___internal___type',
+  ParentChildren = 'parent___children',
+  ParentChildrenId = 'parent___children___id',
+  ParentChildrenParentId = 'parent___children___parent___id',
+  ParentChildrenParentChildren = 'parent___children___parent___children',
+  ParentChildrenChildren = 'parent___children___children',
+  ParentChildrenChildrenId = 'parent___children___children___id',
+  ParentChildrenChildrenChildren = 'parent___children___children___children',
+  ParentChildrenInternalContent = 'parent___children___internal___content',
+  ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalDescription = 'parent___children___internal___description',
+  ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
+  ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
+  ParentChildrenInternalMediaType = 'parent___children___internal___mediaType',
+  ParentChildrenInternalOwner = 'parent___children___internal___owner',
+  ParentChildrenInternalType = 'parent___children___internal___type',
+  ParentInternalContent = 'parent___internal___content',
+  ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalDescription = 'parent___internal___description',
+  ParentInternalFieldOwners = 'parent___internal___fieldOwners',
+  ParentInternalIgnoreType = 'parent___internal___ignoreType',
+  ParentInternalMediaType = 'parent___internal___mediaType',
+  ParentInternalOwner = 'parent___internal___owner',
+  ParentInternalType = 'parent___internal___type',
+  Children = 'children',
+  ChildrenId = 'children___id',
+  ChildrenParentId = 'children___parent___id',
+  ChildrenParentParentId = 'children___parent___parent___id',
+  ChildrenParentParentChildren = 'children___parent___parent___children',
+  ChildrenParentChildren = 'children___parent___children',
+  ChildrenParentChildrenId = 'children___parent___children___id',
+  ChildrenParentChildrenChildren = 'children___parent___children___children',
+  ChildrenParentInternalContent = 'children___parent___internal___content',
+  ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalDescription = 'children___parent___internal___description',
+  ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
+  ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
+  ChildrenParentInternalMediaType = 'children___parent___internal___mediaType',
+  ChildrenParentInternalOwner = 'children___parent___internal___owner',
+  ChildrenParentInternalType = 'children___parent___internal___type',
+  ChildrenChildren = 'children___children',
+  ChildrenChildrenId = 'children___children___id',
+  ChildrenChildrenParentId = 'children___children___parent___id',
+  ChildrenChildrenParentChildren = 'children___children___parent___children',
+  ChildrenChildrenChildren = 'children___children___children',
+  ChildrenChildrenChildrenId = 'children___children___children___id',
+  ChildrenChildrenChildrenChildren = 'children___children___children___children',
+  ChildrenChildrenInternalContent = 'children___children___internal___content',
+  ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalDescription = 'children___children___internal___description',
+  ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
+  ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
+  ChildrenChildrenInternalMediaType = 'children___children___internal___mediaType',
+  ChildrenChildrenInternalOwner = 'children___children___internal___owner',
+  ChildrenChildrenInternalType = 'children___children___internal___type',
+  ChildrenInternalContent = 'children___internal___content',
+  ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalDescription = 'children___internal___description',
+  ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
+  ChildrenInternalIgnoreType = 'children___internal___ignoreType',
+  ChildrenInternalMediaType = 'children___internal___mediaType',
+  ChildrenInternalOwner = 'children___internal___owner',
+  ChildrenInternalType = 'children___internal___type',
+  InternalContent = 'internal___content',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalDescription = 'internal___description',
+  InternalFieldOwners = 'internal___fieldOwners',
+  InternalIgnoreType = 'internal___ignoreType',
+  InternalMediaType = 'internal___mediaType',
+  InternalOwner = 'internal___owner',
+  InternalType = 'internal___type',
+  Path = 'path',
+  JsonName = 'jsonName',
+  InternalComponentName = 'internalComponentName',
+  Component = 'component',
+  ComponentChunkName = 'componentChunkName',
+  IsCreatedByStatefulCreatePages = 'isCreatedByStatefulCreatePages',
+  ContextId = 'context___id',
+  PluginCreatorId = 'pluginCreator___id',
+  PluginCreatorParentId = 'pluginCreator___parent___id',
+  PluginCreatorParentParentId = 'pluginCreator___parent___parent___id',
+  PluginCreatorParentParentChildren = 'pluginCreator___parent___parent___children',
+  PluginCreatorParentChildren = 'pluginCreator___parent___children',
+  PluginCreatorParentChildrenId = 'pluginCreator___parent___children___id',
+  PluginCreatorParentChildrenChildren = 'pluginCreator___parent___children___children',
+  PluginCreatorParentInternalContent = 'pluginCreator___parent___internal___content',
+  PluginCreatorParentInternalContentDigest = 'pluginCreator___parent___internal___contentDigest',
+  PluginCreatorParentInternalDescription = 'pluginCreator___parent___internal___description',
+  PluginCreatorParentInternalFieldOwners = 'pluginCreator___parent___internal___fieldOwners',
+  PluginCreatorParentInternalIgnoreType = 'pluginCreator___parent___internal___ignoreType',
+  PluginCreatorParentInternalMediaType = 'pluginCreator___parent___internal___mediaType',
+  PluginCreatorParentInternalOwner = 'pluginCreator___parent___internal___owner',
+  PluginCreatorParentInternalType = 'pluginCreator___parent___internal___type',
+  PluginCreatorChildren = 'pluginCreator___children',
+  PluginCreatorChildrenId = 'pluginCreator___children___id',
+  PluginCreatorChildrenParentId = 'pluginCreator___children___parent___id',
+  PluginCreatorChildrenParentChildren = 'pluginCreator___children___parent___children',
+  PluginCreatorChildrenChildren = 'pluginCreator___children___children',
+  PluginCreatorChildrenChildrenId = 'pluginCreator___children___children___id',
+  PluginCreatorChildrenChildrenChildren = 'pluginCreator___children___children___children',
+  PluginCreatorChildrenInternalContent = 'pluginCreator___children___internal___content',
+  PluginCreatorChildrenInternalContentDigest = 'pluginCreator___children___internal___contentDigest',
+  PluginCreatorChildrenInternalDescription = 'pluginCreator___children___internal___description',
+  PluginCreatorChildrenInternalFieldOwners = 'pluginCreator___children___internal___fieldOwners',
+  PluginCreatorChildrenInternalIgnoreType = 'pluginCreator___children___internal___ignoreType',
+  PluginCreatorChildrenInternalMediaType = 'pluginCreator___children___internal___mediaType',
+  PluginCreatorChildrenInternalOwner = 'pluginCreator___children___internal___owner',
+  PluginCreatorChildrenInternalType = 'pluginCreator___children___internal___type',
+  PluginCreatorInternalContent = 'pluginCreator___internal___content',
+  PluginCreatorInternalContentDigest = 'pluginCreator___internal___contentDigest',
+  PluginCreatorInternalDescription = 'pluginCreator___internal___description',
+  PluginCreatorInternalFieldOwners = 'pluginCreator___internal___fieldOwners',
+  PluginCreatorInternalIgnoreType = 'pluginCreator___internal___ignoreType',
+  PluginCreatorInternalMediaType = 'pluginCreator___internal___mediaType',
+  PluginCreatorInternalOwner = 'pluginCreator___internal___owner',
+  PluginCreatorInternalType = 'pluginCreator___internal___type',
+  PluginCreatorResolve = 'pluginCreator___resolve',
+  PluginCreatorName = 'pluginCreator___name',
+  PluginCreatorVersion = 'pluginCreator___version',
+  PluginCreatorPluginOptionsFieldName = 'pluginCreator___pluginOptions___fieldName',
+  PluginCreatorPluginOptionsUrl = 'pluginCreator___pluginOptions___url',
+  PluginCreatorPluginOptionsTypeName = 'pluginCreator___pluginOptions___typeName',
+  PluginCreatorPluginOptionsRefetchInterval = 'pluginCreator___pluginOptions___refetchInterval',
+  PluginCreatorPluginOptionsOptionsEmitWarning = 'pluginCreator___pluginOptions___options___emitWarning',
+  PluginCreatorPluginOptionsOptionsFailOnError = 'pluginCreator___pluginOptions___options___failOnError',
+  PluginCreatorPluginOptionsPath = 'pluginCreator___pluginOptions___path',
+  PluginCreatorPluginOptionsPathCheck = 'pluginCreator___pluginOptions___pathCheck',
+  PluginCreatorNodeApIs = 'pluginCreator___nodeAPIs',
+  PluginCreatorSsrApIs = 'pluginCreator___ssrAPIs',
+  PluginCreatorPluginFilepath = 'pluginCreator___pluginFilepath',
+  PluginCreatorPackageJsonName = 'pluginCreator___packageJson___name',
+  PluginCreatorPackageJsonDescription = 'pluginCreator___packageJson___description',
+  PluginCreatorPackageJsonVersion = 'pluginCreator___packageJson___version',
+  PluginCreatorPackageJsonMain = 'pluginCreator___packageJson___main',
+  PluginCreatorPackageJsonLicense = 'pluginCreator___packageJson___license',
+  PluginCreatorPackageJsonDependencies = 'pluginCreator___packageJson___dependencies',
+  PluginCreatorPackageJsonDependenciesName = 'pluginCreator___packageJson___dependencies___name',
+  PluginCreatorPackageJsonDependenciesVersion = 'pluginCreator___packageJson___dependencies___version',
+  PluginCreatorPackageJsonDevDependencies = 'pluginCreator___packageJson___devDependencies',
+  PluginCreatorPackageJsonDevDependenciesName = 'pluginCreator___packageJson___devDependencies___name',
+  PluginCreatorPackageJsonDevDependenciesVersion = 'pluginCreator___packageJson___devDependencies___version',
+  PluginCreatorPackageJsonPeerDependencies = 'pluginCreator___packageJson___peerDependencies',
+  PluginCreatorPackageJsonPeerDependenciesName = 'pluginCreator___packageJson___peerDependencies___name',
+  PluginCreatorPackageJsonPeerDependenciesVersion = 'pluginCreator___packageJson___peerDependencies___version',
+  PluginCreatorPackageJsonKeywords = 'pluginCreator___packageJson___keywords',
+  PluginCreatorId = 'pluginCreatorId',
+  ComponentPath = 'componentPath',
+}
+
+export enum SortOrderEnum {
+  Asc = 'ASC',
+  Desc = 'DESC',
+}
+
+export enum SitePluginFieldsEnum {
+  Id = 'id',
+  ParentId = 'parent___id',
+  ParentParentId = 'parent___parent___id',
+  ParentParentParentId = 'parent___parent___parent___id',
+  ParentParentParentChildren = 'parent___parent___parent___children',
+  ParentParentChildren = 'parent___parent___children',
+  ParentParentChildrenId = 'parent___parent___children___id',
+  ParentParentChildrenChildren = 'parent___parent___children___children',
+  ParentParentInternalContent = 'parent___parent___internal___content',
+  ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalDescription = 'parent___parent___internal___description',
+  ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
+  ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
+  ParentParentInternalMediaType = 'parent___parent___internal___mediaType',
+  ParentParentInternalOwner = 'parent___parent___internal___owner',
+  ParentParentInternalType = 'parent___parent___internal___type',
+  ParentChildren = 'parent___children',
+  ParentChildrenId = 'parent___children___id',
+  ParentChildrenParentId = 'parent___children___parent___id',
+  ParentChildrenParentChildren = 'parent___children___parent___children',
+  ParentChildrenChildren = 'parent___children___children',
+  ParentChildrenChildrenId = 'parent___children___children___id',
+  ParentChildrenChildrenChildren = 'parent___children___children___children',
+  ParentChildrenInternalContent = 'parent___children___internal___content',
+  ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalDescription = 'parent___children___internal___description',
+  ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
+  ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
+  ParentChildrenInternalMediaType = 'parent___children___internal___mediaType',
+  ParentChildrenInternalOwner = 'parent___children___internal___owner',
+  ParentChildrenInternalType = 'parent___children___internal___type',
+  ParentInternalContent = 'parent___internal___content',
+  ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalDescription = 'parent___internal___description',
+  ParentInternalFieldOwners = 'parent___internal___fieldOwners',
+  ParentInternalIgnoreType = 'parent___internal___ignoreType',
+  ParentInternalMediaType = 'parent___internal___mediaType',
+  ParentInternalOwner = 'parent___internal___owner',
+  ParentInternalType = 'parent___internal___type',
+  Children = 'children',
+  ChildrenId = 'children___id',
+  ChildrenParentId = 'children___parent___id',
+  ChildrenParentParentId = 'children___parent___parent___id',
+  ChildrenParentParentChildren = 'children___parent___parent___children',
+  ChildrenParentChildren = 'children___parent___children',
+  ChildrenParentChildrenId = 'children___parent___children___id',
+  ChildrenParentChildrenChildren = 'children___parent___children___children',
+  ChildrenParentInternalContent = 'children___parent___internal___content',
+  ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalDescription = 'children___parent___internal___description',
+  ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
+  ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
+  ChildrenParentInternalMediaType = 'children___parent___internal___mediaType',
+  ChildrenParentInternalOwner = 'children___parent___internal___owner',
+  ChildrenParentInternalType = 'children___parent___internal___type',
+  ChildrenChildren = 'children___children',
+  ChildrenChildrenId = 'children___children___id',
+  ChildrenChildrenParentId = 'children___children___parent___id',
+  ChildrenChildrenParentChildren = 'children___children___parent___children',
+  ChildrenChildrenChildren = 'children___children___children',
+  ChildrenChildrenChildrenId = 'children___children___children___id',
+  ChildrenChildrenChildrenChildren = 'children___children___children___children',
+  ChildrenChildrenInternalContent = 'children___children___internal___content',
+  ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalDescription = 'children___children___internal___description',
+  ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
+  ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
+  ChildrenChildrenInternalMediaType = 'children___children___internal___mediaType',
+  ChildrenChildrenInternalOwner = 'children___children___internal___owner',
+  ChildrenChildrenInternalType = 'children___children___internal___type',
+  ChildrenInternalContent = 'children___internal___content',
+  ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalDescription = 'children___internal___description',
+  ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
+  ChildrenInternalIgnoreType = 'children___internal___ignoreType',
+  ChildrenInternalMediaType = 'children___internal___mediaType',
+  ChildrenInternalOwner = 'children___internal___owner',
+  ChildrenInternalType = 'children___internal___type',
+  InternalContent = 'internal___content',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalDescription = 'internal___description',
+  InternalFieldOwners = 'internal___fieldOwners',
+  InternalIgnoreType = 'internal___ignoreType',
+  InternalMediaType = 'internal___mediaType',
+  InternalOwner = 'internal___owner',
+  InternalType = 'internal___type',
+  Resolve = 'resolve',
+  Name = 'name',
+  Version = 'version',
+  PluginOptionsFieldName = 'pluginOptions___fieldName',
+  PluginOptionsUrl = 'pluginOptions___url',
+  PluginOptionsTypeName = 'pluginOptions___typeName',
+  PluginOptionsRefetchInterval = 'pluginOptions___refetchInterval',
+  PluginOptionsOptionsEmitWarning = 'pluginOptions___options___emitWarning',
+  PluginOptionsOptionsFailOnError = 'pluginOptions___options___failOnError',
+  PluginOptionsPath = 'pluginOptions___path',
+  PluginOptionsPathCheck = 'pluginOptions___pathCheck',
+  NodeApIs = 'nodeAPIs',
+  SsrApIs = 'ssrAPIs',
+  PluginFilepath = 'pluginFilepath',
+  PackageJsonName = 'packageJson___name',
+  PackageJsonDescription = 'packageJson___description',
+  PackageJsonVersion = 'packageJson___version',
+  PackageJsonMain = 'packageJson___main',
+  PackageJsonLicense = 'packageJson___license',
+  PackageJsonDependencies = 'packageJson___dependencies',
+  PackageJsonDependenciesName = 'packageJson___dependencies___name',
+  PackageJsonDependenciesVersion = 'packageJson___dependencies___version',
+  PackageJsonDevDependencies = 'packageJson___devDependencies',
+  PackageJsonDevDependenciesName = 'packageJson___devDependencies___name',
+  PackageJsonDevDependenciesVersion = 'packageJson___devDependencies___version',
+  PackageJsonPeerDependencies = 'packageJson___peerDependencies',
+  PackageJsonPeerDependenciesName = 'packageJson___peerDependencies___name',
+  PackageJsonPeerDependenciesVersion = 'packageJson___peerDependencies___version',
+  PackageJsonKeywords = 'packageJson___keywords',
+}
+
+export enum SiteFieldsEnum {
+  Id = 'id',
+  ParentId = 'parent___id',
+  ParentParentId = 'parent___parent___id',
+  ParentParentParentId = 'parent___parent___parent___id',
+  ParentParentParentChildren = 'parent___parent___parent___children',
+  ParentParentChildren = 'parent___parent___children',
+  ParentParentChildrenId = 'parent___parent___children___id',
+  ParentParentChildrenChildren = 'parent___parent___children___children',
+  ParentParentInternalContent = 'parent___parent___internal___content',
+  ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalDescription = 'parent___parent___internal___description',
+  ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
+  ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
+  ParentParentInternalMediaType = 'parent___parent___internal___mediaType',
+  ParentParentInternalOwner = 'parent___parent___internal___owner',
+  ParentParentInternalType = 'parent___parent___internal___type',
+  ParentChildren = 'parent___children',
+  ParentChildrenId = 'parent___children___id',
+  ParentChildrenParentId = 'parent___children___parent___id',
+  ParentChildrenParentChildren = 'parent___children___parent___children',
+  ParentChildrenChildren = 'parent___children___children',
+  ParentChildrenChildrenId = 'parent___children___children___id',
+  ParentChildrenChildrenChildren = 'parent___children___children___children',
+  ParentChildrenInternalContent = 'parent___children___internal___content',
+  ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalDescription = 'parent___children___internal___description',
+  ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
+  ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
+  ParentChildrenInternalMediaType = 'parent___children___internal___mediaType',
+  ParentChildrenInternalOwner = 'parent___children___internal___owner',
+  ParentChildrenInternalType = 'parent___children___internal___type',
+  ParentInternalContent = 'parent___internal___content',
+  ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalDescription = 'parent___internal___description',
+  ParentInternalFieldOwners = 'parent___internal___fieldOwners',
+  ParentInternalIgnoreType = 'parent___internal___ignoreType',
+  ParentInternalMediaType = 'parent___internal___mediaType',
+  ParentInternalOwner = 'parent___internal___owner',
+  ParentInternalType = 'parent___internal___type',
+  Children = 'children',
+  ChildrenId = 'children___id',
+  ChildrenParentId = 'children___parent___id',
+  ChildrenParentParentId = 'children___parent___parent___id',
+  ChildrenParentParentChildren = 'children___parent___parent___children',
+  ChildrenParentChildren = 'children___parent___children',
+  ChildrenParentChildrenId = 'children___parent___children___id',
+  ChildrenParentChildrenChildren = 'children___parent___children___children',
+  ChildrenParentInternalContent = 'children___parent___internal___content',
+  ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalDescription = 'children___parent___internal___description',
+  ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
+  ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
+  ChildrenParentInternalMediaType = 'children___parent___internal___mediaType',
+  ChildrenParentInternalOwner = 'children___parent___internal___owner',
+  ChildrenParentInternalType = 'children___parent___internal___type',
+  ChildrenChildren = 'children___children',
+  ChildrenChildrenId = 'children___children___id',
+  ChildrenChildrenParentId = 'children___children___parent___id',
+  ChildrenChildrenParentChildren = 'children___children___parent___children',
+  ChildrenChildrenChildren = 'children___children___children',
+  ChildrenChildrenChildrenId = 'children___children___children___id',
+  ChildrenChildrenChildrenChildren = 'children___children___children___children',
+  ChildrenChildrenInternalContent = 'children___children___internal___content',
+  ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalDescription = 'children___children___internal___description',
+  ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
+  ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
+  ChildrenChildrenInternalMediaType = 'children___children___internal___mediaType',
+  ChildrenChildrenInternalOwner = 'children___children___internal___owner',
+  ChildrenChildrenInternalType = 'children___children___internal___type',
+  ChildrenInternalContent = 'children___internal___content',
+  ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalDescription = 'children___internal___description',
+  ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
+  ChildrenInternalIgnoreType = 'children___internal___ignoreType',
+  ChildrenInternalMediaType = 'children___internal___mediaType',
+  ChildrenInternalOwner = 'children___internal___owner',
+  ChildrenInternalType = 'children___internal___type',
+  InternalContent = 'internal___content',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalDescription = 'internal___description',
+  InternalFieldOwners = 'internal___fieldOwners',
+  InternalIgnoreType = 'internal___ignoreType',
+  InternalMediaType = 'internal___mediaType',
+  InternalOwner = 'internal___owner',
+  InternalType = 'internal___type',
+  SiteMetadataSiteName = 'siteMetadata___siteName',
+  Port = 'port',
+  Host = 'host',
+  PathPrefix = 'pathPrefix',
+  Polyfill = 'polyfill',
+  BuildTime = 'buildTime',
+}
+
+export enum GraphQlSourceFieldsEnum {
+  Id = 'id',
+  ParentId = 'parent___id',
+  ParentParentId = 'parent___parent___id',
+  ParentParentParentId = 'parent___parent___parent___id',
+  ParentParentParentChildren = 'parent___parent___parent___children',
+  ParentParentChildren = 'parent___parent___children',
+  ParentParentChildrenId = 'parent___parent___children___id',
+  ParentParentChildrenChildren = 'parent___parent___children___children',
+  ParentParentInternalContent = 'parent___parent___internal___content',
+  ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalDescription = 'parent___parent___internal___description',
+  ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
+  ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
+  ParentParentInternalMediaType = 'parent___parent___internal___mediaType',
+  ParentParentInternalOwner = 'parent___parent___internal___owner',
+  ParentParentInternalType = 'parent___parent___internal___type',
+  ParentChildren = 'parent___children',
+  ParentChildrenId = 'parent___children___id',
+  ParentChildrenParentId = 'parent___children___parent___id',
+  ParentChildrenParentChildren = 'parent___children___parent___children',
+  ParentChildrenChildren = 'parent___children___children',
+  ParentChildrenChildrenId = 'parent___children___children___id',
+  ParentChildrenChildrenChildren = 'parent___children___children___children',
+  ParentChildrenInternalContent = 'parent___children___internal___content',
+  ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalDescription = 'parent___children___internal___description',
+  ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
+  ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
+  ParentChildrenInternalMediaType = 'parent___children___internal___mediaType',
+  ParentChildrenInternalOwner = 'parent___children___internal___owner',
+  ParentChildrenInternalType = 'parent___children___internal___type',
+  ParentInternalContent = 'parent___internal___content',
+  ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalDescription = 'parent___internal___description',
+  ParentInternalFieldOwners = 'parent___internal___fieldOwners',
+  ParentInternalIgnoreType = 'parent___internal___ignoreType',
+  ParentInternalMediaType = 'parent___internal___mediaType',
+  ParentInternalOwner = 'parent___internal___owner',
+  ParentInternalType = 'parent___internal___type',
+  Children = 'children',
+  ChildrenId = 'children___id',
+  ChildrenParentId = 'children___parent___id',
+  ChildrenParentParentId = 'children___parent___parent___id',
+  ChildrenParentParentChildren = 'children___parent___parent___children',
+  ChildrenParentChildren = 'children___parent___children',
+  ChildrenParentChildrenId = 'children___parent___children___id',
+  ChildrenParentChildrenChildren = 'children___parent___children___children',
+  ChildrenParentInternalContent = 'children___parent___internal___content',
+  ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalDescription = 'children___parent___internal___description',
+  ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
+  ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
+  ChildrenParentInternalMediaType = 'children___parent___internal___mediaType',
+  ChildrenParentInternalOwner = 'children___parent___internal___owner',
+  ChildrenParentInternalType = 'children___parent___internal___type',
+  ChildrenChildren = 'children___children',
+  ChildrenChildrenId = 'children___children___id',
+  ChildrenChildrenParentId = 'children___children___parent___id',
+  ChildrenChildrenParentChildren = 'children___children___parent___children',
+  ChildrenChildrenChildren = 'children___children___children',
+  ChildrenChildrenChildrenId = 'children___children___children___id',
+  ChildrenChildrenChildrenChildren = 'children___children___children___children',
+  ChildrenChildrenInternalContent = 'children___children___internal___content',
+  ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalDescription = 'children___children___internal___description',
+  ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
+  ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
+  ChildrenChildrenInternalMediaType = 'children___children___internal___mediaType',
+  ChildrenChildrenInternalOwner = 'children___children___internal___owner',
+  ChildrenChildrenInternalType = 'children___children___internal___type',
+  ChildrenInternalContent = 'children___internal___content',
+  ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalDescription = 'children___internal___description',
+  ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
+  ChildrenInternalIgnoreType = 'children___internal___ignoreType',
+  ChildrenInternalMediaType = 'children___internal___mediaType',
+  ChildrenInternalOwner = 'children___internal___owner',
+  ChildrenInternalType = 'children___internal___type',
+  InternalContent = 'internal___content',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalDescription = 'internal___description',
+  InternalFieldOwners = 'internal___fieldOwners',
+  InternalIgnoreType = 'internal___ignoreType',
+  InternalMediaType = 'internal___mediaType',
+  InternalOwner = 'internal___owner',
+  InternalType = 'internal___type',
+  TypeName = 'typeName',
+  FieldName = 'fieldName',
 }
 
 export enum GraphCmsCacheControlScope {
-  PUBLIC = 'PUBLIC',
-  PRIVATE = 'PRIVATE',
+  Public = 'PUBLIC',
+  Private = 'PRIVATE',
 }
 
-/** A date string, such as 2007-12-03, compliant with the ISO 8601 standard  for representation of dates and times using the Gregorian calendar. */
+/** A date string, such as 2007-12-03, compliant with the ISO 8601 standard for representation of dates and times using the Gregorian calendar. */
 export type Date = any;
 
 export type GraphCmsUpload = any;
@@ -2789,47 +783,47 @@ export type IndexQueryVariables = {};
 export type IndexQueryQuery = {
   __typename?: 'Query';
 
-  site: IndexQuerySite | null;
+  site: Maybe<IndexQuerySite>;
 
-  cms: IndexQueryCms | null;
+  cms: Maybe<IndexQueryCms>;
 };
 
 export type IndexQuerySite = {
   __typename?: 'Site';
 
-  siteMetadata: IndexQuerySiteMetadata | null;
+  siteMetadata: Maybe<IndexQuerySiteMetadata>;
 };
 
 export type IndexQuerySiteMetadata = {
-  __typename?: 'siteMetadata_2';
+  __typename?: 'SiteSiteMetadata';
 
-  siteName: string | null;
+  siteName: Maybe<string>;
 };
 
 export type IndexQueryCms = {
   __typename?: 'GraphCMS';
 
-  productList: IndexQueryProductList | null;
+  productList: Maybe<IndexQueryProductList>;
 };
 
 export type IndexQueryProductList = {
   __typename?: 'GraphCMS_ProductList';
 
-  edges: IndexQueryEdges[] | null;
+  edges: Maybe<(Maybe<IndexQueryEdges>)[]>;
 };
 
 export type IndexQueryEdges = {
   __typename?: 'GraphCMS_ProductNode';
 
-  node: IndexQueryNode | null;
+  node: Maybe<IndexQueryNode>;
 };
 
 export type IndexQueryNode = {
   __typename?: 'GraphCMS_Product';
 
-  name: string | null;
+  name: Maybe<string>;
 
-  slug: string | null;
+  slug: Maybe<string>;
 };
 
 export type ProductTemplateVariables = {
@@ -2839,57 +833,55 @@ export type ProductTemplateVariables = {
 export type ProductTemplateQuery = {
   __typename?: 'Query';
 
-  site: ProductTemplateSite | null;
+  site: Maybe<ProductTemplateSite>;
 
-  cms: ProductTemplateCms | null;
+  cms: Maybe<ProductTemplateCms>;
 };
 
 export type ProductTemplateSite = {
   __typename?: 'Site';
 
-  siteMetadata: ProductTemplateSiteMetadata | null;
+  siteMetadata: Maybe<ProductTemplateSiteMetadata>;
 };
 
 export type ProductTemplateSiteMetadata = {
-  __typename?: 'siteMetadata_2';
+  __typename?: 'SiteSiteMetadata';
 
-  siteName: string | null;
+  siteName: Maybe<string>;
 };
 
 export type ProductTemplateCms = {
   __typename?: 'GraphCMS';
 
-  product: ProductTemplateProduct | null;
+  product: Maybe<ProductTemplateProduct>;
 };
 
 export type ProductTemplateProduct = {
   __typename?: 'GraphCMS_Product';
 
-  id: number | null;
+  id: Maybe<number>;
 
-  name: string | null;
+  name: Maybe<string>;
 
-  images: ProductTemplateImages[] | null;
+  images: Maybe<(Maybe<ProductTemplateImages>)[]>;
 };
 
 export type ProductTemplateImages = {
   __typename?: 'GraphCMS_ProductImages';
 
-  aspectRatio: number | null;
+  width: Maybe<number>;
 
-  width: number | null;
+  height: Maybe<number>;
 
-  height: number | null;
-
-  sizes: ProductTemplateSizes[] | null;
+  sizes: Maybe<(Maybe<ProductTemplateSizes>)[]>;
 };
 
 export type ProductTemplateSizes = {
   __typename?: 'GraphCMS_ProductImageSizes';
 
-  url: string | null;
+  url: Maybe<string>;
 
-  width: number | null;
+  width: Maybe<number>;
 
-  height: number | null;
+  height: Maybe<number>;
 };
