@@ -5,14 +5,14 @@
 [![Built with Styled Components](https://img.shields.io/badge/built%20with-styled%20components-db7093.svg)](https://www.styled-components.com/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-## 📦 Install
+## 🔨 Install
 
 ```bash
 npm install
 npm run bootstrap
 ```
 
-## Packages
+## 📦 Packages
 
 ### Store frontend
 
