@@ -16,23 +16,23 @@ npm run bootstrap
 
 ### Store frontend
 
-[@coterminous/store-fe](./packages/coterminous-store-fe)
+[@coterminous/store-fe](./packages/store-fe)
 
 React frontend for facilitating ecommerce transactions to end users.
 
 ### Store gateway
 
-[@coterminous/store-gw](./packages/coterminous-store-gw)
+[@coterminous/store-gw](./packages/store-gw)
 
-### Wordpress library
+### WordPress library
 
-[@coterminous/wp-lib](./packages/coterminous-wp-lib)
+[@coterminous/wp-lib](./packages/wp-lib)
 
-Wordpress and WooCommerce REST API helpers.
+WordPress and WooCommerce REST API helpers.
 
 ### User interface library
 
-[@coterminous/ui-lib](./packages/coterminous-ui-lib)
+[@coterminous/ui-lib](./packages/ui-lib)
 
 Visual primitives using [styled-components](https://www.styled-components.com/) for common usage to different frontend services.
 
