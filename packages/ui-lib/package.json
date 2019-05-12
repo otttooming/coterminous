@@ -15,6 +15,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook --ci",
     "build": "npm run clean && NODE_ENV=production webpack && npm run build:types",
     "build:lib": "npm run build",
+    "build:lib:watch": "npm run build:watch",
     "build:types": "tsc -p tsconfig.dist.json --extendedDiagnostics",
     "build:watch": "nodemon",
     "clean": "rm -rf dist",

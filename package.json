@@ -30,6 +30,8 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
+    "build:lib": "lerna run build:lib --parallel",
+    "build:lib:watch": "lerna run build:lib:watch --parallel",
     "start:ui": "lerna run storybook --scope @coterminous/ui-lib --stream",
     "start:gw": "lerna run dev --scope @coterminous/store-gw --stream",
     "start:fe": "lerna run start --scope @coterminous/store-fe --stream",

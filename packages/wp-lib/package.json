@@ -10,6 +10,7 @@
     "scripts": {
       "build": "npm run clean && tsc -p tsconfig.dist.json",
       "build:lib": "npm run build",
+      "build:lib:watch": "npm run build:watch",
       "build:watch": "nodemon",
       "clean": "rm -rf dist"
     },
