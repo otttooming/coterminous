@@ -12,6 +12,13 @@ npm install
 npm run bootstrap
 ```
 
+### Build library assets
+
+```bash
+npm run build:lib
+npm run build:lib:watch
+```
+
 ## 📦 Packages
 
 ### Store frontend
