@@ -7,8 +7,8 @@ import {
   GridTemplatesAreasProps,
   gridTemplateRows,
   gridTemplateColumns,
-  GridTemplatesColumnsProps,
-  GridTemplatesRowsProps,
+  GridTemplateColumnsProps,
+  GridTemplateRowsProps,
   gridTemplateAreas,
 } from 'styled-system';
 import { styleSystemCommon, styleSystemSpace } from '../../common/styleSystem';
@@ -20,8 +20,8 @@ interface WrapperProps
     StyleSystemSpaceProps,
     GridGapProps,
     GridTemplatesAreasProps,
-    GridTemplatesRowsProps,
-    GridTemplatesColumnsProps {}
+    GridTemplateRowsProps,
+    GridTemplateColumnsProps {}
 
 export interface GridProps
   extends React.HTMLAttributes<HTMLElement>,
