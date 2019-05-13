@@ -10,7 +10,6 @@ interface WrapperProps {
 
 const Figure = styled.figure<WrapperProps>`
   position: relative;
-  background-color: #fff;
   margin: 0;
   padding-bottom: ${({ aspectRatio }) => aspectRatio};
 `;
