@@ -87,14 +87,13 @@
     "start": "gatsby develop",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "build:lib": "npm run gen:graphql",
+    "build:graphql": "gql-gen",
     "dev": "npm run develop",
     "test": "jest --no-cache",
     "test:watch": "jest --watch",
     "sprite": "svg-sprite-generate -d ./static/assets -o ./static/sprite.svg",
     "get:omniva": "curl https://www.omniva.ee/locations.json -o ./static/shipping/omniva.json",
-    "get:smartpost": "curl https://uus.smartpost.ee/places.json -o ./static/shipping/smartpost.json",
-    "gen:graphql": "gql-gen"
+    "get:smartpost": "curl https://uus.smartpost.ee/places.json -o ./static/shipping/smartpost.json"
   },
   "jest": {
     "moduleFileExtensions": [
