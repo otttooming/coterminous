@@ -16,6 +16,6 @@
     },
     "devDependencies": {
       "isomorphic-unfetch": "3.0.0",
-      "nodemon": "1.18.9"
+      "nodemon": "1.19.0"
     }
   }
