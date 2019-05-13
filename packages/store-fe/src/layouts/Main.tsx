@@ -1,7 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
 // eslint-disable-next-line
-import { GlobalStyle } from '@coterminous/ui-lib';
+import { GlobalStyle, Grid, theme, GridItem } from '@coterminous/ui-lib';
 
 interface Props {
   children: React.ReactNode;
@@ -21,34 +21,34 @@ const Main = ({
   <>
     <GlobalStyle />
 
-    <div className="wrapper">
+    <Grid
+      gridTemplateAreas="'sidebar content'"
+      gridTemplateColumns="16rem 1fr"
+      gridGap={theme.space.xl}
+      maxWidth={1680}
+      ml="auto"
+      mr="auto"
+      pt={64}
+      pb={64}
+      pl={32}
+      pr={32}
+    >
       {!!renderHeader && renderHeader}
 
-      <div className="container">
-        <div className="row">
-          {!!renderSidebar && (
-            <aside className="col-lg-3 sidebar_grid hidden-md-down">
-              <div className="widget-container widget_desirees-subcategories">
-                <div className="widget-container cat-list">{renderSidebar}</div>
-              </div>
-            </aside>
-          )}
-
-          <div
-            className={`col-xs-12 ${
-              !!renderSidebar ? 'col-lg-9' : 'col-lg-12'
-            }`}
-          >
-            <main>{children}</main>
-
-            {!!renderAfterMain && renderAfterMain}
+      {!!renderSidebar && (
+        <GridItem as="aside" area="sidebar">
+          <div className="widget-container widget_desirees-subcategories">
+            <div className="widget-container cat-list">{renderSidebar}</div>
           </div>
-        </div>
-      </div>
-      {!!renderFooter && renderFooter}
-    </div>
+        </GridItem>
+      )}
 
-    <div className="bg__site" />
+      <GridItem as="main" area="content">
+        {children}
+      </GridItem>
+
+      {!!renderFooter && renderFooter}
+    </Grid>
   </>
 );
 

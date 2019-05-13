@@ -1,7 +1,15 @@
 import { graphql, Link } from 'gatsby';
 import * as React from 'react';
 import Main from '../layouts/Main';
-import Header from '../components/header/Header';
+import {
+  Image,
+  GridItem,
+  Heading,
+  Grid,
+  theme,
+  Card,
+} from '@coterminous/ui-lib';
+import { IndexQueryQuery } from '../generated-models';
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -44,26 +52,48 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
     const { data } = this.props;
     const { siteName } = this.props.data.site.siteMetadata;
     return (
-      <Main renderHeader={<Header />}>
-        <h1>{this.hello} Typescript world!</h1>
-        <p>
-          This site is named <strong>{siteName}</strong>
-        </p>
-        {data.cms.productList.edges.map((item: any, index: number) => (
-          <div key={index}>
-            <Link
-              to={`/${item.node.slug}/`}
-              activeStyle={{
-                color: 'red',
-              }}
-              state={{
-                pleasant: 'reasonably',
-              }}
-            >
-              {item.node.name}
-            </Link>
-          </div>
-        ))}
+      <Main
+        renderSidebar={
+          <Image
+            width={430}
+            height={160}
+            sizes={[
+              {
+                url:
+                  'https://www.aadliaare.ee/wp-content/uploads/2017/05/aadli_aare_logo.png',
+                width: 430,
+                height: 160,
+              },
+            ]}
+          />
+        }
+      >
+        <Heading as="h2">Product list</Heading>
+        <Grid
+          as="ul"
+          gridTemplateColumns="repeat(auto-fill, minmax(14rem, 1fr))"
+          gridGap={theme.space.xl}
+        >
+          {data.cms.productList.edges.map(
+            ({ node: { slug, name, images } }, index) => (
+              <GridItem key={index}>
+                <Link
+                  to={`/${slug}/`}
+                  activeStyle={{
+                    color: 'red',
+                  }}
+                  state={{
+                    pleasant: 'reasonably',
+                  }}
+                >
+                  <Card content={<>{name}</>}>
+                    <Image {...images[0]} />
+                  </Card>
+                </Link>
+              </GridItem>
+            ),
+          )}
+        </Grid>
       </Main>
     );
   }
