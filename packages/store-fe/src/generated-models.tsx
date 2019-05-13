@@ -824,6 +824,28 @@ export type IndexQueryNode = {
   name: Maybe<string>;
 
   slug: Maybe<string>;
+
+  images: Maybe<(Maybe<IndexQueryImages>)[]>;
+};
+
+export type IndexQueryImages = {
+  __typename?: 'GraphCMS_ProductImages';
+
+  width: Maybe<number>;
+
+  height: Maybe<number>;
+
+  sizes: Maybe<(Maybe<IndexQuerySizes>)[]>;
+};
+
+export type IndexQuerySizes = {
+  __typename?: 'GraphCMS_ProductImageSizes';
+
+  url: Maybe<string>;
+
+  width: Maybe<number>;
+
+  height: Maybe<number>;
 };
 
 export type ProductTemplateVariables = {

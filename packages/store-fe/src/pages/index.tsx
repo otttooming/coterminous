@@ -6,14 +6,7 @@ import Header from '../components/header/Header';
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
 interface IndexPageProps {
-  data: {
-    cms: any;
-    site: {
-      siteMetadata: {
-        siteName: string;
-      };
-    };
-  };
+  data: IndexQueryQuery;
 }
 
 export const pageQuery = graphql`
@@ -29,6 +22,15 @@ export const pageQuery = graphql`
           node {
             name
             slug
+            images {
+              width
+              height
+              sizes {
+                url
+                width
+                height
+              }
+            }
           }
         }
       }
