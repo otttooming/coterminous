@@ -86,9 +86,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                     pleasant: 'reasonably',
                   }}
                 >
-                  <Card content={<>{name}</>}>
-                    <Image {...images[0]} />
-                  </Card>
+                  <Card content={<Image {...images[0]} />}>{name}</Card>
                 </Link>
               </GridItem>
             ),
