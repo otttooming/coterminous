@@ -41,9 +41,9 @@ class Vertical extends React.Component<VerticalProps, any> {
 
     return (
       <Wrapper as={as} {...restProps}>
-        <ChildrenWrapper>{children}</ChildrenWrapper>
+        <ChildrenWrapper>{content}</ChildrenWrapper>
 
-        <Footer>{content}</Footer>
+        <Footer>{children}</Footer>
       </Wrapper>
     );
   }
