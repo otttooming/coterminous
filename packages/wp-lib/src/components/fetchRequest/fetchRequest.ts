@@ -3,44 +3,29 @@ import { GetUrlProps, getUrl } from '../getUrl/getUrl';
 
 interface Props {
   url: GetUrlProps;
-  options?: Options;
 }
 
 export interface ResponseMetaProps {
   url: GetUrlProps;
-  options?: Options;
   total: number;
   totalPages: number;
   hasNextPage: boolean;
   hasPreviousPage: boolean;
 }
 
-interface Response<P> {
+interface ResponseProps<P> {
   payload: P;
   meta: ResponseMetaProps;
 }
 
-interface Options {
-  type: FETCH_TYPE;
-}
-
-export enum FETCH_TYPE {
-  JSON = 'JSON',
-  TEXT = 'TEXT',
-}
-
 export async function fetchRequest<P>({
   url,
-  options,
-}: Props): Promise<Response<P> | null> {
+}: Props): Promise<ResponseProps<P> | null> {
   try {
-    const requestUrl: string = getUrl(url);
+    const requestUrl = getUrl(url);
 
     const response = await fetch(requestUrl);
-    const payload =
-      options && options.type && options.type === FETCH_TYPE.TEXT
-        ? await response.text()
-        : await response.json();
+    const payload = await response.json();
 
     const headers = response.headers;
 
@@ -62,7 +47,7 @@ export async function fetchRequest<P>({
       hasPreviousPage,
     };
 
-    const data: Response<P> = { payload, meta };
+    const data: ResponseProps<P> = { payload, meta };
 
     return data;
   } catch (error) {
