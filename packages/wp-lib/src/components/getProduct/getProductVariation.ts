@@ -15,7 +15,7 @@ async function getSingleVariation(
   variationId: number,
 ): Promise<ProductVariation | null> {
   const url: GetUrlProps = {
-    host: SITE,
+    site: SITE,
     paths: [
       ENDPOINT.WC,
       'products',

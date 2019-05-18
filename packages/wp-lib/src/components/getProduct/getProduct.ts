@@ -14,7 +14,7 @@ export interface Product {
 
 export async function getProduct(id: number): Promise<Product | null> {
   const url: GetUrlProps = {
-    host: SITE,
+    site: SITE,
     paths: [ENDPOINT.WC, 'products', String(id)],
   };
 

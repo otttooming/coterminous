@@ -54,7 +54,7 @@ export async function getProductList({
   };
 
   const url: GetUrlProps = {
-    host: SITE,
+    site: SITE,
     paths: [ENDPOINT.WC, 'products'],
     parameters: { ...defaultParameters, ...parameters },
   };

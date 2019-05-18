@@ -31,27 +31,27 @@ export interface Parameters {
 export const WP_MAIN_MENU_ID = 828;
 
 export interface GetUrlProps {
-  host: HostProps;
+  site: SiteProps;
   paths: string[];
   parameters?: Parameters;
 }
 
-interface HostProps {
+interface SiteProps {
   host: string;
   consumerKey: string;
   consumerSecret: string;
 }
 
 export function getUrl(props: GetUrlProps) {
-  const { host, paths = [], parameters = {} } = props;
+  const { site, paths = [], parameters = {} } = props;
 
-  const path = [host.host, 'wp-json', ...paths].join('/');
+  const path = [site.host, 'wp-json', ...paths].join('/');
   const params: string[] = getParameters(parameters);
 
   const parameter = [
     ...params,
-    `consumer_key=${host.consumerKey}`,
-    `consumer_secret=${host.consumerSecret}`,
+    `consumer_key=${site.consumerKey}`,
+    `consumer_secret=${site.consumerSecret}`,
   ].join('&');
 
   return `${path}/?${parameter}`;

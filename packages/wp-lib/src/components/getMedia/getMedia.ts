@@ -19,7 +19,7 @@ export interface MediaItemProps {
 export async function getMedia(id: number): Promise<MediaItemProps> {
   try {
     const url: GetUrlProps = {
-      host: SITE,
+      site: SITE,
       paths: [ENDPOINT.WP, 'media', String(id)],
     };
 
