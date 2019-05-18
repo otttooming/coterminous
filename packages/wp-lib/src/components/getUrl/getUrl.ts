@@ -12,10 +12,6 @@ export const ENDPOINT = {
   WP_API_MENUS: 'wp-api-menus/v2',
 };
 
-export enum UrlPaths {
-  PRODUCTS = 'products',
-}
-
 export type ParameterValue =
   | number
   | number[]
