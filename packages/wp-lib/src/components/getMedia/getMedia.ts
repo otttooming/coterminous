@@ -1,6 +1,7 @@
-import { ENDPOINT, SITE, GetUrlProps } from '../getUrl/getUrl';
+import { GetUrlProps } from '../getUrl/getUrl';
 import { MediaItemResponseTypes, Sizes } from './media.types';
 import { fetchRequest } from '../fetchRequest/fetchRequest';
+import { SITE, ENDPOINT } from '../../common/site';
 
 interface ImageSizes {
   file: string;

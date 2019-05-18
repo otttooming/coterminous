@@ -1,10 +1,10 @@
-import { ENDPOINT, SITE } from '../getUrl';
 import fetchRequest from '../fetchRequest';
 import { GetUrlProps } from '../getUrl/getUrl';
 import { SingleProductProps } from './getProductList';
 import { MediaItemProps } from '../getMedia/getMedia';
 import { getAllMedia } from '../getMedia';
 import { getProductVariations, ProductVariation } from './getProductVariation';
+import { SITE, ENDPOINT } from '../../common/site';
 
 export interface Product {
   product: SingleProductProps;

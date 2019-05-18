@@ -1,1 +1,1 @@
-export { ENDPOINT, SITE, getUrl } from './getUrl';
+export { getUrl } from './getUrl';

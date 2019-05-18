@@ -1,7 +1,7 @@
-import { ENDPOINT, SITE } from '../getUrl';
 import fetchRequest from '../fetchRequest';
 import { GetUrlProps } from '../getUrl/getUrl';
 import { SingleProductProps } from './getProductList';
+import { SITE, ENDPOINT } from '../../common/site';
 
 export interface ProductVariation {
   id: number;
