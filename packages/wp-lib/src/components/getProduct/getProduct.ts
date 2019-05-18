@@ -1,5 +1,5 @@
 import { ENDPOINT, SITE, getUrl } from '../getUrl';
-import { fetchRequest } from '../fetchRequest';
+import fetchRequest from '../fetchRequest';
 import { GetUrlProps } from '../getUrl/getUrl';
 import { SingleProductProps } from './getProductList';
 import { MediaItemProps } from '../getMedia/getMedia';
