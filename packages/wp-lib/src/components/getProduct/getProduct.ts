@@ -1,4 +1,4 @@
-import { ENDPOINT, SITE, getUrl } from '../getUrl';
+import { ENDPOINT, SITE } from '../getUrl';
 import fetchRequest from '../fetchRequest';
 import { GetUrlProps } from '../getUrl/getUrl';
 import { SingleProductProps } from './getProductList';
