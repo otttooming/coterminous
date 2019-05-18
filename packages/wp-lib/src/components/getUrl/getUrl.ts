@@ -32,7 +32,7 @@ export const WP_MAIN_MENU_ID = 828;
 
 export interface GetUrlProps {
   host: HostProps;
-  paths?: string[];
+  paths: string[];
   parameters?: Parameters;
 }
 
