@@ -51,6 +51,6 @@ export async function fetchRequest<P>({
 
     return data;
   } catch (error) {
-    return null;
+    return error;
   }
 }
