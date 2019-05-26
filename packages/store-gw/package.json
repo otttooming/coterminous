@@ -13,9 +13,11 @@
   "author": "Ott Tooming",
   "license": "ISC",
   "dependencies": {
+    "@coterminous/wp-lib": "*",
+    "apollo-link-context": "^1.0.17",
+    "apollo-link-http": "^1.5.14",
     "apollo-server-koa": "2.5.0",
-    "bottleneck": "2.18.1",
-    "@coterminous/wp-lib": "*"
+    "bottleneck": "2.18.1"
   },
   "devDependencies": {
     "@types/graphql": "14.2.0",
