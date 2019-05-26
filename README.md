@@ -43,7 +43,7 @@ WordPress and WooCommerce REST API helpers.
 
 Visual primitives using [styled-components](https://www.styled-components.com/) for common usage to different frontend services.
 
-## Structure
+## 🏗Structure
 
 - `[package-name]-fe` - frontend services
 - `[package-name]-be` - backend services
