@@ -1,22 +1,69 @@
 import * as React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Main from '../../layouts/Main';
 import Header from '../../components/header/Header';
 import ProductItem from '../../components/productItem/ProductItem';
 import { ProductTemplateQuery } from '../../generated-models';
+import {
+  Heading,
+  Grid,
+  GridItem,
+  Card,
+  Image,
+  theme,
+} from '@coterminous/ui-lib';
 
 interface Props {
   data: ProductTemplateQuery;
 }
 
-const ProductTemplate: React.FC<Props> = ({ data }) => {
+const ProductTemplate: React.FC<Props> = ({
+  data: {
+    cms: {
+      product: {
+        name,
+        description,
+        image: {
+          mediaDetails: { width, height },
+          srcSet,
+        },
+      },
+    },
+  },
+}) => {
   return (
-    <Main renderHeader={<Header />}>
-      {/* <ProductItem
-        product={data.cms.product}
-        images={data.cms.product.images}
-      /> */}
-      {data.cms.product.name}
+    <Main
+      renderSidebar={
+        <Image
+          width={430}
+          height={160}
+          srcSet={[
+            {
+              url:
+                'https://www.aadliaare.ee/wp-content/uploads/2017/05/aadli_aare_logo.png',
+              width: 430,
+              height: 160,
+            },
+          ]}
+        />
+      }
+    >
+      <Heading as="h2">{name}</Heading>
+      <Grid
+        gridTemplateAreas={`"left right"`}
+        gridTemplateColumns="480px 1fr"
+        gridGap={theme.space.xl}
+      >
+        <GridItem area="left">
+          <Card
+            content={<Image width={width} height={height} srcSet={srcSet} />}
+          />
+        </GridItem>
+        <GridItem
+          area="right"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
+      </Grid>
     </Main>
   );
 };
@@ -32,12 +79,13 @@ export const query = graphql`
       product(id: $id) {
         id
         name
-        galleryImages {
-          edges {
-            node {
-              srcSet
-            }
+        description
+        image {
+          mediaDetails {
+            width
+            height
           }
+          srcSet
         }
       }
     }

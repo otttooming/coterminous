@@ -8611,23 +8611,23 @@ export type ProductTemplateProduct = {
 
   name: Maybe<string>;
 
-  galleryImages: Maybe<ProductTemplateGalleryImages>;
+  description: Maybe<string>;
+
+  image: Maybe<ProductTemplateImage>;
 };
 
-export type ProductTemplateGalleryImages = {
-  __typename?: 'GraphCMS_ProductToMediaItemConnection';
-
-  edges: Maybe<(Maybe<ProductTemplateEdges>)[]>;
-};
-
-export type ProductTemplateEdges = {
-  __typename?: 'GraphCMS_ProductToMediaItemConnectionEdge';
-
-  node: Maybe<ProductTemplateNode>;
-};
-
-export type ProductTemplateNode = {
+export type ProductTemplateImage = {
   __typename?: 'GraphCMS_MediaItem';
 
+  mediaDetails: Maybe<ProductTemplateMediaDetails>;
+
   srcSet: Maybe<string>;
+};
+
+export type ProductTemplateMediaDetails = {
+  __typename?: 'GraphCMS_MediaDetails';
+
+  width: Maybe<number>;
+
+  height: Maybe<number>;
 };
