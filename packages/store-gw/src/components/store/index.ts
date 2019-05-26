@@ -1,0 +1,1 @@
+export { getStoreSchema } from './store';
