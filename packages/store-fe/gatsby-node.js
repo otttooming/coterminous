@@ -4,7 +4,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
     query productList {
       cms {
-        productList {
+        products {
           edges {
             node {
               id
@@ -20,7 +20,7 @@ exports.createPages = async ({ actions, graphql }) => {
   console.log('====================================');
   console.log(data);
   console.log('====================================');
-  data.cms.productList.edges.forEach(blog => {
+  data.cms.products.edges.forEach(blog => {
     actions.createPage({
       path: blog.node.slug,
       component: path.resolve(`./src/templates/product/Product.tsx`),

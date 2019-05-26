@@ -22,7 +22,7 @@ const ProductTemplate: React.FC<Props> = ({ data }) => {
 };
 
 export const query = graphql`
-  query ProductTemplate($id: Int!) {
+  query ProductTemplate($id: ID!) {
     site {
       siteMetadata {
         siteName
@@ -32,13 +32,11 @@ export const query = graphql`
       product(id: $id) {
         id
         name
-        images {
-          width
-          height
-          sizes {
-            url
-            width
-            height
+        galleryImages {
+          edges {
+            node {
+              srcSet
+            }
           }
         }
       }

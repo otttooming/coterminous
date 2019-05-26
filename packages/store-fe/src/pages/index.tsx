@@ -25,18 +25,34 @@ export const pageQuery = graphql`
       }
     }
     cms {
-      productList {
+      products {
         edges {
           node {
             name
             slug
-            images {
-              width
-              height
-              sizes {
-                url
+            price
+            salePrice
+            image {
+              mediaDetails {
                 width
                 height
+              }
+              srcSet
+            }
+            galleryImages {
+              edges {
+                node {
+                  srcSet
+                  mediaDetails {
+                    width
+                    height
+                    sizes {
+                      width
+                      height
+                      sourceUrl
+                    }
+                  }
+                }
               }
             }
           }
@@ -57,7 +73,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
           <Image
             width={430}
             height={160}
-            sizes={[
+            srcSet={[
               {
                 url:
                   'https://www.aadliaare.ee/wp-content/uploads/2017/05/aadli_aare_logo.png',
@@ -74,8 +90,20 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
           gridTemplateColumns="repeat(auto-fill, minmax(14rem, 1fr))"
           gridGap={theme.space.xl}
         >
-          {data.cms.productList.edges.map(
-            ({ node: { slug, name, images } }, index) => (
+          {data.cms.products.edges.map(
+            (
+              {
+                node: {
+                  slug,
+                  name,
+                  image: {
+                    srcSet,
+                    mediaDetails: { width, height },
+                  },
+                },
+              },
+              index,
+            ) => (
               <GridItem key={index}>
                 <Link
                   to={`/${slug}/`}
@@ -86,7 +114,13 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                     pleasant: 'reasonably',
                   }}
                 >
-                  <Card content={<Image {...images[0]} />}>{name}</Card>
+                  <Card
+                    content={
+                      <Image width={width} height={height} srcSet={srcSet} />
+                    }
+                  >
+                    {name}
+                  </Card>
                 </Link>
               </GridItem>
             ),
