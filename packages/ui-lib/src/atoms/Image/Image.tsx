@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { Image as ImageItem } from './Image.types';
+import { getSrcSet } from './image.helper';
 
 export type ImageProps = React.HTMLAttributes<HTMLElement> & ImageItem;
 
@@ -24,17 +25,16 @@ const ImageElement = styled.img`
 `;
 
 const Image: React.FC<ImageProps> = ({
-  sizes,
+  srcSet,
   width,
   height,
   ...restProps
 }) => {
-  const srcSet = sizes.map(item => `${item.url} ${item.width}w`).join();
   const aspectRatio = `${(height / width) * 100}%`;
 
   return (
     <Figure {...restProps} aspectRatio={aspectRatio}>
-      <ImageElement width={width} height={height} srcSet={srcSet} />
+      <ImageElement width={width} height={height} srcSet={getSrcSet(srcSet)} />
     </Figure>
   );
 };

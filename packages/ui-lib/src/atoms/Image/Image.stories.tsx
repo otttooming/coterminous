@@ -16,7 +16,7 @@ stories.add('Image', () => {
     width: 360,
     height: 640,
     aspectRatio: 100,
-    sizes: [
+    srcSet: [
       {
         url: 'https://dummyimage.com/360x640/333/aaa',
         width: 360,
@@ -29,7 +29,7 @@ stories.add('Image', () => {
     width: 640,
     height: 360,
     aspectRatio: 100,
-    sizes: [
+    srcSet: [
       {
         url: 'https://dummyimage.com/640x360/333/aaa',
         width: 640,

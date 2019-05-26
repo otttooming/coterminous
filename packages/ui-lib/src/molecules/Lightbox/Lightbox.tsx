@@ -3,14 +3,19 @@ import { PhotoSwipe, PhotoSwipeGalleryItem } from 'react-photoswipe';
 import Image from '../../atoms/Image';
 import Section from '../../atoms/Section';
 import { Lightbox as LightboxStyled } from './Lightbox.style';
-import { Image as ImageItem } from '../../atoms/Image/Image.types';
+import { Image as ImageItem, ImageSizes } from '../../atoms/Image/Image.types';
+import { Omit } from 'utility-types';
 
 interface PhotoSwipeGalleryOptions {
   history: boolean;
 }
 
+interface LightboxImageItem extends Omit<ImageItem, 'srcSet'> {
+  srcSet: ImageSizes[];
+}
+
 interface Props {
-  images: ImageItem[];
+  images: LightboxImageItem[];
   options: PhotoSwipeGalleryOptions;
   isOpen: boolean;
   onClose: () => void;
@@ -26,14 +31,16 @@ class Lightbox extends React.PureComponent<Props, any> {
     onClose: () => {},
   };
 
-  buildGalleryItems = (images: ImageItem[]): PhotoSwipeGalleryItem[] => {
-    return images.map(({ width: w, height: h, sizes }) => {
+  buildGalleryItems = (
+    images: LightboxImageItem[],
+  ): PhotoSwipeGalleryItem[] => {
+    return images.map(({ width: w, height: h, srcSet }) => {
       return {
         title: '',
-        src: sizes.reduce((prev, current) =>
+        src: srcSet.reduce((prev, current) =>
           prev.width > current.width ? prev : current,
         ).url,
-        thumbnail: sizes.reduce((prev, current) =>
+        thumbnail: srcSet.reduce((prev, current) =>
           prev.width < current.width ? prev : current,
         ).url,
         w,
@@ -61,7 +68,7 @@ class Lightbox extends React.PureComponent<Props, any> {
       width: 1200,
       height: 1200,
       aspectRatio: 100,
-      sizes: [
+      srcSet: [
         {
           url: 'https://dummyimage.com/1200x1200/fff/aaa',
           width: 1200,
