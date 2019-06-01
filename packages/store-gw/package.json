@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "nodemon",
-    "dev": "npm-run-all --parallel start playground",
-    "playground": "graphql playground",
+    "start": "node ./dist/index.js",
+    "start:watch": "nodemon",
+    "start:playground": "graphql playground",
+    "dev": "npm run build && npm-run-all --parallel start:watch start:playground",
+    "build": "tsc",
     "gen:graphql": "gql-gen"
   },
   "keywords": [],
