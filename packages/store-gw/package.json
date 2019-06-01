@@ -9,7 +9,7 @@
     "start:playground": "graphql playground",
     "dev": "npm run build && npm-run-all --parallel start:watch start:playground",
     "build": "tsc",
-    "gen:graphql": "gql-gen"
+    "build:graphql": "gql-gen"
   },
   "keywords": [],
   "author": "Ott Tooming",
