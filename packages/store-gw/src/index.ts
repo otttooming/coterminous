@@ -1,5 +1,4 @@
-import * as Koa from 'koa';
-import { ApolloServer } from 'apollo-server-koa';
+import { ApolloServer } from 'apollo-server';
 import { mergeSchemas } from 'graphql-tools';
 import { getStoreSchema } from './components/store';
 
@@ -10,13 +9,11 @@ async function startServer() {
     schemas: [storeSchema],
   });
 
-  const app = new Koa();
   const server = new ApolloServer({ schema, playground: true });
-  server.applyMiddleware({ app });
 
-  return app.listen({ port: 4000 });
+  return server.listen();
 }
 
-startServer().then(() => {
-  console.log(`🚀 Server ready`);
+startServer().then(({ url }) => {
+  console.log(`🚀 store:gw ready at ${url}`);
 });
