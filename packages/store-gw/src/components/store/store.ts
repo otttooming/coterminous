@@ -6,8 +6,8 @@ import { introspectSchema, makeRemoteExecutableSchema } from 'graphql-tools';
 export async function getStoreSchema() {
   const link = setContext(request => ({})).concat(
     new HttpLink({
-      uri: 'https://dev-spiceflow.pantheonsite.io/graphql',
-      fetch,
+      uri: 'https://dev-spiceflow.pantheonsite.io/en/graphql',
+      fetch: fetch as any,
     }),
   );
 
