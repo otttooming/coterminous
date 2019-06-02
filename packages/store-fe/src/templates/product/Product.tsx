@@ -20,7 +20,7 @@ interface Props {
 const ProductTemplate: React.FC<Props> = ({
   data: {
     cms: {
-      product: {
+      WP_product: {
         name,
         description,
         image: {
@@ -76,7 +76,7 @@ export const query = graphql`
       }
     }
     cms {
-      product(id: $id) {
+      WP_product(id: $id) {
         id
         name
         description
