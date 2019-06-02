@@ -290,17 +290,17 @@ export interface GraphQlSourceSortInput {
   order?: (Maybe<SortOrderEnum>)[];
 }
 /** Arguments for filtering the CartToCouponConnection connection */
-export interface GraphCmsCartToCouponConnectionWhereArgs {
+export interface GraphCmsWpCartToCouponConnectionWhereArgs {
   /** Limit result set to resources with a specific code. */
   code?: Maybe<string>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -311,12 +311,12 @@ export interface GraphCmsCartToCouponConnectionWhereArgs {
   search?: Maybe<string>;
 }
 /** Filter the connection based on input */
-export interface GraphCmsDateQueryInput {
-  after?: Maybe<GraphCmsDateInput>;
+export interface GraphCmsWpDateQueryInput {
+  after?: Maybe<GraphCmsWpDateInput>;
 
-  before?: Maybe<GraphCmsDateInput>;
+  before?: Maybe<GraphCmsWpDateInput>;
   /** Column to query against */
-  column?: Maybe<GraphCmsPostObjectsConnectionDateColumnEnum>;
+  column?: Maybe<GraphCmsWpPostObjectsConnectionDateColumnEnum>;
   /** For after/before, whether exact value should be matched or not */
   compare?: Maybe<string>;
   /** Day of the month (from 1 to 31) */
@@ -330,7 +330,7 @@ export interface GraphCmsDateQueryInput {
   /** Month number (from 1 to 12) */
   month?: Maybe<number>;
   /** OR or AND, how the sub-arrays should be compared */
-  relation?: Maybe<GraphCmsRelationEnum>;
+  relation?: Maybe<GraphCmsWpRelationEnum>;
   /** Second (0 to 59) */
   second?: Maybe<number>;
   /** Week of the year (from 0 to 53) */
@@ -339,7 +339,7 @@ export interface GraphCmsDateQueryInput {
   year?: Maybe<number>;
 }
 /** Date values */
-export interface GraphCmsDateInput {
+export interface GraphCmsWpDateInput {
   /** Day of the month (from 1 to 31) */
   day?: Maybe<number>;
   /** Month number (from 1 to 12) */
@@ -348,13 +348,13 @@ export interface GraphCmsDateInput {
   year?: Maybe<number>;
 }
 /** Options for ordering the connection */
-export interface GraphCmsWcConnectionOrderbyInput {
-  field: GraphCmsWcConnectionOrderbyEnum;
+export interface GraphCmsWpWcConnectionOrderbyInput {
+  field: GraphCmsWpWcConnectionOrderbyEnum;
 
-  order?: Maybe<GraphCmsOrderEnum>;
+  order?: Maybe<GraphCmsWpOrderEnum>;
 }
 /** Arguments for filtering the CouponToProductCategoryConnection connection */
-export interface GraphCmsCouponToProductCategoryConnectionWhereArgs {
+export interface GraphCmsWpCouponToProductCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -380,7 +380,7 @@ export interface GraphCmsCouponToProductCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -399,7 +399,7 @@ export interface GraphCmsCouponToProductCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the ProductCategoryToProductCategoryConnection connection */
-export interface GraphCmsProductCategoryToProductCategoryConnectionWhereArgs {
+export interface GraphCmsWpProductCategoryToProductCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -425,7 +425,7 @@ export interface GraphCmsProductCategoryToProductCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -444,7 +444,7 @@ export interface GraphCmsProductCategoryToProductCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the ProductCategoryToProductConnection connection */
-export interface GraphCmsProductCategoryToProductConnectionWhereArgs {
+export interface GraphCmsWpProductCategoryToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -462,7 +462,7 @@ export interface GraphCmsProductCategoryToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -476,7 +476,7 @@ export interface GraphCmsProductCategoryToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -494,7 +494,7 @@ export interface GraphCmsProductCategoryToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -508,18 +508,18 @@ export interface GraphCmsProductCategoryToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the ProductToProductCategoryConnection connection */
-export interface GraphCmsProductToProductCategoryConnectionWhereArgs {
+export interface GraphCmsWpProductToProductCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -545,7 +545,7 @@ export interface GraphCmsProductToProductCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -564,7 +564,7 @@ export interface GraphCmsProductToProductCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the ProductToProductConnection connection */
-export interface GraphCmsProductToProductConnectionWhereArgs {
+export interface GraphCmsWpProductToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -582,7 +582,7 @@ export interface GraphCmsProductToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -596,7 +596,7 @@ export interface GraphCmsProductToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -614,7 +614,7 @@ export interface GraphCmsProductToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -628,18 +628,18 @@ export interface GraphCmsProductToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the ProductToMediaItemConnection connection */
-export interface GraphCmsProductToMediaItemConnectionWhereArgs {
+export interface GraphCmsWpProductToMediaItemConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -657,7 +657,7 @@ export interface GraphCmsProductToMediaItemConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -665,7 +665,7 @@ export interface GraphCmsProductToMediaItemConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -673,7 +673,7 @@ export interface GraphCmsProductToMediaItemConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -685,9 +685,9 @@ export interface GraphCmsProductToMediaItemConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
 
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -704,13 +704,13 @@ export interface GraphCmsProductToMediaItemConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Options for ordering the connection */
-export interface GraphCmsPostObjectsConnectionOrderbyInput {
-  field: GraphCmsPostObjectsConnectionOrderbyEnum;
+export interface GraphCmsWpPostObjectsConnectionOrderbyInput {
+  field: GraphCmsWpPostObjectsConnectionOrderbyEnum;
 
-  order?: Maybe<GraphCmsOrderEnum>;
+  order?: Maybe<GraphCmsWpOrderEnum>;
 }
 /** Arguments for filtering the UserToCommentConnection connection */
-export interface GraphCmsUserToCommentConnectionWhereArgs {
+export interface GraphCmsWpUserToCommentConnectionWhereArgs {
   /** Comment author email address. */
   authorEmail?: Maybe<string>;
   /** Array of author IDs to include comments for. */
@@ -746,17 +746,17 @@ export interface GraphCmsUserToCommentConnectionWhereArgs {
   /** Content Object parent ID to retrieve affiliated comments for. */
   contentParent?: Maybe<number>;
   /** Array of content object statuses to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentStatus?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  contentStatus?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  contentType?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
   /** Array of IDs or email addresses of users whose unapproved comments will be returned by the query regardless of $status. Default empty */
   includeUnapproved?: Maybe<(Maybe<string>)[]>;
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<number>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<GraphCmsOrderEnum>;
+  order?: Maybe<GraphCmsWpOrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<GraphCmsCommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpCommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<number>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -771,7 +771,7 @@ export interface GraphCmsUserToCommentConnectionWhereArgs {
   userId?: Maybe<string>;
 }
 /** Arguments for filtering the CommentToCommentConnection connection */
-export interface GraphCmsCommentToCommentConnectionWhereArgs {
+export interface GraphCmsWpCommentToCommentConnectionWhereArgs {
   /** Comment author email address. */
   authorEmail?: Maybe<string>;
   /** Array of author IDs to include comments for. */
@@ -807,17 +807,17 @@ export interface GraphCmsCommentToCommentConnectionWhereArgs {
   /** Content Object parent ID to retrieve affiliated comments for. */
   contentParent?: Maybe<number>;
   /** Array of content object statuses to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentStatus?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  contentStatus?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  contentType?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
   /** Array of IDs or email addresses of users whose unapproved comments will be returned by the query regardless of $status. Default empty */
   includeUnapproved?: Maybe<(Maybe<string>)[]>;
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<number>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<GraphCmsOrderEnum>;
+  order?: Maybe<GraphCmsWpOrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<GraphCmsCommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpCommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<number>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -832,7 +832,7 @@ export interface GraphCmsCommentToCommentConnectionWhereArgs {
   userId?: Maybe<string>;
 }
 /** Arguments for filtering the UserToMediaItemConnection connection */
-export interface GraphCmsUserToMediaItemConnectionWhereArgs {
+export interface GraphCmsWpUserToMediaItemConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -850,7 +850,7 @@ export interface GraphCmsUserToMediaItemConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -858,7 +858,7 @@ export interface GraphCmsUserToMediaItemConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -866,7 +866,7 @@ export interface GraphCmsUserToMediaItemConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -878,9 +878,9 @@ export interface GraphCmsUserToMediaItemConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
 
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -897,7 +897,7 @@ export interface GraphCmsUserToMediaItemConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the UserToPageConnection connection */
-export interface GraphCmsUserToPageConnectionWhereArgs {
+export interface GraphCmsWpUserToPageConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -915,7 +915,7 @@ export interface GraphCmsUserToPageConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -923,7 +923,7 @@ export interface GraphCmsUserToPageConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -931,7 +931,7 @@ export interface GraphCmsUserToPageConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -943,9 +943,9 @@ export interface GraphCmsUserToPageConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
 
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -962,7 +962,7 @@ export interface GraphCmsUserToPageConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the PageToPageConnection connection */
-export interface GraphCmsPageToPageConnectionWhereArgs {
+export interface GraphCmsWpPageToPageConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -980,7 +980,7 @@ export interface GraphCmsPageToPageConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -988,7 +988,7 @@ export interface GraphCmsPageToPageConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -996,7 +996,7 @@ export interface GraphCmsPageToPageConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -1008,9 +1008,9 @@ export interface GraphCmsPageToPageConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
 
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -1027,7 +1027,7 @@ export interface GraphCmsPageToPageConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the PageToCommentConnection connection */
-export interface GraphCmsPageToCommentConnectionWhereArgs {
+export interface GraphCmsWpPageToCommentConnectionWhereArgs {
   /** Comment author email address. */
   authorEmail?: Maybe<string>;
   /** Array of author IDs to include comments for. */
@@ -1063,17 +1063,17 @@ export interface GraphCmsPageToCommentConnectionWhereArgs {
   /** Content Object parent ID to retrieve affiliated comments for. */
   contentParent?: Maybe<number>;
   /** Array of content object statuses to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentStatus?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  contentStatus?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  contentType?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
   /** Array of IDs or email addresses of users whose unapproved comments will be returned by the query regardless of $status. Default empty */
   includeUnapproved?: Maybe<(Maybe<string>)[]>;
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<number>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<GraphCmsOrderEnum>;
+  order?: Maybe<GraphCmsWpOrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<GraphCmsCommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpCommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<number>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -1088,7 +1088,7 @@ export interface GraphCmsPageToCommentConnectionWhereArgs {
   userId?: Maybe<string>;
 }
 /** Arguments for filtering the PageToRevisionConnection connection */
-export interface GraphCmsPageToRevisionConnectionWhereArgs {
+export interface GraphCmsWpPageToRevisionConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -1106,7 +1106,7 @@ export interface GraphCmsPageToRevisionConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -1114,7 +1114,7 @@ export interface GraphCmsPageToRevisionConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -1122,7 +1122,7 @@ export interface GraphCmsPageToRevisionConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -1134,9 +1134,9 @@ export interface GraphCmsPageToRevisionConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
 
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -1153,7 +1153,7 @@ export interface GraphCmsPageToRevisionConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the CategoryToCategoryConnection connection */
-export interface GraphCmsCategoryToCategoryConnectionWhereArgs {
+export interface GraphCmsWpCategoryToCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -1179,7 +1179,7 @@ export interface GraphCmsCategoryToCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -1198,7 +1198,7 @@ export interface GraphCmsCategoryToCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the CategoryToPostConnection connection */
-export interface GraphCmsCategoryToPostConnectionWhereArgs {
+export interface GraphCmsWpCategoryToPostConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -1216,7 +1216,7 @@ export interface GraphCmsCategoryToPostConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -1224,7 +1224,7 @@ export interface GraphCmsCategoryToPostConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -1232,7 +1232,7 @@ export interface GraphCmsCategoryToPostConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -1244,9 +1244,9 @@ export interface GraphCmsCategoryToPostConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
 
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -1263,7 +1263,7 @@ export interface GraphCmsCategoryToPostConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the TagToPostConnection connection */
-export interface GraphCmsTagToPostConnectionWhereArgs {
+export interface GraphCmsWpTagToPostConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -1281,7 +1281,7 @@ export interface GraphCmsTagToPostConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -1289,7 +1289,7 @@ export interface GraphCmsTagToPostConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -1297,7 +1297,7 @@ export interface GraphCmsTagToPostConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -1309,9 +1309,9 @@ export interface GraphCmsTagToPostConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
 
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -1328,7 +1328,7 @@ export interface GraphCmsTagToPostConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the ProductTagToProductConnection connection */
-export interface GraphCmsProductTagToProductConnectionWhereArgs {
+export interface GraphCmsWpProductTagToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1346,7 +1346,7 @@ export interface GraphCmsProductTagToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1360,7 +1360,7 @@ export interface GraphCmsProductTagToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1378,7 +1378,7 @@ export interface GraphCmsProductTagToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1392,18 +1392,18 @@ export interface GraphCmsProductTagToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaHindToProductConnection connection */
-export interface GraphCmsPaHindToProductConnectionWhereArgs {
+export interface GraphCmsWpPaHindToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1421,7 +1421,7 @@ export interface GraphCmsPaHindToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1435,7 +1435,7 @@ export interface GraphCmsPaHindToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1453,7 +1453,7 @@ export interface GraphCmsPaHindToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1467,18 +1467,18 @@ export interface GraphCmsPaHindToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaHindToProductVariationConnection connection */
-export interface GraphCmsPaHindToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaHindToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1496,7 +1496,7 @@ export interface GraphCmsPaHindToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1510,7 +1510,7 @@ export interface GraphCmsPaHindToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1528,7 +1528,7 @@ export interface GraphCmsPaHindToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1542,18 +1542,18 @@ export interface GraphCmsPaHindToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaHulkToProductConnection connection */
-export interface GraphCmsPaHulkToProductConnectionWhereArgs {
+export interface GraphCmsWpPaHulkToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1571,7 +1571,7 @@ export interface GraphCmsPaHulkToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1585,7 +1585,7 @@ export interface GraphCmsPaHulkToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1603,7 +1603,7 @@ export interface GraphCmsPaHulkToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1617,18 +1617,18 @@ export interface GraphCmsPaHulkToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaHulkToProductVariationConnection connection */
-export interface GraphCmsPaHulkToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaHulkToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1646,7 +1646,7 @@ export interface GraphCmsPaHulkToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1660,7 +1660,7 @@ export interface GraphCmsPaHulkToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1678,7 +1678,7 @@ export interface GraphCmsPaHulkToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1692,18 +1692,18 @@ export interface GraphCmsPaHulkToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKasutusaegToProductConnection connection */
-export interface GraphCmsPaKasutusaegToProductConnectionWhereArgs {
+export interface GraphCmsWpPaKasutusaegToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1721,7 +1721,7 @@ export interface GraphCmsPaKasutusaegToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1735,7 +1735,7 @@ export interface GraphCmsPaKasutusaegToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1753,7 +1753,7 @@ export interface GraphCmsPaKasutusaegToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1767,18 +1767,18 @@ export interface GraphCmsPaKasutusaegToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKasutusaegToProductVariationConnection connection */
-export interface GraphCmsPaKasutusaegToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaKasutusaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1796,7 +1796,7 @@ export interface GraphCmsPaKasutusaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1810,7 +1810,7 @@ export interface GraphCmsPaKasutusaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1828,7 +1828,7 @@ export interface GraphCmsPaKasutusaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1842,18 +1842,18 @@ export interface GraphCmsPaKasutusaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKogusToProductConnection connection */
-export interface GraphCmsPaKogusToProductConnectionWhereArgs {
+export interface GraphCmsWpPaKogusToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1871,7 +1871,7 @@ export interface GraphCmsPaKogusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1885,7 +1885,7 @@ export interface GraphCmsPaKogusToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1903,7 +1903,7 @@ export interface GraphCmsPaKogusToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1917,18 +1917,18 @@ export interface GraphCmsPaKogusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKogusToProductVariationConnection connection */
-export interface GraphCmsPaKogusToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaKogusToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1946,7 +1946,7 @@ export interface GraphCmsPaKogusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1960,7 +1960,7 @@ export interface GraphCmsPaKogusToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1978,7 +1978,7 @@ export interface GraphCmsPaKogusToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1992,18 +1992,18 @@ export interface GraphCmsPaKogusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKontuurToProductConnection connection */
-export interface GraphCmsPaKontuurToProductConnectionWhereArgs {
+export interface GraphCmsWpPaKontuurToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2021,7 +2021,7 @@ export interface GraphCmsPaKontuurToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2035,7 +2035,7 @@ export interface GraphCmsPaKontuurToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2053,7 +2053,7 @@ export interface GraphCmsPaKontuurToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2067,18 +2067,18 @@ export interface GraphCmsPaKontuurToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKontuurToProductVariationConnection connection */
-export interface GraphCmsPaKontuurToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaKontuurToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2096,7 +2096,7 @@ export interface GraphCmsPaKontuurToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2110,7 +2110,7 @@ export interface GraphCmsPaKontuurToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2128,7 +2128,7 @@ export interface GraphCmsPaKontuurToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2142,18 +2142,18 @@ export interface GraphCmsPaKontuurToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKoostisainedToProductConnection connection */
-export interface GraphCmsPaKoostisainedToProductConnectionWhereArgs {
+export interface GraphCmsWpPaKoostisainedToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2171,7 +2171,7 @@ export interface GraphCmsPaKoostisainedToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2185,7 +2185,7 @@ export interface GraphCmsPaKoostisainedToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2203,7 +2203,7 @@ export interface GraphCmsPaKoostisainedToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2217,18 +2217,18 @@ export interface GraphCmsPaKoostisainedToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKoostisainedToProductVariationConnection connection */
-export interface GraphCmsPaKoostisainedToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaKoostisainedToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2246,7 +2246,7 @@ export interface GraphCmsPaKoostisainedToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2260,7 +2260,7 @@ export interface GraphCmsPaKoostisainedToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2278,7 +2278,7 @@ export interface GraphCmsPaKoostisainedToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2292,18 +2292,18 @@ export interface GraphCmsPaKoostisainedToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaLaadimisaegToProductConnection connection */
-export interface GraphCmsPaLaadimisaegToProductConnectionWhereArgs {
+export interface GraphCmsWpPaLaadimisaegToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2321,7 +2321,7 @@ export interface GraphCmsPaLaadimisaegToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2335,7 +2335,7 @@ export interface GraphCmsPaLaadimisaegToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2353,7 +2353,7 @@ export interface GraphCmsPaLaadimisaegToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2367,18 +2367,18 @@ export interface GraphCmsPaLaadimisaegToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaLaadimisaegToProductVariationConnection connection */
-export interface GraphCmsPaLaadimisaegToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaLaadimisaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2396,7 +2396,7 @@ export interface GraphCmsPaLaadimisaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2410,7 +2410,7 @@ export interface GraphCmsPaLaadimisaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2428,7 +2428,7 @@ export interface GraphCmsPaLaadimisaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2442,18 +2442,18 @@ export interface GraphCmsPaLaadimisaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaMaterjalToProductConnection connection */
-export interface GraphCmsPaMaterjalToProductConnectionWhereArgs {
+export interface GraphCmsWpPaMaterjalToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2471,7 +2471,7 @@ export interface GraphCmsPaMaterjalToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2485,7 +2485,7 @@ export interface GraphCmsPaMaterjalToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2503,7 +2503,7 @@ export interface GraphCmsPaMaterjalToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2517,18 +2517,18 @@ export interface GraphCmsPaMaterjalToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaMaterjalToProductVariationConnection connection */
-export interface GraphCmsPaMaterjalToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaMaterjalToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2546,7 +2546,7 @@ export interface GraphCmsPaMaterjalToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2560,7 +2560,7 @@ export interface GraphCmsPaMaterjalToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2578,7 +2578,7 @@ export interface GraphCmsPaMaterjalToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2592,18 +2592,18 @@ export interface GraphCmsPaMaterjalToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaMuratasaToProductConnection connection */
-export interface GraphCmsPaMuratasaToProductConnectionWhereArgs {
+export interface GraphCmsWpPaMuratasaToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2621,7 +2621,7 @@ export interface GraphCmsPaMuratasaToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2635,7 +2635,7 @@ export interface GraphCmsPaMuratasaToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2653,7 +2653,7 @@ export interface GraphCmsPaMuratasaToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2667,18 +2667,18 @@ export interface GraphCmsPaMuratasaToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaMuratasaToProductVariationConnection connection */
-export interface GraphCmsPaMuratasaToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaMuratasaToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2696,7 +2696,7 @@ export interface GraphCmsPaMuratasaToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2710,7 +2710,7 @@ export interface GraphCmsPaMuratasaToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2728,7 +2728,7 @@ export interface GraphCmsPaMuratasaToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2742,18 +2742,18 @@ export interface GraphCmsPaMuratasaToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaOhutusToProductConnection connection */
-export interface GraphCmsPaOhutusToProductConnectionWhereArgs {
+export interface GraphCmsWpPaOhutusToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2771,7 +2771,7 @@ export interface GraphCmsPaOhutusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2785,7 +2785,7 @@ export interface GraphCmsPaOhutusToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2803,7 +2803,7 @@ export interface GraphCmsPaOhutusToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2817,18 +2817,18 @@ export interface GraphCmsPaOhutusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaOhutusToProductVariationConnection connection */
-export interface GraphCmsPaOhutusToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaOhutusToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2846,7 +2846,7 @@ export interface GraphCmsPaOhutusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2860,7 +2860,7 @@ export interface GraphCmsPaOhutusToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2878,7 +2878,7 @@ export interface GraphCmsPaOhutusToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2892,18 +2892,18 @@ export interface GraphCmsPaOhutusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaPatareidToProductConnection connection */
-export interface GraphCmsPaPatareidToProductConnectionWhereArgs {
+export interface GraphCmsWpPaPatareidToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2921,7 +2921,7 @@ export interface GraphCmsPaPatareidToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2935,7 +2935,7 @@ export interface GraphCmsPaPatareidToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2953,7 +2953,7 @@ export interface GraphCmsPaPatareidToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2967,18 +2967,18 @@ export interface GraphCmsPaPatareidToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaPatareidToProductVariationConnection connection */
-export interface GraphCmsPaPatareidToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaPatareidToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2996,7 +2996,7 @@ export interface GraphCmsPaPatareidToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3010,7 +3010,7 @@ export interface GraphCmsPaPatareidToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3028,7 +3028,7 @@ export interface GraphCmsPaPatareidToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3042,18 +3042,18 @@ export interface GraphCmsPaPatareidToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaSuurusToProductConnection connection */
-export interface GraphCmsPaSuurusToProductConnectionWhereArgs {
+export interface GraphCmsWpPaSuurusToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3071,7 +3071,7 @@ export interface GraphCmsPaSuurusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3085,7 +3085,7 @@ export interface GraphCmsPaSuurusToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3103,7 +3103,7 @@ export interface GraphCmsPaSuurusToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3117,18 +3117,18 @@ export interface GraphCmsPaSuurusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaSuurusToProductVariationConnection connection */
-export interface GraphCmsPaSuurusToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaSuurusToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3146,7 +3146,7 @@ export interface GraphCmsPaSuurusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3160,7 +3160,7 @@ export interface GraphCmsPaSuurusToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3178,7 +3178,7 @@ export interface GraphCmsPaSuurusToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3192,18 +3192,18 @@ export interface GraphCmsPaSuurusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaVariantToProductConnection connection */
-export interface GraphCmsPaVariantToProductConnectionWhereArgs {
+export interface GraphCmsWpPaVariantToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3221,7 +3221,7 @@ export interface GraphCmsPaVariantToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3235,7 +3235,7 @@ export interface GraphCmsPaVariantToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3253,7 +3253,7 @@ export interface GraphCmsPaVariantToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3267,18 +3267,18 @@ export interface GraphCmsPaVariantToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaVariantToProductVariationConnection connection */
-export interface GraphCmsPaVariantToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaVariantToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3296,7 +3296,7 @@ export interface GraphCmsPaVariantToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3310,7 +3310,7 @@ export interface GraphCmsPaVariantToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3328,7 +3328,7 @@ export interface GraphCmsPaVariantToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3342,18 +3342,18 @@ export interface GraphCmsPaVariantToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaVarvToProductConnection connection */
-export interface GraphCmsPaVarvToProductConnectionWhereArgs {
+export interface GraphCmsWpPaVarvToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3371,7 +3371,7 @@ export interface GraphCmsPaVarvToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3385,7 +3385,7 @@ export interface GraphCmsPaVarvToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3403,7 +3403,7 @@ export interface GraphCmsPaVarvToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3417,18 +3417,18 @@ export interface GraphCmsPaVarvToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaVarvToProductVariationConnection connection */
-export interface GraphCmsPaVarvToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaVarvToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3446,7 +3446,7 @@ export interface GraphCmsPaVarvToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3460,7 +3460,7 @@ export interface GraphCmsPaVarvToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3478,7 +3478,7 @@ export interface GraphCmsPaVarvToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3492,18 +3492,18 @@ export interface GraphCmsPaVarvToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaVeekindlusToProductConnection connection */
-export interface GraphCmsPaVeekindlusToProductConnectionWhereArgs {
+export interface GraphCmsWpPaVeekindlusToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3521,7 +3521,7 @@ export interface GraphCmsPaVeekindlusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3535,7 +3535,7 @@ export interface GraphCmsPaVeekindlusToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3553,7 +3553,7 @@ export interface GraphCmsPaVeekindlusToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3567,18 +3567,18 @@ export interface GraphCmsPaVeekindlusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaVeekindlusToProductVariationConnection connection */
-export interface GraphCmsPaVeekindlusToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpPaVeekindlusToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3596,7 +3596,7 @@ export interface GraphCmsPaVeekindlusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3610,7 +3610,7 @@ export interface GraphCmsPaVeekindlusToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3628,7 +3628,7 @@ export interface GraphCmsPaVeekindlusToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3642,18 +3642,18 @@ export interface GraphCmsPaVeekindlusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the UserToPostConnection connection */
-export interface GraphCmsUserToPostConnectionWhereArgs {
+export interface GraphCmsWpUserToPostConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -3671,7 +3671,7 @@ export interface GraphCmsUserToPostConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -3679,7 +3679,7 @@ export interface GraphCmsUserToPostConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -3687,7 +3687,7 @@ export interface GraphCmsUserToPostConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -3699,9 +3699,9 @@ export interface GraphCmsUserToPostConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
 
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -3718,7 +3718,7 @@ export interface GraphCmsUserToPostConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the UserToRevisionConnection connection */
-export interface GraphCmsUserToRevisionConnectionWhereArgs {
+export interface GraphCmsWpUserToRevisionConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -3736,7 +3736,7 @@ export interface GraphCmsUserToRevisionConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -3744,7 +3744,7 @@ export interface GraphCmsUserToRevisionConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -3752,7 +3752,7 @@ export interface GraphCmsUserToRevisionConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -3779,7 +3779,7 @@ export interface GraphCmsUserToRevisionConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the PostToCategoryConnection connection */
-export interface GraphCmsPostToCategoryConnectionWhereArgs {
+export interface GraphCmsWpPostToCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -3805,7 +3805,7 @@ export interface GraphCmsPostToCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -3824,7 +3824,7 @@ export interface GraphCmsPostToCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the PostToCommentConnection connection */
-export interface GraphCmsPostToCommentConnectionWhereArgs {
+export interface GraphCmsWpPostToCommentConnectionWhereArgs {
   /** Comment author email address. */
   authorEmail?: Maybe<string>;
   /** Array of author IDs to include comments for. */
@@ -3860,17 +3860,17 @@ export interface GraphCmsPostToCommentConnectionWhereArgs {
   /** Content Object parent ID to retrieve affiliated comments for. */
   contentParent?: Maybe<number>;
   /** Array of content object statuses to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentStatus?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  contentStatus?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  contentType?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
   /** Array of IDs or email addresses of users whose unapproved comments will be returned by the query regardless of $status. Default empty */
   includeUnapproved?: Maybe<(Maybe<string>)[]>;
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<number>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<GraphCmsOrderEnum>;
+  order?: Maybe<GraphCmsWpOrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<GraphCmsCommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpCommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<number>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -3885,7 +3885,7 @@ export interface GraphCmsPostToCommentConnectionWhereArgs {
   userId?: Maybe<string>;
 }
 /** Arguments for filtering the PostToRevisionConnection connection */
-export interface GraphCmsPostToRevisionConnectionWhereArgs {
+export interface GraphCmsWpPostToRevisionConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -3903,7 +3903,7 @@ export interface GraphCmsPostToRevisionConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -3911,7 +3911,7 @@ export interface GraphCmsPostToRevisionConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -3919,7 +3919,7 @@ export interface GraphCmsPostToRevisionConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -3931,9 +3931,9 @@ export interface GraphCmsPostToRevisionConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
 
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -3950,7 +3950,7 @@ export interface GraphCmsPostToRevisionConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the PostToTagConnection connection */
-export interface GraphCmsPostToTagConnectionWhereArgs {
+export interface GraphCmsWpPostToTagConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -3976,7 +3976,7 @@ export interface GraphCmsPostToTagConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -3995,7 +3995,7 @@ export interface GraphCmsPostToTagConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the MediaItemToCommentConnection connection */
-export interface GraphCmsMediaItemToCommentConnectionWhereArgs {
+export interface GraphCmsWpMediaItemToCommentConnectionWhereArgs {
   /** Comment author email address. */
   authorEmail?: Maybe<string>;
   /** Array of author IDs to include comments for. */
@@ -4031,17 +4031,17 @@ export interface GraphCmsMediaItemToCommentConnectionWhereArgs {
   /** Content Object parent ID to retrieve affiliated comments for. */
   contentParent?: Maybe<number>;
   /** Array of content object statuses to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentStatus?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  contentStatus?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  contentType?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
   /** Array of IDs or email addresses of users whose unapproved comments will be returned by the query regardless of $status. Default empty */
   includeUnapproved?: Maybe<(Maybe<string>)[]>;
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<number>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<GraphCmsOrderEnum>;
+  order?: Maybe<GraphCmsWpOrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<GraphCmsCommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpCommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<number>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -4056,7 +4056,7 @@ export interface GraphCmsMediaItemToCommentConnectionWhereArgs {
   userId?: Maybe<string>;
 }
 /** Arguments for filtering the ProductToProductTagConnection connection */
-export interface GraphCmsProductToProductTagConnectionWhereArgs {
+export interface GraphCmsWpProductToProductTagConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4082,7 +4082,7 @@ export interface GraphCmsProductToProductTagConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4101,7 +4101,7 @@ export interface GraphCmsProductToProductTagConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the ProductToProductVariationConnection connection */
-export interface GraphCmsProductToProductVariationConnectionWhereArgs {
+export interface GraphCmsWpProductToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -4119,7 +4119,7 @@ export interface GraphCmsProductToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -4133,7 +4133,7 @@ export interface GraphCmsProductToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -4151,7 +4151,7 @@ export interface GraphCmsProductToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -4165,18 +4165,18 @@ export interface GraphCmsProductToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the CouponToProductConnection connection */
-export interface GraphCmsCouponToProductConnectionWhereArgs {
+export interface GraphCmsWpCouponToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -4194,7 +4194,7 @@ export interface GraphCmsCouponToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -4208,7 +4208,7 @@ export interface GraphCmsCouponToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -4226,7 +4226,7 @@ export interface GraphCmsCouponToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -4240,18 +4240,18 @@ export interface GraphCmsCouponToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the CouponToCustomerConnection connection */
-export interface GraphCmsCouponToCustomerConnectionWhereArgs {
+export interface GraphCmsWpCouponToCustomerConnectionWhereArgs {
   /** Limit result set to resources with a specific email. */
   email?: Maybe<string>;
   /** Ensure result set excludes specific IDs. */
@@ -4259,28 +4259,28 @@ export interface GraphCmsCouponToCustomerConnectionWhereArgs {
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** Order of results. */
-  order?: Maybe<GraphCmsOrderEnum>;
+  order?: Maybe<GraphCmsWpOrderEnum>;
   /** Order results by a specific field. */
-  orderby?: Maybe<GraphCmsCustomerConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpCustomerConnectionOrderbyEnum>;
   /** Limit result set to resources with a specific role. */
-  role?: Maybe<GraphCmsUserRoleEnum>;
+  role?: Maybe<GraphCmsWpUserRoleEnum>;
   /** Limit result set to resources with a specific group of roles. */
-  roleIn?: Maybe<(Maybe<GraphCmsUserRoleEnum>)[]>;
+  roleIn?: Maybe<(Maybe<GraphCmsWpUserRoleEnum>)[]>;
   /** Limit result set to resources not within a specific group of roles. */
-  roleNotIn?: Maybe<(Maybe<GraphCmsUserRoleEnum>)[]>;
+  roleNotIn?: Maybe<(Maybe<GraphCmsWpUserRoleEnum>)[]>;
   /** Limit results to those matching a string. */
   search?: Maybe<string>;
 }
 /** Arguments for filtering the OrderToRefundConnection connection */
-export interface GraphCmsOrderToRefundConnectionWhereArgs {
+export interface GraphCmsWpOrderToRefundConnectionWhereArgs {
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Limit result set to refunds from a specific group of order IDs. */
   orderIn?: Maybe<(Maybe<number>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
@@ -4295,19 +4295,19 @@ export interface GraphCmsOrderToRefundConnectionWhereArgs {
   statuses?: Maybe<(Maybe<string>)[]>;
 }
 /** Arguments for filtering the CustomerToOrderConnection connection */
-export interface GraphCmsCustomerToOrderConnectionWhereArgs {
+export interface GraphCmsWpCustomerToOrderConnectionWhereArgs {
   /** Limit result set to orders assigned a specific customer. */
   customerId?: Maybe<number>;
   /** Limit result set to orders assigned a specific group of customers. */
   customersIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -4319,18 +4319,18 @@ export interface GraphCmsCustomerToOrderConnectionWhereArgs {
   /** Limit results to those matching a string. */
   search?: Maybe<string>;
   /** Limit result set to orders assigned a specific status. */
-  statuses?: Maybe<(Maybe<GraphCmsOrderStatusEnum>)[]>;
+  statuses?: Maybe<(Maybe<GraphCmsWpOrderStatusEnum>)[]>;
 }
 /** Arguments for filtering the CustomerToRefundConnection connection */
-export interface GraphCmsCustomerToRefundConnectionWhereArgs {
+export interface GraphCmsWpCustomerToRefundConnectionWhereArgs {
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Limit result set to refunds from a specific group of order IDs. */
   orderIn?: Maybe<(Maybe<number>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
@@ -4345,12 +4345,12 @@ export interface GraphCmsCustomerToRefundConnectionWhereArgs {
   statuses?: Maybe<(Maybe<string>)[]>;
 }
 /** Arguments for filtering the CartToCartItemConnection connection */
-export interface GraphCmsCartToCartItemConnectionWhereArgs {
+export interface GraphCmsWpCartToCartItemConnectionWhereArgs {
   /** Limit results to cart item that require shipping */
   needShipping?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToCategoryConnection connection */
-export interface GraphCmsRootQueryToCategoryConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4376,7 +4376,7 @@ export interface GraphCmsRootQueryToCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4395,7 +4395,7 @@ export interface GraphCmsRootQueryToCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToCommentConnection connection */
-export interface GraphCmsRootQueryToCommentConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToCommentConnectionWhereArgs {
   /** Comment author email address. */
   authorEmail?: Maybe<string>;
   /** Array of author IDs to include comments for. */
@@ -4431,17 +4431,17 @@ export interface GraphCmsRootQueryToCommentConnectionWhereArgs {
   /** Content Object parent ID to retrieve affiliated comments for. */
   contentParent?: Maybe<number>;
   /** Array of content object statuses to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentStatus?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  contentStatus?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  contentType?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
   /** Array of IDs or email addresses of users whose unapproved comments will be returned by the query regardless of $status. Default empty */
   includeUnapproved?: Maybe<(Maybe<string>)[]>;
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<number>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<GraphCmsOrderEnum>;
+  order?: Maybe<GraphCmsWpOrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<GraphCmsCommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpCommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<number>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -4456,17 +4456,17 @@ export interface GraphCmsRootQueryToCommentConnectionWhereArgs {
   userId?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToCouponConnection connection */
-export interface GraphCmsRootQueryToCouponConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToCouponConnectionWhereArgs {
   /** Limit result set to resources with a specific code. */
   code?: Maybe<string>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -4477,7 +4477,7 @@ export interface GraphCmsRootQueryToCouponConnectionWhereArgs {
   search?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToCustomerConnection connection */
-export interface GraphCmsRootQueryToCustomerConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToCustomerConnectionWhereArgs {
   /** Limit result set to resources with a specific email. */
   email?: Maybe<string>;
   /** Ensure result set excludes specific IDs. */
@@ -4485,20 +4485,20 @@ export interface GraphCmsRootQueryToCustomerConnectionWhereArgs {
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** Order of results. */
-  order?: Maybe<GraphCmsOrderEnum>;
+  order?: Maybe<GraphCmsWpOrderEnum>;
   /** Order results by a specific field. */
-  orderby?: Maybe<GraphCmsCustomerConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpCustomerConnectionOrderbyEnum>;
   /** Limit result set to resources with a specific role. */
-  role?: Maybe<GraphCmsUserRoleEnum>;
+  role?: Maybe<GraphCmsWpUserRoleEnum>;
   /** Limit result set to resources with a specific group of roles. */
-  roleIn?: Maybe<(Maybe<GraphCmsUserRoleEnum>)[]>;
+  roleIn?: Maybe<(Maybe<GraphCmsWpUserRoleEnum>)[]>;
   /** Limit result set to resources not within a specific group of roles. */
-  roleNotIn?: Maybe<(Maybe<GraphCmsUserRoleEnum>)[]>;
+  roleNotIn?: Maybe<(Maybe<GraphCmsWpUserRoleEnum>)[]>;
   /** Limit results to those matching a string. */
   search?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToMediaItemConnection connection */
-export interface GraphCmsRootQueryToMediaItemConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToMediaItemConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -4516,7 +4516,7 @@ export interface GraphCmsRootQueryToMediaItemConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -4524,7 +4524,7 @@ export interface GraphCmsRootQueryToMediaItemConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -4532,7 +4532,7 @@ export interface GraphCmsRootQueryToMediaItemConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -4544,9 +4544,9 @@ export interface GraphCmsRootQueryToMediaItemConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
 
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -4563,49 +4563,49 @@ export interface GraphCmsRootQueryToMediaItemConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the MenuToMenuItemConnection connection */
-export interface GraphCmsMenuToMenuItemConnectionWhereArgs {
+export interface GraphCmsWpMenuToMenuItemConnectionWhereArgs {
   /** The ID of the object */
   id?: Maybe<number>;
   /** The menu location for the menu being queried */
-  location?: Maybe<GraphCmsMenuLocationEnum>;
+  location?: Maybe<GraphCmsWpMenuLocationEnum>;
 }
 /** Arguments for filtering the MenuItemToMenuItemConnection connection */
-export interface GraphCmsMenuItemToMenuItemConnectionWhereArgs {
+export interface GraphCmsWpMenuItemToMenuItemConnectionWhereArgs {
   /** The ID of the object */
   id?: Maybe<number>;
   /** The menu location for the menu being queried */
-  location?: Maybe<GraphCmsMenuLocationEnum>;
+  location?: Maybe<GraphCmsWpMenuLocationEnum>;
 }
 /** Arguments for filtering the RootQueryToMenuItemConnection connection */
-export interface GraphCmsRootQueryToMenuItemConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToMenuItemConnectionWhereArgs {
   /** The ID of the object */
   id?: Maybe<number>;
   /** The menu location for the menu being queried */
-  location?: Maybe<GraphCmsMenuLocationEnum>;
+  location?: Maybe<GraphCmsWpMenuLocationEnum>;
 }
 /** Arguments for filtering the RootQueryToMenuConnection connection */
-export interface GraphCmsRootQueryToMenuConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToMenuConnectionWhereArgs {
   /** The ID of the object */
   id?: Maybe<number>;
   /** The menu location for the menu being queried */
-  location?: Maybe<GraphCmsMenuLocationEnum>;
+  location?: Maybe<GraphCmsWpMenuLocationEnum>;
   /** The slug of the menu to query items for */
   slug?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToOrderConnection connection */
-export interface GraphCmsRootQueryToOrderConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToOrderConnectionWhereArgs {
   /** Limit result set to orders assigned a specific customer. */
   customerId?: Maybe<number>;
   /** Limit result set to orders assigned a specific group of customers. */
   customersIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -4617,10 +4617,10 @@ export interface GraphCmsRootQueryToOrderConnectionWhereArgs {
   /** Limit results to those matching a string. */
   search?: Maybe<string>;
   /** Limit result set to orders assigned a specific status. */
-  statuses?: Maybe<(Maybe<GraphCmsOrderStatusEnum>)[]>;
+  statuses?: Maybe<(Maybe<GraphCmsWpOrderStatusEnum>)[]>;
 }
 /** Arguments for filtering the RootQueryToPaHindConnection connection */
-export interface GraphCmsRootQueryToPaHindConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaHindConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4646,7 +4646,7 @@ export interface GraphCmsRootQueryToPaHindConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4665,7 +4665,7 @@ export interface GraphCmsRootQueryToPaHindConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaHulkConnection connection */
-export interface GraphCmsRootQueryToPaHulkConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaHulkConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4691,7 +4691,7 @@ export interface GraphCmsRootQueryToPaHulkConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4710,7 +4710,7 @@ export interface GraphCmsRootQueryToPaHulkConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaKasutusaegConnection connection */
-export interface GraphCmsRootQueryToPaKasutusaegConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaKasutusaegConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4736,7 +4736,7 @@ export interface GraphCmsRootQueryToPaKasutusaegConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4755,7 +4755,7 @@ export interface GraphCmsRootQueryToPaKasutusaegConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaKogusConnection connection */
-export interface GraphCmsRootQueryToPaKogusConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaKogusConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4781,7 +4781,7 @@ export interface GraphCmsRootQueryToPaKogusConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4800,7 +4800,7 @@ export interface GraphCmsRootQueryToPaKogusConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaKontuurConnection connection */
-export interface GraphCmsRootQueryToPaKontuurConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaKontuurConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4826,7 +4826,7 @@ export interface GraphCmsRootQueryToPaKontuurConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4845,7 +4845,7 @@ export interface GraphCmsRootQueryToPaKontuurConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaKoostisainedConnection connection */
-export interface GraphCmsRootQueryToPaKoostisainedConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaKoostisainedConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4871,7 +4871,7 @@ export interface GraphCmsRootQueryToPaKoostisainedConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4890,7 +4890,7 @@ export interface GraphCmsRootQueryToPaKoostisainedConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaLaadimisaegConnection connection */
-export interface GraphCmsRootQueryToPaLaadimisaegConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaLaadimisaegConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4916,7 +4916,7 @@ export interface GraphCmsRootQueryToPaLaadimisaegConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4935,7 +4935,7 @@ export interface GraphCmsRootQueryToPaLaadimisaegConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaMaterjalConnection connection */
-export interface GraphCmsRootQueryToPaMaterjalConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaMaterjalConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4961,7 +4961,7 @@ export interface GraphCmsRootQueryToPaMaterjalConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4980,7 +4980,7 @@ export interface GraphCmsRootQueryToPaMaterjalConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaMuratasaConnection connection */
-export interface GraphCmsRootQueryToPaMuratasaConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaMuratasaConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5006,7 +5006,7 @@ export interface GraphCmsRootQueryToPaMuratasaConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5025,7 +5025,7 @@ export interface GraphCmsRootQueryToPaMuratasaConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaOhutusConnection connection */
-export interface GraphCmsRootQueryToPaOhutusConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaOhutusConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5051,7 +5051,7 @@ export interface GraphCmsRootQueryToPaOhutusConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5070,7 +5070,7 @@ export interface GraphCmsRootQueryToPaOhutusConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaPatareidConnection connection */
-export interface GraphCmsRootQueryToPaPatareidConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaPatareidConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5096,7 +5096,7 @@ export interface GraphCmsRootQueryToPaPatareidConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5115,7 +5115,7 @@ export interface GraphCmsRootQueryToPaPatareidConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaSuurusConnection connection */
-export interface GraphCmsRootQueryToPaSuurusConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaSuurusConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5141,7 +5141,7 @@ export interface GraphCmsRootQueryToPaSuurusConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5160,7 +5160,7 @@ export interface GraphCmsRootQueryToPaSuurusConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaVariantConnection connection */
-export interface GraphCmsRootQueryToPaVariantConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaVariantConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5186,7 +5186,7 @@ export interface GraphCmsRootQueryToPaVariantConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5205,7 +5205,7 @@ export interface GraphCmsRootQueryToPaVariantConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaVarvConnection connection */
-export interface GraphCmsRootQueryToPaVarvConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaVarvConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5231,7 +5231,7 @@ export interface GraphCmsRootQueryToPaVarvConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5250,7 +5250,7 @@ export interface GraphCmsRootQueryToPaVarvConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaVeekindlusConnection connection */
-export interface GraphCmsRootQueryToPaVeekindlusConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPaVeekindlusConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5276,7 +5276,7 @@ export interface GraphCmsRootQueryToPaVeekindlusConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5295,7 +5295,7 @@ export interface GraphCmsRootQueryToPaVeekindlusConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPageConnection connection */
-export interface GraphCmsRootQueryToPageConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPageConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -5313,7 +5313,7 @@ export interface GraphCmsRootQueryToPageConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -5321,7 +5321,7 @@ export interface GraphCmsRootQueryToPageConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -5329,7 +5329,7 @@ export interface GraphCmsRootQueryToPageConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -5341,9 +5341,9 @@ export interface GraphCmsRootQueryToPageConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
 
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -5360,7 +5360,7 @@ export interface GraphCmsRootQueryToPageConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToPostConnection connection */
-export interface GraphCmsRootQueryToPostConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToPostConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -5378,7 +5378,7 @@ export interface GraphCmsRootQueryToPostConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -5386,7 +5386,7 @@ export interface GraphCmsRootQueryToPostConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -5394,7 +5394,7 @@ export interface GraphCmsRootQueryToPostConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -5406,9 +5406,9 @@ export interface GraphCmsRootQueryToPostConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<GraphCmsPostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<GraphCmsWpPostStatusEnum>)[]>;
 
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -5425,7 +5425,7 @@ export interface GraphCmsRootQueryToPostConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToProductCategoryConnection connection */
-export interface GraphCmsRootQueryToProductCategoryConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToProductCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5451,7 +5451,7 @@ export interface GraphCmsRootQueryToProductCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5470,7 +5470,7 @@ export interface GraphCmsRootQueryToProductCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToProductTagConnection connection */
-export interface GraphCmsRootQueryToProductTagConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToProductTagConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5496,7 +5496,7 @@ export interface GraphCmsRootQueryToProductTagConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5515,7 +5515,7 @@ export interface GraphCmsRootQueryToProductTagConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToProductTypeConnection connection */
-export interface GraphCmsRootQueryToProductTypeConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToProductTypeConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5541,7 +5541,7 @@ export interface GraphCmsRootQueryToProductTypeConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5560,7 +5560,7 @@ export interface GraphCmsRootQueryToProductTypeConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToProductConnection connection */
-export interface GraphCmsRootQueryToProductConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -5578,7 +5578,7 @@ export interface GraphCmsRootQueryToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -5592,7 +5592,7 @@ export interface GraphCmsRootQueryToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -5610,7 +5610,7 @@ export interface GraphCmsRootQueryToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<GraphCmsStockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<GraphCmsWpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -5624,26 +5624,26 @@ export interface GraphCmsRootQueryToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCmsProductTypesEnum>;
+  type?: Maybe<GraphCmsWpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<GraphCmsProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<GraphCmsWpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCmsCatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCmsWpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the RootQueryToRefundConnection connection */
-export interface GraphCmsRootQueryToRefundConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToRefundConnectionWhereArgs {
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsWcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpWcConnectionOrderbyInput>)[]>;
   /** Limit result set to refunds from a specific group of order IDs. */
   orderIn?: Maybe<(Maybe<number>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
@@ -5658,7 +5658,7 @@ export interface GraphCmsRootQueryToRefundConnectionWhereArgs {
   statuses?: Maybe<(Maybe<string>)[]>;
 }
 /** Arguments for filtering the RootQueryToRevisionConnection connection */
-export interface GraphCmsRootQueryToRevisionConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToRevisionConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -5676,7 +5676,7 @@ export interface GraphCmsRootQueryToRevisionConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCmsDateQueryInput>;
+  dateQuery?: Maybe<GraphCmsWpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -5684,7 +5684,7 @@ export interface GraphCmsRootQueryToRevisionConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -5692,7 +5692,7 @@ export interface GraphCmsRootQueryToRevisionConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsPostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -5719,7 +5719,7 @@ export interface GraphCmsRootQueryToRevisionConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToShippingClassConnection connection */
-export interface GraphCmsRootQueryToShippingClassConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToShippingClassConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5745,7 +5745,7 @@ export interface GraphCmsRootQueryToShippingClassConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5764,7 +5764,7 @@ export interface GraphCmsRootQueryToShippingClassConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToTagConnection connection */
-export interface GraphCmsRootQueryToTagConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToTagConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5790,7 +5790,7 @@ export interface GraphCmsRootQueryToTagConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5809,24 +5809,24 @@ export interface GraphCmsRootQueryToTagConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToTaxRateConnection connection */
-export interface GraphCmsRootQueryToTaxRateConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToTaxRateConnectionWhereArgs {
   /** Sort by tax class */
   class?: Maybe<string>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<GraphCmsTaxRateConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<GraphCmsWpTaxRateConnectionOrderbyInput>)[]>;
 }
 /** Options for ordering the connection */
-export interface GraphCmsTaxRateConnectionOrderbyInput {
-  field: GraphCmsTaxRateConnectionOrderbyEnum;
+export interface GraphCmsWpTaxRateConnectionOrderbyInput {
+  field: GraphCmsWpTaxRateConnectionOrderbyEnum;
 
-  order?: Maybe<GraphCmsOrderEnum>;
+  order?: Maybe<GraphCmsWpOrderEnum>;
 }
 /** Arguments for filtering the RootQueryToUserConnection connection */
-export interface GraphCmsRootQueryToUserConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToUserConnectionWhereArgs {
   /** Array of IDs of users whose unapproved comments will be returned by the query regardless of status. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Pass an array of post types to filter results to users who have published posts in those post types. */
-  hasPublishedPosts?: Maybe<(Maybe<GraphCmsPostTypeEnum>)[]>;
+  hasPublishedPosts?: Maybe<(Maybe<GraphCmsWpPostTypeEnum>)[]>;
   /** Array of comment IDs to include. */
   include?: Maybe<(Maybe<number>)[]>;
   /** The user login. */
@@ -5842,18 +5842,18 @@ export interface GraphCmsRootQueryToUserConnectionWhereArgs {
   /** An array of nicenames to exclude. Users matching one of these nicenames will not be included in results. */
   nicenameNotIn?: Maybe<(Maybe<string>)[]>;
   /** An array of role names that users must match to be included in results. Note that this is an inclusive list: users must match *each* role. */
-  role?: Maybe<GraphCmsUserRoleEnum>;
+  role?: Maybe<GraphCmsWpUserRoleEnum>;
   /** An array of role names. Matched users must have at least one of these roles. */
-  roleIn?: Maybe<(Maybe<GraphCmsUserRoleEnum>)[]>;
+  roleIn?: Maybe<(Maybe<GraphCmsWpUserRoleEnum>)[]>;
   /** An array of role names to exclude. Users matching one or more of these roles will not be included in results. */
-  roleNotIn?: Maybe<(Maybe<GraphCmsUserRoleEnum>)[]>;
+  roleNotIn?: Maybe<(Maybe<GraphCmsWpUserRoleEnum>)[]>;
   /** Search keyword. Searches for possible string matches on columns. When "searchColumns" is left empty, it tries to determine which column to search in based on search string. */
   search?: Maybe<string>;
   /** Array of column names to be searched. Accepts 'ID', 'login', 'nicename', 'email', 'url'. */
-  searchColumns?: Maybe<(Maybe<GraphCmsUsersConnectionSearchColumnEnum>)[]>;
+  searchColumns?: Maybe<(Maybe<GraphCmsWpUsersConnectionSearchColumnEnum>)[]>;
 }
 /** Arguments for filtering the RootQueryToVisibleProductConnection connection */
-export interface GraphCmsRootQueryToVisibleProductConnectionWhereArgs {
+export interface GraphCmsWpRootQueryToVisibleProductConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5879,7 +5879,7 @@ export interface GraphCmsRootQueryToVisibleProductConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCmsTermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCmsWpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5898,7 +5898,7 @@ export interface GraphCmsRootQueryToVisibleProductConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Input for the addFee mutation */
-export interface GraphCmsAddFeeInput {
+export interface GraphCmsWpAddFeeInput {
   /** Fee amount */
   amount?: Maybe<number>;
 
@@ -5908,10 +5908,10 @@ export interface GraphCmsAddFeeInput {
   /** Is the fee taxable? */
   taxable?: Maybe<boolean>;
   /** The tax class for the fee if taxable. */
-  taxClass?: Maybe<GraphCmsTaxClassEnum>;
+  taxClass?: Maybe<GraphCmsWpTaxClassEnum>;
 }
 /** Input for the addToCart mutation */
-export interface GraphCmsAddToCartInput {
+export interface GraphCmsWpAddToCartInput {
   clientMutationId: string;
   /** JSON string representation of extra cart item data */
   extraData?: Maybe<string>;
@@ -5920,24 +5920,24 @@ export interface GraphCmsAddToCartInput {
   /** Cart item quantity */
   quantity?: Maybe<number>;
   /** Cart item product variation attributes */
-  variation?: Maybe<(Maybe<GraphCmsProductAttributeInput>)[]>;
+  variation?: Maybe<(Maybe<GraphCmsWpProductAttributeInput>)[]>;
   /** Cart item product variation database ID or global ID */
   variationId?: Maybe<number>;
 }
 /** Options for ordering the connection */
-export interface GraphCmsProductAttributeInput {
+export interface GraphCmsWpProductAttributeInput {
   attribute: string;
 
   attributeTerm: string;
 }
 /** Input for the applyCoupon mutation */
-export interface GraphCmsApplyCouponInput {
+export interface GraphCmsWpApplyCouponInput {
   clientMutationId: string;
   /** Code of coupon being applied */
   code: string;
 }
 /** Input for the createCategory mutation */
-export interface GraphCmsCreateCategoryInput {
+export interface GraphCmsWpCreateCategoryInput {
   /** The slug that the category will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5952,7 +5952,7 @@ export interface GraphCmsCreateCategoryInput {
   slug?: Maybe<string>;
 }
 /** Input for the createComment mutation */
-export interface GraphCmsCreateCommentInput {
+export interface GraphCmsWpCreateCommentInput {
   /** User agent used to post the comment. */
   agent?: Maybe<string>;
   /** The approval status of the comment. */
@@ -5981,7 +5981,7 @@ export interface GraphCmsCreateCommentInput {
   userId?: Maybe<number>;
 }
 /** Input for the createMediaItem mutation */
-export interface GraphCmsCreateMediaItemInput {
+export interface GraphCmsWpCreateMediaItemInput {
   /** Alternative text to display when mediaItem is not displayed */
   altText?: Maybe<string>;
   /** The userId to assign as the author of the mediaItem */
@@ -6001,7 +6001,7 @@ export interface GraphCmsCreateMediaItemInput {
   /** The file name of the mediaItem */
   filePath?: Maybe<string>;
   /** The file type of the mediaItem */
-  fileType?: Maybe<GraphCmsMimeTypeEnum>;
+  fileType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** The WordPress post ID or the graphQL postId of the parent object */
   parentId?: Maybe<string>;
   /** The ping status for the mediaItem */
@@ -6009,12 +6009,12 @@ export interface GraphCmsCreateMediaItemInput {
   /** The slug of the mediaItem */
   slug?: Maybe<string>;
   /** The status of the mediaItem */
-  status?: Maybe<GraphCmsMediaItemStatusEnum>;
+  status?: Maybe<GraphCmsWpMediaItemStatusEnum>;
   /** The title of the mediaItem */
   title?: Maybe<string>;
 }
 /** Input for the createPage mutation */
-export interface GraphCmsCreatePageInput {
+export interface GraphCmsWpCreatePageInput {
   /** The userId to assign as the author of the post */
   authorId?: Maybe<string>;
 
@@ -6032,7 +6032,7 @@ export interface GraphCmsCreatePageInput {
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: Maybe<number>;
   /** If the post is an attachment or a media file, this field will carry the corresponding MIME type. This field is equivalent to the value of WP_Post->post_mime_type and the post_mime_type column in the "post_objects" database table. */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** The ID of the parent object */
   parentId?: Maybe<string>;
   /** The password used to protect the content of the object */
@@ -6044,14 +6044,14 @@ export interface GraphCmsCreatePageInput {
   /** The slug of the object */
   slug?: Maybe<string>;
   /** The status of the object */
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** The title of the post */
   title?: Maybe<string>;
   /** URLs queued to be pinged. */
   toPing?: Maybe<(Maybe<string>)[]>;
 }
 /** Input for the createPaHind mutation */
-export interface GraphCmsCreatePaHindInput {
+export interface GraphCmsWpCreatePaHindInput {
   /** The slug that the pa_hind will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6064,7 +6064,7 @@ export interface GraphCmsCreatePaHindInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaHulk mutation */
-export interface GraphCmsCreatePaHulkInput {
+export interface GraphCmsWpCreatePaHulkInput {
   /** The slug that the pa_hulk will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6077,7 +6077,7 @@ export interface GraphCmsCreatePaHulkInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaKasutusaeg mutation */
-export interface GraphCmsCreatePaKasutusaegInput {
+export interface GraphCmsWpCreatePaKasutusaegInput {
   /** The slug that the pa_kasutusaeg will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6090,7 +6090,7 @@ export interface GraphCmsCreatePaKasutusaegInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaKogus mutation */
-export interface GraphCmsCreatePaKogusInput {
+export interface GraphCmsWpCreatePaKogusInput {
   /** The slug that the pa_kogus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6103,7 +6103,7 @@ export interface GraphCmsCreatePaKogusInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaKontuur mutation */
-export interface GraphCmsCreatePaKontuurInput {
+export interface GraphCmsWpCreatePaKontuurInput {
   /** The slug that the pa_kontuur will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6116,7 +6116,7 @@ export interface GraphCmsCreatePaKontuurInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaKoostisained mutation */
-export interface GraphCmsCreatePaKoostisainedInput {
+export interface GraphCmsWpCreatePaKoostisainedInput {
   /** The slug that the pa_koostisained will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6129,7 +6129,7 @@ export interface GraphCmsCreatePaKoostisainedInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaLaadimisaeg mutation */
-export interface GraphCmsCreatePaLaadimisaegInput {
+export interface GraphCmsWpCreatePaLaadimisaegInput {
   /** The slug that the pa_laadimisaeg will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6142,7 +6142,7 @@ export interface GraphCmsCreatePaLaadimisaegInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaMaterjal mutation */
-export interface GraphCmsCreatePaMaterjalInput {
+export interface GraphCmsWpCreatePaMaterjalInput {
   /** The slug that the pa_materjal will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6155,7 +6155,7 @@ export interface GraphCmsCreatePaMaterjalInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaMuratasa mutation */
-export interface GraphCmsCreatePaMuratasaInput {
+export interface GraphCmsWpCreatePaMuratasaInput {
   /** The slug that the pa_muratasa will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6168,7 +6168,7 @@ export interface GraphCmsCreatePaMuratasaInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaOhutus mutation */
-export interface GraphCmsCreatePaOhutusInput {
+export interface GraphCmsWpCreatePaOhutusInput {
   /** The slug that the pa_ohutus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6181,7 +6181,7 @@ export interface GraphCmsCreatePaOhutusInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaPatareid mutation */
-export interface GraphCmsCreatePaPatareidInput {
+export interface GraphCmsWpCreatePaPatareidInput {
   /** The slug that the pa_patareid will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6194,7 +6194,7 @@ export interface GraphCmsCreatePaPatareidInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaSuurus mutation */
-export interface GraphCmsCreatePaSuurusInput {
+export interface GraphCmsWpCreatePaSuurusInput {
   /** The slug that the pa_suurus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6207,7 +6207,7 @@ export interface GraphCmsCreatePaSuurusInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaVariant mutation */
-export interface GraphCmsCreatePaVariantInput {
+export interface GraphCmsWpCreatePaVariantInput {
   /** The slug that the pa_variant will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6220,7 +6220,7 @@ export interface GraphCmsCreatePaVariantInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaVarv mutation */
-export interface GraphCmsCreatePaVarvInput {
+export interface GraphCmsWpCreatePaVarvInput {
   /** The slug that the pa_varv will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6233,7 +6233,7 @@ export interface GraphCmsCreatePaVarvInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaVeekindlus mutation */
-export interface GraphCmsCreatePaVeekindlusInput {
+export interface GraphCmsWpCreatePaVeekindlusInput {
   /** The slug that the pa_veekindlus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6246,11 +6246,11 @@ export interface GraphCmsCreatePaVeekindlusInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPost mutation */
-export interface GraphCmsCreatePostInput {
+export interface GraphCmsWpCreatePostInput {
   /** The userId to assign as the author of the post */
   authorId?: Maybe<string>;
   /** Set connections between the post and categories */
-  categories?: Maybe<GraphCmsPostCategoriesInput>;
+  categories?: Maybe<GraphCmsWpPostCategoriesInput>;
 
   clientMutationId: string;
   /** The number of comments. Even though WPGraphQL denotes this field as an integer, in WordPress this field should be saved as a numeric string for compatibility. */
@@ -6266,7 +6266,7 @@ export interface GraphCmsCreatePostInput {
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: Maybe<number>;
   /** If the post is an attachment or a media file, this field will carry the corresponding MIME type. This field is equivalent to the value of WP_Post->post_mime_type and the post_mime_type column in the "post_objects" database table. */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** The ID of the parent object */
   parentId?: Maybe<string>;
   /** The password used to protect the content of the object */
@@ -6278,23 +6278,23 @@ export interface GraphCmsCreatePostInput {
   /** The slug of the object */
   slug?: Maybe<string>;
   /** The status of the object */
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Set connections between the post and tags */
-  tags?: Maybe<GraphCmsPostTagsInput>;
+  tags?: Maybe<GraphCmsWpPostTagsInput>;
   /** The title of the post */
   title?: Maybe<string>;
   /** URLs queued to be pinged. */
   toPing?: Maybe<(Maybe<string>)[]>;
 }
 /** Set relationships between the post to categories */
-export interface GraphCmsPostCategoriesInput {
+export interface GraphCmsWpPostCategoriesInput {
   /** If true, this will append the category to existing related categories. If false, this will replace existing relationships. Default true. */
   append?: Maybe<boolean>;
 
-  nodes?: Maybe<(Maybe<GraphCmsPostCategoriesNodeInput>)[]>;
+  nodes?: Maybe<(Maybe<GraphCmsWpPostCategoriesNodeInput>)[]>;
 }
 /** List of categories to connect the post to. If an ID is set, it will be used to create the connection. If not, it will look for a slug. If neither are valid existing terms, and the site is configured to allow terms to be created during post mutations, a term will be created using the Name if it exists in the input, then fallback to the slug if it exists. */
-export interface GraphCmsPostCategoriesNodeInput {
+export interface GraphCmsWpPostCategoriesNodeInput {
   /** The description of the category. This field is used to set a description of the category if a new one is created during the mutation. */
   description?: Maybe<string>;
   /** The ID of the category. If present, this will be used to connect to the post. If no existing category exists with this ID, no connection will be made. */
@@ -6305,14 +6305,14 @@ export interface GraphCmsPostCategoriesNodeInput {
   slug?: Maybe<string>;
 }
 /** Set relationships between the post to tags */
-export interface GraphCmsPostTagsInput {
+export interface GraphCmsWpPostTagsInput {
   /** If true, this will append the tag to existing related tags. If false, this will replace existing relationships. Default true. */
   append?: Maybe<boolean>;
 
-  nodes?: Maybe<(Maybe<GraphCmsPostTagsNodeInput>)[]>;
+  nodes?: Maybe<(Maybe<GraphCmsWpPostTagsNodeInput>)[]>;
 }
 /** List of tags to connect the post to. If an ID is set, it will be used to create the connection. If not, it will look for a slug. If neither are valid existing terms, and the site is configured to allow terms to be created during post mutations, a term will be created using the Name if it exists in the input, then fallback to the slug if it exists. */
-export interface GraphCmsPostTagsNodeInput {
+export interface GraphCmsWpPostTagsNodeInput {
   /** The description of the tag. This field is used to set a description of the tag if a new one is created during the mutation. */
   description?: Maybe<string>;
   /** The ID of the tag. If present, this will be used to connect to the post. If no existing tag exists with this ID, no connection will be made. */
@@ -6323,7 +6323,7 @@ export interface GraphCmsPostTagsNodeInput {
   slug?: Maybe<string>;
 }
 /** Input for the createProductCategory mutation */
-export interface GraphCmsCreateProductCategoryInput {
+export interface GraphCmsWpCreateProductCategoryInput {
   /** The slug that the product_cat will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6338,7 +6338,7 @@ export interface GraphCmsCreateProductCategoryInput {
   slug?: Maybe<string>;
 }
 /** Input for the createProductTag mutation */
-export interface GraphCmsCreateProductTagInput {
+export interface GraphCmsWpCreateProductTagInput {
   /** The slug that the product_tag will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6351,7 +6351,7 @@ export interface GraphCmsCreateProductTagInput {
   slug?: Maybe<string>;
 }
 /** Input for the createProductType mutation */
-export interface GraphCmsCreateProductTypeInput {
+export interface GraphCmsWpCreateProductTypeInput {
   /** The slug that the product_type will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6364,7 +6364,7 @@ export interface GraphCmsCreateProductTypeInput {
   slug?: Maybe<string>;
 }
 /** Input for the createShippingClass mutation */
-export interface GraphCmsCreateShippingClassInput {
+export interface GraphCmsWpCreateShippingClassInput {
   /** The slug that the product_shipping_class will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6377,7 +6377,7 @@ export interface GraphCmsCreateShippingClassInput {
   slug?: Maybe<string>;
 }
 /** Input for the createTag mutation */
-export interface GraphCmsCreateTagInput {
+export interface GraphCmsWpCreateTagInput {
   /** The slug that the post_tag will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6390,7 +6390,7 @@ export interface GraphCmsCreateTagInput {
   slug?: Maybe<string>;
 }
 /** Input for the createUser mutation */
-export interface GraphCmsCreateUserInput {
+export interface GraphCmsWpCreateUserInput {
   /** User's AOL IM account. */
   aim?: Maybe<string>;
 
@@ -6429,7 +6429,7 @@ export interface GraphCmsCreateUserInput {
   yim?: Maybe<string>;
 }
 /** Input for the createVisibleProduct mutation */
-export interface GraphCmsCreateVisibleProductInput {
+export interface GraphCmsWpCreateVisibleProductInput {
   /** The slug that the product_visibility will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6442,7 +6442,7 @@ export interface GraphCmsCreateVisibleProductInput {
   slug?: Maybe<string>;
 }
 /** Customer address information */
-export interface GraphCmsCustomerAddressInput {
+export interface GraphCmsWpCustomerAddressInput {
   /** Address 1 */
   address1?: Maybe<string>;
   /** Address 2 */
@@ -6452,7 +6452,7 @@ export interface GraphCmsCustomerAddressInput {
   /** Company */
   company?: Maybe<string>;
   /** Country */
-  country?: Maybe<GraphCmsCountriesEnum>;
+  country?: Maybe<GraphCmsWpCountriesEnum>;
   /** E-mail */
   email?: Maybe<string>;
   /** First name */
@@ -6469,13 +6469,13 @@ export interface GraphCmsCustomerAddressInput {
   state?: Maybe<string>;
 }
 /** Input for the deleteCategory mutation */
-export interface GraphCmsDeleteCategoryInput {
+export interface GraphCmsWpDeleteCategoryInput {
   clientMutationId: string;
   /** The ID of the category to delete */
   id: string;
 }
 /** Input for the deleteComment mutation */
-export interface GraphCmsDeleteCommentInput {
+export interface GraphCmsWpDeleteCommentInput {
   clientMutationId: string;
   /** Whether the comment should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<boolean>;
@@ -6483,7 +6483,7 @@ export interface GraphCmsDeleteCommentInput {
   id: string;
 }
 /** Input for the deleteMediaItem mutation */
-export interface GraphCmsDeleteMediaItemInput {
+export interface GraphCmsWpDeleteMediaItemInput {
   clientMutationId: string;
   /** Whether the mediaItem should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<boolean>;
@@ -6491,7 +6491,7 @@ export interface GraphCmsDeleteMediaItemInput {
   id: string;
 }
 /** Input for the deletePage mutation */
-export interface GraphCmsDeletePageInput {
+export interface GraphCmsWpDeletePageInput {
   clientMutationId: string;
   /** Whether the object should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<boolean>;
@@ -6499,97 +6499,97 @@ export interface GraphCmsDeletePageInput {
   id: string;
 }
 /** Input for the deletePaHind mutation */
-export interface GraphCmsDeletePaHindInput {
+export interface GraphCmsWpDeletePaHindInput {
   clientMutationId: string;
   /** The ID of the paHind to delete */
   id: string;
 }
 /** Input for the deletePaHulk mutation */
-export interface GraphCmsDeletePaHulkInput {
+export interface GraphCmsWpDeletePaHulkInput {
   clientMutationId: string;
   /** The ID of the paHulk to delete */
   id: string;
 }
 /** Input for the deletePaKasutusaeg mutation */
-export interface GraphCmsDeletePaKasutusaegInput {
+export interface GraphCmsWpDeletePaKasutusaegInput {
   clientMutationId: string;
   /** The ID of the paKasutusaeg to delete */
   id: string;
 }
 /** Input for the deletePaKogus mutation */
-export interface GraphCmsDeletePaKogusInput {
+export interface GraphCmsWpDeletePaKogusInput {
   clientMutationId: string;
   /** The ID of the paKogus to delete */
   id: string;
 }
 /** Input for the deletePaKontuur mutation */
-export interface GraphCmsDeletePaKontuurInput {
+export interface GraphCmsWpDeletePaKontuurInput {
   clientMutationId: string;
   /** The ID of the paKontuur to delete */
   id: string;
 }
 /** Input for the deletePaKoostisained mutation */
-export interface GraphCmsDeletePaKoostisainedInput {
+export interface GraphCmsWpDeletePaKoostisainedInput {
   clientMutationId: string;
   /** The ID of the paKoostisained to delete */
   id: string;
 }
 /** Input for the deletePaLaadimisaeg mutation */
-export interface GraphCmsDeletePaLaadimisaegInput {
+export interface GraphCmsWpDeletePaLaadimisaegInput {
   clientMutationId: string;
   /** The ID of the paLaadimisaeg to delete */
   id: string;
 }
 /** Input for the deletePaMaterjal mutation */
-export interface GraphCmsDeletePaMaterjalInput {
+export interface GraphCmsWpDeletePaMaterjalInput {
   clientMutationId: string;
   /** The ID of the paMaterjal to delete */
   id: string;
 }
 /** Input for the deletePaMuratasa mutation */
-export interface GraphCmsDeletePaMuratasaInput {
+export interface GraphCmsWpDeletePaMuratasaInput {
   clientMutationId: string;
   /** The ID of the paMuratasa to delete */
   id: string;
 }
 /** Input for the deletePaOhutus mutation */
-export interface GraphCmsDeletePaOhutusInput {
+export interface GraphCmsWpDeletePaOhutusInput {
   clientMutationId: string;
   /** The ID of the paOhutus to delete */
   id: string;
 }
 /** Input for the deletePaPatareid mutation */
-export interface GraphCmsDeletePaPatareidInput {
+export interface GraphCmsWpDeletePaPatareidInput {
   clientMutationId: string;
   /** The ID of the paPatareid to delete */
   id: string;
 }
 /** Input for the deletePaSuurus mutation */
-export interface GraphCmsDeletePaSuurusInput {
+export interface GraphCmsWpDeletePaSuurusInput {
   clientMutationId: string;
   /** The ID of the paSuurus to delete */
   id: string;
 }
 /** Input for the deletePaVariant mutation */
-export interface GraphCmsDeletePaVariantInput {
+export interface GraphCmsWpDeletePaVariantInput {
   clientMutationId: string;
   /** The ID of the paVariant to delete */
   id: string;
 }
 /** Input for the deletePaVarv mutation */
-export interface GraphCmsDeletePaVarvInput {
+export interface GraphCmsWpDeletePaVarvInput {
   clientMutationId: string;
   /** The ID of the paVarv to delete */
   id: string;
 }
 /** Input for the deletePaVeekindlus mutation */
-export interface GraphCmsDeletePaVeekindlusInput {
+export interface GraphCmsWpDeletePaVeekindlusInput {
   clientMutationId: string;
   /** The ID of the paVeekindlus to delete */
   id: string;
 }
 /** Input for the deletePost mutation */
-export interface GraphCmsDeletePostInput {
+export interface GraphCmsWpDeletePostInput {
   clientMutationId: string;
   /** Whether the object should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<boolean>;
@@ -6597,25 +6597,25 @@ export interface GraphCmsDeletePostInput {
   id: string;
 }
 /** Input for the deleteProductCategory mutation */
-export interface GraphCmsDeleteProductCategoryInput {
+export interface GraphCmsWpDeleteProductCategoryInput {
   clientMutationId: string;
   /** The ID of the productCategory to delete */
   id: string;
 }
 /** Input for the deleteProductTag mutation */
-export interface GraphCmsDeleteProductTagInput {
+export interface GraphCmsWpDeleteProductTagInput {
   clientMutationId: string;
   /** The ID of the productTag to delete */
   id: string;
 }
 /** Input for the deleteProductType mutation */
-export interface GraphCmsDeleteProductTypeInput {
+export interface GraphCmsWpDeleteProductTypeInput {
   clientMutationId: string;
   /** The ID of the productType to delete */
   id: string;
 }
 /** Input for the deleteRevision mutation */
-export interface GraphCmsDeleteRevisionInput {
+export interface GraphCmsWpDeleteRevisionInput {
   clientMutationId: string;
   /** Whether the object should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<boolean>;
@@ -6623,19 +6623,19 @@ export interface GraphCmsDeleteRevisionInput {
   id: string;
 }
 /** Input for the deleteShippingClass mutation */
-export interface GraphCmsDeleteShippingClassInput {
+export interface GraphCmsWpDeleteShippingClassInput {
   clientMutationId: string;
   /** The ID of the shippingClass to delete */
   id: string;
 }
 /** Input for the deleteTag mutation */
-export interface GraphCmsDeleteTagInput {
+export interface GraphCmsWpDeleteTagInput {
   clientMutationId: string;
   /** The ID of the tag to delete */
   id: string;
 }
 /** Input for the deleteUser mutation */
-export interface GraphCmsDeleteUserInput {
+export interface GraphCmsWpDeleteUserInput {
   clientMutationId: string;
   /** The ID of the user you want to delete */
   id: string;
@@ -6643,21 +6643,21 @@ export interface GraphCmsDeleteUserInput {
   reassignId?: Maybe<string>;
 }
 /** Input for the deleteVisibleProduct mutation */
-export interface GraphCmsDeleteVisibleProductInput {
+export interface GraphCmsWpDeleteVisibleProductInput {
   clientMutationId: string;
   /** The ID of the visibleProduct to delete */
   id: string;
 }
 /** Input for the emptyCart mutation */
-export interface GraphCmsEmptyCartInput {
+export interface GraphCmsWpEmptyCartInput {
   clientMutationId: string;
 }
 /** Input for the registerCustomer mutation */
-export interface GraphCmsRegisterCustomerInput {
+export interface GraphCmsWpRegisterCustomerInput {
   /** User's AOL IM account. */
   aim?: Maybe<string>;
   /** Customer billing information */
-  billing?: Maybe<GraphCmsCustomerAddressInput>;
+  billing?: Maybe<GraphCmsWpCustomerAddressInput>;
 
   clientMutationId: string;
   /** A string containing content about the user. */
@@ -6685,7 +6685,7 @@ export interface GraphCmsRegisterCustomerInput {
   /** A string for whether to enable the rich editor or not. False if not empty. */
   richEditing?: Maybe<string>;
   /** Customer shipping address */
-  shipping?: Maybe<GraphCmsCustomerAddressInput>;
+  shipping?: Maybe<GraphCmsWpCustomerAddressInput>;
   /** Customer shipping is identical to billing address */
   shippingSameAsBilling?: Maybe<boolean>;
   /** A string that contains the user's username. */
@@ -6696,7 +6696,7 @@ export interface GraphCmsRegisterCustomerInput {
   yim?: Maybe<string>;
 }
 /** Input for the registerUser mutation */
-export interface GraphCmsRegisterUserInput {
+export interface GraphCmsWpRegisterUserInput {
   /** User's AOL IM account. */
   aim?: Maybe<string>;
 
@@ -6733,13 +6733,13 @@ export interface GraphCmsRegisterUserInput {
   yim?: Maybe<string>;
 }
 /** Input for the removeCoupons mutation */
-export interface GraphCmsRemoveCouponsInput {
+export interface GraphCmsWpRemoveCouponsInput {
   clientMutationId: string;
   /** Code of coupon being applied */
   codes?: Maybe<(Maybe<string>)[]>;
 }
 /** Input for the removeItemsFromCart mutation */
-export interface GraphCmsRemoveItemsFromCartInput {
+export interface GraphCmsWpRemoveItemsFromCartInput {
   /** Remove all cart items */
   all?: Maybe<boolean>;
 
@@ -6748,7 +6748,7 @@ export interface GraphCmsRemoveItemsFromCartInput {
   keys?: Maybe<(Maybe<string>)[]>;
 }
 /** Input for the resetUserPassword mutation */
-export interface GraphCmsResetUserPasswordInput {
+export interface GraphCmsWpResetUserPasswordInput {
   clientMutationId: string;
   /** Password reset key */
   key?: Maybe<string>;
@@ -6758,25 +6758,25 @@ export interface GraphCmsResetUserPasswordInput {
   password?: Maybe<string>;
 }
 /** Input for the restoreCartItems mutation */
-export interface GraphCmsRestoreCartItemsInput {
+export interface GraphCmsWpRestoreCartItemsInput {
   clientMutationId: string;
   /** Cart item key of the item being removed */
   keys?: Maybe<(Maybe<string>)[]>;
 }
 /** Input for the restoreComment mutation */
-export interface GraphCmsRestoreCommentInput {
+export interface GraphCmsWpRestoreCommentInput {
   clientMutationId: string;
   /** The ID of the comment to be restored */
   id: string;
 }
 /** Input for the sendPasswordResetEmail mutation */
-export interface GraphCmsSendPasswordResetEmailInput {
+export interface GraphCmsWpSendPasswordResetEmailInput {
   clientMutationId: string;
   /** A string that contains the user's username or email address. */
   username: string;
 }
 /** Input for the UpdateCategory mutation */
-export interface GraphCmsUpdateCategoryInput {
+export interface GraphCmsWpUpdateCategoryInput {
   /** The slug that the category will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6793,7 +6793,7 @@ export interface GraphCmsUpdateCategoryInput {
   slug?: Maybe<string>;
 }
 /** Input for the updateComment mutation */
-export interface GraphCmsUpdateCommentInput {
+export interface GraphCmsWpUpdateCommentInput {
   /** User agent used to post the comment. */
   agent?: Maybe<string>;
   /** The approval status of the comment. */
@@ -6824,11 +6824,11 @@ export interface GraphCmsUpdateCommentInput {
   userId?: Maybe<number>;
 }
 /** Input for the updateCustomer mutation */
-export interface GraphCmsUpdateCustomerInput {
+export interface GraphCmsWpUpdateCustomerInput {
   /** User's AOL IM account. */
   aim?: Maybe<string>;
   /** Customer billing information */
-  billing?: Maybe<GraphCmsCustomerAddressInput>;
+  billing?: Maybe<GraphCmsWpCustomerAddressInput>;
 
   clientMutationId: string;
   /** A string containing content about the user. */
@@ -6860,7 +6860,7 @@ export interface GraphCmsUpdateCustomerInput {
   /** An array of roles to be assigned to the user. */
   roles?: Maybe<(Maybe<string>)[]>;
   /** Customer shipping address */
-  shipping?: Maybe<GraphCmsCustomerAddressInput>;
+  shipping?: Maybe<GraphCmsWpCustomerAddressInput>;
   /** Customer shipping is identical to billing address */
   shippingSameAsBilling?: Maybe<boolean>;
   /** A string containing the user's URL for the user's web site. */
@@ -6869,7 +6869,7 @@ export interface GraphCmsUpdateCustomerInput {
   yim?: Maybe<string>;
 }
 /** Input for the updateItemQuantity mutation */
-export interface GraphCmsUpdateItemQuantityInput {
+export interface GraphCmsWpUpdateItemQuantityInput {
   clientMutationId: string;
   /** Cart item being updated */
   key: string;
@@ -6877,7 +6877,7 @@ export interface GraphCmsUpdateItemQuantityInput {
   quantity: number;
 }
 /** Input for the updateMediaItem mutation */
-export interface GraphCmsUpdateMediaItemInput {
+export interface GraphCmsWpUpdateMediaItemInput {
   /** Alternative text to display when mediaItem is not displayed */
   altText?: Maybe<string>;
   /** The userId to assign as the author of the mediaItem */
@@ -6897,7 +6897,7 @@ export interface GraphCmsUpdateMediaItemInput {
   /** The file name of the mediaItem */
   filePath?: Maybe<string>;
   /** The file type of the mediaItem */
-  fileType?: Maybe<GraphCmsMimeTypeEnum>;
+  fileType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** The ID of the mediaItem object */
   id: string;
   /** The WordPress post ID or the graphQL postId of the parent object */
@@ -6907,12 +6907,12 @@ export interface GraphCmsUpdateMediaItemInput {
   /** The slug of the mediaItem */
   slug?: Maybe<string>;
   /** The status of the mediaItem */
-  status?: Maybe<GraphCmsMediaItemStatusEnum>;
+  status?: Maybe<GraphCmsWpMediaItemStatusEnum>;
   /** The title of the mediaItem */
   title?: Maybe<string>;
 }
 /** Input for the updatePage mutation */
-export interface GraphCmsUpdatePageInput {
+export interface GraphCmsWpUpdatePageInput {
   /** The userId to assign as the author of the post */
   authorId?: Maybe<string>;
 
@@ -6932,7 +6932,7 @@ export interface GraphCmsUpdatePageInput {
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: Maybe<number>;
   /** If the post is an attachment or a media file, this field will carry the corresponding MIME type. This field is equivalent to the value of WP_Post->post_mime_type and the post_mime_type column in the "post_objects" database table. */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** The ID of the parent object */
   parentId?: Maybe<string>;
   /** The password used to protect the content of the object */
@@ -6944,14 +6944,14 @@ export interface GraphCmsUpdatePageInput {
   /** The slug of the object */
   slug?: Maybe<string>;
   /** The status of the object */
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** The title of the post */
   title?: Maybe<string>;
   /** URLs queued to be pinged. */
   toPing?: Maybe<(Maybe<string>)[]>;
 }
 /** Input for the UpdatePaHind mutation */
-export interface GraphCmsUpdatePaHindInput {
+export interface GraphCmsWpUpdatePaHindInput {
   /** The slug that the pa_hind will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6966,7 +6966,7 @@ export interface GraphCmsUpdatePaHindInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaHulk mutation */
-export interface GraphCmsUpdatePaHulkInput {
+export interface GraphCmsWpUpdatePaHulkInput {
   /** The slug that the pa_hulk will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6981,7 +6981,7 @@ export interface GraphCmsUpdatePaHulkInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaKasutusaeg mutation */
-export interface GraphCmsUpdatePaKasutusaegInput {
+export interface GraphCmsWpUpdatePaKasutusaegInput {
   /** The slug that the pa_kasutusaeg will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6996,7 +6996,7 @@ export interface GraphCmsUpdatePaKasutusaegInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaKogus mutation */
-export interface GraphCmsUpdatePaKogusInput {
+export interface GraphCmsWpUpdatePaKogusInput {
   /** The slug that the pa_kogus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7011,7 +7011,7 @@ export interface GraphCmsUpdatePaKogusInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaKontuur mutation */
-export interface GraphCmsUpdatePaKontuurInput {
+export interface GraphCmsWpUpdatePaKontuurInput {
   /** The slug that the pa_kontuur will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7026,7 +7026,7 @@ export interface GraphCmsUpdatePaKontuurInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaKoostisained mutation */
-export interface GraphCmsUpdatePaKoostisainedInput {
+export interface GraphCmsWpUpdatePaKoostisainedInput {
   /** The slug that the pa_koostisained will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7041,7 +7041,7 @@ export interface GraphCmsUpdatePaKoostisainedInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaLaadimisaeg mutation */
-export interface GraphCmsUpdatePaLaadimisaegInput {
+export interface GraphCmsWpUpdatePaLaadimisaegInput {
   /** The slug that the pa_laadimisaeg will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7056,7 +7056,7 @@ export interface GraphCmsUpdatePaLaadimisaegInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaMaterjal mutation */
-export interface GraphCmsUpdatePaMaterjalInput {
+export interface GraphCmsWpUpdatePaMaterjalInput {
   /** The slug that the pa_materjal will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7071,7 +7071,7 @@ export interface GraphCmsUpdatePaMaterjalInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaMuratasa mutation */
-export interface GraphCmsUpdatePaMuratasaInput {
+export interface GraphCmsWpUpdatePaMuratasaInput {
   /** The slug that the pa_muratasa will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7086,7 +7086,7 @@ export interface GraphCmsUpdatePaMuratasaInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaOhutus mutation */
-export interface GraphCmsUpdatePaOhutusInput {
+export interface GraphCmsWpUpdatePaOhutusInput {
   /** The slug that the pa_ohutus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7101,7 +7101,7 @@ export interface GraphCmsUpdatePaOhutusInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaPatareid mutation */
-export interface GraphCmsUpdatePaPatareidInput {
+export interface GraphCmsWpUpdatePaPatareidInput {
   /** The slug that the pa_patareid will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7116,7 +7116,7 @@ export interface GraphCmsUpdatePaPatareidInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaSuurus mutation */
-export interface GraphCmsUpdatePaSuurusInput {
+export interface GraphCmsWpUpdatePaSuurusInput {
   /** The slug that the pa_suurus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7131,7 +7131,7 @@ export interface GraphCmsUpdatePaSuurusInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaVariant mutation */
-export interface GraphCmsUpdatePaVariantInput {
+export interface GraphCmsWpUpdatePaVariantInput {
   /** The slug that the pa_variant will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7146,7 +7146,7 @@ export interface GraphCmsUpdatePaVariantInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaVarv mutation */
-export interface GraphCmsUpdatePaVarvInput {
+export interface GraphCmsWpUpdatePaVarvInput {
   /** The slug that the pa_varv will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7161,7 +7161,7 @@ export interface GraphCmsUpdatePaVarvInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaVeekindlus mutation */
-export interface GraphCmsUpdatePaVeekindlusInput {
+export interface GraphCmsWpUpdatePaVeekindlusInput {
   /** The slug that the pa_veekindlus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7176,11 +7176,11 @@ export interface GraphCmsUpdatePaVeekindlusInput {
   slug?: Maybe<string>;
 }
 /** Input for the updatePost mutation */
-export interface GraphCmsUpdatePostInput {
+export interface GraphCmsWpUpdatePostInput {
   /** The userId to assign as the author of the post */
   authorId?: Maybe<string>;
   /** Set connections between the post and categories */
-  categories?: Maybe<GraphCmsPostCategoriesInput>;
+  categories?: Maybe<GraphCmsWpPostCategoriesInput>;
 
   clientMutationId: string;
   /** The number of comments. Even though WPGraphQL denotes this field as an integer, in WordPress this field should be saved as a numeric string for compatibility. */
@@ -7198,7 +7198,7 @@ export interface GraphCmsUpdatePostInput {
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: Maybe<number>;
   /** If the post is an attachment or a media file, this field will carry the corresponding MIME type. This field is equivalent to the value of WP_Post->post_mime_type and the post_mime_type column in the "post_objects" database table. */
-  mimeType?: Maybe<GraphCmsMimeTypeEnum>;
+  mimeType?: Maybe<GraphCmsWpMimeTypeEnum>;
   /** The ID of the parent object */
   parentId?: Maybe<string>;
   /** The password used to protect the content of the object */
@@ -7210,16 +7210,16 @@ export interface GraphCmsUpdatePostInput {
   /** The slug of the object */
   slug?: Maybe<string>;
   /** The status of the object */
-  status?: Maybe<GraphCmsPostStatusEnum>;
+  status?: Maybe<GraphCmsWpPostStatusEnum>;
   /** Set connections between the post and tags */
-  tags?: Maybe<GraphCmsPostTagsInput>;
+  tags?: Maybe<GraphCmsWpPostTagsInput>;
   /** The title of the post */
   title?: Maybe<string>;
   /** URLs queued to be pinged. */
   toPing?: Maybe<(Maybe<string>)[]>;
 }
 /** Input for the UpdateProductCategory mutation */
-export interface GraphCmsUpdateProductCategoryInput {
+export interface GraphCmsWpUpdateProductCategoryInput {
   /** The slug that the product_cat will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7236,7 +7236,7 @@ export interface GraphCmsUpdateProductCategoryInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdateProductTag mutation */
-export interface GraphCmsUpdateProductTagInput {
+export interface GraphCmsWpUpdateProductTagInput {
   /** The slug that the product_tag will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7251,7 +7251,7 @@ export interface GraphCmsUpdateProductTagInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdateProductType mutation */
-export interface GraphCmsUpdateProductTypeInput {
+export interface GraphCmsWpUpdateProductTypeInput {
   /** The slug that the product_type will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7266,41 +7266,41 @@ export interface GraphCmsUpdateProductTypeInput {
   slug?: Maybe<string>;
 }
 /** Input for the updateSettings mutation */
-export interface GraphCmsUpdateSettingsInput {
+export interface GraphCmsWpUpdateSettingsInput {
   clientMutationId: string;
-  /** Luba uute artiklite kommenteerimist */
+  /** Allow people to post comments on new articles. */
   discussionSettingsDefaultCommentStatus?: Maybe<string>;
-  /** Luba uute artiklite juures teiste ajaveebide märguandeid (pingback- ja trackback-viited). */
+  /** Allow link notifications from other blogs (pingbacks and trackbacks) on new articles. */
   discussionSettingsDefaultPingStatus?: Maybe<string>;
-  /** Kõigi kuupäevade vorming. */
+  /** A date format for all date strings. */
   generalSettingsDateFormat?: Maybe<string>;
-  /** Veebisaidi alapealkiri. */
+  /** Site tagline. */
   generalSettingsDescription?: Maybe<string>;
-  /** Seda aadressi kasutatakse saidi haldamisel, näiteks uue kasutaja teavitamiseks. */
+  /** This address is used for admin purposes, like new user notification. */
   generalSettingsEmail?: Maybe<string>;
-  /** WordPressi maakood. */
+  /** WordPress locale code. */
   generalSettingsLanguage?: Maybe<string>;
-  /** Nädala alguspäeva number. */
+  /** A day number of the week that the week should start on. */
   generalSettingsStartOfWeek?: Maybe<number>;
-  /** Kõigi kellaaegade vorming. */
+  /** A time format for all time strings. */
   generalSettingsTimeFormat?: Maybe<string>;
-  /** Linn samas ajavööndis. */
+  /** A city in the same timezone as you. */
   generalSettingsTimezone?: Maybe<string>;
-  /** Saidi pealkiri. */
+  /** Site title. */
   generalSettingsTitle?: Maybe<string>;
-  /** Veebilehe aadress. */
+  /** Site URL. */
   generalSettingsUrl?: Maybe<string>;
-  /** lehekülge korraga. */
+  /** Blog pages show at most. */
   readingSettingsPostsPerPage?: Maybe<number>;
-  /** Vaikimisi rubriik. */
+  /** Default post category. */
   writingSettingsDefaultCategory?: Maybe<number>;
-  /** Vaikimisi postitusevorming */
+  /** Default post format. */
   writingSettingsDefaultPostFormat?: Maybe<string>;
-  /** Teisenda emootikonid nagu :-) ja :-P graafilisteks. */
+  /** Convert emoticons like :-) and :-P to graphics on display. */
   writingSettingsUseSmilies?: Maybe<boolean>;
 }
 /** Input for the UpdateShippingClass mutation */
-export interface GraphCmsUpdateShippingClassInput {
+export interface GraphCmsWpUpdateShippingClassInput {
   /** The slug that the product_shipping_class will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7315,7 +7315,7 @@ export interface GraphCmsUpdateShippingClassInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdateTag mutation */
-export interface GraphCmsUpdateTagInput {
+export interface GraphCmsWpUpdateTagInput {
   /** The slug that the post_tag will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7330,7 +7330,7 @@ export interface GraphCmsUpdateTagInput {
   slug?: Maybe<string>;
 }
 /** Input for the updateUser mutation */
-export interface GraphCmsUpdateUserInput {
+export interface GraphCmsWpUpdateUserInput {
   /** User's AOL IM account. */
   aim?: Maybe<string>;
 
@@ -7369,7 +7369,7 @@ export interface GraphCmsUpdateUserInput {
   yim?: Maybe<string>;
 }
 /** Input for the UpdateVisibleProduct mutation */
-export interface GraphCmsUpdateVisibleProductInput {
+export interface GraphCmsWpUpdateVisibleProductInput {
   /** The slug that the product_visibility will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -7858,17 +7858,17 @@ export enum GraphQlSourceFieldsEnum {
   FieldName = 'fieldName',
 }
 /** The column to use when filtering by date */
-export enum GraphCmsPostObjectsConnectionDateColumnEnum {
+export enum GraphCmsWpPostObjectsConnectionDateColumnEnum {
   Date = 'DATE',
   Modified = 'MODIFIED',
 }
 /** The logical relation between each item in the array when there are more than one. */
-export enum GraphCmsRelationEnum {
+export enum GraphCmsWpRelationEnum {
   And = 'AND',
   Or = 'OR',
 }
 /** Field to order the connection by */
-export enum GraphCmsWcConnectionOrderbyEnum {
+export enum GraphCmsWpWcConnectionOrderbyEnum {
   Date = 'DATE',
   In = 'IN',
   MenuOrder = 'MENU_ORDER',
@@ -7881,18 +7881,18 @@ export enum GraphCmsWcConnectionOrderbyEnum {
   Slug = 'SLUG',
 }
 /** The cardinality of the connection order */
-export enum GraphCmsOrderEnum {
+export enum GraphCmsWpOrderEnum {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 /** Coupon discount type enumeration */
-export enum GraphCmsDiscountTypeEnum {
+export enum GraphCmsWpDiscountTypeEnum {
   FixedCart = 'FIXED_CART',
   FixedProduct = 'FIXED_PRODUCT',
   Percent = 'PERCENT',
 }
 /** Options for ordering the connection by */
-export enum GraphCmsTermObjectsConnectionOrderbyEnum {
+export enum GraphCmsWpTermObjectsConnectionOrderbyEnum {
   Count = 'COUNT',
   Description = 'DESCRIPTION',
   Name = 'NAME',
@@ -7902,14 +7902,14 @@ export enum GraphCmsTermObjectsConnectionOrderbyEnum {
   TermOrder = 'TERM_ORDER',
 }
 /** Allowed Post Types */
-export enum GraphCmsPostTypeEnum {
+export enum GraphCmsWpPostTypeEnum {
   Attachment = 'ATTACHMENT',
   Page = 'PAGE',
   Post = 'POST',
   Revision = 'REVISION',
 }
 /** Allowed taxonomies */
-export enum GraphCmsTaxonomyEnum {
+export enum GraphCmsWpTaxonomyEnum {
   Category = 'CATEGORY',
   Pahind = 'PAHIND',
   Pahulk = 'PAHULK',
@@ -7934,20 +7934,20 @@ export enum GraphCmsTaxonomyEnum {
   Visibleproduct = 'VISIBLEPRODUCT',
 }
 /** Product stock status enumeration */
-export enum GraphCmsStockStatusEnum {
+export enum GraphCmsWpStockStatusEnum {
   InStock = 'IN_STOCK',
   OnBackorder = 'ON_BACKORDER',
   OutOfStock = 'OUT_OF_STOCK',
 }
 /** Tax class enumeration */
-export enum GraphCmsTaxClassEnum {
+export enum GraphCmsWpTaxClassEnum {
   InheritCart = 'INHERIT_CART',
   ReducedRate = 'REDUCED_RATE',
   Standard = 'STANDARD',
   ZeroRate = 'ZERO_RATE',
 }
 /** Product type enumeration */
-export enum GraphCmsProductTypesEnum {
+export enum GraphCmsWpProductTypesEnum {
   External = 'EXTERNAL',
   Grouped = 'GROUPED',
   Simple = 'SIMPLE',
@@ -7955,20 +7955,20 @@ export enum GraphCmsProductTypesEnum {
   Variation = 'VARIATION',
 }
 /** Product catalog visibility enumeration */
-export enum GraphCmsCatalogVisibilityEnum {
+export enum GraphCmsWpCatalogVisibilityEnum {
   Catalog = 'CATALOG',
   Hidden = 'HIDDEN',
   Search = 'SEARCH',
   Visible = 'VISIBLE',
 }
 /** Product backorder enumeration */
-export enum GraphCmsBackordersEnum {
+export enum GraphCmsWpBackordersEnum {
   No = 'NO',
   Notify = 'NOTIFY',
   Yes = 'YES',
 }
 /** The MimeType of the object */
-export enum GraphCmsMimeTypeEnum {
+export enum GraphCmsWpMimeTypeEnum {
   ApplicationJava = 'APPLICATION_JAVA',
   ApplicationMsword = 'APPLICATION_MSWORD',
   ApplicationOctetStream = 'APPLICATION_OCTET_STREAM',
@@ -8058,7 +8058,7 @@ export enum GraphCmsMimeTypeEnum {
   VideoXMsWmx = 'VIDEO_X_MS_WMX',
 }
 /** Field to order the connection by */
-export enum GraphCmsPostObjectsConnectionOrderbyEnum {
+export enum GraphCmsWpPostObjectsConnectionOrderbyEnum {
   Author = 'AUTHOR',
   Date = 'DATE',
   In = 'IN',
@@ -8070,7 +8070,7 @@ export enum GraphCmsPostObjectsConnectionOrderbyEnum {
   Title = 'TITLE',
 }
 /** The status of the object. */
-export enum GraphCmsPostStatusEnum {
+export enum GraphCmsWpPostStatusEnum {
   AutoDraft = 'AUTO_DRAFT',
   Draft = 'DRAFT',
   Failed = 'FAILED',
@@ -8094,14 +8094,14 @@ export enum GraphCmsPostStatusEnum {
   WcRefunded = 'WC_REFUNDED',
 }
 /** What rating to display avatars up to. Accepts 'G', 'PG', 'R', 'X', and are judged in that order. Default is the value of the 'avatar_rating' option */
-export enum GraphCmsAvatarRatingEnum {
+export enum GraphCmsWpAvatarRatingEnum {
   G = 'G',
   Pg = 'PG',
   R = 'R',
   X = 'X',
 }
 /** Options for ordering the connection */
-export enum GraphCmsCommentsConnectionOrderbyEnum {
+export enum GraphCmsWpCommentsConnectionOrderbyEnum {
   CommentAgent = 'COMMENT_AGENT',
   CommentApproved = 'COMMENT_APPROVED',
   CommentAuthor = 'COMMENT_AUTHOR',
@@ -8120,24 +8120,24 @@ export enum GraphCmsCommentsConnectionOrderbyEnum {
   UserId = 'USER_ID',
 }
 /** The format of post field data. */
-export enum GraphCmsPostObjectFieldFormatEnum {
+export enum GraphCmsWpPostObjectFieldFormatEnum {
   Raw = 'RAW',
   Rendered = 'RENDERED',
 }
 /** Product manage stock enumeration */
-export enum GraphCmsManageStockEnum {
+export enum GraphCmsWpManageStockEnum {
   False = 'FALSE',
   Parent = 'PARENT',
   True = 'TRUE',
 }
 /** Product tax status enumeration */
-export enum GraphCmsTaxStatusEnum {
+export enum GraphCmsWpTaxStatusEnum {
   None = 'NONE',
   Shipping = 'SHIPPING',
   Taxable = 'TAXABLE',
 }
 /** The size of the media item object. */
-export enum GraphCmsMediaItemSizeEnum {
+export enum GraphCmsWpMediaItemSizeEnum {
   Large = 'LARGE',
   Medium = 'MEDIUM',
   MediumLarge = 'MEDIUM_LARGE',
@@ -8150,7 +8150,7 @@ export enum GraphCmsMediaItemSizeEnum {
   WoocommerceThumbnail = 'WOOCOMMERCE_THUMBNAIL',
 }
 /** Field to order the connection by */
-export enum GraphCmsCustomerConnectionOrderbyEnum {
+export enum GraphCmsWpCustomerConnectionOrderbyEnum {
   Email = 'EMAIL',
   Id = 'ID',
   Include = 'INCLUDE',
@@ -8159,7 +8159,7 @@ export enum GraphCmsCustomerConnectionOrderbyEnum {
   Username = 'USERNAME',
 }
 /** Names of available user roles */
-export enum GraphCmsUserRoleEnum {
+export enum GraphCmsWpUserRoleEnum {
   Author = 'AUTHOR',
   Contributor = 'CONTRIBUTOR',
   Customer = 'CUSTOMER',
@@ -8168,7 +8168,7 @@ export enum GraphCmsUserRoleEnum {
   Subscriber = 'SUBSCRIBER',
 }
 /** Countries enumeration */
-export enum GraphCmsCountriesEnum {
+export enum GraphCmsWpCountriesEnum {
   Ad = 'AD',
   Ae = 'AE',
   Af = 'AF',
@@ -8420,7 +8420,7 @@ export enum GraphCmsCountriesEnum {
   Zw = 'ZW',
 }
 /** Order status enumeration */
-export enum GraphCmsOrderStatusEnum {
+export enum GraphCmsWpOrderStatusEnum {
   Cancelled = 'CANCELLED',
   Completed = 'COMPLETED',
   Failed = 'FAILED',
@@ -8430,17 +8430,17 @@ export enum GraphCmsOrderStatusEnum {
   Refunded = 'REFUNDED',
 }
 /** Registered menu locations */
-export enum GraphCmsMenuLocationEnum {
+export enum GraphCmsWpMenuLocationEnum {
   Top = 'TOP',
   TopRight = 'TOP_RIGHT',
 }
 /** Field to order the connection by */
-export enum GraphCmsTaxRateConnectionOrderbyEnum {
+export enum GraphCmsWpTaxRateConnectionOrderbyEnum {
   Id = 'ID',
   Order = 'ORDER',
 }
 /** Column used for searching for users */
-export enum GraphCmsUsersConnectionSearchColumnEnum {
+export enum GraphCmsWpUsersConnectionSearchColumnEnum {
   Email = 'EMAIL',
   Id = 'ID',
   Login = 'LOGIN',
@@ -8448,7 +8448,7 @@ export enum GraphCmsUsersConnectionSearchColumnEnum {
   Url = 'URL',
 }
 /** The status of the media item object. */
-export enum GraphCmsMediaItemStatusEnum {
+export enum GraphCmsWpMediaItemStatusEnum {
   AutoDraft = 'AUTO_DRAFT',
   Inherit = 'INHERIT',
   Private = 'PRIVATE',
@@ -8487,23 +8487,23 @@ export type IndexQuerySiteMetadata = {
 export type IndexQueryCms = {
   __typename?: 'GraphCMS';
 
-  products: Maybe<IndexQueryProducts>;
+  WP_products: Maybe<IndexQueryWpProducts>;
 };
 
-export type IndexQueryProducts = {
-  __typename?: 'GraphCMS_RootQueryToProductConnection';
+export type IndexQueryWpProducts = {
+  __typename?: 'GraphCMS_WP_RootQueryToProductConnection';
 
   edges: Maybe<(Maybe<IndexQueryEdges>)[]>;
 };
 
 export type IndexQueryEdges = {
-  __typename?: 'GraphCMS_RootQueryToProductConnectionEdge';
+  __typename?: 'GraphCMS_WP_RootQueryToProductConnectionEdge';
 
   node: Maybe<IndexQueryNode>;
 };
 
 export type IndexQueryNode = {
-  __typename?: 'GraphCMS_Product';
+  __typename?: 'GraphCMS_WP_Product';
 
   name: Maybe<string>;
 
@@ -8519,7 +8519,7 @@ export type IndexQueryNode = {
 };
 
 export type IndexQueryImage = {
-  __typename?: 'GraphCMS_MediaItem';
+  __typename?: 'GraphCMS_WP_MediaItem';
 
   mediaDetails: Maybe<IndexQueryMediaDetails>;
 
@@ -8527,7 +8527,7 @@ export type IndexQueryImage = {
 };
 
 export type IndexQueryMediaDetails = {
-  __typename?: 'GraphCMS_MediaDetails';
+  __typename?: 'GraphCMS_WP_MediaDetails';
 
   width: Maybe<number>;
 
@@ -8535,19 +8535,19 @@ export type IndexQueryMediaDetails = {
 };
 
 export type IndexQueryGalleryImages = {
-  __typename?: 'GraphCMS_ProductToMediaItemConnection';
+  __typename?: 'GraphCMS_WP_ProductToMediaItemConnection';
 
   edges: Maybe<(Maybe<IndexQuery_Edges>)[]>;
 };
 
 export type IndexQuery_Edges = {
-  __typename?: 'GraphCMS_ProductToMediaItemConnectionEdge';
+  __typename?: 'GraphCMS_WP_ProductToMediaItemConnectionEdge';
 
   node: Maybe<IndexQuery_Node>;
 };
 
 export type IndexQuery_Node = {
-  __typename?: 'GraphCMS_MediaItem';
+  __typename?: 'GraphCMS_WP_MediaItem';
 
   srcSet: Maybe<string>;
 
@@ -8555,7 +8555,7 @@ export type IndexQuery_Node = {
 };
 
 export type IndexQuery_MediaDetails = {
-  __typename?: 'GraphCMS_MediaDetails';
+  __typename?: 'GraphCMS_WP_MediaDetails';
 
   width: Maybe<number>;
 
@@ -8565,7 +8565,7 @@ export type IndexQuery_MediaDetails = {
 };
 
 export type IndexQuerySizes = {
-  __typename?: 'GraphCMS_MediaSize';
+  __typename?: 'GraphCMS_WP_MediaSize';
 
   width: Maybe<string>;
 
@@ -8601,11 +8601,11 @@ export type ProductTemplateSiteMetadata = {
 export type ProductTemplateCms = {
   __typename?: 'GraphCMS';
 
-  product: Maybe<ProductTemplateProduct>;
+  WP_product: Maybe<ProductTemplateWpProduct>;
 };
 
-export type ProductTemplateProduct = {
-  __typename?: 'GraphCMS_Product';
+export type ProductTemplateWpProduct = {
+  __typename?: 'GraphCMS_WP_Product';
 
   id: string;
 
@@ -8617,7 +8617,7 @@ export type ProductTemplateProduct = {
 };
 
 export type ProductTemplateImage = {
-  __typename?: 'GraphCMS_MediaItem';
+  __typename?: 'GraphCMS_WP_MediaItem';
 
   mediaDetails: Maybe<ProductTemplateMediaDetails>;
 
@@ -8625,7 +8625,7 @@ export type ProductTemplateImage = {
 };
 
 export type ProductTemplateMediaDetails = {
-  __typename?: 'GraphCMS_MediaDetails';
+  __typename?: 'GraphCMS_WP_MediaDetails';
 
   width: Maybe<number>;
 

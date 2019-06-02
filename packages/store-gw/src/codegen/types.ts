@@ -1,17 +1,17 @@
 export type Maybe<T> = T | null;
 
 /** Arguments for filtering the CartToCouponConnection connection */
-export interface CartToCouponConnectionWhereArgs {
+export interface WpCartToCouponConnectionWhereArgs {
   /** Limit result set to resources with a specific code. */
   code?: Maybe<string>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -22,12 +22,12 @@ export interface CartToCouponConnectionWhereArgs {
   search?: Maybe<string>;
 }
 /** Filter the connection based on input */
-export interface DateQueryInput {
-  after?: Maybe<DateInput>;
+export interface WpDateQueryInput {
+  after?: Maybe<WpDateInput>;
 
-  before?: Maybe<DateInput>;
+  before?: Maybe<WpDateInput>;
   /** Column to query against */
-  column?: Maybe<PostObjectsConnectionDateColumnEnum>;
+  column?: Maybe<WpPostObjectsConnectionDateColumnEnum>;
   /** For after/before, whether exact value should be matched or not */
   compare?: Maybe<string>;
   /** Day of the month (from 1 to 31) */
@@ -41,7 +41,7 @@ export interface DateQueryInput {
   /** Month number (from 1 to 12) */
   month?: Maybe<number>;
   /** OR or AND, how the sub-arrays should be compared */
-  relation?: Maybe<RelationEnum>;
+  relation?: Maybe<WpRelationEnum>;
   /** Second (0 to 59) */
   second?: Maybe<number>;
   /** Week of the year (from 0 to 53) */
@@ -50,7 +50,7 @@ export interface DateQueryInput {
   year?: Maybe<number>;
 }
 /** Date values */
-export interface DateInput {
+export interface WpDateInput {
   /** Day of the month (from 1 to 31) */
   day?: Maybe<number>;
   /** Month number (from 1 to 12) */
@@ -59,13 +59,13 @@ export interface DateInput {
   year?: Maybe<number>;
 }
 /** Options for ordering the connection */
-export interface WcConnectionOrderbyInput {
-  field: WcConnectionOrderbyEnum;
+export interface WpWcConnectionOrderbyInput {
+  field: WpWcConnectionOrderbyEnum;
 
-  order?: Maybe<OrderEnum>;
+  order?: Maybe<WpOrderEnum>;
 }
 /** Arguments for filtering the CouponToProductCategoryConnection connection */
-export interface CouponToProductCategoryConnectionWhereArgs {
+export interface WpCouponToProductCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -91,7 +91,7 @@ export interface CouponToProductCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -110,7 +110,7 @@ export interface CouponToProductCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the ProductCategoryToProductCategoryConnection connection */
-export interface ProductCategoryToProductCategoryConnectionWhereArgs {
+export interface WpProductCategoryToProductCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -136,7 +136,7 @@ export interface ProductCategoryToProductCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -155,7 +155,7 @@ export interface ProductCategoryToProductCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the ProductCategoryToProductConnection connection */
-export interface ProductCategoryToProductConnectionWhereArgs {
+export interface WpProductCategoryToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -173,7 +173,7 @@ export interface ProductCategoryToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -187,7 +187,7 @@ export interface ProductCategoryToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -205,7 +205,7 @@ export interface ProductCategoryToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -219,18 +219,18 @@ export interface ProductCategoryToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the ProductToProductCategoryConnection connection */
-export interface ProductToProductCategoryConnectionWhereArgs {
+export interface WpProductToProductCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -256,7 +256,7 @@ export interface ProductToProductCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -275,7 +275,7 @@ export interface ProductToProductCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the ProductToProductConnection connection */
-export interface ProductToProductConnectionWhereArgs {
+export interface WpProductToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -293,7 +293,7 @@ export interface ProductToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -307,7 +307,7 @@ export interface ProductToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -325,7 +325,7 @@ export interface ProductToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -339,18 +339,18 @@ export interface ProductToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the ProductToMediaItemConnection connection */
-export interface ProductToMediaItemConnectionWhereArgs {
+export interface WpProductToMediaItemConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -368,7 +368,7 @@ export interface ProductToMediaItemConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -376,7 +376,7 @@ export interface ProductToMediaItemConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -384,7 +384,7 @@ export interface ProductToMediaItemConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -396,9 +396,9 @@ export interface ProductToMediaItemConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
 
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -415,13 +415,13 @@ export interface ProductToMediaItemConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Options for ordering the connection */
-export interface PostObjectsConnectionOrderbyInput {
-  field: PostObjectsConnectionOrderbyEnum;
+export interface WpPostObjectsConnectionOrderbyInput {
+  field: WpPostObjectsConnectionOrderbyEnum;
 
-  order?: Maybe<OrderEnum>;
+  order?: Maybe<WpOrderEnum>;
 }
 /** Arguments for filtering the UserToCommentConnection connection */
-export interface UserToCommentConnectionWhereArgs {
+export interface WpUserToCommentConnectionWhereArgs {
   /** Comment author email address. */
   authorEmail?: Maybe<string>;
   /** Array of author IDs to include comments for. */
@@ -457,17 +457,17 @@ export interface UserToCommentConnectionWhereArgs {
   /** Content Object parent ID to retrieve affiliated comments for. */
   contentParent?: Maybe<number>;
   /** Array of content object statuses to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentStatus?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  contentStatus?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  contentType?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
   /** Array of IDs or email addresses of users whose unapproved comments will be returned by the query regardless of $status. Default empty */
   includeUnapproved?: Maybe<(Maybe<string>)[]>;
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<number>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<OrderEnum>;
+  order?: Maybe<WpOrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<CommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpCommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<number>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -482,7 +482,7 @@ export interface UserToCommentConnectionWhereArgs {
   userId?: Maybe<string>;
 }
 /** Arguments for filtering the CommentToCommentConnection connection */
-export interface CommentToCommentConnectionWhereArgs {
+export interface WpCommentToCommentConnectionWhereArgs {
   /** Comment author email address. */
   authorEmail?: Maybe<string>;
   /** Array of author IDs to include comments for. */
@@ -518,17 +518,17 @@ export interface CommentToCommentConnectionWhereArgs {
   /** Content Object parent ID to retrieve affiliated comments for. */
   contentParent?: Maybe<number>;
   /** Array of content object statuses to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentStatus?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  contentStatus?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  contentType?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
   /** Array of IDs or email addresses of users whose unapproved comments will be returned by the query regardless of $status. Default empty */
   includeUnapproved?: Maybe<(Maybe<string>)[]>;
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<number>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<OrderEnum>;
+  order?: Maybe<WpOrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<CommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpCommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<number>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -543,7 +543,7 @@ export interface CommentToCommentConnectionWhereArgs {
   userId?: Maybe<string>;
 }
 /** Arguments for filtering the UserToMediaItemConnection connection */
-export interface UserToMediaItemConnectionWhereArgs {
+export interface WpUserToMediaItemConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -561,7 +561,7 @@ export interface UserToMediaItemConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -569,7 +569,7 @@ export interface UserToMediaItemConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -577,7 +577,7 @@ export interface UserToMediaItemConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -589,9 +589,9 @@ export interface UserToMediaItemConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
 
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -608,7 +608,7 @@ export interface UserToMediaItemConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the UserToPageConnection connection */
-export interface UserToPageConnectionWhereArgs {
+export interface WpUserToPageConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -626,7 +626,7 @@ export interface UserToPageConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -634,7 +634,7 @@ export interface UserToPageConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -642,7 +642,7 @@ export interface UserToPageConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -654,9 +654,9 @@ export interface UserToPageConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
 
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -673,7 +673,7 @@ export interface UserToPageConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the PageToPageConnection connection */
-export interface PageToPageConnectionWhereArgs {
+export interface WpPageToPageConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -691,7 +691,7 @@ export interface PageToPageConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -699,7 +699,7 @@ export interface PageToPageConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -707,7 +707,7 @@ export interface PageToPageConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -719,9 +719,9 @@ export interface PageToPageConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
 
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -738,7 +738,7 @@ export interface PageToPageConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the PageToCommentConnection connection */
-export interface PageToCommentConnectionWhereArgs {
+export interface WpPageToCommentConnectionWhereArgs {
   /** Comment author email address. */
   authorEmail?: Maybe<string>;
   /** Array of author IDs to include comments for. */
@@ -774,17 +774,17 @@ export interface PageToCommentConnectionWhereArgs {
   /** Content Object parent ID to retrieve affiliated comments for. */
   contentParent?: Maybe<number>;
   /** Array of content object statuses to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentStatus?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  contentStatus?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  contentType?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
   /** Array of IDs or email addresses of users whose unapproved comments will be returned by the query regardless of $status. Default empty */
   includeUnapproved?: Maybe<(Maybe<string>)[]>;
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<number>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<OrderEnum>;
+  order?: Maybe<WpOrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<CommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpCommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<number>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -799,7 +799,7 @@ export interface PageToCommentConnectionWhereArgs {
   userId?: Maybe<string>;
 }
 /** Arguments for filtering the PageToRevisionConnection connection */
-export interface PageToRevisionConnectionWhereArgs {
+export interface WpPageToRevisionConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -817,7 +817,7 @@ export interface PageToRevisionConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -825,7 +825,7 @@ export interface PageToRevisionConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -833,7 +833,7 @@ export interface PageToRevisionConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -845,9 +845,9 @@ export interface PageToRevisionConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
 
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -864,7 +864,7 @@ export interface PageToRevisionConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the CategoryToCategoryConnection connection */
-export interface CategoryToCategoryConnectionWhereArgs {
+export interface WpCategoryToCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -890,7 +890,7 @@ export interface CategoryToCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -909,7 +909,7 @@ export interface CategoryToCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the CategoryToPostConnection connection */
-export interface CategoryToPostConnectionWhereArgs {
+export interface WpCategoryToPostConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -927,7 +927,7 @@ export interface CategoryToPostConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -935,7 +935,7 @@ export interface CategoryToPostConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -943,7 +943,7 @@ export interface CategoryToPostConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -955,9 +955,9 @@ export interface CategoryToPostConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
 
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -974,7 +974,7 @@ export interface CategoryToPostConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the TagToPostConnection connection */
-export interface TagToPostConnectionWhereArgs {
+export interface WpTagToPostConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -992,7 +992,7 @@ export interface TagToPostConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -1000,7 +1000,7 @@ export interface TagToPostConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -1008,7 +1008,7 @@ export interface TagToPostConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -1020,9 +1020,9 @@ export interface TagToPostConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
 
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -1039,7 +1039,7 @@ export interface TagToPostConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the ProductTagToProductConnection connection */
-export interface ProductTagToProductConnectionWhereArgs {
+export interface WpProductTagToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1057,7 +1057,7 @@ export interface ProductTagToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1071,7 +1071,7 @@ export interface ProductTagToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1089,7 +1089,7 @@ export interface ProductTagToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1103,18 +1103,18 @@ export interface ProductTagToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaHindToProductConnection connection */
-export interface PaHindToProductConnectionWhereArgs {
+export interface WpPaHindToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1132,7 +1132,7 @@ export interface PaHindToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1146,7 +1146,7 @@ export interface PaHindToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1164,7 +1164,7 @@ export interface PaHindToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1178,18 +1178,18 @@ export interface PaHindToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaHindToProductVariationConnection connection */
-export interface PaHindToProductVariationConnectionWhereArgs {
+export interface WpPaHindToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1207,7 +1207,7 @@ export interface PaHindToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1221,7 +1221,7 @@ export interface PaHindToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1239,7 +1239,7 @@ export interface PaHindToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1253,18 +1253,18 @@ export interface PaHindToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaHulkToProductConnection connection */
-export interface PaHulkToProductConnectionWhereArgs {
+export interface WpPaHulkToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1282,7 +1282,7 @@ export interface PaHulkToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1296,7 +1296,7 @@ export interface PaHulkToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1314,7 +1314,7 @@ export interface PaHulkToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1328,18 +1328,18 @@ export interface PaHulkToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaHulkToProductVariationConnection connection */
-export interface PaHulkToProductVariationConnectionWhereArgs {
+export interface WpPaHulkToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1357,7 +1357,7 @@ export interface PaHulkToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1371,7 +1371,7 @@ export interface PaHulkToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1389,7 +1389,7 @@ export interface PaHulkToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1403,18 +1403,18 @@ export interface PaHulkToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKasutusaegToProductConnection connection */
-export interface PaKasutusaegToProductConnectionWhereArgs {
+export interface WpPaKasutusaegToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1432,7 +1432,7 @@ export interface PaKasutusaegToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1446,7 +1446,7 @@ export interface PaKasutusaegToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1464,7 +1464,7 @@ export interface PaKasutusaegToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1478,18 +1478,18 @@ export interface PaKasutusaegToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKasutusaegToProductVariationConnection connection */
-export interface PaKasutusaegToProductVariationConnectionWhereArgs {
+export interface WpPaKasutusaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1507,7 +1507,7 @@ export interface PaKasutusaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1521,7 +1521,7 @@ export interface PaKasutusaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1539,7 +1539,7 @@ export interface PaKasutusaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1553,18 +1553,18 @@ export interface PaKasutusaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKogusToProductConnection connection */
-export interface PaKogusToProductConnectionWhereArgs {
+export interface WpPaKogusToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1582,7 +1582,7 @@ export interface PaKogusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1596,7 +1596,7 @@ export interface PaKogusToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1614,7 +1614,7 @@ export interface PaKogusToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1628,18 +1628,18 @@ export interface PaKogusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKogusToProductVariationConnection connection */
-export interface PaKogusToProductVariationConnectionWhereArgs {
+export interface WpPaKogusToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1657,7 +1657,7 @@ export interface PaKogusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1671,7 +1671,7 @@ export interface PaKogusToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1689,7 +1689,7 @@ export interface PaKogusToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1703,18 +1703,18 @@ export interface PaKogusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKontuurToProductConnection connection */
-export interface PaKontuurToProductConnectionWhereArgs {
+export interface WpPaKontuurToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1732,7 +1732,7 @@ export interface PaKontuurToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1746,7 +1746,7 @@ export interface PaKontuurToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1764,7 +1764,7 @@ export interface PaKontuurToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1778,18 +1778,18 @@ export interface PaKontuurToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKontuurToProductVariationConnection connection */
-export interface PaKontuurToProductVariationConnectionWhereArgs {
+export interface WpPaKontuurToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1807,7 +1807,7 @@ export interface PaKontuurToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1821,7 +1821,7 @@ export interface PaKontuurToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1839,7 +1839,7 @@ export interface PaKontuurToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1853,18 +1853,18 @@ export interface PaKontuurToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKoostisainedToProductConnection connection */
-export interface PaKoostisainedToProductConnectionWhereArgs {
+export interface WpPaKoostisainedToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1882,7 +1882,7 @@ export interface PaKoostisainedToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1896,7 +1896,7 @@ export interface PaKoostisainedToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1914,7 +1914,7 @@ export interface PaKoostisainedToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -1928,18 +1928,18 @@ export interface PaKoostisainedToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaKoostisainedToProductVariationConnection connection */
-export interface PaKoostisainedToProductVariationConnectionWhereArgs {
+export interface WpPaKoostisainedToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -1957,7 +1957,7 @@ export interface PaKoostisainedToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -1971,7 +1971,7 @@ export interface PaKoostisainedToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -1989,7 +1989,7 @@ export interface PaKoostisainedToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2003,18 +2003,18 @@ export interface PaKoostisainedToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaLaadimisaegToProductConnection connection */
-export interface PaLaadimisaegToProductConnectionWhereArgs {
+export interface WpPaLaadimisaegToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2032,7 +2032,7 @@ export interface PaLaadimisaegToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2046,7 +2046,7 @@ export interface PaLaadimisaegToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2064,7 +2064,7 @@ export interface PaLaadimisaegToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2078,18 +2078,18 @@ export interface PaLaadimisaegToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaLaadimisaegToProductVariationConnection connection */
-export interface PaLaadimisaegToProductVariationConnectionWhereArgs {
+export interface WpPaLaadimisaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2107,7 +2107,7 @@ export interface PaLaadimisaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2121,7 +2121,7 @@ export interface PaLaadimisaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2139,7 +2139,7 @@ export interface PaLaadimisaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2153,18 +2153,18 @@ export interface PaLaadimisaegToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaMaterjalToProductConnection connection */
-export interface PaMaterjalToProductConnectionWhereArgs {
+export interface WpPaMaterjalToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2182,7 +2182,7 @@ export interface PaMaterjalToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2196,7 +2196,7 @@ export interface PaMaterjalToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2214,7 +2214,7 @@ export interface PaMaterjalToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2228,18 +2228,18 @@ export interface PaMaterjalToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaMaterjalToProductVariationConnection connection */
-export interface PaMaterjalToProductVariationConnectionWhereArgs {
+export interface WpPaMaterjalToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2257,7 +2257,7 @@ export interface PaMaterjalToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2271,7 +2271,7 @@ export interface PaMaterjalToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2289,7 +2289,7 @@ export interface PaMaterjalToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2303,18 +2303,18 @@ export interface PaMaterjalToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaMuratasaToProductConnection connection */
-export interface PaMuratasaToProductConnectionWhereArgs {
+export interface WpPaMuratasaToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2332,7 +2332,7 @@ export interface PaMuratasaToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2346,7 +2346,7 @@ export interface PaMuratasaToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2364,7 +2364,7 @@ export interface PaMuratasaToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2378,18 +2378,18 @@ export interface PaMuratasaToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaMuratasaToProductVariationConnection connection */
-export interface PaMuratasaToProductVariationConnectionWhereArgs {
+export interface WpPaMuratasaToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2407,7 +2407,7 @@ export interface PaMuratasaToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2421,7 +2421,7 @@ export interface PaMuratasaToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2439,7 +2439,7 @@ export interface PaMuratasaToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2453,18 +2453,18 @@ export interface PaMuratasaToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaOhutusToProductConnection connection */
-export interface PaOhutusToProductConnectionWhereArgs {
+export interface WpPaOhutusToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2482,7 +2482,7 @@ export interface PaOhutusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2496,7 +2496,7 @@ export interface PaOhutusToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2514,7 +2514,7 @@ export interface PaOhutusToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2528,18 +2528,18 @@ export interface PaOhutusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaOhutusToProductVariationConnection connection */
-export interface PaOhutusToProductVariationConnectionWhereArgs {
+export interface WpPaOhutusToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2557,7 +2557,7 @@ export interface PaOhutusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2571,7 +2571,7 @@ export interface PaOhutusToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2589,7 +2589,7 @@ export interface PaOhutusToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2603,18 +2603,18 @@ export interface PaOhutusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaPatareidToProductConnection connection */
-export interface PaPatareidToProductConnectionWhereArgs {
+export interface WpPaPatareidToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2632,7 +2632,7 @@ export interface PaPatareidToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2646,7 +2646,7 @@ export interface PaPatareidToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2664,7 +2664,7 @@ export interface PaPatareidToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2678,18 +2678,18 @@ export interface PaPatareidToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaPatareidToProductVariationConnection connection */
-export interface PaPatareidToProductVariationConnectionWhereArgs {
+export interface WpPaPatareidToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2707,7 +2707,7 @@ export interface PaPatareidToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2721,7 +2721,7 @@ export interface PaPatareidToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2739,7 +2739,7 @@ export interface PaPatareidToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2753,18 +2753,18 @@ export interface PaPatareidToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaSuurusToProductConnection connection */
-export interface PaSuurusToProductConnectionWhereArgs {
+export interface WpPaSuurusToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2782,7 +2782,7 @@ export interface PaSuurusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2796,7 +2796,7 @@ export interface PaSuurusToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2814,7 +2814,7 @@ export interface PaSuurusToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2828,18 +2828,18 @@ export interface PaSuurusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaSuurusToProductVariationConnection connection */
-export interface PaSuurusToProductVariationConnectionWhereArgs {
+export interface WpPaSuurusToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2857,7 +2857,7 @@ export interface PaSuurusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2871,7 +2871,7 @@ export interface PaSuurusToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2889,7 +2889,7 @@ export interface PaSuurusToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2903,18 +2903,18 @@ export interface PaSuurusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaVariantToProductConnection connection */
-export interface PaVariantToProductConnectionWhereArgs {
+export interface WpPaVariantToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2932,7 +2932,7 @@ export interface PaVariantToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -2946,7 +2946,7 @@ export interface PaVariantToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -2964,7 +2964,7 @@ export interface PaVariantToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2978,18 +2978,18 @@ export interface PaVariantToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaVariantToProductVariationConnection connection */
-export interface PaVariantToProductVariationConnectionWhereArgs {
+export interface WpPaVariantToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3007,7 +3007,7 @@ export interface PaVariantToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3021,7 +3021,7 @@ export interface PaVariantToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3039,7 +3039,7 @@ export interface PaVariantToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3053,18 +3053,18 @@ export interface PaVariantToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaVarvToProductConnection connection */
-export interface PaVarvToProductConnectionWhereArgs {
+export interface WpPaVarvToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3082,7 +3082,7 @@ export interface PaVarvToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3096,7 +3096,7 @@ export interface PaVarvToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3114,7 +3114,7 @@ export interface PaVarvToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3128,18 +3128,18 @@ export interface PaVarvToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaVarvToProductVariationConnection connection */
-export interface PaVarvToProductVariationConnectionWhereArgs {
+export interface WpPaVarvToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3157,7 +3157,7 @@ export interface PaVarvToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3171,7 +3171,7 @@ export interface PaVarvToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3189,7 +3189,7 @@ export interface PaVarvToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3203,18 +3203,18 @@ export interface PaVarvToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaVeekindlusToProductConnection connection */
-export interface PaVeekindlusToProductConnectionWhereArgs {
+export interface WpPaVeekindlusToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3232,7 +3232,7 @@ export interface PaVeekindlusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3246,7 +3246,7 @@ export interface PaVeekindlusToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3264,7 +3264,7 @@ export interface PaVeekindlusToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3278,18 +3278,18 @@ export interface PaVeekindlusToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the PaVeekindlusToProductVariationConnection connection */
-export interface PaVeekindlusToProductVariationConnectionWhereArgs {
+export interface WpPaVeekindlusToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3307,7 +3307,7 @@ export interface PaVeekindlusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3321,7 +3321,7 @@ export interface PaVeekindlusToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3339,7 +3339,7 @@ export interface PaVeekindlusToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3353,18 +3353,18 @@ export interface PaVeekindlusToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the UserToPostConnection connection */
-export interface UserToPostConnectionWhereArgs {
+export interface WpUserToPostConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -3382,7 +3382,7 @@ export interface UserToPostConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -3390,7 +3390,7 @@ export interface UserToPostConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -3398,7 +3398,7 @@ export interface UserToPostConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -3410,9 +3410,9 @@ export interface UserToPostConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
 
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -3429,7 +3429,7 @@ export interface UserToPostConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the UserToRevisionConnection connection */
-export interface UserToRevisionConnectionWhereArgs {
+export interface WpUserToRevisionConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -3447,7 +3447,7 @@ export interface UserToRevisionConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -3455,7 +3455,7 @@ export interface UserToRevisionConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -3463,7 +3463,7 @@ export interface UserToRevisionConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -3490,7 +3490,7 @@ export interface UserToRevisionConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the PostToCategoryConnection connection */
-export interface PostToCategoryConnectionWhereArgs {
+export interface WpPostToCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -3516,7 +3516,7 @@ export interface PostToCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -3535,7 +3535,7 @@ export interface PostToCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the PostToCommentConnection connection */
-export interface PostToCommentConnectionWhereArgs {
+export interface WpPostToCommentConnectionWhereArgs {
   /** Comment author email address. */
   authorEmail?: Maybe<string>;
   /** Array of author IDs to include comments for. */
@@ -3571,17 +3571,17 @@ export interface PostToCommentConnectionWhereArgs {
   /** Content Object parent ID to retrieve affiliated comments for. */
   contentParent?: Maybe<number>;
   /** Array of content object statuses to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentStatus?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  contentStatus?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  contentType?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
   /** Array of IDs or email addresses of users whose unapproved comments will be returned by the query regardless of $status. Default empty */
   includeUnapproved?: Maybe<(Maybe<string>)[]>;
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<number>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<OrderEnum>;
+  order?: Maybe<WpOrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<CommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpCommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<number>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -3596,7 +3596,7 @@ export interface PostToCommentConnectionWhereArgs {
   userId?: Maybe<string>;
 }
 /** Arguments for filtering the PostToRevisionConnection connection */
-export interface PostToRevisionConnectionWhereArgs {
+export interface WpPostToRevisionConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -3614,7 +3614,7 @@ export interface PostToRevisionConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -3622,7 +3622,7 @@ export interface PostToRevisionConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -3630,7 +3630,7 @@ export interface PostToRevisionConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -3642,9 +3642,9 @@ export interface PostToRevisionConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
 
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -3661,7 +3661,7 @@ export interface PostToRevisionConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the PostToTagConnection connection */
-export interface PostToTagConnectionWhereArgs {
+export interface WpPostToTagConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -3687,7 +3687,7 @@ export interface PostToTagConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -3706,7 +3706,7 @@ export interface PostToTagConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the MediaItemToCommentConnection connection */
-export interface MediaItemToCommentConnectionWhereArgs {
+export interface WpMediaItemToCommentConnectionWhereArgs {
   /** Comment author email address. */
   authorEmail?: Maybe<string>;
   /** Array of author IDs to include comments for. */
@@ -3742,17 +3742,17 @@ export interface MediaItemToCommentConnectionWhereArgs {
   /** Content Object parent ID to retrieve affiliated comments for. */
   contentParent?: Maybe<number>;
   /** Array of content object statuses to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentStatus?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  contentStatus?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  contentType?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
   /** Array of IDs or email addresses of users whose unapproved comments will be returned by the query regardless of $status. Default empty */
   includeUnapproved?: Maybe<(Maybe<string>)[]>;
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<number>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<OrderEnum>;
+  order?: Maybe<WpOrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<CommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpCommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<number>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -3767,7 +3767,7 @@ export interface MediaItemToCommentConnectionWhereArgs {
   userId?: Maybe<string>;
 }
 /** Arguments for filtering the ProductToProductTagConnection connection */
-export interface ProductToProductTagConnectionWhereArgs {
+export interface WpProductToProductTagConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -3793,7 +3793,7 @@ export interface ProductToProductTagConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -3812,7 +3812,7 @@ export interface ProductToProductTagConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the ProductToProductVariationConnection connection */
-export interface ProductToProductVariationConnectionWhereArgs {
+export interface WpProductToProductVariationConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3830,7 +3830,7 @@ export interface ProductToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3844,7 +3844,7 @@ export interface ProductToProductVariationConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3862,7 +3862,7 @@ export interface ProductToProductVariationConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3876,18 +3876,18 @@ export interface ProductToProductVariationConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the CouponToProductConnection connection */
-export interface CouponToProductConnectionWhereArgs {
+export interface WpCouponToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -3905,7 +3905,7 @@ export interface CouponToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -3919,7 +3919,7 @@ export interface CouponToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -3937,7 +3937,7 @@ export interface CouponToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -3951,18 +3951,18 @@ export interface CouponToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the CouponToCustomerConnection connection */
-export interface CouponToCustomerConnectionWhereArgs {
+export interface WpCouponToCustomerConnectionWhereArgs {
   /** Limit result set to resources with a specific email. */
   email?: Maybe<string>;
   /** Ensure result set excludes specific IDs. */
@@ -3970,28 +3970,28 @@ export interface CouponToCustomerConnectionWhereArgs {
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** Order of results. */
-  order?: Maybe<OrderEnum>;
+  order?: Maybe<WpOrderEnum>;
   /** Order results by a specific field. */
-  orderby?: Maybe<CustomerConnectionOrderbyEnum>;
+  orderby?: Maybe<WpCustomerConnectionOrderbyEnum>;
   /** Limit result set to resources with a specific role. */
-  role?: Maybe<UserRoleEnum>;
+  role?: Maybe<WpUserRoleEnum>;
   /** Limit result set to resources with a specific group of roles. */
-  roleIn?: Maybe<(Maybe<UserRoleEnum>)[]>;
+  roleIn?: Maybe<(Maybe<WpUserRoleEnum>)[]>;
   /** Limit result set to resources not within a specific group of roles. */
-  roleNotIn?: Maybe<(Maybe<UserRoleEnum>)[]>;
+  roleNotIn?: Maybe<(Maybe<WpUserRoleEnum>)[]>;
   /** Limit results to those matching a string. */
   search?: Maybe<string>;
 }
 /** Arguments for filtering the OrderToRefundConnection connection */
-export interface OrderToRefundConnectionWhereArgs {
+export interface WpOrderToRefundConnectionWhereArgs {
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Limit result set to refunds from a specific group of order IDs. */
   orderIn?: Maybe<(Maybe<number>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
@@ -4006,19 +4006,19 @@ export interface OrderToRefundConnectionWhereArgs {
   statuses?: Maybe<(Maybe<string>)[]>;
 }
 /** Arguments for filtering the CustomerToOrderConnection connection */
-export interface CustomerToOrderConnectionWhereArgs {
+export interface WpCustomerToOrderConnectionWhereArgs {
   /** Limit result set to orders assigned a specific customer. */
   customerId?: Maybe<number>;
   /** Limit result set to orders assigned a specific group of customers. */
   customersIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -4030,18 +4030,18 @@ export interface CustomerToOrderConnectionWhereArgs {
   /** Limit results to those matching a string. */
   search?: Maybe<string>;
   /** Limit result set to orders assigned a specific status. */
-  statuses?: Maybe<(Maybe<OrderStatusEnum>)[]>;
+  statuses?: Maybe<(Maybe<WpOrderStatusEnum>)[]>;
 }
 /** Arguments for filtering the CustomerToRefundConnection connection */
-export interface CustomerToRefundConnectionWhereArgs {
+export interface WpCustomerToRefundConnectionWhereArgs {
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Limit result set to refunds from a specific group of order IDs. */
   orderIn?: Maybe<(Maybe<number>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
@@ -4056,12 +4056,12 @@ export interface CustomerToRefundConnectionWhereArgs {
   statuses?: Maybe<(Maybe<string>)[]>;
 }
 /** Arguments for filtering the CartToCartItemConnection connection */
-export interface CartToCartItemConnectionWhereArgs {
+export interface WpCartToCartItemConnectionWhereArgs {
   /** Limit results to cart item that require shipping */
   needShipping?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToCategoryConnection connection */
-export interface RootQueryToCategoryConnectionWhereArgs {
+export interface WpRootQueryToCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4087,7 +4087,7 @@ export interface RootQueryToCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4106,7 +4106,7 @@ export interface RootQueryToCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToCommentConnection connection */
-export interface RootQueryToCommentConnectionWhereArgs {
+export interface WpRootQueryToCommentConnectionWhereArgs {
   /** Comment author email address. */
   authorEmail?: Maybe<string>;
   /** Array of author IDs to include comments for. */
@@ -4142,17 +4142,17 @@ export interface RootQueryToCommentConnectionWhereArgs {
   /** Content Object parent ID to retrieve affiliated comments for. */
   contentParent?: Maybe<number>;
   /** Array of content object statuses to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentStatus?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  contentStatus?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  contentType?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
   /** Array of IDs or email addresses of users whose unapproved comments will be returned by the query regardless of $status. Default empty */
   includeUnapproved?: Maybe<(Maybe<string>)[]>;
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<number>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<OrderEnum>;
+  order?: Maybe<WpOrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<CommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpCommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<number>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -4167,17 +4167,17 @@ export interface RootQueryToCommentConnectionWhereArgs {
   userId?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToCouponConnection connection */
-export interface RootQueryToCouponConnectionWhereArgs {
+export interface WpRootQueryToCouponConnectionWhereArgs {
   /** Limit result set to resources with a specific code. */
   code?: Maybe<string>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -4188,7 +4188,7 @@ export interface RootQueryToCouponConnectionWhereArgs {
   search?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToCustomerConnection connection */
-export interface RootQueryToCustomerConnectionWhereArgs {
+export interface WpRootQueryToCustomerConnectionWhereArgs {
   /** Limit result set to resources with a specific email. */
   email?: Maybe<string>;
   /** Ensure result set excludes specific IDs. */
@@ -4196,20 +4196,20 @@ export interface RootQueryToCustomerConnectionWhereArgs {
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** Order of results. */
-  order?: Maybe<OrderEnum>;
+  order?: Maybe<WpOrderEnum>;
   /** Order results by a specific field. */
-  orderby?: Maybe<CustomerConnectionOrderbyEnum>;
+  orderby?: Maybe<WpCustomerConnectionOrderbyEnum>;
   /** Limit result set to resources with a specific role. */
-  role?: Maybe<UserRoleEnum>;
+  role?: Maybe<WpUserRoleEnum>;
   /** Limit result set to resources with a specific group of roles. */
-  roleIn?: Maybe<(Maybe<UserRoleEnum>)[]>;
+  roleIn?: Maybe<(Maybe<WpUserRoleEnum>)[]>;
   /** Limit result set to resources not within a specific group of roles. */
-  roleNotIn?: Maybe<(Maybe<UserRoleEnum>)[]>;
+  roleNotIn?: Maybe<(Maybe<WpUserRoleEnum>)[]>;
   /** Limit results to those matching a string. */
   search?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToMediaItemConnection connection */
-export interface RootQueryToMediaItemConnectionWhereArgs {
+export interface WpRootQueryToMediaItemConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -4227,7 +4227,7 @@ export interface RootQueryToMediaItemConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -4235,7 +4235,7 @@ export interface RootQueryToMediaItemConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -4243,7 +4243,7 @@ export interface RootQueryToMediaItemConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -4255,9 +4255,9 @@ export interface RootQueryToMediaItemConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
 
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -4274,49 +4274,49 @@ export interface RootQueryToMediaItemConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the MenuToMenuItemConnection connection */
-export interface MenuToMenuItemConnectionWhereArgs {
+export interface WpMenuToMenuItemConnectionWhereArgs {
   /** The ID of the object */
   id?: Maybe<number>;
   /** The menu location for the menu being queried */
-  location?: Maybe<MenuLocationEnum>;
+  location?: Maybe<WpMenuLocationEnum>;
 }
 /** Arguments for filtering the MenuItemToMenuItemConnection connection */
-export interface MenuItemToMenuItemConnectionWhereArgs {
+export interface WpMenuItemToMenuItemConnectionWhereArgs {
   /** The ID of the object */
   id?: Maybe<number>;
   /** The menu location for the menu being queried */
-  location?: Maybe<MenuLocationEnum>;
+  location?: Maybe<WpMenuLocationEnum>;
 }
 /** Arguments for filtering the RootQueryToMenuItemConnection connection */
-export interface RootQueryToMenuItemConnectionWhereArgs {
+export interface WpRootQueryToMenuItemConnectionWhereArgs {
   /** The ID of the object */
   id?: Maybe<number>;
   /** The menu location for the menu being queried */
-  location?: Maybe<MenuLocationEnum>;
+  location?: Maybe<WpMenuLocationEnum>;
 }
 /** Arguments for filtering the RootQueryToMenuConnection connection */
-export interface RootQueryToMenuConnectionWhereArgs {
+export interface WpRootQueryToMenuConnectionWhereArgs {
   /** The ID of the object */
   id?: Maybe<number>;
   /** The menu location for the menu being queried */
-  location?: Maybe<MenuLocationEnum>;
+  location?: Maybe<WpMenuLocationEnum>;
   /** The slug of the menu to query items for */
   slug?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToOrderConnection connection */
-export interface RootQueryToOrderConnectionWhereArgs {
+export interface WpRootQueryToOrderConnectionWhereArgs {
   /** Limit result set to orders assigned a specific customer. */
   customerId?: Maybe<number>;
   /** Limit result set to orders assigned a specific group of customers. */
   customersIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -4328,10 +4328,10 @@ export interface RootQueryToOrderConnectionWhereArgs {
   /** Limit results to those matching a string. */
   search?: Maybe<string>;
   /** Limit result set to orders assigned a specific status. */
-  statuses?: Maybe<(Maybe<OrderStatusEnum>)[]>;
+  statuses?: Maybe<(Maybe<WpOrderStatusEnum>)[]>;
 }
 /** Arguments for filtering the RootQueryToPaHindConnection connection */
-export interface RootQueryToPaHindConnectionWhereArgs {
+export interface WpRootQueryToPaHindConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4357,7 +4357,7 @@ export interface RootQueryToPaHindConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4376,7 +4376,7 @@ export interface RootQueryToPaHindConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaHulkConnection connection */
-export interface RootQueryToPaHulkConnectionWhereArgs {
+export interface WpRootQueryToPaHulkConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4402,7 +4402,7 @@ export interface RootQueryToPaHulkConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4421,7 +4421,7 @@ export interface RootQueryToPaHulkConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaKasutusaegConnection connection */
-export interface RootQueryToPaKasutusaegConnectionWhereArgs {
+export interface WpRootQueryToPaKasutusaegConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4447,7 +4447,7 @@ export interface RootQueryToPaKasutusaegConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4466,7 +4466,7 @@ export interface RootQueryToPaKasutusaegConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaKogusConnection connection */
-export interface RootQueryToPaKogusConnectionWhereArgs {
+export interface WpRootQueryToPaKogusConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4492,7 +4492,7 @@ export interface RootQueryToPaKogusConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4511,7 +4511,7 @@ export interface RootQueryToPaKogusConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaKontuurConnection connection */
-export interface RootQueryToPaKontuurConnectionWhereArgs {
+export interface WpRootQueryToPaKontuurConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4537,7 +4537,7 @@ export interface RootQueryToPaKontuurConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4556,7 +4556,7 @@ export interface RootQueryToPaKontuurConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaKoostisainedConnection connection */
-export interface RootQueryToPaKoostisainedConnectionWhereArgs {
+export interface WpRootQueryToPaKoostisainedConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4582,7 +4582,7 @@ export interface RootQueryToPaKoostisainedConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4601,7 +4601,7 @@ export interface RootQueryToPaKoostisainedConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaLaadimisaegConnection connection */
-export interface RootQueryToPaLaadimisaegConnectionWhereArgs {
+export interface WpRootQueryToPaLaadimisaegConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4627,7 +4627,7 @@ export interface RootQueryToPaLaadimisaegConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4646,7 +4646,7 @@ export interface RootQueryToPaLaadimisaegConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaMaterjalConnection connection */
-export interface RootQueryToPaMaterjalConnectionWhereArgs {
+export interface WpRootQueryToPaMaterjalConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4672,7 +4672,7 @@ export interface RootQueryToPaMaterjalConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4691,7 +4691,7 @@ export interface RootQueryToPaMaterjalConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaMuratasaConnection connection */
-export interface RootQueryToPaMuratasaConnectionWhereArgs {
+export interface WpRootQueryToPaMuratasaConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4717,7 +4717,7 @@ export interface RootQueryToPaMuratasaConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4736,7 +4736,7 @@ export interface RootQueryToPaMuratasaConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaOhutusConnection connection */
-export interface RootQueryToPaOhutusConnectionWhereArgs {
+export interface WpRootQueryToPaOhutusConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4762,7 +4762,7 @@ export interface RootQueryToPaOhutusConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4781,7 +4781,7 @@ export interface RootQueryToPaOhutusConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaPatareidConnection connection */
-export interface RootQueryToPaPatareidConnectionWhereArgs {
+export interface WpRootQueryToPaPatareidConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4807,7 +4807,7 @@ export interface RootQueryToPaPatareidConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4826,7 +4826,7 @@ export interface RootQueryToPaPatareidConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaSuurusConnection connection */
-export interface RootQueryToPaSuurusConnectionWhereArgs {
+export interface WpRootQueryToPaSuurusConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4852,7 +4852,7 @@ export interface RootQueryToPaSuurusConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4871,7 +4871,7 @@ export interface RootQueryToPaSuurusConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaVariantConnection connection */
-export interface RootQueryToPaVariantConnectionWhereArgs {
+export interface WpRootQueryToPaVariantConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4897,7 +4897,7 @@ export interface RootQueryToPaVariantConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4916,7 +4916,7 @@ export interface RootQueryToPaVariantConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaVarvConnection connection */
-export interface RootQueryToPaVarvConnectionWhereArgs {
+export interface WpRootQueryToPaVarvConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4942,7 +4942,7 @@ export interface RootQueryToPaVarvConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -4961,7 +4961,7 @@ export interface RootQueryToPaVarvConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPaVeekindlusConnection connection */
-export interface RootQueryToPaVeekindlusConnectionWhereArgs {
+export interface WpRootQueryToPaVeekindlusConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -4987,7 +4987,7 @@ export interface RootQueryToPaVeekindlusConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5006,7 +5006,7 @@ export interface RootQueryToPaVeekindlusConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToPageConnection connection */
-export interface RootQueryToPageConnectionWhereArgs {
+export interface WpRootQueryToPageConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -5024,7 +5024,7 @@ export interface RootQueryToPageConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -5032,7 +5032,7 @@ export interface RootQueryToPageConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -5040,7 +5040,7 @@ export interface RootQueryToPageConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -5052,9 +5052,9 @@ export interface RootQueryToPageConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
 
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -5071,7 +5071,7 @@ export interface RootQueryToPageConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToPostConnection connection */
-export interface RootQueryToPostConnectionWhereArgs {
+export interface WpRootQueryToPostConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -5089,7 +5089,7 @@ export interface RootQueryToPostConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -5097,7 +5097,7 @@ export interface RootQueryToPostConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -5105,7 +5105,7 @@ export interface RootQueryToPostConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -5117,9 +5117,9 @@ export interface RootQueryToPostConnectionWhereArgs {
   /** Show Posts based on a keyword search */
   search?: Maybe<string>;
 
-  stati?: Maybe<(Maybe<PostStatusEnum>)[]>;
+  stati?: Maybe<(Maybe<WpPostStatusEnum>)[]>;
 
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<string>;
   /** Use Tag ID */
@@ -5136,7 +5136,7 @@ export interface RootQueryToPostConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToProductCategoryConnection connection */
-export interface RootQueryToProductCategoryConnectionWhereArgs {
+export interface WpRootQueryToProductCategoryConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5162,7 +5162,7 @@ export interface RootQueryToProductCategoryConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5181,7 +5181,7 @@ export interface RootQueryToProductCategoryConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToProductTagConnection connection */
-export interface RootQueryToProductTagConnectionWhereArgs {
+export interface WpRootQueryToProductTagConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5207,7 +5207,7 @@ export interface RootQueryToProductTagConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5226,7 +5226,7 @@ export interface RootQueryToProductTagConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToProductTypeConnection connection */
-export interface RootQueryToProductTypeConnectionWhereArgs {
+export interface WpRootQueryToProductTypeConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5252,7 +5252,7 @@ export interface RootQueryToProductTypeConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5271,7 +5271,7 @@ export interface RootQueryToProductTypeConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToProductConnection connection */
-export interface RootQueryToProductConnectionWhereArgs {
+export interface WpRootQueryToProductConnectionWhereArgs {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<string>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -5289,7 +5289,7 @@ export interface RootQueryToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<(Maybe<number>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to featured products. */
@@ -5303,7 +5303,7 @@ export interface RootQueryToProductConnectionWhereArgs {
   /** Limit result set to products on sale. */
   onSale?: Maybe<boolean>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<number>;
   /** Specify objects whose parent is in an array */
@@ -5321,7 +5321,7 @@ export interface RootQueryToProductConnectionWhereArgs {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<string>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<(Maybe<StockStatusEnum>)[]>;
+  stockStatus?: Maybe<(Maybe<WpStockStatusEnum>)[]>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<string>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -5335,26 +5335,26 @@ export interface RootQueryToProductConnectionWhereArgs {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<(Maybe<string>)[]>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<(Maybe<ProductTypesEnum>)[]>;
+  typeNotIn?: Maybe<(Maybe<WpProductTypesEnum>)[]>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<CatalogVisibilityEnum>;
+  visibility?: Maybe<WpCatalogVisibilityEnum>;
 }
 /** Arguments for filtering the RootQueryToRefundConnection connection */
-export interface RootQueryToRefundConnectionWhereArgs {
+export interface WpRootQueryToRefundConnectionWhereArgs {
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Limit result set to specific ids. */
   include?: Maybe<(Maybe<number>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<WcConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpWcConnectionOrderbyInput>)[]>;
   /** Limit result set to refunds from a specific group of order IDs. */
   orderIn?: Maybe<(Maybe<number>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
@@ -5369,7 +5369,7 @@ export interface RootQueryToRefundConnectionWhereArgs {
   statuses?: Maybe<(Maybe<string>)[]>;
 }
 /** Arguments for filtering the RootQueryToRevisionConnection connection */
-export interface RootQueryToRevisionConnectionWhereArgs {
+export interface WpRootQueryToRevisionConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
   author?: Maybe<number>;
   /** Find objects connected to author(s) in the array of author's userIds */
@@ -5387,7 +5387,7 @@ export interface RootQueryToRevisionConnectionWhereArgs {
   /** Array of category IDs, used to display objects from one category OR another */
   categoryNotIn?: Maybe<(Maybe<string>)[]>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<DateQueryInput>;
+  dateQuery?: Maybe<WpDateQueryInput>;
   /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
   hasPassword?: Maybe<boolean>;
   /** Specific ID of the object */
@@ -5395,7 +5395,7 @@ export interface RootQueryToRevisionConnectionWhereArgs {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<(Maybe<string>)[]>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<string>;
   /** Specify objects to retrieve. Use slugs */
@@ -5403,7 +5403,7 @@ export interface RootQueryToRevisionConnectionWhereArgs {
   /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
   notIn?: Maybe<(Maybe<string>)[]>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<PostObjectsConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpPostObjectsConnectionOrderbyInput>)[]>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<string>;
   /** Specify objects whose parent is in an array */
@@ -5430,7 +5430,7 @@ export interface RootQueryToRevisionConnectionWhereArgs {
   title?: Maybe<string>;
 }
 /** Arguments for filtering the RootQueryToShippingClassConnection connection */
-export interface RootQueryToShippingClassConnectionWhereArgs {
+export interface WpRootQueryToShippingClassConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5456,7 +5456,7 @@ export interface RootQueryToShippingClassConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5475,7 +5475,7 @@ export interface RootQueryToShippingClassConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToTagConnection connection */
-export interface RootQueryToTagConnectionWhereArgs {
+export interface WpRootQueryToTagConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5501,7 +5501,7 @@ export interface RootQueryToTagConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5520,24 +5520,24 @@ export interface RootQueryToTagConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Arguments for filtering the RootQueryToTaxRateConnection connection */
-export interface RootQueryToTaxRateConnectionWhereArgs {
+export interface WpRootQueryToTaxRateConnectionWhereArgs {
   /** Sort by tax class */
   class?: Maybe<string>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<(Maybe<TaxRateConnectionOrderbyInput>)[]>;
+  orderby?: Maybe<(Maybe<WpTaxRateConnectionOrderbyInput>)[]>;
 }
 /** Options for ordering the connection */
-export interface TaxRateConnectionOrderbyInput {
-  field: TaxRateConnectionOrderbyEnum;
+export interface WpTaxRateConnectionOrderbyInput {
+  field: WpTaxRateConnectionOrderbyEnum;
 
-  order?: Maybe<OrderEnum>;
+  order?: Maybe<WpOrderEnum>;
 }
 /** Arguments for filtering the RootQueryToUserConnection connection */
-export interface RootQueryToUserConnectionWhereArgs {
+export interface WpRootQueryToUserConnectionWhereArgs {
   /** Array of IDs of users whose unapproved comments will be returned by the query regardless of status. */
   exclude?: Maybe<(Maybe<number>)[]>;
   /** Pass an array of post types to filter results to users who have published posts in those post types. */
-  hasPublishedPosts?: Maybe<(Maybe<PostTypeEnum>)[]>;
+  hasPublishedPosts?: Maybe<(Maybe<WpPostTypeEnum>)[]>;
   /** Array of comment IDs to include. */
   include?: Maybe<(Maybe<number>)[]>;
   /** The user login. */
@@ -5553,18 +5553,18 @@ export interface RootQueryToUserConnectionWhereArgs {
   /** An array of nicenames to exclude. Users matching one of these nicenames will not be included in results. */
   nicenameNotIn?: Maybe<(Maybe<string>)[]>;
   /** An array of role names that users must match to be included in results. Note that this is an inclusive list: users must match *each* role. */
-  role?: Maybe<UserRoleEnum>;
+  role?: Maybe<WpUserRoleEnum>;
   /** An array of role names. Matched users must have at least one of these roles. */
-  roleIn?: Maybe<(Maybe<UserRoleEnum>)[]>;
+  roleIn?: Maybe<(Maybe<WpUserRoleEnum>)[]>;
   /** An array of role names to exclude. Users matching one or more of these roles will not be included in results. */
-  roleNotIn?: Maybe<(Maybe<UserRoleEnum>)[]>;
+  roleNotIn?: Maybe<(Maybe<WpUserRoleEnum>)[]>;
   /** Search keyword. Searches for possible string matches on columns. When "searchColumns" is left empty, it tries to determine which column to search in based on search string. */
   search?: Maybe<string>;
   /** Array of column names to be searched. Accepts 'ID', 'login', 'nicename', 'email', 'url'. */
-  searchColumns?: Maybe<(Maybe<UsersConnectionSearchColumnEnum>)[]>;
+  searchColumns?: Maybe<(Maybe<WpUsersConnectionSearchColumnEnum>)[]>;
 }
 /** Arguments for filtering the RootQueryToVisibleProductConnection connection */
-export interface RootQueryToVisibleProductConnectionWhereArgs {
+export interface WpRootQueryToVisibleProductConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<string>;
   /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
@@ -5590,7 +5590,7 @@ export interface RootQueryToVisibleProductConnectionWhereArgs {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<(Maybe<string>)[]>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<WpTermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<boolean>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -5609,7 +5609,7 @@ export interface RootQueryToVisibleProductConnectionWhereArgs {
   updateTermMetaCache?: Maybe<boolean>;
 }
 /** Input for the UpdateCategory mutation */
-export interface UpdateCategoryInput {
+export interface WpUpdateCategoryInput {
   /** The slug that the category will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5626,7 +5626,7 @@ export interface UpdateCategoryInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaHind mutation */
-export interface UpdatePaHindInput {
+export interface WpUpdatePaHindInput {
   /** The slug that the pa_hind will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5641,7 +5641,7 @@ export interface UpdatePaHindInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaHulk mutation */
-export interface UpdatePaHulkInput {
+export interface WpUpdatePaHulkInput {
   /** The slug that the pa_hulk will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5656,7 +5656,7 @@ export interface UpdatePaHulkInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaKasutusaeg mutation */
-export interface UpdatePaKasutusaegInput {
+export interface WpUpdatePaKasutusaegInput {
   /** The slug that the pa_kasutusaeg will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5671,7 +5671,7 @@ export interface UpdatePaKasutusaegInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaKogus mutation */
-export interface UpdatePaKogusInput {
+export interface WpUpdatePaKogusInput {
   /** The slug that the pa_kogus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5686,7 +5686,7 @@ export interface UpdatePaKogusInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaKontuur mutation */
-export interface UpdatePaKontuurInput {
+export interface WpUpdatePaKontuurInput {
   /** The slug that the pa_kontuur will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5701,7 +5701,7 @@ export interface UpdatePaKontuurInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaKoostisained mutation */
-export interface UpdatePaKoostisainedInput {
+export interface WpUpdatePaKoostisainedInput {
   /** The slug that the pa_koostisained will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5716,7 +5716,7 @@ export interface UpdatePaKoostisainedInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaLaadimisaeg mutation */
-export interface UpdatePaLaadimisaegInput {
+export interface WpUpdatePaLaadimisaegInput {
   /** The slug that the pa_laadimisaeg will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5731,7 +5731,7 @@ export interface UpdatePaLaadimisaegInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaMaterjal mutation */
-export interface UpdatePaMaterjalInput {
+export interface WpUpdatePaMaterjalInput {
   /** The slug that the pa_materjal will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5746,7 +5746,7 @@ export interface UpdatePaMaterjalInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaMuratasa mutation */
-export interface UpdatePaMuratasaInput {
+export interface WpUpdatePaMuratasaInput {
   /** The slug that the pa_muratasa will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5761,7 +5761,7 @@ export interface UpdatePaMuratasaInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaOhutus mutation */
-export interface UpdatePaOhutusInput {
+export interface WpUpdatePaOhutusInput {
   /** The slug that the pa_ohutus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5776,7 +5776,7 @@ export interface UpdatePaOhutusInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaPatareid mutation */
-export interface UpdatePaPatareidInput {
+export interface WpUpdatePaPatareidInput {
   /** The slug that the pa_patareid will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5791,7 +5791,7 @@ export interface UpdatePaPatareidInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaSuurus mutation */
-export interface UpdatePaSuurusInput {
+export interface WpUpdatePaSuurusInput {
   /** The slug that the pa_suurus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5806,7 +5806,7 @@ export interface UpdatePaSuurusInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaVariant mutation */
-export interface UpdatePaVariantInput {
+export interface WpUpdatePaVariantInput {
   /** The slug that the pa_variant will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5821,7 +5821,7 @@ export interface UpdatePaVariantInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaVarv mutation */
-export interface UpdatePaVarvInput {
+export interface WpUpdatePaVarvInput {
   /** The slug that the pa_varv will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5836,7 +5836,7 @@ export interface UpdatePaVarvInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdatePaVeekindlus mutation */
-export interface UpdatePaVeekindlusInput {
+export interface WpUpdatePaVeekindlusInput {
   /** The slug that the pa_veekindlus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5851,7 +5851,7 @@ export interface UpdatePaVeekindlusInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdateProductCategory mutation */
-export interface UpdateProductCategoryInput {
+export interface WpUpdateProductCategoryInput {
   /** The slug that the product_cat will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5868,7 +5868,7 @@ export interface UpdateProductCategoryInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdateProductTag mutation */
-export interface UpdateProductTagInput {
+export interface WpUpdateProductTagInput {
   /** The slug that the product_tag will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5883,7 +5883,7 @@ export interface UpdateProductTagInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdateProductType mutation */
-export interface UpdateProductTypeInput {
+export interface WpUpdateProductTypeInput {
   /** The slug that the product_type will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5898,7 +5898,7 @@ export interface UpdateProductTypeInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdateShippingClass mutation */
-export interface UpdateShippingClassInput {
+export interface WpUpdateShippingClassInput {
   /** The slug that the product_shipping_class will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5913,7 +5913,7 @@ export interface UpdateShippingClassInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdateTag mutation */
-export interface UpdateTagInput {
+export interface WpUpdateTagInput {
   /** The slug that the post_tag will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5928,7 +5928,7 @@ export interface UpdateTagInput {
   slug?: Maybe<string>;
 }
 /** Input for the UpdateVisibleProduct mutation */
-export interface UpdateVisibleProductInput {
+export interface WpUpdateVisibleProductInput {
   /** The slug that the product_visibility will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5943,7 +5943,7 @@ export interface UpdateVisibleProductInput {
   slug?: Maybe<string>;
 }
 /** Input for the addFee mutation */
-export interface AddFeeInput {
+export interface WpAddFeeInput {
   /** Fee amount */
   amount?: Maybe<number>;
 
@@ -5953,10 +5953,10 @@ export interface AddFeeInput {
   /** Is the fee taxable? */
   taxable?: Maybe<boolean>;
   /** The tax class for the fee if taxable. */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
 }
 /** Input for the addToCart mutation */
-export interface AddToCartInput {
+export interface WpAddToCartInput {
   clientMutationId: string;
   /** JSON string representation of extra cart item data */
   extraData?: Maybe<string>;
@@ -5965,24 +5965,24 @@ export interface AddToCartInput {
   /** Cart item quantity */
   quantity?: Maybe<number>;
   /** Cart item product variation attributes */
-  variation?: Maybe<(Maybe<ProductAttributeInput>)[]>;
+  variation?: Maybe<(Maybe<WpProductAttributeInput>)[]>;
   /** Cart item product variation database ID or global ID */
   variationId?: Maybe<number>;
 }
 /** Options for ordering the connection */
-export interface ProductAttributeInput {
+export interface WpProductAttributeInput {
   attribute: string;
 
   attributeTerm: string;
 }
 /** Input for the applyCoupon mutation */
-export interface ApplyCouponInput {
+export interface WpApplyCouponInput {
   clientMutationId: string;
   /** Code of coupon being applied */
   code: string;
 }
 /** Input for the createCategory mutation */
-export interface CreateCategoryInput {
+export interface WpCreateCategoryInput {
   /** The slug that the category will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -5997,7 +5997,7 @@ export interface CreateCategoryInput {
   slug?: Maybe<string>;
 }
 /** Input for the createComment mutation */
-export interface CreateCommentInput {
+export interface WpCreateCommentInput {
   /** User agent used to post the comment. */
   agent?: Maybe<string>;
   /** The approval status of the comment. */
@@ -6026,7 +6026,7 @@ export interface CreateCommentInput {
   userId?: Maybe<number>;
 }
 /** Input for the createMediaItem mutation */
-export interface CreateMediaItemInput {
+export interface WpCreateMediaItemInput {
   /** Alternative text to display when mediaItem is not displayed */
   altText?: Maybe<string>;
   /** The userId to assign as the author of the mediaItem */
@@ -6046,7 +6046,7 @@ export interface CreateMediaItemInput {
   /** The file name of the mediaItem */
   filePath?: Maybe<string>;
   /** The file type of the mediaItem */
-  fileType?: Maybe<MimeTypeEnum>;
+  fileType?: Maybe<WpMimeTypeEnum>;
   /** The WordPress post ID or the graphQL postId of the parent object */
   parentId?: Maybe<string>;
   /** The ping status for the mediaItem */
@@ -6054,12 +6054,12 @@ export interface CreateMediaItemInput {
   /** The slug of the mediaItem */
   slug?: Maybe<string>;
   /** The status of the mediaItem */
-  status?: Maybe<MediaItemStatusEnum>;
+  status?: Maybe<WpMediaItemStatusEnum>;
   /** The title of the mediaItem */
   title?: Maybe<string>;
 }
 /** Input for the createPaHind mutation */
-export interface CreatePaHindInput {
+export interface WpCreatePaHindInput {
   /** The slug that the pa_hind will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6072,7 +6072,7 @@ export interface CreatePaHindInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaHulk mutation */
-export interface CreatePaHulkInput {
+export interface WpCreatePaHulkInput {
   /** The slug that the pa_hulk will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6085,7 +6085,7 @@ export interface CreatePaHulkInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaKasutusaeg mutation */
-export interface CreatePaKasutusaegInput {
+export interface WpCreatePaKasutusaegInput {
   /** The slug that the pa_kasutusaeg will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6098,7 +6098,7 @@ export interface CreatePaKasutusaegInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaKogus mutation */
-export interface CreatePaKogusInput {
+export interface WpCreatePaKogusInput {
   /** The slug that the pa_kogus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6111,7 +6111,7 @@ export interface CreatePaKogusInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaKontuur mutation */
-export interface CreatePaKontuurInput {
+export interface WpCreatePaKontuurInput {
   /** The slug that the pa_kontuur will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6124,7 +6124,7 @@ export interface CreatePaKontuurInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaKoostisained mutation */
-export interface CreatePaKoostisainedInput {
+export interface WpCreatePaKoostisainedInput {
   /** The slug that the pa_koostisained will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6137,7 +6137,7 @@ export interface CreatePaKoostisainedInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaLaadimisaeg mutation */
-export interface CreatePaLaadimisaegInput {
+export interface WpCreatePaLaadimisaegInput {
   /** The slug that the pa_laadimisaeg will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6150,7 +6150,7 @@ export interface CreatePaLaadimisaegInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaMaterjal mutation */
-export interface CreatePaMaterjalInput {
+export interface WpCreatePaMaterjalInput {
   /** The slug that the pa_materjal will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6163,7 +6163,7 @@ export interface CreatePaMaterjalInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaMuratasa mutation */
-export interface CreatePaMuratasaInput {
+export interface WpCreatePaMuratasaInput {
   /** The slug that the pa_muratasa will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6176,7 +6176,7 @@ export interface CreatePaMuratasaInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaOhutus mutation */
-export interface CreatePaOhutusInput {
+export interface WpCreatePaOhutusInput {
   /** The slug that the pa_ohutus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6189,7 +6189,7 @@ export interface CreatePaOhutusInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaPatareid mutation */
-export interface CreatePaPatareidInput {
+export interface WpCreatePaPatareidInput {
   /** The slug that the pa_patareid will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6202,7 +6202,7 @@ export interface CreatePaPatareidInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaSuurus mutation */
-export interface CreatePaSuurusInput {
+export interface WpCreatePaSuurusInput {
   /** The slug that the pa_suurus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6215,7 +6215,7 @@ export interface CreatePaSuurusInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaVariant mutation */
-export interface CreatePaVariantInput {
+export interface WpCreatePaVariantInput {
   /** The slug that the pa_variant will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6228,7 +6228,7 @@ export interface CreatePaVariantInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaVarv mutation */
-export interface CreatePaVarvInput {
+export interface WpCreatePaVarvInput {
   /** The slug that the pa_varv will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6241,7 +6241,7 @@ export interface CreatePaVarvInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPaVeekindlus mutation */
-export interface CreatePaVeekindlusInput {
+export interface WpCreatePaVeekindlusInput {
   /** The slug that the pa_veekindlus will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6254,7 +6254,7 @@ export interface CreatePaVeekindlusInput {
   slug?: Maybe<string>;
 }
 /** Input for the createPage mutation */
-export interface CreatePageInput {
+export interface WpCreatePageInput {
   /** The userId to assign as the author of the post */
   authorId?: Maybe<string>;
 
@@ -6272,7 +6272,7 @@ export interface CreatePageInput {
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: Maybe<number>;
   /** If the post is an attachment or a media file, this field will carry the corresponding MIME type. This field is equivalent to the value of WP_Post->post_mime_type and the post_mime_type column in the "post_objects" database table. */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** The ID of the parent object */
   parentId?: Maybe<string>;
   /** The password used to protect the content of the object */
@@ -6284,18 +6284,18 @@ export interface CreatePageInput {
   /** The slug of the object */
   slug?: Maybe<string>;
   /** The status of the object */
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** The title of the post */
   title?: Maybe<string>;
   /** URLs queued to be pinged. */
   toPing?: Maybe<(Maybe<string>)[]>;
 }
 /** Input for the createPost mutation */
-export interface CreatePostInput {
+export interface WpCreatePostInput {
   /** The userId to assign as the author of the post */
   authorId?: Maybe<string>;
   /** Set connections between the post and categories */
-  categories?: Maybe<PostCategoriesInput>;
+  categories?: Maybe<WpPostCategoriesInput>;
 
   clientMutationId: string;
   /** The number of comments. Even though WPGraphQL denotes this field as an integer, in WordPress this field should be saved as a numeric string for compatibility. */
@@ -6311,7 +6311,7 @@ export interface CreatePostInput {
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: Maybe<number>;
   /** If the post is an attachment or a media file, this field will carry the corresponding MIME type. This field is equivalent to the value of WP_Post->post_mime_type and the post_mime_type column in the "post_objects" database table. */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** The ID of the parent object */
   parentId?: Maybe<string>;
   /** The password used to protect the content of the object */
@@ -6323,23 +6323,23 @@ export interface CreatePostInput {
   /** The slug of the object */
   slug?: Maybe<string>;
   /** The status of the object */
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Set connections between the post and tags */
-  tags?: Maybe<PostTagsInput>;
+  tags?: Maybe<WpPostTagsInput>;
   /** The title of the post */
   title?: Maybe<string>;
   /** URLs queued to be pinged. */
   toPing?: Maybe<(Maybe<string>)[]>;
 }
 /** Set relationships between the post to categories */
-export interface PostCategoriesInput {
+export interface WpPostCategoriesInput {
   /** If true, this will append the category to existing related categories. If false, this will replace existing relationships. Default true. */
   append?: Maybe<boolean>;
 
-  nodes?: Maybe<(Maybe<PostCategoriesNodeInput>)[]>;
+  nodes?: Maybe<(Maybe<WpPostCategoriesNodeInput>)[]>;
 }
 /** List of categories to connect the post to. If an ID is set, it will be used to create the connection. If not, it will look for a slug. If neither are valid existing terms, and the site is configured to allow terms to be created during post mutations, a term will be created using the Name if it exists in the input, then fallback to the slug if it exists. */
-export interface PostCategoriesNodeInput {
+export interface WpPostCategoriesNodeInput {
   /** The description of the category. This field is used to set a description of the category if a new one is created during the mutation. */
   description?: Maybe<string>;
   /** The ID of the category. If present, this will be used to connect to the post. If no existing category exists with this ID, no connection will be made. */
@@ -6350,14 +6350,14 @@ export interface PostCategoriesNodeInput {
   slug?: Maybe<string>;
 }
 /** Set relationships between the post to tags */
-export interface PostTagsInput {
+export interface WpPostTagsInput {
   /** If true, this will append the tag to existing related tags. If false, this will replace existing relationships. Default true. */
   append?: Maybe<boolean>;
 
-  nodes?: Maybe<(Maybe<PostTagsNodeInput>)[]>;
+  nodes?: Maybe<(Maybe<WpPostTagsNodeInput>)[]>;
 }
 /** List of tags to connect the post to. If an ID is set, it will be used to create the connection. If not, it will look for a slug. If neither are valid existing terms, and the site is configured to allow terms to be created during post mutations, a term will be created using the Name if it exists in the input, then fallback to the slug if it exists. */
-export interface PostTagsNodeInput {
+export interface WpPostTagsNodeInput {
   /** The description of the tag. This field is used to set a description of the tag if a new one is created during the mutation. */
   description?: Maybe<string>;
   /** The ID of the tag. If present, this will be used to connect to the post. If no existing tag exists with this ID, no connection will be made. */
@@ -6368,7 +6368,7 @@ export interface PostTagsNodeInput {
   slug?: Maybe<string>;
 }
 /** Input for the createProductCategory mutation */
-export interface CreateProductCategoryInput {
+export interface WpCreateProductCategoryInput {
   /** The slug that the product_cat will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6383,7 +6383,7 @@ export interface CreateProductCategoryInput {
   slug?: Maybe<string>;
 }
 /** Input for the createProductTag mutation */
-export interface CreateProductTagInput {
+export interface WpCreateProductTagInput {
   /** The slug that the product_tag will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6396,7 +6396,7 @@ export interface CreateProductTagInput {
   slug?: Maybe<string>;
 }
 /** Input for the createProductType mutation */
-export interface CreateProductTypeInput {
+export interface WpCreateProductTypeInput {
   /** The slug that the product_type will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6409,7 +6409,7 @@ export interface CreateProductTypeInput {
   slug?: Maybe<string>;
 }
 /** Input for the createShippingClass mutation */
-export interface CreateShippingClassInput {
+export interface WpCreateShippingClassInput {
   /** The slug that the product_shipping_class will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6422,7 +6422,7 @@ export interface CreateShippingClassInput {
   slug?: Maybe<string>;
 }
 /** Input for the createTag mutation */
-export interface CreateTagInput {
+export interface WpCreateTagInput {
   /** The slug that the post_tag will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6435,7 +6435,7 @@ export interface CreateTagInput {
   slug?: Maybe<string>;
 }
 /** Input for the createUser mutation */
-export interface CreateUserInput {
+export interface WpCreateUserInput {
   /** User's AOL IM account. */
   aim?: Maybe<string>;
 
@@ -6474,7 +6474,7 @@ export interface CreateUserInput {
   yim?: Maybe<string>;
 }
 /** Input for the createVisibleProduct mutation */
-export interface CreateVisibleProductInput {
+export interface WpCreateVisibleProductInput {
   /** The slug that the product_visibility will be an alias of */
   aliasOf?: Maybe<string>;
 
@@ -6487,13 +6487,13 @@ export interface CreateVisibleProductInput {
   slug?: Maybe<string>;
 }
 /** Input for the deleteCategory mutation */
-export interface DeleteCategoryInput {
+export interface WpDeleteCategoryInput {
   clientMutationId: string;
   /** The ID of the category to delete */
   id: string;
 }
 /** Input for the deleteComment mutation */
-export interface DeleteCommentInput {
+export interface WpDeleteCommentInput {
   clientMutationId: string;
   /** Whether the comment should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<boolean>;
@@ -6501,7 +6501,7 @@ export interface DeleteCommentInput {
   id: string;
 }
 /** Input for the deleteMediaItem mutation */
-export interface DeleteMediaItemInput {
+export interface WpDeleteMediaItemInput {
   clientMutationId: string;
   /** Whether the mediaItem should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<boolean>;
@@ -6509,97 +6509,97 @@ export interface DeleteMediaItemInput {
   id: string;
 }
 /** Input for the deletePaHind mutation */
-export interface DeletePaHindInput {
+export interface WpDeletePaHindInput {
   clientMutationId: string;
   /** The ID of the paHind to delete */
   id: string;
 }
 /** Input for the deletePaHulk mutation */
-export interface DeletePaHulkInput {
+export interface WpDeletePaHulkInput {
   clientMutationId: string;
   /** The ID of the paHulk to delete */
   id: string;
 }
 /** Input for the deletePaKasutusaeg mutation */
-export interface DeletePaKasutusaegInput {
+export interface WpDeletePaKasutusaegInput {
   clientMutationId: string;
   /** The ID of the paKasutusaeg to delete */
   id: string;
 }
 /** Input for the deletePaKogus mutation */
-export interface DeletePaKogusInput {
+export interface WpDeletePaKogusInput {
   clientMutationId: string;
   /** The ID of the paKogus to delete */
   id: string;
 }
 /** Input for the deletePaKontuur mutation */
-export interface DeletePaKontuurInput {
+export interface WpDeletePaKontuurInput {
   clientMutationId: string;
   /** The ID of the paKontuur to delete */
   id: string;
 }
 /** Input for the deletePaKoostisained mutation */
-export interface DeletePaKoostisainedInput {
+export interface WpDeletePaKoostisainedInput {
   clientMutationId: string;
   /** The ID of the paKoostisained to delete */
   id: string;
 }
 /** Input for the deletePaLaadimisaeg mutation */
-export interface DeletePaLaadimisaegInput {
+export interface WpDeletePaLaadimisaegInput {
   clientMutationId: string;
   /** The ID of the paLaadimisaeg to delete */
   id: string;
 }
 /** Input for the deletePaMaterjal mutation */
-export interface DeletePaMaterjalInput {
+export interface WpDeletePaMaterjalInput {
   clientMutationId: string;
   /** The ID of the paMaterjal to delete */
   id: string;
 }
 /** Input for the deletePaMuratasa mutation */
-export interface DeletePaMuratasaInput {
+export interface WpDeletePaMuratasaInput {
   clientMutationId: string;
   /** The ID of the paMuratasa to delete */
   id: string;
 }
 /** Input for the deletePaOhutus mutation */
-export interface DeletePaOhutusInput {
+export interface WpDeletePaOhutusInput {
   clientMutationId: string;
   /** The ID of the paOhutus to delete */
   id: string;
 }
 /** Input for the deletePaPatareid mutation */
-export interface DeletePaPatareidInput {
+export interface WpDeletePaPatareidInput {
   clientMutationId: string;
   /** The ID of the paPatareid to delete */
   id: string;
 }
 /** Input for the deletePaSuurus mutation */
-export interface DeletePaSuurusInput {
+export interface WpDeletePaSuurusInput {
   clientMutationId: string;
   /** The ID of the paSuurus to delete */
   id: string;
 }
 /** Input for the deletePaVariant mutation */
-export interface DeletePaVariantInput {
+export interface WpDeletePaVariantInput {
   clientMutationId: string;
   /** The ID of the paVariant to delete */
   id: string;
 }
 /** Input for the deletePaVarv mutation */
-export interface DeletePaVarvInput {
+export interface WpDeletePaVarvInput {
   clientMutationId: string;
   /** The ID of the paVarv to delete */
   id: string;
 }
 /** Input for the deletePaVeekindlus mutation */
-export interface DeletePaVeekindlusInput {
+export interface WpDeletePaVeekindlusInput {
   clientMutationId: string;
   /** The ID of the paVeekindlus to delete */
   id: string;
 }
 /** Input for the deletePage mutation */
-export interface DeletePageInput {
+export interface WpDeletePageInput {
   clientMutationId: string;
   /** Whether the object should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<boolean>;
@@ -6607,7 +6607,7 @@ export interface DeletePageInput {
   id: string;
 }
 /** Input for the deletePost mutation */
-export interface DeletePostInput {
+export interface WpDeletePostInput {
   clientMutationId: string;
   /** Whether the object should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<boolean>;
@@ -6615,25 +6615,25 @@ export interface DeletePostInput {
   id: string;
 }
 /** Input for the deleteProductCategory mutation */
-export interface DeleteProductCategoryInput {
+export interface WpDeleteProductCategoryInput {
   clientMutationId: string;
   /** The ID of the productCategory to delete */
   id: string;
 }
 /** Input for the deleteProductTag mutation */
-export interface DeleteProductTagInput {
+export interface WpDeleteProductTagInput {
   clientMutationId: string;
   /** The ID of the productTag to delete */
   id: string;
 }
 /** Input for the deleteProductType mutation */
-export interface DeleteProductTypeInput {
+export interface WpDeleteProductTypeInput {
   clientMutationId: string;
   /** The ID of the productType to delete */
   id: string;
 }
 /** Input for the deleteRevision mutation */
-export interface DeleteRevisionInput {
+export interface WpDeleteRevisionInput {
   clientMutationId: string;
   /** Whether the object should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<boolean>;
@@ -6641,19 +6641,19 @@ export interface DeleteRevisionInput {
   id: string;
 }
 /** Input for the deleteShippingClass mutation */
-export interface DeleteShippingClassInput {
+export interface WpDeleteShippingClassInput {
   clientMutationId: string;
   /** The ID of the shippingClass to delete */
   id: string;
 }
 /** Input for the deleteTag mutation */
-export interface DeleteTagInput {
+export interface WpDeleteTagInput {
   clientMutationId: string;
   /** The ID of the tag to delete */
   id: string;
 }
 /** Input for the deleteUser mutation */
-export interface DeleteUserInput {
+export interface WpDeleteUserInput {
   clientMutationId: string;
   /** The ID of the user you want to delete */
   id: string;
@@ -6661,21 +6661,21 @@ export interface DeleteUserInput {
   reassignId?: Maybe<string>;
 }
 /** Input for the deleteVisibleProduct mutation */
-export interface DeleteVisibleProductInput {
+export interface WpDeleteVisibleProductInput {
   clientMutationId: string;
   /** The ID of the visibleProduct to delete */
   id: string;
 }
 /** Input for the emptyCart mutation */
-export interface EmptyCartInput {
+export interface WpEmptyCartInput {
   clientMutationId: string;
 }
 /** Input for the registerCustomer mutation */
-export interface RegisterCustomerInput {
+export interface WpRegisterCustomerInput {
   /** User's AOL IM account. */
   aim?: Maybe<string>;
   /** Customer billing information */
-  billing?: Maybe<CustomerAddressInput>;
+  billing?: Maybe<WpCustomerAddressInput>;
 
   clientMutationId: string;
   /** A string containing content about the user. */
@@ -6703,7 +6703,7 @@ export interface RegisterCustomerInput {
   /** A string for whether to enable the rich editor or not. False if not empty. */
   richEditing?: Maybe<string>;
   /** Customer shipping address */
-  shipping?: Maybe<CustomerAddressInput>;
+  shipping?: Maybe<WpCustomerAddressInput>;
   /** Customer shipping is identical to billing address */
   shippingSameAsBilling?: Maybe<boolean>;
   /** A string that contains the user's username. */
@@ -6714,7 +6714,7 @@ export interface RegisterCustomerInput {
   yim?: Maybe<string>;
 }
 /** Customer address information */
-export interface CustomerAddressInput {
+export interface WpCustomerAddressInput {
   /** Address 1 */
   address1?: Maybe<string>;
   /** Address 2 */
@@ -6724,7 +6724,7 @@ export interface CustomerAddressInput {
   /** Company */
   company?: Maybe<string>;
   /** Country */
-  country?: Maybe<CountriesEnum>;
+  country?: Maybe<WpCountriesEnum>;
   /** E-mail */
   email?: Maybe<string>;
   /** First name */
@@ -6741,7 +6741,7 @@ export interface CustomerAddressInput {
   state?: Maybe<string>;
 }
 /** Input for the registerUser mutation */
-export interface RegisterUserInput {
+export interface WpRegisterUserInput {
   /** User's AOL IM account. */
   aim?: Maybe<string>;
 
@@ -6778,13 +6778,13 @@ export interface RegisterUserInput {
   yim?: Maybe<string>;
 }
 /** Input for the removeCoupons mutation */
-export interface RemoveCouponsInput {
+export interface WpRemoveCouponsInput {
   clientMutationId: string;
   /** Code of coupon being applied */
   codes?: Maybe<(Maybe<string>)[]>;
 }
 /** Input for the removeItemsFromCart mutation */
-export interface RemoveItemsFromCartInput {
+export interface WpRemoveItemsFromCartInput {
   /** Remove all cart items */
   all?: Maybe<boolean>;
 
@@ -6793,7 +6793,7 @@ export interface RemoveItemsFromCartInput {
   keys?: Maybe<(Maybe<string>)[]>;
 }
 /** Input for the resetUserPassword mutation */
-export interface ResetUserPasswordInput {
+export interface WpResetUserPasswordInput {
   clientMutationId: string;
   /** Password reset key */
   key?: Maybe<string>;
@@ -6803,25 +6803,25 @@ export interface ResetUserPasswordInput {
   password?: Maybe<string>;
 }
 /** Input for the restoreCartItems mutation */
-export interface RestoreCartItemsInput {
+export interface WpRestoreCartItemsInput {
   clientMutationId: string;
   /** Cart item key of the item being removed */
   keys?: Maybe<(Maybe<string>)[]>;
 }
 /** Input for the restoreComment mutation */
-export interface RestoreCommentInput {
+export interface WpRestoreCommentInput {
   clientMutationId: string;
   /** The ID of the comment to be restored */
   id: string;
 }
 /** Input for the sendPasswordResetEmail mutation */
-export interface SendPasswordResetEmailInput {
+export interface WpSendPasswordResetEmailInput {
   clientMutationId: string;
   /** A string that contains the user's username or email address. */
   username: string;
 }
 /** Input for the updateComment mutation */
-export interface UpdateCommentInput {
+export interface WpUpdateCommentInput {
   /** User agent used to post the comment. */
   agent?: Maybe<string>;
   /** The approval status of the comment. */
@@ -6852,11 +6852,11 @@ export interface UpdateCommentInput {
   userId?: Maybe<number>;
 }
 /** Input for the updateCustomer mutation */
-export interface UpdateCustomerInput {
+export interface WpUpdateCustomerInput {
   /** User's AOL IM account. */
   aim?: Maybe<string>;
   /** Customer billing information */
-  billing?: Maybe<CustomerAddressInput>;
+  billing?: Maybe<WpCustomerAddressInput>;
 
   clientMutationId: string;
   /** A string containing content about the user. */
@@ -6888,7 +6888,7 @@ export interface UpdateCustomerInput {
   /** An array of roles to be assigned to the user. */
   roles?: Maybe<(Maybe<string>)[]>;
   /** Customer shipping address */
-  shipping?: Maybe<CustomerAddressInput>;
+  shipping?: Maybe<WpCustomerAddressInput>;
   /** Customer shipping is identical to billing address */
   shippingSameAsBilling?: Maybe<boolean>;
   /** A string containing the user's URL for the user's web site. */
@@ -6897,7 +6897,7 @@ export interface UpdateCustomerInput {
   yim?: Maybe<string>;
 }
 /** Input for the updateItemQuantity mutation */
-export interface UpdateItemQuantityInput {
+export interface WpUpdateItemQuantityInput {
   clientMutationId: string;
   /** Cart item being updated */
   key: string;
@@ -6905,7 +6905,7 @@ export interface UpdateItemQuantityInput {
   quantity: number;
 }
 /** Input for the updateMediaItem mutation */
-export interface UpdateMediaItemInput {
+export interface WpUpdateMediaItemInput {
   /** Alternative text to display when mediaItem is not displayed */
   altText?: Maybe<string>;
   /** The userId to assign as the author of the mediaItem */
@@ -6925,7 +6925,7 @@ export interface UpdateMediaItemInput {
   /** The file name of the mediaItem */
   filePath?: Maybe<string>;
   /** The file type of the mediaItem */
-  fileType?: Maybe<MimeTypeEnum>;
+  fileType?: Maybe<WpMimeTypeEnum>;
   /** The ID of the mediaItem object */
   id: string;
   /** The WordPress post ID or the graphQL postId of the parent object */
@@ -6935,12 +6935,12 @@ export interface UpdateMediaItemInput {
   /** The slug of the mediaItem */
   slug?: Maybe<string>;
   /** The status of the mediaItem */
-  status?: Maybe<MediaItemStatusEnum>;
+  status?: Maybe<WpMediaItemStatusEnum>;
   /** The title of the mediaItem */
   title?: Maybe<string>;
 }
 /** Input for the updatePage mutation */
-export interface UpdatePageInput {
+export interface WpUpdatePageInput {
   /** The userId to assign as the author of the post */
   authorId?: Maybe<string>;
 
@@ -6960,7 +6960,7 @@ export interface UpdatePageInput {
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: Maybe<number>;
   /** If the post is an attachment or a media file, this field will carry the corresponding MIME type. This field is equivalent to the value of WP_Post->post_mime_type and the post_mime_type column in the "post_objects" database table. */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** The ID of the parent object */
   parentId?: Maybe<string>;
   /** The password used to protect the content of the object */
@@ -6972,18 +6972,18 @@ export interface UpdatePageInput {
   /** The slug of the object */
   slug?: Maybe<string>;
   /** The status of the object */
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** The title of the post */
   title?: Maybe<string>;
   /** URLs queued to be pinged. */
   toPing?: Maybe<(Maybe<string>)[]>;
 }
 /** Input for the updatePost mutation */
-export interface UpdatePostInput {
+export interface WpUpdatePostInput {
   /** The userId to assign as the author of the post */
   authorId?: Maybe<string>;
   /** Set connections between the post and categories */
-  categories?: Maybe<PostCategoriesInput>;
+  categories?: Maybe<WpPostCategoriesInput>;
 
   clientMutationId: string;
   /** The number of comments. Even though WPGraphQL denotes this field as an integer, in WordPress this field should be saved as a numeric string for compatibility. */
@@ -7001,7 +7001,7 @@ export interface UpdatePostInput {
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: Maybe<number>;
   /** If the post is an attachment or a media file, this field will carry the corresponding MIME type. This field is equivalent to the value of WP_Post->post_mime_type and the post_mime_type column in the "post_objects" database table. */
-  mimeType?: Maybe<MimeTypeEnum>;
+  mimeType?: Maybe<WpMimeTypeEnum>;
   /** The ID of the parent object */
   parentId?: Maybe<string>;
   /** The password used to protect the content of the object */
@@ -7013,16 +7013,16 @@ export interface UpdatePostInput {
   /** The slug of the object */
   slug?: Maybe<string>;
   /** The status of the object */
-  status?: Maybe<PostStatusEnum>;
+  status?: Maybe<WpPostStatusEnum>;
   /** Set connections between the post and tags */
-  tags?: Maybe<PostTagsInput>;
+  tags?: Maybe<WpPostTagsInput>;
   /** The title of the post */
   title?: Maybe<string>;
   /** URLs queued to be pinged. */
   toPing?: Maybe<(Maybe<string>)[]>;
 }
 /** Input for the updateSettings mutation */
-export interface UpdateSettingsInput {
+export interface WpUpdateSettingsInput {
   clientMutationId: string;
   /** Allow people to post comments on new articles. */
   discussionSettingsDefaultCommentStatus?: Maybe<string>;
@@ -7056,7 +7056,7 @@ export interface UpdateSettingsInput {
   writingSettingsUseSmilies?: Maybe<boolean>;
 }
 /** Input for the updateUser mutation */
-export interface UpdateUserInput {
+export interface WpUpdateUserInput {
   /** User's AOL IM account. */
   aim?: Maybe<string>;
 
@@ -7095,17 +7095,17 @@ export interface UpdateUserInput {
   yim?: Maybe<string>;
 }
 /** The column to use when filtering by date */
-export enum PostObjectsConnectionDateColumnEnum {
+export enum WpPostObjectsConnectionDateColumnEnum {
   Date = 'DATE',
   Modified = 'MODIFIED',
 }
 /** The logical relation between each item in the array when there are more than one. */
-export enum RelationEnum {
+export enum WpRelationEnum {
   And = 'AND',
   Or = 'OR',
 }
 /** Field to order the connection by */
-export enum WcConnectionOrderbyEnum {
+export enum WpWcConnectionOrderbyEnum {
   Date = 'DATE',
   In = 'IN',
   MenuOrder = 'MENU_ORDER',
@@ -7118,18 +7118,18 @@ export enum WcConnectionOrderbyEnum {
   Slug = 'SLUG',
 }
 /** The cardinality of the connection order */
-export enum OrderEnum {
+export enum WpOrderEnum {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 /** Coupon discount type enumeration */
-export enum DiscountTypeEnum {
+export enum WpDiscountTypeEnum {
   FixedCart = 'FIXED_CART',
   FixedProduct = 'FIXED_PRODUCT',
   Percent = 'PERCENT',
 }
 /** Options for ordering the connection by */
-export enum TermObjectsConnectionOrderbyEnum {
+export enum WpTermObjectsConnectionOrderbyEnum {
   Count = 'COUNT',
   Description = 'DESCRIPTION',
   Name = 'NAME',
@@ -7139,14 +7139,14 @@ export enum TermObjectsConnectionOrderbyEnum {
   TermOrder = 'TERM_ORDER',
 }
 /** Allowed Post Types */
-export enum PostTypeEnum {
+export enum WpPostTypeEnum {
   Attachment = 'ATTACHMENT',
   Page = 'PAGE',
   Post = 'POST',
   Revision = 'REVISION',
 }
 /** Allowed taxonomies */
-export enum TaxonomyEnum {
+export enum WpTaxonomyEnum {
   Category = 'CATEGORY',
   Pahind = 'PAHIND',
   Pahulk = 'PAHULK',
@@ -7171,20 +7171,20 @@ export enum TaxonomyEnum {
   Visibleproduct = 'VISIBLEPRODUCT',
 }
 /** Product stock status enumeration */
-export enum StockStatusEnum {
+export enum WpStockStatusEnum {
   InStock = 'IN_STOCK',
   OnBackorder = 'ON_BACKORDER',
   OutOfStock = 'OUT_OF_STOCK',
 }
 /** Tax class enumeration */
-export enum TaxClassEnum {
+export enum WpTaxClassEnum {
   InheritCart = 'INHERIT_CART',
   ReducedRate = 'REDUCED_RATE',
   Standard = 'STANDARD',
   ZeroRate = 'ZERO_RATE',
 }
 /** Product type enumeration */
-export enum ProductTypesEnum {
+export enum WpProductTypesEnum {
   External = 'EXTERNAL',
   Grouped = 'GROUPED',
   Simple = 'SIMPLE',
@@ -7192,20 +7192,20 @@ export enum ProductTypesEnum {
   Variation = 'VARIATION',
 }
 /** Product catalog visibility enumeration */
-export enum CatalogVisibilityEnum {
+export enum WpCatalogVisibilityEnum {
   Catalog = 'CATALOG',
   Hidden = 'HIDDEN',
   Search = 'SEARCH',
   Visible = 'VISIBLE',
 }
 /** Product backorder enumeration */
-export enum BackordersEnum {
+export enum WpBackordersEnum {
   No = 'NO',
   Notify = 'NOTIFY',
   Yes = 'YES',
 }
 /** The MimeType of the object */
-export enum MimeTypeEnum {
+export enum WpMimeTypeEnum {
   ApplicationJava = 'APPLICATION_JAVA',
   ApplicationMsword = 'APPLICATION_MSWORD',
   ApplicationOctetStream = 'APPLICATION_OCTET_STREAM',
@@ -7295,7 +7295,7 @@ export enum MimeTypeEnum {
   VideoXMsWmx = 'VIDEO_X_MS_WMX',
 }
 /** Field to order the connection by */
-export enum PostObjectsConnectionOrderbyEnum {
+export enum WpPostObjectsConnectionOrderbyEnum {
   Author = 'AUTHOR',
   Date = 'DATE',
   In = 'IN',
@@ -7307,7 +7307,7 @@ export enum PostObjectsConnectionOrderbyEnum {
   Title = 'TITLE',
 }
 /** The status of the object. */
-export enum PostStatusEnum {
+export enum WpPostStatusEnum {
   AutoDraft = 'AUTO_DRAFT',
   Draft = 'DRAFT',
   Failed = 'FAILED',
@@ -7331,14 +7331,14 @@ export enum PostStatusEnum {
   WcRefunded = 'WC_REFUNDED',
 }
 /** What rating to display avatars up to. Accepts 'G', 'PG', 'R', 'X', and are judged in that order. Default is the value of the 'avatar_rating' option */
-export enum AvatarRatingEnum {
+export enum WpAvatarRatingEnum {
   G = 'G',
   Pg = 'PG',
   R = 'R',
   X = 'X',
 }
 /** Options for ordering the connection */
-export enum CommentsConnectionOrderbyEnum {
+export enum WpCommentsConnectionOrderbyEnum {
   CommentAgent = 'COMMENT_AGENT',
   CommentApproved = 'COMMENT_APPROVED',
   CommentAuthor = 'COMMENT_AUTHOR',
@@ -7357,24 +7357,24 @@ export enum CommentsConnectionOrderbyEnum {
   UserId = 'USER_ID',
 }
 /** The format of post field data. */
-export enum PostObjectFieldFormatEnum {
+export enum WpPostObjectFieldFormatEnum {
   Raw = 'RAW',
   Rendered = 'RENDERED',
 }
 /** Product manage stock enumeration */
-export enum ManageStockEnum {
+export enum WpManageStockEnum {
   False = 'FALSE',
   Parent = 'PARENT',
   True = 'TRUE',
 }
 /** Product tax status enumeration */
-export enum TaxStatusEnum {
+export enum WpTaxStatusEnum {
   None = 'NONE',
   Shipping = 'SHIPPING',
   Taxable = 'TAXABLE',
 }
 /** The size of the media item object. */
-export enum MediaItemSizeEnum {
+export enum WpMediaItemSizeEnum {
   Large = 'LARGE',
   Medium = 'MEDIUM',
   MediumLarge = 'MEDIUM_LARGE',
@@ -7387,7 +7387,7 @@ export enum MediaItemSizeEnum {
   WoocommerceThumbnail = 'WOOCOMMERCE_THUMBNAIL',
 }
 /** Field to order the connection by */
-export enum CustomerConnectionOrderbyEnum {
+export enum WpCustomerConnectionOrderbyEnum {
   Email = 'EMAIL',
   Id = 'ID',
   Include = 'INCLUDE',
@@ -7396,7 +7396,7 @@ export enum CustomerConnectionOrderbyEnum {
   Username = 'USERNAME',
 }
 /** Names of available user roles */
-export enum UserRoleEnum {
+export enum WpUserRoleEnum {
   Author = 'AUTHOR',
   Contributor = 'CONTRIBUTOR',
   Customer = 'CUSTOMER',
@@ -7405,7 +7405,7 @@ export enum UserRoleEnum {
   Subscriber = 'SUBSCRIBER',
 }
 /** Countries enumeration */
-export enum CountriesEnum {
+export enum WpCountriesEnum {
   Ad = 'AD',
   Ae = 'AE',
   Af = 'AF',
@@ -7657,7 +7657,7 @@ export enum CountriesEnum {
   Zw = 'ZW',
 }
 /** Order status enumeration */
-export enum OrderStatusEnum {
+export enum WpOrderStatusEnum {
   Cancelled = 'CANCELLED',
   Completed = 'COMPLETED',
   Failed = 'FAILED',
@@ -7667,17 +7667,17 @@ export enum OrderStatusEnum {
   Refunded = 'REFUNDED',
 }
 /** Registered menu locations */
-export enum MenuLocationEnum {
+export enum WpMenuLocationEnum {
   Top = 'TOP',
   TopRight = 'TOP_RIGHT',
 }
 /** Field to order the connection by */
-export enum TaxRateConnectionOrderbyEnum {
+export enum WpTaxRateConnectionOrderbyEnum {
   Id = 'ID',
   Order = 'ORDER',
 }
 /** Column used for searching for users */
-export enum UsersConnectionSearchColumnEnum {
+export enum WpUsersConnectionSearchColumnEnum {
   Email = 'EMAIL',
   Id = 'ID',
   Login = 'LOGIN',
@@ -7685,7 +7685,7 @@ export enum UsersConnectionSearchColumnEnum {
   Url = 'URL',
 }
 /** The status of the media item object. */
-export enum MediaItemStatusEnum {
+export enum WpMediaItemStatusEnum {
   AutoDraft = 'AUTO_DRAFT',
   Inherit = 'INHERIT',
   Private = 'PRIVATE',
@@ -7697,7 +7697,7 @@ export enum MediaItemStatusEnum {
 // ====================================================
 
 /** An object with an ID */
-export interface Node {
+export interface WpNode {
   /** The id of the object */
   id: string;
 }
@@ -7708,209 +7708,209 @@ export interface Node {
 
 export interface Query {
   /** Entry point to get all settings for the site */
-  allSettings?: Maybe<Settings>;
+  WP_allSettings?: Maybe<WpSettings>;
   /** The cart object */
-  cart?: Maybe<Cart>;
+  WP_cart?: Maybe<WpCart>;
   /** The cart object */
-  cartFee?: Maybe<CartFee>;
+  WP_cartFee?: Maybe<WpCartFee>;
   /** The cart object */
-  cartItem?: Maybe<CartItem>;
+  WP_cartItem?: Maybe<WpCartItem>;
   /** Connection between the RootQuery type and the RootQuery type */
-  categories?: Maybe<RootQueryToCategoryConnection>;
+  WP_categories?: Maybe<WpRootQueryToCategoryConnection>;
   /** A 0bject */
-  category?: Maybe<Category>;
+  WP_category?: Maybe<WpCategory>;
   /** Returns a Comment */
-  comment?: Maybe<Comment>;
+  WP_comment?: Maybe<WpComment>;
   /** Connection between the RootQuery type and the RootQuery type */
-  comments?: Maybe<RootQueryToCommentConnection>;
+  WP_comments?: Maybe<WpRootQueryToCommentConnection>;
   /** A coupon object */
-  coupon?: Maybe<Coupon>;
+  WP_coupon?: Maybe<WpCoupon>;
   /** A coupon object */
-  couponBy?: Maybe<Coupon>;
+  WP_couponBy?: Maybe<WpCoupon>;
   /** Connection between the RootQuery type and the RootQuery type */
-  coupons?: Maybe<RootQueryToCouponConnection>;
+  WP_coupons?: Maybe<WpRootQueryToCouponConnection>;
   /** A customer object */
-  customer?: Maybe<Customer>;
+  WP_customer?: Maybe<WpCustomer>;
   /** A customer object */
-  customerBy?: Maybe<Customer>;
+  WP_customerBy?: Maybe<WpCustomer>;
   /** Connection between the RootQuery type and the RootQuery type */
-  customers?: Maybe<RootQueryToCustomerConnection>;
+  WP_customers?: Maybe<WpRootQueryToCustomerConnection>;
 
-  discussionSettings?: Maybe<DiscussionSettings>;
+  WP_discussionSettings?: Maybe<WpDiscussionSettings>;
 
-  generalSettings?: Maybe<GeneralSettings>;
+  WP_generalSettings?: Maybe<WpGeneralSettings>;
   /** A 0bject */
-  mediaItem?: Maybe<MediaItem>;
+  WP_mediaItem?: Maybe<WpMediaItem>;
   /** A mediaItem object */
-  mediaItemBy?: Maybe<MediaItem>;
+  WP_mediaItemBy?: Maybe<WpMediaItem>;
   /** Connection between the RootQuery type and the RootQuery type */
-  mediaItems?: Maybe<RootQueryToMediaItemConnection>;
+  WP_mediaItems?: Maybe<WpRootQueryToMediaItemConnection>;
   /** A WordPress navigation menu */
-  menu?: Maybe<Menu>;
+  WP_menu?: Maybe<WpMenu>;
   /** Connection between the RootQuery type and the RootQuery type */
-  menuItems?: Maybe<RootQueryToMenuItemConnection>;
+  WP_menuItems?: Maybe<WpRootQueryToMenuItemConnection>;
   /** A WordPress navigation menu item */
-  menuItem?: Maybe<MenuItem>;
+  WP_menuItem?: Maybe<WpMenuItem>;
   /** Connection between the RootQuery type and the RootQuery type */
-  menus?: Maybe<RootQueryToMenuConnection>;
+  WP_menus?: Maybe<WpRootQueryToMenuConnection>;
   /** Fetches an object given its ID */
-  node?: Maybe<Node>;
+  WP_node?: Maybe<WpNode>;
   /** A order object */
-  order?: Maybe<Order>;
+  WP_order?: Maybe<WpOrder>;
   /** A order object */
-  orderBy?: Maybe<Order>;
+  WP_orderBy?: Maybe<WpOrder>;
   /** Connection between the RootQuery type and the RootQuery type */
-  orders?: Maybe<RootQueryToOrderConnection>;
+  WP_orders?: Maybe<WpRootQueryToOrderConnection>;
   /** A 0bject */
-  paHind?: Maybe<PaHind>;
+  WP_paHind?: Maybe<WpPaHind>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paHinds?: Maybe<RootQueryToPaHindConnection>;
+  WP_paHinds?: Maybe<WpRootQueryToPaHindConnection>;
   /** A 0bject */
-  paHulk?: Maybe<PaHulk>;
+  WP_paHulk?: Maybe<WpPaHulk>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paHulks?: Maybe<RootQueryToPaHulkConnection>;
+  WP_paHulks?: Maybe<WpRootQueryToPaHulkConnection>;
   /** A 0bject */
-  paKasutusaeg?: Maybe<PaKasutusaeg>;
+  WP_paKasutusaeg?: Maybe<WpPaKasutusaeg>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paKasutusaegs?: Maybe<RootQueryToPaKasutusaegConnection>;
+  WP_paKasutusaegs?: Maybe<WpRootQueryToPaKasutusaegConnection>;
   /** A 0bject */
-  paKogus?: Maybe<PaKogus>;
+  WP_paKogus?: Maybe<WpPaKogus>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paKoguses?: Maybe<RootQueryToPaKogusConnection>;
+  WP_paKoguses?: Maybe<WpRootQueryToPaKogusConnection>;
   /** A 0bject */
-  paKontuur?: Maybe<PaKontuur>;
+  WP_paKontuur?: Maybe<WpPaKontuur>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paKontuurs?: Maybe<RootQueryToPaKontuurConnection>;
+  WP_paKontuurs?: Maybe<WpRootQueryToPaKontuurConnection>;
   /** A 0bject */
-  paKoostisained?: Maybe<PaKoostisained>;
+  WP_paKoostisained?: Maybe<WpPaKoostisained>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paKoostisaineds?: Maybe<RootQueryToPaKoostisainedConnection>;
+  WP_paKoostisaineds?: Maybe<WpRootQueryToPaKoostisainedConnection>;
   /** A 0bject */
-  paLaadimisaeg?: Maybe<PaLaadimisaeg>;
+  WP_paLaadimisaeg?: Maybe<WpPaLaadimisaeg>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paLaadimisaegs?: Maybe<RootQueryToPaLaadimisaegConnection>;
+  WP_paLaadimisaegs?: Maybe<WpRootQueryToPaLaadimisaegConnection>;
   /** A 0bject */
-  paMaterjal?: Maybe<PaMaterjal>;
+  WP_paMaterjal?: Maybe<WpPaMaterjal>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paMaterjals?: Maybe<RootQueryToPaMaterjalConnection>;
+  WP_paMaterjals?: Maybe<WpRootQueryToPaMaterjalConnection>;
   /** A 0bject */
-  paMuratasa?: Maybe<PaMuratasa>;
+  WP_paMuratasa?: Maybe<WpPaMuratasa>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paMuratasas?: Maybe<RootQueryToPaMuratasaConnection>;
+  WP_paMuratasas?: Maybe<WpRootQueryToPaMuratasaConnection>;
   /** A 0bject */
-  paOhutus?: Maybe<PaOhutus>;
+  WP_paOhutus?: Maybe<WpPaOhutus>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paOhutuses?: Maybe<RootQueryToPaOhutusConnection>;
+  WP_paOhutuses?: Maybe<WpRootQueryToPaOhutusConnection>;
   /** A 0bject */
-  paPatareid?: Maybe<PaPatareid>;
+  WP_paPatareid?: Maybe<WpPaPatareid>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paPatareids?: Maybe<RootQueryToPaPatareidConnection>;
+  WP_paPatareids?: Maybe<WpRootQueryToPaPatareidConnection>;
   /** A 0bject */
-  paSuurus?: Maybe<PaSuurus>;
+  WP_paSuurus?: Maybe<WpPaSuurus>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paSuuruses?: Maybe<RootQueryToPaSuurusConnection>;
+  WP_paSuuruses?: Maybe<WpRootQueryToPaSuurusConnection>;
   /** A 0bject */
-  paVariant?: Maybe<PaVariant>;
+  WP_paVariant?: Maybe<WpPaVariant>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paVariants?: Maybe<RootQueryToPaVariantConnection>;
+  WP_paVariants?: Maybe<WpRootQueryToPaVariantConnection>;
   /** A 0bject */
-  paVarv?: Maybe<PaVarv>;
+  WP_paVarv?: Maybe<WpPaVarv>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paVarvs?: Maybe<RootQueryToPaVarvConnection>;
+  WP_paVarvs?: Maybe<WpRootQueryToPaVarvConnection>;
   /** A 0bject */
-  paVeekindlus?: Maybe<PaVeekindlus>;
+  WP_paVeekindlus?: Maybe<WpPaVeekindlus>;
   /** Connection between the RootQuery type and the RootQuery type */
-  paVeekindluses?: Maybe<RootQueryToPaVeekindlusConnection>;
+  WP_paVeekindluses?: Maybe<WpRootQueryToPaVeekindlusConnection>;
   /** A 0bject */
-  page?: Maybe<Page>;
+  WP_page?: Maybe<WpPage>;
   /** A page object */
-  pageBy?: Maybe<Page>;
+  WP_pageBy?: Maybe<WpPage>;
   /** Connection between the RootQuery type and the RootQuery type */
-  pages?: Maybe<RootQueryToPageConnection>;
+  WP_pages?: Maybe<WpRootQueryToPageConnection>;
   /** A WordPress plugin */
-  plugin?: Maybe<Plugin>;
+  WP_plugin?: Maybe<WpPlugin>;
   /** Connection between the RootQuery type and the RootQuery type */
-  plugins?: Maybe<RootQueryToPluginConnection>;
+  WP_plugins?: Maybe<WpRootQueryToPluginConnection>;
   /** A 0bject */
-  post?: Maybe<Post>;
+  WP_post?: Maybe<WpPost>;
   /** A post object */
-  postBy?: Maybe<Post>;
+  WP_postBy?: Maybe<WpPost>;
   /** Connection between the RootQuery type and the RootQuery type */
-  posts?: Maybe<RootQueryToPostConnection>;
+  WP_posts?: Maybe<WpRootQueryToPostConnection>;
   /** A product object */
-  product?: Maybe<Product>;
+  WP_product?: Maybe<WpProduct>;
   /** A product object */
-  productBy?: Maybe<Product>;
+  WP_productBy?: Maybe<WpProduct>;
   /** Connection between the RootQuery type and the RootQuery type */
-  productCategories?: Maybe<RootQueryToProductCategoryConnection>;
+  WP_productCategories?: Maybe<WpRootQueryToProductCategoryConnection>;
   /** A 0bject */
-  productCategory?: Maybe<ProductCategory>;
+  WP_productCategory?: Maybe<WpProductCategory>;
   /** A 0bject */
-  productTag?: Maybe<ProductTag>;
+  WP_productTag?: Maybe<WpProductTag>;
   /** Connection between the RootQuery type and the RootQuery type */
-  productTags?: Maybe<RootQueryToProductTagConnection>;
+  WP_productTags?: Maybe<WpRootQueryToProductTagConnection>;
   /** A 0bject */
-  productType?: Maybe<ProductType>;
+  WP_productType?: Maybe<WpProductType>;
   /** Connection between the RootQuery type and the RootQuery type */
-  productTypes?: Maybe<RootQueryToProductTypeConnection>;
+  WP_productTypes?: Maybe<WpRootQueryToProductTypeConnection>;
   /** A product variation object */
-  productVariation?: Maybe<ProductVariation>;
+  WP_productVariation?: Maybe<WpProductVariation>;
   /** Connection between the RootQuery type and the RootQuery type */
-  products?: Maybe<RootQueryToProductConnection>;
+  WP_products?: Maybe<WpRootQueryToProductConnection>;
 
-  readingSettings?: Maybe<ReadingSettings>;
+  WP_readingSettings?: Maybe<WpReadingSettings>;
   /** A refund object */
-  refund?: Maybe<Refund>;
+  WP_refund?: Maybe<WpRefund>;
   /** A refund object */
-  refundBy?: Maybe<Refund>;
+  WP_refundBy?: Maybe<WpRefund>;
   /** Connection between the RootQuery type and the RootQuery type */
-  refunds?: Maybe<RootQueryToRefundConnection>;
+  WP_refunds?: Maybe<WpRootQueryToRefundConnection>;
   /** A 0bject */
-  revision?: Maybe<Revision>;
+  WP_revision?: Maybe<WpRevision>;
   /** A revision object */
-  revisionBy?: Maybe<Revision>;
+  WP_revisionBy?: Maybe<WpRevision>;
   /** Connection between the RootQuery type and the RootQuery type */
-  revisions?: Maybe<RootQueryToRevisionConnection>;
+  WP_revisions?: Maybe<WpRootQueryToRevisionConnection>;
   /** A 0bject */
-  shippingClass?: Maybe<ShippingClass>;
+  WP_shippingClass?: Maybe<WpShippingClass>;
   /** Connection between the RootQuery type and the RootQuery type */
-  shippingClasses?: Maybe<RootQueryToShippingClassConnection>;
+  WP_shippingClasses?: Maybe<WpRootQueryToShippingClassConnection>;
   /** A shipping method object */
-  shippingMethod?: Maybe<ShippingMethod>;
+  WP_shippingMethod?: Maybe<WpShippingMethod>;
   /** Connection between the RootQuery type and the RootQuery type */
-  shippingMethods?: Maybe<RootQueryToShippingMethodConnection>;
+  WP_shippingMethods?: Maybe<WpRootQueryToShippingMethodConnection>;
   /** A 0bject */
-  tag?: Maybe<Tag>;
+  WP_tag?: Maybe<WpTag>;
   /** Connection between the RootQuery type and the RootQuery type */
-  tags?: Maybe<RootQueryToTagConnection>;
+  WP_tags?: Maybe<WpRootQueryToTagConnection>;
   /** A tax rate object */
-  taxRate?: Maybe<TaxRate>;
+  WP_taxRate?: Maybe<WpTaxRate>;
   /** Connection between the RootQuery type and the RootQuery type */
-  taxRates?: Maybe<RootQueryToTaxRateConnection>;
+  WP_taxRates?: Maybe<WpRootQueryToTaxRateConnection>;
   /** A Theme object */
-  theme?: Maybe<Theme>;
+  WP_theme?: Maybe<WpTheme>;
   /** Connection between the RootQuery type and the RootQuery type */
-  themes?: Maybe<RootQueryToThemeConnection>;
+  WP_themes?: Maybe<WpRootQueryToThemeConnection>;
   /** Returns a user */
-  user?: Maybe<User>;
+  WP_user?: Maybe<WpUser>;
   /** Connection between the RootQuery type and the RootQuery type */
-  userRoles?: Maybe<RootQueryToUserRoleConnection>;
+  WP_userRoles?: Maybe<WpRootQueryToUserRoleConnection>;
   /** Returns a user role */
-  userRole?: Maybe<UserRole>;
+  WP_userRole?: Maybe<WpUserRole>;
   /** Connection between the RootQuery type and the RootQuery type */
-  users?: Maybe<RootQueryToUserConnection>;
+  WP_users?: Maybe<WpRootQueryToUserConnection>;
   /** Returns the current user */
-  viewer?: Maybe<User>;
+  WP_viewer?: Maybe<WpUser>;
   /** A 0bject */
-  visibleProduct?: Maybe<VisibleProduct>;
+  WP_visibleProduct?: Maybe<WpVisibleProduct>;
   /** Connection between the RootQuery type and the RootQuery type */
-  visibleProducts?: Maybe<RootQueryToVisibleProductConnection>;
+  WP_visibleProducts?: Maybe<WpRootQueryToVisibleProductConnection>;
 
-  writingSettings?: Maybe<WritingSettings>;
+  WP_writingSettings?: Maybe<WpWritingSettings>;
 }
 
 /** All of the registered settings */
-export interface Settings {
+export interface WpSettings {
   /** Allow people to post comments on new articles. */
   discussionSettingsDefaultCommentStatus?: Maybe<string>;
   /** Allow link notifications from other blogs (pingbacks and trackbacks) on new articles. */
@@ -7944,11 +7944,11 @@ export interface Settings {
 }
 
 /** The cart object */
-export interface Cart {
+export interface WpCart {
   /** Connection between the Cart type and the Cart type */
-  appliedCoupons?: Maybe<CartToCouponConnection>;
+  appliedCoupons?: Maybe<WpCartToCouponConnection>;
   /** Connection between the Cart type and the Cart type */
-  contents?: Maybe<CartToCartItemConnection>;
+  contents?: Maybe<WpCartToCartItemConnection>;
   /** Cart contents tax */
   contentsTax?: Maybe<number>;
   /** Cart contents total */
@@ -7960,7 +7960,7 @@ export interface Cart {
   /** Do display prices include taxes */
   displayPricesIncludeTax?: Maybe<boolean>;
   /** Additional fees on the cart. */
-  fees?: Maybe<(Maybe<CartFee>)[]>;
+  fees?: Maybe<(Maybe<WpCartFee>)[]>;
   /** Cart fee tax */
   feeTax?: Maybe<number>;
   /** Cart fee total */
@@ -7984,25 +7984,25 @@ export interface Cart {
 }
 
 /** Connection between the Cart type and the Cart type */
-export interface CartToCouponConnection {
+export interface WpCartToCouponConnection {
   /** Edges for the CartToCouponConnection connection */
-  edges?: Maybe<(Maybe<CartToCouponConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpCartToCouponConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Coupon>)[]>;
+  nodes?: Maybe<(Maybe<WpCoupon>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface CartToCouponConnectionEdge {
+export interface WpCartToCouponConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Coupon>;
+  node?: Maybe<WpCoupon>;
 }
 
 /** A coupon object */
-export interface Coupon extends Node {
+export interface WpCoupon extends WpNode {
   /** Amount off provided by the coupon */
   amount?: Maybe<number>;
   /** Coupon code */
@@ -8016,13 +8016,13 @@ export interface Coupon extends Node {
   /** Explanation of what the coupon does */
   description?: Maybe<string>;
   /** Type of discount */
-  discountType?: Maybe<DiscountTypeEnum>;
+  discountType?: Maybe<WpDiscountTypeEnum>;
   /** Only customers with a matching email address can use the coupon */
   emailRestrictions?: Maybe<(Maybe<string>)[]>;
   /** Connection between the Coupon type and the Coupon type */
-  excludedProductCategories?: Maybe<CouponToProductCategoryConnection>;
+  excludedProductCategories?: Maybe<WpCouponToProductCategoryConnection>;
   /** Connection between the Coupon type and the Coupon type */
-  excludedProducts?: Maybe<CouponToProductConnection>;
+  excludedProducts?: Maybe<WpCouponToProductConnection>;
   /** Excluding sale items mean this coupon cannot be used on items that are on sale (or carts that contain on sale items) */
   excludeSaleItems?: Maybe<boolean>;
   /** Does this coupon grant free shipping? */
@@ -8040,9 +8040,9 @@ export interface Coupon extends Node {
   /** Date coupon modified */
   modified?: Maybe<string>;
   /** Connection between the Coupon type and the Coupon type */
-  productCategories?: Maybe<CouponToProductCategoryConnection>;
+  productCategories?: Maybe<WpCouponToProductCategoryConnection>;
   /** Connection between the Coupon type and the Coupon type */
-  products?: Maybe<CouponToProductConnection>;
+  products?: Maybe<WpCouponToProductConnection>;
   /** How many times the coupon has been used */
   usageCount?: Maybe<number>;
   /** Amount of times this coupon can be used globally */
@@ -8050,35 +8050,35 @@ export interface Coupon extends Node {
   /** Amount of times this coupon can be used by a customer */
   usageLimitPerUser?: Maybe<number>;
   /** Connection between the Coupon type and the Coupon type */
-  usedBy?: Maybe<CouponToCustomerConnection>;
+  usedBy?: Maybe<WpCouponToCustomerConnection>;
 }
 
 /** Connection between the Coupon type and the Coupon type */
-export interface CouponToProductCategoryConnection {
+export interface WpCouponToProductCategoryConnection {
   /** Edges for the CouponToProductCategoryConnection connection */
-  edges?: Maybe<(Maybe<CouponToProductCategoryConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpCouponToProductCategoryConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductCategory>)[]>;
+  nodes?: Maybe<(Maybe<WpProductCategory>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface CouponToProductCategoryConnectionEdge {
+export interface WpCouponToProductCategoryConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductCategory>;
+  node?: Maybe<WpProductCategory>;
 }
 
 /** The productCategory type */
-export interface ProductCategory extends Node {
+export interface WpProductCategory extends WpNode {
   /** The ancestors of the object */
-  ancestors?: Maybe<(Maybe<ProductCategory>)[]>;
+  ancestors?: Maybe<(Maybe<WpProductCategory>)[]>;
   /** Connection between the productCategory type and the productCategory type */
-  children?: Maybe<ProductCategoryToProductCategoryConnection>;
+  children?: Maybe<WpProductCategoryToProductCategoryConnection>;
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -8092,15 +8092,15 @@ export interface ProductCategory extends Node {
   /** The human friendly name of the object. */
   name?: Maybe<string>;
   /** The parent object */
-  parent?: Maybe<ProductCategory>;
+  parent?: Maybe<WpProductCategory>;
   /** The id field matches the WP_Post-&gt;ID field. */
   productCategoryId?: Maybe<number>;
   /** Connection between the ProductCategory type and the ProductCategory type */
-  products?: Maybe<ProductCategoryToProductConnection>;
+  products?: Maybe<WpProductCategoryToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
@@ -8108,27 +8108,27 @@ export interface ProductCategory extends Node {
 }
 
 /** Connection between the productCategory type and the productCategory type */
-export interface ProductCategoryToProductCategoryConnection {
+export interface WpProductCategoryToProductCategoryConnection {
   /** Edges for the ProductCategoryToProductCategoryConnection connection */
-  edges?: Maybe<(Maybe<ProductCategoryToProductCategoryConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpProductCategoryToProductCategoryConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductCategory>)[]>;
+  nodes?: Maybe<(Maybe<WpProductCategory>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface ProductCategoryToProductCategoryConnectionEdge {
+export interface WpProductCategoryToProductCategoryConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductCategory>;
+  node?: Maybe<WpProductCategory>;
 }
 
 /** Information about pagination in a connection. */
-export interface WpPageInfo {
+export interface WpWpPageInfo {
   /** When paginating forwards, the cursor to continue. */
   endCursor?: Maybe<string>;
   /** When paginating forwards, are there more items? */
@@ -8140,11 +8140,11 @@ export interface WpPageInfo {
 }
 
 /** A taxonomy object */
-export interface Taxonomy extends Node {
+export interface WpTaxonomy extends WpNode {
   /** A list of Post Types associated with the taxonomy */
   connectedPostTypeNames?: Maybe<(Maybe<string>)[]>;
   /** List of Post Types connected to the Taxonomy */
-  connectedPostTypes?: Maybe<(Maybe<PostType>)[]>;
+  connectedPostTypes?: Maybe<(Maybe<WpPostType>)[]>;
   /** Description of the taxonomy. This field is equivalent to WP_Taxonomy-&gt;description */
   description?: Maybe<string>;
   /** The plural name of the post type within the GraphQL Schema. */
@@ -8186,11 +8186,11 @@ export interface Taxonomy extends Node {
 }
 
 /** An Post Type object */
-export interface PostType extends Node {
+export interface WpPostType extends WpNode {
   /** Whether this content type should can be exported. */
   canExport?: Maybe<boolean>;
   /** List of Taxonomies connected to the Post Type */
-  connectedTaxonomies?: Maybe<(Maybe<Taxonomy>)[]>;
+  connectedTaxonomies?: Maybe<(Maybe<WpTaxonomy>)[]>;
   /** A list of Taxonomies associated with the post type */
   connectedTaxonomyNames?: Maybe<(Maybe<string>)[]>;
   /** Whether delete this type of content when the author of it is deleted from the system. */
@@ -8214,7 +8214,7 @@ export interface PostType extends Node {
   /** Display name of the content type. */
   label?: Maybe<string>;
   /** Details about the post type labels. */
-  labels?: Maybe<PostTypeLabelDetails>;
+  labels?: Maybe<WpPostTypeLabelDetails>;
   /** The name of the icon file to display as a menu icon. */
   menuIcon?: Maybe<string>;
   /** The position of this post type in the menu. Only applies if show_in_menu is true. */
@@ -8244,7 +8244,7 @@ export interface PostType extends Node {
 }
 
 /** Details for labels of the PostType */
-export interface PostTypeLabelDetails {
+export interface WpPostTypeLabelDetails {
   /** Default is ‘Add New’ for both hierarchical and non-hierarchical types. */
   addNew?: Maybe<string>;
   /** Label for adding a new singular item. */
@@ -8298,41 +8298,41 @@ export interface PostTypeLabelDetails {
 }
 
 /** Connection between the ProductCategory type and the ProductCategory type */
-export interface ProductCategoryToProductConnection {
+export interface WpProductCategoryToProductConnection {
   /** Edges for the ProductCategoryToProductConnection connection */
-  edges?: Maybe<(Maybe<ProductCategoryToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpProductCategoryToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface ProductCategoryToProductConnectionEdge {
+export interface WpProductCategoryToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** A product object */
-export interface Product extends Node {
+export interface WpProduct extends WpNode {
   /** Connection between the Product type and the Product type */
-  attributes?: Maybe<ProductToProductAttributeConnection>;
+  attributes?: Maybe<WpProductToProductAttributeConnection>;
   /** Product average count */
   averageRating?: Maybe<number>;
   /** Product backorders status */
-  backorders?: Maybe<BackordersEnum>;
+  backorders?: Maybe<WpBackordersEnum>;
   /** Can product be backordered? */
   backordersAllowed?: Maybe<boolean>;
   /** External product Buy button text */
   buttonText?: Maybe<string>;
   /** Catalog visibility */
-  catalogVisibility?: Maybe<CatalogVisibilityEnum>;
+  catalogVisibility?: Maybe<WpCatalogVisibilityEnum>;
   /** Connection between the Product type and the Product type */
-  categories?: Maybe<ProductToProductCategoryConnection>;
+  categories?: Maybe<WpProductToProductCategoryConnection>;
   /** Connection between the Product type and the Product type */
-  crossSell?: Maybe<ProductToProductConnection>;
+  crossSell?: Maybe<WpProductToProductConnection>;
   /** Date product created */
   date?: Maybe<string>;
   /** Date on sale from */
@@ -8340,7 +8340,7 @@ export interface Product extends Node {
   /** Date on sale to */
   dateOnSaleTo?: Maybe<string>;
   /** Connection between the Product type and the Product type */
-  defaultAttributes?: Maybe<ProductToVariationAttributeConnection>;
+  defaultAttributes?: Maybe<WpProductToVariationAttributeConnection>;
   /** Product description */
   description?: Maybe<string>;
   /** Is downloadable? */
@@ -8350,21 +8350,21 @@ export interface Product extends Node {
   /** Download limit */
   downloadLimit?: Maybe<number>;
   /** Product downloads */
-  downloads?: Maybe<(Maybe<ProductDownload>)[]>;
+  downloads?: Maybe<(Maybe<WpProductDownload>)[]>;
   /** External product url */
   externalUrl?: Maybe<string>;
   /** If the product is featured */
   featured?: Maybe<boolean>;
   /** Connection between the Product type and the Product type */
-  galleryImages?: Maybe<ProductToMediaItemConnection>;
+  galleryImages?: Maybe<WpProductToMediaItemConnection>;
   /** Connection between the Product type and the Product type */
-  grouped?: Maybe<ProductToProductConnection>;
+  grouped?: Maybe<WpProductToProductConnection>;
   /** Product&#039;s height */
   height?: Maybe<string>;
   /** The globally unique identifier for the product */
   id: string;
   /** Main image */
-  image?: Maybe<MediaItem>;
+  image?: Maybe<WpMediaItem>;
   /** Product&#039;s length */
   length?: Maybe<string>;
   /** If product manage stock */
@@ -8378,7 +8378,7 @@ export interface Product extends Node {
   /** Is product on sale? */
   onSale?: Maybe<boolean>;
   /** Parent product */
-  parent?: Maybe<Product>;
+  parent?: Maybe<WpProduct>;
   /** Product&#039;s active price */
   price?: Maybe<string>;
   /** The Id of the order. Equivalent to WP_Post-&gt;ID */
@@ -8388,11 +8388,11 @@ export interface Product extends Node {
   /** Purchase note */
   purchaseNote?: Maybe<string>;
   /** Product rating counts */
-  ratingCount?: Maybe<RatingCounter>;
+  ratingCount?: Maybe<WpRatingCounter>;
   /** Product&#039;s regular price */
   regularPrice?: Maybe<string>;
   /** Connection between the Product type and the Product type */
-  related?: Maybe<ProductToProductConnection>;
+  related?: Maybe<WpProductToProductConnection>;
   /** Product review count */
   reviewCount?: Maybe<number>;
   /** If reviews are allowed */
@@ -8418,21 +8418,21 @@ export interface Product extends Node {
   /** Number of items available for sale */
   stockQuantity?: Maybe<number>;
   /** Product stock status */
-  stockStatus?: Maybe<StockStatusEnum>;
+  stockStatus?: Maybe<WpStockStatusEnum>;
   /** Connection between the Product type and the Product type */
-  tags?: Maybe<ProductToProductTagConnection>;
+  tags?: Maybe<WpProductToProductTagConnection>;
   /** Tax class */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Tax status */
-  taxStatus?: Maybe<TaxStatusEnum>;
+  taxStatus?: Maybe<WpTaxStatusEnum>;
   /** Number total of sales */
   totalSales?: Maybe<number>;
   /** Product type */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** Connection between the Product type and the Product type */
-  upsell?: Maybe<ProductToProductConnection>;
+  upsell?: Maybe<WpProductToProductConnection>;
   /** Connection between the Product type and the Product type */
-  variations?: Maybe<ProductToProductVariationConnection>;
+  variations?: Maybe<WpProductToProductVariationConnection>;
   /** Is product virtual? */
   virtual?: Maybe<boolean>;
   /** Product&#039;s weight */
@@ -8442,25 +8442,25 @@ export interface Product extends Node {
 }
 
 /** Connection between the Product type and the Product type */
-export interface ProductToProductAttributeConnection {
+export interface WpProductToProductAttributeConnection {
   /** Edges for the ProductToProductAttributeConnection connection */
-  edges?: Maybe<(Maybe<ProductToProductAttributeConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpProductToProductAttributeConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductAttribute>)[]>;
+  nodes?: Maybe<(Maybe<WpProductAttribute>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface ProductToProductAttributeConnectionEdge {
+export interface WpProductToProductAttributeConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductAttribute>;
+  node?: Maybe<WpProductAttribute>;
 }
 
 /** A product attribute object */
-export interface ProductAttribute {
+export interface WpProductAttribute {
   /** Attribute ID */
   attributeId: number;
   /** Attribute name */
@@ -8476,63 +8476,63 @@ export interface ProductAttribute {
 }
 
 /** Connection between the Product type and the Product type */
-export interface ProductToProductCategoryConnection {
+export interface WpProductToProductCategoryConnection {
   /** Edges for the ProductToProductCategoryConnection connection */
-  edges?: Maybe<(Maybe<ProductToProductCategoryConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpProductToProductCategoryConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductCategory>)[]>;
+  nodes?: Maybe<(Maybe<WpProductCategory>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface ProductToProductCategoryConnectionEdge {
+export interface WpProductToProductCategoryConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductCategory>;
+  node?: Maybe<WpProductCategory>;
 }
 
 /** Connection between the Product type and the Product type */
-export interface ProductToProductConnection {
+export interface WpProductToProductConnection {
   /** Edges for the ProductToProductConnection connection */
-  edges?: Maybe<(Maybe<ProductToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpProductToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface ProductToProductConnectionEdge {
+export interface WpProductToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the Product type and the Product type */
-export interface ProductToVariationAttributeConnection {
+export interface WpProductToVariationAttributeConnection {
   /** Edges for the ProductToVariationAttributeConnection connection */
-  edges?: Maybe<(Maybe<ProductToVariationAttributeConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpProductToVariationAttributeConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<VariationAttribute>)[]>;
+  nodes?: Maybe<(Maybe<WpVariationAttribute>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface ProductToVariationAttributeConnectionEdge {
+export interface WpProductToVariationAttributeConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<VariationAttribute>;
+  node?: Maybe<WpVariationAttribute>;
 }
 
 /** A product variation attribute object */
-export interface VariationAttribute {
+export interface WpVariationAttribute {
   /** The Id of the order. Equivalent to WP_Post-&gt;ID */
   id?: Maybe<number>;
   /** Name of attribute */
@@ -8542,7 +8542,7 @@ export interface VariationAttribute {
 }
 
 /** A product object */
-export interface ProductDownload {
+export interface WpProductDownload {
   /** Is file allowed */
   allowedFileType?: Maybe<boolean>;
   /** Product download ID */
@@ -8562,39 +8562,39 @@ export interface ProductDownload {
 }
 
 /** Connection between the Product type and the Product type */
-export interface ProductToMediaItemConnection {
+export interface WpProductToMediaItemConnection {
   /** Edges for the ProductToMediaItemConnection connection */
-  edges?: Maybe<(Maybe<ProductToMediaItemConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpProductToMediaItemConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<MediaItem>)[]>;
+  nodes?: Maybe<(Maybe<WpMediaItem>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface ProductToMediaItemConnectionEdge {
+export interface WpProductToMediaItemConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<MediaItem>;
+  node?: Maybe<WpMediaItem>;
 }
 
 /** The mediaItem type */
-export interface MediaItem extends Node {
+export interface WpMediaItem extends WpNode {
   /** Alternative text to display when resource is not displayed */
   altText?: Maybe<string>;
   /** Ancestors of the object */
-  ancestors?: Maybe<(Maybe<PostObjectUnion>)[]>;
+  ancestors?: Maybe<(Maybe<WpPostObjectUnion>)[]>;
   /** The author field will return a queryable User type matching the post&#039;s author. */
-  author?: Maybe<User>;
+  author?: Maybe<WpUser>;
   /** The caption for the resource */
   caption?: Maybe<string>;
   /** The number of comments. Even though WPGraphQL denotes this field as an integer, in WordPress this field should be saved as a numeric string for compatibility. */
   commentCount?: Maybe<number>;
   /** Connection between the mediaItem type and the mediaItem type */
-  comments?: Maybe<MediaItemToCommentConnection>;
+  comments?: Maybe<WpMediaItemToCommentConnection>;
   /** Whether the comments are open or closed for this particular post. */
   commentStatus?: Maybe<string>;
   /** The content of the post. */
@@ -8608,9 +8608,9 @@ export interface MediaItem extends Node {
   /** The desired slug of the post */
   desiredSlug?: Maybe<string>;
   /** The user that most recently edited the object */
-  editLast?: Maybe<User>;
+  editLast?: Maybe<WpUser>;
   /** If a user has edited the object within the past 15 seconds, this will return the user and the time they last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds */
-  editLock?: Maybe<EditLock>;
+  editLock?: Maybe<WpEditLock>;
   /** The RSS enclosure for the object */
   enclosure?: Maybe<string>;
   /** The excerpt of the post. */
@@ -8624,7 +8624,7 @@ export interface MediaItem extends Node {
   /** The permalink of the post */
   link?: Maybe<string>;
   /** Details about the mediaItem */
-  mediaDetails?: Maybe<MediaDetails>;
+  mediaDetails?: Maybe<WpMediaDetails>;
   /** Type of resource */
   mediaType?: Maybe<string>;
   /** The id field matches the WP_Post-&gt;ID field. */
@@ -8638,7 +8638,7 @@ export interface MediaItem extends Node {
   /** The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT. */
   modifiedGmt?: Maybe<string>;
   /** The parent of the object. The parent object can be of various types */
-  parent?: Maybe<PostObjectUnion>;
+  parent?: Maybe<WpPostObjectUnion>;
   /** URLs that have been pinged. */
   pinged?: Maybe<(Maybe<string>)[]>;
   /** Whether the pings are open or closed for this particular post. */
@@ -8654,7 +8654,7 @@ export interface MediaItem extends Node {
   /** Terms connected to the mediaItem */
   termNames?: Maybe<(Maybe<string>)[]>;
   /** Terms connected to the mediaItem */
-  terms?: Maybe<(Maybe<TermObjectUnion>)[]>;
+  terms?: Maybe<(Maybe<WpTermObjectUnion>)[]>;
   /** Terms connected to the mediaItem */
   termSlugs?: Maybe<(Maybe<string>)[]>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
@@ -8666,17 +8666,17 @@ export interface MediaItem extends Node {
 }
 
 /** The post type */
-export interface Post extends Node {
+export interface WpPost extends WpNode {
   /** Ancestors of the object */
-  ancestors?: Maybe<(Maybe<PostObjectUnion>)[]>;
+  ancestors?: Maybe<(Maybe<WpPostObjectUnion>)[]>;
   /** The author field will return a queryable User type matching the post&#039;s author. */
-  author?: Maybe<User>;
+  author?: Maybe<WpUser>;
   /** Connection between the post type and the post type */
-  categories?: Maybe<PostToCategoryConnection>;
+  categories?: Maybe<WpPostToCategoryConnection>;
   /** The number of comments. Even though WPGraphQL denotes this field as an integer, in WordPress this field should be saved as a numeric string for compatibility. */
   commentCount?: Maybe<number>;
   /** Connection between the post type and the post type */
-  comments?: Maybe<PostToCommentConnection>;
+  comments?: Maybe<WpPostToCommentConnection>;
   /** Whether the comments are open or closed for this particular post. */
   commentStatus?: Maybe<string>;
   /** The content of the post. */
@@ -8688,15 +8688,15 @@ export interface Post extends Node {
   /** The desired slug of the post */
   desiredSlug?: Maybe<string>;
   /** The user that most recently edited the object */
-  editLast?: Maybe<User>;
+  editLast?: Maybe<WpUser>;
   /** If a user has edited the object within the past 15 seconds, this will return the user and the time they last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds */
-  editLock?: Maybe<EditLock>;
+  editLock?: Maybe<WpEditLock>;
   /** The RSS enclosure for the object */
   enclosure?: Maybe<string>;
   /** The excerpt of the post. */
   excerpt?: Maybe<string>;
   /** The featured image for the object */
-  featuredImage?: Maybe<MediaItem>;
+  featuredImage?: Maybe<WpMediaItem>;
   /** The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table. */
   guid?: Maybe<string>;
   /** The globally unique ID for the object */
@@ -8712,7 +8712,7 @@ export interface Post extends Node {
   /** The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT. */
   modifiedGmt?: Maybe<string>;
   /** The parent of the object. The parent object can be of various types */
-  parent?: Maybe<PostObjectUnion>;
+  parent?: Maybe<WpPostObjectUnion>;
   /** URLs that have been pinged. */
   pinged?: Maybe<(Maybe<string>)[]>;
   /** Whether the pings are open or closed for this particular post. */
@@ -8720,17 +8720,17 @@ export interface Post extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   postId: number;
   /** Connection between the post type and the post type */
-  revisions?: Maybe<PostToRevisionConnection>;
+  revisions?: Maybe<WpPostToRevisionConnection>;
   /** The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table. */
   slug?: Maybe<string>;
   /** The current status of the object */
   status?: Maybe<string>;
   /** Connection between the post type and the post type */
-  tags?: Maybe<PostToTagConnection>;
+  tags?: Maybe<WpPostToTagConnection>;
   /** Terms connected to the post */
   termNames?: Maybe<(Maybe<string>)[]>;
   /** Terms connected to the post */
-  terms?: Maybe<(Maybe<TermObjectUnion>)[]>;
+  terms?: Maybe<(Maybe<WpTermObjectUnion>)[]>;
   /** Terms connected to the post */
   termSlugs?: Maybe<(Maybe<string>)[]>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
@@ -8742,15 +8742,15 @@ export interface Post extends Node {
 }
 
 /** A User object */
-export interface User extends Node {
+export interface WpUser extends WpNode {
   /** Avatar object for user. The avatar object can be retrieved in different sizes by specifying the size argument. */
-  avatar?: Maybe<Avatar>;
+  avatar?: Maybe<WpAvatar>;
   /** This field is the id of the user. The id of the user matches WP_User-&gt;ID field and the value in the ID column for the &quot;users&quot; table in SQL. */
   capabilities?: Maybe<(Maybe<string>)[]>;
   /** User metadata option name. Usually it will be &quot;wp_capabilities&quot;. */
   capKey?: Maybe<string>;
   /** Connection between the User type and the User type */
-  comments?: Maybe<UserToCommentConnection>;
+  comments?: Maybe<WpUserToCommentConnection>;
   /** Description of the user. */
   description?: Maybe<string>;
   /** Email of the user. This is equivalent to the WP_User-&gt;user_email property. */
@@ -8768,7 +8768,7 @@ export interface User extends Node {
   /** The preferred language locale set for the user. Value derived from get_user_locale(). */
   locale?: Maybe<string>;
   /** Connection between the User type and the User type */
-  mediaItems?: Maybe<UserToMediaItemConnection>;
+  mediaItems?: Maybe<WpUserToMediaItemConnection>;
   /** Display name of the user. This is equivalent to the WP_User-&gt;dispaly_name property. */
   name?: Maybe<string>;
   /** The nicename for the user. This field is equivalent to WP_User-&gt;user_nicename */
@@ -8776,15 +8776,15 @@ export interface User extends Node {
   /** Nickname of the user. */
   nickname?: Maybe<string>;
   /** Connection between the User type and the User type */
-  pages?: Maybe<UserToPageConnection>;
+  pages?: Maybe<WpUserToPageConnection>;
   /** Connection between the User type and the User type */
-  posts?: Maybe<UserToPostConnection>;
+  posts?: Maybe<WpUserToPostConnection>;
   /** The date the user registered or was created. The field follows a full ISO8601 date string format. */
   registeredDate?: Maybe<string>;
   /** Connection between the User type and the User type */
-  revisions?: Maybe<UserToRevisionConnection>;
+  revisions?: Maybe<WpUserToRevisionConnection>;
   /** Connection between the User type and the User type */
-  roles?: Maybe<UserToUserRoleConnection>;
+  roles?: Maybe<WpUserToUserRoleConnection>;
   /** The slug for the user. This field is equivalent to WP_User-&gt;user_nicename */
   slug?: Maybe<string>;
   /** A website url that is associated with the user. */
@@ -8796,7 +8796,7 @@ export interface User extends Node {
 }
 
 /** Avatars are profile images for users. WordPress by default uses the Gravatar service to host and fetch avatars from. */
-export interface Avatar {
+export interface WpAvatar {
   /** URL for the default image or a default type. Accepts &#039;404&#039; (return a 404 instead of a default image), &#039;retro&#039; (8bit), &#039;monsterid&#039; (monster), &#039;wavatar&#039; (cartoon face), &#039;indenticon&#039; (the &#039;quilt&#039;), &#039;mystery&#039;, &#039;mm&#039;, or &#039;mysteryman&#039; (The Oyster Man), &#039;blank&#039; (transparent GIF), or &#039;gravatar_default&#039; (the Gravatar logo). */
   default?: Maybe<string>;
   /** HTML attributes to insert in the IMG element. Is not sanitized. */
@@ -8822,37 +8822,37 @@ export interface Avatar {
 }
 
 /** Connection between the User type and the User type */
-export interface UserToCommentConnection {
+export interface WpUserToCommentConnection {
   /** Edges for the UserToCommentConnection connection */
-  edges?: Maybe<(Maybe<UserToCommentConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpUserToCommentConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Comment>)[]>;
+  nodes?: Maybe<(Maybe<WpComment>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface UserToCommentConnectionEdge {
+export interface WpUserToCommentConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Comment>;
+  node?: Maybe<WpComment>;
 }
 
 /** A Comment object */
-export interface Comment extends Node {
+export interface WpComment extends WpNode {
   /** User agent used to post the comment. This field is equivalent to WP_Comment-&gt;comment_agent and the value matching the &quot;comment_agent&quot; column in SQL. */
   agent?: Maybe<string>;
   /** The approval status of the comment. This field is equivalent to WP_Comment-&gt;comment_approved and the value matching the &quot;comment_approved&quot; column in SQL. */
   approved?: Maybe<boolean>;
   /** The author of the comment */
-  author?: Maybe<CommentAuthorUnion>;
+  author?: Maybe<WpCommentAuthorUnion>;
   /** IP address for the author. This field is equivalent to WP_Comment-&gt;comment_author_IP and the value matching the &quot;comment_author_IP&quot; column in SQL. */
   authorIp?: Maybe<string>;
   /** Connection between the Comment type and the Comment type */
-  children?: Maybe<CommentToCommentConnection>;
+  children?: Maybe<WpCommentToCommentConnection>;
   /** The object the comment was added to */
-  commentedOn?: Maybe<PostObjectUnion>;
+  commentedOn?: Maybe<WpPostObjectUnion>;
   /** ID for the comment, unique among comments. */
   commentId?: Maybe<number>;
   /** Content of the comment. This field is equivalent to WP_Comment-&gt;comment_content and the value matching the &quot;comment_content&quot; column in SQL. */
@@ -8868,13 +8868,13 @@ export interface Comment extends Node {
   /** Karma value for the comment. This field is equivalent to WP_Comment-&gt;comment_karma and the value matching the &quot;comment_karma&quot; column in SQL. */
   karma?: Maybe<number>;
   /** Parent comment of current comment. This field is equivalent to the WP_Comment instance matching the WP_Comment-&gt;comment_parent ID. */
-  parent?: Maybe<Comment>;
+  parent?: Maybe<WpComment>;
   /** Type of comment. This field is equivalent to WP_Comment-&gt;comment_type and the value matching the &quot;comment_type&quot; column in SQL. */
   type?: Maybe<string>;
 }
 
 /** A Comment Author object */
-export interface CommentAuthor extends Node {
+export interface WpCommentAuthor extends WpNode {
   /** The email for the comment author */
   email?: Maybe<string>;
   /** The globally unique identifier for the Comment Author user */
@@ -8888,75 +8888,75 @@ export interface CommentAuthor extends Node {
 }
 
 /** Connection between the Comment type and the Comment type */
-export interface CommentToCommentConnection {
+export interface WpCommentToCommentConnection {
   /** Edges for the CommentToCommentConnection connection */
-  edges?: Maybe<(Maybe<CommentToCommentConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpCommentToCommentConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Comment>)[]>;
+  nodes?: Maybe<(Maybe<WpComment>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface CommentToCommentConnectionEdge {
+export interface WpCommentToCommentConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Comment>;
+  node?: Maybe<WpComment>;
 }
 
 /** Connection between the User type and the User type */
-export interface UserToMediaItemConnection {
+export interface WpUserToMediaItemConnection {
   /** Edges for the UserToMediaItemConnection connection */
-  edges?: Maybe<(Maybe<UserToMediaItemConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpUserToMediaItemConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<MediaItem>)[]>;
+  nodes?: Maybe<(Maybe<WpMediaItem>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface UserToMediaItemConnectionEdge {
+export interface WpUserToMediaItemConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<MediaItem>;
+  node?: Maybe<WpMediaItem>;
 }
 
 /** Connection between the User type and the User type */
-export interface UserToPageConnection {
+export interface WpUserToPageConnection {
   /** Edges for the UserToPageConnection connection */
-  edges?: Maybe<(Maybe<UserToPageConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpUserToPageConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Page>)[]>;
+  nodes?: Maybe<(Maybe<WpPage>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface UserToPageConnectionEdge {
+export interface WpUserToPageConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Page>;
+  node?: Maybe<WpPage>;
 }
 
 /** The page type */
-export interface Page extends Node {
+export interface WpPage extends WpNode {
   /** Ancestors of the object */
-  ancestors?: Maybe<(Maybe<PostObjectUnion>)[]>;
+  ancestors?: Maybe<(Maybe<WpPostObjectUnion>)[]>;
   /** The author field will return a queryable User type matching the post&#039;s author. */
-  author?: Maybe<User>;
+  author?: Maybe<WpUser>;
   /** Connection between the page type and the page type */
-  childPages?: Maybe<PageToPageConnection>;
+  childPages?: Maybe<WpPageToPageConnection>;
   /** The number of comments. Even though WPGraphQL denotes this field as an integer, in WordPress this field should be saved as a numeric string for compatibility. */
   commentCount?: Maybe<number>;
   /** Connection between the page type and the page type */
-  comments?: Maybe<PageToCommentConnection>;
+  comments?: Maybe<WpPageToCommentConnection>;
   /** Whether the comments are open or closed for this particular post. */
   commentStatus?: Maybe<string>;
   /** The content of the post. */
@@ -8968,15 +8968,15 @@ export interface Page extends Node {
   /** The desired slug of the post */
   desiredSlug?: Maybe<string>;
   /** The user that most recently edited the object */
-  editLast?: Maybe<User>;
+  editLast?: Maybe<WpUser>;
   /** If a user has edited the object within the past 15 seconds, this will return the user and the time they last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds */
-  editLock?: Maybe<EditLock>;
+  editLock?: Maybe<WpEditLock>;
   /** The RSS enclosure for the object */
   enclosure?: Maybe<string>;
   /** The excerpt of the post. */
   excerpt?: Maybe<string>;
   /** The featured image for the object */
-  featuredImage?: Maybe<MediaItem>;
+  featuredImage?: Maybe<WpMediaItem>;
   /** The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table. */
   guid?: Maybe<string>;
   /** The globally unique ID for the object */
@@ -8994,13 +8994,13 @@ export interface Page extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   pageId: number;
   /** The parent of the object. The parent object can be of various types */
-  parent?: Maybe<PostObjectUnion>;
+  parent?: Maybe<WpPostObjectUnion>;
   /** URLs that have been pinged. */
   pinged?: Maybe<(Maybe<string>)[]>;
   /** Whether the pings are open or closed for this particular post. */
   pingStatus?: Maybe<string>;
   /** Connection between the page type and the page type */
-  revisions?: Maybe<PageToRevisionConnection>;
+  revisions?: Maybe<WpPageToRevisionConnection>;
   /** The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table. */
   slug?: Maybe<string>;
   /** The current status of the object */
@@ -9008,7 +9008,7 @@ export interface Page extends Node {
   /** Terms connected to the page */
   termNames?: Maybe<(Maybe<string>)[]>;
   /** Terms connected to the page */
-  terms?: Maybe<(Maybe<TermObjectUnion>)[]>;
+  terms?: Maybe<(Maybe<WpTermObjectUnion>)[]>;
   /** Terms connected to the page */
   termSlugs?: Maybe<(Maybe<string>)[]>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
@@ -9020,77 +9020,77 @@ export interface Page extends Node {
 }
 
 /** Connection between the page type and the page type */
-export interface PageToPageConnection {
+export interface WpPageToPageConnection {
   /** Edges for the PageToPageConnection connection */
-  edges?: Maybe<(Maybe<PageToPageConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPageToPageConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Page>)[]>;
+  nodes?: Maybe<(Maybe<WpPage>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface PageToPageConnectionEdge {
+export interface WpPageToPageConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Page>;
+  node?: Maybe<WpPage>;
 }
 
 /** Connection between the page type and the page type */
-export interface PageToCommentConnection {
+export interface WpPageToCommentConnection {
   /** Edges for the PageToCommentConnection connection */
-  edges?: Maybe<(Maybe<PageToCommentConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPageToCommentConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Comment>)[]>;
+  nodes?: Maybe<(Maybe<WpComment>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PageToCommentConnectionEdge {
+export interface WpPageToCommentConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Comment>;
+  node?: Maybe<WpComment>;
 }
 
 /** Info on whether the object is locked by another user editing it */
-export interface EditLock {
+export interface WpEditLock {
   /** The time when the object was last edited */
   editTime?: Maybe<string>;
   /** The user that most recently edited the object */
-  user?: Maybe<User>;
+  user?: Maybe<WpUser>;
 }
 
 /** Connection between the page type and the page type */
-export interface PageToRevisionConnection {
+export interface WpPageToRevisionConnection {
   /** Edges for the PageToRevisionConnection connection */
-  edges?: Maybe<(Maybe<PageToRevisionConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPageToRevisionConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Revision>)[]>;
+  nodes?: Maybe<(Maybe<WpRevision>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface PageToRevisionConnectionEdge {
+export interface WpPageToRevisionConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Revision>;
+  node?: Maybe<WpRevision>;
 }
 
 /** The revision type */
-export interface Revision extends Node {
+export interface WpRevision extends WpNode {
   /** Ancestors of the object */
-  ancestors?: Maybe<(Maybe<PostObjectUnion>)[]>;
+  ancestors?: Maybe<(Maybe<WpPostObjectUnion>)[]>;
   /** The author field will return a queryable User type matching the post&#039;s author. */
-  author?: Maybe<User>;
+  author?: Maybe<WpUser>;
   /** Whether the comments are open or closed for this particular post. */
   commentStatus?: Maybe<string>;
   /** The content of the post. */
@@ -9102,9 +9102,9 @@ export interface Revision extends Node {
   /** The desired slug of the post */
   desiredSlug?: Maybe<string>;
   /** The user that most recently edited the object */
-  editLast?: Maybe<User>;
+  editLast?: Maybe<WpUser>;
   /** If a user has edited the object within the past 15 seconds, this will return the user and the time they last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds */
-  editLock?: Maybe<EditLock>;
+  editLock?: Maybe<WpEditLock>;
   /** The RSS enclosure for the object */
   enclosure?: Maybe<string>;
   /** The excerpt of the post. */
@@ -9124,7 +9124,7 @@ export interface Revision extends Node {
   /** The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT. */
   modifiedGmt?: Maybe<string>;
   /** The parent of the object. The parent object can be of various types */
-  parent?: Maybe<PostObjectUnion>;
+  parent?: Maybe<WpPostObjectUnion>;
   /** URLs that have been pinged. */
   pinged?: Maybe<(Maybe<string>)[]>;
   /** Whether the pings are open or closed for this particular post. */
@@ -9138,7 +9138,7 @@ export interface Revision extends Node {
   /** Terms connected to the revision */
   termNames?: Maybe<(Maybe<string>)[]>;
   /** Terms connected to the revision */
-  terms?: Maybe<(Maybe<TermObjectUnion>)[]>;
+  terms?: Maybe<(Maybe<WpTermObjectUnion>)[]>;
   /** Terms connected to the revision */
   termSlugs?: Maybe<(Maybe<string>)[]>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
@@ -9150,13 +9150,13 @@ export interface Revision extends Node {
 }
 
 /** The category type */
-export interface Category extends Node {
+export interface WpCategory extends WpNode {
   /** The ancestors of the object */
-  ancestors?: Maybe<(Maybe<Category>)[]>;
+  ancestors?: Maybe<(Maybe<WpCategory>)[]>;
   /** The id field matches the WP_Post-&gt;ID field. */
   categoryId?: Maybe<number>;
   /** Connection between the category type and the category type */
-  children?: Maybe<CategoryToCategoryConnection>;
+  children?: Maybe<WpCategoryToCategoryConnection>;
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9170,13 +9170,13 @@ export interface Category extends Node {
   /** The human friendly name of the object. */
   name?: Maybe<string>;
   /** The parent object */
-  parent?: Maybe<Category>;
+  parent?: Maybe<WpCategory>;
   /** Connection between the category type and the category type */
-  posts?: Maybe<CategoryToPostConnection>;
+  posts?: Maybe<WpCategoryToPostConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
@@ -9184,47 +9184,47 @@ export interface Category extends Node {
 }
 
 /** Connection between the category type and the category type */
-export interface CategoryToCategoryConnection {
+export interface WpCategoryToCategoryConnection {
   /** Edges for the CategoryToCategoryConnection connection */
-  edges?: Maybe<(Maybe<CategoryToCategoryConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpCategoryToCategoryConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Category>)[]>;
+  nodes?: Maybe<(Maybe<WpCategory>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface CategoryToCategoryConnectionEdge {
+export interface WpCategoryToCategoryConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Category>;
+  node?: Maybe<WpCategory>;
 }
 
 /** Connection between the category type and the category type */
-export interface CategoryToPostConnection {
+export interface WpCategoryToPostConnection {
   /** Edges for the CategoryToPostConnection connection */
-  edges?: Maybe<(Maybe<CategoryToPostConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpCategoryToPostConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Post>)[]>;
+  nodes?: Maybe<(Maybe<WpPost>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface CategoryToPostConnectionEdge {
+export interface WpCategoryToPostConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Post>;
+  node?: Maybe<WpPost>;
 }
 
 /** The tag type */
-export interface Tag extends Node {
+export interface WpTag extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9238,13 +9238,13 @@ export interface Tag extends Node {
   /** The human friendly name of the object. */
   name?: Maybe<string>;
   /** Connection between the tag type and the tag type */
-  posts?: Maybe<TagToPostConnection>;
+  posts?: Maybe<WpTagToPostConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The id field matches the WP_Post-&gt;ID field. */
   tagId?: Maybe<number>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
@@ -9252,27 +9252,27 @@ export interface Tag extends Node {
 }
 
 /** Connection between the tag type and the tag type */
-export interface TagToPostConnection {
+export interface WpTagToPostConnection {
   /** Edges for the TagToPostConnection connection */
-  edges?: Maybe<(Maybe<TagToPostConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpTagToPostConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Post>)[]>;
+  nodes?: Maybe<(Maybe<WpPost>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface TagToPostConnectionEdge {
+export interface WpTagToPostConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Post>;
+  node?: Maybe<WpPost>;
 }
 
 /** The productType type */
-export interface ProductType extends Node {
+export interface WpProductType extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9290,7 +9290,7 @@ export interface ProductType extends Node {
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
@@ -9298,7 +9298,7 @@ export interface ProductType extends Node {
 }
 
 /** The visibleProduct type */
-export interface VisibleProduct extends Node {
+export interface WpVisibleProduct extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9314,7 +9314,7 @@ export interface VisibleProduct extends Node {
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
@@ -9324,7 +9324,7 @@ export interface VisibleProduct extends Node {
 }
 
 /** The productTag type */
-export interface ProductTag extends Node {
+export interface WpProductTag extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9338,13 +9338,13 @@ export interface ProductTag extends Node {
   /** The human friendly name of the object. */
   name?: Maybe<string>;
   /** Connection between the ProductTag type and the ProductTag type */
-  products?: Maybe<ProductTagToProductConnection>;
+  products?: Maybe<WpProductTagToProductConnection>;
   /** The id field matches the WP_Post-&gt;ID field. */
   productTagId?: Maybe<number>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
@@ -9352,25 +9352,25 @@ export interface ProductTag extends Node {
 }
 
 /** Connection between the ProductTag type and the ProductTag type */
-export interface ProductTagToProductConnection {
+export interface WpProductTagToProductConnection {
   /** Edges for the ProductTagToProductConnection connection */
-  edges?: Maybe<(Maybe<ProductTagToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpProductTagToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface ProductTagToProductConnectionEdge {
+export interface WpProductTagToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** The shippingClass type */
-export interface ShippingClass extends Node {
+export interface WpShippingClass extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9388,7 +9388,7 @@ export interface ShippingClass extends Node {
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
@@ -9396,7 +9396,7 @@ export interface ShippingClass extends Node {
 }
 
 /** The paHind type */
-export interface PaHind extends Node {
+export interface WpPaHind extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9412,65 +9412,65 @@ export interface PaHind extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paHindId?: Maybe<number>;
   /** Connection between the PaHind type and the PaHind type */
-  products?: Maybe<PaHindToProductConnection>;
+  products?: Maybe<WpPaHindToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaHind type and the PaHind type */
-  variations?: Maybe<PaHindToProductVariationConnection>;
+  variations?: Maybe<WpPaHindToProductVariationConnection>;
 }
 
 /** Connection between the PaHind type and the PaHind type */
-export interface PaHindToProductConnection {
+export interface WpPaHindToProductConnection {
   /** Edges for the PaHindToProductConnection connection */
-  edges?: Maybe<(Maybe<PaHindToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaHindToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaHindToProductConnectionEdge {
+export interface WpPaHindToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaHind type and the PaHind type */
-export interface PaHindToProductVariationConnection {
+export interface WpPaHindToProductVariationConnection {
   /** Edges for the PaHindToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaHindToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaHindToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaHindToProductVariationConnectionEdge {
+export interface WpPaHindToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** A product variation object */
-export interface ProductVariation extends Node {
+export interface WpProductVariation extends WpNode {
   /** Connection between the ProductVariation type and the ProductVariation type */
-  attributes?: Maybe<ProductVariationToVariationAttributeConnection>;
+  attributes?: Maybe<WpProductVariationToVariationAttributeConnection>;
   /** Product variation backorders */
-  backorders?: Maybe<BackordersEnum>;
+  backorders?: Maybe<WpBackordersEnum>;
   /** Can product be backordered? */
   backordersAllowed?: Maybe<boolean>;
   /** Product variation catalog visibility */
-  catalogVisibility?: Maybe<CatalogVisibilityEnum>;
+  catalogVisibility?: Maybe<WpCatalogVisibilityEnum>;
   /** Date variation created */
   date?: Maybe<string>;
   /** Date on sale from */
@@ -9486,7 +9486,7 @@ export interface ProductVariation extends Node {
   /** Download limit */
   downloadLimit?: Maybe<number>;
   /** Product downloads */
-  downloads?: Maybe<(Maybe<ProductDownload>)[]>;
+  downloads?: Maybe<(Maybe<WpProductDownload>)[]>;
   /** Does product variation have any visible attributes */
   hasAttributes?: Maybe<boolean>;
   /** Product variation height */
@@ -9494,11 +9494,11 @@ export interface ProductVariation extends Node {
   /** The globally unique identifier for the product variation */
   id: string;
   /** Product variation main image */
-  image?: Maybe<MediaItem>;
+  image?: Maybe<WpMediaItem>;
   /** Product variation length */
   length?: Maybe<string>;
   /** if/how product variation stock is managed */
-  manageStock?: Maybe<ManageStockEnum>;
+  manageStock?: Maybe<WpManageStockEnum>;
   /** Menu order */
   menuOrder?: Maybe<number>;
   /** Date variation last updated */
@@ -9526,13 +9526,13 @@ export interface ProductVariation extends Node {
   /** Product variation stock quantity */
   stockQuantity?: Maybe<number>;
   /** Product stock status */
-  stockStatus?: Maybe<StockStatusEnum>;
+  stockStatus?: Maybe<WpStockStatusEnum>;
   /** Product variation tax class */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Tax status */
-  taxStatus?: Maybe<TaxStatusEnum>;
+  taxStatus?: Maybe<WpTaxStatusEnum>;
   /** Product type */
-  type?: Maybe<ProductTypesEnum>;
+  type?: Maybe<WpProductTypesEnum>;
   /** The Id of the order. Equivalent to WP_Post-&gt;ID */
   variationId?: Maybe<number>;
   /** Is product virtual? */
@@ -9544,25 +9544,27 @@ export interface ProductVariation extends Node {
 }
 
 /** Connection between the ProductVariation type and the ProductVariation type */
-export interface ProductVariationToVariationAttributeConnection {
+export interface WpProductVariationToVariationAttributeConnection {
   /** Edges for the ProductVariationToVariationAttributeConnection connection */
-  edges?: Maybe<(Maybe<ProductVariationToVariationAttributeConnectionEdge>)[]>;
+  edges?: Maybe<
+    (Maybe<WpProductVariationToVariationAttributeConnectionEdge>)[]
+  >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<VariationAttribute>)[]>;
+  nodes?: Maybe<(Maybe<WpVariationAttribute>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface ProductVariationToVariationAttributeConnectionEdge {
+export interface WpProductVariationToVariationAttributeConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<VariationAttribute>;
+  node?: Maybe<WpVariationAttribute>;
 }
 
 /** The paHulk type */
-export interface PaHulk extends Node {
+export interface WpPaHulk extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9578,57 +9580,57 @@ export interface PaHulk extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paHulkId?: Maybe<number>;
   /** Connection between the PaHulk type and the PaHulk type */
-  products?: Maybe<PaHulkToProductConnection>;
+  products?: Maybe<WpPaHulkToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaHulk type and the PaHulk type */
-  variations?: Maybe<PaHulkToProductVariationConnection>;
+  variations?: Maybe<WpPaHulkToProductVariationConnection>;
 }
 
 /** Connection between the PaHulk type and the PaHulk type */
-export interface PaHulkToProductConnection {
+export interface WpPaHulkToProductConnection {
   /** Edges for the PaHulkToProductConnection connection */
-  edges?: Maybe<(Maybe<PaHulkToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaHulkToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaHulkToProductConnectionEdge {
+export interface WpPaHulkToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaHulk type and the PaHulk type */
-export interface PaHulkToProductVariationConnection {
+export interface WpPaHulkToProductVariationConnection {
   /** Edges for the PaHulkToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaHulkToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaHulkToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaHulkToProductVariationConnectionEdge {
+export interface WpPaHulkToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paKasutusaeg type */
-export interface PaKasutusaeg extends Node {
+export interface WpPaKasutusaeg extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9644,57 +9646,57 @@ export interface PaKasutusaeg extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paKasutusaegId?: Maybe<number>;
   /** Connection between the PaKasutusaeg type and the PaKasutusaeg type */
-  products?: Maybe<PaKasutusaegToProductConnection>;
+  products?: Maybe<WpPaKasutusaegToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaKasutusaeg type and the PaKasutusaeg type */
-  variations?: Maybe<PaKasutusaegToProductVariationConnection>;
+  variations?: Maybe<WpPaKasutusaegToProductVariationConnection>;
 }
 
 /** Connection between the PaKasutusaeg type and the PaKasutusaeg type */
-export interface PaKasutusaegToProductConnection {
+export interface WpPaKasutusaegToProductConnection {
   /** Edges for the PaKasutusaegToProductConnection connection */
-  edges?: Maybe<(Maybe<PaKasutusaegToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaKasutusaegToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaKasutusaegToProductConnectionEdge {
+export interface WpPaKasutusaegToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaKasutusaeg type and the PaKasutusaeg type */
-export interface PaKasutusaegToProductVariationConnection {
+export interface WpPaKasutusaegToProductVariationConnection {
   /** Edges for the PaKasutusaegToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaKasutusaegToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaKasutusaegToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaKasutusaegToProductVariationConnectionEdge {
+export interface WpPaKasutusaegToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paKogus type */
-export interface PaKogus extends Node {
+export interface WpPaKogus extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9710,57 +9712,57 @@ export interface PaKogus extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paKogusId?: Maybe<number>;
   /** Connection between the PaKogus type and the PaKogus type */
-  products?: Maybe<PaKogusToProductConnection>;
+  products?: Maybe<WpPaKogusToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaKogus type and the PaKogus type */
-  variations?: Maybe<PaKogusToProductVariationConnection>;
+  variations?: Maybe<WpPaKogusToProductVariationConnection>;
 }
 
 /** Connection between the PaKogus type and the PaKogus type */
-export interface PaKogusToProductConnection {
+export interface WpPaKogusToProductConnection {
   /** Edges for the PaKogusToProductConnection connection */
-  edges?: Maybe<(Maybe<PaKogusToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaKogusToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaKogusToProductConnectionEdge {
+export interface WpPaKogusToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaKogus type and the PaKogus type */
-export interface PaKogusToProductVariationConnection {
+export interface WpPaKogusToProductVariationConnection {
   /** Edges for the PaKogusToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaKogusToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaKogusToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaKogusToProductVariationConnectionEdge {
+export interface WpPaKogusToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paKontuur type */
-export interface PaKontuur extends Node {
+export interface WpPaKontuur extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9776,57 +9778,57 @@ export interface PaKontuur extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paKontuurId?: Maybe<number>;
   /** Connection between the PaKontuur type and the PaKontuur type */
-  products?: Maybe<PaKontuurToProductConnection>;
+  products?: Maybe<WpPaKontuurToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaKontuur type and the PaKontuur type */
-  variations?: Maybe<PaKontuurToProductVariationConnection>;
+  variations?: Maybe<WpPaKontuurToProductVariationConnection>;
 }
 
 /** Connection between the PaKontuur type and the PaKontuur type */
-export interface PaKontuurToProductConnection {
+export interface WpPaKontuurToProductConnection {
   /** Edges for the PaKontuurToProductConnection connection */
-  edges?: Maybe<(Maybe<PaKontuurToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaKontuurToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaKontuurToProductConnectionEdge {
+export interface WpPaKontuurToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaKontuur type and the PaKontuur type */
-export interface PaKontuurToProductVariationConnection {
+export interface WpPaKontuurToProductVariationConnection {
   /** Edges for the PaKontuurToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaKontuurToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaKontuurToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaKontuurToProductVariationConnectionEdge {
+export interface WpPaKontuurToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paKoostisained type */
-export interface PaKoostisained extends Node {
+export interface WpPaKoostisained extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9842,57 +9844,57 @@ export interface PaKoostisained extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paKoostisainedId?: Maybe<number>;
   /** Connection between the PaKoostisained type and the PaKoostisained type */
-  products?: Maybe<PaKoostisainedToProductConnection>;
+  products?: Maybe<WpPaKoostisainedToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaKoostisained type and the PaKoostisained type */
-  variations?: Maybe<PaKoostisainedToProductVariationConnection>;
+  variations?: Maybe<WpPaKoostisainedToProductVariationConnection>;
 }
 
 /** Connection between the PaKoostisained type and the PaKoostisained type */
-export interface PaKoostisainedToProductConnection {
+export interface WpPaKoostisainedToProductConnection {
   /** Edges for the PaKoostisainedToProductConnection connection */
-  edges?: Maybe<(Maybe<PaKoostisainedToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaKoostisainedToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaKoostisainedToProductConnectionEdge {
+export interface WpPaKoostisainedToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaKoostisained type and the PaKoostisained type */
-export interface PaKoostisainedToProductVariationConnection {
+export interface WpPaKoostisainedToProductVariationConnection {
   /** Edges for the PaKoostisainedToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaKoostisainedToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaKoostisainedToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaKoostisainedToProductVariationConnectionEdge {
+export interface WpPaKoostisainedToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paLaadimisaeg type */
-export interface PaLaadimisaeg extends Node {
+export interface WpPaLaadimisaeg extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9908,57 +9910,57 @@ export interface PaLaadimisaeg extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paLaadimisaegId?: Maybe<number>;
   /** Connection between the PaLaadimisaeg type and the PaLaadimisaeg type */
-  products?: Maybe<PaLaadimisaegToProductConnection>;
+  products?: Maybe<WpPaLaadimisaegToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaLaadimisaeg type and the PaLaadimisaeg type */
-  variations?: Maybe<PaLaadimisaegToProductVariationConnection>;
+  variations?: Maybe<WpPaLaadimisaegToProductVariationConnection>;
 }
 
 /** Connection between the PaLaadimisaeg type and the PaLaadimisaeg type */
-export interface PaLaadimisaegToProductConnection {
+export interface WpPaLaadimisaegToProductConnection {
   /** Edges for the PaLaadimisaegToProductConnection connection */
-  edges?: Maybe<(Maybe<PaLaadimisaegToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaLaadimisaegToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaLaadimisaegToProductConnectionEdge {
+export interface WpPaLaadimisaegToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaLaadimisaeg type and the PaLaadimisaeg type */
-export interface PaLaadimisaegToProductVariationConnection {
+export interface WpPaLaadimisaegToProductVariationConnection {
   /** Edges for the PaLaadimisaegToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaLaadimisaegToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaLaadimisaegToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaLaadimisaegToProductVariationConnectionEdge {
+export interface WpPaLaadimisaegToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paMaterjal type */
-export interface PaMaterjal extends Node {
+export interface WpPaMaterjal extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -9974,57 +9976,57 @@ export interface PaMaterjal extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paMaterjalId?: Maybe<number>;
   /** Connection between the PaMaterjal type and the PaMaterjal type */
-  products?: Maybe<PaMaterjalToProductConnection>;
+  products?: Maybe<WpPaMaterjalToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaMaterjal type and the PaMaterjal type */
-  variations?: Maybe<PaMaterjalToProductVariationConnection>;
+  variations?: Maybe<WpPaMaterjalToProductVariationConnection>;
 }
 
 /** Connection between the PaMaterjal type and the PaMaterjal type */
-export interface PaMaterjalToProductConnection {
+export interface WpPaMaterjalToProductConnection {
   /** Edges for the PaMaterjalToProductConnection connection */
-  edges?: Maybe<(Maybe<PaMaterjalToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaMaterjalToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaMaterjalToProductConnectionEdge {
+export interface WpPaMaterjalToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaMaterjal type and the PaMaterjal type */
-export interface PaMaterjalToProductVariationConnection {
+export interface WpPaMaterjalToProductVariationConnection {
   /** Edges for the PaMaterjalToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaMaterjalToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaMaterjalToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaMaterjalToProductVariationConnectionEdge {
+export interface WpPaMaterjalToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paMuratasa type */
-export interface PaMuratasa extends Node {
+export interface WpPaMuratasa extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -10040,57 +10042,57 @@ export interface PaMuratasa extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paMuratasaId?: Maybe<number>;
   /** Connection between the PaMuratasa type and the PaMuratasa type */
-  products?: Maybe<PaMuratasaToProductConnection>;
+  products?: Maybe<WpPaMuratasaToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaMuratasa type and the PaMuratasa type */
-  variations?: Maybe<PaMuratasaToProductVariationConnection>;
+  variations?: Maybe<WpPaMuratasaToProductVariationConnection>;
 }
 
 /** Connection between the PaMuratasa type and the PaMuratasa type */
-export interface PaMuratasaToProductConnection {
+export interface WpPaMuratasaToProductConnection {
   /** Edges for the PaMuratasaToProductConnection connection */
-  edges?: Maybe<(Maybe<PaMuratasaToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaMuratasaToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaMuratasaToProductConnectionEdge {
+export interface WpPaMuratasaToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaMuratasa type and the PaMuratasa type */
-export interface PaMuratasaToProductVariationConnection {
+export interface WpPaMuratasaToProductVariationConnection {
   /** Edges for the PaMuratasaToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaMuratasaToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaMuratasaToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaMuratasaToProductVariationConnectionEdge {
+export interface WpPaMuratasaToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paOhutus type */
-export interface PaOhutus extends Node {
+export interface WpPaOhutus extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -10106,57 +10108,57 @@ export interface PaOhutus extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paOhutusId?: Maybe<number>;
   /** Connection between the PaOhutus type and the PaOhutus type */
-  products?: Maybe<PaOhutusToProductConnection>;
+  products?: Maybe<WpPaOhutusToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaOhutus type and the PaOhutus type */
-  variations?: Maybe<PaOhutusToProductVariationConnection>;
+  variations?: Maybe<WpPaOhutusToProductVariationConnection>;
 }
 
 /** Connection between the PaOhutus type and the PaOhutus type */
-export interface PaOhutusToProductConnection {
+export interface WpPaOhutusToProductConnection {
   /** Edges for the PaOhutusToProductConnection connection */
-  edges?: Maybe<(Maybe<PaOhutusToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaOhutusToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaOhutusToProductConnectionEdge {
+export interface WpPaOhutusToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaOhutus type and the PaOhutus type */
-export interface PaOhutusToProductVariationConnection {
+export interface WpPaOhutusToProductVariationConnection {
   /** Edges for the PaOhutusToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaOhutusToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaOhutusToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaOhutusToProductVariationConnectionEdge {
+export interface WpPaOhutusToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paPatareid type */
-export interface PaPatareid extends Node {
+export interface WpPaPatareid extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -10172,57 +10174,57 @@ export interface PaPatareid extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paPatareidId?: Maybe<number>;
   /** Connection between the PaPatareid type and the PaPatareid type */
-  products?: Maybe<PaPatareidToProductConnection>;
+  products?: Maybe<WpPaPatareidToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaPatareid type and the PaPatareid type */
-  variations?: Maybe<PaPatareidToProductVariationConnection>;
+  variations?: Maybe<WpPaPatareidToProductVariationConnection>;
 }
 
 /** Connection between the PaPatareid type and the PaPatareid type */
-export interface PaPatareidToProductConnection {
+export interface WpPaPatareidToProductConnection {
   /** Edges for the PaPatareidToProductConnection connection */
-  edges?: Maybe<(Maybe<PaPatareidToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaPatareidToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaPatareidToProductConnectionEdge {
+export interface WpPaPatareidToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaPatareid type and the PaPatareid type */
-export interface PaPatareidToProductVariationConnection {
+export interface WpPaPatareidToProductVariationConnection {
   /** Edges for the PaPatareidToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaPatareidToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaPatareidToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaPatareidToProductVariationConnectionEdge {
+export interface WpPaPatareidToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paSuurus type */
-export interface PaSuurus extends Node {
+export interface WpPaSuurus extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -10238,57 +10240,57 @@ export interface PaSuurus extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paSuurusId?: Maybe<number>;
   /** Connection between the PaSuurus type and the PaSuurus type */
-  products?: Maybe<PaSuurusToProductConnection>;
+  products?: Maybe<WpPaSuurusToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaSuurus type and the PaSuurus type */
-  variations?: Maybe<PaSuurusToProductVariationConnection>;
+  variations?: Maybe<WpPaSuurusToProductVariationConnection>;
 }
 
 /** Connection between the PaSuurus type and the PaSuurus type */
-export interface PaSuurusToProductConnection {
+export interface WpPaSuurusToProductConnection {
   /** Edges for the PaSuurusToProductConnection connection */
-  edges?: Maybe<(Maybe<PaSuurusToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaSuurusToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaSuurusToProductConnectionEdge {
+export interface WpPaSuurusToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaSuurus type and the PaSuurus type */
-export interface PaSuurusToProductVariationConnection {
+export interface WpPaSuurusToProductVariationConnection {
   /** Edges for the PaSuurusToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaSuurusToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaSuurusToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaSuurusToProductVariationConnectionEdge {
+export interface WpPaSuurusToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paVariant type */
-export interface PaVariant extends Node {
+export interface WpPaVariant extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -10304,57 +10306,57 @@ export interface PaVariant extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paVariantId?: Maybe<number>;
   /** Connection between the PaVariant type and the PaVariant type */
-  products?: Maybe<PaVariantToProductConnection>;
+  products?: Maybe<WpPaVariantToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaVariant type and the PaVariant type */
-  variations?: Maybe<PaVariantToProductVariationConnection>;
+  variations?: Maybe<WpPaVariantToProductVariationConnection>;
 }
 
 /** Connection between the PaVariant type and the PaVariant type */
-export interface PaVariantToProductConnection {
+export interface WpPaVariantToProductConnection {
   /** Edges for the PaVariantToProductConnection connection */
-  edges?: Maybe<(Maybe<PaVariantToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaVariantToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaVariantToProductConnectionEdge {
+export interface WpPaVariantToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaVariant type and the PaVariant type */
-export interface PaVariantToProductVariationConnection {
+export interface WpPaVariantToProductVariationConnection {
   /** Edges for the PaVariantToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaVariantToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaVariantToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaVariantToProductVariationConnectionEdge {
+export interface WpPaVariantToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paVarv type */
-export interface PaVarv extends Node {
+export interface WpPaVarv extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -10370,57 +10372,57 @@ export interface PaVarv extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paVarvId?: Maybe<number>;
   /** Connection between the PaVarv type and the PaVarv type */
-  products?: Maybe<PaVarvToProductConnection>;
+  products?: Maybe<WpPaVarvToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaVarv type and the PaVarv type */
-  variations?: Maybe<PaVarvToProductVariationConnection>;
+  variations?: Maybe<WpPaVarvToProductVariationConnection>;
 }
 
 /** Connection between the PaVarv type and the PaVarv type */
-export interface PaVarvToProductConnection {
+export interface WpPaVarvToProductConnection {
   /** Edges for the PaVarvToProductConnection connection */
-  edges?: Maybe<(Maybe<PaVarvToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaVarvToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaVarvToProductConnectionEdge {
+export interface WpPaVarvToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaVarv type and the PaVarv type */
-export interface PaVarvToProductVariationConnection {
+export interface WpPaVarvToProductVariationConnection {
   /** Edges for the PaVarvToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaVarvToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaVarvToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaVarvToProductVariationConnectionEdge {
+export interface WpPaVarvToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** The paVeekindlus type */
-export interface PaVeekindlus extends Node {
+export interface WpPaVeekindlus extends WpNode {
   /** The number of objects connected to the object */
   count?: Maybe<number>;
   /** The description of the object */
@@ -10436,115 +10438,115 @@ export interface PaVeekindlus extends Node {
   /** The id field matches the WP_Post-&gt;ID field. */
   paVeekindlusId?: Maybe<number>;
   /** Connection between the PaVeekindlus type and the PaVeekindlus type */
-  products?: Maybe<PaVeekindlusToProductConnection>;
+  products?: Maybe<WpPaVeekindlusToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<string>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<Taxonomy>;
+  taxonomy?: Maybe<WpTaxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<number>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<number>;
   /** Connection between the PaVeekindlus type and the PaVeekindlus type */
-  variations?: Maybe<PaVeekindlusToProductVariationConnection>;
+  variations?: Maybe<WpPaVeekindlusToProductVariationConnection>;
 }
 
 /** Connection between the PaVeekindlus type and the PaVeekindlus type */
-export interface PaVeekindlusToProductConnection {
+export interface WpPaVeekindlusToProductConnection {
   /** Edges for the PaVeekindlusToProductConnection connection */
-  edges?: Maybe<(Maybe<PaVeekindlusToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaVeekindlusToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaVeekindlusToProductConnectionEdge {
+export interface WpPaVeekindlusToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the PaVeekindlus type and the PaVeekindlus type */
-export interface PaVeekindlusToProductVariationConnection {
+export interface WpPaVeekindlusToProductVariationConnection {
   /** Edges for the PaVeekindlusToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<PaVeekindlusToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPaVeekindlusToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PaVeekindlusToProductVariationConnectionEdge {
+export interface WpPaVeekindlusToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** Connection between the User type and the User type */
-export interface UserToPostConnection {
+export interface WpUserToPostConnection {
   /** Edges for the UserToPostConnection connection */
-  edges?: Maybe<(Maybe<UserToPostConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpUserToPostConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Post>)[]>;
+  nodes?: Maybe<(Maybe<WpPost>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface UserToPostConnectionEdge {
+export interface WpUserToPostConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Post>;
+  node?: Maybe<WpPost>;
 }
 
 /** Connection between the User type and the User type */
-export interface UserToRevisionConnection {
+export interface WpUserToRevisionConnection {
   /** Edges for the UserToRevisionConnection connection */
-  edges?: Maybe<(Maybe<UserToRevisionConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpUserToRevisionConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Revision>)[]>;
+  nodes?: Maybe<(Maybe<WpRevision>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface UserToRevisionConnectionEdge {
+export interface WpUserToRevisionConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Revision>;
+  node?: Maybe<WpRevision>;
 }
 
 /** Connection between the User type and the User type */
-export interface UserToUserRoleConnection {
+export interface WpUserToUserRoleConnection {
   /** Edges for the UserToUserRoleConnection connection */
-  edges?: Maybe<(Maybe<UserToUserRoleConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpUserToUserRoleConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<UserRole>)[]>;
+  nodes?: Maybe<(Maybe<WpUserRole>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface UserToUserRoleConnectionEdge {
+export interface WpUserToUserRoleConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<UserRole>;
+  node?: Maybe<WpUserRole>;
 }
 
 /** A user role object */
-export interface UserRole {
+export interface WpUserRole {
   /** The capabilities that belong to this role */
   capabilities?: Maybe<(Maybe<string>)[]>;
   /** The globally unique identifier for the role */
@@ -10556,117 +10558,117 @@ export interface UserRole {
 }
 
 /** Connection between the post type and the post type */
-export interface PostToCategoryConnection {
+export interface WpPostToCategoryConnection {
   /** Edges for the PostToCategoryConnection connection */
-  edges?: Maybe<(Maybe<PostToCategoryConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPostToCategoryConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Category>)[]>;
+  nodes?: Maybe<(Maybe<WpCategory>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface PostToCategoryConnectionEdge {
+export interface WpPostToCategoryConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Category>;
+  node?: Maybe<WpCategory>;
 }
 
 /** Connection between the post type and the post type */
-export interface PostToCommentConnection {
+export interface WpPostToCommentConnection {
   /** Edges for the PostToCommentConnection connection */
-  edges?: Maybe<(Maybe<PostToCommentConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPostToCommentConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Comment>)[]>;
+  nodes?: Maybe<(Maybe<WpComment>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface PostToCommentConnectionEdge {
+export interface WpPostToCommentConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Comment>;
+  node?: Maybe<WpComment>;
 }
 
 /** Connection between the post type and the post type */
-export interface PostToRevisionConnection {
+export interface WpPostToRevisionConnection {
   /** Edges for the PostToRevisionConnection connection */
-  edges?: Maybe<(Maybe<PostToRevisionConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPostToRevisionConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Revision>)[]>;
+  nodes?: Maybe<(Maybe<WpRevision>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface PostToRevisionConnectionEdge {
+export interface WpPostToRevisionConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Revision>;
+  node?: Maybe<WpRevision>;
 }
 
 /** Connection between the post type and the post type */
-export interface PostToTagConnection {
+export interface WpPostToTagConnection {
   /** Edges for the PostToTagConnection connection */
-  edges?: Maybe<(Maybe<PostToTagConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpPostToTagConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Tag>)[]>;
+  nodes?: Maybe<(Maybe<WpTag>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface PostToTagConnectionEdge {
+export interface WpPostToTagConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Tag>;
+  node?: Maybe<WpTag>;
 }
 
 /** Connection between the mediaItem type and the mediaItem type */
-export interface MediaItemToCommentConnection {
+export interface WpMediaItemToCommentConnection {
   /** Edges for the MediaItemToCommentConnection connection */
-  edges?: Maybe<(Maybe<MediaItemToCommentConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpMediaItemToCommentConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Comment>)[]>;
+  nodes?: Maybe<(Maybe<WpComment>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface MediaItemToCommentConnectionEdge {
+export interface WpMediaItemToCommentConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Comment>;
+  node?: Maybe<WpComment>;
 }
 
 /** File details for a Media Item */
-export interface MediaDetails {
+export interface WpMediaDetails {
   /** The height of the mediaItem */
   file?: Maybe<string>;
   /** The height of the mediaItem */
   height?: Maybe<number>;
 
-  meta?: Maybe<MediaItemMeta>;
+  meta?: Maybe<WpMediaItemMeta>;
   /** The available sizes of the mediaItem */
-  sizes?: Maybe<(Maybe<MediaSize>)[]>;
+  sizes?: Maybe<(Maybe<WpMediaSize>)[]>;
   /** The width of the mediaItem */
   width?: Maybe<number>;
 }
 
 /** Meta connected to a MediaItem */
-export interface MediaItemMeta {
+export interface WpMediaItemMeta {
   aperture?: Maybe<number>;
 
   camera?: Maybe<string>;
@@ -10693,7 +10695,7 @@ export interface MediaItemMeta {
 }
 
 /** Details of an available size for a media item */
-export interface MediaSize {
+export interface WpMediaSize {
   /** The file of the for the referenced size */
   file?: Maybe<string>;
   /** The height of the for the referenced size */
@@ -10709,7 +10711,7 @@ export interface MediaSize {
 }
 
 /** A product rating counter */
-export interface RatingCounter {
+export interface WpRatingCounter {
   /** Product&#039;s rating average */
   average?: Maybe<number>;
   /** Product&#039;s number of 5-star ratings */
@@ -10725,83 +10727,83 @@ export interface RatingCounter {
 }
 
 /** Connection between the Product type and the Product type */
-export interface ProductToProductTagConnection {
+export interface WpProductToProductTagConnection {
   /** Edges for the ProductToProductTagConnection connection */
-  edges?: Maybe<(Maybe<ProductToProductTagConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpProductToProductTagConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductTag>)[]>;
+  nodes?: Maybe<(Maybe<WpProductTag>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface ProductToProductTagConnectionEdge {
+export interface WpProductToProductTagConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductTag>;
+  node?: Maybe<WpProductTag>;
 }
 
 /** Connection between the Product type and the Product type */
-export interface ProductToProductVariationConnection {
+export interface WpProductToProductVariationConnection {
   /** Edges for the ProductToProductVariationConnection connection */
-  edges?: Maybe<(Maybe<ProductToProductVariationConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpProductToProductVariationConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductVariation>)[]>;
+  nodes?: Maybe<(Maybe<WpProductVariation>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface ProductToProductVariationConnectionEdge {
+export interface WpProductToProductVariationConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductVariation>;
+  node?: Maybe<WpProductVariation>;
 }
 
 /** Connection between the Coupon type and the Coupon type */
-export interface CouponToProductConnection {
+export interface WpCouponToProductConnection {
   /** Edges for the CouponToProductConnection connection */
-  edges?: Maybe<(Maybe<CouponToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpCouponToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface CouponToProductConnectionEdge {
+export interface WpCouponToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** Connection between the Coupon type and the Coupon type */
-export interface CouponToCustomerConnection {
+export interface WpCouponToCustomerConnection {
   /** Edges for the CouponToCustomerConnection connection */
-  edges?: Maybe<(Maybe<CouponToCustomerConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpCouponToCustomerConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Customer>)[]>;
+  nodes?: Maybe<(Maybe<WpCustomer>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface CouponToCustomerConnectionEdge {
+export interface WpCouponToCustomerConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Customer>;
+  node?: Maybe<WpCustomer>;
 }
 
 /** A customer object */
-export interface Customer extends Node {
+export interface WpCustomer extends WpNode {
   /** Return the date customer billing address properties */
-  billing?: Maybe<CustomerAddress>;
+  billing?: Maybe<WpCustomerAddress>;
   /** Has customer calculated shipping? */
   calculatedShipping?: Maybe<boolean>;
   /** The Id of the user. Equivalent to WP_User-&gt;ID */
@@ -10825,19 +10827,19 @@ export interface Customer extends Node {
   /** Return the customer&#039;s last name. */
   lastName?: Maybe<string>;
   /** Gets the customers last order. */
-  lastOrder?: Maybe<Order>;
+  lastOrder?: Maybe<WpOrder>;
   /** Return the date customer was last updated */
   modified?: Maybe<string>;
   /** Return the number of orders this customer has. */
   orderCount?: Maybe<number>;
   /** Connection between the Customer type and the Customer type */
-  orders?: Maybe<CustomerToOrderConnection>;
+  orders?: Maybe<WpCustomerToOrderConnection>;
   /** Connection between the Customer type and the Customer type */
-  refunds?: Maybe<CustomerToRefundConnection>;
+  refunds?: Maybe<WpCustomerToRefundConnection>;
   /** Return the customer&#039;s user role. */
   role?: Maybe<string>;
   /** Return the date customer shipping address properties */
-  shipping?: Maybe<CustomerAddress>;
+  shipping?: Maybe<WpCustomerAddress>;
   /** Return how much money this customer has spent. */
   totalSpent?: Maybe<number>;
   /** Return the customer&#039;s username. */
@@ -10845,7 +10847,7 @@ export interface Customer extends Node {
 }
 
 /** A customer address object */
-export interface CustomerAddress {
+export interface WpCustomerAddress {
   /** Address 1 */
   address1?: Maybe<string>;
   /** Address 2 */
@@ -10855,7 +10857,7 @@ export interface CustomerAddress {
   /** Company */
   company?: Maybe<string>;
   /** Country */
-  country?: Maybe<CountriesEnum>;
+  country?: Maybe<WpCountriesEnum>;
   /** E-mail */
   email?: Maybe<string>;
   /** First name */
@@ -10871,21 +10873,21 @@ export interface CustomerAddress {
 }
 
 /** A order object */
-export interface Order extends Node {
+export interface WpOrder extends WpNode {
   /** Order billing properties */
-  billing?: Maybe<CustomerAddress>;
+  billing?: Maybe<WpCustomerAddress>;
   /** Cart hash */
   cartHash?: Maybe<string>;
   /** Cart tax amount */
   cartTax?: Maybe<number>;
   /** Connection between the Order type and the Order type */
-  couponLines?: Maybe<OrderToCouponLineConnection>;
+  couponLines?: Maybe<WpOrderToCouponLineConnection>;
   /** How order was created */
   createdVia?: Maybe<string>;
   /** Order currency */
   currency?: Maybe<string>;
   /** Order customer */
-  customer?: Maybe<Customer>;
+  customer?: Maybe<WpCustomer>;
   /** Customer IP Address */
   customerIpAddress?: Maybe<string>;
   /** Customer note */
@@ -10903,9 +10905,9 @@ export interface Order extends Node {
   /** Discount total amount */
   discountTotal?: Maybe<number>;
   /** Product downloads */
-  downloadableItems?: Maybe<(Maybe<ProductDownload>)[]>;
+  downloadableItems?: Maybe<(Maybe<WpProductDownload>)[]>;
   /** Connection between the Order type and the Order type */
-  feeLines?: Maybe<OrderToFeeLineConnection>;
+  feeLines?: Maybe<WpOrderToFeeLineConnection>;
   /** Order has a billing address? */
   hasBillingAddress?: Maybe<boolean>;
   /** If order contains a downloadable product */
@@ -10917,7 +10919,7 @@ export interface Order extends Node {
   /** Is product download is permitted */
   isDownloadPermitted?: Maybe<boolean>;
   /** Connection between the Order type and the Order type */
-  lineItems?: Maybe<OrderToLineItemConnection>;
+  lineItems?: Maybe<WpOrderToLineItemConnection>;
   /** Date order was last updated */
   modified?: Maybe<string>;
   /** If order needs payment */
@@ -10935,7 +10937,7 @@ export interface Order extends Node {
   /** Order version */
   orderVersion?: Maybe<string>;
   /** Parent order */
-  parent?: Maybe<Order>;
+  parent?: Maybe<WpOrder>;
   /** Payment method */
   paymentMethod?: Maybe<string>;
   /** Payment method title */
@@ -10943,11 +10945,11 @@ export interface Order extends Node {
   /** Prices include taxes? */
   pricesIncludeTax?: Maybe<boolean>;
   /** Connection between the Order type and the Order type */
-  refunds?: Maybe<OrderToRefundConnection>;
+  refunds?: Maybe<WpOrderToRefundConnection>;
   /** Order shipping properties */
-  shipping?: Maybe<CustomerAddress>;
+  shipping?: Maybe<WpCustomerAddress>;
   /** Connection between the Order type and the Order type */
-  shippingLines?: Maybe<OrderToShippingLineConnection>;
+  shippingLines?: Maybe<WpOrderToShippingLineConnection>;
   /** Order customer */
   shippingAddressMapUrl?: Maybe<string>;
   /** Shipping tax amount */
@@ -10955,11 +10957,11 @@ export interface Order extends Node {
   /** Shipping total amount */
   shippingTotal?: Maybe<number>;
   /** Order status */
-  status?: Maybe<OrderStatusEnum>;
+  status?: Maybe<WpOrderStatusEnum>;
   /** Order subtotal */
   subtotal?: Maybe<number>;
   /** Connection between the Order type and the Order type */
-  taxLines?: Maybe<OrderToTaxLineConnection>;
+  taxLines?: Maybe<WpOrderToTaxLineConnection>;
   /** Order grand total */
   total?: Maybe<number>;
   /** Order taxes */
@@ -10969,29 +10971,29 @@ export interface Order extends Node {
 }
 
 /** Connection between the Order type and the Order type */
-export interface OrderToCouponLineConnection {
+export interface WpOrderToCouponLineConnection {
   /** Edges for the OrderToCouponLineConnection connection */
-  edges?: Maybe<(Maybe<OrderToCouponLineConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpOrderToCouponLineConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<CouponLine>)[]>;
+  nodes?: Maybe<(Maybe<WpCouponLine>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface OrderToCouponLineConnectionEdge {
+export interface WpOrderToCouponLineConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<CouponLine>;
+  node?: Maybe<WpCouponLine>;
 }
 
 /** a coupon line object */
-export interface CouponLine {
+export interface WpCouponLine {
   /** Line&#039;s Coupon code */
   code?: Maybe<string>;
   /** Line&#039;s Coupon */
-  coupon?: Maybe<Coupon>;
+  coupon?: Maybe<WpCoupon>;
   /** Line&#039;s Discount total */
   discount?: Maybe<string>;
   /** Line&#039;s Discount total tax */
@@ -11003,25 +11005,25 @@ export interface CouponLine {
 }
 
 /** Connection between the Order type and the Order type */
-export interface OrderToFeeLineConnection {
+export interface WpOrderToFeeLineConnection {
   /** Edges for the OrderToFeeLineConnection connection */
-  edges?: Maybe<(Maybe<OrderToFeeLineConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpOrderToFeeLineConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<FeeLine>)[]>;
+  nodes?: Maybe<(Maybe<WpFeeLine>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface OrderToFeeLineConnectionEdge {
+export interface WpOrderToFeeLineConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<FeeLine>;
+  node?: Maybe<WpFeeLine>;
 }
 
 /** a fee line object */
-export interface FeeLine {
+export interface WpFeeLine {
   /** Fee amount */
   amount?: Maybe<string>;
   /** The Id of the order item. */
@@ -11031,11 +11033,11 @@ export interface FeeLine {
   /** The Id of the order the order item belongs to. */
   orderId?: Maybe<number>;
   /** Line tax class */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Line taxes */
-  taxes?: Maybe<(Maybe<OrderItemTax>)[]>;
+  taxes?: Maybe<(Maybe<WpOrderItemTax>)[]>;
   /** Tax status of fee */
-  taxStatus?: Maybe<TaxStatusEnum>;
+  taxStatus?: Maybe<WpTaxStatusEnum>;
   /** Line total (after discounts) */
   total?: Maybe<string>;
   /** Line total tax (after discounts) */
@@ -11043,13 +11045,13 @@ export interface FeeLine {
 }
 
 /** Order item tax statement */
-export interface OrderItemTax {
+export interface WpOrderItemTax {
   /** Amount taxed */
   amount?: Maybe<number>;
   /** Subtotal */
   subtotal?: Maybe<number>;
   /** Tax line connected to this statement */
-  taxLine?: Maybe<TaxLine>;
+  taxLine?: Maybe<WpTaxLine>;
   /** Order item ID for tax line connected to this statement */
   taxLineId: number;
   /** Total */
@@ -11057,7 +11059,7 @@ export interface OrderItemTax {
 }
 
 /** a tax line object */
-export interface TaxLine {
+export interface WpTaxLine {
   /** Is this a compound tax rate? */
   isCompound?: Maybe<boolean>;
   /** The Id of the order item. */
@@ -11071,17 +11073,17 @@ export interface TaxLine {
   /** Tax line&#039;s shipping tax total */
   shippingTaxTotal?: Maybe<string>;
   /** Tax line&#039;s tax rate */
-  taxRate?: Maybe<TaxRate>;
+  taxRate?: Maybe<WpTaxRate>;
   /** Tax total (not including shipping taxes) */
   taxTotal?: Maybe<string>;
 }
 
 /** A Tax rate object */
-export interface TaxRate extends Node {
+export interface WpTaxRate extends WpNode {
   /** City name. */
   city?: Maybe<(Maybe<string>)[]>;
   /** Tax class. Default is standard. */
-  class?: Maybe<TaxClassEnum>;
+  class?: Maybe<WpTaxClassEnum>;
   /** Whether or not this is a compound rate. */
   compound?: Maybe<boolean>;
   /** Country ISO 3166 code. */
@@ -11107,33 +11109,33 @@ export interface TaxRate extends Node {
 }
 
 /** Connection between the Order type and the Order type */
-export interface OrderToLineItemConnection {
+export interface WpOrderToLineItemConnection {
   /** Edges for the OrderToLineItemConnection connection */
-  edges?: Maybe<(Maybe<OrderToLineItemConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpOrderToLineItemConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<LineItem>)[]>;
+  nodes?: Maybe<(Maybe<WpLineItem>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface OrderToLineItemConnectionEdge {
+export interface WpOrderToLineItemConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<LineItem>;
+  node?: Maybe<WpLineItem>;
 }
 
 /** a line item object */
-export interface LineItem {
+export interface WpLineItem {
   /** Line item&#039;s taxes */
-  itemDownloads?: Maybe<(Maybe<ProductDownload>)[]>;
+  itemDownloads?: Maybe<(Maybe<WpProductDownload>)[]>;
   /** The Id of the order item. */
   itemId?: Maybe<number>;
   /** The Id of the order the order item belongs to. */
   orderId?: Maybe<number>;
   /** Line item&#039;s product object */
-  product?: Maybe<Product>;
+  product?: Maybe<WpProduct>;
   /** Line item&#039;s product ID */
   productId?: Maybe<number>;
   /** Line item&#039;s product quantity */
@@ -11143,51 +11145,51 @@ export interface LineItem {
   /** Line item&#039;s subtotal tax */
   subtotalTax?: Maybe<string>;
   /** Line item&#039;s tax class */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Line item&#039;s taxes */
-  taxes?: Maybe<(Maybe<OrderItemTax>)[]>;
+  taxes?: Maybe<(Maybe<WpOrderItemTax>)[]>;
   /** Line item&#039;s taxes */
-  taxStatus?: Maybe<TaxStatusEnum>;
+  taxStatus?: Maybe<WpTaxStatusEnum>;
   /** Line item&#039;s total */
   total?: Maybe<string>;
   /** Line item&#039;s total tax */
   totalTax?: Maybe<string>;
   /** Line item&#039;s product variation object */
-  variation?: Maybe<ProductVariation>;
+  variation?: Maybe<WpProductVariation>;
   /** Line item&#039;s product variation ID */
   variationId?: Maybe<number>;
 }
 
 /** Connection between the Order type and the Order type */
-export interface OrderToRefundConnection {
+export interface WpOrderToRefundConnection {
   /** Edges for the OrderToRefundConnection connection */
-  edges?: Maybe<(Maybe<OrderToRefundConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpOrderToRefundConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Refund>)[]>;
+  nodes?: Maybe<(Maybe<WpRefund>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface OrderToRefundConnectionEdge {
+export interface WpOrderToRefundConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Refund>;
+  node?: Maybe<WpRefund>;
 }
 
 /** A refund object */
-export interface Refund extends Node {
+export interface WpRefund extends WpNode {
   /** Refunded amount */
   amount?: Maybe<number>;
   /** The globally unique identifier for the refund */
   id: string;
   /** Connection between the Refund type and the Refund type */
-  lineItems?: Maybe<RefundToLineItemConnection>;
+  lineItems?: Maybe<WpRefundToLineItemConnection>;
   /** Reason for refund */
   reason?: Maybe<string>;
   /** User who completed the refund */
-  refundedBy?: Maybe<User>;
+  refundedBy?: Maybe<WpUser>;
   /** The Id of the order. Equivalent to WP_Post-&gt;ID */
   refundId?: Maybe<number>;
   /** A title for the new post type */
@@ -11195,43 +11197,43 @@ export interface Refund extends Node {
 }
 
 /** Connection between the Refund type and the Refund type */
-export interface RefundToLineItemConnection {
+export interface WpRefundToLineItemConnection {
   /** Edges for the RefundToLineItemConnection connection */
-  edges?: Maybe<(Maybe<RefundToLineItemConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRefundToLineItemConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<LineItem>)[]>;
+  nodes?: Maybe<(Maybe<WpLineItem>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RefundToLineItemConnectionEdge {
+export interface WpRefundToLineItemConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<LineItem>;
+  node?: Maybe<WpLineItem>;
 }
 
 /** Connection between the Order type and the Order type */
-export interface OrderToShippingLineConnection {
+export interface WpOrderToShippingLineConnection {
   /** Edges for the OrderToShippingLineConnection connection */
-  edges?: Maybe<(Maybe<OrderToShippingLineConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpOrderToShippingLineConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ShippingLine>)[]>;
+  nodes?: Maybe<(Maybe<WpShippingLine>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface OrderToShippingLineConnectionEdge {
+export interface WpOrderToShippingLineConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ShippingLine>;
+  node?: Maybe<WpShippingLine>;
 }
 
 /** a shipping line object */
-export interface ShippingLine {
+export interface WpShippingLine {
   /** The Id of the order item. */
   itemId?: Maybe<number>;
   /** Shipping Line&#039;s shipping method name */
@@ -11239,11 +11241,11 @@ export interface ShippingLine {
   /** The Id of the order the order item belongs to. */
   orderId?: Maybe<number>;
   /** Shipping Line&#039;s shipping method */
-  shippingMethod?: Maybe<ShippingMethod>;
+  shippingMethod?: Maybe<WpShippingMethod>;
   /** Line tax class */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Line taxes */
-  taxes?: Maybe<(Maybe<OrderItemTax>)[]>;
+  taxes?: Maybe<(Maybe<WpOrderItemTax>)[]>;
   /** Line total (after discounts) */
   total?: Maybe<string>;
   /** Line total tax (after discounts) */
@@ -11251,7 +11253,7 @@ export interface ShippingLine {
 }
 
 /** A shipping method object */
-export interface ShippingMethod extends Node {
+export interface WpShippingMethod extends WpNode {
   /** Shipping method description. */
   description?: Maybe<string>;
   /** The globally unique identifier for the tax rate. */
@@ -11263,83 +11265,83 @@ export interface ShippingMethod extends Node {
 }
 
 /** Connection between the Order type and the Order type */
-export interface OrderToTaxLineConnection {
+export interface WpOrderToTaxLineConnection {
   /** Edges for the OrderToTaxLineConnection connection */
-  edges?: Maybe<(Maybe<OrderToTaxLineConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpOrderToTaxLineConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<TaxLine>)[]>;
+  nodes?: Maybe<(Maybe<WpTaxLine>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface OrderToTaxLineConnectionEdge {
+export interface WpOrderToTaxLineConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<TaxLine>;
+  node?: Maybe<WpTaxLine>;
 }
 
 /** Connection between the Customer type and the Customer type */
-export interface CustomerToOrderConnection {
+export interface WpCustomerToOrderConnection {
   /** Edges for the CustomerToOrderConnection connection */
-  edges?: Maybe<(Maybe<CustomerToOrderConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpCustomerToOrderConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Order>)[]>;
+  nodes?: Maybe<(Maybe<WpOrder>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface CustomerToOrderConnectionEdge {
+export interface WpCustomerToOrderConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Order>;
+  node?: Maybe<WpOrder>;
 }
 
 /** Connection between the Customer type and the Customer type */
-export interface CustomerToRefundConnection {
+export interface WpCustomerToRefundConnection {
   /** Edges for the CustomerToRefundConnection connection */
-  edges?: Maybe<(Maybe<CustomerToRefundConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpCustomerToRefundConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Refund>)[]>;
+  nodes?: Maybe<(Maybe<WpRefund>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface CustomerToRefundConnectionEdge {
+export interface WpCustomerToRefundConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Refund>;
+  node?: Maybe<WpRefund>;
 }
 
 /** Connection between the Cart type and the Cart type */
-export interface CartToCartItemConnection {
+export interface WpCartToCartItemConnection {
   /** Edges for the CartToCartItemConnection connection */
-  edges?: Maybe<(Maybe<CartToCartItemConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpCartToCartItemConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<CartItem>)[]>;
+  nodes?: Maybe<(Maybe<WpCartItem>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface CartToCartItemConnectionEdge {
+export interface WpCartToCartItemConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<CartItem>;
+  node?: Maybe<WpCartItem>;
 }
 
 /** A item in the cart */
-export interface CartItem {
+export interface WpCartItem {
   /** CartItem ID */
   key: string;
   /** A product in the cart */
-  product?: Maybe<Product>;
+  product?: Maybe<WpProduct>;
   /** Quantity of the product */
   quantity?: Maybe<number>;
   /** Item&#039;s subtotal */
@@ -11351,11 +11353,11 @@ export interface CartItem {
   /** Item&#039;s total */
   total?: Maybe<number>;
   /** Selected variation of the product */
-  variation?: Maybe<ProductVariation>;
+  variation?: Maybe<WpProductVariation>;
 }
 
 /** An additional fee */
-export interface CartFee {
+export interface WpCartFee {
   /** Fee amount */
   amount?: Maybe<number>;
   /** Fee ID */
@@ -11365,87 +11367,87 @@ export interface CartFee {
   /** Is fee taxable? */
   taxable?: Maybe<boolean>;
   /** Fee tax class */
-  taxClass?: Maybe<TaxClassEnum>;
+  taxClass?: Maybe<WpTaxClassEnum>;
   /** Fee total */
   total?: Maybe<number>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToCategoryConnection {
+export interface WpRootQueryToCategoryConnection {
   /** Edges for the RootQueryToCategoryConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToCategoryConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToCategoryConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Category>)[]>;
+  nodes?: Maybe<(Maybe<WpCategory>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToCategoryConnectionEdge {
+export interface WpRootQueryToCategoryConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Category>;
+  node?: Maybe<WpCategory>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToCommentConnection {
+export interface WpRootQueryToCommentConnection {
   /** Edges for the RootQueryToCommentConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToCommentConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToCommentConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Comment>)[]>;
+  nodes?: Maybe<(Maybe<WpComment>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToCommentConnectionEdge {
+export interface WpRootQueryToCommentConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Comment>;
+  node?: Maybe<WpComment>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToCouponConnection {
+export interface WpRootQueryToCouponConnection {
   /** Edges for the RootQueryToCouponConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToCouponConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToCouponConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Coupon>)[]>;
+  nodes?: Maybe<(Maybe<WpCoupon>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToCouponConnectionEdge {
+export interface WpRootQueryToCouponConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Coupon>;
+  node?: Maybe<WpCoupon>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToCustomerConnection {
+export interface WpRootQueryToCustomerConnection {
   /** Edges for the RootQueryToCustomerConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToCustomerConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToCustomerConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Customer>)[]>;
+  nodes?: Maybe<(Maybe<WpCustomer>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToCustomerConnectionEdge {
+export interface WpRootQueryToCustomerConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Customer>;
+  node?: Maybe<WpCustomer>;
 }
 
 /** The discussion setting type */
-export interface DiscussionSettings {
+export interface WpDiscussionSettings {
   /** Allow people to post comments on new articles. */
   defaultCommentStatus?: Maybe<string>;
   /** Allow link notifications from other blogs (pingbacks and trackbacks) on new articles. */
@@ -11453,7 +11455,7 @@ export interface DiscussionSettings {
 }
 
 /** The general setting type */
-export interface GeneralSettings {
+export interface WpGeneralSettings {
   /** A date format for all date strings. */
   dateFormat?: Maybe<string>;
   /** Site tagline. */
@@ -11475,27 +11477,27 @@ export interface GeneralSettings {
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToMediaItemConnection {
+export interface WpRootQueryToMediaItemConnection {
   /** Edges for the RootQueryToMediaItemConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToMediaItemConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToMediaItemConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<MediaItem>)[]>;
+  nodes?: Maybe<(Maybe<WpMediaItem>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToMediaItemConnectionEdge {
+export interface WpRootQueryToMediaItemConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<MediaItem>;
+  node?: Maybe<WpMediaItem>;
 }
 
 /** Menus are the containers for navigation items. Menus can be assigned to menu locations, which are typically registered by the active theme. */
-export interface Menu {
+export interface WpMenu {
   /** The number of items in the menu */
   count?: Maybe<number>;
   /** ID of the nav menu. */
@@ -11503,7 +11505,7 @@ export interface Menu {
   /** Whether the object is restricted from the current viewer */
   isRestricted?: Maybe<boolean>;
   /** Connection between the Menu type and the Menu type */
-  menuItems?: Maybe<MenuToMenuItemConnection>;
+  menuItems?: Maybe<WpMenuToMenuItemConnection>;
   /** WP ID of the nav menu. */
   menuId?: Maybe<number>;
   /** Display name of the menu. Equivalent to WP_Term-&gt;name. */
@@ -11513,29 +11515,29 @@ export interface Menu {
 }
 
 /** Connection between the Menu type and the Menu type */
-export interface MenuToMenuItemConnection {
+export interface WpMenuToMenuItemConnection {
   /** Edges for the MenuToMenuItemConnection connection */
-  edges?: Maybe<(Maybe<MenuToMenuItemConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpMenuToMenuItemConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<MenuItem>)[]>;
+  nodes?: Maybe<(Maybe<WpMenuItem>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface MenuToMenuItemConnectionEdge {
+export interface WpMenuToMenuItemConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<MenuItem>;
+  node?: Maybe<WpMenuItem>;
 }
 
 /** Navigation menu items are the individual items assigned to a menu. These are rendered as the links in a navigation menu. */
-export interface MenuItem {
+export interface WpMenuItem {
   /** Connection between the MenuItem type and the MenuItem type */
-  childItems?: Maybe<MenuItemToMenuItemConnection>;
+  childItems?: Maybe<WpMenuItemToMenuItemConnection>;
   /** The object connected to this menu item. */
-  connectedObject?: Maybe<MenuItemObjectUnion>;
+  connectedObject?: Maybe<WpMenuItemObjectUnion>;
   /** Class attribute for the menu item link */
   cssClasses?: Maybe<(Maybe<string>)[]>;
   /** Description of the menu item. */
@@ -11559,399 +11561,399 @@ export interface MenuItem {
 }
 
 /** Connection between the MenuItem type and the MenuItem type */
-export interface MenuItemToMenuItemConnection {
+export interface WpMenuItemToMenuItemConnection {
   /** Edges for the MenuItemToMenuItemConnection connection */
-  edges?: Maybe<(Maybe<MenuItemToMenuItemConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpMenuItemToMenuItemConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<MenuItem>)[]>;
+  nodes?: Maybe<(Maybe<WpMenuItem>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface MenuItemToMenuItemConnectionEdge {
+export interface WpMenuItemToMenuItemConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<MenuItem>;
+  node?: Maybe<WpMenuItem>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToMenuItemConnection {
+export interface WpRootQueryToMenuItemConnection {
   /** Edges for the RootQueryToMenuItemConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToMenuItemConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToMenuItemConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<MenuItem>)[]>;
+  nodes?: Maybe<(Maybe<WpMenuItem>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToMenuItemConnectionEdge {
+export interface WpRootQueryToMenuItemConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<MenuItem>;
+  node?: Maybe<WpMenuItem>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToMenuConnection {
+export interface WpRootQueryToMenuConnection {
   /** Edges for the RootQueryToMenuConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToMenuConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToMenuConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Menu>)[]>;
+  nodes?: Maybe<(Maybe<WpMenu>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToMenuConnectionEdge {
+export interface WpRootQueryToMenuConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Menu>;
+  node?: Maybe<WpMenu>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToOrderConnection {
+export interface WpRootQueryToOrderConnection {
   /** Edges for the RootQueryToOrderConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToOrderConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToOrderConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Order>)[]>;
+  nodes?: Maybe<(Maybe<WpOrder>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToOrderConnectionEdge {
+export interface WpRootQueryToOrderConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Order>;
+  node?: Maybe<WpOrder>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaHindConnection {
+export interface WpRootQueryToPaHindConnection {
   /** Edges for the RootQueryToPaHindConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaHindConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaHindConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaHind>)[]>;
+  nodes?: Maybe<(Maybe<WpPaHind>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaHindConnectionEdge {
+export interface WpRootQueryToPaHindConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaHind>;
+  node?: Maybe<WpPaHind>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaHulkConnection {
+export interface WpRootQueryToPaHulkConnection {
   /** Edges for the RootQueryToPaHulkConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaHulkConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaHulkConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaHulk>)[]>;
+  nodes?: Maybe<(Maybe<WpPaHulk>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaHulkConnectionEdge {
+export interface WpRootQueryToPaHulkConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaHulk>;
+  node?: Maybe<WpPaHulk>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaKasutusaegConnection {
+export interface WpRootQueryToPaKasutusaegConnection {
   /** Edges for the RootQueryToPaKasutusaegConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaKasutusaegConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaKasutusaegConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaKasutusaeg>)[]>;
+  nodes?: Maybe<(Maybe<WpPaKasutusaeg>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaKasutusaegConnectionEdge {
+export interface WpRootQueryToPaKasutusaegConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaKasutusaeg>;
+  node?: Maybe<WpPaKasutusaeg>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaKogusConnection {
+export interface WpRootQueryToPaKogusConnection {
   /** Edges for the RootQueryToPaKogusConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaKogusConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaKogusConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaKogus>)[]>;
+  nodes?: Maybe<(Maybe<WpPaKogus>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaKogusConnectionEdge {
+export interface WpRootQueryToPaKogusConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaKogus>;
+  node?: Maybe<WpPaKogus>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaKontuurConnection {
+export interface WpRootQueryToPaKontuurConnection {
   /** Edges for the RootQueryToPaKontuurConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaKontuurConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaKontuurConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaKontuur>)[]>;
+  nodes?: Maybe<(Maybe<WpPaKontuur>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaKontuurConnectionEdge {
+export interface WpRootQueryToPaKontuurConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaKontuur>;
+  node?: Maybe<WpPaKontuur>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaKoostisainedConnection {
+export interface WpRootQueryToPaKoostisainedConnection {
   /** Edges for the RootQueryToPaKoostisainedConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaKoostisainedConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaKoostisainedConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaKoostisained>)[]>;
+  nodes?: Maybe<(Maybe<WpPaKoostisained>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaKoostisainedConnectionEdge {
+export interface WpRootQueryToPaKoostisainedConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaKoostisained>;
+  node?: Maybe<WpPaKoostisained>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaLaadimisaegConnection {
+export interface WpRootQueryToPaLaadimisaegConnection {
   /** Edges for the RootQueryToPaLaadimisaegConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaLaadimisaegConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaLaadimisaegConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaLaadimisaeg>)[]>;
+  nodes?: Maybe<(Maybe<WpPaLaadimisaeg>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaLaadimisaegConnectionEdge {
+export interface WpRootQueryToPaLaadimisaegConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaLaadimisaeg>;
+  node?: Maybe<WpPaLaadimisaeg>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaMaterjalConnection {
+export interface WpRootQueryToPaMaterjalConnection {
   /** Edges for the RootQueryToPaMaterjalConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaMaterjalConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaMaterjalConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaMaterjal>)[]>;
+  nodes?: Maybe<(Maybe<WpPaMaterjal>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaMaterjalConnectionEdge {
+export interface WpRootQueryToPaMaterjalConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaMaterjal>;
+  node?: Maybe<WpPaMaterjal>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaMuratasaConnection {
+export interface WpRootQueryToPaMuratasaConnection {
   /** Edges for the RootQueryToPaMuratasaConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaMuratasaConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaMuratasaConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaMuratasa>)[]>;
+  nodes?: Maybe<(Maybe<WpPaMuratasa>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaMuratasaConnectionEdge {
+export interface WpRootQueryToPaMuratasaConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaMuratasa>;
+  node?: Maybe<WpPaMuratasa>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaOhutusConnection {
+export interface WpRootQueryToPaOhutusConnection {
   /** Edges for the RootQueryToPaOhutusConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaOhutusConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaOhutusConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaOhutus>)[]>;
+  nodes?: Maybe<(Maybe<WpPaOhutus>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaOhutusConnectionEdge {
+export interface WpRootQueryToPaOhutusConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaOhutus>;
+  node?: Maybe<WpPaOhutus>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaPatareidConnection {
+export interface WpRootQueryToPaPatareidConnection {
   /** Edges for the RootQueryToPaPatareidConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaPatareidConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaPatareidConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaPatareid>)[]>;
+  nodes?: Maybe<(Maybe<WpPaPatareid>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaPatareidConnectionEdge {
+export interface WpRootQueryToPaPatareidConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaPatareid>;
+  node?: Maybe<WpPaPatareid>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaSuurusConnection {
+export interface WpRootQueryToPaSuurusConnection {
   /** Edges for the RootQueryToPaSuurusConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaSuurusConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaSuurusConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaSuurus>)[]>;
+  nodes?: Maybe<(Maybe<WpPaSuurus>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaSuurusConnectionEdge {
+export interface WpRootQueryToPaSuurusConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaSuurus>;
+  node?: Maybe<WpPaSuurus>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaVariantConnection {
+export interface WpRootQueryToPaVariantConnection {
   /** Edges for the RootQueryToPaVariantConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaVariantConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaVariantConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaVariant>)[]>;
+  nodes?: Maybe<(Maybe<WpPaVariant>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaVariantConnectionEdge {
+export interface WpRootQueryToPaVariantConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaVariant>;
+  node?: Maybe<WpPaVariant>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaVarvConnection {
+export interface WpRootQueryToPaVarvConnection {
   /** Edges for the RootQueryToPaVarvConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaVarvConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaVarvConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaVarv>)[]>;
+  nodes?: Maybe<(Maybe<WpPaVarv>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaVarvConnectionEdge {
+export interface WpRootQueryToPaVarvConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaVarv>;
+  node?: Maybe<WpPaVarv>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPaVeekindlusConnection {
+export interface WpRootQueryToPaVeekindlusConnection {
   /** Edges for the RootQueryToPaVeekindlusConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPaVeekindlusConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPaVeekindlusConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<PaVeekindlus>)[]>;
+  nodes?: Maybe<(Maybe<WpPaVeekindlus>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPaVeekindlusConnectionEdge {
+export interface WpRootQueryToPaVeekindlusConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<PaVeekindlus>;
+  node?: Maybe<WpPaVeekindlus>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPageConnection {
+export interface WpRootQueryToPageConnection {
   /** Edges for the RootQueryToPageConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPageConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPageConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Page>)[]>;
+  nodes?: Maybe<(Maybe<WpPage>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPageConnectionEdge {
+export interface WpRootQueryToPageConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Page>;
+  node?: Maybe<WpPage>;
 }
 
 /** An plugin object */
-export interface Plugin extends Node {
+export interface WpPlugin extends WpNode {
   /** Name of the plugin author(s), may also be a company name. */
   author?: Maybe<string>;
   /** URI for the related author(s)/company website. */
@@ -11971,243 +11973,243 @@ export interface Plugin extends Node {
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPluginConnection {
+export interface WpRootQueryToPluginConnection {
   /** Edges for the RootQueryToPluginConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPluginConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPluginConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Plugin>)[]>;
+  nodes?: Maybe<(Maybe<WpPlugin>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPluginConnectionEdge {
+export interface WpRootQueryToPluginConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Plugin>;
+  node?: Maybe<WpPlugin>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToPostConnection {
+export interface WpRootQueryToPostConnection {
   /** Edges for the RootQueryToPostConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToPostConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToPostConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Post>)[]>;
+  nodes?: Maybe<(Maybe<WpPost>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToPostConnectionEdge {
+export interface WpRootQueryToPostConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Post>;
+  node?: Maybe<WpPost>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToProductCategoryConnection {
+export interface WpRootQueryToProductCategoryConnection {
   /** Edges for the RootQueryToProductCategoryConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToProductCategoryConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToProductCategoryConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductCategory>)[]>;
+  nodes?: Maybe<(Maybe<WpProductCategory>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToProductCategoryConnectionEdge {
+export interface WpRootQueryToProductCategoryConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductCategory>;
+  node?: Maybe<WpProductCategory>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToProductTagConnection {
+export interface WpRootQueryToProductTagConnection {
   /** Edges for the RootQueryToProductTagConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToProductTagConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToProductTagConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductTag>)[]>;
+  nodes?: Maybe<(Maybe<WpProductTag>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToProductTagConnectionEdge {
+export interface WpRootQueryToProductTagConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductTag>;
+  node?: Maybe<WpProductTag>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToProductTypeConnection {
+export interface WpRootQueryToProductTypeConnection {
   /** Edges for the RootQueryToProductTypeConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToProductTypeConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToProductTypeConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ProductType>)[]>;
+  nodes?: Maybe<(Maybe<WpProductType>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToProductTypeConnectionEdge {
+export interface WpRootQueryToProductTypeConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ProductType>;
+  node?: Maybe<WpProductType>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToProductConnection {
+export interface WpRootQueryToProductConnection {
   /** Edges for the RootQueryToProductConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Product>)[]>;
+  nodes?: Maybe<(Maybe<WpProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToProductConnectionEdge {
+export interface WpRootQueryToProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Product>;
+  node?: Maybe<WpProduct>;
 }
 
 /** The reading setting type */
-export interface ReadingSettings {
+export interface WpReadingSettings {
   /** Blog pages show at most. */
   postsPerPage?: Maybe<number>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToRefundConnection {
+export interface WpRootQueryToRefundConnection {
   /** Edges for the RootQueryToRefundConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToRefundConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToRefundConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Refund>)[]>;
+  nodes?: Maybe<(Maybe<WpRefund>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToRefundConnectionEdge {
+export interface WpRootQueryToRefundConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Refund>;
+  node?: Maybe<WpRefund>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToRevisionConnection {
+export interface WpRootQueryToRevisionConnection {
   /** Edges for the RootQueryToRevisionConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToRevisionConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToRevisionConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Revision>)[]>;
+  nodes?: Maybe<(Maybe<WpRevision>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<PostType>;
+  postTypeInfo?: Maybe<WpPostType>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToRevisionConnectionEdge {
+export interface WpRootQueryToRevisionConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Revision>;
+  node?: Maybe<WpRevision>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToShippingClassConnection {
+export interface WpRootQueryToShippingClassConnection {
   /** Edges for the RootQueryToShippingClassConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToShippingClassConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToShippingClassConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ShippingClass>)[]>;
+  nodes?: Maybe<(Maybe<WpShippingClass>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToShippingClassConnectionEdge {
+export interface WpRootQueryToShippingClassConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ShippingClass>;
+  node?: Maybe<WpShippingClass>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToShippingMethodConnection {
+export interface WpRootQueryToShippingMethodConnection {
   /** Edges for the RootQueryToShippingMethodConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToShippingMethodConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToShippingMethodConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<ShippingMethod>)[]>;
+  nodes?: Maybe<(Maybe<WpShippingMethod>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToShippingMethodConnectionEdge {
+export interface WpRootQueryToShippingMethodConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<ShippingMethod>;
+  node?: Maybe<WpShippingMethod>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToTagConnection {
+export interface WpRootQueryToTagConnection {
   /** Edges for the RootQueryToTagConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToTagConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToTagConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Tag>)[]>;
+  nodes?: Maybe<(Maybe<WpTag>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToTagConnectionEdge {
+export interface WpRootQueryToTagConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Tag>;
+  node?: Maybe<WpTag>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToTaxRateConnection {
+export interface WpRootQueryToTaxRateConnection {
   /** Edges for the RootQueryToTaxRateConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToTaxRateConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToTaxRateConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<TaxRate>)[]>;
+  nodes?: Maybe<(Maybe<WpTaxRate>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToTaxRateConnectionEdge {
+export interface WpRootQueryToTaxRateConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<TaxRate>;
+  node?: Maybe<WpTaxRate>;
 }
 
 /** A theme object */
-export interface Theme extends Node {
+export interface WpTheme extends WpNode {
   /** Name of the theme author(s), could also be a company name. This field is equivalent to WP_Theme-&gt;get( &quot;Author&quot; ). */
   author?: Maybe<string>;
   /** URI for the author/company website. This field is equivalent to WP_Theme-&gt;get( &quot;AuthorURI&quot; ). */
@@ -12233,81 +12235,81 @@ export interface Theme extends Node {
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToThemeConnection {
+export interface WpRootQueryToThemeConnection {
   /** Edges for the RootQueryToThemeConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToThemeConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToThemeConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<Theme>)[]>;
+  nodes?: Maybe<(Maybe<WpTheme>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToThemeConnectionEdge {
+export interface WpRootQueryToThemeConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<Theme>;
+  node?: Maybe<WpTheme>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToUserRoleConnection {
+export interface WpRootQueryToUserRoleConnection {
   /** Edges for the RootQueryToUserRoleConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToUserRoleConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToUserRoleConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<UserRole>)[]>;
+  nodes?: Maybe<(Maybe<WpUserRole>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToUserRoleConnectionEdge {
+export interface WpRootQueryToUserRoleConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<UserRole>;
+  node?: Maybe<WpUserRole>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToUserConnection {
+export interface WpRootQueryToUserConnection {
   /** Edges for the RootQueryToUserConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToUserConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToUserConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<User>)[]>;
+  nodes?: Maybe<(Maybe<WpUser>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToUserConnectionEdge {
+export interface WpRootQueryToUserConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<User>;
+  node?: Maybe<WpUser>;
 }
 
 /** Connection between the RootQuery type and the RootQuery type */
-export interface RootQueryToVisibleProductConnection {
+export interface WpRootQueryToVisibleProductConnection {
   /** Edges for the RootQueryToVisibleProductConnection connection */
-  edges?: Maybe<(Maybe<RootQueryToVisibleProductConnectionEdge>)[]>;
+  edges?: Maybe<(Maybe<WpRootQueryToVisibleProductConnectionEdge>)[]>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<(Maybe<VisibleProduct>)[]>;
+  nodes?: Maybe<(Maybe<WpVisibleProduct>)[]>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<WpPageInfo>;
+  pageInfo?: Maybe<WpWpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<Taxonomy>;
+  taxonomyInfo?: Maybe<WpTaxonomy>;
 }
 
 /** An edge in a connection */
-export interface RootQueryToVisibleProductConnectionEdge {
+export interface WpRootQueryToVisibleProductConnectionEdge {
   /** A cursor for use in pagination */
   cursor?: Maybe<string>;
   /** The item at the end of the edge */
-  node?: Maybe<VisibleProduct>;
+  node?: Maybe<WpVisibleProduct>;
 }
 
 /** The writing setting type */
-export interface WritingSettings {
+export interface WpWritingSettings {
   /** Default post category. */
   defaultCategory?: Maybe<number>;
   /** Default post format. */
@@ -12318,575 +12320,575 @@ export interface WritingSettings {
 
 export interface Mutation {
   /** The payload for the UpdateCategory mutation */
-  updateCategory?: Maybe<UpdateCategoryPayload>;
+  WP_updateCategory?: Maybe<WpUpdateCategoryPayload>;
   /** The payload for the UpdatePaHind mutation */
-  updatePaHind?: Maybe<UpdatePaHindPayload>;
+  WP_updatePaHind?: Maybe<WpUpdatePaHindPayload>;
   /** The payload for the UpdatePaHulk mutation */
-  updatePaHulk?: Maybe<UpdatePaHulkPayload>;
+  WP_updatePaHulk?: Maybe<WpUpdatePaHulkPayload>;
   /** The payload for the UpdatePaKasutusaeg mutation */
-  updatePaKasutusaeg?: Maybe<UpdatePaKasutusaegPayload>;
+  WP_updatePaKasutusaeg?: Maybe<WpUpdatePaKasutusaegPayload>;
   /** The payload for the UpdatePaKogus mutation */
-  updatePaKogus?: Maybe<UpdatePaKogusPayload>;
+  WP_updatePaKogus?: Maybe<WpUpdatePaKogusPayload>;
   /** The payload for the UpdatePaKontuur mutation */
-  updatePaKontuur?: Maybe<UpdatePaKontuurPayload>;
+  WP_updatePaKontuur?: Maybe<WpUpdatePaKontuurPayload>;
   /** The payload for the UpdatePaKoostisained mutation */
-  updatePaKoostisained?: Maybe<UpdatePaKoostisainedPayload>;
+  WP_updatePaKoostisained?: Maybe<WpUpdatePaKoostisainedPayload>;
   /** The payload for the UpdatePaLaadimisaeg mutation */
-  updatePaLaadimisaeg?: Maybe<UpdatePaLaadimisaegPayload>;
+  WP_updatePaLaadimisaeg?: Maybe<WpUpdatePaLaadimisaegPayload>;
   /** The payload for the UpdatePaMaterjal mutation */
-  updatePaMaterjal?: Maybe<UpdatePaMaterjalPayload>;
+  WP_updatePaMaterjal?: Maybe<WpUpdatePaMaterjalPayload>;
   /** The payload for the UpdatePaMuratasa mutation */
-  updatePaMuratasa?: Maybe<UpdatePaMuratasaPayload>;
+  WP_updatePaMuratasa?: Maybe<WpUpdatePaMuratasaPayload>;
   /** The payload for the UpdatePaOhutus mutation */
-  updatePaOhutus?: Maybe<UpdatePaOhutusPayload>;
+  WP_updatePaOhutus?: Maybe<WpUpdatePaOhutusPayload>;
   /** The payload for the UpdatePaPatareid mutation */
-  updatePaPatareid?: Maybe<UpdatePaPatareidPayload>;
+  WP_updatePaPatareid?: Maybe<WpUpdatePaPatareidPayload>;
   /** The payload for the UpdatePaSuurus mutation */
-  updatePaSuurus?: Maybe<UpdatePaSuurusPayload>;
+  WP_updatePaSuurus?: Maybe<WpUpdatePaSuurusPayload>;
   /** The payload for the UpdatePaVariant mutation */
-  updatePaVariant?: Maybe<UpdatePaVariantPayload>;
+  WP_updatePaVariant?: Maybe<WpUpdatePaVariantPayload>;
   /** The payload for the UpdatePaVarv mutation */
-  updatePaVarv?: Maybe<UpdatePaVarvPayload>;
+  WP_updatePaVarv?: Maybe<WpUpdatePaVarvPayload>;
   /** The payload for the UpdatePaVeekindlus mutation */
-  updatePaVeekindlus?: Maybe<UpdatePaVeekindlusPayload>;
+  WP_updatePaVeekindlus?: Maybe<WpUpdatePaVeekindlusPayload>;
   /** The payload for the UpdateProductCategory mutation */
-  updateProductCategory?: Maybe<UpdateProductCategoryPayload>;
+  WP_updateProductCategory?: Maybe<WpUpdateProductCategoryPayload>;
   /** The payload for the UpdateProductTag mutation */
-  updateProductTag?: Maybe<UpdateProductTagPayload>;
+  WP_updateProductTag?: Maybe<WpUpdateProductTagPayload>;
   /** The payload for the UpdateProductType mutation */
-  updateProductType?: Maybe<UpdateProductTypePayload>;
+  WP_updateProductType?: Maybe<WpUpdateProductTypePayload>;
   /** The payload for the UpdateShippingClass mutation */
-  updateShippingClass?: Maybe<UpdateShippingClassPayload>;
+  WP_updateShippingClass?: Maybe<WpUpdateShippingClassPayload>;
   /** The payload for the UpdateTag mutation */
-  updateTag?: Maybe<UpdateTagPayload>;
+  WP_updateTag?: Maybe<WpUpdateTagPayload>;
   /** The payload for the UpdateVisibleProduct mutation */
-  updateVisibleProduct?: Maybe<UpdateVisibleProductPayload>;
+  WP_updateVisibleProduct?: Maybe<WpUpdateVisibleProductPayload>;
   /** The payload for the addFee mutation */
-  addFee?: Maybe<AddFeePayload>;
+  WP_addFee?: Maybe<WpAddFeePayload>;
   /** The payload for the addToCart mutation */
-  addToCart?: Maybe<AddToCartPayload>;
+  WP_addToCart?: Maybe<WpAddToCartPayload>;
   /** The payload for the applyCoupon mutation */
-  applyCoupon?: Maybe<ApplyCouponPayload>;
+  WP_applyCoupon?: Maybe<WpApplyCouponPayload>;
   /** The payload for the createCategory mutation */
-  createCategory?: Maybe<CreateCategoryPayload>;
+  WP_createCategory?: Maybe<WpCreateCategoryPayload>;
   /** The payload for the createComment mutation */
-  createComment?: Maybe<CreateCommentPayload>;
+  WP_createComment?: Maybe<WpCreateCommentPayload>;
   /** The payload for the createMediaItem mutation */
-  createMediaItem?: Maybe<CreateMediaItemPayload>;
+  WP_createMediaItem?: Maybe<WpCreateMediaItemPayload>;
   /** The payload for the createPaHind mutation */
-  createPaHind?: Maybe<CreatePaHindPayload>;
+  WP_createPaHind?: Maybe<WpCreatePaHindPayload>;
   /** The payload for the createPaHulk mutation */
-  createPaHulk?: Maybe<CreatePaHulkPayload>;
+  WP_createPaHulk?: Maybe<WpCreatePaHulkPayload>;
   /** The payload for the createPaKasutusaeg mutation */
-  createPaKasutusaeg?: Maybe<CreatePaKasutusaegPayload>;
+  WP_createPaKasutusaeg?: Maybe<WpCreatePaKasutusaegPayload>;
   /** The payload for the createPaKogus mutation */
-  createPaKogus?: Maybe<CreatePaKogusPayload>;
+  WP_createPaKogus?: Maybe<WpCreatePaKogusPayload>;
   /** The payload for the createPaKontuur mutation */
-  createPaKontuur?: Maybe<CreatePaKontuurPayload>;
+  WP_createPaKontuur?: Maybe<WpCreatePaKontuurPayload>;
   /** The payload for the createPaKoostisained mutation */
-  createPaKoostisained?: Maybe<CreatePaKoostisainedPayload>;
+  WP_createPaKoostisained?: Maybe<WpCreatePaKoostisainedPayload>;
   /** The payload for the createPaLaadimisaeg mutation */
-  createPaLaadimisaeg?: Maybe<CreatePaLaadimisaegPayload>;
+  WP_createPaLaadimisaeg?: Maybe<WpCreatePaLaadimisaegPayload>;
   /** The payload for the createPaMaterjal mutation */
-  createPaMaterjal?: Maybe<CreatePaMaterjalPayload>;
+  WP_createPaMaterjal?: Maybe<WpCreatePaMaterjalPayload>;
   /** The payload for the createPaMuratasa mutation */
-  createPaMuratasa?: Maybe<CreatePaMuratasaPayload>;
+  WP_createPaMuratasa?: Maybe<WpCreatePaMuratasaPayload>;
   /** The payload for the createPaOhutus mutation */
-  createPaOhutus?: Maybe<CreatePaOhutusPayload>;
+  WP_createPaOhutus?: Maybe<WpCreatePaOhutusPayload>;
   /** The payload for the createPaPatareid mutation */
-  createPaPatareid?: Maybe<CreatePaPatareidPayload>;
+  WP_createPaPatareid?: Maybe<WpCreatePaPatareidPayload>;
   /** The payload for the createPaSuurus mutation */
-  createPaSuurus?: Maybe<CreatePaSuurusPayload>;
+  WP_createPaSuurus?: Maybe<WpCreatePaSuurusPayload>;
   /** The payload for the createPaVariant mutation */
-  createPaVariant?: Maybe<CreatePaVariantPayload>;
+  WP_createPaVariant?: Maybe<WpCreatePaVariantPayload>;
   /** The payload for the createPaVarv mutation */
-  createPaVarv?: Maybe<CreatePaVarvPayload>;
+  WP_createPaVarv?: Maybe<WpCreatePaVarvPayload>;
   /** The payload for the createPaVeekindlus mutation */
-  createPaVeekindlus?: Maybe<CreatePaVeekindlusPayload>;
+  WP_createPaVeekindlus?: Maybe<WpCreatePaVeekindlusPayload>;
   /** The payload for the createPage mutation */
-  createPage?: Maybe<CreatePagePayload>;
+  WP_createPage?: Maybe<WpCreatePagePayload>;
   /** The payload for the createPost mutation */
-  createPost?: Maybe<CreatePostPayload>;
+  WP_createPost?: Maybe<WpCreatePostPayload>;
   /** The payload for the createProductCategory mutation */
-  createProductCategory?: Maybe<CreateProductCategoryPayload>;
+  WP_createProductCategory?: Maybe<WpCreateProductCategoryPayload>;
   /** The payload for the createProductTag mutation */
-  createProductTag?: Maybe<CreateProductTagPayload>;
+  WP_createProductTag?: Maybe<WpCreateProductTagPayload>;
   /** The payload for the createProductType mutation */
-  createProductType?: Maybe<CreateProductTypePayload>;
+  WP_createProductType?: Maybe<WpCreateProductTypePayload>;
   /** The payload for the createShippingClass mutation */
-  createShippingClass?: Maybe<CreateShippingClassPayload>;
+  WP_createShippingClass?: Maybe<WpCreateShippingClassPayload>;
   /** The payload for the createTag mutation */
-  createTag?: Maybe<CreateTagPayload>;
+  WP_createTag?: Maybe<WpCreateTagPayload>;
   /** The payload for the createUser mutation */
-  createUser?: Maybe<CreateUserPayload>;
+  WP_createUser?: Maybe<WpCreateUserPayload>;
   /** The payload for the createVisibleProduct mutation */
-  createVisibleProduct?: Maybe<CreateVisibleProductPayload>;
+  WP_createVisibleProduct?: Maybe<WpCreateVisibleProductPayload>;
   /** The payload for the deleteCategory mutation */
-  deleteCategory?: Maybe<DeleteCategoryPayload>;
+  WP_deleteCategory?: Maybe<WpDeleteCategoryPayload>;
   /** The payload for the deleteComment mutation */
-  deleteComment?: Maybe<DeleteCommentPayload>;
+  WP_deleteComment?: Maybe<WpDeleteCommentPayload>;
   /** The payload for the deleteMediaItem mutation */
-  deleteMediaItem?: Maybe<DeleteMediaItemPayload>;
+  WP_deleteMediaItem?: Maybe<WpDeleteMediaItemPayload>;
   /** The payload for the deletePaHind mutation */
-  deletePaHind?: Maybe<DeletePaHindPayload>;
+  WP_deletePaHind?: Maybe<WpDeletePaHindPayload>;
   /** The payload for the deletePaHulk mutation */
-  deletePaHulk?: Maybe<DeletePaHulkPayload>;
+  WP_deletePaHulk?: Maybe<WpDeletePaHulkPayload>;
   /** The payload for the deletePaKasutusaeg mutation */
-  deletePaKasutusaeg?: Maybe<DeletePaKasutusaegPayload>;
+  WP_deletePaKasutusaeg?: Maybe<WpDeletePaKasutusaegPayload>;
   /** The payload for the deletePaKogus mutation */
-  deletePaKogus?: Maybe<DeletePaKogusPayload>;
+  WP_deletePaKogus?: Maybe<WpDeletePaKogusPayload>;
   /** The payload for the deletePaKontuur mutation */
-  deletePaKontuur?: Maybe<DeletePaKontuurPayload>;
+  WP_deletePaKontuur?: Maybe<WpDeletePaKontuurPayload>;
   /** The payload for the deletePaKoostisained mutation */
-  deletePaKoostisained?: Maybe<DeletePaKoostisainedPayload>;
+  WP_deletePaKoostisained?: Maybe<WpDeletePaKoostisainedPayload>;
   /** The payload for the deletePaLaadimisaeg mutation */
-  deletePaLaadimisaeg?: Maybe<DeletePaLaadimisaegPayload>;
+  WP_deletePaLaadimisaeg?: Maybe<WpDeletePaLaadimisaegPayload>;
   /** The payload for the deletePaMaterjal mutation */
-  deletePaMaterjal?: Maybe<DeletePaMaterjalPayload>;
+  WP_deletePaMaterjal?: Maybe<WpDeletePaMaterjalPayload>;
   /** The payload for the deletePaMuratasa mutation */
-  deletePaMuratasa?: Maybe<DeletePaMuratasaPayload>;
+  WP_deletePaMuratasa?: Maybe<WpDeletePaMuratasaPayload>;
   /** The payload for the deletePaOhutus mutation */
-  deletePaOhutus?: Maybe<DeletePaOhutusPayload>;
+  WP_deletePaOhutus?: Maybe<WpDeletePaOhutusPayload>;
   /** The payload for the deletePaPatareid mutation */
-  deletePaPatareid?: Maybe<DeletePaPatareidPayload>;
+  WP_deletePaPatareid?: Maybe<WpDeletePaPatareidPayload>;
   /** The payload for the deletePaSuurus mutation */
-  deletePaSuurus?: Maybe<DeletePaSuurusPayload>;
+  WP_deletePaSuurus?: Maybe<WpDeletePaSuurusPayload>;
   /** The payload for the deletePaVariant mutation */
-  deletePaVariant?: Maybe<DeletePaVariantPayload>;
+  WP_deletePaVariant?: Maybe<WpDeletePaVariantPayload>;
   /** The payload for the deletePaVarv mutation */
-  deletePaVarv?: Maybe<DeletePaVarvPayload>;
+  WP_deletePaVarv?: Maybe<WpDeletePaVarvPayload>;
   /** The payload for the deletePaVeekindlus mutation */
-  deletePaVeekindlus?: Maybe<DeletePaVeekindlusPayload>;
+  WP_deletePaVeekindlus?: Maybe<WpDeletePaVeekindlusPayload>;
   /** The payload for the deletePage mutation */
-  deletePage?: Maybe<DeletePagePayload>;
+  WP_deletePage?: Maybe<WpDeletePagePayload>;
   /** The payload for the deletePost mutation */
-  deletePost?: Maybe<DeletePostPayload>;
+  WP_deletePost?: Maybe<WpDeletePostPayload>;
   /** The payload for the deleteProductCategory mutation */
-  deleteProductCategory?: Maybe<DeleteProductCategoryPayload>;
+  WP_deleteProductCategory?: Maybe<WpDeleteProductCategoryPayload>;
   /** The payload for the deleteProductTag mutation */
-  deleteProductTag?: Maybe<DeleteProductTagPayload>;
+  WP_deleteProductTag?: Maybe<WpDeleteProductTagPayload>;
   /** The payload for the deleteProductType mutation */
-  deleteProductType?: Maybe<DeleteProductTypePayload>;
+  WP_deleteProductType?: Maybe<WpDeleteProductTypePayload>;
   /** The payload for the deleteRevision mutation */
-  deleteRevision?: Maybe<DeleteRevisionPayload>;
+  WP_deleteRevision?: Maybe<WpDeleteRevisionPayload>;
   /** The payload for the deleteShippingClass mutation */
-  deleteShippingClass?: Maybe<DeleteShippingClassPayload>;
+  WP_deleteShippingClass?: Maybe<WpDeleteShippingClassPayload>;
   /** The payload for the deleteTag mutation */
-  deleteTag?: Maybe<DeleteTagPayload>;
+  WP_deleteTag?: Maybe<WpDeleteTagPayload>;
   /** The payload for the deleteUser mutation */
-  deleteUser?: Maybe<DeleteUserPayload>;
+  WP_deleteUser?: Maybe<WpDeleteUserPayload>;
   /** The payload for the deleteVisibleProduct mutation */
-  deleteVisibleProduct?: Maybe<DeleteVisibleProductPayload>;
+  WP_deleteVisibleProduct?: Maybe<WpDeleteVisibleProductPayload>;
   /** The payload for the emptyCart mutation */
-  emptyCart?: Maybe<EmptyCartPayload>;
+  WP_emptyCart?: Maybe<WpEmptyCartPayload>;
 
-  increaseCount?: Maybe<number>;
+  WP_increaseCount?: Maybe<number>;
   /** The payload for the registerCustomer mutation */
-  registerCustomer?: Maybe<RegisterCustomerPayload>;
+  WP_registerCustomer?: Maybe<WpRegisterCustomerPayload>;
   /** The payload for the registerUser mutation */
-  registerUser?: Maybe<RegisterUserPayload>;
+  WP_registerUser?: Maybe<WpRegisterUserPayload>;
   /** The payload for the removeCoupons mutation */
-  removeCoupons?: Maybe<RemoveCouponsPayload>;
+  WP_removeCoupons?: Maybe<WpRemoveCouponsPayload>;
   /** The payload for the removeItemsFromCart mutation */
-  removeItemsFromCart?: Maybe<RemoveItemsFromCartPayload>;
+  WP_removeItemsFromCart?: Maybe<WpRemoveItemsFromCartPayload>;
   /** The payload for the resetUserPassword mutation */
-  resetUserPassword?: Maybe<ResetUserPasswordPayload>;
+  WP_resetUserPassword?: Maybe<WpResetUserPasswordPayload>;
   /** The payload for the restoreCartItems mutation */
-  restoreCartItems?: Maybe<RestoreCartItemsPayload>;
+  WP_restoreCartItems?: Maybe<WpRestoreCartItemsPayload>;
   /** The payload for the restoreComment mutation */
-  restoreComment?: Maybe<RestoreCommentPayload>;
+  WP_restoreComment?: Maybe<WpRestoreCommentPayload>;
   /** The payload for the sendPasswordResetEmail mutation */
-  sendPasswordResetEmail?: Maybe<SendPasswordResetEmailPayload>;
+  WP_sendPasswordResetEmail?: Maybe<WpSendPasswordResetEmailPayload>;
   /** The payload for the updateComment mutation */
-  updateComment?: Maybe<UpdateCommentPayload>;
+  WP_updateComment?: Maybe<WpUpdateCommentPayload>;
   /** The payload for the updateCustomer mutation */
-  updateCustomer?: Maybe<UpdateCustomerPayload>;
+  WP_updateCustomer?: Maybe<WpUpdateCustomerPayload>;
   /** The payload for the updateItemQuantity mutation */
-  updateItemQuantity?: Maybe<UpdateItemQuantityPayload>;
+  WP_updateItemQuantity?: Maybe<WpUpdateItemQuantityPayload>;
   /** The payload for the updateMediaItem mutation */
-  updateMediaItem?: Maybe<UpdateMediaItemPayload>;
+  WP_updateMediaItem?: Maybe<WpUpdateMediaItemPayload>;
   /** The payload for the updatePage mutation */
-  updatePage?: Maybe<UpdatePagePayload>;
+  WP_updatePage?: Maybe<WpUpdatePagePayload>;
   /** The payload for the updatePost mutation */
-  updatePost?: Maybe<UpdatePostPayload>;
+  WP_updatePost?: Maybe<WpUpdatePostPayload>;
   /** The payload for the updateSettings mutation */
-  updateSettings?: Maybe<UpdateSettingsPayload>;
+  WP_updateSettings?: Maybe<WpUpdateSettingsPayload>;
   /** The payload for the updateUser mutation */
-  updateUser?: Maybe<UpdateUserPayload>;
+  WP_updateUser?: Maybe<WpUpdateUserPayload>;
 }
 
 /** The payload for the UpdateCategory mutation */
-export interface UpdateCategoryPayload {
+export interface WpUpdateCategoryPayload {
   /** The created category */
-  category?: Maybe<Category>;
+  category?: Maybe<WpCategory>;
 
   clientMutationId: string;
 }
 
 /** The payload for the UpdatePaHind mutation */
-export interface UpdatePaHindPayload {
+export interface WpUpdatePaHindPayload {
   clientMutationId: string;
   /** The created pa_hind */
-  paHind?: Maybe<PaHind>;
+  paHind?: Maybe<WpPaHind>;
 }
 
 /** The payload for the UpdatePaHulk mutation */
-export interface UpdatePaHulkPayload {
+export interface WpUpdatePaHulkPayload {
   clientMutationId: string;
   /** The created pa_hulk */
-  paHulk?: Maybe<PaHulk>;
+  paHulk?: Maybe<WpPaHulk>;
 }
 
 /** The payload for the UpdatePaKasutusaeg mutation */
-export interface UpdatePaKasutusaegPayload {
+export interface WpUpdatePaKasutusaegPayload {
   clientMutationId: string;
   /** The created pa_kasutusaeg */
-  paKasutusaeg?: Maybe<PaKasutusaeg>;
+  paKasutusaeg?: Maybe<WpPaKasutusaeg>;
 }
 
 /** The payload for the UpdatePaKogus mutation */
-export interface UpdatePaKogusPayload {
+export interface WpUpdatePaKogusPayload {
   clientMutationId: string;
   /** The created pa_kogus */
-  paKogus?: Maybe<PaKogus>;
+  paKogus?: Maybe<WpPaKogus>;
 }
 
 /** The payload for the UpdatePaKontuur mutation */
-export interface UpdatePaKontuurPayload {
+export interface WpUpdatePaKontuurPayload {
   clientMutationId: string;
   /** The created pa_kontuur */
-  paKontuur?: Maybe<PaKontuur>;
+  paKontuur?: Maybe<WpPaKontuur>;
 }
 
 /** The payload for the UpdatePaKoostisained mutation */
-export interface UpdatePaKoostisainedPayload {
+export interface WpUpdatePaKoostisainedPayload {
   clientMutationId: string;
   /** The created pa_koostisained */
-  paKoostisained?: Maybe<PaKoostisained>;
+  paKoostisained?: Maybe<WpPaKoostisained>;
 }
 
 /** The payload for the UpdatePaLaadimisaeg mutation */
-export interface UpdatePaLaadimisaegPayload {
+export interface WpUpdatePaLaadimisaegPayload {
   clientMutationId: string;
   /** The created pa_laadimisaeg */
-  paLaadimisaeg?: Maybe<PaLaadimisaeg>;
+  paLaadimisaeg?: Maybe<WpPaLaadimisaeg>;
 }
 
 /** The payload for the UpdatePaMaterjal mutation */
-export interface UpdatePaMaterjalPayload {
+export interface WpUpdatePaMaterjalPayload {
   clientMutationId: string;
   /** The created pa_materjal */
-  paMaterjal?: Maybe<PaMaterjal>;
+  paMaterjal?: Maybe<WpPaMaterjal>;
 }
 
 /** The payload for the UpdatePaMuratasa mutation */
-export interface UpdatePaMuratasaPayload {
+export interface WpUpdatePaMuratasaPayload {
   clientMutationId: string;
   /** The created pa_muratasa */
-  paMuratasa?: Maybe<PaMuratasa>;
+  paMuratasa?: Maybe<WpPaMuratasa>;
 }
 
 /** The payload for the UpdatePaOhutus mutation */
-export interface UpdatePaOhutusPayload {
+export interface WpUpdatePaOhutusPayload {
   clientMutationId: string;
   /** The created pa_ohutus */
-  paOhutus?: Maybe<PaOhutus>;
+  paOhutus?: Maybe<WpPaOhutus>;
 }
 
 /** The payload for the UpdatePaPatareid mutation */
-export interface UpdatePaPatareidPayload {
+export interface WpUpdatePaPatareidPayload {
   clientMutationId: string;
   /** The created pa_patareid */
-  paPatareid?: Maybe<PaPatareid>;
+  paPatareid?: Maybe<WpPaPatareid>;
 }
 
 /** The payload for the UpdatePaSuurus mutation */
-export interface UpdatePaSuurusPayload {
+export interface WpUpdatePaSuurusPayload {
   clientMutationId: string;
   /** The created pa_suurus */
-  paSuurus?: Maybe<PaSuurus>;
+  paSuurus?: Maybe<WpPaSuurus>;
 }
 
 /** The payload for the UpdatePaVariant mutation */
-export interface UpdatePaVariantPayload {
+export interface WpUpdatePaVariantPayload {
   clientMutationId: string;
   /** The created pa_variant */
-  paVariant?: Maybe<PaVariant>;
+  paVariant?: Maybe<WpPaVariant>;
 }
 
 /** The payload for the UpdatePaVarv mutation */
-export interface UpdatePaVarvPayload {
+export interface WpUpdatePaVarvPayload {
   clientMutationId: string;
   /** The created pa_varv */
-  paVarv?: Maybe<PaVarv>;
+  paVarv?: Maybe<WpPaVarv>;
 }
 
 /** The payload for the UpdatePaVeekindlus mutation */
-export interface UpdatePaVeekindlusPayload {
+export interface WpUpdatePaVeekindlusPayload {
   clientMutationId: string;
   /** The created pa_veekindlus */
-  paVeekindlus?: Maybe<PaVeekindlus>;
+  paVeekindlus?: Maybe<WpPaVeekindlus>;
 }
 
 /** The payload for the UpdateProductCategory mutation */
-export interface UpdateProductCategoryPayload {
+export interface WpUpdateProductCategoryPayload {
   clientMutationId: string;
   /** The created product_cat */
-  productCategory?: Maybe<ProductCategory>;
+  productCategory?: Maybe<WpProductCategory>;
 }
 
 /** The payload for the UpdateProductTag mutation */
-export interface UpdateProductTagPayload {
+export interface WpUpdateProductTagPayload {
   clientMutationId: string;
   /** The created product_tag */
-  productTag?: Maybe<ProductTag>;
+  productTag?: Maybe<WpProductTag>;
 }
 
 /** The payload for the UpdateProductType mutation */
-export interface UpdateProductTypePayload {
+export interface WpUpdateProductTypePayload {
   clientMutationId: string;
   /** The created product_type */
-  productType?: Maybe<ProductType>;
+  productType?: Maybe<WpProductType>;
 }
 
 /** The payload for the UpdateShippingClass mutation */
-export interface UpdateShippingClassPayload {
+export interface WpUpdateShippingClassPayload {
   clientMutationId: string;
   /** The created product_shipping_class */
-  shippingClass?: Maybe<ShippingClass>;
+  shippingClass?: Maybe<WpShippingClass>;
 }
 
 /** The payload for the UpdateTag mutation */
-export interface UpdateTagPayload {
+export interface WpUpdateTagPayload {
   clientMutationId: string;
   /** The created post_tag */
-  tag?: Maybe<Tag>;
+  tag?: Maybe<WpTag>;
 }
 
 /** The payload for the UpdateVisibleProduct mutation */
-export interface UpdateVisibleProductPayload {
+export interface WpUpdateVisibleProductPayload {
   clientMutationId: string;
   /** The created product_visibility */
-  visibleProduct?: Maybe<VisibleProduct>;
+  visibleProduct?: Maybe<WpVisibleProduct>;
 }
 
 /** The payload for the addFee mutation */
-export interface AddFeePayload {
-  cartFee?: Maybe<CartFee>;
+export interface WpAddFeePayload {
+  cartFee?: Maybe<WpCartFee>;
 
   clientMutationId: string;
 }
 
 /** The payload for the addToCart mutation */
-export interface AddToCartPayload {
-  cartItem?: Maybe<CartItem>;
+export interface WpAddToCartPayload {
+  cartItem?: Maybe<WpCartItem>;
 
   clientMutationId: string;
 }
 
 /** The payload for the applyCoupon mutation */
-export interface ApplyCouponPayload {
-  cart?: Maybe<Cart>;
+export interface WpApplyCouponPayload {
+  cart?: Maybe<WpCart>;
 
   clientMutationId: string;
 }
 
 /** The payload for the createCategory mutation */
-export interface CreateCategoryPayload {
+export interface WpCreateCategoryPayload {
   /** The created category */
-  category?: Maybe<Category>;
+  category?: Maybe<WpCategory>;
 
   clientMutationId: string;
 }
 
 /** The payload for the createComment mutation */
-export interface CreateCommentPayload {
+export interface WpCreateCommentPayload {
   clientMutationId: string;
   /** The comment that was created */
-  comment?: Maybe<Comment>;
+  comment?: Maybe<WpComment>;
   /** Whether the mutation succeeded. If the comment is not approved, the server will not return the comment to a non authenticated user, but a success message can be returned if the create succeeded, and the client can optimistically add the comment to the client cache */
   success?: Maybe<boolean>;
 }
 
 /** The payload for the createMediaItem mutation */
-export interface CreateMediaItemPayload {
+export interface WpCreateMediaItemPayload {
   clientMutationId: string;
 
-  mediaItem?: Maybe<MediaItem>;
+  mediaItem?: Maybe<WpMediaItem>;
 }
 
 /** The payload for the createPaHind mutation */
-export interface CreatePaHindPayload {
+export interface WpCreatePaHindPayload {
   clientMutationId: string;
   /** The created pa_hind */
-  paHind?: Maybe<PaHind>;
+  paHind?: Maybe<WpPaHind>;
 }
 
 /** The payload for the createPaHulk mutation */
-export interface CreatePaHulkPayload {
+export interface WpCreatePaHulkPayload {
   clientMutationId: string;
   /** The created pa_hulk */
-  paHulk?: Maybe<PaHulk>;
+  paHulk?: Maybe<WpPaHulk>;
 }
 
 /** The payload for the createPaKasutusaeg mutation */
-export interface CreatePaKasutusaegPayload {
+export interface WpCreatePaKasutusaegPayload {
   clientMutationId: string;
   /** The created pa_kasutusaeg */
-  paKasutusaeg?: Maybe<PaKasutusaeg>;
+  paKasutusaeg?: Maybe<WpPaKasutusaeg>;
 }
 
 /** The payload for the createPaKogus mutation */
-export interface CreatePaKogusPayload {
+export interface WpCreatePaKogusPayload {
   clientMutationId: string;
   /** The created pa_kogus */
-  paKogus?: Maybe<PaKogus>;
+  paKogus?: Maybe<WpPaKogus>;
 }
 
 /** The payload for the createPaKontuur mutation */
-export interface CreatePaKontuurPayload {
+export interface WpCreatePaKontuurPayload {
   clientMutationId: string;
   /** The created pa_kontuur */
-  paKontuur?: Maybe<PaKontuur>;
+  paKontuur?: Maybe<WpPaKontuur>;
 }
 
 /** The payload for the createPaKoostisained mutation */
-export interface CreatePaKoostisainedPayload {
+export interface WpCreatePaKoostisainedPayload {
   clientMutationId: string;
   /** The created pa_koostisained */
-  paKoostisained?: Maybe<PaKoostisained>;
+  paKoostisained?: Maybe<WpPaKoostisained>;
 }
 
 /** The payload for the createPaLaadimisaeg mutation */
-export interface CreatePaLaadimisaegPayload {
+export interface WpCreatePaLaadimisaegPayload {
   clientMutationId: string;
   /** The created pa_laadimisaeg */
-  paLaadimisaeg?: Maybe<PaLaadimisaeg>;
+  paLaadimisaeg?: Maybe<WpPaLaadimisaeg>;
 }
 
 /** The payload for the createPaMaterjal mutation */
-export interface CreatePaMaterjalPayload {
+export interface WpCreatePaMaterjalPayload {
   clientMutationId: string;
   /** The created pa_materjal */
-  paMaterjal?: Maybe<PaMaterjal>;
+  paMaterjal?: Maybe<WpPaMaterjal>;
 }
 
 /** The payload for the createPaMuratasa mutation */
-export interface CreatePaMuratasaPayload {
+export interface WpCreatePaMuratasaPayload {
   clientMutationId: string;
   /** The created pa_muratasa */
-  paMuratasa?: Maybe<PaMuratasa>;
+  paMuratasa?: Maybe<WpPaMuratasa>;
 }
 
 /** The payload for the createPaOhutus mutation */
-export interface CreatePaOhutusPayload {
+export interface WpCreatePaOhutusPayload {
   clientMutationId: string;
   /** The created pa_ohutus */
-  paOhutus?: Maybe<PaOhutus>;
+  paOhutus?: Maybe<WpPaOhutus>;
 }
 
 /** The payload for the createPaPatareid mutation */
-export interface CreatePaPatareidPayload {
+export interface WpCreatePaPatareidPayload {
   clientMutationId: string;
   /** The created pa_patareid */
-  paPatareid?: Maybe<PaPatareid>;
+  paPatareid?: Maybe<WpPaPatareid>;
 }
 
 /** The payload for the createPaSuurus mutation */
-export interface CreatePaSuurusPayload {
+export interface WpCreatePaSuurusPayload {
   clientMutationId: string;
   /** The created pa_suurus */
-  paSuurus?: Maybe<PaSuurus>;
+  paSuurus?: Maybe<WpPaSuurus>;
 }
 
 /** The payload for the createPaVariant mutation */
-export interface CreatePaVariantPayload {
+export interface WpCreatePaVariantPayload {
   clientMutationId: string;
   /** The created pa_variant */
-  paVariant?: Maybe<PaVariant>;
+  paVariant?: Maybe<WpPaVariant>;
 }
 
 /** The payload for the createPaVarv mutation */
-export interface CreatePaVarvPayload {
+export interface WpCreatePaVarvPayload {
   clientMutationId: string;
   /** The created pa_varv */
-  paVarv?: Maybe<PaVarv>;
+  paVarv?: Maybe<WpPaVarv>;
 }
 
 /** The payload for the createPaVeekindlus mutation */
-export interface CreatePaVeekindlusPayload {
+export interface WpCreatePaVeekindlusPayload {
   clientMutationId: string;
   /** The created pa_veekindlus */
-  paVeekindlus?: Maybe<PaVeekindlus>;
+  paVeekindlus?: Maybe<WpPaVeekindlus>;
 }
 
 /** The payload for the createPage mutation */
-export interface CreatePagePayload {
+export interface WpCreatePagePayload {
   clientMutationId: string;
 
-  page?: Maybe<Page>;
+  page?: Maybe<WpPage>;
 }
 
 /** The payload for the createPost mutation */
-export interface CreatePostPayload {
+export interface WpCreatePostPayload {
   clientMutationId: string;
 
-  post?: Maybe<Post>;
+  post?: Maybe<WpPost>;
 }
 
 /** The payload for the createProductCategory mutation */
-export interface CreateProductCategoryPayload {
+export interface WpCreateProductCategoryPayload {
   clientMutationId: string;
   /** The created product_cat */
-  productCategory?: Maybe<ProductCategory>;
+  productCategory?: Maybe<WpProductCategory>;
 }
 
 /** The payload for the createProductTag mutation */
-export interface CreateProductTagPayload {
+export interface WpCreateProductTagPayload {
   clientMutationId: string;
   /** The created product_tag */
-  productTag?: Maybe<ProductTag>;
+  productTag?: Maybe<WpProductTag>;
 }
 
 /** The payload for the createProductType mutation */
-export interface CreateProductTypePayload {
+export interface WpCreateProductTypePayload {
   clientMutationId: string;
   /** The created product_type */
-  productType?: Maybe<ProductType>;
+  productType?: Maybe<WpProductType>;
 }
 
 /** The payload for the createShippingClass mutation */
-export interface CreateShippingClassPayload {
+export interface WpCreateShippingClassPayload {
   clientMutationId: string;
   /** The created product_shipping_class */
-  shippingClass?: Maybe<ShippingClass>;
+  shippingClass?: Maybe<WpShippingClass>;
 }
 
 /** The payload for the createTag mutation */
-export interface CreateTagPayload {
+export interface WpCreateTagPayload {
   clientMutationId: string;
   /** The created post_tag */
-  tag?: Maybe<Tag>;
+  tag?: Maybe<WpTag>;
 }
 
 /** The payload for the createUser mutation */
-export interface CreateUserPayload {
+export interface WpCreateUserPayload {
   clientMutationId: string;
 
-  user?: Maybe<User>;
+  user?: Maybe<WpUser>;
 }
 
 /** The payload for the createVisibleProduct mutation */
-export interface CreateVisibleProductPayload {
+export interface WpCreateVisibleProductPayload {
   clientMutationId: string;
   /** The created product_visibility */
-  visibleProduct?: Maybe<VisibleProduct>;
+  visibleProduct?: Maybe<WpVisibleProduct>;
 }
 
 /** The payload for the deleteCategory mutation */
-export interface DeleteCategoryPayload {
+export interface WpDeleteCategoryPayload {
   /** The deteted term object */
-  category?: Maybe<Category>;
+  category?: Maybe<WpCategory>;
 
   clientMutationId: string;
   /** The ID of the deleted object */
@@ -12894,392 +12896,392 @@ export interface DeleteCategoryPayload {
 }
 
 /** The payload for the deleteComment mutation */
-export interface DeleteCommentPayload {
+export interface WpDeleteCommentPayload {
   clientMutationId: string;
   /** The deleted comment object */
-  comment?: Maybe<Comment>;
+  comment?: Maybe<WpComment>;
   /** The deleted comment ID */
   deletedId?: Maybe<string>;
 }
 
 /** The payload for the deleteMediaItem mutation */
-export interface DeleteMediaItemPayload {
+export interface WpDeleteMediaItemPayload {
   clientMutationId: string;
   /** The ID of the deleted mediaItem */
   deletedId?: Maybe<string>;
   /** The mediaItem before it was deleted */
-  mediaItem?: Maybe<MediaItem>;
+  mediaItem?: Maybe<WpMediaItem>;
 }
 
 /** The payload for the deletePaHind mutation */
-export interface DeletePaHindPayload {
+export interface WpDeletePaHindPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paHind?: Maybe<PaHind>;
+  paHind?: Maybe<WpPaHind>;
 }
 
 /** The payload for the deletePaHulk mutation */
-export interface DeletePaHulkPayload {
+export interface WpDeletePaHulkPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paHulk?: Maybe<PaHulk>;
+  paHulk?: Maybe<WpPaHulk>;
 }
 
 /** The payload for the deletePaKasutusaeg mutation */
-export interface DeletePaKasutusaegPayload {
+export interface WpDeletePaKasutusaegPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paKasutusaeg?: Maybe<PaKasutusaeg>;
+  paKasutusaeg?: Maybe<WpPaKasutusaeg>;
 }
 
 /** The payload for the deletePaKogus mutation */
-export interface DeletePaKogusPayload {
+export interface WpDeletePaKogusPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paKogus?: Maybe<PaKogus>;
+  paKogus?: Maybe<WpPaKogus>;
 }
 
 /** The payload for the deletePaKontuur mutation */
-export interface DeletePaKontuurPayload {
+export interface WpDeletePaKontuurPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paKontuur?: Maybe<PaKontuur>;
+  paKontuur?: Maybe<WpPaKontuur>;
 }
 
 /** The payload for the deletePaKoostisained mutation */
-export interface DeletePaKoostisainedPayload {
+export interface WpDeletePaKoostisainedPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paKoostisained?: Maybe<PaKoostisained>;
+  paKoostisained?: Maybe<WpPaKoostisained>;
 }
 
 /** The payload for the deletePaLaadimisaeg mutation */
-export interface DeletePaLaadimisaegPayload {
+export interface WpDeletePaLaadimisaegPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paLaadimisaeg?: Maybe<PaLaadimisaeg>;
+  paLaadimisaeg?: Maybe<WpPaLaadimisaeg>;
 }
 
 /** The payload for the deletePaMaterjal mutation */
-export interface DeletePaMaterjalPayload {
+export interface WpDeletePaMaterjalPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paMaterjal?: Maybe<PaMaterjal>;
+  paMaterjal?: Maybe<WpPaMaterjal>;
 }
 
 /** The payload for the deletePaMuratasa mutation */
-export interface DeletePaMuratasaPayload {
+export interface WpDeletePaMuratasaPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paMuratasa?: Maybe<PaMuratasa>;
+  paMuratasa?: Maybe<WpPaMuratasa>;
 }
 
 /** The payload for the deletePaOhutus mutation */
-export interface DeletePaOhutusPayload {
+export interface WpDeletePaOhutusPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paOhutus?: Maybe<PaOhutus>;
+  paOhutus?: Maybe<WpPaOhutus>;
 }
 
 /** The payload for the deletePaPatareid mutation */
-export interface DeletePaPatareidPayload {
+export interface WpDeletePaPatareidPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paPatareid?: Maybe<PaPatareid>;
+  paPatareid?: Maybe<WpPaPatareid>;
 }
 
 /** The payload for the deletePaSuurus mutation */
-export interface DeletePaSuurusPayload {
+export interface WpDeletePaSuurusPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paSuurus?: Maybe<PaSuurus>;
+  paSuurus?: Maybe<WpPaSuurus>;
 }
 
 /** The payload for the deletePaVariant mutation */
-export interface DeletePaVariantPayload {
+export interface WpDeletePaVariantPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paVariant?: Maybe<PaVariant>;
+  paVariant?: Maybe<WpPaVariant>;
 }
 
 /** The payload for the deletePaVarv mutation */
-export interface DeletePaVarvPayload {
+export interface WpDeletePaVarvPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paVarv?: Maybe<PaVarv>;
+  paVarv?: Maybe<WpPaVarv>;
 }
 
 /** The payload for the deletePaVeekindlus mutation */
-export interface DeletePaVeekindlusPayload {
+export interface WpDeletePaVeekindlusPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  paVeekindlus?: Maybe<PaVeekindlus>;
+  paVeekindlus?: Maybe<WpPaVeekindlus>;
 }
 
 /** The payload for the deletePage mutation */
-export interface DeletePagePayload {
+export interface WpDeletePagePayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The object before it was deleted */
-  page?: Maybe<Page>;
+  page?: Maybe<WpPage>;
 }
 
 /** The payload for the deletePost mutation */
-export interface DeletePostPayload {
+export interface WpDeletePostPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The object before it was deleted */
-  post?: Maybe<Post>;
+  post?: Maybe<WpPost>;
 }
 
 /** The payload for the deleteProductCategory mutation */
-export interface DeleteProductCategoryPayload {
+export interface WpDeleteProductCategoryPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  productCategory?: Maybe<ProductCategory>;
+  productCategory?: Maybe<WpProductCategory>;
 }
 
 /** The payload for the deleteProductTag mutation */
-export interface DeleteProductTagPayload {
+export interface WpDeleteProductTagPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  productTag?: Maybe<ProductTag>;
+  productTag?: Maybe<WpProductTag>;
 }
 
 /** The payload for the deleteProductType mutation */
-export interface DeleteProductTypePayload {
+export interface WpDeleteProductTypePayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  productType?: Maybe<ProductType>;
+  productType?: Maybe<WpProductType>;
 }
 
 /** The payload for the deleteRevision mutation */
-export interface DeleteRevisionPayload {
+export interface WpDeleteRevisionPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The object before it was deleted */
-  revision?: Maybe<Revision>;
+  revision?: Maybe<WpRevision>;
 }
 
 /** The payload for the deleteShippingClass mutation */
-export interface DeleteShippingClassPayload {
+export interface WpDeleteShippingClassPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  shippingClass?: Maybe<ShippingClass>;
+  shippingClass?: Maybe<WpShippingClass>;
 }
 
 /** The payload for the deleteTag mutation */
-export interface DeleteTagPayload {
+export interface WpDeleteTagPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  tag?: Maybe<Tag>;
+  tag?: Maybe<WpTag>;
 }
 
 /** The payload for the deleteUser mutation */
-export interface DeleteUserPayload {
+export interface WpDeleteUserPayload {
   clientMutationId: string;
   /** The ID of the user that you just deleted */
   deletedId?: Maybe<string>;
   /** The deleted user object */
-  user?: Maybe<User>;
+  user?: Maybe<WpUser>;
 }
 
 /** The payload for the deleteVisibleProduct mutation */
-export interface DeleteVisibleProductPayload {
+export interface WpDeleteVisibleProductPayload {
   clientMutationId: string;
   /** The ID of the deleted object */
   deletedId?: Maybe<string>;
   /** The deteted term object */
-  visibleProduct?: Maybe<VisibleProduct>;
+  visibleProduct?: Maybe<WpVisibleProduct>;
 }
 
 /** The payload for the emptyCart mutation */
-export interface EmptyCartPayload {
-  cart?: Maybe<Cart>;
+export interface WpEmptyCartPayload {
+  cart?: Maybe<WpCart>;
 
   clientMutationId: string;
 }
 
 /** The payload for the registerCustomer mutation */
-export interface RegisterCustomerPayload {
+export interface WpRegisterCustomerPayload {
   clientMutationId: string;
 
-  customer?: Maybe<Customer>;
+  customer?: Maybe<WpCustomer>;
 
-  viewer?: Maybe<User>;
+  viewer?: Maybe<WpUser>;
 }
 
 /** The payload for the registerUser mutation */
-export interface RegisterUserPayload {
+export interface WpRegisterUserPayload {
   clientMutationId: string;
 
-  user?: Maybe<User>;
+  user?: Maybe<WpUser>;
 }
 
 /** The payload for the removeCoupons mutation */
-export interface RemoveCouponsPayload {
-  cart?: Maybe<Cart>;
+export interface WpRemoveCouponsPayload {
+  cart?: Maybe<WpCart>;
 
   clientMutationId: string;
 }
 
 /** The payload for the removeItemsFromCart mutation */
-export interface RemoveItemsFromCartPayload {
-  cartItems?: Maybe<(Maybe<CartItem>)[]>;
+export interface WpRemoveItemsFromCartPayload {
+  cartItems?: Maybe<(Maybe<WpCartItem>)[]>;
 
   clientMutationId: string;
 }
 
 /** The payload for the resetUserPassword mutation */
-export interface ResetUserPasswordPayload {
+export interface WpResetUserPasswordPayload {
   clientMutationId: string;
 
-  user?: Maybe<User>;
+  user?: Maybe<WpUser>;
 }
 
 /** The payload for the restoreCartItems mutation */
-export interface RestoreCartItemsPayload {
-  cartItems?: Maybe<(Maybe<CartItem>)[]>;
+export interface WpRestoreCartItemsPayload {
+  cartItems?: Maybe<(Maybe<WpCartItem>)[]>;
 
   clientMutationId: string;
 }
 
 /** The payload for the restoreComment mutation */
-export interface RestoreCommentPayload {
+export interface WpRestoreCommentPayload {
   clientMutationId: string;
   /** The restored comment object */
-  comment?: Maybe<Comment>;
+  comment?: Maybe<WpComment>;
   /** The ID of the restored comment */
   restoredId?: Maybe<string>;
 }
 
 /** The payload for the sendPasswordResetEmail mutation */
-export interface SendPasswordResetEmailPayload {
+export interface WpSendPasswordResetEmailPayload {
   clientMutationId: string;
   /** The user that the password reset email was sent to */
-  user?: Maybe<User>;
+  user?: Maybe<WpUser>;
 }
 
 /** The payload for the updateComment mutation */
-export interface UpdateCommentPayload {
+export interface WpUpdateCommentPayload {
   clientMutationId: string;
   /** The comment that was created */
-  comment?: Maybe<Comment>;
+  comment?: Maybe<WpComment>;
   /** Whether the mutation succeeded. If the comment is not approved, the server will not return the comment to a non authenticated user, but a success message can be returned if the create succeeded, and the client can optimistically add the comment to the client cache */
   success?: Maybe<boolean>;
 }
 
 /** The payload for the updateCustomer mutation */
-export interface UpdateCustomerPayload {
+export interface WpUpdateCustomerPayload {
   clientMutationId: string;
 
-  customer?: Maybe<Customer>;
+  customer?: Maybe<WpCustomer>;
 }
 
 /** The payload for the updateItemQuantity mutation */
-export interface UpdateItemQuantityPayload {
-  cartItem?: Maybe<CartItem>;
+export interface WpUpdateItemQuantityPayload {
+  cartItem?: Maybe<WpCartItem>;
 
   clientMutationId: string;
 }
 
 /** The payload for the updateMediaItem mutation */
-export interface UpdateMediaItemPayload {
+export interface WpUpdateMediaItemPayload {
   clientMutationId: string;
 
-  mediaItem?: Maybe<MediaItem>;
+  mediaItem?: Maybe<WpMediaItem>;
 }
 
 /** The payload for the updatePage mutation */
-export interface UpdatePagePayload {
+export interface WpUpdatePagePayload {
   clientMutationId: string;
 
-  page?: Maybe<Page>;
+  page?: Maybe<WpPage>;
 }
 
 /** The payload for the updatePost mutation */
-export interface UpdatePostPayload {
+export interface WpUpdatePostPayload {
   clientMutationId: string;
 
-  post?: Maybe<Post>;
+  post?: Maybe<WpPost>;
 }
 
 /** The payload for the updateSettings mutation */
-export interface UpdateSettingsPayload {
-  allSettings?: Maybe<Settings>;
+export interface WpUpdateSettingsPayload {
+  allSettings?: Maybe<WpSettings>;
 
   clientMutationId: string;
 
-  discussionSettings?: Maybe<DiscussionSettings>;
+  discussionSettings?: Maybe<WpDiscussionSettings>;
 
-  generalSettings?: Maybe<GeneralSettings>;
+  generalSettings?: Maybe<WpGeneralSettings>;
 
-  readingSettings?: Maybe<ReadingSettings>;
+  readingSettings?: Maybe<WpReadingSettings>;
 
-  writingSettings?: Maybe<WritingSettings>;
+  writingSettings?: Maybe<WpWritingSettings>;
 }
 
 /** The payload for the updateUser mutation */
-export interface UpdateUserPayload {
+export interface WpUpdateUserPayload {
   clientMutationId: string;
 
-  user?: Maybe<User>;
+  user?: Maybe<WpUser>;
 }
 
 // ====================================================
 // Arguments
 // ====================================================
 
-export interface CartFeeQueryArgs {
+export interface WpCartFeeQueryArgs {
   id: string;
 }
-export interface CartItemQueryArgs {
+export interface WpCartItemQueryArgs {
   key: string;
 }
-export interface CategoriesQueryArgs {
+export interface WpCategoriesQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13289,15 +13291,15 @@ export interface CategoriesQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToCategoryConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToCategoryConnectionWhereArgs>;
 }
-export interface CategoryQueryArgs {
+export interface WpCategoryQueryArgs {
   id: string;
 }
-export interface CommentQueryArgs {
+export interface WpCommentQueryArgs {
   id: string;
 }
-export interface CommentsQueryArgs {
+export interface WpCommentsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13307,12 +13309,12 @@ export interface CommentsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToCommentConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToCommentConnectionWhereArgs>;
 }
-export interface CouponQueryArgs {
+export interface WpCouponQueryArgs {
   id: string;
 }
-export interface CouponByQueryArgs {
+export interface WpCouponByQueryArgs {
   /** Get the coupon by its global ID */
   id?: Maybe<string>;
   /** Get the coupon by its database ID */
@@ -13320,7 +13322,7 @@ export interface CouponByQueryArgs {
   /** Get the coupon by its code */
   code?: Maybe<string>;
 }
-export interface CouponsQueryArgs {
+export interface WpCouponsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13330,16 +13332,16 @@ export interface CouponsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToCouponConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToCouponConnectionWhereArgs>;
 }
-export interface CustomerQueryArgs {
+export interface WpCustomerQueryArgs {
   id?: Maybe<string>;
 }
-export interface CustomerByQueryArgs {
+export interface WpCustomerByQueryArgs {
   /** Get the customer by their database ID */
   customerId: number;
 }
-export interface CustomersQueryArgs {
+export interface WpCustomersQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13349,12 +13351,12 @@ export interface CustomersQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToCustomerConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToCustomerConnectionWhereArgs>;
 }
-export interface MediaItemQueryArgs {
+export interface WpMediaItemQueryArgs {
   id: string;
 }
-export interface MediaItemByQueryArgs {
+export interface WpMediaItemByQueryArgs {
   /** Get the object by its global ID */
   id?: Maybe<string>;
   /** Get the mediaItem by its database ID */
@@ -13364,7 +13366,7 @@ export interface MediaItemByQueryArgs {
   /** Get the mediaItem by its slug (only available for non-hierarchical types) */
   slug?: Maybe<string>;
 }
-export interface MediaItemsQueryArgs {
+export interface WpMediaItemsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13374,12 +13376,12 @@ export interface MediaItemsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToMediaItemConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToMediaItemConnectionWhereArgs>;
 }
-export interface MenuQueryArgs {
+export interface WpMenuQueryArgs {
   id: string;
 }
-export interface MenuItemsQueryArgs {
+export interface WpMenuItemsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13389,12 +13391,12 @@ export interface MenuItemsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToMenuItemConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToMenuItemConnectionWhereArgs>;
 }
-export interface MenuItemQueryArgs {
+export interface WpMenuItemQueryArgs {
   id: string;
 }
-export interface MenusQueryArgs {
+export interface WpMenusQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13404,16 +13406,16 @@ export interface MenusQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToMenuConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToMenuConnectionWhereArgs>;
 }
-export interface NodeQueryArgs {
+export interface WpNodeQueryArgs {
   /** The ID of an object */
   id: string;
 }
-export interface OrderQueryArgs {
+export interface WpOrderQueryArgs {
   id: string;
 }
-export interface OrderByQueryArgs {
+export interface WpOrderByQueryArgs {
   /** Get the order by its global ID */
   id?: Maybe<string>;
   /** Get the order by its database ID */
@@ -13421,7 +13423,7 @@ export interface OrderByQueryArgs {
   /** Get the order by its order number */
   orderKey?: Maybe<string>;
 }
-export interface OrdersQueryArgs {
+export interface WpOrdersQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13431,12 +13433,12 @@ export interface OrdersQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToOrderConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToOrderConnectionWhereArgs>;
 }
-export interface PaHindQueryArgs {
+export interface WpPaHindQueryArgs {
   id: string;
 }
-export interface PaHindsQueryArgs {
+export interface WpPaHindsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13446,12 +13448,12 @@ export interface PaHindsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaHindConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaHindConnectionWhereArgs>;
 }
-export interface PaHulkQueryArgs {
+export interface WpPaHulkQueryArgs {
   id: string;
 }
-export interface PaHulksQueryArgs {
+export interface WpPaHulksQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13461,12 +13463,12 @@ export interface PaHulksQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaHulkConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaHulkConnectionWhereArgs>;
 }
-export interface PaKasutusaegQueryArgs {
+export interface WpPaKasutusaegQueryArgs {
   id: string;
 }
-export interface PaKasutusaegsQueryArgs {
+export interface WpPaKasutusaegsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13476,12 +13478,12 @@ export interface PaKasutusaegsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaKasutusaegConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaKasutusaegConnectionWhereArgs>;
 }
-export interface PaKogusQueryArgs {
+export interface WpPaKogusQueryArgs {
   id: string;
 }
-export interface PaKogusesQueryArgs {
+export interface WpPaKogusesQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13491,12 +13493,12 @@ export interface PaKogusesQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaKogusConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaKogusConnectionWhereArgs>;
 }
-export interface PaKontuurQueryArgs {
+export interface WpPaKontuurQueryArgs {
   id: string;
 }
-export interface PaKontuursQueryArgs {
+export interface WpPaKontuursQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13506,12 +13508,12 @@ export interface PaKontuursQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaKontuurConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaKontuurConnectionWhereArgs>;
 }
-export interface PaKoostisainedQueryArgs {
+export interface WpPaKoostisainedQueryArgs {
   id: string;
 }
-export interface PaKoostisainedsQueryArgs {
+export interface WpPaKoostisainedsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13521,12 +13523,12 @@ export interface PaKoostisainedsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaKoostisainedConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaKoostisainedConnectionWhereArgs>;
 }
-export interface PaLaadimisaegQueryArgs {
+export interface WpPaLaadimisaegQueryArgs {
   id: string;
 }
-export interface PaLaadimisaegsQueryArgs {
+export interface WpPaLaadimisaegsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13536,12 +13538,12 @@ export interface PaLaadimisaegsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaLaadimisaegConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaLaadimisaegConnectionWhereArgs>;
 }
-export interface PaMaterjalQueryArgs {
+export interface WpPaMaterjalQueryArgs {
   id: string;
 }
-export interface PaMaterjalsQueryArgs {
+export interface WpPaMaterjalsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13551,12 +13553,12 @@ export interface PaMaterjalsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaMaterjalConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaMaterjalConnectionWhereArgs>;
 }
-export interface PaMuratasaQueryArgs {
+export interface WpPaMuratasaQueryArgs {
   id: string;
 }
-export interface PaMuratasasQueryArgs {
+export interface WpPaMuratasasQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13566,12 +13568,12 @@ export interface PaMuratasasQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaMuratasaConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaMuratasaConnectionWhereArgs>;
 }
-export interface PaOhutusQueryArgs {
+export interface WpPaOhutusQueryArgs {
   id: string;
 }
-export interface PaOhutusesQueryArgs {
+export interface WpPaOhutusesQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13581,12 +13583,12 @@ export interface PaOhutusesQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaOhutusConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaOhutusConnectionWhereArgs>;
 }
-export interface PaPatareidQueryArgs {
+export interface WpPaPatareidQueryArgs {
   id: string;
 }
-export interface PaPatareidsQueryArgs {
+export interface WpPaPatareidsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13596,12 +13598,12 @@ export interface PaPatareidsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaPatareidConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaPatareidConnectionWhereArgs>;
 }
-export interface PaSuurusQueryArgs {
+export interface WpPaSuurusQueryArgs {
   id: string;
 }
-export interface PaSuurusesQueryArgs {
+export interface WpPaSuurusesQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13611,12 +13613,12 @@ export interface PaSuurusesQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaSuurusConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaSuurusConnectionWhereArgs>;
 }
-export interface PaVariantQueryArgs {
+export interface WpPaVariantQueryArgs {
   id: string;
 }
-export interface PaVariantsQueryArgs {
+export interface WpPaVariantsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13626,12 +13628,12 @@ export interface PaVariantsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaVariantConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaVariantConnectionWhereArgs>;
 }
-export interface PaVarvQueryArgs {
+export interface WpPaVarvQueryArgs {
   id: string;
 }
-export interface PaVarvsQueryArgs {
+export interface WpPaVarvsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13641,12 +13643,12 @@ export interface PaVarvsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaVarvConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaVarvConnectionWhereArgs>;
 }
-export interface PaVeekindlusQueryArgs {
+export interface WpPaVeekindlusQueryArgs {
   id: string;
 }
-export interface PaVeekindlusesQueryArgs {
+export interface WpPaVeekindlusesQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13656,12 +13658,12 @@ export interface PaVeekindlusesQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPaVeekindlusConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPaVeekindlusConnectionWhereArgs>;
 }
-export interface PageQueryArgs {
+export interface WpPageQueryArgs {
   id: string;
 }
-export interface PageByQueryArgs {
+export interface WpPageByQueryArgs {
   /** Get the object by its global ID */
   id?: Maybe<string>;
   /** Get the page by its database ID */
@@ -13669,7 +13671,7 @@ export interface PageByQueryArgs {
   /** Get the page by its uri */
   uri?: Maybe<string>;
 }
-export interface PagesQueryArgs {
+export interface WpPagesQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13679,12 +13681,12 @@ export interface PagesQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPageConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPageConnectionWhereArgs>;
 }
-export interface PluginQueryArgs {
+export interface WpPluginQueryArgs {
   id: string;
 }
-export interface PluginsQueryArgs {
+export interface WpPluginsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13694,10 +13696,10 @@ export interface PluginsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
 }
-export interface PostQueryArgs {
+export interface WpPostQueryArgs {
   id: string;
 }
-export interface PostByQueryArgs {
+export interface WpPostByQueryArgs {
   /** Get the object by its global ID */
   id?: Maybe<string>;
   /** Get the post by its database ID */
@@ -13707,7 +13709,7 @@ export interface PostByQueryArgs {
   /** Get the post by its slug (only available for non-hierarchical types) */
   slug?: Maybe<string>;
 }
-export interface PostsQueryArgs {
+export interface WpPostsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13717,18 +13719,18 @@ export interface PostsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToPostConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToPostConnectionWhereArgs>;
 }
-export interface ProductQueryArgs {
+export interface WpProductQueryArgs {
   id: string;
 }
-export interface ProductByQueryArgs {
+export interface WpProductByQueryArgs {
   /** Get the product by its global ID */
   id?: Maybe<string>;
   /** Get the product by its database ID */
   productId?: Maybe<number>;
 }
-export interface ProductCategoriesQueryArgs {
+export interface WpProductCategoriesQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13738,15 +13740,15 @@ export interface ProductCategoriesQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToProductCategoryConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToProductCategoryConnectionWhereArgs>;
 }
-export interface ProductCategoryQueryArgs {
+export interface WpProductCategoryQueryArgs {
   id: string;
 }
-export interface ProductTagQueryArgs {
+export interface WpProductTagQueryArgs {
   id: string;
 }
-export interface ProductTagsQueryArgs {
+export interface WpProductTagsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13756,12 +13758,12 @@ export interface ProductTagsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToProductTagConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToProductTagConnectionWhereArgs>;
 }
-export interface ProductTypeQueryArgs {
+export interface WpProductTypeQueryArgs {
   id: string;
 }
-export interface ProductTypesQueryArgs {
+export interface WpProductTypesQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13771,15 +13773,15 @@ export interface ProductTypesQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToProductTypeConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToProductTypeConnectionWhereArgs>;
 }
-export interface ProductVariationQueryArgs {
+export interface WpProductVariationQueryArgs {
   /** Get the product variation by its global ID */
   id?: Maybe<string>;
   /** Get the product variation by its database ID */
   variationId?: Maybe<number>;
 }
-export interface ProductsQueryArgs {
+export interface WpProductsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13789,18 +13791,18 @@ export interface ProductsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToProductConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToProductConnectionWhereArgs>;
 }
-export interface RefundQueryArgs {
+export interface WpRefundQueryArgs {
   id: string;
 }
-export interface RefundByQueryArgs {
+export interface WpRefundByQueryArgs {
   /** Get the refund by its global ID */
   id?: Maybe<string>;
   /** Get the refund by its database ID */
   refundId?: Maybe<number>;
 }
-export interface RefundsQueryArgs {
+export interface WpRefundsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13810,12 +13812,12 @@ export interface RefundsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToRefundConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToRefundConnectionWhereArgs>;
 }
-export interface RevisionQueryArgs {
+export interface WpRevisionQueryArgs {
   id: string;
 }
-export interface RevisionByQueryArgs {
+export interface WpRevisionByQueryArgs {
   /** Get the object by its global ID */
   id?: Maybe<string>;
   /** Get the revision by its database ID */
@@ -13825,7 +13827,7 @@ export interface RevisionByQueryArgs {
   /** Get the revision by its slug (only available for non-hierarchical types) */
   slug?: Maybe<string>;
 }
-export interface RevisionsQueryArgs {
+export interface WpRevisionsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13835,12 +13837,12 @@ export interface RevisionsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToRevisionConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToRevisionConnectionWhereArgs>;
 }
-export interface ShippingClassQueryArgs {
+export interface WpShippingClassQueryArgs {
   id: string;
 }
-export interface ShippingClassesQueryArgs {
+export interface WpShippingClassesQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13850,15 +13852,15 @@ export interface ShippingClassesQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToShippingClassConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToShippingClassConnectionWhereArgs>;
 }
-export interface ShippingMethodQueryArgs {
+export interface WpShippingMethodQueryArgs {
   /** Get the shipping method by its global ID */
   id?: Maybe<string>;
   /** Get the shipping method by its database ID */
   methodId?: Maybe<string>;
 }
-export interface ShippingMethodsQueryArgs {
+export interface WpShippingMethodsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13868,10 +13870,10 @@ export interface ShippingMethodsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
 }
-export interface TagQueryArgs {
+export interface WpTagQueryArgs {
   id: string;
 }
-export interface TagsQueryArgs {
+export interface WpTagsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13881,15 +13883,15 @@ export interface TagsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToTagConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToTagConnectionWhereArgs>;
 }
-export interface TaxRateQueryArgs {
+export interface WpTaxRateQueryArgs {
   /** Get the tax rate by its global ID */
   id?: Maybe<string>;
   /** Get the tax rate by its database ID */
   rateId?: Maybe<number>;
 }
-export interface TaxRatesQueryArgs {
+export interface WpTaxRatesQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13899,12 +13901,12 @@ export interface TaxRatesQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToTaxRateConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToTaxRateConnectionWhereArgs>;
 }
-export interface ThemeQueryArgs {
+export interface WpThemeQueryArgs {
   id: string;
 }
-export interface ThemesQueryArgs {
+export interface WpThemesQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13914,10 +13916,10 @@ export interface ThemesQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
 }
-export interface UserQueryArgs {
+export interface WpUserQueryArgs {
   id: string;
 }
-export interface UserRolesQueryArgs {
+export interface WpUserRolesQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13927,10 +13929,10 @@ export interface UserRolesQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
 }
-export interface UserRoleQueryArgs {
+export interface WpUserRoleQueryArgs {
   id: string;
 }
-export interface UsersQueryArgs {
+export interface WpUsersQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13940,12 +13942,12 @@ export interface UsersQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToUserConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToUserConnectionWhereArgs>;
 }
-export interface VisibleProductQueryArgs {
+export interface WpVisibleProductQueryArgs {
   id: string;
 }
-export interface VisibleProductsQueryArgs {
+export interface WpVisibleProductsQueryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13955,9 +13957,9 @@ export interface VisibleProductsQueryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<RootQueryToVisibleProductConnectionWhereArgs>;
+  where?: Maybe<WpRootQueryToVisibleProductConnectionWhereArgs>;
 }
-export interface AppliedCouponsCartArgs {
+export interface AppliedCouponsWpCartArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13967,9 +13969,9 @@ export interface AppliedCouponsCartArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<CartToCouponConnectionWhereArgs>;
+  where?: Maybe<WpCartToCouponConnectionWhereArgs>;
 }
-export interface ContentsCartArgs {
+export interface ContentsWpCartArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13979,9 +13981,9 @@ export interface ContentsCartArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<CartToCartItemConnectionWhereArgs>;
+  where?: Maybe<WpCartToCartItemConnectionWhereArgs>;
 }
-export interface ExcludedProductCategoriesCouponArgs {
+export interface ExcludedProductCategoriesWpCouponArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -13991,9 +13993,9 @@ export interface ExcludedProductCategoriesCouponArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<CouponToProductCategoryConnectionWhereArgs>;
+  where?: Maybe<WpCouponToProductCategoryConnectionWhereArgs>;
 }
-export interface ExcludedProductsCouponArgs {
+export interface ExcludedProductsWpCouponArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14003,9 +14005,9 @@ export interface ExcludedProductsCouponArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<CouponToProductConnectionWhereArgs>;
+  where?: Maybe<WpCouponToProductConnectionWhereArgs>;
 }
-export interface ProductCategoriesCouponArgs {
+export interface ProductCategoriesWpCouponArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14015,9 +14017,9 @@ export interface ProductCategoriesCouponArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<CouponToProductCategoryConnectionWhereArgs>;
+  where?: Maybe<WpCouponToProductCategoryConnectionWhereArgs>;
 }
-export interface ProductsCouponArgs {
+export interface ProductsWpCouponArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14027,9 +14029,9 @@ export interface ProductsCouponArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<CouponToProductConnectionWhereArgs>;
+  where?: Maybe<WpCouponToProductConnectionWhereArgs>;
 }
-export interface UsedByCouponArgs {
+export interface UsedByWpCouponArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14039,9 +14041,9 @@ export interface UsedByCouponArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<CouponToCustomerConnectionWhereArgs>;
+  where?: Maybe<WpCouponToCustomerConnectionWhereArgs>;
 }
-export interface ChildrenProductCategoryArgs {
+export interface ChildrenWpProductCategoryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14051,9 +14053,9 @@ export interface ChildrenProductCategoryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<ProductCategoryToProductCategoryConnectionWhereArgs>;
+  where?: Maybe<WpProductCategoryToProductCategoryConnectionWhereArgs>;
 }
-export interface ProductsProductCategoryArgs {
+export interface ProductsWpProductCategoryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14063,25 +14065,25 @@ export interface ProductsProductCategoryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<ProductCategoryToProductConnectionWhereArgs>;
+  where?: Maybe<WpProductCategoryToProductConnectionWhereArgs>;
 }
-export interface ConnectedPostTypeNamesTaxonomyArgs {
+export interface ConnectedPostTypeNamesWpTaxonomyArgs {
   /** Select which post types to limit the results to */
-  types?: Maybe<(Maybe<PostTypeEnum>)[]>;
+  types?: Maybe<(Maybe<WpPostTypeEnum>)[]>;
 }
-export interface ConnectedPostTypesTaxonomyArgs {
+export interface ConnectedPostTypesWpTaxonomyArgs {
   /** Select which post types to limit the results to */
-  types?: Maybe<(Maybe<PostTypeEnum>)[]>;
+  types?: Maybe<(Maybe<WpPostTypeEnum>)[]>;
 }
-export interface ConnectedTaxonomiesPostTypeArgs {
+export interface ConnectedTaxonomiesWpPostTypeArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface ConnectedTaxonomyNamesPostTypeArgs {
+export interface ConnectedTaxonomyNamesWpPostTypeArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface AttributesProductArgs {
+export interface AttributesWpProductArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14091,19 +14093,7 @@ export interface AttributesProductArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
 }
-export interface CategoriesProductArgs {
-  /** The number of items to return after the referenced "after" cursor */
-  first?: Maybe<number>;
-
-  last?: Maybe<number>;
-  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
-  after?: Maybe<string>;
-  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
-  before?: Maybe<string>;
-  /** Arguments for filtering the connection */
-  where?: Maybe<ProductToProductCategoryConnectionWhereArgs>;
-}
-export interface CrossSellProductArgs {
+export interface CategoriesWpProductArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14113,19 +14103,9 @@ export interface CrossSellProductArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<ProductToProductConnectionWhereArgs>;
+  where?: Maybe<WpProductToProductCategoryConnectionWhereArgs>;
 }
-export interface DefaultAttributesProductArgs {
-  /** The number of items to return after the referenced "after" cursor */
-  first?: Maybe<number>;
-
-  last?: Maybe<number>;
-  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
-  after?: Maybe<string>;
-  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
-  before?: Maybe<string>;
-}
-export interface GalleryImagesProductArgs {
+export interface CrossSellWpProductArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14135,9 +14115,19 @@ export interface GalleryImagesProductArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<ProductToMediaItemConnectionWhereArgs>;
+  where?: Maybe<WpProductToProductConnectionWhereArgs>;
 }
-export interface GroupedProductArgs {
+export interface DefaultAttributesWpProductArgs {
+  /** The number of items to return after the referenced "after" cursor */
+  first?: Maybe<number>;
+
+  last?: Maybe<number>;
+  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
+  after?: Maybe<string>;
+  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
+  before?: Maybe<string>;
+}
+export interface GalleryImagesWpProductArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14147,17 +14137,29 @@ export interface GroupedProductArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<ProductToProductConnectionWhereArgs>;
+  where?: Maybe<WpProductToMediaItemConnectionWhereArgs>;
 }
-export interface PriceProductArgs {
+export interface GroupedWpProductArgs {
+  /** The number of items to return after the referenced "after" cursor */
+  first?: Maybe<number>;
+
+  last?: Maybe<number>;
+  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
+  after?: Maybe<string>;
+  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
+  before?: Maybe<string>;
+  /** Arguments for filtering the connection */
+  where?: Maybe<WpProductToProductConnectionWhereArgs>;
+}
+export interface PriceWpProductArgs {
   /** Show maximum price (Variable type product) */
   max?: Maybe<boolean>;
 }
-export interface RegularPriceProductArgs {
+export interface RegularPriceWpProductArgs {
   /** Show maximum price (Variable type product) */
   max?: Maybe<boolean>;
 }
-export interface RelatedProductArgs {
+export interface RelatedWpProductArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14167,13 +14169,13 @@ export interface RelatedProductArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<ProductToProductConnectionWhereArgs>;
+  where?: Maybe<WpProductToProductConnectionWhereArgs>;
 }
-export interface SalePriceProductArgs {
+export interface SalePriceWpProductArgs {
   /** Show maximum price (Variable type product) */
   max?: Maybe<boolean>;
 }
-export interface TagsProductArgs {
+export interface TagsWpProductArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14183,9 +14185,9 @@ export interface TagsProductArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<ProductToProductTagConnectionWhereArgs>;
+  where?: Maybe<WpProductToProductTagConnectionWhereArgs>;
 }
-export interface UpsellProductArgs {
+export interface UpsellWpProductArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14195,9 +14197,9 @@ export interface UpsellProductArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<ProductToProductConnectionWhereArgs>;
+  where?: Maybe<WpProductToProductConnectionWhereArgs>;
 }
-export interface VariationsProductArgs {
+export interface VariationsWpProductArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14207,17 +14209,17 @@ export interface VariationsProductArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<ProductToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpProductToProductVariationConnectionWhereArgs>;
 }
-export interface AncestorsMediaItemArgs {
+export interface AncestorsWpMediaItemArgs {
   /** The types of ancestors to check for. Defaults to the same type as the current object */
-  types?: Maybe<(Maybe<PostTypeEnum>)[]>;
+  types?: Maybe<(Maybe<WpPostTypeEnum>)[]>;
 }
-export interface CaptionMediaItemArgs {
+export interface CaptionWpMediaItemArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface CommentsMediaItemArgs {
+export interface CommentsWpMediaItemArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14227,45 +14229,45 @@ export interface CommentsMediaItemArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<MediaItemToCommentConnectionWhereArgs>;
+  where?: Maybe<WpMediaItemToCommentConnectionWhereArgs>;
 }
-export interface ContentMediaItemArgs {
+export interface ContentWpMediaItemArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface DescriptionMediaItemArgs {
+export interface DescriptionWpMediaItemArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface ExcerptMediaItemArgs {
+export interface ExcerptWpMediaItemArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface SourceUrlMediaItemArgs {
+export interface SourceUrlWpMediaItemArgs {
   /** Size of the MediaItem to return */
-  size?: Maybe<MediaItemSizeEnum>;
+  size?: Maybe<WpMediaItemSizeEnum>;
 }
-export interface TermNamesMediaItemArgs {
+export interface TermNamesWpMediaItemArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface TermsMediaItemArgs {
+export interface TermsWpMediaItemArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface TermSlugsMediaItemArgs {
+export interface TermSlugsWpMediaItemArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface TitleMediaItemArgs {
+export interface TitleWpMediaItemArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface AncestorsPostArgs {
+export interface AncestorsWpPostArgs {
   /** The types of ancestors to check for. Defaults to the same type as the current object */
-  types?: Maybe<(Maybe<PostTypeEnum>)[]>;
+  types?: Maybe<(Maybe<WpPostTypeEnum>)[]>;
 }
-export interface CategoriesPostArgs {
+export interface CategoriesWpPostArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14275,9 +14277,9 @@ export interface CategoriesPostArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PostToCategoryConnectionWhereArgs>;
+  where?: Maybe<WpPostToCategoryConnectionWhereArgs>;
 }
-export interface CommentsPostArgs {
+export interface CommentsWpPostArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14287,17 +14289,17 @@ export interface CommentsPostArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PostToCommentConnectionWhereArgs>;
+  where?: Maybe<WpPostToCommentConnectionWhereArgs>;
 }
-export interface ContentPostArgs {
+export interface ContentWpPostArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface ExcerptPostArgs {
+export interface ExcerptWpPostArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface RevisionsPostArgs {
+export interface RevisionsWpPostArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14307,9 +14309,9 @@ export interface RevisionsPostArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PostToRevisionConnectionWhereArgs>;
+  where?: Maybe<WpPostToRevisionConnectionWhereArgs>;
 }
-export interface TagsPostArgs {
+export interface TagsWpPostArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14319,33 +14321,33 @@ export interface TagsPostArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PostToTagConnectionWhereArgs>;
+  where?: Maybe<WpPostToTagConnectionWhereArgs>;
 }
-export interface TermNamesPostArgs {
+export interface TermNamesWpPostArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface TermsPostArgs {
+export interface TermsWpPostArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface TermSlugsPostArgs {
+export interface TermSlugsWpPostArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface TitlePostArgs {
+export interface TitleWpPostArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface AvatarUserArgs {
+export interface AvatarWpUserArgs {
   /** The size attribute of the avatar field can be used to fetch avatars of different sizes. The value corresponds to the dimension in pixels to fetch. The default is 96 pixels. */
   size?: number;
   /** Whether to always show the default image, never the Gravatar. Default false */
   forceDefault?: Maybe<boolean>;
 
-  rating?: Maybe<AvatarRatingEnum>;
+  rating?: Maybe<WpAvatarRatingEnum>;
 }
-export interface CommentsUserArgs {
+export interface CommentsWpUserArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14355,9 +14357,9 @@ export interface CommentsUserArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<UserToCommentConnectionWhereArgs>;
+  where?: Maybe<WpUserToCommentConnectionWhereArgs>;
 }
-export interface MediaItemsUserArgs {
+export interface MediaItemsWpUserArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14367,9 +14369,9 @@ export interface MediaItemsUserArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<UserToMediaItemConnectionWhereArgs>;
+  where?: Maybe<WpUserToMediaItemConnectionWhereArgs>;
 }
-export interface PagesUserArgs {
+export interface PagesWpUserArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14379,9 +14381,9 @@ export interface PagesUserArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<UserToPageConnectionWhereArgs>;
+  where?: Maybe<WpUserToPageConnectionWhereArgs>;
 }
-export interface PostsUserArgs {
+export interface PostsWpUserArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14391,9 +14393,9 @@ export interface PostsUserArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<UserToPostConnectionWhereArgs>;
+  where?: Maybe<WpUserToPostConnectionWhereArgs>;
 }
-export interface RevisionsUserArgs {
+export interface RevisionsWpUserArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14403,9 +14405,9 @@ export interface RevisionsUserArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<UserToRevisionConnectionWhereArgs>;
+  where?: Maybe<WpUserToRevisionConnectionWhereArgs>;
 }
-export interface RolesUserArgs {
+export interface RolesWpUserArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14415,7 +14417,7 @@ export interface RolesUserArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
 }
-export interface ChildrenCommentArgs {
+export interface ChildrenWpCommentArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14425,17 +14427,17 @@ export interface ChildrenCommentArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<CommentToCommentConnectionWhereArgs>;
+  where?: Maybe<WpCommentToCommentConnectionWhereArgs>;
 }
-export interface ContentCommentArgs {
+export interface ContentWpCommentArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface AncestorsPageArgs {
+export interface AncestorsWpPageArgs {
   /** The types of ancestors to check for. Defaults to the same type as the current object */
-  types?: Maybe<(Maybe<PostTypeEnum>)[]>;
+  types?: Maybe<(Maybe<WpPostTypeEnum>)[]>;
 }
-export interface ChildPagesPageArgs {
+export interface ChildPagesWpPageArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14445,9 +14447,9 @@ export interface ChildPagesPageArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PageToPageConnectionWhereArgs>;
+  where?: Maybe<WpPageToPageConnectionWhereArgs>;
 }
-export interface CommentsPageArgs {
+export interface CommentsWpPageArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14457,17 +14459,17 @@ export interface CommentsPageArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PageToCommentConnectionWhereArgs>;
+  where?: Maybe<WpPageToCommentConnectionWhereArgs>;
 }
-export interface ContentPageArgs {
+export interface ContentWpPageArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface ExcerptPageArgs {
+export interface ExcerptWpPageArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface RevisionsPageArgs {
+export interface RevisionsWpPageArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14477,53 +14479,53 @@ export interface RevisionsPageArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PageToRevisionConnectionWhereArgs>;
+  where?: Maybe<WpPageToRevisionConnectionWhereArgs>;
 }
-export interface TermNamesPageArgs {
+export interface TermNamesWpPageArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface TermsPageArgs {
+export interface TermsWpPageArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface TermSlugsPageArgs {
+export interface TermSlugsWpPageArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface TitlePageArgs {
+export interface TitleWpPageArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface AncestorsRevisionArgs {
+export interface AncestorsWpRevisionArgs {
   /** The types of ancestors to check for. Defaults to the same type as the current object */
-  types?: Maybe<(Maybe<PostTypeEnum>)[]>;
+  types?: Maybe<(Maybe<WpPostTypeEnum>)[]>;
 }
-export interface ContentRevisionArgs {
+export interface ContentWpRevisionArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface ExcerptRevisionArgs {
+export interface ExcerptWpRevisionArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface TermNamesRevisionArgs {
+export interface TermNamesWpRevisionArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface TermsRevisionArgs {
+export interface TermsWpRevisionArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface TermSlugsRevisionArgs {
+export interface TermSlugsWpRevisionArgs {
   /** Select which taxonomies to limit the results to */
-  taxonomies?: Maybe<(Maybe<TaxonomyEnum>)[]>;
+  taxonomies?: Maybe<(Maybe<WpTaxonomyEnum>)[]>;
 }
-export interface TitleRevisionArgs {
+export interface TitleWpRevisionArgs {
   /** Format of the field output */
-  format?: Maybe<PostObjectFieldFormatEnum>;
+  format?: Maybe<WpPostObjectFieldFormatEnum>;
 }
-export interface ChildrenCategoryArgs {
+export interface ChildrenWpCategoryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14533,9 +14535,9 @@ export interface ChildrenCategoryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<CategoryToCategoryConnectionWhereArgs>;
+  where?: Maybe<WpCategoryToCategoryConnectionWhereArgs>;
 }
-export interface PostsCategoryArgs {
+export interface PostsWpCategoryArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14545,9 +14547,9 @@ export interface PostsCategoryArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<CategoryToPostConnectionWhereArgs>;
+  where?: Maybe<WpCategoryToPostConnectionWhereArgs>;
 }
-export interface PostsTagArgs {
+export interface PostsWpTagArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14557,9 +14559,9 @@ export interface PostsTagArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<TagToPostConnectionWhereArgs>;
+  where?: Maybe<WpTagToPostConnectionWhereArgs>;
 }
-export interface ProductsProductTagArgs {
+export interface ProductsWpProductTagArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14569,9 +14571,9 @@ export interface ProductsProductTagArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<ProductTagToProductConnectionWhereArgs>;
+  where?: Maybe<WpProductTagToProductConnectionWhereArgs>;
 }
-export interface ProductsPaHindArgs {
+export interface ProductsWpPaHindArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14581,9 +14583,9 @@ export interface ProductsPaHindArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaHindToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaHindToProductConnectionWhereArgs>;
 }
-export interface VariationsPaHindArgs {
+export interface VariationsWpPaHindArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14593,9 +14595,9 @@ export interface VariationsPaHindArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaHindToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaHindToProductVariationConnectionWhereArgs>;
 }
-export interface AttributesProductVariationArgs {
+export interface AttributesWpProductVariationArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14605,19 +14607,7 @@ export interface AttributesProductVariationArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
 }
-export interface ProductsPaHulkArgs {
-  /** The number of items to return after the referenced "after" cursor */
-  first?: Maybe<number>;
-
-  last?: Maybe<number>;
-  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
-  after?: Maybe<string>;
-  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
-  before?: Maybe<string>;
-  /** Arguments for filtering the connection */
-  where?: Maybe<PaHulkToProductConnectionWhereArgs>;
-}
-export interface VariationsPaHulkArgs {
+export interface ProductsWpPaHulkArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14627,9 +14617,9 @@ export interface VariationsPaHulkArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaHulkToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaHulkToProductConnectionWhereArgs>;
 }
-export interface ProductsPaKasutusaegArgs {
+export interface VariationsWpPaHulkArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14639,9 +14629,9 @@ export interface ProductsPaKasutusaegArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaKasutusaegToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaHulkToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaKasutusaegArgs {
+export interface ProductsWpPaKasutusaegArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14651,9 +14641,9 @@ export interface VariationsPaKasutusaegArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaKasutusaegToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaKasutusaegToProductConnectionWhereArgs>;
 }
-export interface ProductsPaKogusArgs {
+export interface VariationsWpPaKasutusaegArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14663,9 +14653,9 @@ export interface ProductsPaKogusArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaKogusToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaKasutusaegToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaKogusArgs {
+export interface ProductsWpPaKogusArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14675,9 +14665,9 @@ export interface VariationsPaKogusArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaKogusToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaKogusToProductConnectionWhereArgs>;
 }
-export interface ProductsPaKontuurArgs {
+export interface VariationsWpPaKogusArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14687,9 +14677,9 @@ export interface ProductsPaKontuurArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaKontuurToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaKogusToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaKontuurArgs {
+export interface ProductsWpPaKontuurArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14699,9 +14689,9 @@ export interface VariationsPaKontuurArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaKontuurToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaKontuurToProductConnectionWhereArgs>;
 }
-export interface ProductsPaKoostisainedArgs {
+export interface VariationsWpPaKontuurArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14711,9 +14701,9 @@ export interface ProductsPaKoostisainedArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaKoostisainedToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaKontuurToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaKoostisainedArgs {
+export interface ProductsWpPaKoostisainedArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14723,9 +14713,9 @@ export interface VariationsPaKoostisainedArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaKoostisainedToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaKoostisainedToProductConnectionWhereArgs>;
 }
-export interface ProductsPaLaadimisaegArgs {
+export interface VariationsWpPaKoostisainedArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14735,9 +14725,9 @@ export interface ProductsPaLaadimisaegArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaLaadimisaegToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaKoostisainedToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaLaadimisaegArgs {
+export interface ProductsWpPaLaadimisaegArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14747,9 +14737,9 @@ export interface VariationsPaLaadimisaegArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaLaadimisaegToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaLaadimisaegToProductConnectionWhereArgs>;
 }
-export interface ProductsPaMaterjalArgs {
+export interface VariationsWpPaLaadimisaegArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14759,9 +14749,9 @@ export interface ProductsPaMaterjalArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaMaterjalToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaLaadimisaegToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaMaterjalArgs {
+export interface ProductsWpPaMaterjalArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14771,9 +14761,9 @@ export interface VariationsPaMaterjalArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaMaterjalToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaMaterjalToProductConnectionWhereArgs>;
 }
-export interface ProductsPaMuratasaArgs {
+export interface VariationsWpPaMaterjalArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14783,9 +14773,9 @@ export interface ProductsPaMuratasaArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaMuratasaToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaMaterjalToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaMuratasaArgs {
+export interface ProductsWpPaMuratasaArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14795,9 +14785,9 @@ export interface VariationsPaMuratasaArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaMuratasaToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaMuratasaToProductConnectionWhereArgs>;
 }
-export interface ProductsPaOhutusArgs {
+export interface VariationsWpPaMuratasaArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14807,9 +14797,9 @@ export interface ProductsPaOhutusArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaOhutusToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaMuratasaToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaOhutusArgs {
+export interface ProductsWpPaOhutusArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14819,9 +14809,9 @@ export interface VariationsPaOhutusArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaOhutusToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaOhutusToProductConnectionWhereArgs>;
 }
-export interface ProductsPaPatareidArgs {
+export interface VariationsWpPaOhutusArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14831,9 +14821,9 @@ export interface ProductsPaPatareidArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaPatareidToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaOhutusToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaPatareidArgs {
+export interface ProductsWpPaPatareidArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14843,9 +14833,9 @@ export interface VariationsPaPatareidArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaPatareidToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaPatareidToProductConnectionWhereArgs>;
 }
-export interface ProductsPaSuurusArgs {
+export interface VariationsWpPaPatareidArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14855,9 +14845,9 @@ export interface ProductsPaSuurusArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaSuurusToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaPatareidToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaSuurusArgs {
+export interface ProductsWpPaSuurusArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14867,9 +14857,9 @@ export interface VariationsPaSuurusArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaSuurusToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaSuurusToProductConnectionWhereArgs>;
 }
-export interface ProductsPaVariantArgs {
+export interface VariationsWpPaSuurusArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14879,9 +14869,9 @@ export interface ProductsPaVariantArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaVariantToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaSuurusToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaVariantArgs {
+export interface ProductsWpPaVariantArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14891,9 +14881,9 @@ export interface VariationsPaVariantArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaVariantToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaVariantToProductConnectionWhereArgs>;
 }
-export interface ProductsPaVarvArgs {
+export interface VariationsWpPaVariantArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14903,9 +14893,9 @@ export interface ProductsPaVarvArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaVarvToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaVariantToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaVarvArgs {
+export interface ProductsWpPaVarvArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14915,9 +14905,9 @@ export interface VariationsPaVarvArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaVarvToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaVarvToProductConnectionWhereArgs>;
 }
-export interface ProductsPaVeekindlusArgs {
+export interface VariationsWpPaVarvArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14927,9 +14917,9 @@ export interface ProductsPaVeekindlusArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaVeekindlusToProductConnectionWhereArgs>;
+  where?: Maybe<WpPaVarvToProductVariationConnectionWhereArgs>;
 }
-export interface VariationsPaVeekindlusArgs {
+export interface ProductsWpPaVeekindlusArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14939,9 +14929,9 @@ export interface VariationsPaVeekindlusArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<PaVeekindlusToProductVariationConnectionWhereArgs>;
+  where?: Maybe<WpPaVeekindlusToProductConnectionWhereArgs>;
 }
-export interface OrdersCustomerArgs {
+export interface VariationsWpPaVeekindlusArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14951,9 +14941,9 @@ export interface OrdersCustomerArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<CustomerToOrderConnectionWhereArgs>;
+  where?: Maybe<WpPaVeekindlusToProductVariationConnectionWhereArgs>;
 }
-export interface RefundsCustomerArgs {
+export interface OrdersWpCustomerArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -14963,39 +14953,9 @@ export interface RefundsCustomerArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<CustomerToRefundConnectionWhereArgs>;
+  where?: Maybe<WpCustomerToOrderConnectionWhereArgs>;
 }
-export interface CouponLinesOrderArgs {
-  /** The number of items to return after the referenced "after" cursor */
-  first?: Maybe<number>;
-
-  last?: Maybe<number>;
-  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
-  after?: Maybe<string>;
-  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
-  before?: Maybe<string>;
-}
-export interface FeeLinesOrderArgs {
-  /** The number of items to return after the referenced "after" cursor */
-  first?: Maybe<number>;
-
-  last?: Maybe<number>;
-  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
-  after?: Maybe<string>;
-  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
-  before?: Maybe<string>;
-}
-export interface LineItemsOrderArgs {
-  /** The number of items to return after the referenced "after" cursor */
-  first?: Maybe<number>;
-
-  last?: Maybe<number>;
-  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
-  after?: Maybe<string>;
-  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
-  before?: Maybe<string>;
-}
-export interface RefundsOrderArgs {
+export interface RefundsWpCustomerArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -15005,9 +14965,9 @@ export interface RefundsOrderArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<OrderToRefundConnectionWhereArgs>;
+  where?: Maybe<WpCustomerToRefundConnectionWhereArgs>;
 }
-export interface ShippingLinesOrderArgs {
+export interface CouponLinesWpOrderArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -15017,7 +14977,7 @@ export interface ShippingLinesOrderArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
 }
-export interface TaxLinesOrderArgs {
+export interface FeeLinesWpOrderArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -15027,7 +14987,7 @@ export interface TaxLinesOrderArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
 }
-export interface LineItemsRefundArgs {
+export interface LineItemsWpOrderArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -15037,19 +14997,7 @@ export interface LineItemsRefundArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
 }
-export interface MenuItemsMenuArgs {
-  /** The number of items to return after the referenced "after" cursor */
-  first?: Maybe<number>;
-
-  last?: Maybe<number>;
-  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
-  after?: Maybe<string>;
-  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
-  before?: Maybe<string>;
-  /** Arguments for filtering the connection */
-  where?: Maybe<MenuToMenuItemConnectionWhereArgs>;
-}
-export interface ChildItemsMenuItemArgs {
+export interface RefundsWpOrderArgs {
   /** The number of items to return after the referenced "after" cursor */
   first?: Maybe<number>;
 
@@ -15059,438 +15007,492 @@ export interface ChildItemsMenuItemArgs {
   /** Cursor used along with the "last" argument to reference where in the dataset to get data */
   before?: Maybe<string>;
   /** Arguments for filtering the connection */
-  where?: Maybe<MenuItemToMenuItemConnectionWhereArgs>;
+  where?: Maybe<WpOrderToRefundConnectionWhereArgs>;
 }
-export interface UpdateCategoryMutationArgs {
+export interface ShippingLinesWpOrderArgs {
+  /** The number of items to return after the referenced "after" cursor */
+  first?: Maybe<number>;
+
+  last?: Maybe<number>;
+  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
+  after?: Maybe<string>;
+  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
+  before?: Maybe<string>;
+}
+export interface TaxLinesWpOrderArgs {
+  /** The number of items to return after the referenced "after" cursor */
+  first?: Maybe<number>;
+
+  last?: Maybe<number>;
+  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
+  after?: Maybe<string>;
+  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
+  before?: Maybe<string>;
+}
+export interface LineItemsWpRefundArgs {
+  /** The number of items to return after the referenced "after" cursor */
+  first?: Maybe<number>;
+
+  last?: Maybe<number>;
+  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
+  after?: Maybe<string>;
+  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
+  before?: Maybe<string>;
+}
+export interface MenuItemsWpMenuArgs {
+  /** The number of items to return after the referenced "after" cursor */
+  first?: Maybe<number>;
+
+  last?: Maybe<number>;
+  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
+  after?: Maybe<string>;
+  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
+  before?: Maybe<string>;
+  /** Arguments for filtering the connection */
+  where?: Maybe<WpMenuToMenuItemConnectionWhereArgs>;
+}
+export interface ChildItemsWpMenuItemArgs {
+  /** The number of items to return after the referenced "after" cursor */
+  first?: Maybe<number>;
+
+  last?: Maybe<number>;
+  /** Cursor used along with the "first" argument to reference where in the dataset to get data */
+  after?: Maybe<string>;
+  /** Cursor used along with the "last" argument to reference where in the dataset to get data */
+  before?: Maybe<string>;
+  /** Arguments for filtering the connection */
+  where?: Maybe<WpMenuItemToMenuItemConnectionWhereArgs>;
+}
+export interface WpUpdateCategoryMutationArgs {
   /** Input for the UpdateCategory mutation */
-  input: UpdateCategoryInput;
+  input: WpUpdateCategoryInput;
 }
-export interface UpdatePaHindMutationArgs {
+export interface WpUpdatePaHindMutationArgs {
   /** Input for the UpdatePaHind mutation */
-  input: UpdatePaHindInput;
+  input: WpUpdatePaHindInput;
 }
-export interface UpdatePaHulkMutationArgs {
+export interface WpUpdatePaHulkMutationArgs {
   /** Input for the UpdatePaHulk mutation */
-  input: UpdatePaHulkInput;
+  input: WpUpdatePaHulkInput;
 }
-export interface UpdatePaKasutusaegMutationArgs {
+export interface WpUpdatePaKasutusaegMutationArgs {
   /** Input for the UpdatePaKasutusaeg mutation */
-  input: UpdatePaKasutusaegInput;
+  input: WpUpdatePaKasutusaegInput;
 }
-export interface UpdatePaKogusMutationArgs {
+export interface WpUpdatePaKogusMutationArgs {
   /** Input for the UpdatePaKogus mutation */
-  input: UpdatePaKogusInput;
+  input: WpUpdatePaKogusInput;
 }
-export interface UpdatePaKontuurMutationArgs {
+export interface WpUpdatePaKontuurMutationArgs {
   /** Input for the UpdatePaKontuur mutation */
-  input: UpdatePaKontuurInput;
+  input: WpUpdatePaKontuurInput;
 }
-export interface UpdatePaKoostisainedMutationArgs {
+export interface WpUpdatePaKoostisainedMutationArgs {
   /** Input for the UpdatePaKoostisained mutation */
-  input: UpdatePaKoostisainedInput;
+  input: WpUpdatePaKoostisainedInput;
 }
-export interface UpdatePaLaadimisaegMutationArgs {
+export interface WpUpdatePaLaadimisaegMutationArgs {
   /** Input for the UpdatePaLaadimisaeg mutation */
-  input: UpdatePaLaadimisaegInput;
+  input: WpUpdatePaLaadimisaegInput;
 }
-export interface UpdatePaMaterjalMutationArgs {
+export interface WpUpdatePaMaterjalMutationArgs {
   /** Input for the UpdatePaMaterjal mutation */
-  input: UpdatePaMaterjalInput;
+  input: WpUpdatePaMaterjalInput;
 }
-export interface UpdatePaMuratasaMutationArgs {
+export interface WpUpdatePaMuratasaMutationArgs {
   /** Input for the UpdatePaMuratasa mutation */
-  input: UpdatePaMuratasaInput;
+  input: WpUpdatePaMuratasaInput;
 }
-export interface UpdatePaOhutusMutationArgs {
+export interface WpUpdatePaOhutusMutationArgs {
   /** Input for the UpdatePaOhutus mutation */
-  input: UpdatePaOhutusInput;
+  input: WpUpdatePaOhutusInput;
 }
-export interface UpdatePaPatareidMutationArgs {
+export interface WpUpdatePaPatareidMutationArgs {
   /** Input for the UpdatePaPatareid mutation */
-  input: UpdatePaPatareidInput;
+  input: WpUpdatePaPatareidInput;
 }
-export interface UpdatePaSuurusMutationArgs {
+export interface WpUpdatePaSuurusMutationArgs {
   /** Input for the UpdatePaSuurus mutation */
-  input: UpdatePaSuurusInput;
+  input: WpUpdatePaSuurusInput;
 }
-export interface UpdatePaVariantMutationArgs {
+export interface WpUpdatePaVariantMutationArgs {
   /** Input for the UpdatePaVariant mutation */
-  input: UpdatePaVariantInput;
+  input: WpUpdatePaVariantInput;
 }
-export interface UpdatePaVarvMutationArgs {
+export interface WpUpdatePaVarvMutationArgs {
   /** Input for the UpdatePaVarv mutation */
-  input: UpdatePaVarvInput;
+  input: WpUpdatePaVarvInput;
 }
-export interface UpdatePaVeekindlusMutationArgs {
+export interface WpUpdatePaVeekindlusMutationArgs {
   /** Input for the UpdatePaVeekindlus mutation */
-  input: UpdatePaVeekindlusInput;
+  input: WpUpdatePaVeekindlusInput;
 }
-export interface UpdateProductCategoryMutationArgs {
+export interface WpUpdateProductCategoryMutationArgs {
   /** Input for the UpdateProductCategory mutation */
-  input: UpdateProductCategoryInput;
+  input: WpUpdateProductCategoryInput;
 }
-export interface UpdateProductTagMutationArgs {
+export interface WpUpdateProductTagMutationArgs {
   /** Input for the UpdateProductTag mutation */
-  input: UpdateProductTagInput;
+  input: WpUpdateProductTagInput;
 }
-export interface UpdateProductTypeMutationArgs {
+export interface WpUpdateProductTypeMutationArgs {
   /** Input for the UpdateProductType mutation */
-  input: UpdateProductTypeInput;
+  input: WpUpdateProductTypeInput;
 }
-export interface UpdateShippingClassMutationArgs {
+export interface WpUpdateShippingClassMutationArgs {
   /** Input for the UpdateShippingClass mutation */
-  input: UpdateShippingClassInput;
+  input: WpUpdateShippingClassInput;
 }
-export interface UpdateTagMutationArgs {
+export interface WpUpdateTagMutationArgs {
   /** Input for the UpdateTag mutation */
-  input: UpdateTagInput;
+  input: WpUpdateTagInput;
 }
-export interface UpdateVisibleProductMutationArgs {
+export interface WpUpdateVisibleProductMutationArgs {
   /** Input for the UpdateVisibleProduct mutation */
-  input: UpdateVisibleProductInput;
+  input: WpUpdateVisibleProductInput;
 }
-export interface AddFeeMutationArgs {
+export interface WpAddFeeMutationArgs {
   /** Input for the addFee mutation */
-  input: AddFeeInput;
+  input: WpAddFeeInput;
 }
-export interface AddToCartMutationArgs {
+export interface WpAddToCartMutationArgs {
   /** Input for the addToCart mutation */
-  input: AddToCartInput;
+  input: WpAddToCartInput;
 }
-export interface ApplyCouponMutationArgs {
+export interface WpApplyCouponMutationArgs {
   /** Input for the applyCoupon mutation */
-  input: ApplyCouponInput;
+  input: WpApplyCouponInput;
 }
-export interface CreateCategoryMutationArgs {
+export interface WpCreateCategoryMutationArgs {
   /** Input for the createCategory mutation */
-  input: CreateCategoryInput;
+  input: WpCreateCategoryInput;
 }
-export interface CreateCommentMutationArgs {
+export interface WpCreateCommentMutationArgs {
   /** Input for the createComment mutation */
-  input: CreateCommentInput;
+  input: WpCreateCommentInput;
 }
-export interface CreateMediaItemMutationArgs {
+export interface WpCreateMediaItemMutationArgs {
   /** Input for the createMediaItem mutation */
-  input: CreateMediaItemInput;
+  input: WpCreateMediaItemInput;
 }
-export interface CreatePaHindMutationArgs {
+export interface WpCreatePaHindMutationArgs {
   /** Input for the createPaHind mutation */
-  input: CreatePaHindInput;
+  input: WpCreatePaHindInput;
 }
-export interface CreatePaHulkMutationArgs {
+export interface WpCreatePaHulkMutationArgs {
   /** Input for the createPaHulk mutation */
-  input: CreatePaHulkInput;
+  input: WpCreatePaHulkInput;
 }
-export interface CreatePaKasutusaegMutationArgs {
+export interface WpCreatePaKasutusaegMutationArgs {
   /** Input for the createPaKasutusaeg mutation */
-  input: CreatePaKasutusaegInput;
+  input: WpCreatePaKasutusaegInput;
 }
-export interface CreatePaKogusMutationArgs {
+export interface WpCreatePaKogusMutationArgs {
   /** Input for the createPaKogus mutation */
-  input: CreatePaKogusInput;
+  input: WpCreatePaKogusInput;
 }
-export interface CreatePaKontuurMutationArgs {
+export interface WpCreatePaKontuurMutationArgs {
   /** Input for the createPaKontuur mutation */
-  input: CreatePaKontuurInput;
+  input: WpCreatePaKontuurInput;
 }
-export interface CreatePaKoostisainedMutationArgs {
+export interface WpCreatePaKoostisainedMutationArgs {
   /** Input for the createPaKoostisained mutation */
-  input: CreatePaKoostisainedInput;
+  input: WpCreatePaKoostisainedInput;
 }
-export interface CreatePaLaadimisaegMutationArgs {
+export interface WpCreatePaLaadimisaegMutationArgs {
   /** Input for the createPaLaadimisaeg mutation */
-  input: CreatePaLaadimisaegInput;
+  input: WpCreatePaLaadimisaegInput;
 }
-export interface CreatePaMaterjalMutationArgs {
+export interface WpCreatePaMaterjalMutationArgs {
   /** Input for the createPaMaterjal mutation */
-  input: CreatePaMaterjalInput;
+  input: WpCreatePaMaterjalInput;
 }
-export interface CreatePaMuratasaMutationArgs {
+export interface WpCreatePaMuratasaMutationArgs {
   /** Input for the createPaMuratasa mutation */
-  input: CreatePaMuratasaInput;
+  input: WpCreatePaMuratasaInput;
 }
-export interface CreatePaOhutusMutationArgs {
+export interface WpCreatePaOhutusMutationArgs {
   /** Input for the createPaOhutus mutation */
-  input: CreatePaOhutusInput;
+  input: WpCreatePaOhutusInput;
 }
-export interface CreatePaPatareidMutationArgs {
+export interface WpCreatePaPatareidMutationArgs {
   /** Input for the createPaPatareid mutation */
-  input: CreatePaPatareidInput;
+  input: WpCreatePaPatareidInput;
 }
-export interface CreatePaSuurusMutationArgs {
+export interface WpCreatePaSuurusMutationArgs {
   /** Input for the createPaSuurus mutation */
-  input: CreatePaSuurusInput;
+  input: WpCreatePaSuurusInput;
 }
-export interface CreatePaVariantMutationArgs {
+export interface WpCreatePaVariantMutationArgs {
   /** Input for the createPaVariant mutation */
-  input: CreatePaVariantInput;
+  input: WpCreatePaVariantInput;
 }
-export interface CreatePaVarvMutationArgs {
+export interface WpCreatePaVarvMutationArgs {
   /** Input for the createPaVarv mutation */
-  input: CreatePaVarvInput;
+  input: WpCreatePaVarvInput;
 }
-export interface CreatePaVeekindlusMutationArgs {
+export interface WpCreatePaVeekindlusMutationArgs {
   /** Input for the createPaVeekindlus mutation */
-  input: CreatePaVeekindlusInput;
+  input: WpCreatePaVeekindlusInput;
 }
-export interface CreatePageMutationArgs {
+export interface WpCreatePageMutationArgs {
   /** Input for the createPage mutation */
-  input: CreatePageInput;
+  input: WpCreatePageInput;
 }
-export interface CreatePostMutationArgs {
+export interface WpCreatePostMutationArgs {
   /** Input for the createPost mutation */
-  input: CreatePostInput;
+  input: WpCreatePostInput;
 }
-export interface CreateProductCategoryMutationArgs {
+export interface WpCreateProductCategoryMutationArgs {
   /** Input for the createProductCategory mutation */
-  input: CreateProductCategoryInput;
+  input: WpCreateProductCategoryInput;
 }
-export interface CreateProductTagMutationArgs {
+export interface WpCreateProductTagMutationArgs {
   /** Input for the createProductTag mutation */
-  input: CreateProductTagInput;
+  input: WpCreateProductTagInput;
 }
-export interface CreateProductTypeMutationArgs {
+export interface WpCreateProductTypeMutationArgs {
   /** Input for the createProductType mutation */
-  input: CreateProductTypeInput;
+  input: WpCreateProductTypeInput;
 }
-export interface CreateShippingClassMutationArgs {
+export interface WpCreateShippingClassMutationArgs {
   /** Input for the createShippingClass mutation */
-  input: CreateShippingClassInput;
+  input: WpCreateShippingClassInput;
 }
-export interface CreateTagMutationArgs {
+export interface WpCreateTagMutationArgs {
   /** Input for the createTag mutation */
-  input: CreateTagInput;
+  input: WpCreateTagInput;
 }
-export interface CreateUserMutationArgs {
+export interface WpCreateUserMutationArgs {
   /** Input for the createUser mutation */
-  input: CreateUserInput;
+  input: WpCreateUserInput;
 }
-export interface CreateVisibleProductMutationArgs {
+export interface WpCreateVisibleProductMutationArgs {
   /** Input for the createVisibleProduct mutation */
-  input: CreateVisibleProductInput;
+  input: WpCreateVisibleProductInput;
 }
-export interface DeleteCategoryMutationArgs {
+export interface WpDeleteCategoryMutationArgs {
   /** Input for the deleteCategory mutation */
-  input: DeleteCategoryInput;
+  input: WpDeleteCategoryInput;
 }
-export interface DeleteCommentMutationArgs {
+export interface WpDeleteCommentMutationArgs {
   /** Input for the deleteComment mutation */
-  input: DeleteCommentInput;
+  input: WpDeleteCommentInput;
 }
-export interface DeleteMediaItemMutationArgs {
+export interface WpDeleteMediaItemMutationArgs {
   /** Input for the deleteMediaItem mutation */
-  input: DeleteMediaItemInput;
+  input: WpDeleteMediaItemInput;
 }
-export interface DeletePaHindMutationArgs {
+export interface WpDeletePaHindMutationArgs {
   /** Input for the deletePaHind mutation */
-  input: DeletePaHindInput;
+  input: WpDeletePaHindInput;
 }
-export interface DeletePaHulkMutationArgs {
+export interface WpDeletePaHulkMutationArgs {
   /** Input for the deletePaHulk mutation */
-  input: DeletePaHulkInput;
+  input: WpDeletePaHulkInput;
 }
-export interface DeletePaKasutusaegMutationArgs {
+export interface WpDeletePaKasutusaegMutationArgs {
   /** Input for the deletePaKasutusaeg mutation */
-  input: DeletePaKasutusaegInput;
+  input: WpDeletePaKasutusaegInput;
 }
-export interface DeletePaKogusMutationArgs {
+export interface WpDeletePaKogusMutationArgs {
   /** Input for the deletePaKogus mutation */
-  input: DeletePaKogusInput;
+  input: WpDeletePaKogusInput;
 }
-export interface DeletePaKontuurMutationArgs {
+export interface WpDeletePaKontuurMutationArgs {
   /** Input for the deletePaKontuur mutation */
-  input: DeletePaKontuurInput;
+  input: WpDeletePaKontuurInput;
 }
-export interface DeletePaKoostisainedMutationArgs {
+export interface WpDeletePaKoostisainedMutationArgs {
   /** Input for the deletePaKoostisained mutation */
-  input: DeletePaKoostisainedInput;
+  input: WpDeletePaKoostisainedInput;
 }
-export interface DeletePaLaadimisaegMutationArgs {
+export interface WpDeletePaLaadimisaegMutationArgs {
   /** Input for the deletePaLaadimisaeg mutation */
-  input: DeletePaLaadimisaegInput;
+  input: WpDeletePaLaadimisaegInput;
 }
-export interface DeletePaMaterjalMutationArgs {
+export interface WpDeletePaMaterjalMutationArgs {
   /** Input for the deletePaMaterjal mutation */
-  input: DeletePaMaterjalInput;
+  input: WpDeletePaMaterjalInput;
 }
-export interface DeletePaMuratasaMutationArgs {
+export interface WpDeletePaMuratasaMutationArgs {
   /** Input for the deletePaMuratasa mutation */
-  input: DeletePaMuratasaInput;
+  input: WpDeletePaMuratasaInput;
 }
-export interface DeletePaOhutusMutationArgs {
+export interface WpDeletePaOhutusMutationArgs {
   /** Input for the deletePaOhutus mutation */
-  input: DeletePaOhutusInput;
+  input: WpDeletePaOhutusInput;
 }
-export interface DeletePaPatareidMutationArgs {
+export interface WpDeletePaPatareidMutationArgs {
   /** Input for the deletePaPatareid mutation */
-  input: DeletePaPatareidInput;
+  input: WpDeletePaPatareidInput;
 }
-export interface DeletePaSuurusMutationArgs {
+export interface WpDeletePaSuurusMutationArgs {
   /** Input for the deletePaSuurus mutation */
-  input: DeletePaSuurusInput;
+  input: WpDeletePaSuurusInput;
 }
-export interface DeletePaVariantMutationArgs {
+export interface WpDeletePaVariantMutationArgs {
   /** Input for the deletePaVariant mutation */
-  input: DeletePaVariantInput;
+  input: WpDeletePaVariantInput;
 }
-export interface DeletePaVarvMutationArgs {
+export interface WpDeletePaVarvMutationArgs {
   /** Input for the deletePaVarv mutation */
-  input: DeletePaVarvInput;
+  input: WpDeletePaVarvInput;
 }
-export interface DeletePaVeekindlusMutationArgs {
+export interface WpDeletePaVeekindlusMutationArgs {
   /** Input for the deletePaVeekindlus mutation */
-  input: DeletePaVeekindlusInput;
+  input: WpDeletePaVeekindlusInput;
 }
-export interface DeletePageMutationArgs {
+export interface WpDeletePageMutationArgs {
   /** Input for the deletePage mutation */
-  input: DeletePageInput;
+  input: WpDeletePageInput;
 }
-export interface DeletePostMutationArgs {
+export interface WpDeletePostMutationArgs {
   /** Input for the deletePost mutation */
-  input: DeletePostInput;
+  input: WpDeletePostInput;
 }
-export interface DeleteProductCategoryMutationArgs {
+export interface WpDeleteProductCategoryMutationArgs {
   /** Input for the deleteProductCategory mutation */
-  input: DeleteProductCategoryInput;
+  input: WpDeleteProductCategoryInput;
 }
-export interface DeleteProductTagMutationArgs {
+export interface WpDeleteProductTagMutationArgs {
   /** Input for the deleteProductTag mutation */
-  input: DeleteProductTagInput;
+  input: WpDeleteProductTagInput;
 }
-export interface DeleteProductTypeMutationArgs {
+export interface WpDeleteProductTypeMutationArgs {
   /** Input for the deleteProductType mutation */
-  input: DeleteProductTypeInput;
+  input: WpDeleteProductTypeInput;
 }
-export interface DeleteRevisionMutationArgs {
+export interface WpDeleteRevisionMutationArgs {
   /** Input for the deleteRevision mutation */
-  input: DeleteRevisionInput;
+  input: WpDeleteRevisionInput;
 }
-export interface DeleteShippingClassMutationArgs {
+export interface WpDeleteShippingClassMutationArgs {
   /** Input for the deleteShippingClass mutation */
-  input: DeleteShippingClassInput;
+  input: WpDeleteShippingClassInput;
 }
-export interface DeleteTagMutationArgs {
+export interface WpDeleteTagMutationArgs {
   /** Input for the deleteTag mutation */
-  input: DeleteTagInput;
+  input: WpDeleteTagInput;
 }
-export interface DeleteUserMutationArgs {
+export interface WpDeleteUserMutationArgs {
   /** Input for the deleteUser mutation */
-  input: DeleteUserInput;
+  input: WpDeleteUserInput;
 }
-export interface DeleteVisibleProductMutationArgs {
+export interface WpDeleteVisibleProductMutationArgs {
   /** Input for the deleteVisibleProduct mutation */
-  input: DeleteVisibleProductInput;
+  input: WpDeleteVisibleProductInput;
 }
-export interface EmptyCartMutationArgs {
+export interface WpEmptyCartMutationArgs {
   /** Input for the emptyCart mutation */
-  input: EmptyCartInput;
+  input: WpEmptyCartInput;
 }
-export interface IncreaseCountMutationArgs {
+export interface WpIncreaseCountMutationArgs {
   /** The count to increase */
   count?: Maybe<number>;
 }
-export interface RegisterCustomerMutationArgs {
+export interface WpRegisterCustomerMutationArgs {
   /** Input for the registerCustomer mutation */
-  input: RegisterCustomerInput;
+  input: WpRegisterCustomerInput;
 }
-export interface RegisterUserMutationArgs {
+export interface WpRegisterUserMutationArgs {
   /** Input for the registerUser mutation */
-  input: RegisterUserInput;
+  input: WpRegisterUserInput;
 }
-export interface RemoveCouponsMutationArgs {
+export interface WpRemoveCouponsMutationArgs {
   /** Input for the removeCoupons mutation */
-  input: RemoveCouponsInput;
+  input: WpRemoveCouponsInput;
 }
-export interface RemoveItemsFromCartMutationArgs {
+export interface WpRemoveItemsFromCartMutationArgs {
   /** Input for the removeItemsFromCart mutation */
-  input: RemoveItemsFromCartInput;
+  input: WpRemoveItemsFromCartInput;
 }
-export interface ResetUserPasswordMutationArgs {
+export interface WpResetUserPasswordMutationArgs {
   /** Input for the resetUserPassword mutation */
-  input: ResetUserPasswordInput;
+  input: WpResetUserPasswordInput;
 }
-export interface RestoreCartItemsMutationArgs {
+export interface WpRestoreCartItemsMutationArgs {
   /** Input for the restoreCartItems mutation */
-  input: RestoreCartItemsInput;
+  input: WpRestoreCartItemsInput;
 }
-export interface RestoreCommentMutationArgs {
+export interface WpRestoreCommentMutationArgs {
   /** Input for the restoreComment mutation */
-  input: RestoreCommentInput;
+  input: WpRestoreCommentInput;
 }
-export interface SendPasswordResetEmailMutationArgs {
+export interface WpSendPasswordResetEmailMutationArgs {
   /** Input for the sendPasswordResetEmail mutation */
-  input: SendPasswordResetEmailInput;
+  input: WpSendPasswordResetEmailInput;
 }
-export interface UpdateCommentMutationArgs {
+export interface WpUpdateCommentMutationArgs {
   /** Input for the updateComment mutation */
-  input: UpdateCommentInput;
+  input: WpUpdateCommentInput;
 }
-export interface UpdateCustomerMutationArgs {
+export interface WpUpdateCustomerMutationArgs {
   /** Input for the updateCustomer mutation */
-  input: UpdateCustomerInput;
+  input: WpUpdateCustomerInput;
 }
-export interface UpdateItemQuantityMutationArgs {
+export interface WpUpdateItemQuantityMutationArgs {
   /** Input for the updateItemQuantity mutation */
-  input: UpdateItemQuantityInput;
+  input: WpUpdateItemQuantityInput;
 }
-export interface UpdateMediaItemMutationArgs {
+export interface WpUpdateMediaItemMutationArgs {
   /** Input for the updateMediaItem mutation */
-  input: UpdateMediaItemInput;
+  input: WpUpdateMediaItemInput;
 }
-export interface UpdatePageMutationArgs {
+export interface WpUpdatePageMutationArgs {
   /** Input for the updatePage mutation */
-  input: UpdatePageInput;
+  input: WpUpdatePageInput;
 }
-export interface UpdatePostMutationArgs {
+export interface WpUpdatePostMutationArgs {
   /** Input for the updatePost mutation */
-  input: UpdatePostInput;
+  input: WpUpdatePostInput;
 }
-export interface UpdateSettingsMutationArgs {
+export interface WpUpdateSettingsMutationArgs {
   /** Input for the updateSettings mutation */
-  input: UpdateSettingsInput;
+  input: WpUpdateSettingsInput;
 }
-export interface UpdateUserMutationArgs {
+export interface WpUpdateUserMutationArgs {
   /** Input for the updateUser mutation */
-  input: UpdateUserInput;
+  input: WpUpdateUserInput;
 }
 
 // ====================================================
 // Unions
 // ====================================================
 
-export type PostObjectUnion = Post | Page | MediaItem | Revision;
+export type WpPostObjectUnion = WpPost | WpPage | WpMediaItem | WpRevision;
 
-export type CommentAuthorUnion = User | CommentAuthor;
+export type WpCommentAuthorUnion = WpUser | WpCommentAuthor;
 
-export type TermObjectUnion =
-  | Category
-  | Tag
-  | ProductType
-  | VisibleProduct
-  | ProductCategory
-  | ProductTag
-  | ShippingClass
-  | PaHind
-  | PaHulk
-  | PaKasutusaeg
-  | PaKogus
-  | PaKontuur
-  | PaKoostisained
-  | PaLaadimisaeg
-  | PaMaterjal
-  | PaMuratasa
-  | PaOhutus
-  | PaPatareid
-  | PaSuurus
-  | PaVariant
-  | PaVarv
-  | PaVeekindlus;
+export type WpTermObjectUnion =
+  | WpCategory
+  | WpTag
+  | WpProductType
+  | WpVisibleProduct
+  | WpProductCategory
+  | WpProductTag
+  | WpShippingClass
+  | WpPaHind
+  | WpPaHulk
+  | WpPaKasutusaeg
+  | WpPaKogus
+  | WpPaKontuur
+  | WpPaKoostisained
+  | WpPaLaadimisaeg
+  | WpPaMaterjal
+  | WpPaMuratasa
+  | WpPaOhutus
+  | WpPaPatareid
+  | WpPaSuurus
+  | WpPaVariant
+  | WpPaVarv
+  | WpPaVeekindlus;
 
-export type MenuItemObjectUnion =
-  | Post
-  | Page
-  | Category
-  | Tag
-  | ProductCategory
-  | ProductTag
-  | MenuItem;
+export type WpMenuItemObjectUnion =
+  | WpPost
+  | WpPage
+  | WpCategory
+  | WpTag
+  | WpProductCategory
+  | WpProductTag
+  | WpMenuItem;
