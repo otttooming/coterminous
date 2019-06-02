@@ -11,8 +11,6 @@ import {
 } from '@coterminous/ui-lib';
 import { IndexQueryQuery } from '../generated-models';
 
-// Please note that you can use https://github.com/dotansimha/graphql-code-generator
-// to generate all types from graphQL schema
 interface IndexPageProps {
   data: IndexQueryQuery;
 }
@@ -62,11 +60,10 @@ export const pageQuery = graphql`
   }
 `;
 
-export default class IndexPage extends React.Component<IndexPageProps, {}> {
-  readonly hello = `Hello`;
+class Index extends React.Component<IndexPageProps, {}> {
   public render() {
     const { data } = this.props;
-    const { siteName } = this.props.data.site.siteMetadata;
+
     return (
       <Main
         renderSidebar={
@@ -130,3 +127,5 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
     );
   }
 }
+
+export default Index;
