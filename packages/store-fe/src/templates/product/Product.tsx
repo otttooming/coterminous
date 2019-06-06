@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Main from '../../layouts/Main';
-import Header from '../../components/header/Header';
-import ProductItem from '../../components/productItem/ProductItem';
 import { ProductTemplateQuery } from '../../generated-models';
 import {
   Heading,
