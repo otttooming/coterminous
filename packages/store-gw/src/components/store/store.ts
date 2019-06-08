@@ -13,7 +13,7 @@ import {
 export async function getStoreSchema() {
   const link = setContext(request => ({})).concat(
     new HttpLink({
-      uri: 'https://dev-spiceflow.pantheonsite.io/en/graphql',
+      uri: 'https://dev-spiceflow.pantheonsite.io/graphql',
       fetch: fetch as any,
     }),
   );
