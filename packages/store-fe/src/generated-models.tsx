@@ -8488,6 +8488,8 @@ export type IndexQueryCms = {
   __typename?: 'GraphCMS';
 
   WP_products: Maybe<IndexQueryWpProducts>;
+
+  WP_productCategories: Maybe<IndexQueryWpProductCategories>;
 };
 
 export type IndexQueryWpProducts = {
@@ -8574,6 +8576,26 @@ export type IndexQuerySizes = {
   sourceUrl: Maybe<string>;
 };
 
+export type IndexQueryWpProductCategories = {
+  __typename?: 'GraphCMS_WP_RootQueryToProductCategoryConnection';
+
+  edges: Maybe<(Maybe<IndexQuery__Edges>)[]>;
+};
+
+export type IndexQuery__Edges = {
+  __typename?: 'GraphCMS_WP_RootQueryToProductCategoryConnectionEdge';
+
+  node: Maybe<IndexQuery__Node>;
+};
+
+export type IndexQuery__Node = {
+  __typename?: 'GraphCMS_WP_ProductCategory';
+
+  name: Maybe<string>;
+
+  slug: Maybe<string>;
+};
+
 export type ProductTemplateVariables = {
   id: string;
 };
@@ -8602,6 +8624,8 @@ export type ProductTemplateCms = {
   __typename?: 'GraphCMS';
 
   WP_product: Maybe<ProductTemplateWpProduct>;
+
+  WP_productCategories: Maybe<ProductTemplateWpProductCategories>;
 };
 
 export type ProductTemplateWpProduct = {
@@ -8630,4 +8654,24 @@ export type ProductTemplateMediaDetails = {
   width: Maybe<number>;
 
   height: Maybe<number>;
+};
+
+export type ProductTemplateWpProductCategories = {
+  __typename?: 'GraphCMS_WP_RootQueryToProductCategoryConnection';
+
+  edges: Maybe<(Maybe<ProductTemplateEdges>)[]>;
+};
+
+export type ProductTemplateEdges = {
+  __typename?: 'GraphCMS_WP_RootQueryToProductCategoryConnectionEdge';
+
+  node: Maybe<ProductTemplateNode>;
+};
+
+export type ProductTemplateNode = {
+  __typename?: 'GraphCMS_WP_ProductCategory';
+
+  name: Maybe<string>;
+
+  slug: Maybe<string>;
 };

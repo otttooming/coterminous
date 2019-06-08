@@ -7024,35 +7024,35 @@ export interface WpUpdatePostInput {
 /** Input for the updateSettings mutation */
 export interface WpUpdateSettingsInput {
   clientMutationId: string;
-  /** Allow people to post comments on new articles. */
+  /** Luba uute artiklite kommenteerimist */
   discussionSettingsDefaultCommentStatus?: Maybe<string>;
-  /** Allow link notifications from other blogs (pingbacks and trackbacks) on new articles. */
+  /** Luba uute artiklite juures teiste ajaveebide märguandeid (pingback- ja trackback-viited). */
   discussionSettingsDefaultPingStatus?: Maybe<string>;
-  /** A date format for all date strings. */
+  /** Kõigi kuupäevade vorming. */
   generalSettingsDateFormat?: Maybe<string>;
-  /** Site tagline. */
+  /** Veebisaidi alapealkiri. */
   generalSettingsDescription?: Maybe<string>;
-  /** This address is used for admin purposes, like new user notification. */
+  /** Seda aadressi kasutatakse saidi haldamisel, näiteks uue kasutaja teavitamiseks. */
   generalSettingsEmail?: Maybe<string>;
-  /** WordPress locale code. */
+  /** WordPressi maakood. */
   generalSettingsLanguage?: Maybe<string>;
-  /** A day number of the week that the week should start on. */
+  /** Nädala alguspäeva number. */
   generalSettingsStartOfWeek?: Maybe<number>;
-  /** A time format for all time strings. */
+  /** Kõigi kellaaegade vorming. */
   generalSettingsTimeFormat?: Maybe<string>;
-  /** A city in the same timezone as you. */
+  /** Linn samas ajavööndis. */
   generalSettingsTimezone?: Maybe<string>;
-  /** Site title. */
+  /** Saidi pealkiri. */
   generalSettingsTitle?: Maybe<string>;
-  /** Site URL. */
+  /** Veebilehe aadress. */
   generalSettingsUrl?: Maybe<string>;
-  /** Blog pages show at most. */
+  /** lehekülge korraga. */
   readingSettingsPostsPerPage?: Maybe<number>;
-  /** Default post category. */
+  /** Vaikimisi rubriik. */
   writingSettingsDefaultCategory?: Maybe<number>;
-  /** Default post format. */
+  /** Vaikimisi postitusevorming */
   writingSettingsDefaultPostFormat?: Maybe<string>;
-  /** Convert emoticons like :-) and :-P to graphics on display. */
+  /** Teisenda emootikonid nagu :-) ja :-P graafilisteks. */
   writingSettingsUseSmilies?: Maybe<boolean>;
 }
 /** Input for the updateUser mutation */
@@ -7668,8 +7668,7 @@ export enum WpOrderStatusEnum {
 }
 /** Registered menu locations */
 export enum WpMenuLocationEnum {
-  Top = 'TOP',
-  TopRight = 'TOP_RIGHT',
+  Empty = 'EMPTY',
 }
 /** Field to order the connection by */
 export enum WpTaxRateConnectionOrderbyEnum {
@@ -7911,35 +7910,35 @@ export interface Query {
 
 /** All of the registered settings */
 export interface WpSettings {
-  /** Allow people to post comments on new articles. */
+  /** Luba uute artiklite kommenteerimist */
   discussionSettingsDefaultCommentStatus?: Maybe<string>;
-  /** Allow link notifications from other blogs (pingbacks and trackbacks) on new articles. */
+  /** Luba uute artiklite juures teiste ajaveebide märguandeid (pingback- ja trackback-viited). */
   discussionSettingsDefaultPingStatus?: Maybe<string>;
-  /** A date format for all date strings. */
+  /** Kõigi kuupäevade vorming. */
   generalSettingsDateFormat?: Maybe<string>;
-  /** Site tagline. */
+  /** Veebisaidi alapealkiri. */
   generalSettingsDescription?: Maybe<string>;
-  /** This address is used for admin purposes, like new user notification. */
+  /** Seda aadressi kasutatakse saidi haldamisel, näiteks uue kasutaja teavitamiseks. */
   generalSettingsEmail?: Maybe<string>;
-  /** WordPress locale code. */
+  /** WordPressi maakood. */
   generalSettingsLanguage?: Maybe<string>;
-  /** A day number of the week that the week should start on. */
+  /** Nädala alguspäeva number. */
   generalSettingsStartOfWeek?: Maybe<number>;
-  /** A time format for all time strings. */
+  /** Kõigi kellaaegade vorming. */
   generalSettingsTimeFormat?: Maybe<string>;
-  /** A city in the same timezone as you. */
+  /** Linn samas ajavööndis. */
   generalSettingsTimezone?: Maybe<string>;
-  /** Site title. */
+  /** Saidi pealkiri. */
   generalSettingsTitle?: Maybe<string>;
-  /** Site URL. */
+  /** Veebilehe aadress. */
   generalSettingsUrl?: Maybe<string>;
-  /** Blog pages show at most. */
+  /** lehekülge korraga. */
   readingSettingsPostsPerPage?: Maybe<number>;
-  /** Default post category. */
+  /** Vaikimisi rubriik. */
   writingSettingsDefaultCategory?: Maybe<number>;
-  /** Default post format. */
+  /** Vaikimisi postitusevorming */
   writingSettingsDefaultPostFormat?: Maybe<string>;
-  /** Convert emoticons like :-) and :-P to graphics on display. */
+  /** Teisenda emootikonid nagu :-) ja :-P graafilisteks. */
   writingSettingsUseSmilies?: Maybe<boolean>;
 }
 
@@ -11448,31 +11447,31 @@ export interface WpRootQueryToCustomerConnectionEdge {
 
 /** The discussion setting type */
 export interface WpDiscussionSettings {
-  /** Allow people to post comments on new articles. */
+  /** Luba uute artiklite kommenteerimist */
   defaultCommentStatus?: Maybe<string>;
-  /** Allow link notifications from other blogs (pingbacks and trackbacks) on new articles. */
+  /** Luba uute artiklite juures teiste ajaveebide märguandeid (pingback- ja trackback-viited). */
   defaultPingStatus?: Maybe<string>;
 }
 
 /** The general setting type */
 export interface WpGeneralSettings {
-  /** A date format for all date strings. */
+  /** Kõigi kuupäevade vorming. */
   dateFormat?: Maybe<string>;
-  /** Site tagline. */
+  /** Veebisaidi alapealkiri. */
   description?: Maybe<string>;
-  /** This address is used for admin purposes, like new user notification. */
+  /** Seda aadressi kasutatakse saidi haldamisel, näiteks uue kasutaja teavitamiseks. */
   email?: Maybe<string>;
-  /** WordPress locale code. */
+  /** WordPressi maakood. */
   language?: Maybe<string>;
-  /** A day number of the week that the week should start on. */
+  /** Nädala alguspäeva number. */
   startOfWeek?: Maybe<number>;
-  /** A time format for all time strings. */
+  /** Kõigi kellaaegade vorming. */
   timeFormat?: Maybe<string>;
-  /** A city in the same timezone as you. */
+  /** Linn samas ajavööndis. */
   timezone?: Maybe<string>;
-  /** Site title. */
+  /** Saidi pealkiri. */
   title?: Maybe<string>;
-  /** Site URL. */
+  /** Veebilehe aadress. */
   url?: Maybe<string>;
 }
 
@@ -12090,7 +12089,7 @@ export interface WpRootQueryToProductConnectionEdge {
 
 /** The reading setting type */
 export interface WpReadingSettings {
-  /** Blog pages show at most. */
+  /** lehekülge korraga. */
   postsPerPage?: Maybe<number>;
 }
 
@@ -12310,11 +12309,11 @@ export interface WpRootQueryToVisibleProductConnectionEdge {
 
 /** The writing setting type */
 export interface WpWritingSettings {
-  /** Default post category. */
+  /** Vaikimisi rubriik. */
   defaultCategory?: Maybe<number>;
-  /** Default post format. */
+  /** Vaikimisi postitusevorming */
   defaultPostFormat?: Maybe<string>;
-  /** Convert emoticons like :-) and :-P to graphics on display. */
+  /** Teisenda emootikonid nagu :-) ja :-P graafilisteks. */
   useSmilies?: Maybe<boolean>;
 }
 

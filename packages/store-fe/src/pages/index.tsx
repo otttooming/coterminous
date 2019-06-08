@@ -8,6 +8,8 @@ import {
   Grid,
   theme,
   Card,
+  List,
+  ListItem,
 } from '@coterminous/ui-lib';
 import { IndexQueryQuery } from '../generated-models';
 
@@ -56,6 +58,14 @@ export const pageQuery = graphql`
           }
         }
       }
+      WP_productCategories {
+        edges {
+          node {
+            name
+            slug
+          }
+        }
+      }
     }
   }
 `;
@@ -67,18 +77,29 @@ class Index extends React.Component<IndexPageProps, {}> {
     return (
       <Main
         renderSidebar={
-          <Image
-            width={430}
-            height={160}
-            srcSet={[
-              {
-                url:
-                  'https://www.aadliaare.ee/wp-content/uploads/2017/05/aadli_aare_logo.png',
-                width: 430,
-                height: 160,
-              },
-            ]}
-          />
+          <>
+            <Image
+              width={430}
+              height={160}
+              srcSet={[
+                {
+                  url:
+                    'https://www.aadliaare.ee/wp-content/uploads/2017/05/aadli_aare_logo.png',
+                  width: 430,
+                  height: 160,
+                },
+              ]}
+            />
+            <List>
+              {data.cms.WP_productCategories.edges.map(
+                ({ node: { name, slug } }) => (
+                  <ListItem>
+                    <Link to={slug}>{name}</Link>
+                  </ListItem>
+                ),
+              )}
+            </List>
+          </>
         }
       >
         <Heading as="h2">Product list</Heading>
