@@ -28,33 +28,7 @@ export const pageQuery = graphql`
       WP_products {
         edges {
           node {
-            name
-            slug
-            price
-            salePrice
-            image {
-              mediaDetails {
-                width
-                height
-              }
-              srcSet
-            }
-            galleryImages {
-              edges {
-                node {
-                  srcSet
-                  mediaDetails {
-                    width
-                    height
-                    sizes {
-                      width
-                      height
-                      sourceUrl
-                    }
-                  }
-                }
-              }
-            }
+            ...ProductForListing
           }
         }
       }
