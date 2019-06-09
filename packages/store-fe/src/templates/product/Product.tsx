@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Main from '../../layouts/Main';
 import { ProductTemplateQuery } from '../../generated-models';
 import {
@@ -9,8 +9,6 @@ import {
   Card,
   Image,
   theme,
-  List,
-  ListItem,
 } from '@coterminous/ui-lib';
 
 interface Props {
@@ -28,36 +26,11 @@ const ProductTemplate: React.FC<Props> = ({
           srcSet,
         },
       },
-      WP_productCategories: { edges: categories },
     },
   },
 }) => {
   return (
-    <Main
-      renderSidebar={
-        <>
-          <Image
-            width={430}
-            height={160}
-            srcSet={[
-              {
-                url:
-                  'https://www.aadliaare.ee/wp-content/uploads/2017/05/aadli_aare_logo.png',
-                width: 430,
-                height: 160,
-              },
-            ]}
-          />
-          <List>
-            {categories.map(({ node: { name, slug } }) => (
-              <ListItem>
-                <Link to={slug}>{name}</Link>
-              </ListItem>
-            ))}
-          </List>
-        </>
-      }
-    >
+    <Main>
       <Heading as="h2">{name}</Heading>
       <Grid
         gridTemplateAreas={`"left right"`}
@@ -96,14 +69,6 @@ export const query = graphql`
             height
           }
           srcSet
-        }
-      }
-      WP_productCategories {
-        edges {
-          node {
-            name
-            slug
-          }
         }
       }
     }
