@@ -1,11 +1,13 @@
 overwrite: true
 watch: false
 schema: http://localhost:8000/___graphql
-documents: ./src/**/*.tsx
+documents:
+  - ./src/**/*.{ts,tsx}
+  - ./node_modules/gatsby-*/**/*.js
 generates:
-  src/generated-models.tsx:
+  .src/generated-models.tsx:
     plugins:
-      - typescript-common
-      - typescript-client
+      - typescript
+      - typescript-operations
     config:
       noNamespaces: true
