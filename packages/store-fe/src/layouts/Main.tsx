@@ -28,7 +28,7 @@ const Main = ({ children, renderHeader, renderFooter }: Props) => {
         }
       }
       cms {
-        WP_productCategories {
+        productCategories {
           edges {
             node {
               name
@@ -72,7 +72,7 @@ const Main = ({ children, renderHeader, renderFooter }: Props) => {
             ]}
           />
           <List>
-            {data.cms.WP_productCategories.edges.map(
+            {data.cms.productCategories.edges.map(
               ({ node: { name, slug } }) => (
                 <ListItem>
                   <Link to={slug}>{name}</Link>

@@ -23,7 +23,7 @@ export const pageQuery = graphql`
       }
     }
     cms {
-      WP_products {
+      products {
         edges {
           node {
             ...ProductForListing
@@ -46,7 +46,7 @@ class Index extends React.Component<IndexPageProps, {}> {
           gridTemplateColumns="repeat(auto-fill, minmax(14rem, 1fr))"
           gridGap={theme.space.xl}
         >
-          {data.cms.WP_products.edges.map(
+          {data.cms.products.edges.map(
             (
               {
                 node: {

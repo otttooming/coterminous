@@ -24,7 +24,7 @@ const CategoryTemplate: React.FC<Props> = ({ data }) => {
         gridTemplateColumns="repeat(auto-fill, minmax(14rem, 1fr))"
         gridGap={theme.space.xl}
       >
-        {data.cms.WP_productCategory.products.edges.map(
+        {data.cms.productCategory.products.edges.map(
           (
             {
               node: {
@@ -72,7 +72,7 @@ export const query = graphql`
       }
     }
     cms {
-      WP_productCategory(id: $id) {
+      productCategory(id: $id) {
         name
         products {
           edges {

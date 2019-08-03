@@ -33,755 +33,753 @@ export type DateQueryOperatorInput = {
 export type GraphCms = {
   __typename?: 'GraphCMS';
   /** Entry point to get all settings for the site */
-  WP_allSettings?: Maybe<GraphCms_Wp_Settings>;
+  allSettings?: Maybe<GraphCms_Settings>;
   /** The cart object */
-  WP_cart?: Maybe<GraphCms_Wp_Cart>;
+  cart?: Maybe<GraphCms_Cart>;
   /** The cart object */
-  WP_cartFee?: Maybe<GraphCms_Wp_CartFee>;
+  cartFee?: Maybe<GraphCms_CartFee>;
   /** The cart object */
-  WP_cartItem?: Maybe<GraphCms_Wp_CartItem>;
+  cartItem?: Maybe<GraphCms_CartItem>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_categories?: Maybe<GraphCms_Wp_RootQueryToCategoryConnection>;
+  categories?: Maybe<GraphCms_RootQueryToCategoryConnection>;
   /** A 0bject */
-  WP_category?: Maybe<GraphCms_Wp_Category>;
+  category?: Maybe<GraphCms_Category>;
   /** Returns a Comment */
-  WP_comment?: Maybe<GraphCms_Wp_Comment>;
+  comment?: Maybe<GraphCms_Comment>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_comments?: Maybe<GraphCms_Wp_RootQueryToCommentConnection>;
+  comments?: Maybe<GraphCms_RootQueryToCommentConnection>;
   /** A coupon object */
-  WP_coupon?: Maybe<GraphCms_Wp_Coupon>;
+  coupon?: Maybe<GraphCms_Coupon>;
   /** A coupon object */
-  WP_couponBy?: Maybe<GraphCms_Wp_Coupon>;
+  couponBy?: Maybe<GraphCms_Coupon>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_coupons?: Maybe<GraphCms_Wp_RootQueryToCouponConnection>;
+  coupons?: Maybe<GraphCms_RootQueryToCouponConnection>;
   /** A customer object */
-  WP_customer?: Maybe<GraphCms_Wp_Customer>;
+  customer?: Maybe<GraphCms_Customer>;
   /** A customer object */
-  WP_customerBy?: Maybe<GraphCms_Wp_Customer>;
+  customerBy?: Maybe<GraphCms_Customer>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_customers?: Maybe<GraphCms_Wp_RootQueryToCustomerConnection>;
-  WP_discussionSettings?: Maybe<GraphCms_Wp_DiscussionSettings>;
-  WP_generalSettings?: Maybe<GraphCms_Wp_GeneralSettings>;
+  customers?: Maybe<GraphCms_RootQueryToCustomerConnection>;
+  discussionSettings?: Maybe<GraphCms_DiscussionSettings>;
+  generalSettings?: Maybe<GraphCms_GeneralSettings>;
   /** A 0bject */
-  WP_mediaItem?: Maybe<GraphCms_Wp_MediaItem>;
+  mediaItem?: Maybe<GraphCms_MediaItem>;
   /** A mediaItem object */
-  WP_mediaItemBy?: Maybe<GraphCms_Wp_MediaItem>;
+  mediaItemBy?: Maybe<GraphCms_MediaItem>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_mediaItems?: Maybe<GraphCms_Wp_RootQueryToMediaItemConnection>;
+  mediaItems?: Maybe<GraphCms_RootQueryToMediaItemConnection>;
   /** A WordPress navigation menu */
-  WP_menu?: Maybe<GraphCms_Wp_Menu>;
+  menu?: Maybe<GraphCms_Menu>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_menuItems?: Maybe<GraphCms_Wp_RootQueryToMenuItemConnection>;
+  menuItems?: Maybe<GraphCms_RootQueryToMenuItemConnection>;
   /** A WordPress navigation menu item */
-  WP_menuItem?: Maybe<GraphCms_Wp_MenuItem>;
+  menuItem?: Maybe<GraphCms_MenuItem>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_menus?: Maybe<GraphCms_Wp_RootQueryToMenuConnection>;
+  menus?: Maybe<GraphCms_RootQueryToMenuConnection>;
   /** Fetches an object given its ID */
-  WP_node?: Maybe<GraphCms_Wp_Node>;
+  node?: Maybe<GraphCms_Node>;
   /** A order object */
-  WP_order?: Maybe<GraphCms_Wp_Order>;
+  order?: Maybe<GraphCms_Order>;
   /** A order object */
-  WP_orderBy?: Maybe<GraphCms_Wp_Order>;
+  orderBy?: Maybe<GraphCms_Order>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_orders?: Maybe<GraphCms_Wp_RootQueryToOrderConnection>;
+  orders?: Maybe<GraphCms_RootQueryToOrderConnection>;
   /** A 0bject */
-  WP_paHind?: Maybe<GraphCms_Wp_PaHind>;
+  paHind?: Maybe<GraphCms_PaHind>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paHinds?: Maybe<GraphCms_Wp_RootQueryToPaHindConnection>;
+  paHinds?: Maybe<GraphCms_RootQueryToPaHindConnection>;
   /** A 0bject */
-  WP_paHulk?: Maybe<GraphCms_Wp_PaHulk>;
+  paHulk?: Maybe<GraphCms_PaHulk>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paHulks?: Maybe<GraphCms_Wp_RootQueryToPaHulkConnection>;
+  paHulks?: Maybe<GraphCms_RootQueryToPaHulkConnection>;
   /** A 0bject */
-  WP_paKasutusaeg?: Maybe<GraphCms_Wp_PaKasutusaeg>;
+  paKasutusaeg?: Maybe<GraphCms_PaKasutusaeg>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paKasutusaegs?: Maybe<GraphCms_Wp_RootQueryToPaKasutusaegConnection>;
+  paKasutusaegs?: Maybe<GraphCms_RootQueryToPaKasutusaegConnection>;
   /** A 0bject */
-  WP_paKogus?: Maybe<GraphCms_Wp_PaKogus>;
+  paKogus?: Maybe<GraphCms_PaKogus>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paKoguses?: Maybe<GraphCms_Wp_RootQueryToPaKogusConnection>;
+  paKoguses?: Maybe<GraphCms_RootQueryToPaKogusConnection>;
   /** A 0bject */
-  WP_paKontuur?: Maybe<GraphCms_Wp_PaKontuur>;
+  paKontuur?: Maybe<GraphCms_PaKontuur>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paKontuurs?: Maybe<GraphCms_Wp_RootQueryToPaKontuurConnection>;
+  paKontuurs?: Maybe<GraphCms_RootQueryToPaKontuurConnection>;
   /** A 0bject */
-  WP_paKoostisained?: Maybe<GraphCms_Wp_PaKoostisained>;
+  paKoostisained?: Maybe<GraphCms_PaKoostisained>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paKoostisaineds?: Maybe<GraphCms_Wp_RootQueryToPaKoostisainedConnection>;
+  paKoostisaineds?: Maybe<GraphCms_RootQueryToPaKoostisainedConnection>;
   /** A 0bject */
-  WP_paLaadimisaeg?: Maybe<GraphCms_Wp_PaLaadimisaeg>;
+  paLaadimisaeg?: Maybe<GraphCms_PaLaadimisaeg>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paLaadimisaegs?: Maybe<GraphCms_Wp_RootQueryToPaLaadimisaegConnection>;
+  paLaadimisaegs?: Maybe<GraphCms_RootQueryToPaLaadimisaegConnection>;
   /** A 0bject */
-  WP_paMaterjal?: Maybe<GraphCms_Wp_PaMaterjal>;
+  paMaterjal?: Maybe<GraphCms_PaMaterjal>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paMaterjals?: Maybe<GraphCms_Wp_RootQueryToPaMaterjalConnection>;
+  paMaterjals?: Maybe<GraphCms_RootQueryToPaMaterjalConnection>;
   /** A 0bject */
-  WP_paMuratasa?: Maybe<GraphCms_Wp_PaMuratasa>;
+  paMuratasa?: Maybe<GraphCms_PaMuratasa>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paMuratasas?: Maybe<GraphCms_Wp_RootQueryToPaMuratasaConnection>;
+  paMuratasas?: Maybe<GraphCms_RootQueryToPaMuratasaConnection>;
   /** A 0bject */
-  WP_paOhutus?: Maybe<GraphCms_Wp_PaOhutus>;
+  paOhutus?: Maybe<GraphCms_PaOhutus>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paOhutuses?: Maybe<GraphCms_Wp_RootQueryToPaOhutusConnection>;
+  paOhutuses?: Maybe<GraphCms_RootQueryToPaOhutusConnection>;
   /** A 0bject */
-  WP_paPatareid?: Maybe<GraphCms_Wp_PaPatareid>;
+  paPatareid?: Maybe<GraphCms_PaPatareid>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paPatareids?: Maybe<GraphCms_Wp_RootQueryToPaPatareidConnection>;
+  paPatareids?: Maybe<GraphCms_RootQueryToPaPatareidConnection>;
   /** A 0bject */
-  WP_paSuurus?: Maybe<GraphCms_Wp_PaSuurus>;
+  paSuurus?: Maybe<GraphCms_PaSuurus>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paSuuruses?: Maybe<GraphCms_Wp_RootQueryToPaSuurusConnection>;
+  paSuuruses?: Maybe<GraphCms_RootQueryToPaSuurusConnection>;
   /** A 0bject */
-  WP_paVariant?: Maybe<GraphCms_Wp_PaVariant>;
+  paVariant?: Maybe<GraphCms_PaVariant>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paVariants?: Maybe<GraphCms_Wp_RootQueryToPaVariantConnection>;
+  paVariants?: Maybe<GraphCms_RootQueryToPaVariantConnection>;
   /** A 0bject */
-  WP_paVarv?: Maybe<GraphCms_Wp_PaVarv>;
+  paVarv?: Maybe<GraphCms_PaVarv>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paVarvs?: Maybe<GraphCms_Wp_RootQueryToPaVarvConnection>;
+  paVarvs?: Maybe<GraphCms_RootQueryToPaVarvConnection>;
   /** A 0bject */
-  WP_paVeekindlus?: Maybe<GraphCms_Wp_PaVeekindlus>;
+  paVeekindlus?: Maybe<GraphCms_PaVeekindlus>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_paVeekindluses?: Maybe<GraphCms_Wp_RootQueryToPaVeekindlusConnection>;
+  paVeekindluses?: Maybe<GraphCms_RootQueryToPaVeekindlusConnection>;
   /** A 0bject */
-  WP_page?: Maybe<GraphCms_Wp_Page>;
+  page?: Maybe<GraphCms_Page>;
   /** A page object */
-  WP_pageBy?: Maybe<GraphCms_Wp_Page>;
+  pageBy?: Maybe<GraphCms_Page>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_pages?: Maybe<GraphCms_Wp_RootQueryToPageConnection>;
+  pages?: Maybe<GraphCms_RootQueryToPageConnection>;
   /** A WordPress plugin */
-  WP_plugin?: Maybe<GraphCms_Wp_Plugin>;
+  plugin?: Maybe<GraphCms_Plugin>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_plugins?: Maybe<GraphCms_Wp_RootQueryToPluginConnection>;
+  plugins?: Maybe<GraphCms_RootQueryToPluginConnection>;
   /** A 0bject */
-  WP_post?: Maybe<GraphCms_Wp_Post>;
+  post?: Maybe<GraphCms_Post>;
   /** A post object */
-  WP_postBy?: Maybe<GraphCms_Wp_Post>;
+  postBy?: Maybe<GraphCms_Post>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_posts?: Maybe<GraphCms_Wp_RootQueryToPostConnection>;
+  posts?: Maybe<GraphCms_RootQueryToPostConnection>;
   /** A product object */
-  WP_product?: Maybe<GraphCms_Wp_Product>;
+  product?: Maybe<GraphCms_Product>;
   /** A product object */
-  WP_productBy?: Maybe<GraphCms_Wp_Product>;
+  productBy?: Maybe<GraphCms_Product>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_productCategories?: Maybe<
-    GraphCms_Wp_RootQueryToProductCategoryConnection
-  >;
+  productCategories?: Maybe<GraphCms_RootQueryToProductCategoryConnection>;
   /** A 0bject */
-  WP_productCategory?: Maybe<GraphCms_Wp_ProductCategory>;
+  productCategory?: Maybe<GraphCms_ProductCategory>;
   /** A 0bject */
-  WP_productTag?: Maybe<GraphCms_Wp_ProductTag>;
+  productTag?: Maybe<GraphCms_ProductTag>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_productTags?: Maybe<GraphCms_Wp_RootQueryToProductTagConnection>;
+  productTags?: Maybe<GraphCms_RootQueryToProductTagConnection>;
   /** A 0bject */
-  WP_productType?: Maybe<GraphCms_Wp_ProductType>;
+  productType?: Maybe<GraphCms_ProductType>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_productTypes?: Maybe<GraphCms_Wp_RootQueryToProductTypeConnection>;
+  productTypes?: Maybe<GraphCms_RootQueryToProductTypeConnection>;
   /** A product variation object */
-  WP_productVariation?: Maybe<GraphCms_Wp_ProductVariation>;
+  productVariation?: Maybe<GraphCms_ProductVariation>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_products?: Maybe<GraphCms_Wp_RootQueryToProductConnection>;
-  WP_readingSettings?: Maybe<GraphCms_Wp_ReadingSettings>;
+  products?: Maybe<GraphCms_RootQueryToProductConnection>;
+  readingSettings?: Maybe<GraphCms_ReadingSettings>;
   /** A refund object */
-  WP_refund?: Maybe<GraphCms_Wp_Refund>;
+  refund?: Maybe<GraphCms_Refund>;
   /** A refund object */
-  WP_refundBy?: Maybe<GraphCms_Wp_Refund>;
+  refundBy?: Maybe<GraphCms_Refund>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_refunds?: Maybe<GraphCms_Wp_RootQueryToRefundConnection>;
+  refunds?: Maybe<GraphCms_RootQueryToRefundConnection>;
   /** A 0bject */
-  WP_revision?: Maybe<GraphCms_Wp_Revision>;
+  revision?: Maybe<GraphCms_Revision>;
   /** A revision object */
-  WP_revisionBy?: Maybe<GraphCms_Wp_Revision>;
+  revisionBy?: Maybe<GraphCms_Revision>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_revisions?: Maybe<GraphCms_Wp_RootQueryToRevisionConnection>;
+  revisions?: Maybe<GraphCms_RootQueryToRevisionConnection>;
   /** A 0bject */
-  WP_shippingClass?: Maybe<GraphCms_Wp_ShippingClass>;
+  shippingClass?: Maybe<GraphCms_ShippingClass>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_shippingClasses?: Maybe<GraphCms_Wp_RootQueryToShippingClassConnection>;
+  shippingClasses?: Maybe<GraphCms_RootQueryToShippingClassConnection>;
   /** A shipping method object */
-  WP_shippingMethod?: Maybe<GraphCms_Wp_ShippingMethod>;
+  shippingMethod?: Maybe<GraphCms_ShippingMethod>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_shippingMethods?: Maybe<GraphCms_Wp_RootQueryToShippingMethodConnection>;
+  shippingMethods?: Maybe<GraphCms_RootQueryToShippingMethodConnection>;
   /** A 0bject */
-  WP_tag?: Maybe<GraphCms_Wp_Tag>;
+  tag?: Maybe<GraphCms_Tag>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_tags?: Maybe<GraphCms_Wp_RootQueryToTagConnection>;
+  tags?: Maybe<GraphCms_RootQueryToTagConnection>;
   /** A tax rate object */
-  WP_taxRate?: Maybe<GraphCms_Wp_TaxRate>;
+  taxRate?: Maybe<GraphCms_TaxRate>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_taxRates?: Maybe<GraphCms_Wp_RootQueryToTaxRateConnection>;
+  taxRates?: Maybe<GraphCms_RootQueryToTaxRateConnection>;
   /** A Theme object */
-  WP_theme?: Maybe<GraphCms_Wp_Theme>;
+  theme?: Maybe<GraphCms_Theme>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_themes?: Maybe<GraphCms_Wp_RootQueryToThemeConnection>;
+  themes?: Maybe<GraphCms_RootQueryToThemeConnection>;
   /** Returns a user */
-  WP_user?: Maybe<GraphCms_Wp_User>;
+  user?: Maybe<GraphCms_User>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_userRoles?: Maybe<GraphCms_Wp_RootQueryToUserRoleConnection>;
+  userRoles?: Maybe<GraphCms_RootQueryToUserRoleConnection>;
   /** Returns a user role */
-  WP_userRole?: Maybe<GraphCms_Wp_UserRole>;
+  userRole?: Maybe<GraphCms_UserRole>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_users?: Maybe<GraphCms_Wp_RootQueryToUserConnection>;
+  users?: Maybe<GraphCms_RootQueryToUserConnection>;
   /** Returns the current user */
-  WP_viewer?: Maybe<GraphCms_Wp_User>;
+  viewer?: Maybe<GraphCms_User>;
   /** A 0bject */
-  WP_visibleProduct?: Maybe<GraphCms_Wp_VisibleProduct>;
+  visibleProduct?: Maybe<GraphCms_VisibleProduct>;
   /** Connection between the RootQuery type and the RootQuery type */
-  WP_visibleProducts?: Maybe<GraphCms_Wp_RootQueryToVisibleProductConnection>;
-  WP_writingSettings?: Maybe<GraphCms_Wp_WritingSettings>;
+  visibleProducts?: Maybe<GraphCms_RootQueryToVisibleProductConnection>;
+  writingSettings?: Maybe<GraphCms_WritingSettings>;
 };
 
-export type GraphCmsWp_CartFeeArgs = {
+export type GraphCmsCartFeeArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_CartItemArgs = {
+export type GraphCmsCartItemArgs = {
   key: Scalars['ID'];
 };
 
-export type GraphCmsWp_CategoriesArgs = {
+export type GraphCmsCategoriesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToCategoryConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToCategoryConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_CategoryArgs = {
+export type GraphCmsCategoryArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_CommentArgs = {
+export type GraphCmsCommentArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_CommentsArgs = {
+export type GraphCmsCommentsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToCommentConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToCommentConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_CouponArgs = {
+export type GraphCmsCouponArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_CouponByArgs = {
+export type GraphCmsCouponByArgs = {
   id?: Maybe<Scalars['ID']>;
   couponId?: Maybe<Scalars['Int']>;
   code?: Maybe<Scalars['String']>;
 };
 
-export type GraphCmsWp_CouponsArgs = {
+export type GraphCmsCouponsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToCouponConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToCouponConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_CustomerArgs = {
+export type GraphCmsCustomerArgs = {
   id?: Maybe<Scalars['ID']>;
 };
 
-export type GraphCmsWp_CustomerByArgs = {
+export type GraphCmsCustomerByArgs = {
   customerId: Scalars['Int'];
 };
 
-export type GraphCmsWp_CustomersArgs = {
+export type GraphCmsCustomersArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToCustomerConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToCustomerConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_MediaItemArgs = {
+export type GraphCmsMediaItemArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_MediaItemByArgs = {
+export type GraphCmsMediaItemByArgs = {
   id?: Maybe<Scalars['ID']>;
   mediaItemId?: Maybe<Scalars['Int']>;
   uri?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
 };
 
-export type GraphCmsWp_MediaItemsArgs = {
+export type GraphCmsMediaItemsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToMediaItemConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToMediaItemConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_MenuArgs = {
+export type GraphCmsMenuArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_MenuItemsArgs = {
+export type GraphCmsMenuItemsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToMenuItemConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToMenuItemConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_MenuItemArgs = {
+export type GraphCmsMenuItemArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_MenusArgs = {
+export type GraphCmsMenusArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToMenuConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToMenuConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_NodeArgs = {
+export type GraphCmsNodeArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_OrderArgs = {
+export type GraphCmsOrderArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_OrderByArgs = {
+export type GraphCmsOrderByArgs = {
   id?: Maybe<Scalars['ID']>;
   orderId?: Maybe<Scalars['Int']>;
   orderKey?: Maybe<Scalars['String']>;
 };
 
-export type GraphCmsWp_OrdersArgs = {
+export type GraphCmsOrdersArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToOrderConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToOrderConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaHindArgs = {
+export type GraphCmsPaHindArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaHindsArgs = {
+export type GraphCmsPaHindsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaHindConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaHindConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaHulkArgs = {
+export type GraphCmsPaHulkArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaHulksArgs = {
+export type GraphCmsPaHulksArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaHulkConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaHulkConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaKasutusaegArgs = {
+export type GraphCmsPaKasutusaegArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaKasutusaegsArgs = {
+export type GraphCmsPaKasutusaegsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaKasutusaegConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaKasutusaegConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaKogusArgs = {
+export type GraphCmsPaKogusArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaKogusesArgs = {
+export type GraphCmsPaKogusesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaKogusConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaKogusConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaKontuurArgs = {
+export type GraphCmsPaKontuurArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaKontuursArgs = {
+export type GraphCmsPaKontuursArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaKontuurConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaKontuurConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaKoostisainedArgs = {
+export type GraphCmsPaKoostisainedArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaKoostisainedsArgs = {
+export type GraphCmsPaKoostisainedsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaKoostisainedConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaKoostisainedConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaLaadimisaegArgs = {
+export type GraphCmsPaLaadimisaegArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaLaadimisaegsArgs = {
+export type GraphCmsPaLaadimisaegsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaLaadimisaegConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaLaadimisaegConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaMaterjalArgs = {
+export type GraphCmsPaMaterjalArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaMaterjalsArgs = {
+export type GraphCmsPaMaterjalsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaMaterjalConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaMaterjalConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaMuratasaArgs = {
+export type GraphCmsPaMuratasaArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaMuratasasArgs = {
+export type GraphCmsPaMuratasasArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaMuratasaConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaMuratasaConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaOhutusArgs = {
+export type GraphCmsPaOhutusArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaOhutusesArgs = {
+export type GraphCmsPaOhutusesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaOhutusConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaOhutusConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaPatareidArgs = {
+export type GraphCmsPaPatareidArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaPatareidsArgs = {
+export type GraphCmsPaPatareidsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaPatareidConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaPatareidConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaSuurusArgs = {
+export type GraphCmsPaSuurusArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaSuurusesArgs = {
+export type GraphCmsPaSuurusesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaSuurusConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaSuurusConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaVariantArgs = {
+export type GraphCmsPaVariantArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaVariantsArgs = {
+export type GraphCmsPaVariantsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaVariantConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaVariantConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaVarvArgs = {
+export type GraphCmsPaVarvArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaVarvsArgs = {
+export type GraphCmsPaVarvsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaVarvConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaVarvConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PaVeekindlusArgs = {
+export type GraphCmsPaVeekindlusArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PaVeekindlusesArgs = {
+export type GraphCmsPaVeekindlusesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPaVeekindlusConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPaVeekindlusConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PageArgs = {
+export type GraphCmsPageArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PageByArgs = {
+export type GraphCmsPageByArgs = {
   id?: Maybe<Scalars['ID']>;
   pageId?: Maybe<Scalars['Int']>;
   uri?: Maybe<Scalars['String']>;
 };
 
-export type GraphCmsWp_PagesArgs = {
+export type GraphCmsPagesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPageConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPageConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_PluginArgs = {
+export type GraphCmsPluginArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PluginsArgs = {
+export type GraphCmsPluginsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
 };
 
-export type GraphCmsWp_PostArgs = {
+export type GraphCmsPostArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_PostByArgs = {
+export type GraphCmsPostByArgs = {
   id?: Maybe<Scalars['ID']>;
   postId?: Maybe<Scalars['Int']>;
   uri?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
 };
 
-export type GraphCmsWp_PostsArgs = {
+export type GraphCmsPostsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToPostConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToPostConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_ProductArgs = {
+export type GraphCmsProductArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_ProductByArgs = {
+export type GraphCmsProductByArgs = {
   id?: Maybe<Scalars['ID']>;
   productId?: Maybe<Scalars['Int']>;
 };
 
-export type GraphCmsWp_ProductCategoriesArgs = {
+export type GraphCmsProductCategoriesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToProductCategoryConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToProductCategoryConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_ProductCategoryArgs = {
+export type GraphCmsProductCategoryArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_ProductTagArgs = {
+export type GraphCmsProductTagArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_ProductTagsArgs = {
+export type GraphCmsProductTagsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToProductTagConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToProductTagConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_ProductTypeArgs = {
+export type GraphCmsProductTypeArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_ProductTypesArgs = {
+export type GraphCmsProductTypesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToProductTypeConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToProductTypeConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_ProductVariationArgs = {
+export type GraphCmsProductVariationArgs = {
   id?: Maybe<Scalars['ID']>;
   variationId?: Maybe<Scalars['Int']>;
 };
 
-export type GraphCmsWp_ProductsArgs = {
+export type GraphCmsProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToProductConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_RefundArgs = {
+export type GraphCmsRefundArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_RefundByArgs = {
+export type GraphCmsRefundByArgs = {
   id?: Maybe<Scalars['ID']>;
   refundId?: Maybe<Scalars['Int']>;
 };
 
-export type GraphCmsWp_RefundsArgs = {
+export type GraphCmsRefundsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToRefundConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToRefundConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_RevisionArgs = {
+export type GraphCmsRevisionArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_RevisionByArgs = {
+export type GraphCmsRevisionByArgs = {
   id?: Maybe<Scalars['ID']>;
   revisionId?: Maybe<Scalars['Int']>;
   uri?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
 };
 
-export type GraphCmsWp_RevisionsArgs = {
+export type GraphCmsRevisionsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToRevisionConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToRevisionConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_ShippingClassArgs = {
+export type GraphCmsShippingClassArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_ShippingClassesArgs = {
+export type GraphCmsShippingClassesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToShippingClassConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToShippingClassConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_ShippingMethodArgs = {
+export type GraphCmsShippingMethodArgs = {
   id?: Maybe<Scalars['ID']>;
   methodId?: Maybe<Scalars['ID']>;
 };
 
-export type GraphCmsWp_ShippingMethodsArgs = {
+export type GraphCmsShippingMethodsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
 };
 
-export type GraphCmsWp_TagArgs = {
+export type GraphCmsTagArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_TagsArgs = {
+export type GraphCmsTagsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToTagConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToTagConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_TaxRateArgs = {
+export type GraphCmsTaxRateArgs = {
   id?: Maybe<Scalars['ID']>;
   rateId?: Maybe<Scalars['Int']>;
 };
 
-export type GraphCmsWp_TaxRatesArgs = {
+export type GraphCmsTaxRatesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToTaxRateConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToTaxRateConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_ThemeArgs = {
+export type GraphCmsThemeArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_ThemesArgs = {
+export type GraphCmsThemesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
 };
 
-export type GraphCmsWp_UserArgs = {
+export type GraphCmsUserArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_UserRolesArgs = {
+export type GraphCmsUserRolesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
 };
 
-export type GraphCmsWp_UserRoleArgs = {
+export type GraphCmsUserRoleArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_UsersArgs = {
+export type GraphCmsUsersArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToUserConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToUserConnectionWhereArgs>;
 };
 
-export type GraphCmsWp_VisibleProductArgs = {
+export type GraphCmsVisibleProductArgs = {
   id: Scalars['ID'];
 };
 
-export type GraphCmsWp_VisibleProductsArgs = {
+export type GraphCmsVisibleProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_RootQueryToVisibleProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_RootQueryToVisibleProductConnectionWhereArgs>;
 };
 
 /** Input for the addFee mutation */
-export type GraphCms_Wp_AddFeeInput = {
+export type GraphCms_AddFeeInput = {
   /** Fee amount */
   amount?: Maybe<Scalars['Float']>;
   clientMutationId: Scalars['String'];
@@ -790,18 +788,18 @@ export type GraphCms_Wp_AddFeeInput = {
   /** Is the fee taxable? */
   taxable?: Maybe<Scalars['Boolean']>;
   /** The tax class for the fee if taxable. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
 };
 
 /** The payload for the addFee mutation */
-export type GraphCms_Wp_AddFeePayload = {
-  __typename?: 'GraphCMS_WP_AddFeePayload';
-  cartFee?: Maybe<GraphCms_Wp_CartFee>;
+export type GraphCms_AddFeePayload = {
+  __typename?: 'GraphCMS_AddFeePayload';
+  cartFee?: Maybe<GraphCms_CartFee>;
   clientMutationId: Scalars['String'];
 };
 
 /** Input for the addToCart mutation */
-export type GraphCms_Wp_AddToCartInput = {
+export type GraphCms_AddToCartInput = {
   clientMutationId: Scalars['String'];
   /** JSON string representation of extra cart item data */
   extraData?: Maybe<Scalars['String']>;
@@ -810,35 +808,35 @@ export type GraphCms_Wp_AddToCartInput = {
   /** Cart item quantity */
   quantity?: Maybe<Scalars['Int']>;
   /** Cart item product variation attributes */
-  variation?: Maybe<Array<Maybe<GraphCms_Wp_ProductAttributeInput>>>;
+  variation?: Maybe<Array<Maybe<GraphCms_ProductAttributeInput>>>;
   /** Cart item product variation database ID or global ID */
   variationId?: Maybe<Scalars['Int']>;
 };
 
 /** The payload for the addToCart mutation */
-export type GraphCms_Wp_AddToCartPayload = {
-  __typename?: 'GraphCMS_WP_AddToCartPayload';
-  cartItem?: Maybe<GraphCms_Wp_CartItem>;
+export type GraphCms_AddToCartPayload = {
+  __typename?: 'GraphCMS_AddToCartPayload';
+  cartItem?: Maybe<GraphCms_CartItem>;
   clientMutationId: Scalars['String'];
 };
 
 /** Input for the applyCoupon mutation */
-export type GraphCms_Wp_ApplyCouponInput = {
+export type GraphCms_ApplyCouponInput = {
   clientMutationId: Scalars['String'];
   /** Code of coupon being applied */
   code: Scalars['String'];
 };
 
 /** The payload for the applyCoupon mutation */
-export type GraphCms_Wp_ApplyCouponPayload = {
-  __typename?: 'GraphCMS_WP_ApplyCouponPayload';
-  cart?: Maybe<GraphCms_Wp_Cart>;
+export type GraphCms_ApplyCouponPayload = {
+  __typename?: 'GraphCMS_ApplyCouponPayload';
+  cart?: Maybe<GraphCms_Cart>;
   clientMutationId: Scalars['String'];
 };
 
 /** Avatars are profile images for users. WordPress by default uses the Gravatar service to host and fetch avatars from. */
-export type GraphCms_Wp_Avatar = {
-  __typename?: 'GraphCMS_WP_Avatar';
+export type GraphCms_Avatar = {
+  __typename?: 'GraphCMS_Avatar';
   /** URL for the default image or a default type. Accepts &#039;404&#039; (return a
    * 404 instead of a default image), &#039;retro&#039; (8bit),
    * &#039;monsterid&#039; (monster), &#039;wavatar&#039; (cartoon face),
@@ -874,7 +872,7 @@ export type GraphCms_Wp_Avatar = {
 /** What rating to display avatars up to. Accepts 'G', 'PG', 'R', 'X', and are
  * judged in that order. Default is the value of the 'avatar_rating' option
  */
-export enum GraphCms_Wp_AvatarRatingEnum {
+export enum GraphCms_AvatarRatingEnum {
   G = 'G',
   Pg = 'PG',
   R = 'R',
@@ -882,19 +880,19 @@ export enum GraphCms_Wp_AvatarRatingEnum {
 }
 
 /** Product backorder enumeration */
-export enum GraphCms_Wp_BackordersEnum {
+export enum GraphCms_BackordersEnum {
   No = 'NO',
   Notify = 'NOTIFY',
   Yes = 'YES',
 }
 
 /** The cart object */
-export type GraphCms_Wp_Cart = {
-  __typename?: 'GraphCMS_WP_Cart';
+export type GraphCms_Cart = {
+  __typename?: 'GraphCMS_Cart';
   /** Connection between the Cart type and the Cart type */
-  appliedCoupons?: Maybe<GraphCms_Wp_CartToCouponConnection>;
+  appliedCoupons?: Maybe<GraphCms_CartToCouponConnection>;
   /** Connection between the Cart type and the Cart type */
-  contents?: Maybe<GraphCms_Wp_CartToCartItemConnection>;
+  contents?: Maybe<GraphCms_CartToCartItemConnection>;
   /** Cart contents tax */
   contentsTax?: Maybe<Scalars['Float']>;
   /** Cart contents total */
@@ -906,7 +904,7 @@ export type GraphCms_Wp_Cart = {
   /** Do display prices include taxes */
   displayPricesIncludeTax?: Maybe<Scalars['Boolean']>;
   /** Additional fees on the cart. */
-  fees?: Maybe<Array<Maybe<GraphCms_Wp_CartFee>>>;
+  fees?: Maybe<Array<Maybe<GraphCms_CartFee>>>;
   /** Cart fee tax */
   feeTax?: Maybe<Scalars['Float']>;
   /** Cart fee total */
@@ -930,26 +928,26 @@ export type GraphCms_Wp_Cart = {
 };
 
 /** The cart object */
-export type GraphCms_Wp_CartAppliedCouponsArgs = {
+export type GraphCms_CartAppliedCouponsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_CartToCouponConnectionWhereArgs>;
+  where?: Maybe<GraphCms_CartToCouponConnectionWhereArgs>;
 };
 
 /** The cart object */
-export type GraphCms_Wp_CartContentsArgs = {
+export type GraphCms_CartContentsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_CartToCartItemConnectionWhereArgs>;
+  where?: Maybe<GraphCms_CartToCartItemConnectionWhereArgs>;
 };
 
 /** An additional fee */
-export type GraphCms_Wp_CartFee = {
-  __typename?: 'GraphCMS_WP_CartFee';
+export type GraphCms_CartFee = {
+  __typename?: 'GraphCMS_CartFee';
   /** Fee amount */
   amount?: Maybe<Scalars['Float']>;
   /** Fee ID */
@@ -959,18 +957,18 @@ export type GraphCms_Wp_CartFee = {
   /** Is fee taxable? */
   taxable?: Maybe<Scalars['Boolean']>;
   /** Fee tax class */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Fee total */
   total?: Maybe<Scalars['Float']>;
 };
 
 /** A item in the cart */
-export type GraphCms_Wp_CartItem = {
-  __typename?: 'GraphCMS_WP_CartItem';
+export type GraphCms_CartItem = {
+  __typename?: 'GraphCMS_CartItem';
   /** CartItem ID */
   key: Scalars['ID'];
   /** A product in the cart */
-  product?: Maybe<GraphCms_Wp_Product>;
+  product?: Maybe<GraphCms_Product>;
   /** Quantity of the product */
   quantity?: Maybe<Scalars['Int']>;
   /** Item&#039;s subtotal */
@@ -982,67 +980,67 @@ export type GraphCms_Wp_CartItem = {
   /** Item&#039;s total */
   total?: Maybe<Scalars['Float']>;
   /** Selected variation of the product */
-  variation?: Maybe<GraphCms_Wp_ProductVariation>;
+  variation?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Connection between the Cart type and the Cart type */
-export type GraphCms_Wp_CartToCartItemConnection = {
-  __typename?: 'GraphCMS_WP_CartToCartItemConnection';
+export type GraphCms_CartToCartItemConnection = {
+  __typename?: 'GraphCMS_CartToCartItemConnection';
   /** Edges for the CartToCartItemConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_CartToCartItemConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_CartToCartItemConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_CartItem>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_CartItem>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_CartToCartItemConnectionEdge = {
-  __typename?: 'GraphCMS_WP_CartToCartItemConnectionEdge';
+export type GraphCms_CartToCartItemConnectionEdge = {
+  __typename?: 'GraphCMS_CartToCartItemConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_CartItem>;
+  node?: Maybe<GraphCms_CartItem>;
 };
 
 /** Arguments for filtering the CartToCartItemConnection connection */
-export type GraphCms_Wp_CartToCartItemConnectionWhereArgs = {
+export type GraphCms_CartToCartItemConnectionWhereArgs = {
   /** Limit results to cart item that require shipping */
   needShipping?: Maybe<Scalars['Boolean']>;
 };
 
 /** Connection between the Cart type and the Cart type */
-export type GraphCms_Wp_CartToCouponConnection = {
-  __typename?: 'GraphCMS_WP_CartToCouponConnection';
+export type GraphCms_CartToCouponConnection = {
+  __typename?: 'GraphCMS_CartToCouponConnection';
   /** Edges for the CartToCouponConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_CartToCouponConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_CartToCouponConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Coupon>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Coupon>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_CartToCouponConnectionEdge = {
-  __typename?: 'GraphCMS_WP_CartToCouponConnectionEdge';
+export type GraphCms_CartToCouponConnectionEdge = {
+  __typename?: 'GraphCMS_CartToCouponConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Coupon>;
+  node?: Maybe<GraphCms_Coupon>;
 };
 
 /** Arguments for filtering the CartToCouponConnection connection */
-export type GraphCms_Wp_CartToCouponConnectionWhereArgs = {
+export type GraphCms_CartToCouponConnectionWhereArgs = {
   /** Limit result set to resources with a specific code. */
   code?: Maybe<Scalars['String']>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to specific ids. */
   include?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -1054,7 +1052,7 @@ export type GraphCms_Wp_CartToCouponConnectionWhereArgs = {
 };
 
 /** Product catalog visibility enumeration */
-export enum GraphCms_Wp_CatalogVisibilityEnum {
+export enum GraphCms_CatalogVisibilityEnum {
   Catalog = 'CATALOG',
   Hidden = 'HIDDEN',
   Search = 'SEARCH',
@@ -1062,14 +1060,14 @@ export enum GraphCms_Wp_CatalogVisibilityEnum {
 }
 
 /** The category type */
-export type GraphCms_Wp_Category = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Category';
+export type GraphCms_Category = GraphCms_Node & {
+  __typename?: 'GraphCMS_Category';
   /** The ancestors of the object */
-  ancestors?: Maybe<Array<Maybe<GraphCms_Wp_Category>>>;
+  ancestors?: Maybe<Array<Maybe<GraphCms_Category>>>;
   /** The id field matches the WP_Post-&gt;ID field. */
   categoryId?: Maybe<Scalars['Int']>;
   /** Connection between the category type and the category type */
-  children?: Maybe<GraphCms_Wp_CategoryToCategoryConnection>;
+  children?: Maybe<GraphCms_CategoryToCategoryConnection>;
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -1083,13 +1081,13 @@ export type GraphCms_Wp_Category = GraphCms_Wp_Node & {
   /** The human friendly name of the object. */
   name?: Maybe<Scalars['String']>;
   /** The parent object */
-  parent?: Maybe<GraphCms_Wp_Category>;
+  parent?: Maybe<GraphCms_Category>;
   /** Connection between the category type and the category type */
-  posts?: Maybe<GraphCms_Wp_CategoryToPostConnection>;
+  posts?: Maybe<GraphCms_CategoryToPostConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
@@ -1097,47 +1095,47 @@ export type GraphCms_Wp_Category = GraphCms_Wp_Node & {
 };
 
 /** The category type */
-export type GraphCms_Wp_CategoryChildrenArgs = {
+export type GraphCms_CategoryChildrenArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_CategoryToCategoryConnectionWhereArgs>;
+  where?: Maybe<GraphCms_CategoryToCategoryConnectionWhereArgs>;
 };
 
 /** The category type */
-export type GraphCms_Wp_CategoryPostsArgs = {
+export type GraphCms_CategoryPostsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_CategoryToPostConnectionWhereArgs>;
+  where?: Maybe<GraphCms_CategoryToPostConnectionWhereArgs>;
 };
 
 /** Connection between the category type and the category type */
-export type GraphCms_Wp_CategoryToCategoryConnection = {
-  __typename?: 'GraphCMS_WP_CategoryToCategoryConnection';
+export type GraphCms_CategoryToCategoryConnection = {
+  __typename?: 'GraphCMS_CategoryToCategoryConnection';
   /** Edges for the CategoryToCategoryConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_CategoryToCategoryConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_CategoryToCategoryConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Category>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Category>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_CategoryToCategoryConnectionEdge = {
-  __typename?: 'GraphCMS_WP_CategoryToCategoryConnectionEdge';
+export type GraphCms_CategoryToCategoryConnectionEdge = {
+  __typename?: 'GraphCMS_CategoryToCategoryConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Category>;
+  node?: Maybe<GraphCms_Category>;
 };
 
 /** Arguments for filtering the CategoryToCategoryConnection connection */
-export type GraphCms_Wp_CategoryToCategoryConnectionWhereArgs = {
+export type GraphCms_CategoryToCategoryConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -1167,7 +1165,7 @@ export type GraphCms_Wp_CategoryToCategoryConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -1192,29 +1190,29 @@ export type GraphCms_Wp_CategoryToCategoryConnectionWhereArgs = {
 };
 
 /** Connection between the category type and the category type */
-export type GraphCms_Wp_CategoryToPostConnection = {
-  __typename?: 'GraphCMS_WP_CategoryToPostConnection';
+export type GraphCms_CategoryToPostConnection = {
+  __typename?: 'GraphCMS_CategoryToPostConnection';
   /** Edges for the CategoryToPostConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_CategoryToPostConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_CategoryToPostConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Post>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Post>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_CategoryToPostConnectionEdge = {
-  __typename?: 'GraphCMS_WP_CategoryToPostConnectionEdge';
+export type GraphCms_CategoryToPostConnectionEdge = {
+  __typename?: 'GraphCMS_CategoryToPostConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Post>;
+  node?: Maybe<GraphCms_Post>;
 };
 
 /** Arguments for filtering the CategoryToPostConnection connection */
-export type GraphCms_Wp_CategoryToPostConnectionWhereArgs = {
+export type GraphCms_CategoryToPostConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -1240,7 +1238,7 @@ export type GraphCms_Wp_CategoryToPostConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -1250,7 +1248,7 @@ export type GraphCms_Wp_CategoryToPostConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -1260,7 +1258,7 @@ export type GraphCms_Wp_CategoryToPostConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -1273,8 +1271,8 @@ export type GraphCms_Wp_CategoryToPostConnectionWhereArgs = {
   password?: Maybe<Scalars['String']>;
   /** Show Posts based on a keyword search */
   search?: Maybe<Scalars['String']>;
-  stati?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  stati?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<Scalars['String']>;
   /** Use Tag ID */
@@ -1300,8 +1298,8 @@ export type GraphCms_Wp_CategoryToPostConnectionWhereArgs = {
 };
 
 /** A Comment object */
-export type GraphCms_Wp_Comment = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Comment';
+export type GraphCms_Comment = GraphCms_Node & {
+  __typename?: 'GraphCMS_Comment';
   /** User agent used to post the comment. This field is equivalent to
    * WP_Comment-&gt;comment_agent and the value matching the
    * &quot;comment_agent&quot; column in SQL.
@@ -1313,16 +1311,16 @@ export type GraphCms_Wp_Comment = GraphCms_Wp_Node & {
    */
   approved?: Maybe<Scalars['Boolean']>;
   /** The author of the comment */
-  author?: Maybe<GraphCms_Wp_CommentAuthorUnion>;
+  author?: Maybe<GraphCms_CommentAuthorUnion>;
   /** IP address for the author. This field is equivalent to
    * WP_Comment-&gt;comment_author_IP and the value matching the
    * &quot;comment_author_IP&quot; column in SQL.
    */
   authorIp?: Maybe<Scalars['String']>;
   /** Connection between the Comment type and the Comment type */
-  children?: Maybe<GraphCms_Wp_CommentToCommentConnection>;
+  children?: Maybe<GraphCms_CommentToCommentConnection>;
   /** The object the comment was added to */
-  commentedOn?: Maybe<GraphCms_Wp_PostObjectUnion>;
+  commentedOn?: Maybe<GraphCms_PostObjectUnion>;
   /** ID for the comment, unique among comments. */
   commentId?: Maybe<Scalars['Int']>;
   /** Content of the comment. This field is equivalent to
@@ -1350,7 +1348,7 @@ export type GraphCms_Wp_Comment = GraphCms_Wp_Node & {
   /** Parent comment of current comment. This field is equivalent to the WP_Comment
    * instance matching the WP_Comment-&gt;comment_parent ID.
    */
-  parent?: Maybe<GraphCms_Wp_Comment>;
+  parent?: Maybe<GraphCms_Comment>;
   /** Type of comment. This field is equivalent to WP_Comment-&gt;comment_type and
    * the value matching the &quot;comment_type&quot; column in SQL.
    */
@@ -1358,22 +1356,22 @@ export type GraphCms_Wp_Comment = GraphCms_Wp_Node & {
 };
 
 /** A Comment object */
-export type GraphCms_Wp_CommentChildrenArgs = {
+export type GraphCms_CommentChildrenArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_CommentToCommentConnectionWhereArgs>;
+  where?: Maybe<GraphCms_CommentToCommentConnectionWhereArgs>;
 };
 
 /** A Comment object */
-export type GraphCms_Wp_CommentContentArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_CommentContentArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** A Comment Author object */
-export type GraphCms_Wp_CommentAuthor = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_CommentAuthor';
+export type GraphCms_CommentAuthor = GraphCms_Node & {
+  __typename?: 'GraphCMS_CommentAuthor';
   /** The email for the comment author */
   email?: Maybe<Scalars['String']>;
   /** The globally unique identifier for the Comment Author user */
@@ -1386,12 +1384,12 @@ export type GraphCms_Wp_CommentAuthor = GraphCms_Wp_Node & {
   url?: Maybe<Scalars['String']>;
 };
 
-export type GraphCms_Wp_CommentAuthorUnion =
-  | GraphCms_Wp_User
-  | GraphCms_Wp_CommentAuthor;
+export type GraphCms_CommentAuthorUnion =
+  | GraphCms_User
+  | GraphCms_CommentAuthor;
 
 /** Options for ordering the connection */
-export enum GraphCms_Wp_CommentsConnectionOrderbyEnum {
+export enum GraphCms_CommentsConnectionOrderbyEnum {
   CommentAgent = 'COMMENT_AGENT',
   CommentApproved = 'COMMENT_APPROVED',
   CommentAuthor = 'COMMENT_AUTHOR',
@@ -1411,27 +1409,27 @@ export enum GraphCms_Wp_CommentsConnectionOrderbyEnum {
 }
 
 /** Connection between the Comment type and the Comment type */
-export type GraphCms_Wp_CommentToCommentConnection = {
-  __typename?: 'GraphCMS_WP_CommentToCommentConnection';
+export type GraphCms_CommentToCommentConnection = {
+  __typename?: 'GraphCMS_CommentToCommentConnection';
   /** Edges for the CommentToCommentConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_CommentToCommentConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_CommentToCommentConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Comment>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Comment>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_CommentToCommentConnectionEdge = {
-  __typename?: 'GraphCMS_WP_CommentToCommentConnectionEdge';
+export type GraphCms_CommentToCommentConnectionEdge = {
+  __typename?: 'GraphCMS_CommentToCommentConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Comment>;
+  node?: Maybe<GraphCms_Comment>;
 };
 
 /** Arguments for filtering the CommentToCommentConnection connection */
-export type GraphCms_Wp_CommentToCommentConnectionWhereArgs = {
+export type GraphCms_CommentToCommentConnectionWhereArgs = {
   /** Comment author email address. */
   authorEmail?: Maybe<Scalars['String']>;
   /** Array of author IDs to include comments for. */
@@ -1477,9 +1475,9 @@ export type GraphCms_Wp_CommentToCommentConnectionWhereArgs = {
   /** Array of content object statuses to retrieve affiliated comments for.
    * 							Pass 'any' to match any value.
    */
-  contentStatus?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
+  contentStatus?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
+  contentType?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
   /** Array of IDs or email addresses of users whose unapproved comments will be
    * returned by the query regardless of $status. Default empty
    */
@@ -1487,9 +1485,9 @@ export type GraphCms_Wp_CommentToCommentConnectionWhereArgs = {
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<Scalars['Int']>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<GraphCms_Wp_OrderEnum>;
+  order?: Maybe<GraphCms_OrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<GraphCms_Wp_CommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_CommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<Scalars['Int']>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -1507,7 +1505,7 @@ export type GraphCms_Wp_CommentToCommentConnectionWhereArgs = {
 };
 
 /** Countries enumeration */
-export enum GraphCms_Wp_CountriesEnum {
+export enum GraphCms_CountriesEnum {
   Ad = 'AD',
   Ae = 'AE',
   Af = 'AF',
@@ -1760,8 +1758,8 @@ export enum GraphCms_Wp_CountriesEnum {
 }
 
 /** A coupon object */
-export type GraphCms_Wp_Coupon = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Coupon';
+export type GraphCms_Coupon = GraphCms_Node & {
+  __typename?: 'GraphCMS_Coupon';
   /** Amount off provided by the coupon */
   amount?: Maybe<Scalars['Float']>;
   /** Coupon code */
@@ -1775,15 +1773,13 @@ export type GraphCms_Wp_Coupon = GraphCms_Wp_Node & {
   /** Explanation of what the coupon does */
   description?: Maybe<Scalars['String']>;
   /** Type of discount */
-  discountType?: Maybe<GraphCms_Wp_DiscountTypeEnum>;
+  discountType?: Maybe<GraphCms_DiscountTypeEnum>;
   /** Only customers with a matching email address can use the coupon */
   emailRestrictions?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Connection between the Coupon type and the Coupon type */
-  excludedProductCategories?: Maybe<
-    GraphCms_Wp_CouponToProductCategoryConnection
-  >;
+  excludedProductCategories?: Maybe<GraphCms_CouponToProductCategoryConnection>;
   /** Connection between the Coupon type and the Coupon type */
-  excludedProducts?: Maybe<GraphCms_Wp_CouponToProductConnection>;
+  excludedProducts?: Maybe<GraphCms_CouponToProductConnection>;
   /** Excluding sale items mean this coupon cannot be used on items that are on sale (or carts that contain on sale items) */
   excludeSaleItems?: Maybe<Scalars['Boolean']>;
   /** Does this coupon grant free shipping? */
@@ -1801,9 +1797,9 @@ export type GraphCms_Wp_Coupon = GraphCms_Wp_Node & {
   /** Date coupon modified */
   modified?: Maybe<Scalars['String']>;
   /** Connection between the Coupon type and the Coupon type */
-  productCategories?: Maybe<GraphCms_Wp_CouponToProductCategoryConnection>;
+  productCategories?: Maybe<GraphCms_CouponToProductCategoryConnection>;
   /** Connection between the Coupon type and the Coupon type */
-  products?: Maybe<GraphCms_Wp_CouponToProductConnection>;
+  products?: Maybe<GraphCms_CouponToProductConnection>;
   /** How many times the coupon has been used */
   usageCount?: Maybe<Scalars['Int']>;
   /** Amount of times this coupon can be used globally */
@@ -1811,61 +1807,61 @@ export type GraphCms_Wp_Coupon = GraphCms_Wp_Node & {
   /** Amount of times this coupon can be used by a customer */
   usageLimitPerUser?: Maybe<Scalars['Int']>;
   /** Connection between the Coupon type and the Coupon type */
-  usedBy?: Maybe<GraphCms_Wp_CouponToCustomerConnection>;
+  usedBy?: Maybe<GraphCms_CouponToCustomerConnection>;
 };
 
 /** A coupon object */
-export type GraphCms_Wp_CouponExcludedProductCategoriesArgs = {
+export type GraphCms_CouponExcludedProductCategoriesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_CouponToProductCategoryConnectionWhereArgs>;
+  where?: Maybe<GraphCms_CouponToProductCategoryConnectionWhereArgs>;
 };
 
 /** A coupon object */
-export type GraphCms_Wp_CouponExcludedProductsArgs = {
+export type GraphCms_CouponExcludedProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_CouponToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_CouponToProductConnectionWhereArgs>;
 };
 
 /** A coupon object */
-export type GraphCms_Wp_CouponProductCategoriesArgs = {
+export type GraphCms_CouponProductCategoriesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_CouponToProductCategoryConnectionWhereArgs>;
+  where?: Maybe<GraphCms_CouponToProductCategoryConnectionWhereArgs>;
 };
 
 /** A coupon object */
-export type GraphCms_Wp_CouponProductsArgs = {
+export type GraphCms_CouponProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_CouponToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_CouponToProductConnectionWhereArgs>;
 };
 
 /** A coupon object */
-export type GraphCms_Wp_CouponUsedByArgs = {
+export type GraphCms_CouponUsedByArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_CouponToCustomerConnectionWhereArgs>;
+  where?: Maybe<GraphCms_CouponToCustomerConnectionWhereArgs>;
 };
 
 /** a coupon line object */
-export type GraphCms_Wp_CouponLine = {
-  __typename?: 'GraphCMS_WP_CouponLine';
+export type GraphCms_CouponLine = {
+  __typename?: 'GraphCMS_CouponLine';
   /** Line&#039;s Coupon code */
   code?: Maybe<Scalars['String']>;
   /** Line&#039;s Coupon */
-  coupon?: Maybe<GraphCms_Wp_Coupon>;
+  coupon?: Maybe<GraphCms_Coupon>;
   /** Line&#039;s Discount total */
   discount?: Maybe<Scalars['String']>;
   /** Line&#039;s Discount total tax */
@@ -1877,27 +1873,27 @@ export type GraphCms_Wp_CouponLine = {
 };
 
 /** Connection between the Coupon type and the Coupon type */
-export type GraphCms_Wp_CouponToCustomerConnection = {
-  __typename?: 'GraphCMS_WP_CouponToCustomerConnection';
+export type GraphCms_CouponToCustomerConnection = {
+  __typename?: 'GraphCMS_CouponToCustomerConnection';
   /** Edges for the CouponToCustomerConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_CouponToCustomerConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_CouponToCustomerConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Customer>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Customer>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_CouponToCustomerConnectionEdge = {
-  __typename?: 'GraphCMS_WP_CouponToCustomerConnectionEdge';
+export type GraphCms_CouponToCustomerConnectionEdge = {
+  __typename?: 'GraphCMS_CouponToCustomerConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Customer>;
+  node?: Maybe<GraphCms_Customer>;
 };
 
 /** Arguments for filtering the CouponToCustomerConnection connection */
-export type GraphCms_Wp_CouponToCustomerConnectionWhereArgs = {
+export type GraphCms_CouponToCustomerConnectionWhereArgs = {
   /** Limit result set to resources with a specific email. */
   email?: Maybe<Scalars['String']>;
   /** Ensure result set excludes specific IDs. */
@@ -1905,45 +1901,43 @@ export type GraphCms_Wp_CouponToCustomerConnectionWhereArgs = {
   /** Limit result set to specific ids. */
   include?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Order of results. */
-  order?: Maybe<GraphCms_Wp_OrderEnum>;
+  order?: Maybe<GraphCms_OrderEnum>;
   /** Order results by a specific field. */
-  orderby?: Maybe<GraphCms_Wp_CustomerConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_CustomerConnectionOrderbyEnum>;
   /** Limit result set to resources with a specific role. */
-  role?: Maybe<GraphCms_Wp_UserRoleEnum>;
+  role?: Maybe<GraphCms_UserRoleEnum>;
   /** Limit result set to resources with a specific group of roles. */
-  roleIn?: Maybe<Array<Maybe<GraphCms_Wp_UserRoleEnum>>>;
+  roleIn?: Maybe<Array<Maybe<GraphCms_UserRoleEnum>>>;
   /** Limit result set to resources not within a specific group of roles. */
-  roleNotIn?: Maybe<Array<Maybe<GraphCms_Wp_UserRoleEnum>>>;
+  roleNotIn?: Maybe<Array<Maybe<GraphCms_UserRoleEnum>>>;
   /** Limit results to those matching a string. */
   search?: Maybe<Scalars['String']>;
 };
 
 /** Connection between the Coupon type and the Coupon type */
-export type GraphCms_Wp_CouponToProductCategoryConnection = {
-  __typename?: 'GraphCMS_WP_CouponToProductCategoryConnection';
+export type GraphCms_CouponToProductCategoryConnection = {
+  __typename?: 'GraphCMS_CouponToProductCategoryConnection';
   /** Edges for the CouponToProductCategoryConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_CouponToProductCategoryConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_CouponToProductCategoryConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductCategory>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductCategory>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_CouponToProductCategoryConnectionEdge = {
-  __typename?: 'GraphCMS_WP_CouponToProductCategoryConnectionEdge';
+export type GraphCms_CouponToProductCategoryConnectionEdge = {
+  __typename?: 'GraphCMS_CouponToProductCategoryConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductCategory>;
+  node?: Maybe<GraphCms_ProductCategory>;
 };
 
 /** Arguments for filtering the CouponToProductCategoryConnection connection */
-export type GraphCms_Wp_CouponToProductCategoryConnectionWhereArgs = {
+export type GraphCms_CouponToProductCategoryConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -1973,7 +1967,7 @@ export type GraphCms_Wp_CouponToProductCategoryConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -1998,27 +1992,27 @@ export type GraphCms_Wp_CouponToProductCategoryConnectionWhereArgs = {
 };
 
 /** Connection between the Coupon type and the Coupon type */
-export type GraphCms_Wp_CouponToProductConnection = {
-  __typename?: 'GraphCMS_WP_CouponToProductConnection';
+export type GraphCms_CouponToProductConnection = {
+  __typename?: 'GraphCMS_CouponToProductConnection';
   /** Edges for the CouponToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_CouponToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_CouponToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_CouponToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_CouponToProductConnectionEdge';
+export type GraphCms_CouponToProductConnectionEdge = {
+  __typename?: 'GraphCMS_CouponToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the CouponToProductConnection connection */
-export type GraphCms_Wp_CouponToProductConnectionWhereArgs = {
+export type GraphCms_CouponToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -2036,7 +2030,7 @@ export type GraphCms_Wp_CouponToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -2050,7 +2044,7 @@ export type GraphCms_Wp_CouponToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -2068,7 +2062,7 @@ export type GraphCms_Wp_CouponToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -2082,19 +2076,19 @@ export type GraphCms_Wp_CouponToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Input for the createCategory mutation */
-export type GraphCms_Wp_CreateCategoryInput = {
+export type GraphCms_CreateCategoryInput = {
   /** The slug that the category will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2115,15 +2109,15 @@ export type GraphCms_Wp_CreateCategoryInput = {
 };
 
 /** The payload for the createCategory mutation */
-export type GraphCms_Wp_CreateCategoryPayload = {
-  __typename?: 'GraphCMS_WP_CreateCategoryPayload';
+export type GraphCms_CreateCategoryPayload = {
+  __typename?: 'GraphCMS_CreateCategoryPayload';
   /** The created category */
-  category?: Maybe<GraphCms_Wp_Category>;
+  category?: Maybe<GraphCms_Category>;
   clientMutationId: Scalars['String'];
 };
 
 /** Input for the createComment mutation */
-export type GraphCms_Wp_CreateCommentInput = {
+export type GraphCms_CreateCommentInput = {
   /** User agent used to post the comment. */
   agent?: Maybe<Scalars['String']>;
   /** The approval status of the comment. */
@@ -2156,11 +2150,11 @@ export type GraphCms_Wp_CreateCommentInput = {
 };
 
 /** The payload for the createComment mutation */
-export type GraphCms_Wp_CreateCommentPayload = {
-  __typename?: 'GraphCMS_WP_CreateCommentPayload';
+export type GraphCms_CreateCommentPayload = {
+  __typename?: 'GraphCMS_CreateCommentPayload';
   clientMutationId: Scalars['String'];
   /** The comment that was created */
-  comment?: Maybe<GraphCms_Wp_Comment>;
+  comment?: Maybe<GraphCms_Comment>;
   /** Whether the mutation succeeded. If the comment is not approved, the server
    * will not return the comment to a non authenticated user, but a success message
    * can be returned if the create succeeded, and the client can optimistically add
@@ -2170,7 +2164,7 @@ export type GraphCms_Wp_CreateCommentPayload = {
 };
 
 /** Input for the createMediaItem mutation */
-export type GraphCms_Wp_CreateMediaItemInput = {
+export type GraphCms_CreateMediaItemInput = {
   /** Alternative text to display when mediaItem is not displayed */
   altText?: Maybe<Scalars['String']>;
   /** The userId to assign as the author of the mediaItem */
@@ -2189,7 +2183,7 @@ export type GraphCms_Wp_CreateMediaItemInput = {
   /** The file name of the mediaItem */
   filePath?: Maybe<Scalars['String']>;
   /** The file type of the mediaItem */
-  fileType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  fileType?: Maybe<GraphCms_MimeTypeEnum>;
   /** The WordPress post ID or the graphQL postId of the parent object */
   parentId?: Maybe<Scalars['ID']>;
   /** The ping status for the mediaItem */
@@ -2197,20 +2191,20 @@ export type GraphCms_Wp_CreateMediaItemInput = {
   /** The slug of the mediaItem */
   slug?: Maybe<Scalars['String']>;
   /** The status of the mediaItem */
-  status?: Maybe<GraphCms_Wp_MediaItemStatusEnum>;
+  status?: Maybe<GraphCms_MediaItemStatusEnum>;
   /** The title of the mediaItem */
   title?: Maybe<Scalars['String']>;
 };
 
 /** The payload for the createMediaItem mutation */
-export type GraphCms_Wp_CreateMediaItemPayload = {
-  __typename?: 'GraphCMS_WP_CreateMediaItemPayload';
+export type GraphCms_CreateMediaItemPayload = {
+  __typename?: 'GraphCMS_CreateMediaItemPayload';
   clientMutationId: Scalars['String'];
-  mediaItem?: Maybe<GraphCms_Wp_MediaItem>;
+  mediaItem?: Maybe<GraphCms_MediaItem>;
 };
 
 /** Input for the createPage mutation */
-export type GraphCms_Wp_CreatePageInput = {
+export type GraphCms_CreatePageInput = {
   /** The userId to assign as the author of the post */
   authorId?: Maybe<Scalars['ID']>;
   clientMutationId: Scalars['String'];
@@ -2239,7 +2233,7 @@ export type GraphCms_Wp_CreatePageInput = {
    * WP_Post->post_mime_type and the post_mime_type column in the "post_objects"
    * database table.
    */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** The ID of the parent object */
   parentId?: Maybe<Scalars['ID']>;
   /** The password used to protect the content of the object */
@@ -2251,7 +2245,7 @@ export type GraphCms_Wp_CreatePageInput = {
   /** The slug of the object */
   slug?: Maybe<Scalars['String']>;
   /** The status of the object */
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** The title of the post */
   title?: Maybe<Scalars['String']>;
   /** URLs queued to be pinged. */
@@ -2259,14 +2253,14 @@ export type GraphCms_Wp_CreatePageInput = {
 };
 
 /** The payload for the createPage mutation */
-export type GraphCms_Wp_CreatePagePayload = {
-  __typename?: 'GraphCMS_WP_CreatePagePayload';
+export type GraphCms_CreatePagePayload = {
+  __typename?: 'GraphCMS_CreatePagePayload';
   clientMutationId: Scalars['String'];
-  page?: Maybe<GraphCms_Wp_Page>;
+  page?: Maybe<GraphCms_Page>;
 };
 
 /** Input for the createPaHind mutation */
-export type GraphCms_Wp_CreatePaHindInput = {
+export type GraphCms_CreatePaHindInput = {
   /** The slug that the pa_hind will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2285,15 +2279,15 @@ export type GraphCms_Wp_CreatePaHindInput = {
 };
 
 /** The payload for the createPaHind mutation */
-export type GraphCms_Wp_CreatePaHindPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaHindPayload';
+export type GraphCms_CreatePaHindPayload = {
+  __typename?: 'GraphCMS_CreatePaHindPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_hind */
-  paHind?: Maybe<GraphCms_Wp_PaHind>;
+  paHind?: Maybe<GraphCms_PaHind>;
 };
 
 /** Input for the createPaHulk mutation */
-export type GraphCms_Wp_CreatePaHulkInput = {
+export type GraphCms_CreatePaHulkInput = {
   /** The slug that the pa_hulk will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2312,15 +2306,15 @@ export type GraphCms_Wp_CreatePaHulkInput = {
 };
 
 /** The payload for the createPaHulk mutation */
-export type GraphCms_Wp_CreatePaHulkPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaHulkPayload';
+export type GraphCms_CreatePaHulkPayload = {
+  __typename?: 'GraphCMS_CreatePaHulkPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_hulk */
-  paHulk?: Maybe<GraphCms_Wp_PaHulk>;
+  paHulk?: Maybe<GraphCms_PaHulk>;
 };
 
 /** Input for the createPaKasutusaeg mutation */
-export type GraphCms_Wp_CreatePaKasutusaegInput = {
+export type GraphCms_CreatePaKasutusaegInput = {
   /** The slug that the pa_kasutusaeg will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2339,15 +2333,15 @@ export type GraphCms_Wp_CreatePaKasutusaegInput = {
 };
 
 /** The payload for the createPaKasutusaeg mutation */
-export type GraphCms_Wp_CreatePaKasutusaegPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaKasutusaegPayload';
+export type GraphCms_CreatePaKasutusaegPayload = {
+  __typename?: 'GraphCMS_CreatePaKasutusaegPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_kasutusaeg */
-  paKasutusaeg?: Maybe<GraphCms_Wp_PaKasutusaeg>;
+  paKasutusaeg?: Maybe<GraphCms_PaKasutusaeg>;
 };
 
 /** Input for the createPaKogus mutation */
-export type GraphCms_Wp_CreatePaKogusInput = {
+export type GraphCms_CreatePaKogusInput = {
   /** The slug that the pa_kogus will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2366,15 +2360,15 @@ export type GraphCms_Wp_CreatePaKogusInput = {
 };
 
 /** The payload for the createPaKogus mutation */
-export type GraphCms_Wp_CreatePaKogusPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaKogusPayload';
+export type GraphCms_CreatePaKogusPayload = {
+  __typename?: 'GraphCMS_CreatePaKogusPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_kogus */
-  paKogus?: Maybe<GraphCms_Wp_PaKogus>;
+  paKogus?: Maybe<GraphCms_PaKogus>;
 };
 
 /** Input for the createPaKontuur mutation */
-export type GraphCms_Wp_CreatePaKontuurInput = {
+export type GraphCms_CreatePaKontuurInput = {
   /** The slug that the pa_kontuur will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2393,15 +2387,15 @@ export type GraphCms_Wp_CreatePaKontuurInput = {
 };
 
 /** The payload for the createPaKontuur mutation */
-export type GraphCms_Wp_CreatePaKontuurPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaKontuurPayload';
+export type GraphCms_CreatePaKontuurPayload = {
+  __typename?: 'GraphCMS_CreatePaKontuurPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_kontuur */
-  paKontuur?: Maybe<GraphCms_Wp_PaKontuur>;
+  paKontuur?: Maybe<GraphCms_PaKontuur>;
 };
 
 /** Input for the createPaKoostisained mutation */
-export type GraphCms_Wp_CreatePaKoostisainedInput = {
+export type GraphCms_CreatePaKoostisainedInput = {
   /** The slug that the pa_koostisained will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2420,15 +2414,15 @@ export type GraphCms_Wp_CreatePaKoostisainedInput = {
 };
 
 /** The payload for the createPaKoostisained mutation */
-export type GraphCms_Wp_CreatePaKoostisainedPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaKoostisainedPayload';
+export type GraphCms_CreatePaKoostisainedPayload = {
+  __typename?: 'GraphCMS_CreatePaKoostisainedPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_koostisained */
-  paKoostisained?: Maybe<GraphCms_Wp_PaKoostisained>;
+  paKoostisained?: Maybe<GraphCms_PaKoostisained>;
 };
 
 /** Input for the createPaLaadimisaeg mutation */
-export type GraphCms_Wp_CreatePaLaadimisaegInput = {
+export type GraphCms_CreatePaLaadimisaegInput = {
   /** The slug that the pa_laadimisaeg will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2447,15 +2441,15 @@ export type GraphCms_Wp_CreatePaLaadimisaegInput = {
 };
 
 /** The payload for the createPaLaadimisaeg mutation */
-export type GraphCms_Wp_CreatePaLaadimisaegPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaLaadimisaegPayload';
+export type GraphCms_CreatePaLaadimisaegPayload = {
+  __typename?: 'GraphCMS_CreatePaLaadimisaegPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_laadimisaeg */
-  paLaadimisaeg?: Maybe<GraphCms_Wp_PaLaadimisaeg>;
+  paLaadimisaeg?: Maybe<GraphCms_PaLaadimisaeg>;
 };
 
 /** Input for the createPaMaterjal mutation */
-export type GraphCms_Wp_CreatePaMaterjalInput = {
+export type GraphCms_CreatePaMaterjalInput = {
   /** The slug that the pa_materjal will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2474,15 +2468,15 @@ export type GraphCms_Wp_CreatePaMaterjalInput = {
 };
 
 /** The payload for the createPaMaterjal mutation */
-export type GraphCms_Wp_CreatePaMaterjalPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaMaterjalPayload';
+export type GraphCms_CreatePaMaterjalPayload = {
+  __typename?: 'GraphCMS_CreatePaMaterjalPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_materjal */
-  paMaterjal?: Maybe<GraphCms_Wp_PaMaterjal>;
+  paMaterjal?: Maybe<GraphCms_PaMaterjal>;
 };
 
 /** Input for the createPaMuratasa mutation */
-export type GraphCms_Wp_CreatePaMuratasaInput = {
+export type GraphCms_CreatePaMuratasaInput = {
   /** The slug that the pa_muratasa will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2501,15 +2495,15 @@ export type GraphCms_Wp_CreatePaMuratasaInput = {
 };
 
 /** The payload for the createPaMuratasa mutation */
-export type GraphCms_Wp_CreatePaMuratasaPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaMuratasaPayload';
+export type GraphCms_CreatePaMuratasaPayload = {
+  __typename?: 'GraphCMS_CreatePaMuratasaPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_muratasa */
-  paMuratasa?: Maybe<GraphCms_Wp_PaMuratasa>;
+  paMuratasa?: Maybe<GraphCms_PaMuratasa>;
 };
 
 /** Input for the createPaOhutus mutation */
-export type GraphCms_Wp_CreatePaOhutusInput = {
+export type GraphCms_CreatePaOhutusInput = {
   /** The slug that the pa_ohutus will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2528,15 +2522,15 @@ export type GraphCms_Wp_CreatePaOhutusInput = {
 };
 
 /** The payload for the createPaOhutus mutation */
-export type GraphCms_Wp_CreatePaOhutusPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaOhutusPayload';
+export type GraphCms_CreatePaOhutusPayload = {
+  __typename?: 'GraphCMS_CreatePaOhutusPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_ohutus */
-  paOhutus?: Maybe<GraphCms_Wp_PaOhutus>;
+  paOhutus?: Maybe<GraphCms_PaOhutus>;
 };
 
 /** Input for the createPaPatareid mutation */
-export type GraphCms_Wp_CreatePaPatareidInput = {
+export type GraphCms_CreatePaPatareidInput = {
   /** The slug that the pa_patareid will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2555,15 +2549,15 @@ export type GraphCms_Wp_CreatePaPatareidInput = {
 };
 
 /** The payload for the createPaPatareid mutation */
-export type GraphCms_Wp_CreatePaPatareidPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaPatareidPayload';
+export type GraphCms_CreatePaPatareidPayload = {
+  __typename?: 'GraphCMS_CreatePaPatareidPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_patareid */
-  paPatareid?: Maybe<GraphCms_Wp_PaPatareid>;
+  paPatareid?: Maybe<GraphCms_PaPatareid>;
 };
 
 /** Input for the createPaSuurus mutation */
-export type GraphCms_Wp_CreatePaSuurusInput = {
+export type GraphCms_CreatePaSuurusInput = {
   /** The slug that the pa_suurus will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2582,15 +2576,15 @@ export type GraphCms_Wp_CreatePaSuurusInput = {
 };
 
 /** The payload for the createPaSuurus mutation */
-export type GraphCms_Wp_CreatePaSuurusPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaSuurusPayload';
+export type GraphCms_CreatePaSuurusPayload = {
+  __typename?: 'GraphCMS_CreatePaSuurusPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_suurus */
-  paSuurus?: Maybe<GraphCms_Wp_PaSuurus>;
+  paSuurus?: Maybe<GraphCms_PaSuurus>;
 };
 
 /** Input for the createPaVariant mutation */
-export type GraphCms_Wp_CreatePaVariantInput = {
+export type GraphCms_CreatePaVariantInput = {
   /** The slug that the pa_variant will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2609,15 +2603,15 @@ export type GraphCms_Wp_CreatePaVariantInput = {
 };
 
 /** The payload for the createPaVariant mutation */
-export type GraphCms_Wp_CreatePaVariantPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaVariantPayload';
+export type GraphCms_CreatePaVariantPayload = {
+  __typename?: 'GraphCMS_CreatePaVariantPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_variant */
-  paVariant?: Maybe<GraphCms_Wp_PaVariant>;
+  paVariant?: Maybe<GraphCms_PaVariant>;
 };
 
 /** Input for the createPaVarv mutation */
-export type GraphCms_Wp_CreatePaVarvInput = {
+export type GraphCms_CreatePaVarvInput = {
   /** The slug that the pa_varv will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2636,15 +2630,15 @@ export type GraphCms_Wp_CreatePaVarvInput = {
 };
 
 /** The payload for the createPaVarv mutation */
-export type GraphCms_Wp_CreatePaVarvPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaVarvPayload';
+export type GraphCms_CreatePaVarvPayload = {
+  __typename?: 'GraphCMS_CreatePaVarvPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_varv */
-  paVarv?: Maybe<GraphCms_Wp_PaVarv>;
+  paVarv?: Maybe<GraphCms_PaVarv>;
 };
 
 /** Input for the createPaVeekindlus mutation */
-export type GraphCms_Wp_CreatePaVeekindlusInput = {
+export type GraphCms_CreatePaVeekindlusInput = {
   /** The slug that the pa_veekindlus will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2663,19 +2657,19 @@ export type GraphCms_Wp_CreatePaVeekindlusInput = {
 };
 
 /** The payload for the createPaVeekindlus mutation */
-export type GraphCms_Wp_CreatePaVeekindlusPayload = {
-  __typename?: 'GraphCMS_WP_CreatePaVeekindlusPayload';
+export type GraphCms_CreatePaVeekindlusPayload = {
+  __typename?: 'GraphCMS_CreatePaVeekindlusPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_veekindlus */
-  paVeekindlus?: Maybe<GraphCms_Wp_PaVeekindlus>;
+  paVeekindlus?: Maybe<GraphCms_PaVeekindlus>;
 };
 
 /** Input for the createPost mutation */
-export type GraphCms_Wp_CreatePostInput = {
+export type GraphCms_CreatePostInput = {
   /** The userId to assign as the author of the post */
   authorId?: Maybe<Scalars['ID']>;
   /** Set connections between the post and categories */
-  categories?: Maybe<GraphCms_Wp_PostCategoriesInput>;
+  categories?: Maybe<GraphCms_PostCategoriesInput>;
   clientMutationId: Scalars['String'];
   /** The number of comments. Even though WPGraphQL denotes this field as an
    * integer, in WordPress this field should be saved as a numeric string for compatibility.
@@ -2702,7 +2696,7 @@ export type GraphCms_Wp_CreatePostInput = {
    * WP_Post->post_mime_type and the post_mime_type column in the "post_objects"
    * database table.
    */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** The ID of the parent object */
   parentId?: Maybe<Scalars['ID']>;
   /** The password used to protect the content of the object */
@@ -2714,9 +2708,9 @@ export type GraphCms_Wp_CreatePostInput = {
   /** The slug of the object */
   slug?: Maybe<Scalars['String']>;
   /** The status of the object */
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Set connections between the post and tags */
-  tags?: Maybe<GraphCms_Wp_PostTagsInput>;
+  tags?: Maybe<GraphCms_PostTagsInput>;
   /** The title of the post */
   title?: Maybe<Scalars['String']>;
   /** URLs queued to be pinged. */
@@ -2724,14 +2718,14 @@ export type GraphCms_Wp_CreatePostInput = {
 };
 
 /** The payload for the createPost mutation */
-export type GraphCms_Wp_CreatePostPayload = {
-  __typename?: 'GraphCMS_WP_CreatePostPayload';
+export type GraphCms_CreatePostPayload = {
+  __typename?: 'GraphCMS_CreatePostPayload';
   clientMutationId: Scalars['String'];
-  post?: Maybe<GraphCms_Wp_Post>;
+  post?: Maybe<GraphCms_Post>;
 };
 
 /** Input for the createProductCategory mutation */
-export type GraphCms_Wp_CreateProductCategoryInput = {
+export type GraphCms_CreateProductCategoryInput = {
   /** The slug that the product_cat will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2752,15 +2746,15 @@ export type GraphCms_Wp_CreateProductCategoryInput = {
 };
 
 /** The payload for the createProductCategory mutation */
-export type GraphCms_Wp_CreateProductCategoryPayload = {
-  __typename?: 'GraphCMS_WP_CreateProductCategoryPayload';
+export type GraphCms_CreateProductCategoryPayload = {
+  __typename?: 'GraphCMS_CreateProductCategoryPayload';
   clientMutationId: Scalars['String'];
   /** The created product_cat */
-  productCategory?: Maybe<GraphCms_Wp_ProductCategory>;
+  productCategory?: Maybe<GraphCms_ProductCategory>;
 };
 
 /** Input for the createProductTag mutation */
-export type GraphCms_Wp_CreateProductTagInput = {
+export type GraphCms_CreateProductTagInput = {
   /** The slug that the product_tag will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2779,15 +2773,15 @@ export type GraphCms_Wp_CreateProductTagInput = {
 };
 
 /** The payload for the createProductTag mutation */
-export type GraphCms_Wp_CreateProductTagPayload = {
-  __typename?: 'GraphCMS_WP_CreateProductTagPayload';
+export type GraphCms_CreateProductTagPayload = {
+  __typename?: 'GraphCMS_CreateProductTagPayload';
   clientMutationId: Scalars['String'];
   /** The created product_tag */
-  productTag?: Maybe<GraphCms_Wp_ProductTag>;
+  productTag?: Maybe<GraphCms_ProductTag>;
 };
 
 /** Input for the createProductType mutation */
-export type GraphCms_Wp_CreateProductTypeInput = {
+export type GraphCms_CreateProductTypeInput = {
   /** The slug that the product_type will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2806,15 +2800,15 @@ export type GraphCms_Wp_CreateProductTypeInput = {
 };
 
 /** The payload for the createProductType mutation */
-export type GraphCms_Wp_CreateProductTypePayload = {
-  __typename?: 'GraphCMS_WP_CreateProductTypePayload';
+export type GraphCms_CreateProductTypePayload = {
+  __typename?: 'GraphCMS_CreateProductTypePayload';
   clientMutationId: Scalars['String'];
   /** The created product_type */
-  productType?: Maybe<GraphCms_Wp_ProductType>;
+  productType?: Maybe<GraphCms_ProductType>;
 };
 
 /** Input for the createShippingClass mutation */
-export type GraphCms_Wp_CreateShippingClassInput = {
+export type GraphCms_CreateShippingClassInput = {
   /** The slug that the product_shipping_class will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2833,15 +2827,15 @@ export type GraphCms_Wp_CreateShippingClassInput = {
 };
 
 /** The payload for the createShippingClass mutation */
-export type GraphCms_Wp_CreateShippingClassPayload = {
-  __typename?: 'GraphCMS_WP_CreateShippingClassPayload';
+export type GraphCms_CreateShippingClassPayload = {
+  __typename?: 'GraphCMS_CreateShippingClassPayload';
   clientMutationId: Scalars['String'];
   /** The created product_shipping_class */
-  shippingClass?: Maybe<GraphCms_Wp_ShippingClass>;
+  shippingClass?: Maybe<GraphCms_ShippingClass>;
 };
 
 /** Input for the createTag mutation */
-export type GraphCms_Wp_CreateTagInput = {
+export type GraphCms_CreateTagInput = {
   /** The slug that the post_tag will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2860,15 +2854,15 @@ export type GraphCms_Wp_CreateTagInput = {
 };
 
 /** The payload for the createTag mutation */
-export type GraphCms_Wp_CreateTagPayload = {
-  __typename?: 'GraphCMS_WP_CreateTagPayload';
+export type GraphCms_CreateTagPayload = {
+  __typename?: 'GraphCMS_CreateTagPayload';
   clientMutationId: Scalars['String'];
   /** The created post_tag */
-  tag?: Maybe<GraphCms_Wp_Tag>;
+  tag?: Maybe<GraphCms_Tag>;
 };
 
 /** Input for the createUser mutation */
-export type GraphCms_Wp_CreateUserInput = {
+export type GraphCms_CreateUserInput = {
   /** User's AOL IM account. */
   aim?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2910,14 +2904,14 @@ export type GraphCms_Wp_CreateUserInput = {
 };
 
 /** The payload for the createUser mutation */
-export type GraphCms_Wp_CreateUserPayload = {
-  __typename?: 'GraphCMS_WP_CreateUserPayload';
+export type GraphCms_CreateUserPayload = {
+  __typename?: 'GraphCMS_CreateUserPayload';
   clientMutationId: Scalars['String'];
-  user?: Maybe<GraphCms_Wp_User>;
+  user?: Maybe<GraphCms_User>;
 };
 
 /** Input for the createVisibleProduct mutation */
-export type GraphCms_Wp_CreateVisibleProductInput = {
+export type GraphCms_CreateVisibleProductInput = {
   /** The slug that the product_visibility will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -2936,18 +2930,18 @@ export type GraphCms_Wp_CreateVisibleProductInput = {
 };
 
 /** The payload for the createVisibleProduct mutation */
-export type GraphCms_Wp_CreateVisibleProductPayload = {
-  __typename?: 'GraphCMS_WP_CreateVisibleProductPayload';
+export type GraphCms_CreateVisibleProductPayload = {
+  __typename?: 'GraphCMS_CreateVisibleProductPayload';
   clientMutationId: Scalars['String'];
   /** The created product_visibility */
-  visibleProduct?: Maybe<GraphCms_Wp_VisibleProduct>;
+  visibleProduct?: Maybe<GraphCms_VisibleProduct>;
 };
 
 /** A customer object */
-export type GraphCms_Wp_Customer = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Customer';
+export type GraphCms_Customer = GraphCms_Node & {
+  __typename?: 'GraphCMS_Customer';
   /** Return the date customer billing address properties */
-  billing?: Maybe<GraphCms_Wp_CustomerAddress>;
+  billing?: Maybe<GraphCms_CustomerAddress>;
   /** Has customer calculated shipping? */
   calculatedShipping?: Maybe<Scalars['Boolean']>;
   /** The Id of the user. Equivalent to WP_User-&gt;ID */
@@ -2971,19 +2965,19 @@ export type GraphCms_Wp_Customer = GraphCms_Wp_Node & {
   /** Return the customer&#039;s last name. */
   lastName?: Maybe<Scalars['String']>;
   /** Gets the customers last order. */
-  lastOrder?: Maybe<GraphCms_Wp_Order>;
+  lastOrder?: Maybe<GraphCms_Order>;
   /** Return the date customer was last updated */
   modified?: Maybe<Scalars['String']>;
   /** Return the number of orders this customer has. */
   orderCount?: Maybe<Scalars['Int']>;
   /** Connection between the Customer type and the Customer type */
-  orders?: Maybe<GraphCms_Wp_CustomerToOrderConnection>;
+  orders?: Maybe<GraphCms_CustomerToOrderConnection>;
   /** Connection between the Customer type and the Customer type */
-  refunds?: Maybe<GraphCms_Wp_CustomerToRefundConnection>;
+  refunds?: Maybe<GraphCms_CustomerToRefundConnection>;
   /** Return the customer&#039;s user role. */
   role?: Maybe<Scalars['String']>;
   /** Return the date customer shipping address properties */
-  shipping?: Maybe<GraphCms_Wp_CustomerAddress>;
+  shipping?: Maybe<GraphCms_CustomerAddress>;
   /** Return how much money this customer has spent. */
   totalSpent?: Maybe<Scalars['Float']>;
   /** Return the customer&#039;s username. */
@@ -2991,26 +2985,26 @@ export type GraphCms_Wp_Customer = GraphCms_Wp_Node & {
 };
 
 /** A customer object */
-export type GraphCms_Wp_CustomerOrdersArgs = {
+export type GraphCms_CustomerOrdersArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_CustomerToOrderConnectionWhereArgs>;
+  where?: Maybe<GraphCms_CustomerToOrderConnectionWhereArgs>;
 };
 
 /** A customer object */
-export type GraphCms_Wp_CustomerRefundsArgs = {
+export type GraphCms_CustomerRefundsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_CustomerToRefundConnectionWhereArgs>;
+  where?: Maybe<GraphCms_CustomerToRefundConnectionWhereArgs>;
 };
 
 /** A customer address object */
-export type GraphCms_Wp_CustomerAddress = {
-  __typename?: 'GraphCMS_WP_CustomerAddress';
+export type GraphCms_CustomerAddress = {
+  __typename?: 'GraphCMS_CustomerAddress';
   /** Address 1 */
   address1?: Maybe<Scalars['String']>;
   /** Address 2 */
@@ -3020,7 +3014,7 @@ export type GraphCms_Wp_CustomerAddress = {
   /** Company */
   company?: Maybe<Scalars['String']>;
   /** Country */
-  country?: Maybe<GraphCms_Wp_CountriesEnum>;
+  country?: Maybe<GraphCms_CountriesEnum>;
   /** E-mail */
   email?: Maybe<Scalars['String']>;
   /** First name */
@@ -3036,7 +3030,7 @@ export type GraphCms_Wp_CustomerAddress = {
 };
 
 /** Customer address information */
-export type GraphCms_Wp_CustomerAddressInput = {
+export type GraphCms_CustomerAddressInput = {
   /** Address 1 */
   address1?: Maybe<Scalars['String']>;
   /** Address 2 */
@@ -3046,7 +3040,7 @@ export type GraphCms_Wp_CustomerAddressInput = {
   /** Company */
   company?: Maybe<Scalars['String']>;
   /** Country */
-  country?: Maybe<GraphCms_Wp_CountriesEnum>;
+  country?: Maybe<GraphCms_CountriesEnum>;
   /** E-mail */
   email?: Maybe<Scalars['String']>;
   /** First name */
@@ -3064,7 +3058,7 @@ export type GraphCms_Wp_CustomerAddressInput = {
 };
 
 /** Field to order the connection by */
-export enum GraphCms_Wp_CustomerConnectionOrderbyEnum {
+export enum GraphCms_CustomerConnectionOrderbyEnum {
   /** Order by customer email */
   Email = 'EMAIL',
   /** Order by customer ID */
@@ -3080,39 +3074,39 @@ export enum GraphCms_Wp_CustomerConnectionOrderbyEnum {
 }
 
 /** Connection between the Customer type and the Customer type */
-export type GraphCms_Wp_CustomerToOrderConnection = {
-  __typename?: 'GraphCMS_WP_CustomerToOrderConnection';
+export type GraphCms_CustomerToOrderConnection = {
+  __typename?: 'GraphCMS_CustomerToOrderConnection';
   /** Edges for the CustomerToOrderConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_CustomerToOrderConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_CustomerToOrderConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Order>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Order>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_CustomerToOrderConnectionEdge = {
-  __typename?: 'GraphCMS_WP_CustomerToOrderConnectionEdge';
+export type GraphCms_CustomerToOrderConnectionEdge = {
+  __typename?: 'GraphCMS_CustomerToOrderConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Order>;
+  node?: Maybe<GraphCms_Order>;
 };
 
 /** Arguments for filtering the CustomerToOrderConnection connection */
-export type GraphCms_Wp_CustomerToOrderConnectionWhereArgs = {
+export type GraphCms_CustomerToOrderConnectionWhereArgs = {
   /** Limit result set to orders assigned a specific customer. */
   customerId?: Maybe<Scalars['Int']>;
   /** Limit result set to orders assigned a specific group of customers. */
   customersIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to specific ids. */
   include?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -3124,39 +3118,39 @@ export type GraphCms_Wp_CustomerToOrderConnectionWhereArgs = {
   /** Limit results to those matching a string. */
   search?: Maybe<Scalars['String']>;
   /** Limit result set to orders assigned a specific status. */
-  statuses?: Maybe<Array<Maybe<GraphCms_Wp_OrderStatusEnum>>>;
+  statuses?: Maybe<Array<Maybe<GraphCms_OrderStatusEnum>>>;
 };
 
 /** Connection between the Customer type and the Customer type */
-export type GraphCms_Wp_CustomerToRefundConnection = {
-  __typename?: 'GraphCMS_WP_CustomerToRefundConnection';
+export type GraphCms_CustomerToRefundConnection = {
+  __typename?: 'GraphCMS_CustomerToRefundConnection';
   /** Edges for the CustomerToRefundConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_CustomerToRefundConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_CustomerToRefundConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Refund>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Refund>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_CustomerToRefundConnectionEdge = {
-  __typename?: 'GraphCMS_WP_CustomerToRefundConnectionEdge';
+export type GraphCms_CustomerToRefundConnectionEdge = {
+  __typename?: 'GraphCMS_CustomerToRefundConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Refund>;
+  node?: Maybe<GraphCms_Refund>;
 };
 
 /** Arguments for filtering the CustomerToRefundConnection connection */
-export type GraphCms_Wp_CustomerToRefundConnectionWhereArgs = {
+export type GraphCms_CustomerToRefundConnectionWhereArgs = {
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to specific ids. */
   include?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Limit result set to refunds from a specific group of order IDs. */
   orderIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
@@ -3172,7 +3166,7 @@ export type GraphCms_Wp_CustomerToRefundConnectionWhereArgs = {
 };
 
 /** Date values */
-export type GraphCms_Wp_DateInput = {
+export type GraphCms_DateInput = {
   /** Day of the month (from 1 to 31) */
   day?: Maybe<Scalars['Int']>;
   /** Month number (from 1 to 12) */
@@ -3182,11 +3176,11 @@ export type GraphCms_Wp_DateInput = {
 };
 
 /** Filter the connection based on input */
-export type GraphCms_Wp_DateQueryInput = {
-  after?: Maybe<GraphCms_Wp_DateInput>;
-  before?: Maybe<GraphCms_Wp_DateInput>;
+export type GraphCms_DateQueryInput = {
+  after?: Maybe<GraphCms_DateInput>;
+  before?: Maybe<GraphCms_DateInput>;
   /** Column to query against */
-  column?: Maybe<GraphCms_Wp_PostObjectsConnectionDateColumnEnum>;
+  column?: Maybe<GraphCms_PostObjectsConnectionDateColumnEnum>;
   /** For after/before, whether exact value should be matched or not */
   compare?: Maybe<Scalars['String']>;
   /** Day of the month (from 1 to 31) */
@@ -3200,7 +3194,7 @@ export type GraphCms_Wp_DateQueryInput = {
   /** Month number (from 1 to 12) */
   month?: Maybe<Scalars['Int']>;
   /** OR or AND, how the sub-arrays should be compared */
-  relation?: Maybe<GraphCms_Wp_RelationEnum>;
+  relation?: Maybe<GraphCms_RelationEnum>;
   /** Second (0 to 59) */
   second?: Maybe<Scalars['Int']>;
   /** Week of the year (from 0 to 53) */
@@ -3210,24 +3204,24 @@ export type GraphCms_Wp_DateQueryInput = {
 };
 
 /** Input for the deleteCategory mutation */
-export type GraphCms_Wp_DeleteCategoryInput = {
+export type GraphCms_DeleteCategoryInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the category to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deleteCategory mutation */
-export type GraphCms_Wp_DeleteCategoryPayload = {
-  __typename?: 'GraphCMS_WP_DeleteCategoryPayload';
+export type GraphCms_DeleteCategoryPayload = {
+  __typename?: 'GraphCMS_DeleteCategoryPayload';
   /** The deteted term object */
-  category?: Maybe<GraphCms_Wp_Category>;
+  category?: Maybe<GraphCms_Category>;
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
 };
 
 /** Input for the deleteComment mutation */
-export type GraphCms_Wp_DeleteCommentInput = {
+export type GraphCms_DeleteCommentInput = {
   clientMutationId: Scalars['String'];
   /** Whether the comment should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<Scalars['Boolean']>;
@@ -3236,17 +3230,17 @@ export type GraphCms_Wp_DeleteCommentInput = {
 };
 
 /** The payload for the deleteComment mutation */
-export type GraphCms_Wp_DeleteCommentPayload = {
-  __typename?: 'GraphCMS_WP_DeleteCommentPayload';
+export type GraphCms_DeleteCommentPayload = {
+  __typename?: 'GraphCMS_DeleteCommentPayload';
   clientMutationId: Scalars['String'];
   /** The deleted comment object */
-  comment?: Maybe<GraphCms_Wp_Comment>;
+  comment?: Maybe<GraphCms_Comment>;
   /** The deleted comment ID */
   deletedId?: Maybe<Scalars['ID']>;
 };
 
 /** Input for the deleteMediaItem mutation */
-export type GraphCms_Wp_DeleteMediaItemInput = {
+export type GraphCms_DeleteMediaItemInput = {
   clientMutationId: Scalars['String'];
   /** Whether the mediaItem should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<Scalars['Boolean']>;
@@ -3255,17 +3249,17 @@ export type GraphCms_Wp_DeleteMediaItemInput = {
 };
 
 /** The payload for the deleteMediaItem mutation */
-export type GraphCms_Wp_DeleteMediaItemPayload = {
-  __typename?: 'GraphCMS_WP_DeleteMediaItemPayload';
+export type GraphCms_DeleteMediaItemPayload = {
+  __typename?: 'GraphCMS_DeleteMediaItemPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted mediaItem */
   deletedId?: Maybe<Scalars['ID']>;
   /** The mediaItem before it was deleted */
-  mediaItem?: Maybe<GraphCms_Wp_MediaItem>;
+  mediaItem?: Maybe<GraphCms_MediaItem>;
 };
 
 /** Input for the deletePage mutation */
-export type GraphCms_Wp_DeletePageInput = {
+export type GraphCms_DeletePageInput = {
   clientMutationId: Scalars['String'];
   /** Whether the object should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<Scalars['Boolean']>;
@@ -3274,272 +3268,272 @@ export type GraphCms_Wp_DeletePageInput = {
 };
 
 /** The payload for the deletePage mutation */
-export type GraphCms_Wp_DeletePagePayload = {
-  __typename?: 'GraphCMS_WP_DeletePagePayload';
+export type GraphCms_DeletePagePayload = {
+  __typename?: 'GraphCMS_DeletePagePayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The object before it was deleted */
-  page?: Maybe<GraphCms_Wp_Page>;
+  page?: Maybe<GraphCms_Page>;
 };
 
 /** Input for the deletePaHind mutation */
-export type GraphCms_Wp_DeletePaHindInput = {
+export type GraphCms_DeletePaHindInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paHind to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaHind mutation */
-export type GraphCms_Wp_DeletePaHindPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaHindPayload';
+export type GraphCms_DeletePaHindPayload = {
+  __typename?: 'GraphCMS_DeletePaHindPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paHind?: Maybe<GraphCms_Wp_PaHind>;
+  paHind?: Maybe<GraphCms_PaHind>;
 };
 
 /** Input for the deletePaHulk mutation */
-export type GraphCms_Wp_DeletePaHulkInput = {
+export type GraphCms_DeletePaHulkInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paHulk to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaHulk mutation */
-export type GraphCms_Wp_DeletePaHulkPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaHulkPayload';
+export type GraphCms_DeletePaHulkPayload = {
+  __typename?: 'GraphCMS_DeletePaHulkPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paHulk?: Maybe<GraphCms_Wp_PaHulk>;
+  paHulk?: Maybe<GraphCms_PaHulk>;
 };
 
 /** Input for the deletePaKasutusaeg mutation */
-export type GraphCms_Wp_DeletePaKasutusaegInput = {
+export type GraphCms_DeletePaKasutusaegInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paKasutusaeg to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaKasutusaeg mutation */
-export type GraphCms_Wp_DeletePaKasutusaegPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaKasutusaegPayload';
+export type GraphCms_DeletePaKasutusaegPayload = {
+  __typename?: 'GraphCMS_DeletePaKasutusaegPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paKasutusaeg?: Maybe<GraphCms_Wp_PaKasutusaeg>;
+  paKasutusaeg?: Maybe<GraphCms_PaKasutusaeg>;
 };
 
 /** Input for the deletePaKogus mutation */
-export type GraphCms_Wp_DeletePaKogusInput = {
+export type GraphCms_DeletePaKogusInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paKogus to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaKogus mutation */
-export type GraphCms_Wp_DeletePaKogusPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaKogusPayload';
+export type GraphCms_DeletePaKogusPayload = {
+  __typename?: 'GraphCMS_DeletePaKogusPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paKogus?: Maybe<GraphCms_Wp_PaKogus>;
+  paKogus?: Maybe<GraphCms_PaKogus>;
 };
 
 /** Input for the deletePaKontuur mutation */
-export type GraphCms_Wp_DeletePaKontuurInput = {
+export type GraphCms_DeletePaKontuurInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paKontuur to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaKontuur mutation */
-export type GraphCms_Wp_DeletePaKontuurPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaKontuurPayload';
+export type GraphCms_DeletePaKontuurPayload = {
+  __typename?: 'GraphCMS_DeletePaKontuurPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paKontuur?: Maybe<GraphCms_Wp_PaKontuur>;
+  paKontuur?: Maybe<GraphCms_PaKontuur>;
 };
 
 /** Input for the deletePaKoostisained mutation */
-export type GraphCms_Wp_DeletePaKoostisainedInput = {
+export type GraphCms_DeletePaKoostisainedInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paKoostisained to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaKoostisained mutation */
-export type GraphCms_Wp_DeletePaKoostisainedPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaKoostisainedPayload';
+export type GraphCms_DeletePaKoostisainedPayload = {
+  __typename?: 'GraphCMS_DeletePaKoostisainedPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paKoostisained?: Maybe<GraphCms_Wp_PaKoostisained>;
+  paKoostisained?: Maybe<GraphCms_PaKoostisained>;
 };
 
 /** Input for the deletePaLaadimisaeg mutation */
-export type GraphCms_Wp_DeletePaLaadimisaegInput = {
+export type GraphCms_DeletePaLaadimisaegInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paLaadimisaeg to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaLaadimisaeg mutation */
-export type GraphCms_Wp_DeletePaLaadimisaegPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaLaadimisaegPayload';
+export type GraphCms_DeletePaLaadimisaegPayload = {
+  __typename?: 'GraphCMS_DeletePaLaadimisaegPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paLaadimisaeg?: Maybe<GraphCms_Wp_PaLaadimisaeg>;
+  paLaadimisaeg?: Maybe<GraphCms_PaLaadimisaeg>;
 };
 
 /** Input for the deletePaMaterjal mutation */
-export type GraphCms_Wp_DeletePaMaterjalInput = {
+export type GraphCms_DeletePaMaterjalInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paMaterjal to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaMaterjal mutation */
-export type GraphCms_Wp_DeletePaMaterjalPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaMaterjalPayload';
+export type GraphCms_DeletePaMaterjalPayload = {
+  __typename?: 'GraphCMS_DeletePaMaterjalPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paMaterjal?: Maybe<GraphCms_Wp_PaMaterjal>;
+  paMaterjal?: Maybe<GraphCms_PaMaterjal>;
 };
 
 /** Input for the deletePaMuratasa mutation */
-export type GraphCms_Wp_DeletePaMuratasaInput = {
+export type GraphCms_DeletePaMuratasaInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paMuratasa to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaMuratasa mutation */
-export type GraphCms_Wp_DeletePaMuratasaPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaMuratasaPayload';
+export type GraphCms_DeletePaMuratasaPayload = {
+  __typename?: 'GraphCMS_DeletePaMuratasaPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paMuratasa?: Maybe<GraphCms_Wp_PaMuratasa>;
+  paMuratasa?: Maybe<GraphCms_PaMuratasa>;
 };
 
 /** Input for the deletePaOhutus mutation */
-export type GraphCms_Wp_DeletePaOhutusInput = {
+export type GraphCms_DeletePaOhutusInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paOhutus to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaOhutus mutation */
-export type GraphCms_Wp_DeletePaOhutusPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaOhutusPayload';
+export type GraphCms_DeletePaOhutusPayload = {
+  __typename?: 'GraphCMS_DeletePaOhutusPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paOhutus?: Maybe<GraphCms_Wp_PaOhutus>;
+  paOhutus?: Maybe<GraphCms_PaOhutus>;
 };
 
 /** Input for the deletePaPatareid mutation */
-export type GraphCms_Wp_DeletePaPatareidInput = {
+export type GraphCms_DeletePaPatareidInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paPatareid to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaPatareid mutation */
-export type GraphCms_Wp_DeletePaPatareidPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaPatareidPayload';
+export type GraphCms_DeletePaPatareidPayload = {
+  __typename?: 'GraphCMS_DeletePaPatareidPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paPatareid?: Maybe<GraphCms_Wp_PaPatareid>;
+  paPatareid?: Maybe<GraphCms_PaPatareid>;
 };
 
 /** Input for the deletePaSuurus mutation */
-export type GraphCms_Wp_DeletePaSuurusInput = {
+export type GraphCms_DeletePaSuurusInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paSuurus to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaSuurus mutation */
-export type GraphCms_Wp_DeletePaSuurusPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaSuurusPayload';
+export type GraphCms_DeletePaSuurusPayload = {
+  __typename?: 'GraphCMS_DeletePaSuurusPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paSuurus?: Maybe<GraphCms_Wp_PaSuurus>;
+  paSuurus?: Maybe<GraphCms_PaSuurus>;
 };
 
 /** Input for the deletePaVariant mutation */
-export type GraphCms_Wp_DeletePaVariantInput = {
+export type GraphCms_DeletePaVariantInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paVariant to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaVariant mutation */
-export type GraphCms_Wp_DeletePaVariantPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaVariantPayload';
+export type GraphCms_DeletePaVariantPayload = {
+  __typename?: 'GraphCMS_DeletePaVariantPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paVariant?: Maybe<GraphCms_Wp_PaVariant>;
+  paVariant?: Maybe<GraphCms_PaVariant>;
 };
 
 /** Input for the deletePaVarv mutation */
-export type GraphCms_Wp_DeletePaVarvInput = {
+export type GraphCms_DeletePaVarvInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paVarv to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaVarv mutation */
-export type GraphCms_Wp_DeletePaVarvPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaVarvPayload';
+export type GraphCms_DeletePaVarvPayload = {
+  __typename?: 'GraphCMS_DeletePaVarvPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paVarv?: Maybe<GraphCms_Wp_PaVarv>;
+  paVarv?: Maybe<GraphCms_PaVarv>;
 };
 
 /** Input for the deletePaVeekindlus mutation */
-export type GraphCms_Wp_DeletePaVeekindlusInput = {
+export type GraphCms_DeletePaVeekindlusInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the paVeekindlus to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deletePaVeekindlus mutation */
-export type GraphCms_Wp_DeletePaVeekindlusPayload = {
-  __typename?: 'GraphCMS_WP_DeletePaVeekindlusPayload';
+export type GraphCms_DeletePaVeekindlusPayload = {
+  __typename?: 'GraphCMS_DeletePaVeekindlusPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  paVeekindlus?: Maybe<GraphCms_Wp_PaVeekindlus>;
+  paVeekindlus?: Maybe<GraphCms_PaVeekindlus>;
 };
 
 /** Input for the deletePost mutation */
-export type GraphCms_Wp_DeletePostInput = {
+export type GraphCms_DeletePostInput = {
   clientMutationId: Scalars['String'];
   /** Whether the object should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<Scalars['Boolean']>;
@@ -3548,68 +3542,68 @@ export type GraphCms_Wp_DeletePostInput = {
 };
 
 /** The payload for the deletePost mutation */
-export type GraphCms_Wp_DeletePostPayload = {
-  __typename?: 'GraphCMS_WP_DeletePostPayload';
+export type GraphCms_DeletePostPayload = {
+  __typename?: 'GraphCMS_DeletePostPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The object before it was deleted */
-  post?: Maybe<GraphCms_Wp_Post>;
+  post?: Maybe<GraphCms_Post>;
 };
 
 /** Input for the deleteProductCategory mutation */
-export type GraphCms_Wp_DeleteProductCategoryInput = {
+export type GraphCms_DeleteProductCategoryInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the productCategory to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deleteProductCategory mutation */
-export type GraphCms_Wp_DeleteProductCategoryPayload = {
-  __typename?: 'GraphCMS_WP_DeleteProductCategoryPayload';
+export type GraphCms_DeleteProductCategoryPayload = {
+  __typename?: 'GraphCMS_DeleteProductCategoryPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  productCategory?: Maybe<GraphCms_Wp_ProductCategory>;
+  productCategory?: Maybe<GraphCms_ProductCategory>;
 };
 
 /** Input for the deleteProductTag mutation */
-export type GraphCms_Wp_DeleteProductTagInput = {
+export type GraphCms_DeleteProductTagInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the productTag to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deleteProductTag mutation */
-export type GraphCms_Wp_DeleteProductTagPayload = {
-  __typename?: 'GraphCMS_WP_DeleteProductTagPayload';
+export type GraphCms_DeleteProductTagPayload = {
+  __typename?: 'GraphCMS_DeleteProductTagPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  productTag?: Maybe<GraphCms_Wp_ProductTag>;
+  productTag?: Maybe<GraphCms_ProductTag>;
 };
 
 /** Input for the deleteProductType mutation */
-export type GraphCms_Wp_DeleteProductTypeInput = {
+export type GraphCms_DeleteProductTypeInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the productType to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deleteProductType mutation */
-export type GraphCms_Wp_DeleteProductTypePayload = {
-  __typename?: 'GraphCMS_WP_DeleteProductTypePayload';
+export type GraphCms_DeleteProductTypePayload = {
+  __typename?: 'GraphCMS_DeleteProductTypePayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  productType?: Maybe<GraphCms_Wp_ProductType>;
+  productType?: Maybe<GraphCms_ProductType>;
 };
 
 /** Input for the deleteRevision mutation */
-export type GraphCms_Wp_DeleteRevisionInput = {
+export type GraphCms_DeleteRevisionInput = {
   clientMutationId: Scalars['String'];
   /** Whether the object should be force deleted instead of being moved to the trash */
   forceDelete?: Maybe<Scalars['Boolean']>;
@@ -3618,51 +3612,51 @@ export type GraphCms_Wp_DeleteRevisionInput = {
 };
 
 /** The payload for the deleteRevision mutation */
-export type GraphCms_Wp_DeleteRevisionPayload = {
-  __typename?: 'GraphCMS_WP_DeleteRevisionPayload';
+export type GraphCms_DeleteRevisionPayload = {
+  __typename?: 'GraphCMS_DeleteRevisionPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The object before it was deleted */
-  revision?: Maybe<GraphCms_Wp_Revision>;
+  revision?: Maybe<GraphCms_Revision>;
 };
 
 /** Input for the deleteShippingClass mutation */
-export type GraphCms_Wp_DeleteShippingClassInput = {
+export type GraphCms_DeleteShippingClassInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the shippingClass to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deleteShippingClass mutation */
-export type GraphCms_Wp_DeleteShippingClassPayload = {
-  __typename?: 'GraphCMS_WP_DeleteShippingClassPayload';
+export type GraphCms_DeleteShippingClassPayload = {
+  __typename?: 'GraphCMS_DeleteShippingClassPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  shippingClass?: Maybe<GraphCms_Wp_ShippingClass>;
+  shippingClass?: Maybe<GraphCms_ShippingClass>;
 };
 
 /** Input for the deleteTag mutation */
-export type GraphCms_Wp_DeleteTagInput = {
+export type GraphCms_DeleteTagInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the tag to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deleteTag mutation */
-export type GraphCms_Wp_DeleteTagPayload = {
-  __typename?: 'GraphCMS_WP_DeleteTagPayload';
+export type GraphCms_DeleteTagPayload = {
+  __typename?: 'GraphCMS_DeleteTagPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  tag?: Maybe<GraphCms_Wp_Tag>;
+  tag?: Maybe<GraphCms_Tag>;
 };
 
 /** Input for the deleteUser mutation */
-export type GraphCms_Wp_DeleteUserInput = {
+export type GraphCms_DeleteUserInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the user you want to delete */
   id: Scalars['ID'];
@@ -3671,42 +3665,42 @@ export type GraphCms_Wp_DeleteUserInput = {
 };
 
 /** The payload for the deleteUser mutation */
-export type GraphCms_Wp_DeleteUserPayload = {
-  __typename?: 'GraphCMS_WP_DeleteUserPayload';
+export type GraphCms_DeleteUserPayload = {
+  __typename?: 'GraphCMS_DeleteUserPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the user that you just deleted */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deleted user object */
-  user?: Maybe<GraphCms_Wp_User>;
+  user?: Maybe<GraphCms_User>;
 };
 
 /** Input for the deleteVisibleProduct mutation */
-export type GraphCms_Wp_DeleteVisibleProductInput = {
+export type GraphCms_DeleteVisibleProductInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the visibleProduct to delete */
   id: Scalars['ID'];
 };
 
 /** The payload for the deleteVisibleProduct mutation */
-export type GraphCms_Wp_DeleteVisibleProductPayload = {
-  __typename?: 'GraphCMS_WP_DeleteVisibleProductPayload';
+export type GraphCms_DeleteVisibleProductPayload = {
+  __typename?: 'GraphCMS_DeleteVisibleProductPayload';
   clientMutationId: Scalars['String'];
   /** The ID of the deleted object */
   deletedId?: Maybe<Scalars['ID']>;
   /** The deteted term object */
-  visibleProduct?: Maybe<GraphCms_Wp_VisibleProduct>;
+  visibleProduct?: Maybe<GraphCms_VisibleProduct>;
 };
 
 /** Coupon discount type enumeration */
-export enum GraphCms_Wp_DiscountTypeEnum {
+export enum GraphCms_DiscountTypeEnum {
   FixedCart = 'FIXED_CART',
   FixedProduct = 'FIXED_PRODUCT',
   Percent = 'PERCENT',
 }
 
 /** The discussion setting type */
-export type GraphCms_Wp_DiscussionSettings = {
-  __typename?: 'GraphCMS_WP_DiscussionSettings';
+export type GraphCms_DiscussionSettings = {
+  __typename?: 'GraphCMS_DiscussionSettings';
   /** Luba uute artiklite kommenteerimist */
   defaultCommentStatus?: Maybe<Scalars['String']>;
   /** Luba uute artiklite juures teiste ajaveebide märguandeid (pingback- ja trackback-viited). */
@@ -3714,29 +3708,29 @@ export type GraphCms_Wp_DiscussionSettings = {
 };
 
 /** Info on whether the object is locked by another user editing it */
-export type GraphCms_Wp_EditLock = {
-  __typename?: 'GraphCMS_WP_EditLock';
+export type GraphCms_EditLock = {
+  __typename?: 'GraphCMS_EditLock';
   /** The time when the object was last edited */
   editTime?: Maybe<Scalars['String']>;
   /** The user that most recently edited the object */
-  user?: Maybe<GraphCms_Wp_User>;
+  user?: Maybe<GraphCms_User>;
 };
 
 /** Input for the emptyCart mutation */
-export type GraphCms_Wp_EmptyCartInput = {
+export type GraphCms_EmptyCartInput = {
   clientMutationId: Scalars['String'];
 };
 
 /** The payload for the emptyCart mutation */
-export type GraphCms_Wp_EmptyCartPayload = {
-  __typename?: 'GraphCMS_WP_EmptyCartPayload';
-  cart?: Maybe<GraphCms_Wp_Cart>;
+export type GraphCms_EmptyCartPayload = {
+  __typename?: 'GraphCMS_EmptyCartPayload';
+  cart?: Maybe<GraphCms_Cart>;
   clientMutationId: Scalars['String'];
 };
 
 /** a fee line object */
-export type GraphCms_Wp_FeeLine = {
-  __typename?: 'GraphCMS_WP_FeeLine';
+export type GraphCms_FeeLine = {
+  __typename?: 'GraphCMS_FeeLine';
   /** Fee amount */
   amount?: Maybe<Scalars['String']>;
   /** The Id of the order item. */
@@ -3746,11 +3740,11 @@ export type GraphCms_Wp_FeeLine = {
   /** The Id of the order the order item belongs to. */
   orderId?: Maybe<Scalars['Int']>;
   /** Line tax class */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Line taxes */
-  taxes?: Maybe<Array<Maybe<GraphCms_Wp_OrderItemTax>>>;
+  taxes?: Maybe<Array<Maybe<GraphCms_OrderItemTax>>>;
   /** Tax status of fee */
-  taxStatus?: Maybe<GraphCms_Wp_TaxStatusEnum>;
+  taxStatus?: Maybe<GraphCms_TaxStatusEnum>;
   /** Line total (after discounts) */
   total?: Maybe<Scalars['String']>;
   /** Line total tax (after discounts) */
@@ -3758,8 +3752,8 @@ export type GraphCms_Wp_FeeLine = {
 };
 
 /** The general setting type */
-export type GraphCms_Wp_GeneralSettings = {
-  __typename?: 'GraphCMS_WP_GeneralSettings';
+export type GraphCms_GeneralSettings = {
+  __typename?: 'GraphCMS_GeneralSettings';
   /** Kõigi kuupäevade vorming. */
   dateFormat?: Maybe<Scalars['String']>;
   /** Veebisaidi alapealkiri. */
@@ -3781,16 +3775,16 @@ export type GraphCms_Wp_GeneralSettings = {
 };
 
 /** a line item object */
-export type GraphCms_Wp_LineItem = {
-  __typename?: 'GraphCMS_WP_LineItem';
+export type GraphCms_LineItem = {
+  __typename?: 'GraphCMS_LineItem';
   /** Line item&#039;s taxes */
-  itemDownloads?: Maybe<Array<Maybe<GraphCms_Wp_ProductDownload>>>;
+  itemDownloads?: Maybe<Array<Maybe<GraphCms_ProductDownload>>>;
   /** The Id of the order item. */
   itemId?: Maybe<Scalars['Int']>;
   /** The Id of the order the order item belongs to. */
   orderId?: Maybe<Scalars['Int']>;
   /** Line item&#039;s product object */
-  product?: Maybe<GraphCms_Wp_Product>;
+  product?: Maybe<GraphCms_Product>;
   /** Line item&#039;s product ID */
   productId?: Maybe<Scalars['Int']>;
   /** Line item&#039;s product quantity */
@@ -3800,51 +3794,51 @@ export type GraphCms_Wp_LineItem = {
   /** Line item&#039;s subtotal tax */
   subtotalTax?: Maybe<Scalars['String']>;
   /** Line item&#039;s tax class */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Line item&#039;s taxes */
-  taxes?: Maybe<Array<Maybe<GraphCms_Wp_OrderItemTax>>>;
+  taxes?: Maybe<Array<Maybe<GraphCms_OrderItemTax>>>;
   /** Line item&#039;s taxes */
-  taxStatus?: Maybe<GraphCms_Wp_TaxStatusEnum>;
+  taxStatus?: Maybe<GraphCms_TaxStatusEnum>;
   /** Line item&#039;s total */
   total?: Maybe<Scalars['String']>;
   /** Line item&#039;s total tax */
   totalTax?: Maybe<Scalars['String']>;
   /** Line item&#039;s product variation object */
-  variation?: Maybe<GraphCms_Wp_ProductVariation>;
+  variation?: Maybe<GraphCms_ProductVariation>;
   /** Line item&#039;s product variation ID */
   variationId?: Maybe<Scalars['Int']>;
 };
 
 /** Product manage stock enumeration */
-export enum GraphCms_Wp_ManageStockEnum {
+export enum GraphCms_ManageStockEnum {
   False = 'FALSE',
   Parent = 'PARENT',
   True = 'TRUE',
 }
 
 /** File details for a Media Item */
-export type GraphCms_Wp_MediaDetails = {
-  __typename?: 'GraphCMS_WP_MediaDetails';
+export type GraphCms_MediaDetails = {
+  __typename?: 'GraphCMS_MediaDetails';
   /** The height of the mediaItem */
   file?: Maybe<Scalars['String']>;
   /** The height of the mediaItem */
   height?: Maybe<Scalars['Int']>;
-  meta?: Maybe<GraphCms_Wp_MediaItemMeta>;
+  meta?: Maybe<GraphCms_MediaItemMeta>;
   /** The available sizes of the mediaItem */
-  sizes?: Maybe<Array<Maybe<GraphCms_Wp_MediaSize>>>;
+  sizes?: Maybe<Array<Maybe<GraphCms_MediaSize>>>;
   /** The width of the mediaItem */
   width?: Maybe<Scalars['Int']>;
 };
 
 /** The mediaItem type */
-export type GraphCms_Wp_MediaItem = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_MediaItem';
+export type GraphCms_MediaItem = GraphCms_Node & {
+  __typename?: 'GraphCMS_MediaItem';
   /** Alternative text to display when resource is not displayed */
   altText?: Maybe<Scalars['String']>;
   /** Ancestors of the object */
-  ancestors?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectUnion>>>;
+  ancestors?: Maybe<Array<Maybe<GraphCms_PostObjectUnion>>>;
   /** The author field will return a queryable User type matching the post&#039;s author. */
-  author?: Maybe<GraphCms_Wp_User>;
+  author?: Maybe<GraphCms_User>;
   /** The caption for the resource */
   caption?: Maybe<Scalars['String']>;
   /** The number of comments. Even though WPGraphQL denotes this field as an
@@ -3852,7 +3846,7 @@ export type GraphCms_Wp_MediaItem = GraphCms_Wp_Node & {
    */
   commentCount?: Maybe<Scalars['Int']>;
   /** Connection between the mediaItem type and the mediaItem type */
-  comments?: Maybe<GraphCms_Wp_MediaItemToCommentConnection>;
+  comments?: Maybe<GraphCms_MediaItemToCommentConnection>;
   /** Whether the comments are open or closed for this particular post. */
   commentStatus?: Maybe<Scalars['String']>;
   /** The content of the post. */
@@ -3866,12 +3860,12 @@ export type GraphCms_Wp_MediaItem = GraphCms_Wp_Node & {
   /** The desired slug of the post */
   desiredSlug?: Maybe<Scalars['String']>;
   /** The user that most recently edited the object */
-  editLast?: Maybe<GraphCms_Wp_User>;
+  editLast?: Maybe<GraphCms_User>;
   /** If a user has edited the object within the past 15 seconds, this will return
    * the user and the time they last edited. Null if the edit lock doesn&#039;t
    * exist or is greater than 15 seconds
    */
-  editLock?: Maybe<GraphCms_Wp_EditLock>;
+  editLock?: Maybe<GraphCms_EditLock>;
   /** The RSS enclosure for the object */
   enclosure?: Maybe<Scalars['String']>;
   /** The excerpt of the post. */
@@ -3888,7 +3882,7 @@ export type GraphCms_Wp_MediaItem = GraphCms_Wp_Node & {
   /** The permalink of the post */
   link?: Maybe<Scalars['String']>;
   /** Details about the mediaItem */
-  mediaDetails?: Maybe<GraphCms_Wp_MediaDetails>;
+  mediaDetails?: Maybe<GraphCms_MediaDetails>;
   /** Type of resource */
   mediaType?: Maybe<Scalars['String']>;
   /** The id field matches the WP_Post-&gt;ID field. */
@@ -3908,7 +3902,7 @@ export type GraphCms_Wp_MediaItem = GraphCms_Wp_Node & {
    */
   modifiedGmt?: Maybe<Scalars['String']>;
   /** The parent of the object. The parent object can be of various types */
-  parent?: Maybe<GraphCms_Wp_PostObjectUnion>;
+  parent?: Maybe<GraphCms_PostObjectUnion>;
   /** URLs that have been pinged. */
   pinged?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Whether the pings are open or closed for this particular post. */
@@ -3929,7 +3923,7 @@ export type GraphCms_Wp_MediaItem = GraphCms_Wp_Node & {
   /** Terms connected to the mediaItem */
   termNames?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Terms connected to the mediaItem */
-  terms?: Maybe<Array<Maybe<GraphCms_Wp_TermObjectUnion>>>;
+  terms?: Maybe<Array<Maybe<GraphCms_TermObjectUnion>>>;
   /** Terms connected to the mediaItem */
   termSlugs?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
@@ -3941,67 +3935,67 @@ export type GraphCms_Wp_MediaItem = GraphCms_Wp_Node & {
 };
 
 /** The mediaItem type */
-export type GraphCms_Wp_MediaItemAncestorsArgs = {
-  types?: Maybe<Array<Maybe<GraphCms_Wp_PostTypeEnum>>>;
+export type GraphCms_MediaItemAncestorsArgs = {
+  types?: Maybe<Array<Maybe<GraphCms_PostTypeEnum>>>;
 };
 
 /** The mediaItem type */
-export type GraphCms_Wp_MediaItemCaptionArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_MediaItemCaptionArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** The mediaItem type */
-export type GraphCms_Wp_MediaItemCommentsArgs = {
+export type GraphCms_MediaItemCommentsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_MediaItemToCommentConnectionWhereArgs>;
+  where?: Maybe<GraphCms_MediaItemToCommentConnectionWhereArgs>;
 };
 
 /** The mediaItem type */
-export type GraphCms_Wp_MediaItemContentArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_MediaItemContentArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** The mediaItem type */
-export type GraphCms_Wp_MediaItemDescriptionArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_MediaItemDescriptionArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** The mediaItem type */
-export type GraphCms_Wp_MediaItemExcerptArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_MediaItemExcerptArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** The mediaItem type */
-export type GraphCms_Wp_MediaItemSourceUrlArgs = {
-  size?: Maybe<GraphCms_Wp_MediaItemSizeEnum>;
+export type GraphCms_MediaItemSourceUrlArgs = {
+  size?: Maybe<GraphCms_MediaItemSizeEnum>;
 };
 
 /** The mediaItem type */
-export type GraphCms_Wp_MediaItemTermNamesArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_MediaItemTermNamesArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** The mediaItem type */
-export type GraphCms_Wp_MediaItemTermsArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_MediaItemTermsArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** The mediaItem type */
-export type GraphCms_Wp_MediaItemTermSlugsArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_MediaItemTermSlugsArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** The mediaItem type */
-export type GraphCms_Wp_MediaItemTitleArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_MediaItemTitleArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** Meta connected to a MediaItem */
-export type GraphCms_Wp_MediaItemMeta = {
-  __typename?: 'GraphCMS_WP_MediaItemMeta';
+export type GraphCms_MediaItemMeta = {
+  __typename?: 'GraphCMS_MediaItemMeta';
   aperture?: Maybe<Scalars['Float']>;
   camera?: Maybe<Scalars['String']>;
   caption?: Maybe<Scalars['String']>;
@@ -4017,7 +4011,7 @@ export type GraphCms_Wp_MediaItemMeta = {
 };
 
 /** The size of the media item object. */
-export enum GraphCms_Wp_MediaItemSizeEnum {
+export enum GraphCms_MediaItemSizeEnum {
   /** MediaItem with the large size */
   Large = 'LARGE',
   /** MediaItem with the medium size */
@@ -4041,7 +4035,7 @@ export enum GraphCms_Wp_MediaItemSizeEnum {
 }
 
 /** The status of the media item object. */
-export enum GraphCms_Wp_MediaItemStatusEnum {
+export enum GraphCms_MediaItemStatusEnum {
   /** Objects with the auto-draft status */
   AutoDraft = 'AUTO_DRAFT',
   /** Objects with the inherit status */
@@ -4053,27 +4047,27 @@ export enum GraphCms_Wp_MediaItemStatusEnum {
 }
 
 /** Connection between the mediaItem type and the mediaItem type */
-export type GraphCms_Wp_MediaItemToCommentConnection = {
-  __typename?: 'GraphCMS_WP_MediaItemToCommentConnection';
+export type GraphCms_MediaItemToCommentConnection = {
+  __typename?: 'GraphCMS_MediaItemToCommentConnection';
   /** Edges for the MediaItemToCommentConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_MediaItemToCommentConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_MediaItemToCommentConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Comment>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Comment>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_MediaItemToCommentConnectionEdge = {
-  __typename?: 'GraphCMS_WP_MediaItemToCommentConnectionEdge';
+export type GraphCms_MediaItemToCommentConnectionEdge = {
+  __typename?: 'GraphCMS_MediaItemToCommentConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Comment>;
+  node?: Maybe<GraphCms_Comment>;
 };
 
 /** Arguments for filtering the MediaItemToCommentConnection connection */
-export type GraphCms_Wp_MediaItemToCommentConnectionWhereArgs = {
+export type GraphCms_MediaItemToCommentConnectionWhereArgs = {
   /** Comment author email address. */
   authorEmail?: Maybe<Scalars['String']>;
   /** Array of author IDs to include comments for. */
@@ -4119,9 +4113,9 @@ export type GraphCms_Wp_MediaItemToCommentConnectionWhereArgs = {
   /** Array of content object statuses to retrieve affiliated comments for.
    * 							Pass 'any' to match any value.
    */
-  contentStatus?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
+  contentStatus?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
+  contentType?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
   /** Array of IDs or email addresses of users whose unapproved comments will be
    * returned by the query regardless of $status. Default empty
    */
@@ -4129,9 +4123,9 @@ export type GraphCms_Wp_MediaItemToCommentConnectionWhereArgs = {
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<Scalars['Int']>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<GraphCms_Wp_OrderEnum>;
+  order?: Maybe<GraphCms_OrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<GraphCms_Wp_CommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_CommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<Scalars['Int']>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -4149,8 +4143,8 @@ export type GraphCms_Wp_MediaItemToCommentConnectionWhereArgs = {
 };
 
 /** Details of an available size for a media item */
-export type GraphCms_Wp_MediaSize = {
-  __typename?: 'GraphCMS_WP_MediaSize';
+export type GraphCms_MediaSize = {
+  __typename?: 'GraphCMS_MediaSize';
   /** The file of the for the referenced size */
   file?: Maybe<Scalars['String']>;
   /** The height of the for the referenced size */
@@ -4168,8 +4162,8 @@ export type GraphCms_Wp_MediaSize = {
 /** Menus are the containers for navigation items. Menus can be assigned to menu
  * locations, which are typically registered by the active theme.
  */
-export type GraphCms_Wp_Menu = {
-  __typename?: 'GraphCMS_WP_Menu';
+export type GraphCms_Menu = {
+  __typename?: 'GraphCMS_Menu';
   /** The number of items in the menu */
   count?: Maybe<Scalars['Int']>;
   /** ID of the nav menu. */
@@ -4177,7 +4171,7 @@ export type GraphCms_Wp_Menu = {
   /** Whether the object is restricted from the current viewer */
   isRestricted?: Maybe<Scalars['Boolean']>;
   /** Connection between the Menu type and the Menu type */
-  menuItems?: Maybe<GraphCms_Wp_MenuToMenuItemConnection>;
+  menuItems?: Maybe<GraphCms_MenuToMenuItemConnection>;
   /** WP ID of the nav menu. */
   menuId?: Maybe<Scalars['Int']>;
   /** Display name of the menu. Equivalent to WP_Term-&gt;name. */
@@ -4189,21 +4183,21 @@ export type GraphCms_Wp_Menu = {
 /** Menus are the containers for navigation items. Menus can be assigned to menu
  * locations, which are typically registered by the active theme.
  */
-export type GraphCms_Wp_MenuMenuItemsArgs = {
+export type GraphCms_MenuMenuItemsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_MenuToMenuItemConnectionWhereArgs>;
+  where?: Maybe<GraphCms_MenuToMenuItemConnectionWhereArgs>;
 };
 
 /** Navigation menu items are the individual items assigned to a menu. These are rendered as the links in a navigation menu. */
-export type GraphCms_Wp_MenuItem = {
-  __typename?: 'GraphCMS_WP_MenuItem';
+export type GraphCms_MenuItem = {
+  __typename?: 'GraphCMS_MenuItem';
   /** Connection between the MenuItem type and the MenuItem type */
-  childItems?: Maybe<GraphCms_Wp_MenuItemToMenuItemConnection>;
+  childItems?: Maybe<GraphCms_MenuItemToMenuItemConnection>;
   /** The object connected to this menu item. */
-  connectedObject?: Maybe<GraphCms_Wp_MenuItemObjectUnion>;
+  connectedObject?: Maybe<GraphCms_MenuItemObjectUnion>;
   /** Class attribute for the menu item link */
   cssClasses?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Description of the menu item. */
@@ -4227,86 +4221,86 @@ export type GraphCms_Wp_MenuItem = {
 };
 
 /** Navigation menu items are the individual items assigned to a menu. These are rendered as the links in a navigation menu. */
-export type GraphCms_Wp_MenuItemChildItemsArgs = {
+export type GraphCms_MenuItemChildItemsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_MenuItemToMenuItemConnectionWhereArgs>;
+  where?: Maybe<GraphCms_MenuItemToMenuItemConnectionWhereArgs>;
 };
 
-export type GraphCms_Wp_MenuItemObjectUnion =
-  | GraphCms_Wp_Post
-  | GraphCms_Wp_Page
-  | GraphCms_Wp_Category
-  | GraphCms_Wp_Tag
-  | GraphCms_Wp_ProductCategory
-  | GraphCms_Wp_ProductTag
-  | GraphCms_Wp_MenuItem;
+export type GraphCms_MenuItemObjectUnion =
+  | GraphCms_Post
+  | GraphCms_Page
+  | GraphCms_Category
+  | GraphCms_Tag
+  | GraphCms_ProductCategory
+  | GraphCms_ProductTag
+  | GraphCms_MenuItem;
 
 /** Connection between the MenuItem type and the MenuItem type */
-export type GraphCms_Wp_MenuItemToMenuItemConnection = {
-  __typename?: 'GraphCMS_WP_MenuItemToMenuItemConnection';
+export type GraphCms_MenuItemToMenuItemConnection = {
+  __typename?: 'GraphCMS_MenuItemToMenuItemConnection';
   /** Edges for the MenuItemToMenuItemConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_MenuItemToMenuItemConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_MenuItemToMenuItemConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_MenuItem>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_MenuItem>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_MenuItemToMenuItemConnectionEdge = {
-  __typename?: 'GraphCMS_WP_MenuItemToMenuItemConnectionEdge';
+export type GraphCms_MenuItemToMenuItemConnectionEdge = {
+  __typename?: 'GraphCMS_MenuItemToMenuItemConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_MenuItem>;
+  node?: Maybe<GraphCms_MenuItem>;
 };
 
 /** Arguments for filtering the MenuItemToMenuItemConnection connection */
-export type GraphCms_Wp_MenuItemToMenuItemConnectionWhereArgs = {
+export type GraphCms_MenuItemToMenuItemConnectionWhereArgs = {
   /** The ID of the object */
   id?: Maybe<Scalars['Int']>;
   /** The menu location for the menu being queried */
-  location?: Maybe<GraphCms_Wp_MenuLocationEnum>;
+  location?: Maybe<GraphCms_MenuLocationEnum>;
 };
 
 /** Registered menu locations */
-export enum GraphCms_Wp_MenuLocationEnum {
+export enum GraphCms_MenuLocationEnum {
   Empty = 'EMPTY',
 }
 
 /** Connection between the Menu type and the Menu type */
-export type GraphCms_Wp_MenuToMenuItemConnection = {
-  __typename?: 'GraphCMS_WP_MenuToMenuItemConnection';
+export type GraphCms_MenuToMenuItemConnection = {
+  __typename?: 'GraphCMS_MenuToMenuItemConnection';
   /** Edges for the MenuToMenuItemConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_MenuToMenuItemConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_MenuToMenuItemConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_MenuItem>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_MenuItem>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_MenuToMenuItemConnectionEdge = {
-  __typename?: 'GraphCMS_WP_MenuToMenuItemConnectionEdge';
+export type GraphCms_MenuToMenuItemConnectionEdge = {
+  __typename?: 'GraphCMS_MenuToMenuItemConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_MenuItem>;
+  node?: Maybe<GraphCms_MenuItem>;
 };
 
 /** Arguments for filtering the MenuToMenuItemConnection connection */
-export type GraphCms_Wp_MenuToMenuItemConnectionWhereArgs = {
+export type GraphCms_MenuToMenuItemConnectionWhereArgs = {
   /** The ID of the object */
   id?: Maybe<Scalars['Int']>;
   /** The menu location for the menu being queried */
-  location?: Maybe<GraphCms_Wp_MenuLocationEnum>;
+  location?: Maybe<GraphCms_MenuLocationEnum>;
 };
 
 /** The MimeType of the object */
-export enum GraphCms_Wp_MimeTypeEnum {
+export enum GraphCms_MimeTypeEnum {
   ApplicationJava = 'APPLICATION_JAVA',
   ApplicationMsword = 'APPLICATION_MSWORD',
   ApplicationOctetStream = 'APPLICATION_OCTET_STREAM',
@@ -4397,29 +4391,29 @@ export enum GraphCms_Wp_MimeTypeEnum {
 }
 
 /** An object with an ID */
-export type GraphCms_Wp_Node = {
-  __typename?: 'GraphCMS_WP_Node';
+export type GraphCms_Node = {
+  __typename?: 'GraphCMS_Node';
   /** The id of the object */
   id: Scalars['ID'];
 };
 
 /** A order object */
-export type GraphCms_Wp_Order = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Order';
+export type GraphCms_Order = GraphCms_Node & {
+  __typename?: 'GraphCMS_Order';
   /** Order billing properties */
-  billing?: Maybe<GraphCms_Wp_CustomerAddress>;
+  billing?: Maybe<GraphCms_CustomerAddress>;
   /** Cart hash */
   cartHash?: Maybe<Scalars['String']>;
   /** Cart tax amount */
   cartTax?: Maybe<Scalars['Float']>;
   /** Connection between the Order type and the Order type */
-  couponLines?: Maybe<GraphCms_Wp_OrderToCouponLineConnection>;
+  couponLines?: Maybe<GraphCms_OrderToCouponLineConnection>;
   /** How order was created */
   createdVia?: Maybe<Scalars['String']>;
   /** Order currency */
   currency?: Maybe<Scalars['String']>;
   /** Order customer */
-  customer?: Maybe<GraphCms_Wp_Customer>;
+  customer?: Maybe<GraphCms_Customer>;
   /** Customer IP Address */
   customerIpAddress?: Maybe<Scalars['String']>;
   /** Customer note */
@@ -4437,9 +4431,9 @@ export type GraphCms_Wp_Order = GraphCms_Wp_Node & {
   /** Discount total amount */
   discountTotal?: Maybe<Scalars['Float']>;
   /** Product downloads */
-  downloadableItems?: Maybe<Array<Maybe<GraphCms_Wp_ProductDownload>>>;
+  downloadableItems?: Maybe<Array<Maybe<GraphCms_ProductDownload>>>;
   /** Connection between the Order type and the Order type */
-  feeLines?: Maybe<GraphCms_Wp_OrderToFeeLineConnection>;
+  feeLines?: Maybe<GraphCms_OrderToFeeLineConnection>;
   /** Order has a billing address? */
   hasBillingAddress?: Maybe<Scalars['Boolean']>;
   /** If order contains a downloadable product */
@@ -4451,7 +4445,7 @@ export type GraphCms_Wp_Order = GraphCms_Wp_Node & {
   /** Is product download is permitted */
   isDownloadPermitted?: Maybe<Scalars['Boolean']>;
   /** Connection between the Order type and the Order type */
-  lineItems?: Maybe<GraphCms_Wp_OrderToLineItemConnection>;
+  lineItems?: Maybe<GraphCms_OrderToLineItemConnection>;
   /** Date order was last updated */
   modified?: Maybe<Scalars['String']>;
   /** If order needs payment */
@@ -4469,7 +4463,7 @@ export type GraphCms_Wp_Order = GraphCms_Wp_Node & {
   /** Order version */
   orderVersion?: Maybe<Scalars['String']>;
   /** Parent order */
-  parent?: Maybe<GraphCms_Wp_Order>;
+  parent?: Maybe<GraphCms_Order>;
   /** Payment method */
   paymentMethod?: Maybe<Scalars['String']>;
   /** Payment method title */
@@ -4477,11 +4471,11 @@ export type GraphCms_Wp_Order = GraphCms_Wp_Node & {
   /** Prices include taxes? */
   pricesIncludeTax?: Maybe<Scalars['Boolean']>;
   /** Connection between the Order type and the Order type */
-  refunds?: Maybe<GraphCms_Wp_OrderToRefundConnection>;
+  refunds?: Maybe<GraphCms_OrderToRefundConnection>;
   /** Order shipping properties */
-  shipping?: Maybe<GraphCms_Wp_CustomerAddress>;
+  shipping?: Maybe<GraphCms_CustomerAddress>;
   /** Connection between the Order type and the Order type */
-  shippingLines?: Maybe<GraphCms_Wp_OrderToShippingLineConnection>;
+  shippingLines?: Maybe<GraphCms_OrderToShippingLineConnection>;
   /** Order customer */
   shippingAddressMapUrl?: Maybe<Scalars['String']>;
   /** Shipping tax amount */
@@ -4489,11 +4483,11 @@ export type GraphCms_Wp_Order = GraphCms_Wp_Node & {
   /** Shipping total amount */
   shippingTotal?: Maybe<Scalars['Float']>;
   /** Order status */
-  status?: Maybe<GraphCms_Wp_OrderStatusEnum>;
+  status?: Maybe<GraphCms_OrderStatusEnum>;
   /** Order subtotal */
   subtotal?: Maybe<Scalars['Float']>;
   /** Connection between the Order type and the Order type */
-  taxLines?: Maybe<GraphCms_Wp_OrderToTaxLineConnection>;
+  taxLines?: Maybe<GraphCms_OrderToTaxLineConnection>;
   /** Order grand total */
   total?: Maybe<Scalars['Float']>;
   /** Order taxes */
@@ -4503,7 +4497,7 @@ export type GraphCms_Wp_Order = GraphCms_Wp_Node & {
 };
 
 /** A order object */
-export type GraphCms_Wp_OrderCouponLinesArgs = {
+export type GraphCms_OrderCouponLinesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
@@ -4511,7 +4505,7 @@ export type GraphCms_Wp_OrderCouponLinesArgs = {
 };
 
 /** A order object */
-export type GraphCms_Wp_OrderFeeLinesArgs = {
+export type GraphCms_OrderFeeLinesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
@@ -4519,7 +4513,7 @@ export type GraphCms_Wp_OrderFeeLinesArgs = {
 };
 
 /** A order object */
-export type GraphCms_Wp_OrderLineItemsArgs = {
+export type GraphCms_OrderLineItemsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
@@ -4527,16 +4521,16 @@ export type GraphCms_Wp_OrderLineItemsArgs = {
 };
 
 /** A order object */
-export type GraphCms_Wp_OrderRefundsArgs = {
+export type GraphCms_OrderRefundsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_OrderToRefundConnectionWhereArgs>;
+  where?: Maybe<GraphCms_OrderToRefundConnectionWhereArgs>;
 };
 
 /** A order object */
-export type GraphCms_Wp_OrderShippingLinesArgs = {
+export type GraphCms_OrderShippingLinesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
@@ -4544,7 +4538,7 @@ export type GraphCms_Wp_OrderShippingLinesArgs = {
 };
 
 /** A order object */
-export type GraphCms_Wp_OrderTaxLinesArgs = {
+export type GraphCms_OrderTaxLinesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
@@ -4552,20 +4546,20 @@ export type GraphCms_Wp_OrderTaxLinesArgs = {
 };
 
 /** The cardinality of the connection order */
-export enum GraphCms_Wp_OrderEnum {
+export enum GraphCms_OrderEnum {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 
 /** Order item tax statement */
-export type GraphCms_Wp_OrderItemTax = {
-  __typename?: 'GraphCMS_WP_OrderItemTax';
+export type GraphCms_OrderItemTax = {
+  __typename?: 'GraphCMS_OrderItemTax';
   /** Amount taxed */
   amount?: Maybe<Scalars['Float']>;
   /** Subtotal */
   subtotal?: Maybe<Scalars['Float']>;
   /** Tax line connected to this statement */
-  taxLine?: Maybe<GraphCms_Wp_TaxLine>;
+  taxLine?: Maybe<GraphCms_TaxLine>;
   /** Order item ID for tax line connected to this statement */
   taxLineId: Scalars['Int'];
   /** Total */
@@ -4573,7 +4567,7 @@ export type GraphCms_Wp_OrderItemTax = {
 };
 
 /** Order status enumeration */
-export enum GraphCms_Wp_OrderStatusEnum {
+export enum GraphCms_OrderStatusEnum {
   Cancelled = 'CANCELLED',
   Completed = 'COMPLETED',
   Failed = 'FAILED',
@@ -4584,95 +4578,95 @@ export enum GraphCms_Wp_OrderStatusEnum {
 }
 
 /** Connection between the Order type and the Order type */
-export type GraphCms_Wp_OrderToCouponLineConnection = {
-  __typename?: 'GraphCMS_WP_OrderToCouponLineConnection';
+export type GraphCms_OrderToCouponLineConnection = {
+  __typename?: 'GraphCMS_OrderToCouponLineConnection';
   /** Edges for the OrderToCouponLineConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_OrderToCouponLineConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_OrderToCouponLineConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_CouponLine>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_CouponLine>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_OrderToCouponLineConnectionEdge = {
-  __typename?: 'GraphCMS_WP_OrderToCouponLineConnectionEdge';
+export type GraphCms_OrderToCouponLineConnectionEdge = {
+  __typename?: 'GraphCMS_OrderToCouponLineConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_CouponLine>;
+  node?: Maybe<GraphCms_CouponLine>;
 };
 
 /** Connection between the Order type and the Order type */
-export type GraphCms_Wp_OrderToFeeLineConnection = {
-  __typename?: 'GraphCMS_WP_OrderToFeeLineConnection';
+export type GraphCms_OrderToFeeLineConnection = {
+  __typename?: 'GraphCMS_OrderToFeeLineConnection';
   /** Edges for the OrderToFeeLineConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_OrderToFeeLineConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_OrderToFeeLineConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_FeeLine>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_FeeLine>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_OrderToFeeLineConnectionEdge = {
-  __typename?: 'GraphCMS_WP_OrderToFeeLineConnectionEdge';
+export type GraphCms_OrderToFeeLineConnectionEdge = {
+  __typename?: 'GraphCMS_OrderToFeeLineConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_FeeLine>;
+  node?: Maybe<GraphCms_FeeLine>;
 };
 
 /** Connection between the Order type and the Order type */
-export type GraphCms_Wp_OrderToLineItemConnection = {
-  __typename?: 'GraphCMS_WP_OrderToLineItemConnection';
+export type GraphCms_OrderToLineItemConnection = {
+  __typename?: 'GraphCMS_OrderToLineItemConnection';
   /** Edges for the OrderToLineItemConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_OrderToLineItemConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_OrderToLineItemConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_LineItem>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_LineItem>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_OrderToLineItemConnectionEdge = {
-  __typename?: 'GraphCMS_WP_OrderToLineItemConnectionEdge';
+export type GraphCms_OrderToLineItemConnectionEdge = {
+  __typename?: 'GraphCMS_OrderToLineItemConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_LineItem>;
+  node?: Maybe<GraphCms_LineItem>;
 };
 
 /** Connection between the Order type and the Order type */
-export type GraphCms_Wp_OrderToRefundConnection = {
-  __typename?: 'GraphCMS_WP_OrderToRefundConnection';
+export type GraphCms_OrderToRefundConnection = {
+  __typename?: 'GraphCMS_OrderToRefundConnection';
   /** Edges for the OrderToRefundConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_OrderToRefundConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_OrderToRefundConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Refund>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Refund>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_OrderToRefundConnectionEdge = {
-  __typename?: 'GraphCMS_WP_OrderToRefundConnectionEdge';
+export type GraphCms_OrderToRefundConnectionEdge = {
+  __typename?: 'GraphCMS_OrderToRefundConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Refund>;
+  node?: Maybe<GraphCms_Refund>;
 };
 
 /** Arguments for filtering the OrderToRefundConnection connection */
-export type GraphCms_Wp_OrderToRefundConnectionWhereArgs = {
+export type GraphCms_OrderToRefundConnectionWhereArgs = {
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to specific ids. */
   include?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Limit result set to refunds from a specific group of order IDs. */
   orderIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
@@ -4688,60 +4682,60 @@ export type GraphCms_Wp_OrderToRefundConnectionWhereArgs = {
 };
 
 /** Connection between the Order type and the Order type */
-export type GraphCms_Wp_OrderToShippingLineConnection = {
-  __typename?: 'GraphCMS_WP_OrderToShippingLineConnection';
+export type GraphCms_OrderToShippingLineConnection = {
+  __typename?: 'GraphCMS_OrderToShippingLineConnection';
   /** Edges for the OrderToShippingLineConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_OrderToShippingLineConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_OrderToShippingLineConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ShippingLine>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ShippingLine>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_OrderToShippingLineConnectionEdge = {
-  __typename?: 'GraphCMS_WP_OrderToShippingLineConnectionEdge';
+export type GraphCms_OrderToShippingLineConnectionEdge = {
+  __typename?: 'GraphCMS_OrderToShippingLineConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ShippingLine>;
+  node?: Maybe<GraphCms_ShippingLine>;
 };
 
 /** Connection between the Order type and the Order type */
-export type GraphCms_Wp_OrderToTaxLineConnection = {
-  __typename?: 'GraphCMS_WP_OrderToTaxLineConnection';
+export type GraphCms_OrderToTaxLineConnection = {
+  __typename?: 'GraphCMS_OrderToTaxLineConnection';
   /** Edges for the OrderToTaxLineConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_OrderToTaxLineConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_OrderToTaxLineConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_TaxLine>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_TaxLine>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_OrderToTaxLineConnectionEdge = {
-  __typename?: 'GraphCMS_WP_OrderToTaxLineConnectionEdge';
+export type GraphCms_OrderToTaxLineConnectionEdge = {
+  __typename?: 'GraphCMS_OrderToTaxLineConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_TaxLine>;
+  node?: Maybe<GraphCms_TaxLine>;
 };
 
 /** The page type */
-export type GraphCms_Wp_Page = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Page';
+export type GraphCms_Page = GraphCms_Node & {
+  __typename?: 'GraphCMS_Page';
   /** Ancestors of the object */
-  ancestors?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectUnion>>>;
+  ancestors?: Maybe<Array<Maybe<GraphCms_PostObjectUnion>>>;
   /** The author field will return a queryable User type matching the post&#039;s author. */
-  author?: Maybe<GraphCms_Wp_User>;
+  author?: Maybe<GraphCms_User>;
   /** Connection between the page type and the page type */
-  childPages?: Maybe<GraphCms_Wp_PageToPageConnection>;
+  childPages?: Maybe<GraphCms_PageToPageConnection>;
   /** The number of comments. Even though WPGraphQL denotes this field as an
    * integer, in WordPress this field should be saved as a numeric string for compatibility.
    */
   commentCount?: Maybe<Scalars['Int']>;
   /** Connection between the page type and the page type */
-  comments?: Maybe<GraphCms_Wp_PageToCommentConnection>;
+  comments?: Maybe<GraphCms_PageToCommentConnection>;
   /** Whether the comments are open or closed for this particular post. */
   commentStatus?: Maybe<Scalars['String']>;
   /** The content of the post. */
@@ -4753,18 +4747,18 @@ export type GraphCms_Wp_Page = GraphCms_Wp_Node & {
   /** The desired slug of the post */
   desiredSlug?: Maybe<Scalars['String']>;
   /** The user that most recently edited the object */
-  editLast?: Maybe<GraphCms_Wp_User>;
+  editLast?: Maybe<GraphCms_User>;
   /** If a user has edited the object within the past 15 seconds, this will return
    * the user and the time they last edited. Null if the edit lock doesn&#039;t
    * exist or is greater than 15 seconds
    */
-  editLock?: Maybe<GraphCms_Wp_EditLock>;
+  editLock?: Maybe<GraphCms_EditLock>;
   /** The RSS enclosure for the object */
   enclosure?: Maybe<Scalars['String']>;
   /** The excerpt of the post. */
   excerpt?: Maybe<Scalars['String']>;
   /** The featured image for the object */
-  featuredImage?: Maybe<GraphCms_Wp_MediaItem>;
+  featuredImage?: Maybe<GraphCms_MediaItem>;
   /** The global unique identifier for this post. This currently matches the value
    * stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot;
    * database table.
@@ -4791,13 +4785,13 @@ export type GraphCms_Wp_Page = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   pageId: Scalars['Int'];
   /** The parent of the object. The parent object can be of various types */
-  parent?: Maybe<GraphCms_Wp_PostObjectUnion>;
+  parent?: Maybe<GraphCms_PostObjectUnion>;
   /** URLs that have been pinged. */
   pinged?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Whether the pings are open or closed for this particular post. */
   pingStatus?: Maybe<Scalars['String']>;
   /** Connection between the page type and the page type */
-  revisions?: Maybe<GraphCms_Wp_PageToRevisionConnection>;
+  revisions?: Maybe<GraphCms_PageToRevisionConnection>;
   /** The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name
    * field and the post_name column in the database for the
    * &quot;post_objects&quot; table.
@@ -4808,7 +4802,7 @@ export type GraphCms_Wp_Page = GraphCms_Wp_Node & {
   /** Terms connected to the page */
   termNames?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Terms connected to the page */
-  terms?: Maybe<Array<Maybe<GraphCms_Wp_TermObjectUnion>>>;
+  terms?: Maybe<Array<Maybe<GraphCms_TermObjectUnion>>>;
   /** Terms connected to the page */
   termSlugs?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
@@ -4820,89 +4814,89 @@ export type GraphCms_Wp_Page = GraphCms_Wp_Node & {
 };
 
 /** The page type */
-export type GraphCms_Wp_PageAncestorsArgs = {
-  types?: Maybe<Array<Maybe<GraphCms_Wp_PostTypeEnum>>>;
+export type GraphCms_PageAncestorsArgs = {
+  types?: Maybe<Array<Maybe<GraphCms_PostTypeEnum>>>;
 };
 
 /** The page type */
-export type GraphCms_Wp_PageChildPagesArgs = {
+export type GraphCms_PageChildPagesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PageToPageConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PageToPageConnectionWhereArgs>;
 };
 
 /** The page type */
-export type GraphCms_Wp_PageCommentsArgs = {
+export type GraphCms_PageCommentsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PageToCommentConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PageToCommentConnectionWhereArgs>;
 };
 
 /** The page type */
-export type GraphCms_Wp_PageContentArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_PageContentArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** The page type */
-export type GraphCms_Wp_PageExcerptArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_PageExcerptArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** The page type */
-export type GraphCms_Wp_PageRevisionsArgs = {
+export type GraphCms_PageRevisionsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PageToRevisionConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PageToRevisionConnectionWhereArgs>;
 };
 
 /** The page type */
-export type GraphCms_Wp_PageTermNamesArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_PageTermNamesArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** The page type */
-export type GraphCms_Wp_PageTermsArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_PageTermsArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** The page type */
-export type GraphCms_Wp_PageTermSlugsArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_PageTermSlugsArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** The page type */
-export type GraphCms_Wp_PageTitleArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_PageTitleArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** Connection between the page type and the page type */
-export type GraphCms_Wp_PageToCommentConnection = {
-  __typename?: 'GraphCMS_WP_PageToCommentConnection';
+export type GraphCms_PageToCommentConnection = {
+  __typename?: 'GraphCMS_PageToCommentConnection';
   /** Edges for the PageToCommentConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PageToCommentConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PageToCommentConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Comment>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Comment>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PageToCommentConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PageToCommentConnectionEdge';
+export type GraphCms_PageToCommentConnectionEdge = {
+  __typename?: 'GraphCMS_PageToCommentConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Comment>;
+  node?: Maybe<GraphCms_Comment>;
 };
 
 /** Arguments for filtering the PageToCommentConnection connection */
-export type GraphCms_Wp_PageToCommentConnectionWhereArgs = {
+export type GraphCms_PageToCommentConnectionWhereArgs = {
   /** Comment author email address. */
   authorEmail?: Maybe<Scalars['String']>;
   /** Array of author IDs to include comments for. */
@@ -4948,9 +4942,9 @@ export type GraphCms_Wp_PageToCommentConnectionWhereArgs = {
   /** Array of content object statuses to retrieve affiliated comments for.
    * 							Pass 'any' to match any value.
    */
-  contentStatus?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
+  contentStatus?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
+  contentType?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
   /** Array of IDs or email addresses of users whose unapproved comments will be
    * returned by the query regardless of $status. Default empty
    */
@@ -4958,9 +4952,9 @@ export type GraphCms_Wp_PageToCommentConnectionWhereArgs = {
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<Scalars['Int']>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<GraphCms_Wp_OrderEnum>;
+  order?: Maybe<GraphCms_OrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<GraphCms_Wp_CommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_CommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<Scalars['Int']>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -4978,29 +4972,29 @@ export type GraphCms_Wp_PageToCommentConnectionWhereArgs = {
 };
 
 /** Connection between the page type and the page type */
-export type GraphCms_Wp_PageToPageConnection = {
-  __typename?: 'GraphCMS_WP_PageToPageConnection';
+export type GraphCms_PageToPageConnection = {
+  __typename?: 'GraphCMS_PageToPageConnection';
   /** Edges for the PageToPageConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PageToPageConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PageToPageConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Page>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Page>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PageToPageConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PageToPageConnectionEdge';
+export type GraphCms_PageToPageConnectionEdge = {
+  __typename?: 'GraphCMS_PageToPageConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Page>;
+  node?: Maybe<GraphCms_Page>;
 };
 
 /** Arguments for filtering the PageToPageConnection connection */
-export type GraphCms_Wp_PageToPageConnectionWhereArgs = {
+export type GraphCms_PageToPageConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -5026,7 +5020,7 @@ export type GraphCms_Wp_PageToPageConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -5036,7 +5030,7 @@ export type GraphCms_Wp_PageToPageConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -5046,7 +5040,7 @@ export type GraphCms_Wp_PageToPageConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -5059,8 +5053,8 @@ export type GraphCms_Wp_PageToPageConnectionWhereArgs = {
   password?: Maybe<Scalars['String']>;
   /** Show Posts based on a keyword search */
   search?: Maybe<Scalars['String']>;
-  stati?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  stati?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<Scalars['String']>;
   /** Use Tag ID */
@@ -5086,29 +5080,29 @@ export type GraphCms_Wp_PageToPageConnectionWhereArgs = {
 };
 
 /** Connection between the page type and the page type */
-export type GraphCms_Wp_PageToRevisionConnection = {
-  __typename?: 'GraphCMS_WP_PageToRevisionConnection';
+export type GraphCms_PageToRevisionConnection = {
+  __typename?: 'GraphCMS_PageToRevisionConnection';
   /** Edges for the PageToRevisionConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PageToRevisionConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PageToRevisionConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Revision>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Revision>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PageToRevisionConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PageToRevisionConnectionEdge';
+export type GraphCms_PageToRevisionConnectionEdge = {
+  __typename?: 'GraphCMS_PageToRevisionConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Revision>;
+  node?: Maybe<GraphCms_Revision>;
 };
 
 /** Arguments for filtering the PageToRevisionConnection connection */
-export type GraphCms_Wp_PageToRevisionConnectionWhereArgs = {
+export type GraphCms_PageToRevisionConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -5134,7 +5128,7 @@ export type GraphCms_Wp_PageToRevisionConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -5144,7 +5138,7 @@ export type GraphCms_Wp_PageToRevisionConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -5154,7 +5148,7 @@ export type GraphCms_Wp_PageToRevisionConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -5167,8 +5161,8 @@ export type GraphCms_Wp_PageToRevisionConnectionWhereArgs = {
   password?: Maybe<Scalars['String']>;
   /** Show Posts based on a keyword search */
   search?: Maybe<Scalars['String']>;
-  stati?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  stati?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<Scalars['String']>;
   /** Use Tag ID */
@@ -5194,8 +5188,8 @@ export type GraphCms_Wp_PageToRevisionConnectionWhereArgs = {
 };
 
 /** The paHind type */
-export type GraphCms_Wp_PaHind = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaHind';
+export type GraphCms_PaHind = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaHind';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -5211,59 +5205,59 @@ export type GraphCms_Wp_PaHind = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paHindId?: Maybe<Scalars['Int']>;
   /** Connection between the PaHind type and the PaHind type */
-  products?: Maybe<GraphCms_Wp_PaHindToProductConnection>;
+  products?: Maybe<GraphCms_PaHindToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaHind type and the PaHind type */
-  variations?: Maybe<GraphCms_Wp_PaHindToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaHindToProductVariationConnection>;
 };
 
 /** The paHind type */
-export type GraphCms_Wp_PaHindProductsArgs = {
+export type GraphCms_PaHindProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaHindToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaHindToProductConnectionWhereArgs>;
 };
 
 /** The paHind type */
-export type GraphCms_Wp_PaHindVariationsArgs = {
+export type GraphCms_PaHindVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaHindToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaHindToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaHind type and the PaHind type */
-export type GraphCms_Wp_PaHindToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaHindToProductConnection';
+export type GraphCms_PaHindToProductConnection = {
+  __typename?: 'GraphCMS_PaHindToProductConnection';
   /** Edges for the PaHindToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaHindToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaHindToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaHindToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaHindToProductConnectionEdge';
+export type GraphCms_PaHindToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaHindToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaHindToProductConnection connection */
-export type GraphCms_Wp_PaHindToProductConnectionWhereArgs = {
+export type GraphCms_PaHindToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -5281,7 +5275,7 @@ export type GraphCms_Wp_PaHindToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -5295,7 +5289,7 @@ export type GraphCms_Wp_PaHindToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -5313,7 +5307,7 @@ export type GraphCms_Wp_PaHindToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -5327,41 +5321,39 @@ export type GraphCms_Wp_PaHindToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaHind type and the PaHind type */
-export type GraphCms_Wp_PaHindToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaHindToProductVariationConnection';
+export type GraphCms_PaHindToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaHindToProductVariationConnection';
   /** Edges for the PaHindToProductVariationConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaHindToProductVariationConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_PaHindToProductVariationConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaHindToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaHindToProductVariationConnectionEdge';
+export type GraphCms_PaHindToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaHindToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaHindToProductVariationConnection connection */
-export type GraphCms_Wp_PaHindToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaHindToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -5379,7 +5371,7 @@ export type GraphCms_Wp_PaHindToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -5393,7 +5385,7 @@ export type GraphCms_Wp_PaHindToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -5411,7 +5403,7 @@ export type GraphCms_Wp_PaHindToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -5425,20 +5417,20 @@ export type GraphCms_Wp_PaHindToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paHulk type */
-export type GraphCms_Wp_PaHulk = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaHulk';
+export type GraphCms_PaHulk = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaHulk';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -5454,59 +5446,59 @@ export type GraphCms_Wp_PaHulk = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paHulkId?: Maybe<Scalars['Int']>;
   /** Connection between the PaHulk type and the PaHulk type */
-  products?: Maybe<GraphCms_Wp_PaHulkToProductConnection>;
+  products?: Maybe<GraphCms_PaHulkToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaHulk type and the PaHulk type */
-  variations?: Maybe<GraphCms_Wp_PaHulkToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaHulkToProductVariationConnection>;
 };
 
 /** The paHulk type */
-export type GraphCms_Wp_PaHulkProductsArgs = {
+export type GraphCms_PaHulkProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaHulkToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaHulkToProductConnectionWhereArgs>;
 };
 
 /** The paHulk type */
-export type GraphCms_Wp_PaHulkVariationsArgs = {
+export type GraphCms_PaHulkVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaHulkToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaHulkToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaHulk type and the PaHulk type */
-export type GraphCms_Wp_PaHulkToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaHulkToProductConnection';
+export type GraphCms_PaHulkToProductConnection = {
+  __typename?: 'GraphCMS_PaHulkToProductConnection';
   /** Edges for the PaHulkToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaHulkToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaHulkToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaHulkToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaHulkToProductConnectionEdge';
+export type GraphCms_PaHulkToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaHulkToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaHulkToProductConnection connection */
-export type GraphCms_Wp_PaHulkToProductConnectionWhereArgs = {
+export type GraphCms_PaHulkToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -5524,7 +5516,7 @@ export type GraphCms_Wp_PaHulkToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -5538,7 +5530,7 @@ export type GraphCms_Wp_PaHulkToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -5556,7 +5548,7 @@ export type GraphCms_Wp_PaHulkToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -5570,41 +5562,39 @@ export type GraphCms_Wp_PaHulkToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaHulk type and the PaHulk type */
-export type GraphCms_Wp_PaHulkToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaHulkToProductVariationConnection';
+export type GraphCms_PaHulkToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaHulkToProductVariationConnection';
   /** Edges for the PaHulkToProductVariationConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaHulkToProductVariationConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_PaHulkToProductVariationConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaHulkToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaHulkToProductVariationConnectionEdge';
+export type GraphCms_PaHulkToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaHulkToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaHulkToProductVariationConnection connection */
-export type GraphCms_Wp_PaHulkToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaHulkToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -5622,7 +5612,7 @@ export type GraphCms_Wp_PaHulkToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -5636,7 +5626,7 @@ export type GraphCms_Wp_PaHulkToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -5654,7 +5644,7 @@ export type GraphCms_Wp_PaHulkToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -5668,20 +5658,20 @@ export type GraphCms_Wp_PaHulkToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paKasutusaeg type */
-export type GraphCms_Wp_PaKasutusaeg = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaKasutusaeg';
+export type GraphCms_PaKasutusaeg = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaKasutusaeg';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -5697,59 +5687,59 @@ export type GraphCms_Wp_PaKasutusaeg = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paKasutusaegId?: Maybe<Scalars['Int']>;
   /** Connection between the PaKasutusaeg type and the PaKasutusaeg type */
-  products?: Maybe<GraphCms_Wp_PaKasutusaegToProductConnection>;
+  products?: Maybe<GraphCms_PaKasutusaegToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaKasutusaeg type and the PaKasutusaeg type */
-  variations?: Maybe<GraphCms_Wp_PaKasutusaegToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaKasutusaegToProductVariationConnection>;
 };
 
 /** The paKasutusaeg type */
-export type GraphCms_Wp_PaKasutusaegProductsArgs = {
+export type GraphCms_PaKasutusaegProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaKasutusaegToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaKasutusaegToProductConnectionWhereArgs>;
 };
 
 /** The paKasutusaeg type */
-export type GraphCms_Wp_PaKasutusaegVariationsArgs = {
+export type GraphCms_PaKasutusaegVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaKasutusaegToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaKasutusaegToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaKasutusaeg type and the PaKasutusaeg type */
-export type GraphCms_Wp_PaKasutusaegToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaKasutusaegToProductConnection';
+export type GraphCms_PaKasutusaegToProductConnection = {
+  __typename?: 'GraphCMS_PaKasutusaegToProductConnection';
   /** Edges for the PaKasutusaegToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaKasutusaegToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaKasutusaegToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaKasutusaegToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaKasutusaegToProductConnectionEdge';
+export type GraphCms_PaKasutusaegToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaKasutusaegToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaKasutusaegToProductConnection connection */
-export type GraphCms_Wp_PaKasutusaegToProductConnectionWhereArgs = {
+export type GraphCms_PaKasutusaegToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -5767,7 +5757,7 @@ export type GraphCms_Wp_PaKasutusaegToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -5781,7 +5771,7 @@ export type GraphCms_Wp_PaKasutusaegToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -5799,7 +5789,7 @@ export type GraphCms_Wp_PaKasutusaegToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -5813,41 +5803,41 @@ export type GraphCms_Wp_PaKasutusaegToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaKasutusaeg type and the PaKasutusaeg type */
-export type GraphCms_Wp_PaKasutusaegToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaKasutusaegToProductVariationConnection';
+export type GraphCms_PaKasutusaegToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaKasutusaegToProductVariationConnection';
   /** Edges for the PaKasutusaegToProductVariationConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaKasutusaegToProductVariationConnectionEdge>>
+    Array<Maybe<GraphCms_PaKasutusaegToProductVariationConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaKasutusaegToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaKasutusaegToProductVariationConnectionEdge';
+export type GraphCms_PaKasutusaegToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaKasutusaegToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaKasutusaegToProductVariationConnection connection */
-export type GraphCms_Wp_PaKasutusaegToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaKasutusaegToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -5865,7 +5855,7 @@ export type GraphCms_Wp_PaKasutusaegToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -5879,7 +5869,7 @@ export type GraphCms_Wp_PaKasutusaegToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -5897,7 +5887,7 @@ export type GraphCms_Wp_PaKasutusaegToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -5911,20 +5901,20 @@ export type GraphCms_Wp_PaKasutusaegToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paKogus type */
-export type GraphCms_Wp_PaKogus = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaKogus';
+export type GraphCms_PaKogus = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaKogus';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -5940,59 +5930,59 @@ export type GraphCms_Wp_PaKogus = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paKogusId?: Maybe<Scalars['Int']>;
   /** Connection between the PaKogus type and the PaKogus type */
-  products?: Maybe<GraphCms_Wp_PaKogusToProductConnection>;
+  products?: Maybe<GraphCms_PaKogusToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaKogus type and the PaKogus type */
-  variations?: Maybe<GraphCms_Wp_PaKogusToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaKogusToProductVariationConnection>;
 };
 
 /** The paKogus type */
-export type GraphCms_Wp_PaKogusProductsArgs = {
+export type GraphCms_PaKogusProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaKogusToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaKogusToProductConnectionWhereArgs>;
 };
 
 /** The paKogus type */
-export type GraphCms_Wp_PaKogusVariationsArgs = {
+export type GraphCms_PaKogusVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaKogusToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaKogusToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaKogus type and the PaKogus type */
-export type GraphCms_Wp_PaKogusToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaKogusToProductConnection';
+export type GraphCms_PaKogusToProductConnection = {
+  __typename?: 'GraphCMS_PaKogusToProductConnection';
   /** Edges for the PaKogusToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaKogusToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaKogusToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaKogusToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaKogusToProductConnectionEdge';
+export type GraphCms_PaKogusToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaKogusToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaKogusToProductConnection connection */
-export type GraphCms_Wp_PaKogusToProductConnectionWhereArgs = {
+export type GraphCms_PaKogusToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -6010,7 +6000,7 @@ export type GraphCms_Wp_PaKogusToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -6024,7 +6014,7 @@ export type GraphCms_Wp_PaKogusToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -6042,7 +6032,7 @@ export type GraphCms_Wp_PaKogusToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -6056,41 +6046,39 @@ export type GraphCms_Wp_PaKogusToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaKogus type and the PaKogus type */
-export type GraphCms_Wp_PaKogusToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaKogusToProductVariationConnection';
+export type GraphCms_PaKogusToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaKogusToProductVariationConnection';
   /** Edges for the PaKogusToProductVariationConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaKogusToProductVariationConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_PaKogusToProductVariationConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaKogusToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaKogusToProductVariationConnectionEdge';
+export type GraphCms_PaKogusToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaKogusToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaKogusToProductVariationConnection connection */
-export type GraphCms_Wp_PaKogusToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaKogusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -6108,7 +6096,7 @@ export type GraphCms_Wp_PaKogusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -6122,7 +6110,7 @@ export type GraphCms_Wp_PaKogusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -6140,7 +6128,7 @@ export type GraphCms_Wp_PaKogusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -6154,20 +6142,20 @@ export type GraphCms_Wp_PaKogusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paKontuur type */
-export type GraphCms_Wp_PaKontuur = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaKontuur';
+export type GraphCms_PaKontuur = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaKontuur';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -6183,59 +6171,59 @@ export type GraphCms_Wp_PaKontuur = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paKontuurId?: Maybe<Scalars['Int']>;
   /** Connection between the PaKontuur type and the PaKontuur type */
-  products?: Maybe<GraphCms_Wp_PaKontuurToProductConnection>;
+  products?: Maybe<GraphCms_PaKontuurToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaKontuur type and the PaKontuur type */
-  variations?: Maybe<GraphCms_Wp_PaKontuurToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaKontuurToProductVariationConnection>;
 };
 
 /** The paKontuur type */
-export type GraphCms_Wp_PaKontuurProductsArgs = {
+export type GraphCms_PaKontuurProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaKontuurToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaKontuurToProductConnectionWhereArgs>;
 };
 
 /** The paKontuur type */
-export type GraphCms_Wp_PaKontuurVariationsArgs = {
+export type GraphCms_PaKontuurVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaKontuurToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaKontuurToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaKontuur type and the PaKontuur type */
-export type GraphCms_Wp_PaKontuurToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaKontuurToProductConnection';
+export type GraphCms_PaKontuurToProductConnection = {
+  __typename?: 'GraphCMS_PaKontuurToProductConnection';
   /** Edges for the PaKontuurToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaKontuurToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaKontuurToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaKontuurToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaKontuurToProductConnectionEdge';
+export type GraphCms_PaKontuurToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaKontuurToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaKontuurToProductConnection connection */
-export type GraphCms_Wp_PaKontuurToProductConnectionWhereArgs = {
+export type GraphCms_PaKontuurToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -6253,7 +6241,7 @@ export type GraphCms_Wp_PaKontuurToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -6267,7 +6255,7 @@ export type GraphCms_Wp_PaKontuurToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -6285,7 +6273,7 @@ export type GraphCms_Wp_PaKontuurToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -6299,41 +6287,41 @@ export type GraphCms_Wp_PaKontuurToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaKontuur type and the PaKontuur type */
-export type GraphCms_Wp_PaKontuurToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaKontuurToProductVariationConnection';
+export type GraphCms_PaKontuurToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaKontuurToProductVariationConnection';
   /** Edges for the PaKontuurToProductVariationConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaKontuurToProductVariationConnectionEdge>>
+    Array<Maybe<GraphCms_PaKontuurToProductVariationConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaKontuurToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaKontuurToProductVariationConnectionEdge';
+export type GraphCms_PaKontuurToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaKontuurToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaKontuurToProductVariationConnection connection */
-export type GraphCms_Wp_PaKontuurToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaKontuurToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -6351,7 +6339,7 @@ export type GraphCms_Wp_PaKontuurToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -6365,7 +6353,7 @@ export type GraphCms_Wp_PaKontuurToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -6383,7 +6371,7 @@ export type GraphCms_Wp_PaKontuurToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -6397,20 +6385,20 @@ export type GraphCms_Wp_PaKontuurToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paKoostisained type */
-export type GraphCms_Wp_PaKoostisained = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaKoostisained';
+export type GraphCms_PaKoostisained = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaKoostisained';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -6426,63 +6414,59 @@ export type GraphCms_Wp_PaKoostisained = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paKoostisainedId?: Maybe<Scalars['Int']>;
   /** Connection between the PaKoostisained type and the PaKoostisained type */
-  products?: Maybe<GraphCms_Wp_PaKoostisainedToProductConnection>;
+  products?: Maybe<GraphCms_PaKoostisainedToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaKoostisained type and the PaKoostisained type */
-  variations?: Maybe<GraphCms_Wp_PaKoostisainedToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaKoostisainedToProductVariationConnection>;
 };
 
 /** The paKoostisained type */
-export type GraphCms_Wp_PaKoostisainedProductsArgs = {
+export type GraphCms_PaKoostisainedProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaKoostisainedToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaKoostisainedToProductConnectionWhereArgs>;
 };
 
 /** The paKoostisained type */
-export type GraphCms_Wp_PaKoostisainedVariationsArgs = {
+export type GraphCms_PaKoostisainedVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<
-    GraphCms_Wp_PaKoostisainedToProductVariationConnectionWhereArgs
-  >;
+  where?: Maybe<GraphCms_PaKoostisainedToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaKoostisained type and the PaKoostisained type */
-export type GraphCms_Wp_PaKoostisainedToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaKoostisainedToProductConnection';
+export type GraphCms_PaKoostisainedToProductConnection = {
+  __typename?: 'GraphCMS_PaKoostisainedToProductConnection';
   /** Edges for the PaKoostisainedToProductConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaKoostisainedToProductConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_PaKoostisainedToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaKoostisainedToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaKoostisainedToProductConnectionEdge';
+export type GraphCms_PaKoostisainedToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaKoostisainedToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaKoostisainedToProductConnection connection */
-export type GraphCms_Wp_PaKoostisainedToProductConnectionWhereArgs = {
+export type GraphCms_PaKoostisainedToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -6500,7 +6484,7 @@ export type GraphCms_Wp_PaKoostisainedToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -6514,7 +6498,7 @@ export type GraphCms_Wp_PaKoostisainedToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -6532,7 +6516,7 @@ export type GraphCms_Wp_PaKoostisainedToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -6546,41 +6530,41 @@ export type GraphCms_Wp_PaKoostisainedToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaKoostisained type and the PaKoostisained type */
-export type GraphCms_Wp_PaKoostisainedToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaKoostisainedToProductVariationConnection';
+export type GraphCms_PaKoostisainedToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaKoostisainedToProductVariationConnection';
   /** Edges for the PaKoostisainedToProductVariationConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaKoostisainedToProductVariationConnectionEdge>>
+    Array<Maybe<GraphCms_PaKoostisainedToProductVariationConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaKoostisainedToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaKoostisainedToProductVariationConnectionEdge';
+export type GraphCms_PaKoostisainedToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaKoostisainedToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaKoostisainedToProductVariationConnection connection */
-export type GraphCms_Wp_PaKoostisainedToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaKoostisainedToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -6598,7 +6582,7 @@ export type GraphCms_Wp_PaKoostisainedToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -6612,7 +6596,7 @@ export type GraphCms_Wp_PaKoostisainedToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -6630,7 +6614,7 @@ export type GraphCms_Wp_PaKoostisainedToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -6644,20 +6628,20 @@ export type GraphCms_Wp_PaKoostisainedToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paLaadimisaeg type */
-export type GraphCms_Wp_PaLaadimisaeg = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaLaadimisaeg';
+export type GraphCms_PaLaadimisaeg = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaLaadimisaeg';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -6673,59 +6657,59 @@ export type GraphCms_Wp_PaLaadimisaeg = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paLaadimisaegId?: Maybe<Scalars['Int']>;
   /** Connection between the PaLaadimisaeg type and the PaLaadimisaeg type */
-  products?: Maybe<GraphCms_Wp_PaLaadimisaegToProductConnection>;
+  products?: Maybe<GraphCms_PaLaadimisaegToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaLaadimisaeg type and the PaLaadimisaeg type */
-  variations?: Maybe<GraphCms_Wp_PaLaadimisaegToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaLaadimisaegToProductVariationConnection>;
 };
 
 /** The paLaadimisaeg type */
-export type GraphCms_Wp_PaLaadimisaegProductsArgs = {
+export type GraphCms_PaLaadimisaegProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaLaadimisaegToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaLaadimisaegToProductConnectionWhereArgs>;
 };
 
 /** The paLaadimisaeg type */
-export type GraphCms_Wp_PaLaadimisaegVariationsArgs = {
+export type GraphCms_PaLaadimisaegVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaLaadimisaegToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaLaadimisaegToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaLaadimisaeg type and the PaLaadimisaeg type */
-export type GraphCms_Wp_PaLaadimisaegToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaLaadimisaegToProductConnection';
+export type GraphCms_PaLaadimisaegToProductConnection = {
+  __typename?: 'GraphCMS_PaLaadimisaegToProductConnection';
   /** Edges for the PaLaadimisaegToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaLaadimisaegToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaLaadimisaegToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaLaadimisaegToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaLaadimisaegToProductConnectionEdge';
+export type GraphCms_PaLaadimisaegToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaLaadimisaegToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaLaadimisaegToProductConnection connection */
-export type GraphCms_Wp_PaLaadimisaegToProductConnectionWhereArgs = {
+export type GraphCms_PaLaadimisaegToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -6743,7 +6727,7 @@ export type GraphCms_Wp_PaLaadimisaegToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -6757,7 +6741,7 @@ export type GraphCms_Wp_PaLaadimisaegToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -6775,7 +6759,7 @@ export type GraphCms_Wp_PaLaadimisaegToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -6789,41 +6773,41 @@ export type GraphCms_Wp_PaLaadimisaegToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaLaadimisaeg type and the PaLaadimisaeg type */
-export type GraphCms_Wp_PaLaadimisaegToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaLaadimisaegToProductVariationConnection';
+export type GraphCms_PaLaadimisaegToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaLaadimisaegToProductVariationConnection';
   /** Edges for the PaLaadimisaegToProductVariationConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaLaadimisaegToProductVariationConnectionEdge>>
+    Array<Maybe<GraphCms_PaLaadimisaegToProductVariationConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaLaadimisaegToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaLaadimisaegToProductVariationConnectionEdge';
+export type GraphCms_PaLaadimisaegToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaLaadimisaegToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaLaadimisaegToProductVariationConnection connection */
-export type GraphCms_Wp_PaLaadimisaegToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaLaadimisaegToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -6841,7 +6825,7 @@ export type GraphCms_Wp_PaLaadimisaegToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -6855,7 +6839,7 @@ export type GraphCms_Wp_PaLaadimisaegToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -6873,7 +6857,7 @@ export type GraphCms_Wp_PaLaadimisaegToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -6887,20 +6871,20 @@ export type GraphCms_Wp_PaLaadimisaegToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paMaterjal type */
-export type GraphCms_Wp_PaMaterjal = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaMaterjal';
+export type GraphCms_PaMaterjal = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaMaterjal';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -6916,59 +6900,59 @@ export type GraphCms_Wp_PaMaterjal = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paMaterjalId?: Maybe<Scalars['Int']>;
   /** Connection between the PaMaterjal type and the PaMaterjal type */
-  products?: Maybe<GraphCms_Wp_PaMaterjalToProductConnection>;
+  products?: Maybe<GraphCms_PaMaterjalToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaMaterjal type and the PaMaterjal type */
-  variations?: Maybe<GraphCms_Wp_PaMaterjalToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaMaterjalToProductVariationConnection>;
 };
 
 /** The paMaterjal type */
-export type GraphCms_Wp_PaMaterjalProductsArgs = {
+export type GraphCms_PaMaterjalProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaMaterjalToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaMaterjalToProductConnectionWhereArgs>;
 };
 
 /** The paMaterjal type */
-export type GraphCms_Wp_PaMaterjalVariationsArgs = {
+export type GraphCms_PaMaterjalVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaMaterjalToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaMaterjalToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaMaterjal type and the PaMaterjal type */
-export type GraphCms_Wp_PaMaterjalToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaMaterjalToProductConnection';
+export type GraphCms_PaMaterjalToProductConnection = {
+  __typename?: 'GraphCMS_PaMaterjalToProductConnection';
   /** Edges for the PaMaterjalToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaMaterjalToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaMaterjalToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaMaterjalToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaMaterjalToProductConnectionEdge';
+export type GraphCms_PaMaterjalToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaMaterjalToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaMaterjalToProductConnection connection */
-export type GraphCms_Wp_PaMaterjalToProductConnectionWhereArgs = {
+export type GraphCms_PaMaterjalToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -6986,7 +6970,7 @@ export type GraphCms_Wp_PaMaterjalToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -7000,7 +6984,7 @@ export type GraphCms_Wp_PaMaterjalToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -7018,7 +7002,7 @@ export type GraphCms_Wp_PaMaterjalToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -7032,41 +7016,41 @@ export type GraphCms_Wp_PaMaterjalToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaMaterjal type and the PaMaterjal type */
-export type GraphCms_Wp_PaMaterjalToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaMaterjalToProductVariationConnection';
+export type GraphCms_PaMaterjalToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaMaterjalToProductVariationConnection';
   /** Edges for the PaMaterjalToProductVariationConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaMaterjalToProductVariationConnectionEdge>>
+    Array<Maybe<GraphCms_PaMaterjalToProductVariationConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaMaterjalToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaMaterjalToProductVariationConnectionEdge';
+export type GraphCms_PaMaterjalToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaMaterjalToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaMaterjalToProductVariationConnection connection */
-export type GraphCms_Wp_PaMaterjalToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaMaterjalToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -7084,7 +7068,7 @@ export type GraphCms_Wp_PaMaterjalToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -7098,7 +7082,7 @@ export type GraphCms_Wp_PaMaterjalToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -7116,7 +7100,7 @@ export type GraphCms_Wp_PaMaterjalToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -7130,20 +7114,20 @@ export type GraphCms_Wp_PaMaterjalToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paMuratasa type */
-export type GraphCms_Wp_PaMuratasa = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaMuratasa';
+export type GraphCms_PaMuratasa = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaMuratasa';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -7159,59 +7143,59 @@ export type GraphCms_Wp_PaMuratasa = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paMuratasaId?: Maybe<Scalars['Int']>;
   /** Connection between the PaMuratasa type and the PaMuratasa type */
-  products?: Maybe<GraphCms_Wp_PaMuratasaToProductConnection>;
+  products?: Maybe<GraphCms_PaMuratasaToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaMuratasa type and the PaMuratasa type */
-  variations?: Maybe<GraphCms_Wp_PaMuratasaToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaMuratasaToProductVariationConnection>;
 };
 
 /** The paMuratasa type */
-export type GraphCms_Wp_PaMuratasaProductsArgs = {
+export type GraphCms_PaMuratasaProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaMuratasaToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaMuratasaToProductConnectionWhereArgs>;
 };
 
 /** The paMuratasa type */
-export type GraphCms_Wp_PaMuratasaVariationsArgs = {
+export type GraphCms_PaMuratasaVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaMuratasaToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaMuratasaToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaMuratasa type and the PaMuratasa type */
-export type GraphCms_Wp_PaMuratasaToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaMuratasaToProductConnection';
+export type GraphCms_PaMuratasaToProductConnection = {
+  __typename?: 'GraphCMS_PaMuratasaToProductConnection';
   /** Edges for the PaMuratasaToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaMuratasaToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaMuratasaToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaMuratasaToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaMuratasaToProductConnectionEdge';
+export type GraphCms_PaMuratasaToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaMuratasaToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaMuratasaToProductConnection connection */
-export type GraphCms_Wp_PaMuratasaToProductConnectionWhereArgs = {
+export type GraphCms_PaMuratasaToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -7229,7 +7213,7 @@ export type GraphCms_Wp_PaMuratasaToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -7243,7 +7227,7 @@ export type GraphCms_Wp_PaMuratasaToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -7261,7 +7245,7 @@ export type GraphCms_Wp_PaMuratasaToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -7275,41 +7259,41 @@ export type GraphCms_Wp_PaMuratasaToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaMuratasa type and the PaMuratasa type */
-export type GraphCms_Wp_PaMuratasaToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaMuratasaToProductVariationConnection';
+export type GraphCms_PaMuratasaToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaMuratasaToProductVariationConnection';
   /** Edges for the PaMuratasaToProductVariationConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaMuratasaToProductVariationConnectionEdge>>
+    Array<Maybe<GraphCms_PaMuratasaToProductVariationConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaMuratasaToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaMuratasaToProductVariationConnectionEdge';
+export type GraphCms_PaMuratasaToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaMuratasaToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaMuratasaToProductVariationConnection connection */
-export type GraphCms_Wp_PaMuratasaToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaMuratasaToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -7327,7 +7311,7 @@ export type GraphCms_Wp_PaMuratasaToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -7341,7 +7325,7 @@ export type GraphCms_Wp_PaMuratasaToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -7359,7 +7343,7 @@ export type GraphCms_Wp_PaMuratasaToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -7373,20 +7357,20 @@ export type GraphCms_Wp_PaMuratasaToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paOhutus type */
-export type GraphCms_Wp_PaOhutus = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaOhutus';
+export type GraphCms_PaOhutus = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaOhutus';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -7402,59 +7386,59 @@ export type GraphCms_Wp_PaOhutus = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paOhutusId?: Maybe<Scalars['Int']>;
   /** Connection between the PaOhutus type and the PaOhutus type */
-  products?: Maybe<GraphCms_Wp_PaOhutusToProductConnection>;
+  products?: Maybe<GraphCms_PaOhutusToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaOhutus type and the PaOhutus type */
-  variations?: Maybe<GraphCms_Wp_PaOhutusToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaOhutusToProductVariationConnection>;
 };
 
 /** The paOhutus type */
-export type GraphCms_Wp_PaOhutusProductsArgs = {
+export type GraphCms_PaOhutusProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaOhutusToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaOhutusToProductConnectionWhereArgs>;
 };
 
 /** The paOhutus type */
-export type GraphCms_Wp_PaOhutusVariationsArgs = {
+export type GraphCms_PaOhutusVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaOhutusToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaOhutusToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaOhutus type and the PaOhutus type */
-export type GraphCms_Wp_PaOhutusToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaOhutusToProductConnection';
+export type GraphCms_PaOhutusToProductConnection = {
+  __typename?: 'GraphCMS_PaOhutusToProductConnection';
   /** Edges for the PaOhutusToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaOhutusToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaOhutusToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaOhutusToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaOhutusToProductConnectionEdge';
+export type GraphCms_PaOhutusToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaOhutusToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaOhutusToProductConnection connection */
-export type GraphCms_Wp_PaOhutusToProductConnectionWhereArgs = {
+export type GraphCms_PaOhutusToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -7472,7 +7456,7 @@ export type GraphCms_Wp_PaOhutusToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -7486,7 +7470,7 @@ export type GraphCms_Wp_PaOhutusToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -7504,7 +7488,7 @@ export type GraphCms_Wp_PaOhutusToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -7518,41 +7502,41 @@ export type GraphCms_Wp_PaOhutusToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaOhutus type and the PaOhutus type */
-export type GraphCms_Wp_PaOhutusToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaOhutusToProductVariationConnection';
+export type GraphCms_PaOhutusToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaOhutusToProductVariationConnection';
   /** Edges for the PaOhutusToProductVariationConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaOhutusToProductVariationConnectionEdge>>
+    Array<Maybe<GraphCms_PaOhutusToProductVariationConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaOhutusToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaOhutusToProductVariationConnectionEdge';
+export type GraphCms_PaOhutusToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaOhutusToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaOhutusToProductVariationConnection connection */
-export type GraphCms_Wp_PaOhutusToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaOhutusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -7570,7 +7554,7 @@ export type GraphCms_Wp_PaOhutusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -7584,7 +7568,7 @@ export type GraphCms_Wp_PaOhutusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -7602,7 +7586,7 @@ export type GraphCms_Wp_PaOhutusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -7616,20 +7600,20 @@ export type GraphCms_Wp_PaOhutusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paPatareid type */
-export type GraphCms_Wp_PaPatareid = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaPatareid';
+export type GraphCms_PaPatareid = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaPatareid';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -7645,59 +7629,59 @@ export type GraphCms_Wp_PaPatareid = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paPatareidId?: Maybe<Scalars['Int']>;
   /** Connection between the PaPatareid type and the PaPatareid type */
-  products?: Maybe<GraphCms_Wp_PaPatareidToProductConnection>;
+  products?: Maybe<GraphCms_PaPatareidToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaPatareid type and the PaPatareid type */
-  variations?: Maybe<GraphCms_Wp_PaPatareidToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaPatareidToProductVariationConnection>;
 };
 
 /** The paPatareid type */
-export type GraphCms_Wp_PaPatareidProductsArgs = {
+export type GraphCms_PaPatareidProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaPatareidToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaPatareidToProductConnectionWhereArgs>;
 };
 
 /** The paPatareid type */
-export type GraphCms_Wp_PaPatareidVariationsArgs = {
+export type GraphCms_PaPatareidVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaPatareidToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaPatareidToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaPatareid type and the PaPatareid type */
-export type GraphCms_Wp_PaPatareidToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaPatareidToProductConnection';
+export type GraphCms_PaPatareidToProductConnection = {
+  __typename?: 'GraphCMS_PaPatareidToProductConnection';
   /** Edges for the PaPatareidToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaPatareidToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaPatareidToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaPatareidToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaPatareidToProductConnectionEdge';
+export type GraphCms_PaPatareidToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaPatareidToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaPatareidToProductConnection connection */
-export type GraphCms_Wp_PaPatareidToProductConnectionWhereArgs = {
+export type GraphCms_PaPatareidToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -7715,7 +7699,7 @@ export type GraphCms_Wp_PaPatareidToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -7729,7 +7713,7 @@ export type GraphCms_Wp_PaPatareidToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -7747,7 +7731,7 @@ export type GraphCms_Wp_PaPatareidToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -7761,41 +7745,41 @@ export type GraphCms_Wp_PaPatareidToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaPatareid type and the PaPatareid type */
-export type GraphCms_Wp_PaPatareidToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaPatareidToProductVariationConnection';
+export type GraphCms_PaPatareidToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaPatareidToProductVariationConnection';
   /** Edges for the PaPatareidToProductVariationConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaPatareidToProductVariationConnectionEdge>>
+    Array<Maybe<GraphCms_PaPatareidToProductVariationConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaPatareidToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaPatareidToProductVariationConnectionEdge';
+export type GraphCms_PaPatareidToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaPatareidToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaPatareidToProductVariationConnection connection */
-export type GraphCms_Wp_PaPatareidToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaPatareidToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -7813,7 +7797,7 @@ export type GraphCms_Wp_PaPatareidToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -7827,7 +7811,7 @@ export type GraphCms_Wp_PaPatareidToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -7845,7 +7829,7 @@ export type GraphCms_Wp_PaPatareidToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -7859,20 +7843,20 @@ export type GraphCms_Wp_PaPatareidToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paSuurus type */
-export type GraphCms_Wp_PaSuurus = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaSuurus';
+export type GraphCms_PaSuurus = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaSuurus';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -7888,59 +7872,59 @@ export type GraphCms_Wp_PaSuurus = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paSuurusId?: Maybe<Scalars['Int']>;
   /** Connection between the PaSuurus type and the PaSuurus type */
-  products?: Maybe<GraphCms_Wp_PaSuurusToProductConnection>;
+  products?: Maybe<GraphCms_PaSuurusToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaSuurus type and the PaSuurus type */
-  variations?: Maybe<GraphCms_Wp_PaSuurusToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaSuurusToProductVariationConnection>;
 };
 
 /** The paSuurus type */
-export type GraphCms_Wp_PaSuurusProductsArgs = {
+export type GraphCms_PaSuurusProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaSuurusToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaSuurusToProductConnectionWhereArgs>;
 };
 
 /** The paSuurus type */
-export type GraphCms_Wp_PaSuurusVariationsArgs = {
+export type GraphCms_PaSuurusVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaSuurusToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaSuurusToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaSuurus type and the PaSuurus type */
-export type GraphCms_Wp_PaSuurusToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaSuurusToProductConnection';
+export type GraphCms_PaSuurusToProductConnection = {
+  __typename?: 'GraphCMS_PaSuurusToProductConnection';
   /** Edges for the PaSuurusToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaSuurusToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaSuurusToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaSuurusToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaSuurusToProductConnectionEdge';
+export type GraphCms_PaSuurusToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaSuurusToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaSuurusToProductConnection connection */
-export type GraphCms_Wp_PaSuurusToProductConnectionWhereArgs = {
+export type GraphCms_PaSuurusToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -7958,7 +7942,7 @@ export type GraphCms_Wp_PaSuurusToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -7972,7 +7956,7 @@ export type GraphCms_Wp_PaSuurusToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -7990,7 +7974,7 @@ export type GraphCms_Wp_PaSuurusToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -8004,41 +7988,41 @@ export type GraphCms_Wp_PaSuurusToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaSuurus type and the PaSuurus type */
-export type GraphCms_Wp_PaSuurusToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaSuurusToProductVariationConnection';
+export type GraphCms_PaSuurusToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaSuurusToProductVariationConnection';
   /** Edges for the PaSuurusToProductVariationConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaSuurusToProductVariationConnectionEdge>>
+    Array<Maybe<GraphCms_PaSuurusToProductVariationConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaSuurusToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaSuurusToProductVariationConnectionEdge';
+export type GraphCms_PaSuurusToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaSuurusToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaSuurusToProductVariationConnection connection */
-export type GraphCms_Wp_PaSuurusToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaSuurusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -8056,7 +8040,7 @@ export type GraphCms_Wp_PaSuurusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -8070,7 +8054,7 @@ export type GraphCms_Wp_PaSuurusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -8088,7 +8072,7 @@ export type GraphCms_Wp_PaSuurusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -8102,20 +8086,20 @@ export type GraphCms_Wp_PaSuurusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paVariant type */
-export type GraphCms_Wp_PaVariant = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaVariant';
+export type GraphCms_PaVariant = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaVariant';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -8131,59 +8115,59 @@ export type GraphCms_Wp_PaVariant = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paVariantId?: Maybe<Scalars['Int']>;
   /** Connection between the PaVariant type and the PaVariant type */
-  products?: Maybe<GraphCms_Wp_PaVariantToProductConnection>;
+  products?: Maybe<GraphCms_PaVariantToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaVariant type and the PaVariant type */
-  variations?: Maybe<GraphCms_Wp_PaVariantToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaVariantToProductVariationConnection>;
 };
 
 /** The paVariant type */
-export type GraphCms_Wp_PaVariantProductsArgs = {
+export type GraphCms_PaVariantProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaVariantToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaVariantToProductConnectionWhereArgs>;
 };
 
 /** The paVariant type */
-export type GraphCms_Wp_PaVariantVariationsArgs = {
+export type GraphCms_PaVariantVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaVariantToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaVariantToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaVariant type and the PaVariant type */
-export type GraphCms_Wp_PaVariantToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaVariantToProductConnection';
+export type GraphCms_PaVariantToProductConnection = {
+  __typename?: 'GraphCMS_PaVariantToProductConnection';
   /** Edges for the PaVariantToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaVariantToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaVariantToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaVariantToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaVariantToProductConnectionEdge';
+export type GraphCms_PaVariantToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaVariantToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaVariantToProductConnection connection */
-export type GraphCms_Wp_PaVariantToProductConnectionWhereArgs = {
+export type GraphCms_PaVariantToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -8201,7 +8185,7 @@ export type GraphCms_Wp_PaVariantToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -8215,7 +8199,7 @@ export type GraphCms_Wp_PaVariantToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -8233,7 +8217,7 @@ export type GraphCms_Wp_PaVariantToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -8247,41 +8231,41 @@ export type GraphCms_Wp_PaVariantToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaVariant type and the PaVariant type */
-export type GraphCms_Wp_PaVariantToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaVariantToProductVariationConnection';
+export type GraphCms_PaVariantToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaVariantToProductVariationConnection';
   /** Edges for the PaVariantToProductVariationConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaVariantToProductVariationConnectionEdge>>
+    Array<Maybe<GraphCms_PaVariantToProductVariationConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaVariantToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaVariantToProductVariationConnectionEdge';
+export type GraphCms_PaVariantToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaVariantToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaVariantToProductVariationConnection connection */
-export type GraphCms_Wp_PaVariantToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaVariantToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -8299,7 +8283,7 @@ export type GraphCms_Wp_PaVariantToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -8313,7 +8297,7 @@ export type GraphCms_Wp_PaVariantToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -8331,7 +8315,7 @@ export type GraphCms_Wp_PaVariantToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -8345,20 +8329,20 @@ export type GraphCms_Wp_PaVariantToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paVarv type */
-export type GraphCms_Wp_PaVarv = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaVarv';
+export type GraphCms_PaVarv = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaVarv';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -8374,59 +8358,59 @@ export type GraphCms_Wp_PaVarv = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paVarvId?: Maybe<Scalars['Int']>;
   /** Connection between the PaVarv type and the PaVarv type */
-  products?: Maybe<GraphCms_Wp_PaVarvToProductConnection>;
+  products?: Maybe<GraphCms_PaVarvToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaVarv type and the PaVarv type */
-  variations?: Maybe<GraphCms_Wp_PaVarvToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaVarvToProductVariationConnection>;
 };
 
 /** The paVarv type */
-export type GraphCms_Wp_PaVarvProductsArgs = {
+export type GraphCms_PaVarvProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaVarvToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaVarvToProductConnectionWhereArgs>;
 };
 
 /** The paVarv type */
-export type GraphCms_Wp_PaVarvVariationsArgs = {
+export type GraphCms_PaVarvVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaVarvToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaVarvToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaVarv type and the PaVarv type */
-export type GraphCms_Wp_PaVarvToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaVarvToProductConnection';
+export type GraphCms_PaVarvToProductConnection = {
+  __typename?: 'GraphCMS_PaVarvToProductConnection';
   /** Edges for the PaVarvToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaVarvToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaVarvToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaVarvToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaVarvToProductConnectionEdge';
+export type GraphCms_PaVarvToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaVarvToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaVarvToProductConnection connection */
-export type GraphCms_Wp_PaVarvToProductConnectionWhereArgs = {
+export type GraphCms_PaVarvToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -8444,7 +8428,7 @@ export type GraphCms_Wp_PaVarvToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -8458,7 +8442,7 @@ export type GraphCms_Wp_PaVarvToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -8476,7 +8460,7 @@ export type GraphCms_Wp_PaVarvToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -8490,41 +8474,39 @@ export type GraphCms_Wp_PaVarvToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaVarv type and the PaVarv type */
-export type GraphCms_Wp_PaVarvToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaVarvToProductVariationConnection';
+export type GraphCms_PaVarvToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaVarvToProductVariationConnection';
   /** Edges for the PaVarvToProductVariationConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaVarvToProductVariationConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_PaVarvToProductVariationConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaVarvToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaVarvToProductVariationConnectionEdge';
+export type GraphCms_PaVarvToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaVarvToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaVarvToProductVariationConnection connection */
-export type GraphCms_Wp_PaVarvToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaVarvToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -8542,7 +8524,7 @@ export type GraphCms_Wp_PaVarvToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -8556,7 +8538,7 @@ export type GraphCms_Wp_PaVarvToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -8574,7 +8556,7 @@ export type GraphCms_Wp_PaVarvToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -8588,20 +8570,20 @@ export type GraphCms_Wp_PaVarvToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** The paVeekindlus type */
-export type GraphCms_Wp_PaVeekindlus = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PaVeekindlus';
+export type GraphCms_PaVeekindlus = GraphCms_Node & {
+  __typename?: 'GraphCMS_PaVeekindlus';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -8617,59 +8599,59 @@ export type GraphCms_Wp_PaVeekindlus = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   paVeekindlusId?: Maybe<Scalars['Int']>;
   /** Connection between the PaVeekindlus type and the PaVeekindlus type */
-  products?: Maybe<GraphCms_Wp_PaVeekindlusToProductConnection>;
+  products?: Maybe<GraphCms_PaVeekindlusToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
   termTaxonomyId?: Maybe<Scalars['Int']>;
   /** Connection between the PaVeekindlus type and the PaVeekindlus type */
-  variations?: Maybe<GraphCms_Wp_PaVeekindlusToProductVariationConnection>;
+  variations?: Maybe<GraphCms_PaVeekindlusToProductVariationConnection>;
 };
 
 /** The paVeekindlus type */
-export type GraphCms_Wp_PaVeekindlusProductsArgs = {
+export type GraphCms_PaVeekindlusProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaVeekindlusToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaVeekindlusToProductConnectionWhereArgs>;
 };
 
 /** The paVeekindlus type */
-export type GraphCms_Wp_PaVeekindlusVariationsArgs = {
+export type GraphCms_PaVeekindlusVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PaVeekindlusToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PaVeekindlusToProductVariationConnectionWhereArgs>;
 };
 
 /** Connection between the PaVeekindlus type and the PaVeekindlus type */
-export type GraphCms_Wp_PaVeekindlusToProductConnection = {
-  __typename?: 'GraphCMS_WP_PaVeekindlusToProductConnection';
+export type GraphCms_PaVeekindlusToProductConnection = {
+  __typename?: 'GraphCMS_PaVeekindlusToProductConnection';
   /** Edges for the PaVeekindlusToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PaVeekindlusToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PaVeekindlusToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaVeekindlusToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaVeekindlusToProductConnectionEdge';
+export type GraphCms_PaVeekindlusToProductConnectionEdge = {
+  __typename?: 'GraphCMS_PaVeekindlusToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the PaVeekindlusToProductConnection connection */
-export type GraphCms_Wp_PaVeekindlusToProductConnectionWhereArgs = {
+export type GraphCms_PaVeekindlusToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -8687,7 +8669,7 @@ export type GraphCms_Wp_PaVeekindlusToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -8701,7 +8683,7 @@ export type GraphCms_Wp_PaVeekindlusToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -8719,7 +8701,7 @@ export type GraphCms_Wp_PaVeekindlusToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -8733,41 +8715,41 @@ export type GraphCms_Wp_PaVeekindlusToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the PaVeekindlus type and the PaVeekindlus type */
-export type GraphCms_Wp_PaVeekindlusToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_PaVeekindlusToProductVariationConnection';
+export type GraphCms_PaVeekindlusToProductVariationConnection = {
+  __typename?: 'GraphCMS_PaVeekindlusToProductVariationConnection';
   /** Edges for the PaVeekindlusToProductVariationConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_PaVeekindlusToProductVariationConnectionEdge>>
+    Array<Maybe<GraphCms_PaVeekindlusToProductVariationConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PaVeekindlusToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PaVeekindlusToProductVariationConnectionEdge';
+export type GraphCms_PaVeekindlusToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_PaVeekindlusToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the PaVeekindlusToProductVariationConnection connection */
-export type GraphCms_Wp_PaVeekindlusToProductVariationConnectionWhereArgs = {
+export type GraphCms_PaVeekindlusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -8785,7 +8767,7 @@ export type GraphCms_Wp_PaVeekindlusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -8799,7 +8781,7 @@ export type GraphCms_Wp_PaVeekindlusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -8817,7 +8799,7 @@ export type GraphCms_Wp_PaVeekindlusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -8831,20 +8813,20 @@ export type GraphCms_Wp_PaVeekindlusToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** An plugin object */
-export type GraphCms_Wp_Plugin = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Plugin';
+export type GraphCms_Plugin = GraphCms_Node & {
+  __typename?: 'GraphCMS_Plugin';
   /** Name of the plugin author(s), may also be a company name. */
   author?: Maybe<Scalars['String']>;
   /** URI for the related author(s)/company website. */
@@ -8863,20 +8845,20 @@ export type GraphCms_Wp_Plugin = GraphCms_Wp_Node & {
 };
 
 /** The post type */
-export type GraphCms_Wp_Post = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Post';
+export type GraphCms_Post = GraphCms_Node & {
+  __typename?: 'GraphCMS_Post';
   /** Ancestors of the object */
-  ancestors?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectUnion>>>;
+  ancestors?: Maybe<Array<Maybe<GraphCms_PostObjectUnion>>>;
   /** The author field will return a queryable User type matching the post&#039;s author. */
-  author?: Maybe<GraphCms_Wp_User>;
+  author?: Maybe<GraphCms_User>;
   /** Connection between the post type and the post type */
-  categories?: Maybe<GraphCms_Wp_PostToCategoryConnection>;
+  categories?: Maybe<GraphCms_PostToCategoryConnection>;
   /** The number of comments. Even though WPGraphQL denotes this field as an
    * integer, in WordPress this field should be saved as a numeric string for compatibility.
    */
   commentCount?: Maybe<Scalars['Int']>;
   /** Connection between the post type and the post type */
-  comments?: Maybe<GraphCms_Wp_PostToCommentConnection>;
+  comments?: Maybe<GraphCms_PostToCommentConnection>;
   /** Whether the comments are open or closed for this particular post. */
   commentStatus?: Maybe<Scalars['String']>;
   /** The content of the post. */
@@ -8888,18 +8870,18 @@ export type GraphCms_Wp_Post = GraphCms_Wp_Node & {
   /** The desired slug of the post */
   desiredSlug?: Maybe<Scalars['String']>;
   /** The user that most recently edited the object */
-  editLast?: Maybe<GraphCms_Wp_User>;
+  editLast?: Maybe<GraphCms_User>;
   /** If a user has edited the object within the past 15 seconds, this will return
    * the user and the time they last edited. Null if the edit lock doesn&#039;t
    * exist or is greater than 15 seconds
    */
-  editLock?: Maybe<GraphCms_Wp_EditLock>;
+  editLock?: Maybe<GraphCms_EditLock>;
   /** The RSS enclosure for the object */
   enclosure?: Maybe<Scalars['String']>;
   /** The excerpt of the post. */
   excerpt?: Maybe<Scalars['String']>;
   /** The featured image for the object */
-  featuredImage?: Maybe<GraphCms_Wp_MediaItem>;
+  featuredImage?: Maybe<GraphCms_MediaItem>;
   /** The global unique identifier for this post. This currently matches the value
    * stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot;
    * database table.
@@ -8924,7 +8906,7 @@ export type GraphCms_Wp_Post = GraphCms_Wp_Node & {
    */
   modifiedGmt?: Maybe<Scalars['String']>;
   /** The parent of the object. The parent object can be of various types */
-  parent?: Maybe<GraphCms_Wp_PostObjectUnion>;
+  parent?: Maybe<GraphCms_PostObjectUnion>;
   /** URLs that have been pinged. */
   pinged?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Whether the pings are open or closed for this particular post. */
@@ -8932,7 +8914,7 @@ export type GraphCms_Wp_Post = GraphCms_Wp_Node & {
   /** The id field matches the WP_Post-&gt;ID field. */
   postId: Scalars['Int'];
   /** Connection between the post type and the post type */
-  revisions?: Maybe<GraphCms_Wp_PostToRevisionConnection>;
+  revisions?: Maybe<GraphCms_PostToRevisionConnection>;
   /** The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name
    * field and the post_name column in the database for the
    * &quot;post_objects&quot; table.
@@ -8941,11 +8923,11 @@ export type GraphCms_Wp_Post = GraphCms_Wp_Node & {
   /** The current status of the object */
   status?: Maybe<Scalars['String']>;
   /** Connection between the post type and the post type */
-  tags?: Maybe<GraphCms_Wp_PostToTagConnection>;
+  tags?: Maybe<GraphCms_PostToTagConnection>;
   /** Terms connected to the post */
   termNames?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Terms connected to the post */
-  terms?: Maybe<Array<Maybe<GraphCms_Wp_TermObjectUnion>>>;
+  terms?: Maybe<Array<Maybe<GraphCms_TermObjectUnion>>>;
   /** Terms connected to the post */
   termSlugs?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
@@ -8957,83 +8939,83 @@ export type GraphCms_Wp_Post = GraphCms_Wp_Node & {
 };
 
 /** The post type */
-export type GraphCms_Wp_PostAncestorsArgs = {
-  types?: Maybe<Array<Maybe<GraphCms_Wp_PostTypeEnum>>>;
+export type GraphCms_PostAncestorsArgs = {
+  types?: Maybe<Array<Maybe<GraphCms_PostTypeEnum>>>;
 };
 
 /** The post type */
-export type GraphCms_Wp_PostCategoriesArgs = {
+export type GraphCms_PostCategoriesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PostToCategoryConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PostToCategoryConnectionWhereArgs>;
 };
 
 /** The post type */
-export type GraphCms_Wp_PostCommentsArgs = {
+export type GraphCms_PostCommentsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PostToCommentConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PostToCommentConnectionWhereArgs>;
 };
 
 /** The post type */
-export type GraphCms_Wp_PostContentArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_PostContentArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** The post type */
-export type GraphCms_Wp_PostExcerptArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_PostExcerptArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** The post type */
-export type GraphCms_Wp_PostRevisionsArgs = {
+export type GraphCms_PostRevisionsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PostToRevisionConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PostToRevisionConnectionWhereArgs>;
 };
 
 /** The post type */
-export type GraphCms_Wp_PostTagsArgs = {
+export type GraphCms_PostTagsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_PostToTagConnectionWhereArgs>;
+  where?: Maybe<GraphCms_PostToTagConnectionWhereArgs>;
 };
 
 /** The post type */
-export type GraphCms_Wp_PostTermNamesArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_PostTermNamesArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** The post type */
-export type GraphCms_Wp_PostTermsArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_PostTermsArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** The post type */
-export type GraphCms_Wp_PostTermSlugsArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_PostTermSlugsArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** The post type */
-export type GraphCms_Wp_PostTitleArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_PostTitleArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** Set relationships between the post to categories */
-export type GraphCms_Wp_PostCategoriesInput = {
+export type GraphCms_PostCategoriesInput = {
   /** If true, this will append the category to existing related categories. If
    * false, this will replace existing relationships. Default true.
    */
   append?: Maybe<Scalars['Boolean']>;
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PostCategoriesNodeInput>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PostCategoriesNodeInput>>>;
 };
 
 /** List of categories to connect the post to. If an ID is set, it will be used to
@@ -9042,7 +9024,7 @@ export type GraphCms_Wp_PostCategoriesInput = {
  * post mutations, a term will be created using the Name if it exists in the input,
  * then fallback to the slug if it exists.
  */
-export type GraphCms_Wp_PostCategoriesNodeInput = {
+export type GraphCms_PostCategoriesNodeInput = {
   /** The description of the category. This field is used to set a description of
    * the category if a new one is created during the mutation.
    */
@@ -9066,7 +9048,7 @@ export type GraphCms_Wp_PostCategoriesNodeInput = {
 };
 
 /** The format of post field data. */
-export enum GraphCms_Wp_PostObjectFieldFormatEnum {
+export enum GraphCms_PostObjectFieldFormatEnum {
   /** Provide the field value directly from database */
   Raw = 'RAW',
   /** Apply the default WordPress rendering */
@@ -9074,13 +9056,13 @@ export enum GraphCms_Wp_PostObjectFieldFormatEnum {
 }
 
 /** The column to use when filtering by date */
-export enum GraphCms_Wp_PostObjectsConnectionDateColumnEnum {
+export enum GraphCms_PostObjectsConnectionDateColumnEnum {
   Date = 'DATE',
   Modified = 'MODIFIED',
 }
 
 /** Field to order the connection by */
-export enum GraphCms_Wp_PostObjectsConnectionOrderbyEnum {
+export enum GraphCms_PostObjectsConnectionOrderbyEnum {
   /** Order by author */
   Author = 'AUTHOR',
   /** Order by publish date */
@@ -9102,19 +9084,19 @@ export enum GraphCms_Wp_PostObjectsConnectionOrderbyEnum {
 }
 
 /** Options for ordering the connection */
-export type GraphCms_Wp_PostObjectsConnectionOrderbyInput = {
-  field: GraphCms_Wp_PostObjectsConnectionOrderbyEnum;
-  order?: Maybe<GraphCms_Wp_OrderEnum>;
+export type GraphCms_PostObjectsConnectionOrderbyInput = {
+  field: GraphCms_PostObjectsConnectionOrderbyEnum;
+  order?: Maybe<GraphCms_OrderEnum>;
 };
 
-export type GraphCms_Wp_PostObjectUnion =
-  | GraphCms_Wp_Post
-  | GraphCms_Wp_Page
-  | GraphCms_Wp_MediaItem
-  | GraphCms_Wp_Revision;
+export type GraphCms_PostObjectUnion =
+  | GraphCms_Post
+  | GraphCms_Page
+  | GraphCms_MediaItem
+  | GraphCms_Revision;
 
 /** The status of the object. */
-export enum GraphCms_Wp_PostStatusEnum {
+export enum GraphCms_PostStatusEnum {
   /** Objects with the auto-draft status */
   AutoDraft = 'AUTO_DRAFT',
   /** Objects with the draft status */
@@ -9160,12 +9142,12 @@ export enum GraphCms_Wp_PostStatusEnum {
 }
 
 /** Set relationships between the post to tags */
-export type GraphCms_Wp_PostTagsInput = {
+export type GraphCms_PostTagsInput = {
   /** If true, this will append the tag to existing related tags. If false, this
    * will replace existing relationships. Default true.
    */
   append?: Maybe<Scalars['Boolean']>;
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PostTagsNodeInput>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PostTagsNodeInput>>>;
 };
 
 /** List of tags to connect the post to. If an ID is set, it will be used to create
@@ -9174,7 +9156,7 @@ export type GraphCms_Wp_PostTagsInput = {
  * mutations, a term will be created using the Name if it exists in the input, then
  * fallback to the slug if it exists.
  */
-export type GraphCms_Wp_PostTagsNodeInput = {
+export type GraphCms_PostTagsNodeInput = {
   /** The description of the tag. This field is used to set a description of the tag
    * if a new one is created during the mutation.
    */
@@ -9198,29 +9180,29 @@ export type GraphCms_Wp_PostTagsNodeInput = {
 };
 
 /** Connection between the post type and the post type */
-export type GraphCms_Wp_PostToCategoryConnection = {
-  __typename?: 'GraphCMS_WP_PostToCategoryConnection';
+export type GraphCms_PostToCategoryConnection = {
+  __typename?: 'GraphCMS_PostToCategoryConnection';
   /** Edges for the PostToCategoryConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PostToCategoryConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PostToCategoryConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Category>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Category>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PostToCategoryConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PostToCategoryConnectionEdge';
+export type GraphCms_PostToCategoryConnectionEdge = {
+  __typename?: 'GraphCMS_PostToCategoryConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Category>;
+  node?: Maybe<GraphCms_Category>;
 };
 
 /** Arguments for filtering the PostToCategoryConnection connection */
-export type GraphCms_Wp_PostToCategoryConnectionWhereArgs = {
+export type GraphCms_PostToCategoryConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -9250,7 +9232,7 @@ export type GraphCms_Wp_PostToCategoryConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -9275,27 +9257,27 @@ export type GraphCms_Wp_PostToCategoryConnectionWhereArgs = {
 };
 
 /** Connection between the post type and the post type */
-export type GraphCms_Wp_PostToCommentConnection = {
-  __typename?: 'GraphCMS_WP_PostToCommentConnection';
+export type GraphCms_PostToCommentConnection = {
+  __typename?: 'GraphCMS_PostToCommentConnection';
   /** Edges for the PostToCommentConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PostToCommentConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PostToCommentConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Comment>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Comment>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PostToCommentConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PostToCommentConnectionEdge';
+export type GraphCms_PostToCommentConnectionEdge = {
+  __typename?: 'GraphCMS_PostToCommentConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Comment>;
+  node?: Maybe<GraphCms_Comment>;
 };
 
 /** Arguments for filtering the PostToCommentConnection connection */
-export type GraphCms_Wp_PostToCommentConnectionWhereArgs = {
+export type GraphCms_PostToCommentConnectionWhereArgs = {
   /** Comment author email address. */
   authorEmail?: Maybe<Scalars['String']>;
   /** Array of author IDs to include comments for. */
@@ -9341,9 +9323,9 @@ export type GraphCms_Wp_PostToCommentConnectionWhereArgs = {
   /** Array of content object statuses to retrieve affiliated comments for.
    * 							Pass 'any' to match any value.
    */
-  contentStatus?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
+  contentStatus?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
+  contentType?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
   /** Array of IDs or email addresses of users whose unapproved comments will be
    * returned by the query regardless of $status. Default empty
    */
@@ -9351,9 +9333,9 @@ export type GraphCms_Wp_PostToCommentConnectionWhereArgs = {
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<Scalars['Int']>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<GraphCms_Wp_OrderEnum>;
+  order?: Maybe<GraphCms_OrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<GraphCms_Wp_CommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_CommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<Scalars['Int']>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -9371,29 +9353,29 @@ export type GraphCms_Wp_PostToCommentConnectionWhereArgs = {
 };
 
 /** Connection between the post type and the post type */
-export type GraphCms_Wp_PostToRevisionConnection = {
-  __typename?: 'GraphCMS_WP_PostToRevisionConnection';
+export type GraphCms_PostToRevisionConnection = {
+  __typename?: 'GraphCMS_PostToRevisionConnection';
   /** Edges for the PostToRevisionConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PostToRevisionConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PostToRevisionConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Revision>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Revision>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PostToRevisionConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PostToRevisionConnectionEdge';
+export type GraphCms_PostToRevisionConnectionEdge = {
+  __typename?: 'GraphCMS_PostToRevisionConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Revision>;
+  node?: Maybe<GraphCms_Revision>;
 };
 
 /** Arguments for filtering the PostToRevisionConnection connection */
-export type GraphCms_Wp_PostToRevisionConnectionWhereArgs = {
+export type GraphCms_PostToRevisionConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -9419,7 +9401,7 @@ export type GraphCms_Wp_PostToRevisionConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -9429,7 +9411,7 @@ export type GraphCms_Wp_PostToRevisionConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -9439,7 +9421,7 @@ export type GraphCms_Wp_PostToRevisionConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -9452,8 +9434,8 @@ export type GraphCms_Wp_PostToRevisionConnectionWhereArgs = {
   password?: Maybe<Scalars['String']>;
   /** Show Posts based on a keyword search */
   search?: Maybe<Scalars['String']>;
-  stati?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  stati?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<Scalars['String']>;
   /** Use Tag ID */
@@ -9479,29 +9461,29 @@ export type GraphCms_Wp_PostToRevisionConnectionWhereArgs = {
 };
 
 /** Connection between the post type and the post type */
-export type GraphCms_Wp_PostToTagConnection = {
-  __typename?: 'GraphCMS_WP_PostToTagConnection';
+export type GraphCms_PostToTagConnection = {
+  __typename?: 'GraphCMS_PostToTagConnection';
   /** Edges for the PostToTagConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_PostToTagConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_PostToTagConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Tag>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Tag>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_PostToTagConnectionEdge = {
-  __typename?: 'GraphCMS_WP_PostToTagConnectionEdge';
+export type GraphCms_PostToTagConnectionEdge = {
+  __typename?: 'GraphCMS_PostToTagConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Tag>;
+  node?: Maybe<GraphCms_Tag>;
 };
 
 /** Arguments for filtering the PostToTagConnection connection */
-export type GraphCms_Wp_PostToTagConnectionWhereArgs = {
+export type GraphCms_PostToTagConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -9531,7 +9513,7 @@ export type GraphCms_Wp_PostToTagConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -9556,12 +9538,12 @@ export type GraphCms_Wp_PostToTagConnectionWhereArgs = {
 };
 
 /** An Post Type object */
-export type GraphCms_Wp_PostType = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_PostType';
+export type GraphCms_PostType = GraphCms_Node & {
+  __typename?: 'GraphCMS_PostType';
   /** Whether this content type should can be exported. */
   canExport?: Maybe<Scalars['Boolean']>;
   /** List of Taxonomies connected to the Post Type */
-  connectedTaxonomies?: Maybe<Array<Maybe<GraphCms_Wp_Taxonomy>>>;
+  connectedTaxonomies?: Maybe<Array<Maybe<GraphCms_Taxonomy>>>;
   /** A list of Taxonomies associated with the post type */
   connectedTaxonomyNames?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Whether delete this type of content when the author of it is deleted from the system. */
@@ -9584,7 +9566,7 @@ export type GraphCms_Wp_PostType = GraphCms_Wp_Node & {
   /** Display name of the content type. */
   label?: Maybe<Scalars['String']>;
   /** Details about the post type labels. */
-  labels?: Maybe<GraphCms_Wp_PostTypeLabelDetails>;
+  labels?: Maybe<GraphCms_PostTypeLabelDetails>;
   /** The name of the icon file to display as a menu icon. */
   menuIcon?: Maybe<Scalars['String']>;
   /** The position of this post type in the menu. Only applies if show_in_menu is true. */
@@ -9624,17 +9606,17 @@ export type GraphCms_Wp_PostType = GraphCms_Wp_Node & {
 };
 
 /** An Post Type object */
-export type GraphCms_Wp_PostTypeConnectedTaxonomiesArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_PostTypeConnectedTaxonomiesArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** An Post Type object */
-export type GraphCms_Wp_PostTypeConnectedTaxonomyNamesArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_PostTypeConnectedTaxonomyNamesArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** Allowed Post Types */
-export enum GraphCms_Wp_PostTypeEnum {
+export enum GraphCms_PostTypeEnum {
   Attachment = 'ATTACHMENT',
   Page = 'PAGE',
   Post = 'POST',
@@ -9642,8 +9624,8 @@ export enum GraphCms_Wp_PostTypeEnum {
 }
 
 /** Details for labels of the PostType */
-export type GraphCms_Wp_PostTypeLabelDetails = {
-  __typename?: 'GraphCMS_WP_PostTypeLabelDetails';
+export type GraphCms_PostTypeLabelDetails = {
+  __typename?: 'GraphCMS_PostTypeLabelDetails';
   /** Default is ‘Add New’ for both hierarchical and non-hierarchical types. */
   addNew?: Maybe<Scalars['String']>;
   /** Label for adding a new singular item. */
@@ -9697,24 +9679,24 @@ export type GraphCms_Wp_PostTypeLabelDetails = {
 };
 
 /** A product object */
-export type GraphCms_Wp_Product = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Product';
+export type GraphCms_Product = GraphCms_Node & {
+  __typename?: 'GraphCMS_Product';
   /** Connection between the Product type and the Product type */
-  attributes?: Maybe<GraphCms_Wp_ProductToProductAttributeConnection>;
+  attributes?: Maybe<GraphCms_ProductToProductAttributeConnection>;
   /** Product average count */
   averageRating?: Maybe<Scalars['Float']>;
   /** Product backorders status */
-  backorders?: Maybe<GraphCms_Wp_BackordersEnum>;
+  backorders?: Maybe<GraphCms_BackordersEnum>;
   /** Can product be backordered? */
   backordersAllowed?: Maybe<Scalars['Boolean']>;
   /** External product Buy button text */
   buttonText?: Maybe<Scalars['String']>;
   /** Catalog visibility */
-  catalogVisibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  catalogVisibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
   /** Connection between the Product type and the Product type */
-  categories?: Maybe<GraphCms_Wp_ProductToProductCategoryConnection>;
+  categories?: Maybe<GraphCms_ProductToProductCategoryConnection>;
   /** Connection between the Product type and the Product type */
-  crossSell?: Maybe<GraphCms_Wp_ProductToProductConnection>;
+  crossSell?: Maybe<GraphCms_ProductToProductConnection>;
   /** Date product created */
   date?: Maybe<Scalars['String']>;
   /** Date on sale from */
@@ -9722,7 +9704,7 @@ export type GraphCms_Wp_Product = GraphCms_Wp_Node & {
   /** Date on sale to */
   dateOnSaleTo?: Maybe<Scalars['String']>;
   /** Connection between the Product type and the Product type */
-  defaultAttributes?: Maybe<GraphCms_Wp_ProductToVariationAttributeConnection>;
+  defaultAttributes?: Maybe<GraphCms_ProductToVariationAttributeConnection>;
   /** Product description */
   description?: Maybe<Scalars['String']>;
   /** Is downloadable? */
@@ -9732,21 +9714,21 @@ export type GraphCms_Wp_Product = GraphCms_Wp_Node & {
   /** Download limit */
   downloadLimit?: Maybe<Scalars['Int']>;
   /** Product downloads */
-  downloads?: Maybe<Array<Maybe<GraphCms_Wp_ProductDownload>>>;
+  downloads?: Maybe<Array<Maybe<GraphCms_ProductDownload>>>;
   /** External product url */
   externalUrl?: Maybe<Scalars['String']>;
   /** If the product is featured */
   featured?: Maybe<Scalars['Boolean']>;
   /** Connection between the Product type and the Product type */
-  galleryImages?: Maybe<GraphCms_Wp_ProductToMediaItemConnection>;
+  galleryImages?: Maybe<GraphCms_ProductToMediaItemConnection>;
   /** Connection between the Product type and the Product type */
-  grouped?: Maybe<GraphCms_Wp_ProductToProductConnection>;
+  grouped?: Maybe<GraphCms_ProductToProductConnection>;
   /** Product&#039;s height */
   height?: Maybe<Scalars['String']>;
   /** The globally unique identifier for the product */
   id: Scalars['ID'];
   /** Main image */
-  image?: Maybe<GraphCms_Wp_MediaItem>;
+  image?: Maybe<GraphCms_MediaItem>;
   /** Product&#039;s length */
   length?: Maybe<Scalars['String']>;
   /** If product manage stock */
@@ -9760,7 +9742,7 @@ export type GraphCms_Wp_Product = GraphCms_Wp_Node & {
   /** Is product on sale? */
   onSale?: Maybe<Scalars['Boolean']>;
   /** Parent product */
-  parent?: Maybe<GraphCms_Wp_Product>;
+  parent?: Maybe<GraphCms_Product>;
   /** Product&#039;s active price */
   price?: Maybe<Scalars['String']>;
   /** The Id of the order. Equivalent to WP_Post-&gt;ID */
@@ -9770,11 +9752,11 @@ export type GraphCms_Wp_Product = GraphCms_Wp_Node & {
   /** Purchase note */
   purchaseNote?: Maybe<Scalars['String']>;
   /** Product rating counts */
-  ratingCount?: Maybe<GraphCms_Wp_RatingCounter>;
+  ratingCount?: Maybe<GraphCms_RatingCounter>;
   /** Product&#039;s regular price */
   regularPrice?: Maybe<Scalars['String']>;
   /** Connection between the Product type and the Product type */
-  related?: Maybe<GraphCms_Wp_ProductToProductConnection>;
+  related?: Maybe<GraphCms_ProductToProductConnection>;
   /** Product review count */
   reviewCount?: Maybe<Scalars['Int']>;
   /** If reviews are allowed */
@@ -9800,21 +9782,21 @@ export type GraphCms_Wp_Product = GraphCms_Wp_Node & {
   /** Number of items available for sale */
   stockQuantity?: Maybe<Scalars['Int']>;
   /** Product stock status */
-  stockStatus?: Maybe<GraphCms_Wp_StockStatusEnum>;
+  stockStatus?: Maybe<GraphCms_StockStatusEnum>;
   /** Connection between the Product type and the Product type */
-  tags?: Maybe<GraphCms_Wp_ProductToProductTagConnection>;
+  tags?: Maybe<GraphCms_ProductToProductTagConnection>;
   /** Tax class */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Tax status */
-  taxStatus?: Maybe<GraphCms_Wp_TaxStatusEnum>;
+  taxStatus?: Maybe<GraphCms_TaxStatusEnum>;
   /** Number total of sales */
   totalSales?: Maybe<Scalars['Int']>;
   /** Product type */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Connection between the Product type and the Product type */
-  upsell?: Maybe<GraphCms_Wp_ProductToProductConnection>;
+  upsell?: Maybe<GraphCms_ProductToProductConnection>;
   /** Connection between the Product type and the Product type */
-  variations?: Maybe<GraphCms_Wp_ProductToProductVariationConnection>;
+  variations?: Maybe<GraphCms_ProductToProductVariationConnection>;
   /** Is product virtual? */
   virtual?: Maybe<Scalars['Boolean']>;
   /** Product&#039;s weight */
@@ -9824,7 +9806,7 @@ export type GraphCms_Wp_Product = GraphCms_Wp_Node & {
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductAttributesArgs = {
+export type GraphCms_ProductAttributesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
@@ -9832,25 +9814,25 @@ export type GraphCms_Wp_ProductAttributesArgs = {
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductCategoriesArgs = {
+export type GraphCms_ProductCategoriesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_ProductToProductCategoryConnectionWhereArgs>;
+  where?: Maybe<GraphCms_ProductToProductCategoryConnectionWhereArgs>;
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductCrossSellArgs = {
+export type GraphCms_ProductCrossSellArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_ProductToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_ProductToProductConnectionWhereArgs>;
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductDefaultAttributesArgs = {
+export type GraphCms_ProductDefaultAttributesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
@@ -9858,77 +9840,77 @@ export type GraphCms_Wp_ProductDefaultAttributesArgs = {
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductGalleryImagesArgs = {
+export type GraphCms_ProductGalleryImagesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_ProductToMediaItemConnectionWhereArgs>;
+  where?: Maybe<GraphCms_ProductToMediaItemConnectionWhereArgs>;
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductGroupedArgs = {
+export type GraphCms_ProductGroupedArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_ProductToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_ProductToProductConnectionWhereArgs>;
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductPriceArgs = {
+export type GraphCms_ProductPriceArgs = {
   max?: Maybe<Scalars['Boolean']>;
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductRegularPriceArgs = {
+export type GraphCms_ProductRegularPriceArgs = {
   max?: Maybe<Scalars['Boolean']>;
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductRelatedArgs = {
+export type GraphCms_ProductRelatedArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_ProductToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_ProductToProductConnectionWhereArgs>;
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductSalePriceArgs = {
+export type GraphCms_ProductSalePriceArgs = {
   max?: Maybe<Scalars['Boolean']>;
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductTagsArgs = {
+export type GraphCms_ProductTagsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_ProductToProductTagConnectionWhereArgs>;
+  where?: Maybe<GraphCms_ProductToProductTagConnectionWhereArgs>;
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductUpsellArgs = {
+export type GraphCms_ProductUpsellArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_ProductToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_ProductToProductConnectionWhereArgs>;
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductVariationsArgs = {
+export type GraphCms_ProductVariationsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_ProductToProductVariationConnectionWhereArgs>;
+  where?: Maybe<GraphCms_ProductToProductVariationConnectionWhereArgs>;
 };
 
 /** A product attribute object */
-export type GraphCms_Wp_ProductAttribute = {
-  __typename?: 'GraphCMS_WP_ProductAttribute';
+export type GraphCms_ProductAttribute = {
+  __typename?: 'GraphCMS_ProductAttribute';
   /** Attribute ID */
   attributeId: Scalars['Int'];
   /** Attribute name */
@@ -9944,18 +9926,18 @@ export type GraphCms_Wp_ProductAttribute = {
 };
 
 /** Options for ordering the connection */
-export type GraphCms_Wp_ProductAttributeInput = {
+export type GraphCms_ProductAttributeInput = {
   attribute: Scalars['String'];
   attributeTerm: Scalars['String'];
 };
 
 /** The productCategory type */
-export type GraphCms_Wp_ProductCategory = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_ProductCategory';
+export type GraphCms_ProductCategory = GraphCms_Node & {
+  __typename?: 'GraphCMS_ProductCategory';
   /** The ancestors of the object */
-  ancestors?: Maybe<Array<Maybe<GraphCms_Wp_ProductCategory>>>;
+  ancestors?: Maybe<Array<Maybe<GraphCms_ProductCategory>>>;
   /** Connection between the productCategory type and the productCategory type */
-  children?: Maybe<GraphCms_Wp_ProductCategoryToProductCategoryConnection>;
+  children?: Maybe<GraphCms_ProductCategoryToProductCategoryConnection>;
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -9969,15 +9951,15 @@ export type GraphCms_Wp_ProductCategory = GraphCms_Wp_Node & {
   /** The human friendly name of the object. */
   name?: Maybe<Scalars['String']>;
   /** The parent object */
-  parent?: Maybe<GraphCms_Wp_ProductCategory>;
+  parent?: Maybe<GraphCms_ProductCategory>;
   /** The id field matches the WP_Post-&gt;ID field. */
   productCategoryId?: Maybe<Scalars['Int']>;
   /** Connection between the ProductCategory type and the ProductCategory type */
-  products?: Maybe<GraphCms_Wp_ProductCategoryToProductConnection>;
+  products?: Maybe<GraphCms_ProductCategoryToProductConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
@@ -9985,51 +9967,49 @@ export type GraphCms_Wp_ProductCategory = GraphCms_Wp_Node & {
 };
 
 /** The productCategory type */
-export type GraphCms_Wp_ProductCategoryChildrenArgs = {
+export type GraphCms_ProductCategoryChildrenArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<
-    GraphCms_Wp_ProductCategoryToProductCategoryConnectionWhereArgs
-  >;
+  where?: Maybe<GraphCms_ProductCategoryToProductCategoryConnectionWhereArgs>;
 };
 
 /** The productCategory type */
-export type GraphCms_Wp_ProductCategoryProductsArgs = {
+export type GraphCms_ProductCategoryProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_ProductCategoryToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_ProductCategoryToProductConnectionWhereArgs>;
 };
 
 /** Connection between the productCategory type and the productCategory type */
-export type GraphCms_Wp_ProductCategoryToProductCategoryConnection = {
-  __typename?: 'GraphCMS_WP_ProductCategoryToProductCategoryConnection';
+export type GraphCms_ProductCategoryToProductCategoryConnection = {
+  __typename?: 'GraphCMS_ProductCategoryToProductCategoryConnection';
   /** Edges for the ProductCategoryToProductCategoryConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_ProductCategoryToProductCategoryConnectionEdge>>
+    Array<Maybe<GraphCms_ProductCategoryToProductCategoryConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductCategory>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductCategory>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_ProductCategoryToProductCategoryConnectionEdge = {
-  __typename?: 'GraphCMS_WP_ProductCategoryToProductCategoryConnectionEdge';
+export type GraphCms_ProductCategoryToProductCategoryConnectionEdge = {
+  __typename?: 'GraphCMS_ProductCategoryToProductCategoryConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductCategory>;
+  node?: Maybe<GraphCms_ProductCategory>;
 };
 
 /** Arguments for filtering the ProductCategoryToProductCategoryConnection connection */
-export type GraphCms_Wp_ProductCategoryToProductCategoryConnectionWhereArgs = {
+export type GraphCms_ProductCategoryToProductCategoryConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -10059,7 +10039,7 @@ export type GraphCms_Wp_ProductCategoryToProductCategoryConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -10084,29 +10064,27 @@ export type GraphCms_Wp_ProductCategoryToProductCategoryConnectionWhereArgs = {
 };
 
 /** Connection between the ProductCategory type and the ProductCategory type */
-export type GraphCms_Wp_ProductCategoryToProductConnection = {
-  __typename?: 'GraphCMS_WP_ProductCategoryToProductConnection';
+export type GraphCms_ProductCategoryToProductConnection = {
+  __typename?: 'GraphCMS_ProductCategoryToProductConnection';
   /** Edges for the ProductCategoryToProductConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_ProductCategoryToProductConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_ProductCategoryToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_ProductCategoryToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_ProductCategoryToProductConnectionEdge';
+export type GraphCms_ProductCategoryToProductConnectionEdge = {
+  __typename?: 'GraphCMS_ProductCategoryToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the ProductCategoryToProductConnection connection */
-export type GraphCms_Wp_ProductCategoryToProductConnectionWhereArgs = {
+export type GraphCms_ProductCategoryToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -10124,7 +10102,7 @@ export type GraphCms_Wp_ProductCategoryToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -10138,7 +10116,7 @@ export type GraphCms_Wp_ProductCategoryToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -10156,7 +10134,7 @@ export type GraphCms_Wp_ProductCategoryToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -10170,20 +10148,20 @@ export type GraphCms_Wp_ProductCategoryToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** A product object */
-export type GraphCms_Wp_ProductDownload = {
-  __typename?: 'GraphCMS_WP_ProductDownload';
+export type GraphCms_ProductDownload = {
+  __typename?: 'GraphCMS_ProductDownload';
   /** Is file allowed */
   allowedFileType?: Maybe<Scalars['Boolean']>;
   /** Product download ID */
@@ -10203,8 +10181,8 @@ export type GraphCms_Wp_ProductDownload = {
 };
 
 /** The productTag type */
-export type GraphCms_Wp_ProductTag = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_ProductTag';
+export type GraphCms_ProductTag = GraphCms_Node & {
+  __typename?: 'GraphCMS_ProductTag';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -10218,13 +10196,13 @@ export type GraphCms_Wp_ProductTag = GraphCms_Wp_Node & {
   /** The human friendly name of the object. */
   name?: Maybe<Scalars['String']>;
   /** Connection between the ProductTag type and the ProductTag type */
-  products?: Maybe<GraphCms_Wp_ProductTagToProductConnection>;
+  products?: Maybe<GraphCms_ProductTagToProductConnection>;
   /** The id field matches the WP_Post-&gt;ID field. */
   productTagId?: Maybe<Scalars['Int']>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
@@ -10232,36 +10210,36 @@ export type GraphCms_Wp_ProductTag = GraphCms_Wp_Node & {
 };
 
 /** The productTag type */
-export type GraphCms_Wp_ProductTagProductsArgs = {
+export type GraphCms_ProductTagProductsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_ProductTagToProductConnectionWhereArgs>;
+  where?: Maybe<GraphCms_ProductTagToProductConnectionWhereArgs>;
 };
 
 /** Connection between the ProductTag type and the ProductTag type */
-export type GraphCms_Wp_ProductTagToProductConnection = {
-  __typename?: 'GraphCMS_WP_ProductTagToProductConnection';
+export type GraphCms_ProductTagToProductConnection = {
+  __typename?: 'GraphCMS_ProductTagToProductConnection';
   /** Edges for the ProductTagToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_ProductTagToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_ProductTagToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_ProductTagToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_ProductTagToProductConnectionEdge';
+export type GraphCms_ProductTagToProductConnectionEdge = {
+  __typename?: 'GraphCMS_ProductTagToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the ProductTagToProductConnection connection */
-export type GraphCms_Wp_ProductTagToProductConnectionWhereArgs = {
+export type GraphCms_ProductTagToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -10279,7 +10257,7 @@ export type GraphCms_Wp_ProductTagToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -10293,7 +10271,7 @@ export type GraphCms_Wp_ProductTagToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -10311,7 +10289,7 @@ export type GraphCms_Wp_ProductTagToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -10325,41 +10303,41 @@ export type GraphCms_Wp_ProductTagToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the Product type and the Product type */
-export type GraphCms_Wp_ProductToMediaItemConnection = {
-  __typename?: 'GraphCMS_WP_ProductToMediaItemConnection';
+export type GraphCms_ProductToMediaItemConnection = {
+  __typename?: 'GraphCMS_ProductToMediaItemConnection';
   /** Edges for the ProductToMediaItemConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_ProductToMediaItemConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_ProductToMediaItemConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_MediaItem>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_MediaItem>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_ProductToMediaItemConnectionEdge = {
-  __typename?: 'GraphCMS_WP_ProductToMediaItemConnectionEdge';
+export type GraphCms_ProductToMediaItemConnectionEdge = {
+  __typename?: 'GraphCMS_ProductToMediaItemConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_MediaItem>;
+  node?: Maybe<GraphCms_MediaItem>;
 };
 
 /** Arguments for filtering the ProductToMediaItemConnection connection */
-export type GraphCms_Wp_ProductToMediaItemConnectionWhereArgs = {
+export type GraphCms_ProductToMediaItemConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -10385,7 +10363,7 @@ export type GraphCms_Wp_ProductToMediaItemConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -10395,7 +10373,7 @@ export type GraphCms_Wp_ProductToMediaItemConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -10405,7 +10383,7 @@ export type GraphCms_Wp_ProductToMediaItemConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -10418,8 +10396,8 @@ export type GraphCms_Wp_ProductToMediaItemConnectionWhereArgs = {
   password?: Maybe<Scalars['String']>;
   /** Show Posts based on a keyword search */
   search?: Maybe<Scalars['String']>;
-  stati?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  stati?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<Scalars['String']>;
   /** Use Tag ID */
@@ -10445,53 +10423,49 @@ export type GraphCms_Wp_ProductToMediaItemConnectionWhereArgs = {
 };
 
 /** Connection between the Product type and the Product type */
-export type GraphCms_Wp_ProductToProductAttributeConnection = {
-  __typename?: 'GraphCMS_WP_ProductToProductAttributeConnection';
+export type GraphCms_ProductToProductAttributeConnection = {
+  __typename?: 'GraphCMS_ProductToProductAttributeConnection';
   /** Edges for the ProductToProductAttributeConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_ProductToProductAttributeConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_ProductToProductAttributeConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductAttribute>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductAttribute>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_ProductToProductAttributeConnectionEdge = {
-  __typename?: 'GraphCMS_WP_ProductToProductAttributeConnectionEdge';
+export type GraphCms_ProductToProductAttributeConnectionEdge = {
+  __typename?: 'GraphCMS_ProductToProductAttributeConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductAttribute>;
+  node?: Maybe<GraphCms_ProductAttribute>;
 };
 
 /** Connection between the Product type and the Product type */
-export type GraphCms_Wp_ProductToProductCategoryConnection = {
-  __typename?: 'GraphCMS_WP_ProductToProductCategoryConnection';
+export type GraphCms_ProductToProductCategoryConnection = {
+  __typename?: 'GraphCMS_ProductToProductCategoryConnection';
   /** Edges for the ProductToProductCategoryConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_ProductToProductCategoryConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_ProductToProductCategoryConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductCategory>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductCategory>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_ProductToProductCategoryConnectionEdge = {
-  __typename?: 'GraphCMS_WP_ProductToProductCategoryConnectionEdge';
+export type GraphCms_ProductToProductCategoryConnectionEdge = {
+  __typename?: 'GraphCMS_ProductToProductCategoryConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductCategory>;
+  node?: Maybe<GraphCms_ProductCategory>;
 };
 
 /** Arguments for filtering the ProductToProductCategoryConnection connection */
-export type GraphCms_Wp_ProductToProductCategoryConnectionWhereArgs = {
+export type GraphCms_ProductToProductCategoryConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -10521,7 +10495,7 @@ export type GraphCms_Wp_ProductToProductCategoryConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -10546,27 +10520,27 @@ export type GraphCms_Wp_ProductToProductCategoryConnectionWhereArgs = {
 };
 
 /** Connection between the Product type and the Product type */
-export type GraphCms_Wp_ProductToProductConnection = {
-  __typename?: 'GraphCMS_WP_ProductToProductConnection';
+export type GraphCms_ProductToProductConnection = {
+  __typename?: 'GraphCMS_ProductToProductConnection';
   /** Edges for the ProductToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_ProductToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_ProductToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_ProductToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_ProductToProductConnectionEdge';
+export type GraphCms_ProductToProductConnectionEdge = {
+  __typename?: 'GraphCMS_ProductToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the ProductToProductConnection connection */
-export type GraphCms_Wp_ProductToProductConnectionWhereArgs = {
+export type GraphCms_ProductToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -10584,7 +10558,7 @@ export type GraphCms_Wp_ProductToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -10598,7 +10572,7 @@ export type GraphCms_Wp_ProductToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -10616,7 +10590,7 @@ export type GraphCms_Wp_ProductToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -10630,41 +10604,41 @@ export type GraphCms_Wp_ProductToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the Product type and the Product type */
-export type GraphCms_Wp_ProductToProductTagConnection = {
-  __typename?: 'GraphCMS_WP_ProductToProductTagConnection';
+export type GraphCms_ProductToProductTagConnection = {
+  __typename?: 'GraphCMS_ProductToProductTagConnection';
   /** Edges for the ProductToProductTagConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_ProductToProductTagConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_ProductToProductTagConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductTag>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductTag>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_ProductToProductTagConnectionEdge = {
-  __typename?: 'GraphCMS_WP_ProductToProductTagConnectionEdge';
+export type GraphCms_ProductToProductTagConnectionEdge = {
+  __typename?: 'GraphCMS_ProductToProductTagConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductTag>;
+  node?: Maybe<GraphCms_ProductTag>;
 };
 
 /** Arguments for filtering the ProductToProductTagConnection connection */
-export type GraphCms_Wp_ProductToProductTagConnectionWhereArgs = {
+export type GraphCms_ProductToProductTagConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -10694,7 +10668,7 @@ export type GraphCms_Wp_ProductToProductTagConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -10719,29 +10693,27 @@ export type GraphCms_Wp_ProductToProductTagConnectionWhereArgs = {
 };
 
 /** Connection between the Product type and the Product type */
-export type GraphCms_Wp_ProductToProductVariationConnection = {
-  __typename?: 'GraphCMS_WP_ProductToProductVariationConnection';
+export type GraphCms_ProductToProductVariationConnection = {
+  __typename?: 'GraphCMS_ProductToProductVariationConnection';
   /** Edges for the ProductToProductVariationConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_ProductToProductVariationConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_ProductToProductVariationConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductVariation>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductVariation>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_ProductToProductVariationConnectionEdge = {
-  __typename?: 'GraphCMS_WP_ProductToProductVariationConnectionEdge';
+export type GraphCms_ProductToProductVariationConnectionEdge = {
+  __typename?: 'GraphCMS_ProductToProductVariationConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductVariation>;
+  node?: Maybe<GraphCms_ProductVariation>;
 };
 
 /** Arguments for filtering the ProductToProductVariationConnection connection */
-export type GraphCms_Wp_ProductToProductVariationConnectionWhereArgs = {
+export type GraphCms_ProductToProductVariationConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -10759,7 +10731,7 @@ export type GraphCms_Wp_ProductToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -10773,7 +10745,7 @@ export type GraphCms_Wp_ProductToProductVariationConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -10791,7 +10763,7 @@ export type GraphCms_Wp_ProductToProductVariationConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -10805,42 +10777,42 @@ export type GraphCms_Wp_ProductToProductVariationConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the Product type and the Product type */
-export type GraphCms_Wp_ProductToVariationAttributeConnection = {
-  __typename?: 'GraphCMS_WP_ProductToVariationAttributeConnection';
+export type GraphCms_ProductToVariationAttributeConnection = {
+  __typename?: 'GraphCMS_ProductToVariationAttributeConnection';
   /** Edges for the ProductToVariationAttributeConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_ProductToVariationAttributeConnectionEdge>>
+    Array<Maybe<GraphCms_ProductToVariationAttributeConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_VariationAttribute>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_VariationAttribute>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_ProductToVariationAttributeConnectionEdge = {
-  __typename?: 'GraphCMS_WP_ProductToVariationAttributeConnectionEdge';
+export type GraphCms_ProductToVariationAttributeConnectionEdge = {
+  __typename?: 'GraphCMS_ProductToVariationAttributeConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_VariationAttribute>;
+  node?: Maybe<GraphCms_VariationAttribute>;
 };
 
 /** The productType type */
-export type GraphCms_Wp_ProductType = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_ProductType';
+export type GraphCms_ProductType = GraphCms_Node & {
+  __typename?: 'GraphCMS_ProductType';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -10858,7 +10830,7 @@ export type GraphCms_Wp_ProductType = GraphCms_Wp_Node & {
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
@@ -10866,7 +10838,7 @@ export type GraphCms_Wp_ProductType = GraphCms_Wp_Node & {
 };
 
 /** Product type enumeration */
-export enum GraphCms_Wp_ProductTypesEnum {
+export enum GraphCms_ProductTypesEnum {
   /** An external product */
   External = 'EXTERNAL',
   /** A product group */
@@ -10880,18 +10852,16 @@ export enum GraphCms_Wp_ProductTypesEnum {
 }
 
 /** A product variation object */
-export type GraphCms_Wp_ProductVariation = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_ProductVariation';
+export type GraphCms_ProductVariation = GraphCms_Node & {
+  __typename?: 'GraphCMS_ProductVariation';
   /** Connection between the ProductVariation type and the ProductVariation type */
-  attributes?: Maybe<
-    GraphCms_Wp_ProductVariationToVariationAttributeConnection
-  >;
+  attributes?: Maybe<GraphCms_ProductVariationToVariationAttributeConnection>;
   /** Product variation backorders */
-  backorders?: Maybe<GraphCms_Wp_BackordersEnum>;
+  backorders?: Maybe<GraphCms_BackordersEnum>;
   /** Can product be backordered? */
   backordersAllowed?: Maybe<Scalars['Boolean']>;
   /** Product variation catalog visibility */
-  catalogVisibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  catalogVisibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
   /** Date variation created */
   date?: Maybe<Scalars['String']>;
   /** Date on sale from */
@@ -10907,7 +10877,7 @@ export type GraphCms_Wp_ProductVariation = GraphCms_Wp_Node & {
   /** Download limit */
   downloadLimit?: Maybe<Scalars['Int']>;
   /** Product downloads */
-  downloads?: Maybe<Array<Maybe<GraphCms_Wp_ProductDownload>>>;
+  downloads?: Maybe<Array<Maybe<GraphCms_ProductDownload>>>;
   /** Does product variation have any visible attributes */
   hasAttributes?: Maybe<Scalars['Boolean']>;
   /** Product variation height */
@@ -10915,11 +10885,11 @@ export type GraphCms_Wp_ProductVariation = GraphCms_Wp_Node & {
   /** The globally unique identifier for the product variation */
   id: Scalars['ID'];
   /** Product variation main image */
-  image?: Maybe<GraphCms_Wp_MediaItem>;
+  image?: Maybe<GraphCms_MediaItem>;
   /** Product variation length */
   length?: Maybe<Scalars['String']>;
   /** if/how product variation stock is managed */
-  manageStock?: Maybe<GraphCms_Wp_ManageStockEnum>;
+  manageStock?: Maybe<GraphCms_ManageStockEnum>;
   /** Menu order */
   menuOrder?: Maybe<Scalars['Int']>;
   /** Date variation last updated */
@@ -10947,13 +10917,13 @@ export type GraphCms_Wp_ProductVariation = GraphCms_Wp_Node & {
   /** Product variation stock quantity */
   stockQuantity?: Maybe<Scalars['Int']>;
   /** Product stock status */
-  stockStatus?: Maybe<GraphCms_Wp_StockStatusEnum>;
+  stockStatus?: Maybe<GraphCms_StockStatusEnum>;
   /** Product variation tax class */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Tax status */
-  taxStatus?: Maybe<GraphCms_Wp_TaxStatusEnum>;
+  taxStatus?: Maybe<GraphCms_TaxStatusEnum>;
   /** Product type */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** The Id of the order. Equivalent to WP_Post-&gt;ID */
   variationId?: Maybe<Scalars['Int']>;
   /** Is product virtual? */
@@ -10965,7 +10935,7 @@ export type GraphCms_Wp_ProductVariation = GraphCms_Wp_Node & {
 };
 
 /** A product variation object */
-export type GraphCms_Wp_ProductVariationAttributesArgs = {
+export type GraphCms_ProductVariationAttributesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
@@ -10973,30 +10943,30 @@ export type GraphCms_Wp_ProductVariationAttributesArgs = {
 };
 
 /** Connection between the ProductVariation type and the ProductVariation type */
-export type GraphCms_Wp_ProductVariationToVariationAttributeConnection = {
-  __typename?: 'GraphCMS_WP_ProductVariationToVariationAttributeConnection';
+export type GraphCms_ProductVariationToVariationAttributeConnection = {
+  __typename?: 'GraphCMS_ProductVariationToVariationAttributeConnection';
   /** Edges for the ProductVariationToVariationAttributeConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_ProductVariationToVariationAttributeConnectionEdge>>
+    Array<Maybe<GraphCms_ProductVariationToVariationAttributeConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_VariationAttribute>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_VariationAttribute>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_ProductVariationToVariationAttributeConnectionEdge = {
-  __typename?: 'GraphCMS_WP_ProductVariationToVariationAttributeConnectionEdge';
+export type GraphCms_ProductVariationToVariationAttributeConnectionEdge = {
+  __typename?: 'GraphCMS_ProductVariationToVariationAttributeConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_VariationAttribute>;
+  node?: Maybe<GraphCms_VariationAttribute>;
 };
 
 /** A product rating counter */
-export type GraphCms_Wp_RatingCounter = {
-  __typename?: 'GraphCMS_WP_RatingCounter';
+export type GraphCms_RatingCounter = {
+  __typename?: 'GraphCMS_RatingCounter';
   /** Product&#039;s rating average */
   average?: Maybe<Scalars['Float']>;
   /** Product&#039;s number of 5-star ratings */
@@ -11012,25 +10982,25 @@ export type GraphCms_Wp_RatingCounter = {
 };
 
 /** The reading setting type */
-export type GraphCms_Wp_ReadingSettings = {
-  __typename?: 'GraphCMS_WP_ReadingSettings';
+export type GraphCms_ReadingSettings = {
+  __typename?: 'GraphCMS_ReadingSettings';
   /** lehekülge korraga. */
   postsPerPage?: Maybe<Scalars['Int']>;
 };
 
 /** A refund object */
-export type GraphCms_Wp_Refund = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Refund';
+export type GraphCms_Refund = GraphCms_Node & {
+  __typename?: 'GraphCMS_Refund';
   /** Refunded amount */
   amount?: Maybe<Scalars['Float']>;
   /** The globally unique identifier for the refund */
   id: Scalars['ID'];
   /** Connection between the Refund type and the Refund type */
-  lineItems?: Maybe<GraphCms_Wp_RefundToLineItemConnection>;
+  lineItems?: Maybe<GraphCms_RefundToLineItemConnection>;
   /** Reason for refund */
   reason?: Maybe<Scalars['String']>;
   /** User who completed the refund */
-  refundedBy?: Maybe<GraphCms_Wp_User>;
+  refundedBy?: Maybe<GraphCms_User>;
   /** The Id of the order. Equivalent to WP_Post-&gt;ID */
   refundId?: Maybe<Scalars['Int']>;
   /** A title for the new post type */
@@ -11038,7 +11008,7 @@ export type GraphCms_Wp_Refund = GraphCms_Wp_Node & {
 };
 
 /** A refund object */
-export type GraphCms_Wp_RefundLineItemsArgs = {
+export type GraphCms_RefundLineItemsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
@@ -11046,31 +11016,31 @@ export type GraphCms_Wp_RefundLineItemsArgs = {
 };
 
 /** Connection between the Refund type and the Refund type */
-export type GraphCms_Wp_RefundToLineItemConnection = {
-  __typename?: 'GraphCMS_WP_RefundToLineItemConnection';
+export type GraphCms_RefundToLineItemConnection = {
+  __typename?: 'GraphCMS_RefundToLineItemConnection';
   /** Edges for the RefundToLineItemConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RefundToLineItemConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RefundToLineItemConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_LineItem>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_LineItem>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RefundToLineItemConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RefundToLineItemConnectionEdge';
+export type GraphCms_RefundToLineItemConnectionEdge = {
+  __typename?: 'GraphCMS_RefundToLineItemConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_LineItem>;
+  node?: Maybe<GraphCms_LineItem>;
 };
 
 /** Input for the registerCustomer mutation */
-export type GraphCms_Wp_RegisterCustomerInput = {
+export type GraphCms_RegisterCustomerInput = {
   /** User's AOL IM account. */
   aim?: Maybe<Scalars['String']>;
   /** Customer billing information */
-  billing?: Maybe<GraphCms_Wp_CustomerAddressInput>;
+  billing?: Maybe<GraphCms_CustomerAddressInput>;
   clientMutationId: Scalars['String'];
   /** A string containing content about the user. */
   description?: Maybe<Scalars['String']>;
@@ -11100,7 +11070,7 @@ export type GraphCms_Wp_RegisterCustomerInput = {
   /** A string for whether to enable the rich editor or not. False if not empty. */
   richEditing?: Maybe<Scalars['String']>;
   /** Customer shipping address */
-  shipping?: Maybe<GraphCms_Wp_CustomerAddressInput>;
+  shipping?: Maybe<GraphCms_CustomerAddressInput>;
   /** Customer shipping is identical to billing address */
   shippingSameAsBilling?: Maybe<Scalars['Boolean']>;
   /** A string that contains the user's username. */
@@ -11112,15 +11082,15 @@ export type GraphCms_Wp_RegisterCustomerInput = {
 };
 
 /** The payload for the registerCustomer mutation */
-export type GraphCms_Wp_RegisterCustomerPayload = {
-  __typename?: 'GraphCMS_WP_RegisterCustomerPayload';
+export type GraphCms_RegisterCustomerPayload = {
+  __typename?: 'GraphCMS_RegisterCustomerPayload';
   clientMutationId: Scalars['String'];
-  customer?: Maybe<GraphCms_Wp_Customer>;
-  viewer?: Maybe<GraphCms_Wp_User>;
+  customer?: Maybe<GraphCms_Customer>;
+  viewer?: Maybe<GraphCms_User>;
 };
 
 /** Input for the registerUser mutation */
-export type GraphCms_Wp_RegisterUserInput = {
+export type GraphCms_RegisterUserInput = {
   /** User's AOL IM account. */
   aim?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -11160,34 +11130,34 @@ export type GraphCms_Wp_RegisterUserInput = {
 };
 
 /** The payload for the registerUser mutation */
-export type GraphCms_Wp_RegisterUserPayload = {
-  __typename?: 'GraphCMS_WP_RegisterUserPayload';
+export type GraphCms_RegisterUserPayload = {
+  __typename?: 'GraphCMS_RegisterUserPayload';
   clientMutationId: Scalars['String'];
-  user?: Maybe<GraphCms_Wp_User>;
+  user?: Maybe<GraphCms_User>;
 };
 
 /** The logical relation between each item in the array when there are more than one. */
-export enum GraphCms_Wp_RelationEnum {
+export enum GraphCms_RelationEnum {
   And = 'AND',
   Or = 'OR',
 }
 
 /** Input for the removeCoupons mutation */
-export type GraphCms_Wp_RemoveCouponsInput = {
+export type GraphCms_RemoveCouponsInput = {
   clientMutationId: Scalars['String'];
   /** Code of coupon being applied */
   codes?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 /** The payload for the removeCoupons mutation */
-export type GraphCms_Wp_RemoveCouponsPayload = {
-  __typename?: 'GraphCMS_WP_RemoveCouponsPayload';
-  cart?: Maybe<GraphCms_Wp_Cart>;
+export type GraphCms_RemoveCouponsPayload = {
+  __typename?: 'GraphCMS_RemoveCouponsPayload';
+  cart?: Maybe<GraphCms_Cart>;
   clientMutationId: Scalars['String'];
 };
 
 /** Input for the removeItemsFromCart mutation */
-export type GraphCms_Wp_RemoveItemsFromCartInput = {
+export type GraphCms_RemoveItemsFromCartInput = {
   /** Remove all cart items */
   all?: Maybe<Scalars['Boolean']>;
   clientMutationId: Scalars['String'];
@@ -11196,14 +11166,14 @@ export type GraphCms_Wp_RemoveItemsFromCartInput = {
 };
 
 /** The payload for the removeItemsFromCart mutation */
-export type GraphCms_Wp_RemoveItemsFromCartPayload = {
-  __typename?: 'GraphCMS_WP_RemoveItemsFromCartPayload';
-  cartItems?: Maybe<Array<Maybe<GraphCms_Wp_CartItem>>>;
+export type GraphCms_RemoveItemsFromCartPayload = {
+  __typename?: 'GraphCMS_RemoveItemsFromCartPayload';
+  cartItems?: Maybe<Array<Maybe<GraphCms_CartItem>>>;
   clientMutationId: Scalars['String'];
 };
 
 /** Input for the resetUserPassword mutation */
-export type GraphCms_Wp_ResetUserPasswordInput = {
+export type GraphCms_ResetUserPasswordInput = {
   clientMutationId: Scalars['String'];
   /** Password reset key */
   key?: Maybe<Scalars['String']>;
@@ -11214,50 +11184,50 @@ export type GraphCms_Wp_ResetUserPasswordInput = {
 };
 
 /** The payload for the resetUserPassword mutation */
-export type GraphCms_Wp_ResetUserPasswordPayload = {
-  __typename?: 'GraphCMS_WP_ResetUserPasswordPayload';
+export type GraphCms_ResetUserPasswordPayload = {
+  __typename?: 'GraphCMS_ResetUserPasswordPayload';
   clientMutationId: Scalars['String'];
-  user?: Maybe<GraphCms_Wp_User>;
+  user?: Maybe<GraphCms_User>;
 };
 
 /** Input for the restoreCartItems mutation */
-export type GraphCms_Wp_RestoreCartItemsInput = {
+export type GraphCms_RestoreCartItemsInput = {
   clientMutationId: Scalars['String'];
   /** Cart item key of the item being removed */
   keys?: Maybe<Array<Maybe<Scalars['ID']>>>;
 };
 
 /** The payload for the restoreCartItems mutation */
-export type GraphCms_Wp_RestoreCartItemsPayload = {
-  __typename?: 'GraphCMS_WP_RestoreCartItemsPayload';
-  cartItems?: Maybe<Array<Maybe<GraphCms_Wp_CartItem>>>;
+export type GraphCms_RestoreCartItemsPayload = {
+  __typename?: 'GraphCMS_RestoreCartItemsPayload';
+  cartItems?: Maybe<Array<Maybe<GraphCms_CartItem>>>;
   clientMutationId: Scalars['String'];
 };
 
 /** Input for the restoreComment mutation */
-export type GraphCms_Wp_RestoreCommentInput = {
+export type GraphCms_RestoreCommentInput = {
   clientMutationId: Scalars['String'];
   /** The ID of the comment to be restored */
   id: Scalars['ID'];
 };
 
 /** The payload for the restoreComment mutation */
-export type GraphCms_Wp_RestoreCommentPayload = {
-  __typename?: 'GraphCMS_WP_RestoreCommentPayload';
+export type GraphCms_RestoreCommentPayload = {
+  __typename?: 'GraphCMS_RestoreCommentPayload';
   clientMutationId: Scalars['String'];
   /** The restored comment object */
-  comment?: Maybe<GraphCms_Wp_Comment>;
+  comment?: Maybe<GraphCms_Comment>;
   /** The ID of the restored comment */
   restoredId?: Maybe<Scalars['ID']>;
 };
 
 /** The revision type */
-export type GraphCms_Wp_Revision = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Revision';
+export type GraphCms_Revision = GraphCms_Node & {
+  __typename?: 'GraphCMS_Revision';
   /** Ancestors of the object */
-  ancestors?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectUnion>>>;
+  ancestors?: Maybe<Array<Maybe<GraphCms_PostObjectUnion>>>;
   /** The author field will return a queryable User type matching the post&#039;s author. */
-  author?: Maybe<GraphCms_Wp_User>;
+  author?: Maybe<GraphCms_User>;
   /** Whether the comments are open or closed for this particular post. */
   commentStatus?: Maybe<Scalars['String']>;
   /** The content of the post. */
@@ -11269,12 +11239,12 @@ export type GraphCms_Wp_Revision = GraphCms_Wp_Node & {
   /** The desired slug of the post */
   desiredSlug?: Maybe<Scalars['String']>;
   /** The user that most recently edited the object */
-  editLast?: Maybe<GraphCms_Wp_User>;
+  editLast?: Maybe<GraphCms_User>;
   /** If a user has edited the object within the past 15 seconds, this will return
    * the user and the time they last edited. Null if the edit lock doesn&#039;t
    * exist or is greater than 15 seconds
    */
-  editLock?: Maybe<GraphCms_Wp_EditLock>;
+  editLock?: Maybe<GraphCms_EditLock>;
   /** The RSS enclosure for the object */
   enclosure?: Maybe<Scalars['String']>;
   /** The excerpt of the post. */
@@ -11303,7 +11273,7 @@ export type GraphCms_Wp_Revision = GraphCms_Wp_Node & {
    */
   modifiedGmt?: Maybe<Scalars['String']>;
   /** The parent of the object. The parent object can be of various types */
-  parent?: Maybe<GraphCms_Wp_PostObjectUnion>;
+  parent?: Maybe<GraphCms_PostObjectUnion>;
   /** URLs that have been pinged. */
   pinged?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Whether the pings are open or closed for this particular post. */
@@ -11320,7 +11290,7 @@ export type GraphCms_Wp_Revision = GraphCms_Wp_Node & {
   /** Terms connected to the revision */
   termNames?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Terms connected to the revision */
-  terms?: Maybe<Array<Maybe<GraphCms_Wp_TermObjectUnion>>>;
+  terms?: Maybe<Array<Maybe<GraphCms_TermObjectUnion>>>;
   /** Terms connected to the revision */
   termSlugs?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
@@ -11332,64 +11302,64 @@ export type GraphCms_Wp_Revision = GraphCms_Wp_Node & {
 };
 
 /** The revision type */
-export type GraphCms_Wp_RevisionAncestorsArgs = {
-  types?: Maybe<Array<Maybe<GraphCms_Wp_PostTypeEnum>>>;
+export type GraphCms_RevisionAncestorsArgs = {
+  types?: Maybe<Array<Maybe<GraphCms_PostTypeEnum>>>;
 };
 
 /** The revision type */
-export type GraphCms_Wp_RevisionContentArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_RevisionContentArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** The revision type */
-export type GraphCms_Wp_RevisionExcerptArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_RevisionExcerptArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** The revision type */
-export type GraphCms_Wp_RevisionTermNamesArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_RevisionTermNamesArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** The revision type */
-export type GraphCms_Wp_RevisionTermsArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_RevisionTermsArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** The revision type */
-export type GraphCms_Wp_RevisionTermSlugsArgs = {
-  taxonomies?: Maybe<Array<Maybe<GraphCms_Wp_TaxonomyEnum>>>;
+export type GraphCms_RevisionTermSlugsArgs = {
+  taxonomies?: Maybe<Array<Maybe<GraphCms_TaxonomyEnum>>>;
 };
 
 /** The revision type */
-export type GraphCms_Wp_RevisionTitleArgs = {
-  format?: Maybe<GraphCms_Wp_PostObjectFieldFormatEnum>;
+export type GraphCms_RevisionTitleArgs = {
+  format?: Maybe<GraphCms_PostObjectFieldFormatEnum>;
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToCategoryConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToCategoryConnection';
+export type GraphCms_RootQueryToCategoryConnection = {
+  __typename?: 'GraphCMS_RootQueryToCategoryConnection';
   /** Edges for the RootQueryToCategoryConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToCategoryConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToCategoryConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Category>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Category>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToCategoryConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToCategoryConnectionEdge';
+export type GraphCms_RootQueryToCategoryConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToCategoryConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Category>;
+  node?: Maybe<GraphCms_Category>;
 };
 
 /** Arguments for filtering the RootQueryToCategoryConnection connection */
-export type GraphCms_Wp_RootQueryToCategoryConnectionWhereArgs = {
+export type GraphCms_RootQueryToCategoryConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -11419,7 +11389,7 @@ export type GraphCms_Wp_RootQueryToCategoryConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -11444,27 +11414,27 @@ export type GraphCms_Wp_RootQueryToCategoryConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToCommentConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToCommentConnection';
+export type GraphCms_RootQueryToCommentConnection = {
+  __typename?: 'GraphCMS_RootQueryToCommentConnection';
   /** Edges for the RootQueryToCommentConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToCommentConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToCommentConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Comment>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Comment>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToCommentConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToCommentConnectionEdge';
+export type GraphCms_RootQueryToCommentConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToCommentConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Comment>;
+  node?: Maybe<GraphCms_Comment>;
 };
 
 /** Arguments for filtering the RootQueryToCommentConnection connection */
-export type GraphCms_Wp_RootQueryToCommentConnectionWhereArgs = {
+export type GraphCms_RootQueryToCommentConnectionWhereArgs = {
   /** Comment author email address. */
   authorEmail?: Maybe<Scalars['String']>;
   /** Array of author IDs to include comments for. */
@@ -11510,9 +11480,9 @@ export type GraphCms_Wp_RootQueryToCommentConnectionWhereArgs = {
   /** Array of content object statuses to retrieve affiliated comments for.
    * 							Pass 'any' to match any value.
    */
-  contentStatus?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
+  contentStatus?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
+  contentType?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
   /** Array of IDs or email addresses of users whose unapproved comments will be
    * returned by the query regardless of $status. Default empty
    */
@@ -11520,9 +11490,9 @@ export type GraphCms_Wp_RootQueryToCommentConnectionWhereArgs = {
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<Scalars['Int']>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<GraphCms_Wp_OrderEnum>;
+  order?: Maybe<GraphCms_OrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<GraphCms_Wp_CommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_CommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<Scalars['Int']>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -11540,37 +11510,37 @@ export type GraphCms_Wp_RootQueryToCommentConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToCouponConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToCouponConnection';
+export type GraphCms_RootQueryToCouponConnection = {
+  __typename?: 'GraphCMS_RootQueryToCouponConnection';
   /** Edges for the RootQueryToCouponConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToCouponConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToCouponConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Coupon>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Coupon>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToCouponConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToCouponConnectionEdge';
+export type GraphCms_RootQueryToCouponConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToCouponConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Coupon>;
+  node?: Maybe<GraphCms_Coupon>;
 };
 
 /** Arguments for filtering the RootQueryToCouponConnection connection */
-export type GraphCms_Wp_RootQueryToCouponConnectionWhereArgs = {
+export type GraphCms_RootQueryToCouponConnectionWhereArgs = {
   /** Limit result set to resources with a specific code. */
   code?: Maybe<Scalars['String']>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to specific ids. */
   include?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -11582,27 +11552,27 @@ export type GraphCms_Wp_RootQueryToCouponConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToCustomerConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToCustomerConnection';
+export type GraphCms_RootQueryToCustomerConnection = {
+  __typename?: 'GraphCMS_RootQueryToCustomerConnection';
   /** Edges for the RootQueryToCustomerConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToCustomerConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToCustomerConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Customer>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Customer>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToCustomerConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToCustomerConnectionEdge';
+export type GraphCms_RootQueryToCustomerConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToCustomerConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Customer>;
+  node?: Maybe<GraphCms_Customer>;
 };
 
 /** Arguments for filtering the RootQueryToCustomerConnection connection */
-export type GraphCms_Wp_RootQueryToCustomerConnectionWhereArgs = {
+export type GraphCms_RootQueryToCustomerConnectionWhereArgs = {
   /** Limit result set to resources with a specific email. */
   email?: Maybe<Scalars['String']>;
   /** Ensure result set excludes specific IDs. */
@@ -11610,43 +11580,43 @@ export type GraphCms_Wp_RootQueryToCustomerConnectionWhereArgs = {
   /** Limit result set to specific ids. */
   include?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Order of results. */
-  order?: Maybe<GraphCms_Wp_OrderEnum>;
+  order?: Maybe<GraphCms_OrderEnum>;
   /** Order results by a specific field. */
-  orderby?: Maybe<GraphCms_Wp_CustomerConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_CustomerConnectionOrderbyEnum>;
   /** Limit result set to resources with a specific role. */
-  role?: Maybe<GraphCms_Wp_UserRoleEnum>;
+  role?: Maybe<GraphCms_UserRoleEnum>;
   /** Limit result set to resources with a specific group of roles. */
-  roleIn?: Maybe<Array<Maybe<GraphCms_Wp_UserRoleEnum>>>;
+  roleIn?: Maybe<Array<Maybe<GraphCms_UserRoleEnum>>>;
   /** Limit result set to resources not within a specific group of roles. */
-  roleNotIn?: Maybe<Array<Maybe<GraphCms_Wp_UserRoleEnum>>>;
+  roleNotIn?: Maybe<Array<Maybe<GraphCms_UserRoleEnum>>>;
   /** Limit results to those matching a string. */
   search?: Maybe<Scalars['String']>;
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToMediaItemConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToMediaItemConnection';
+export type GraphCms_RootQueryToMediaItemConnection = {
+  __typename?: 'GraphCMS_RootQueryToMediaItemConnection';
   /** Edges for the RootQueryToMediaItemConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToMediaItemConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToMediaItemConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_MediaItem>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_MediaItem>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToMediaItemConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToMediaItemConnectionEdge';
+export type GraphCms_RootQueryToMediaItemConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToMediaItemConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_MediaItem>;
+  node?: Maybe<GraphCms_MediaItem>;
 };
 
 /** Arguments for filtering the RootQueryToMediaItemConnection connection */
-export type GraphCms_Wp_RootQueryToMediaItemConnectionWhereArgs = {
+export type GraphCms_RootQueryToMediaItemConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -11672,7 +11642,7 @@ export type GraphCms_Wp_RootQueryToMediaItemConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -11682,7 +11652,7 @@ export type GraphCms_Wp_RootQueryToMediaItemConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -11692,7 +11662,7 @@ export type GraphCms_Wp_RootQueryToMediaItemConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -11705,8 +11675,8 @@ export type GraphCms_Wp_RootQueryToMediaItemConnectionWhereArgs = {
   password?: Maybe<Scalars['String']>;
   /** Show Posts based on a keyword search */
   search?: Maybe<Scalars['String']>;
-  stati?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  stati?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<Scalars['String']>;
   /** Use Tag ID */
@@ -11732,97 +11702,97 @@ export type GraphCms_Wp_RootQueryToMediaItemConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToMenuConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToMenuConnection';
+export type GraphCms_RootQueryToMenuConnection = {
+  __typename?: 'GraphCMS_RootQueryToMenuConnection';
   /** Edges for the RootQueryToMenuConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToMenuConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToMenuConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Menu>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Menu>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToMenuConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToMenuConnectionEdge';
+export type GraphCms_RootQueryToMenuConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToMenuConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Menu>;
+  node?: Maybe<GraphCms_Menu>;
 };
 
 /** Arguments for filtering the RootQueryToMenuConnection connection */
-export type GraphCms_Wp_RootQueryToMenuConnectionWhereArgs = {
+export type GraphCms_RootQueryToMenuConnectionWhereArgs = {
   /** The ID of the object */
   id?: Maybe<Scalars['Int']>;
   /** The menu location for the menu being queried */
-  location?: Maybe<GraphCms_Wp_MenuLocationEnum>;
+  location?: Maybe<GraphCms_MenuLocationEnum>;
   /** The slug of the menu to query items for */
   slug?: Maybe<Scalars['String']>;
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToMenuItemConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToMenuItemConnection';
+export type GraphCms_RootQueryToMenuItemConnection = {
+  __typename?: 'GraphCMS_RootQueryToMenuItemConnection';
   /** Edges for the RootQueryToMenuItemConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToMenuItemConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToMenuItemConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_MenuItem>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_MenuItem>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToMenuItemConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToMenuItemConnectionEdge';
+export type GraphCms_RootQueryToMenuItemConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToMenuItemConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_MenuItem>;
+  node?: Maybe<GraphCms_MenuItem>;
 };
 
 /** Arguments for filtering the RootQueryToMenuItemConnection connection */
-export type GraphCms_Wp_RootQueryToMenuItemConnectionWhereArgs = {
+export type GraphCms_RootQueryToMenuItemConnectionWhereArgs = {
   /** The ID of the object */
   id?: Maybe<Scalars['Int']>;
   /** The menu location for the menu being queried */
-  location?: Maybe<GraphCms_Wp_MenuLocationEnum>;
+  location?: Maybe<GraphCms_MenuLocationEnum>;
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToOrderConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToOrderConnection';
+export type GraphCms_RootQueryToOrderConnection = {
+  __typename?: 'GraphCMS_RootQueryToOrderConnection';
   /** Edges for the RootQueryToOrderConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToOrderConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToOrderConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Order>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Order>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToOrderConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToOrderConnectionEdge';
+export type GraphCms_RootQueryToOrderConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToOrderConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Order>;
+  node?: Maybe<GraphCms_Order>;
 };
 
 /** Arguments for filtering the RootQueryToOrderConnection connection */
-export type GraphCms_Wp_RootQueryToOrderConnectionWhereArgs = {
+export type GraphCms_RootQueryToOrderConnectionWhereArgs = {
   /** Limit result set to orders assigned a specific customer. */
   customerId?: Maybe<Scalars['Int']>;
   /** Limit result set to orders assigned a specific group of customers. */
   customersIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to specific ids. */
   include?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -11834,33 +11804,33 @@ export type GraphCms_Wp_RootQueryToOrderConnectionWhereArgs = {
   /** Limit results to those matching a string. */
   search?: Maybe<Scalars['String']>;
   /** Limit result set to orders assigned a specific status. */
-  statuses?: Maybe<Array<Maybe<GraphCms_Wp_OrderStatusEnum>>>;
+  statuses?: Maybe<Array<Maybe<GraphCms_OrderStatusEnum>>>;
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPageConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPageConnection';
+export type GraphCms_RootQueryToPageConnection = {
+  __typename?: 'GraphCMS_RootQueryToPageConnection';
   /** Edges for the RootQueryToPageConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPageConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPageConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Page>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Page>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPageConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPageConnectionEdge';
+export type GraphCms_RootQueryToPageConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPageConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Page>;
+  node?: Maybe<GraphCms_Page>;
 };
 
 /** Arguments for filtering the RootQueryToPageConnection connection */
-export type GraphCms_Wp_RootQueryToPageConnectionWhereArgs = {
+export type GraphCms_RootQueryToPageConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -11886,7 +11856,7 @@ export type GraphCms_Wp_RootQueryToPageConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -11896,7 +11866,7 @@ export type GraphCms_Wp_RootQueryToPageConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -11906,7 +11876,7 @@ export type GraphCms_Wp_RootQueryToPageConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -11919,8 +11889,8 @@ export type GraphCms_Wp_RootQueryToPageConnectionWhereArgs = {
   password?: Maybe<Scalars['String']>;
   /** Show Posts based on a keyword search */
   search?: Maybe<Scalars['String']>;
-  stati?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  stati?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<Scalars['String']>;
   /** Use Tag ID */
@@ -11946,29 +11916,29 @@ export type GraphCms_Wp_RootQueryToPageConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaHindConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaHindConnection';
+export type GraphCms_RootQueryToPaHindConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaHindConnection';
   /** Edges for the RootQueryToPaHindConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPaHindConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaHindConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaHind>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaHind>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaHindConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaHindConnectionEdge';
+export type GraphCms_RootQueryToPaHindConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaHindConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaHind>;
+  node?: Maybe<GraphCms_PaHind>;
 };
 
 /** Arguments for filtering the RootQueryToPaHindConnection connection */
-export type GraphCms_Wp_RootQueryToPaHindConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaHindConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -11998,7 +11968,7 @@ export type GraphCms_Wp_RootQueryToPaHindConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12023,29 +11993,29 @@ export type GraphCms_Wp_RootQueryToPaHindConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaHulkConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaHulkConnection';
+export type GraphCms_RootQueryToPaHulkConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaHulkConnection';
   /** Edges for the RootQueryToPaHulkConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPaHulkConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaHulkConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaHulk>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaHulk>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaHulkConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaHulkConnectionEdge';
+export type GraphCms_RootQueryToPaHulkConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaHulkConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaHulk>;
+  node?: Maybe<GraphCms_PaHulk>;
 };
 
 /** Arguments for filtering the RootQueryToPaHulkConnection connection */
-export type GraphCms_Wp_RootQueryToPaHulkConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaHulkConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -12075,7 +12045,7 @@ export type GraphCms_Wp_RootQueryToPaHulkConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12100,31 +12070,29 @@ export type GraphCms_Wp_RootQueryToPaHulkConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaKasutusaegConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaKasutusaegConnection';
+export type GraphCms_RootQueryToPaKasutusaegConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaKasutusaegConnection';
   /** Edges for the RootQueryToPaKasutusaegConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_RootQueryToPaKasutusaegConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaKasutusaegConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaKasutusaeg>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaKasutusaeg>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaKasutusaegConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaKasutusaegConnectionEdge';
+export type GraphCms_RootQueryToPaKasutusaegConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaKasutusaegConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaKasutusaeg>;
+  node?: Maybe<GraphCms_PaKasutusaeg>;
 };
 
 /** Arguments for filtering the RootQueryToPaKasutusaegConnection connection */
-export type GraphCms_Wp_RootQueryToPaKasutusaegConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaKasutusaegConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -12154,7 +12122,7 @@ export type GraphCms_Wp_RootQueryToPaKasutusaegConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12179,29 +12147,29 @@ export type GraphCms_Wp_RootQueryToPaKasutusaegConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaKogusConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaKogusConnection';
+export type GraphCms_RootQueryToPaKogusConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaKogusConnection';
   /** Edges for the RootQueryToPaKogusConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPaKogusConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaKogusConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaKogus>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaKogus>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaKogusConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaKogusConnectionEdge';
+export type GraphCms_RootQueryToPaKogusConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaKogusConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaKogus>;
+  node?: Maybe<GraphCms_PaKogus>;
 };
 
 /** Arguments for filtering the RootQueryToPaKogusConnection connection */
-export type GraphCms_Wp_RootQueryToPaKogusConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaKogusConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -12231,7 +12199,7 @@ export type GraphCms_Wp_RootQueryToPaKogusConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12256,29 +12224,29 @@ export type GraphCms_Wp_RootQueryToPaKogusConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaKontuurConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaKontuurConnection';
+export type GraphCms_RootQueryToPaKontuurConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaKontuurConnection';
   /** Edges for the RootQueryToPaKontuurConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPaKontuurConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaKontuurConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaKontuur>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaKontuur>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaKontuurConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaKontuurConnectionEdge';
+export type GraphCms_RootQueryToPaKontuurConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaKontuurConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaKontuur>;
+  node?: Maybe<GraphCms_PaKontuur>;
 };
 
 /** Arguments for filtering the RootQueryToPaKontuurConnection connection */
-export type GraphCms_Wp_RootQueryToPaKontuurConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaKontuurConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -12308,7 +12276,7 @@ export type GraphCms_Wp_RootQueryToPaKontuurConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12333,31 +12301,29 @@ export type GraphCms_Wp_RootQueryToPaKontuurConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaKoostisainedConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaKoostisainedConnection';
+export type GraphCms_RootQueryToPaKoostisainedConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaKoostisainedConnection';
   /** Edges for the RootQueryToPaKoostisainedConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_RootQueryToPaKoostisainedConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaKoostisainedConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaKoostisained>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaKoostisained>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaKoostisainedConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaKoostisainedConnectionEdge';
+export type GraphCms_RootQueryToPaKoostisainedConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaKoostisainedConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaKoostisained>;
+  node?: Maybe<GraphCms_PaKoostisained>;
 };
 
 /** Arguments for filtering the RootQueryToPaKoostisainedConnection connection */
-export type GraphCms_Wp_RootQueryToPaKoostisainedConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaKoostisainedConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -12387,7 +12353,7 @@ export type GraphCms_Wp_RootQueryToPaKoostisainedConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12412,31 +12378,29 @@ export type GraphCms_Wp_RootQueryToPaKoostisainedConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaLaadimisaegConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaLaadimisaegConnection';
+export type GraphCms_RootQueryToPaLaadimisaegConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaLaadimisaegConnection';
   /** Edges for the RootQueryToPaLaadimisaegConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_RootQueryToPaLaadimisaegConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaLaadimisaegConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaLaadimisaeg>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaLaadimisaeg>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaLaadimisaegConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaLaadimisaegConnectionEdge';
+export type GraphCms_RootQueryToPaLaadimisaegConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaLaadimisaegConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaLaadimisaeg>;
+  node?: Maybe<GraphCms_PaLaadimisaeg>;
 };
 
 /** Arguments for filtering the RootQueryToPaLaadimisaegConnection connection */
-export type GraphCms_Wp_RootQueryToPaLaadimisaegConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaLaadimisaegConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -12466,7 +12430,7 @@ export type GraphCms_Wp_RootQueryToPaLaadimisaegConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12491,29 +12455,29 @@ export type GraphCms_Wp_RootQueryToPaLaadimisaegConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaMaterjalConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaMaterjalConnection';
+export type GraphCms_RootQueryToPaMaterjalConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaMaterjalConnection';
   /** Edges for the RootQueryToPaMaterjalConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPaMaterjalConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaMaterjalConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaMaterjal>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaMaterjal>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaMaterjalConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaMaterjalConnectionEdge';
+export type GraphCms_RootQueryToPaMaterjalConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaMaterjalConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaMaterjal>;
+  node?: Maybe<GraphCms_PaMaterjal>;
 };
 
 /** Arguments for filtering the RootQueryToPaMaterjalConnection connection */
-export type GraphCms_Wp_RootQueryToPaMaterjalConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaMaterjalConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -12543,7 +12507,7 @@ export type GraphCms_Wp_RootQueryToPaMaterjalConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12568,29 +12532,29 @@ export type GraphCms_Wp_RootQueryToPaMaterjalConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaMuratasaConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaMuratasaConnection';
+export type GraphCms_RootQueryToPaMuratasaConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaMuratasaConnection';
   /** Edges for the RootQueryToPaMuratasaConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPaMuratasaConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaMuratasaConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaMuratasa>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaMuratasa>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaMuratasaConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaMuratasaConnectionEdge';
+export type GraphCms_RootQueryToPaMuratasaConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaMuratasaConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaMuratasa>;
+  node?: Maybe<GraphCms_PaMuratasa>;
 };
 
 /** Arguments for filtering the RootQueryToPaMuratasaConnection connection */
-export type GraphCms_Wp_RootQueryToPaMuratasaConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaMuratasaConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -12620,7 +12584,7 @@ export type GraphCms_Wp_RootQueryToPaMuratasaConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12645,29 +12609,29 @@ export type GraphCms_Wp_RootQueryToPaMuratasaConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaOhutusConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaOhutusConnection';
+export type GraphCms_RootQueryToPaOhutusConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaOhutusConnection';
   /** Edges for the RootQueryToPaOhutusConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPaOhutusConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaOhutusConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaOhutus>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaOhutus>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaOhutusConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaOhutusConnectionEdge';
+export type GraphCms_RootQueryToPaOhutusConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaOhutusConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaOhutus>;
+  node?: Maybe<GraphCms_PaOhutus>;
 };
 
 /** Arguments for filtering the RootQueryToPaOhutusConnection connection */
-export type GraphCms_Wp_RootQueryToPaOhutusConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaOhutusConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -12697,7 +12661,7 @@ export type GraphCms_Wp_RootQueryToPaOhutusConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12722,29 +12686,29 @@ export type GraphCms_Wp_RootQueryToPaOhutusConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaPatareidConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaPatareidConnection';
+export type GraphCms_RootQueryToPaPatareidConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaPatareidConnection';
   /** Edges for the RootQueryToPaPatareidConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPaPatareidConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaPatareidConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaPatareid>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaPatareid>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaPatareidConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaPatareidConnectionEdge';
+export type GraphCms_RootQueryToPaPatareidConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaPatareidConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaPatareid>;
+  node?: Maybe<GraphCms_PaPatareid>;
 };
 
 /** Arguments for filtering the RootQueryToPaPatareidConnection connection */
-export type GraphCms_Wp_RootQueryToPaPatareidConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaPatareidConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -12774,7 +12738,7 @@ export type GraphCms_Wp_RootQueryToPaPatareidConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12799,29 +12763,29 @@ export type GraphCms_Wp_RootQueryToPaPatareidConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaSuurusConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaSuurusConnection';
+export type GraphCms_RootQueryToPaSuurusConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaSuurusConnection';
   /** Edges for the RootQueryToPaSuurusConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPaSuurusConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaSuurusConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaSuurus>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaSuurus>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaSuurusConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaSuurusConnectionEdge';
+export type GraphCms_RootQueryToPaSuurusConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaSuurusConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaSuurus>;
+  node?: Maybe<GraphCms_PaSuurus>;
 };
 
 /** Arguments for filtering the RootQueryToPaSuurusConnection connection */
-export type GraphCms_Wp_RootQueryToPaSuurusConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaSuurusConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -12851,7 +12815,7 @@ export type GraphCms_Wp_RootQueryToPaSuurusConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12876,29 +12840,29 @@ export type GraphCms_Wp_RootQueryToPaSuurusConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaVariantConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaVariantConnection';
+export type GraphCms_RootQueryToPaVariantConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaVariantConnection';
   /** Edges for the RootQueryToPaVariantConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPaVariantConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaVariantConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaVariant>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaVariant>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaVariantConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaVariantConnectionEdge';
+export type GraphCms_RootQueryToPaVariantConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaVariantConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaVariant>;
+  node?: Maybe<GraphCms_PaVariant>;
 };
 
 /** Arguments for filtering the RootQueryToPaVariantConnection connection */
-export type GraphCms_Wp_RootQueryToPaVariantConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaVariantConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -12928,7 +12892,7 @@ export type GraphCms_Wp_RootQueryToPaVariantConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -12953,29 +12917,29 @@ export type GraphCms_Wp_RootQueryToPaVariantConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaVarvConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaVarvConnection';
+export type GraphCms_RootQueryToPaVarvConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaVarvConnection';
   /** Edges for the RootQueryToPaVarvConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPaVarvConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaVarvConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaVarv>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaVarv>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaVarvConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaVarvConnectionEdge';
+export type GraphCms_RootQueryToPaVarvConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaVarvConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaVarv>;
+  node?: Maybe<GraphCms_PaVarv>;
 };
 
 /** Arguments for filtering the RootQueryToPaVarvConnection connection */
-export type GraphCms_Wp_RootQueryToPaVarvConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaVarvConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -13005,7 +12969,7 @@ export type GraphCms_Wp_RootQueryToPaVarvConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -13030,31 +12994,29 @@ export type GraphCms_Wp_RootQueryToPaVarvConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPaVeekindlusConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaVeekindlusConnection';
+export type GraphCms_RootQueryToPaVeekindlusConnection = {
+  __typename?: 'GraphCMS_RootQueryToPaVeekindlusConnection';
   /** Edges for the RootQueryToPaVeekindlusConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_RootQueryToPaVeekindlusConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPaVeekindlusConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_PaVeekindlus>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_PaVeekindlus>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPaVeekindlusConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPaVeekindlusConnectionEdge';
+export type GraphCms_RootQueryToPaVeekindlusConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPaVeekindlusConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_PaVeekindlus>;
+  node?: Maybe<GraphCms_PaVeekindlus>;
 };
 
 /** Arguments for filtering the RootQueryToPaVeekindlusConnection connection */
-export type GraphCms_Wp_RootQueryToPaVeekindlusConnectionWhereArgs = {
+export type GraphCms_RootQueryToPaVeekindlusConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -13084,7 +13046,7 @@ export type GraphCms_Wp_RootQueryToPaVeekindlusConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -13109,49 +13071,49 @@ export type GraphCms_Wp_RootQueryToPaVeekindlusConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPluginConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPluginConnection';
+export type GraphCms_RootQueryToPluginConnection = {
+  __typename?: 'GraphCMS_RootQueryToPluginConnection';
   /** Edges for the RootQueryToPluginConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPluginConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPluginConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Plugin>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Plugin>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPluginConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPluginConnectionEdge';
+export type GraphCms_RootQueryToPluginConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPluginConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Plugin>;
+  node?: Maybe<GraphCms_Plugin>;
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToPostConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToPostConnection';
+export type GraphCms_RootQueryToPostConnection = {
+  __typename?: 'GraphCMS_RootQueryToPostConnection';
   /** Edges for the RootQueryToPostConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToPostConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToPostConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Post>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Post>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToPostConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToPostConnectionEdge';
+export type GraphCms_RootQueryToPostConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToPostConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Post>;
+  node?: Maybe<GraphCms_Post>;
 };
 
 /** Arguments for filtering the RootQueryToPostConnection connection */
-export type GraphCms_Wp_RootQueryToPostConnectionWhereArgs = {
+export type GraphCms_RootQueryToPostConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -13177,7 +13139,7 @@ export type GraphCms_Wp_RootQueryToPostConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -13187,7 +13149,7 @@ export type GraphCms_Wp_RootQueryToPostConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -13197,7 +13159,7 @@ export type GraphCms_Wp_RootQueryToPostConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -13210,8 +13172,8 @@ export type GraphCms_Wp_RootQueryToPostConnectionWhereArgs = {
   password?: Maybe<Scalars['String']>;
   /** Show Posts based on a keyword search */
   search?: Maybe<Scalars['String']>;
-  stati?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  stati?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<Scalars['String']>;
   /** Use Tag ID */
@@ -13237,31 +13199,31 @@ export type GraphCms_Wp_RootQueryToPostConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToProductCategoryConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToProductCategoryConnection';
+export type GraphCms_RootQueryToProductCategoryConnection = {
+  __typename?: 'GraphCMS_RootQueryToProductCategoryConnection';
   /** Edges for the RootQueryToProductCategoryConnection connection */
   edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_RootQueryToProductCategoryConnectionEdge>>
+    Array<Maybe<GraphCms_RootQueryToProductCategoryConnectionEdge>>
   >;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductCategory>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductCategory>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToProductCategoryConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToProductCategoryConnectionEdge';
+export type GraphCms_RootQueryToProductCategoryConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToProductCategoryConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductCategory>;
+  node?: Maybe<GraphCms_ProductCategory>;
 };
 
 /** Arguments for filtering the RootQueryToProductCategoryConnection connection */
-export type GraphCms_Wp_RootQueryToProductCategoryConnectionWhereArgs = {
+export type GraphCms_RootQueryToProductCategoryConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -13291,7 +13253,7 @@ export type GraphCms_Wp_RootQueryToProductCategoryConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -13316,27 +13278,27 @@ export type GraphCms_Wp_RootQueryToProductCategoryConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToProductConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToProductConnection';
+export type GraphCms_RootQueryToProductConnection = {
+  __typename?: 'GraphCMS_RootQueryToProductConnection';
   /** Edges for the RootQueryToProductConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToProductConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Product>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Product>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToProductConnectionEdge';
+export type GraphCms_RootQueryToProductConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Product>;
+  node?: Maybe<GraphCms_Product>;
 };
 
 /** Arguments for filtering the RootQueryToProductConnection connection */
-export type GraphCms_Wp_RootQueryToProductConnectionWhereArgs = {
+export type GraphCms_RootQueryToProductConnectionWhereArgs = {
   /** Limit result set to products with a specific attribute. Use the taxonomy name/attribute slug. */
   attribute?: Maybe<Scalars['String']>;
   /** Limit result set to products with a specific attribute term ID (required an assigned attribute). */
@@ -13354,7 +13316,7 @@ export type GraphCms_Wp_RootQueryToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of category IDs. */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to featured products. */
@@ -13368,7 +13330,7 @@ export type GraphCms_Wp_RootQueryToProductConnectionWhereArgs = {
   /** Limit result set to products on sale. */
   onSale?: Maybe<Scalars['Boolean']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
   parent?: Maybe<Scalars['Int']>;
   /** Specify objects whose parent is in an array */
@@ -13386,7 +13348,7 @@ export type GraphCms_Wp_RootQueryToProductConnectionWhereArgs = {
   /** Limit result set to products assigned a specific status. */
   status?: Maybe<Scalars['String']>;
   /** Limit result set to products in stock or out of stock. */
-  stockStatus?: Maybe<Array<Maybe<GraphCms_Wp_StockStatusEnum>>>;
+  stockStatus?: Maybe<Array<Maybe<GraphCms_StockStatusEnum>>>;
   /** Limit result set to products assigned a specific tag name. */
   tag?: Maybe<Scalars['String']>;
   /** Limit result set to products assigned a specific tag ID. */
@@ -13400,41 +13362,41 @@ export type GraphCms_Wp_RootQueryToProductConnectionWhereArgs = {
   /** Limit result set to products not assigned to a specific group of tag IDs. */
   tagSlugNotIn?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Limit result set to products with a specific tax class. */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Limit result set to products assigned a specific type. */
-  type?: Maybe<GraphCms_Wp_ProductTypesEnum>;
+  type?: Maybe<GraphCms_ProductTypesEnum>;
   /** Limit result set to products assigned to a group of specific types. */
-  typeIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products not assigned to a group of specific types. */
-  typeNotIn?: Maybe<Array<Maybe<GraphCms_Wp_ProductTypesEnum>>>;
+  typeNotIn?: Maybe<Array<Maybe<GraphCms_ProductTypesEnum>>>;
   /** Limit result set to products with a specific visibility level. */
-  visibility?: Maybe<GraphCms_Wp_CatalogVisibilityEnum>;
+  visibility?: Maybe<GraphCms_CatalogVisibilityEnum>;
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToProductTagConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToProductTagConnection';
+export type GraphCms_RootQueryToProductTagConnection = {
+  __typename?: 'GraphCMS_RootQueryToProductTagConnection';
   /** Edges for the RootQueryToProductTagConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToProductTagConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToProductTagConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductTag>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductTag>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToProductTagConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToProductTagConnectionEdge';
+export type GraphCms_RootQueryToProductTagConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToProductTagConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductTag>;
+  node?: Maybe<GraphCms_ProductTag>;
 };
 
 /** Arguments for filtering the RootQueryToProductTagConnection connection */
-export type GraphCms_Wp_RootQueryToProductTagConnectionWhereArgs = {
+export type GraphCms_RootQueryToProductTagConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -13464,7 +13426,7 @@ export type GraphCms_Wp_RootQueryToProductTagConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -13489,29 +13451,29 @@ export type GraphCms_Wp_RootQueryToProductTagConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToProductTypeConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToProductTypeConnection';
+export type GraphCms_RootQueryToProductTypeConnection = {
+  __typename?: 'GraphCMS_RootQueryToProductTypeConnection';
   /** Edges for the RootQueryToProductTypeConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToProductTypeConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToProductTypeConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ProductType>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ProductType>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToProductTypeConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToProductTypeConnectionEdge';
+export type GraphCms_RootQueryToProductTypeConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToProductTypeConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ProductType>;
+  node?: Maybe<GraphCms_ProductType>;
 };
 
 /** Arguments for filtering the RootQueryToProductTypeConnection connection */
-export type GraphCms_Wp_RootQueryToProductTypeConnectionWhereArgs = {
+export type GraphCms_RootQueryToProductTypeConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -13541,7 +13503,7 @@ export type GraphCms_Wp_RootQueryToProductTypeConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -13566,35 +13528,35 @@ export type GraphCms_Wp_RootQueryToProductTypeConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToRefundConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToRefundConnection';
+export type GraphCms_RootQueryToRefundConnection = {
+  __typename?: 'GraphCMS_RootQueryToRefundConnection';
   /** Edges for the RootQueryToRefundConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToRefundConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToRefundConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Refund>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Refund>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToRefundConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToRefundConnectionEdge';
+export type GraphCms_RootQueryToRefundConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToRefundConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Refund>;
+  node?: Maybe<GraphCms_Refund>;
 };
 
 /** Arguments for filtering the RootQueryToRefundConnection connection */
-export type GraphCms_Wp_RootQueryToRefundConnectionWhereArgs = {
+export type GraphCms_RootQueryToRefundConnectionWhereArgs = {
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** Ensure result set excludes specific IDs. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Limit result set to specific ids. */
   include?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_WcConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_WcConnectionOrderbyInput>>>;
   /** Limit result set to refunds from a specific group of order IDs. */
   orderIn?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Use ID to return only children. Use 0 to return only top-level items */
@@ -13610,29 +13572,29 @@ export type GraphCms_Wp_RootQueryToRefundConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToRevisionConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToRevisionConnection';
+export type GraphCms_RootQueryToRevisionConnection = {
+  __typename?: 'GraphCMS_RootQueryToRevisionConnection';
   /** Edges for the RootQueryToRevisionConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToRevisionConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToRevisionConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Revision>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Revision>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToRevisionConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToRevisionConnectionEdge';
+export type GraphCms_RootQueryToRevisionConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToRevisionConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Revision>;
+  node?: Maybe<GraphCms_Revision>;
 };
 
 /** Arguments for filtering the RootQueryToRevisionConnection connection */
-export type GraphCms_Wp_RootQueryToRevisionConnectionWhereArgs = {
+export type GraphCms_RootQueryToRevisionConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -13658,7 +13620,7 @@ export type GraphCms_Wp_RootQueryToRevisionConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -13668,7 +13630,7 @@ export type GraphCms_Wp_RootQueryToRevisionConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -13678,7 +13640,7 @@ export type GraphCms_Wp_RootQueryToRevisionConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -13716,31 +13678,29 @@ export type GraphCms_Wp_RootQueryToRevisionConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToShippingClassConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToShippingClassConnection';
+export type GraphCms_RootQueryToShippingClassConnection = {
+  __typename?: 'GraphCMS_RootQueryToShippingClassConnection';
   /** Edges for the RootQueryToShippingClassConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_RootQueryToShippingClassConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToShippingClassConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ShippingClass>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ShippingClass>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToShippingClassConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToShippingClassConnectionEdge';
+export type GraphCms_RootQueryToShippingClassConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToShippingClassConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ShippingClass>;
+  node?: Maybe<GraphCms_ShippingClass>;
 };
 
 /** Arguments for filtering the RootQueryToShippingClassConnection connection */
-export type GraphCms_Wp_RootQueryToShippingClassConnectionWhereArgs = {
+export type GraphCms_RootQueryToShippingClassConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -13770,7 +13730,7 @@ export type GraphCms_Wp_RootQueryToShippingClassConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -13795,51 +13755,49 @@ export type GraphCms_Wp_RootQueryToShippingClassConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToShippingMethodConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToShippingMethodConnection';
+export type GraphCms_RootQueryToShippingMethodConnection = {
+  __typename?: 'GraphCMS_RootQueryToShippingMethodConnection';
   /** Edges for the RootQueryToShippingMethodConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_RootQueryToShippingMethodConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToShippingMethodConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_ShippingMethod>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_ShippingMethod>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToShippingMethodConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToShippingMethodConnectionEdge';
+export type GraphCms_RootQueryToShippingMethodConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToShippingMethodConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_ShippingMethod>;
+  node?: Maybe<GraphCms_ShippingMethod>;
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToTagConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToTagConnection';
+export type GraphCms_RootQueryToTagConnection = {
+  __typename?: 'GraphCMS_RootQueryToTagConnection';
   /** Edges for the RootQueryToTagConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToTagConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToTagConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Tag>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Tag>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToTagConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToTagConnectionEdge';
+export type GraphCms_RootQueryToTagConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToTagConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Tag>;
+  node?: Maybe<GraphCms_Tag>;
 };
 
 /** Arguments for filtering the RootQueryToTagConnection connection */
-export type GraphCms_Wp_RootQueryToTagConnectionWhereArgs = {
+export type GraphCms_RootQueryToTagConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -13869,7 +13827,7 @@ export type GraphCms_Wp_RootQueryToTagConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -13894,79 +13852,79 @@ export type GraphCms_Wp_RootQueryToTagConnectionWhereArgs = {
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToTaxRateConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToTaxRateConnection';
+export type GraphCms_RootQueryToTaxRateConnection = {
+  __typename?: 'GraphCMS_RootQueryToTaxRateConnection';
   /** Edges for the RootQueryToTaxRateConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToTaxRateConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToTaxRateConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_TaxRate>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_TaxRate>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToTaxRateConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToTaxRateConnectionEdge';
+export type GraphCms_RootQueryToTaxRateConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToTaxRateConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_TaxRate>;
+  node?: Maybe<GraphCms_TaxRate>;
 };
 
 /** Arguments for filtering the RootQueryToTaxRateConnection connection */
-export type GraphCms_Wp_RootQueryToTaxRateConnectionWhereArgs = {
+export type GraphCms_RootQueryToTaxRateConnectionWhereArgs = {
   /** Sort by tax class */
   class?: Maybe<Scalars['String']>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_TaxRateConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_TaxRateConnectionOrderbyInput>>>;
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToThemeConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToThemeConnection';
+export type GraphCms_RootQueryToThemeConnection = {
+  __typename?: 'GraphCMS_RootQueryToThemeConnection';
   /** Edges for the RootQueryToThemeConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToThemeConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToThemeConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Theme>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Theme>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToThemeConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToThemeConnectionEdge';
+export type GraphCms_RootQueryToThemeConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToThemeConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Theme>;
+  node?: Maybe<GraphCms_Theme>;
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToUserConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToUserConnection';
+export type GraphCms_RootQueryToUserConnection = {
+  __typename?: 'GraphCMS_RootQueryToUserConnection';
   /** Edges for the RootQueryToUserConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToUserConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToUserConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_User>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_User>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToUserConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToUserConnectionEdge';
+export type GraphCms_RootQueryToUserConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToUserConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_User>;
+  node?: Maybe<GraphCms_User>;
 };
 
 /** Arguments for filtering the RootQueryToUserConnection connection */
-export type GraphCms_Wp_RootQueryToUserConnectionWhereArgs = {
+export type GraphCms_RootQueryToUserConnectionWhereArgs = {
   /** Array of IDs of users whose unapproved comments will be returned by the query regardless of status. */
   exclude?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** Pass an array of post types to filter results to users who have published posts in those post types. */
-  hasPublishedPosts?: Maybe<Array<Maybe<GraphCms_Wp_PostTypeEnum>>>;
+  hasPublishedPosts?: Maybe<Array<Maybe<GraphCms_PostTypeEnum>>>;
   /** Array of comment IDs to include. */
   include?: Maybe<Array<Maybe<Scalars['Int']>>>;
   /** The user login. */
@@ -13984,68 +13942,64 @@ export type GraphCms_Wp_RootQueryToUserConnectionWhereArgs = {
   /** An array of role names that users must match to be included in results. Note
    * that this is an inclusive list: users must match *each* role.
    */
-  role?: Maybe<GraphCms_Wp_UserRoleEnum>;
+  role?: Maybe<GraphCms_UserRoleEnum>;
   /** An array of role names. Matched users must have at least one of these roles. */
-  roleIn?: Maybe<Array<Maybe<GraphCms_Wp_UserRoleEnum>>>;
+  roleIn?: Maybe<Array<Maybe<GraphCms_UserRoleEnum>>>;
   /** An array of role names to exclude. Users matching one or more of these roles will not be included in results. */
-  roleNotIn?: Maybe<Array<Maybe<GraphCms_Wp_UserRoleEnum>>>;
+  roleNotIn?: Maybe<Array<Maybe<GraphCms_UserRoleEnum>>>;
   /** Search keyword. Searches for possible string matches on columns. When
    * "searchColumns" is left empty, it tries to determine which column to search in
    * based on search string.
    */
   search?: Maybe<Scalars['String']>;
   /** Array of column names to be searched. Accepts 'ID', 'login', 'nicename', 'email', 'url'. */
-  searchColumns?: Maybe<
-    Array<Maybe<GraphCms_Wp_UsersConnectionSearchColumnEnum>>
-  >;
+  searchColumns?: Maybe<Array<Maybe<GraphCms_UsersConnectionSearchColumnEnum>>>;
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToUserRoleConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToUserRoleConnection';
+export type GraphCms_RootQueryToUserRoleConnection = {
+  __typename?: 'GraphCMS_RootQueryToUserRoleConnection';
   /** Edges for the RootQueryToUserRoleConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_RootQueryToUserRoleConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToUserRoleConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_UserRole>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_UserRole>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToUserRoleConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToUserRoleConnectionEdge';
+export type GraphCms_RootQueryToUserRoleConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToUserRoleConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_UserRole>;
+  node?: Maybe<GraphCms_UserRole>;
 };
 
 /** Connection between the RootQuery type and the RootQuery type */
-export type GraphCms_Wp_RootQueryToVisibleProductConnection = {
-  __typename?: 'GraphCMS_WP_RootQueryToVisibleProductConnection';
+export type GraphCms_RootQueryToVisibleProductConnection = {
+  __typename?: 'GraphCMS_RootQueryToVisibleProductConnection';
   /** Edges for the RootQueryToVisibleProductConnection connection */
-  edges?: Maybe<
-    Array<Maybe<GraphCms_Wp_RootQueryToVisibleProductConnectionEdge>>
-  >;
+  edges?: Maybe<Array<Maybe<GraphCms_RootQueryToVisibleProductConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_VisibleProduct>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_VisibleProduct>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  taxonomyInfo?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomyInfo?: Maybe<GraphCms_Taxonomy>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_RootQueryToVisibleProductConnectionEdge = {
-  __typename?: 'GraphCMS_WP_RootQueryToVisibleProductConnectionEdge';
+export type GraphCms_RootQueryToVisibleProductConnectionEdge = {
+  __typename?: 'GraphCMS_RootQueryToVisibleProductConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_VisibleProduct>;
+  node?: Maybe<GraphCms_VisibleProduct>;
 };
 
 /** Arguments for filtering the RootQueryToVisibleProductConnection connection */
-export type GraphCms_Wp_RootQueryToVisibleProductConnectionWhereArgs = {
+export type GraphCms_RootQueryToVisibleProductConnectionWhereArgs = {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
   cacheDomain?: Maybe<Scalars['String']>;
   /** True to limit results to terms that have no children. This parameter has no
@@ -14075,7 +14029,7 @@ export type GraphCms_Wp_RootQueryToVisibleProductConnectionWhereArgs = {
   /** Array of object IDs. Results will be limited to terms associated with these objects. */
   objectIds?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: Maybe<GraphCms_Wp_TermObjectsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_TermObjectsConnectionOrderbyEnum>;
   /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
   padCounts?: Maybe<Scalars['Boolean']>;
   /** Parent term ID to retrieve direct-child terms of. Default empty. */
@@ -14100,23 +14054,23 @@ export type GraphCms_Wp_RootQueryToVisibleProductConnectionWhereArgs = {
 };
 
 /** Input for the sendPasswordResetEmail mutation */
-export type GraphCms_Wp_SendPasswordResetEmailInput = {
+export type GraphCms_SendPasswordResetEmailInput = {
   clientMutationId: Scalars['String'];
   /** A string that contains the user's username or email address. */
   username: Scalars['String'];
 };
 
 /** The payload for the sendPasswordResetEmail mutation */
-export type GraphCms_Wp_SendPasswordResetEmailPayload = {
-  __typename?: 'GraphCMS_WP_SendPasswordResetEmailPayload';
+export type GraphCms_SendPasswordResetEmailPayload = {
+  __typename?: 'GraphCMS_SendPasswordResetEmailPayload';
   clientMutationId: Scalars['String'];
   /** The user that the password reset email was sent to */
-  user?: Maybe<GraphCms_Wp_User>;
+  user?: Maybe<GraphCms_User>;
 };
 
 /** All of the registered settings */
-export type GraphCms_Wp_Settings = {
-  __typename?: 'GraphCMS_WP_Settings';
+export type GraphCms_Settings = {
+  __typename?: 'GraphCMS_Settings';
   /** Luba uute artiklite kommenteerimist */
   discussionSettingsDefaultCommentStatus?: Maybe<Scalars['String']>;
   /** Luba uute artiklite juures teiste ajaveebide märguandeid (pingback- ja trackback-viited). */
@@ -14150,8 +14104,8 @@ export type GraphCms_Wp_Settings = {
 };
 
 /** The shippingClass type */
-export type GraphCms_Wp_ShippingClass = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_ShippingClass';
+export type GraphCms_ShippingClass = GraphCms_Node & {
+  __typename?: 'GraphCMS_ShippingClass';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -14169,7 +14123,7 @@ export type GraphCms_Wp_ShippingClass = GraphCms_Wp_Node & {
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
@@ -14177,8 +14131,8 @@ export type GraphCms_Wp_ShippingClass = GraphCms_Wp_Node & {
 };
 
 /** a shipping line object */
-export type GraphCms_Wp_ShippingLine = {
-  __typename?: 'GraphCMS_WP_ShippingLine';
+export type GraphCms_ShippingLine = {
+  __typename?: 'GraphCMS_ShippingLine';
   /** The Id of the order item. */
   itemId?: Maybe<Scalars['Int']>;
   /** Shipping Line&#039;s shipping method name */
@@ -14186,11 +14140,11 @@ export type GraphCms_Wp_ShippingLine = {
   /** The Id of the order the order item belongs to. */
   orderId?: Maybe<Scalars['Int']>;
   /** Shipping Line&#039;s shipping method */
-  shippingMethod?: Maybe<GraphCms_Wp_ShippingMethod>;
+  shippingMethod?: Maybe<GraphCms_ShippingMethod>;
   /** Line tax class */
-  taxClass?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  taxClass?: Maybe<GraphCms_TaxClassEnum>;
   /** Line taxes */
-  taxes?: Maybe<Array<Maybe<GraphCms_Wp_OrderItemTax>>>;
+  taxes?: Maybe<Array<Maybe<GraphCms_OrderItemTax>>>;
   /** Line total (after discounts) */
   total?: Maybe<Scalars['String']>;
   /** Line total tax (after discounts) */
@@ -14198,8 +14152,8 @@ export type GraphCms_Wp_ShippingLine = {
 };
 
 /** A shipping method object */
-export type GraphCms_Wp_ShippingMethod = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_ShippingMethod';
+export type GraphCms_ShippingMethod = GraphCms_Node & {
+  __typename?: 'GraphCMS_ShippingMethod';
   /** Shipping method description. */
   description?: Maybe<Scalars['String']>;
   /** The globally unique identifier for the tax rate. */
@@ -14211,15 +14165,15 @@ export type GraphCms_Wp_ShippingMethod = GraphCms_Wp_Node & {
 };
 
 /** Product stock status enumeration */
-export enum GraphCms_Wp_StockStatusEnum {
+export enum GraphCms_StockStatusEnum {
   InStock = 'IN_STOCK',
   OnBackorder = 'ON_BACKORDER',
   OutOfStock = 'OUT_OF_STOCK',
 }
 
 /** The tag type */
-export type GraphCms_Wp_Tag = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Tag';
+export type GraphCms_Tag = GraphCms_Node & {
+  __typename?: 'GraphCMS_Tag';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -14233,13 +14187,13 @@ export type GraphCms_Wp_Tag = GraphCms_Wp_Node & {
   /** The human friendly name of the object. */
   name?: Maybe<Scalars['String']>;
   /** Connection between the tag type and the tag type */
-  posts?: Maybe<GraphCms_Wp_TagToPostConnection>;
+  posts?: Maybe<GraphCms_TagToPostConnection>;
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The id field matches the WP_Post-&gt;ID field. */
   tagId?: Maybe<Scalars['Int']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
@@ -14247,38 +14201,38 @@ export type GraphCms_Wp_Tag = GraphCms_Wp_Node & {
 };
 
 /** The tag type */
-export type GraphCms_Wp_TagPostsArgs = {
+export type GraphCms_TagPostsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_TagToPostConnectionWhereArgs>;
+  where?: Maybe<GraphCms_TagToPostConnectionWhereArgs>;
 };
 
 /** Connection between the tag type and the tag type */
-export type GraphCms_Wp_TagToPostConnection = {
-  __typename?: 'GraphCMS_WP_TagToPostConnection';
+export type GraphCms_TagToPostConnection = {
+  __typename?: 'GraphCMS_TagToPostConnection';
   /** Edges for the TagToPostConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_TagToPostConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_TagToPostConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Post>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Post>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_TagToPostConnectionEdge = {
-  __typename?: 'GraphCMS_WP_TagToPostConnectionEdge';
+export type GraphCms_TagToPostConnectionEdge = {
+  __typename?: 'GraphCMS_TagToPostConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Post>;
+  node?: Maybe<GraphCms_Post>;
 };
 
 /** Arguments for filtering the TagToPostConnection connection */
-export type GraphCms_Wp_TagToPostConnectionWhereArgs = {
+export type GraphCms_TagToPostConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -14304,7 +14258,7 @@ export type GraphCms_Wp_TagToPostConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -14314,7 +14268,7 @@ export type GraphCms_Wp_TagToPostConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -14324,7 +14278,7 @@ export type GraphCms_Wp_TagToPostConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -14337,8 +14291,8 @@ export type GraphCms_Wp_TagToPostConnectionWhereArgs = {
   password?: Maybe<Scalars['String']>;
   /** Show Posts based on a keyword search */
   search?: Maybe<Scalars['String']>;
-  stati?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  stati?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<Scalars['String']>;
   /** Use Tag ID */
@@ -14364,7 +14318,7 @@ export type GraphCms_Wp_TagToPostConnectionWhereArgs = {
 };
 
 /** Tax class enumeration */
-export enum GraphCms_Wp_TaxClassEnum {
+export enum GraphCms_TaxClassEnum {
   /** Inherits Tax class from cart */
   InheritCart = 'INHERIT_CART',
   ReducedRate = 'REDUCED_RATE',
@@ -14374,8 +14328,8 @@ export enum GraphCms_Wp_TaxClassEnum {
 }
 
 /** a tax line object */
-export type GraphCms_Wp_TaxLine = {
-  __typename?: 'GraphCMS_WP_TaxLine';
+export type GraphCms_TaxLine = {
+  __typename?: 'GraphCMS_TaxLine';
   /** Is this a compound tax rate? */
   isCompound?: Maybe<Scalars['Boolean']>;
   /** The Id of the order item. */
@@ -14389,18 +14343,18 @@ export type GraphCms_Wp_TaxLine = {
   /** Tax line&#039;s shipping tax total */
   shippingTaxTotal?: Maybe<Scalars['String']>;
   /** Tax line&#039;s tax rate */
-  taxRate?: Maybe<GraphCms_Wp_TaxRate>;
+  taxRate?: Maybe<GraphCms_TaxRate>;
   /** Tax total (not including shipping taxes) */
   taxTotal?: Maybe<Scalars['String']>;
 };
 
 /** A taxonomy object */
-export type GraphCms_Wp_Taxonomy = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Taxonomy';
+export type GraphCms_Taxonomy = GraphCms_Node & {
+  __typename?: 'GraphCMS_Taxonomy';
   /** A list of Post Types associated with the taxonomy */
   connectedPostTypeNames?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** List of Post Types connected to the Taxonomy */
-  connectedPostTypes?: Maybe<Array<Maybe<GraphCms_Wp_PostType>>>;
+  connectedPostTypes?: Maybe<Array<Maybe<GraphCms_PostType>>>;
   /** Description of the taxonomy. This field is equivalent to WP_Taxonomy-&gt;description */
   description?: Maybe<Scalars['String']>;
   /** The plural name of the post type within the GraphQL Schema. */
@@ -14441,17 +14395,17 @@ export type GraphCms_Wp_Taxonomy = GraphCms_Wp_Node & {
 };
 
 /** A taxonomy object */
-export type GraphCms_Wp_TaxonomyConnectedPostTypeNamesArgs = {
-  types?: Maybe<Array<Maybe<GraphCms_Wp_PostTypeEnum>>>;
+export type GraphCms_TaxonomyConnectedPostTypeNamesArgs = {
+  types?: Maybe<Array<Maybe<GraphCms_PostTypeEnum>>>;
 };
 
 /** A taxonomy object */
-export type GraphCms_Wp_TaxonomyConnectedPostTypesArgs = {
-  types?: Maybe<Array<Maybe<GraphCms_Wp_PostTypeEnum>>>;
+export type GraphCms_TaxonomyConnectedPostTypesArgs = {
+  types?: Maybe<Array<Maybe<GraphCms_PostTypeEnum>>>;
 };
 
 /** Allowed taxonomies */
-export enum GraphCms_Wp_TaxonomyEnum {
+export enum GraphCms_TaxonomyEnum {
   Category = 'CATEGORY',
   Pahind = 'PAHIND',
   Pahulk = 'PAHULK',
@@ -14477,12 +14431,12 @@ export enum GraphCms_Wp_TaxonomyEnum {
 }
 
 /** A Tax rate object */
-export type GraphCms_Wp_TaxRate = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_TaxRate';
+export type GraphCms_TaxRate = GraphCms_Node & {
+  __typename?: 'GraphCMS_TaxRate';
   /** City name. */
   city?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Tax class. Default is standard. */
-  class?: Maybe<GraphCms_Wp_TaxClassEnum>;
+  class?: Maybe<GraphCms_TaxClassEnum>;
   /** Whether or not this is a compound rate. */
   compound?: Maybe<Scalars['Boolean']>;
   /** Country ISO 3166 code. */
@@ -14508,26 +14462,26 @@ export type GraphCms_Wp_TaxRate = GraphCms_Wp_Node & {
 };
 
 /** Field to order the connection by */
-export enum GraphCms_Wp_TaxRateConnectionOrderbyEnum {
+export enum GraphCms_TaxRateConnectionOrderbyEnum {
   Id = 'ID',
   Order = 'ORDER',
 }
 
 /** Options for ordering the connection */
-export type GraphCms_Wp_TaxRateConnectionOrderbyInput = {
-  field: GraphCms_Wp_TaxRateConnectionOrderbyEnum;
-  order?: Maybe<GraphCms_Wp_OrderEnum>;
+export type GraphCms_TaxRateConnectionOrderbyInput = {
+  field: GraphCms_TaxRateConnectionOrderbyEnum;
+  order?: Maybe<GraphCms_OrderEnum>;
 };
 
 /** Product tax status enumeration */
-export enum GraphCms_Wp_TaxStatusEnum {
+export enum GraphCms_TaxStatusEnum {
   None = 'NONE',
   Shipping = 'SHIPPING',
   Taxable = 'TAXABLE',
 }
 
 /** Options for ordering the connection by */
-export enum GraphCms_Wp_TermObjectsConnectionOrderbyEnum {
+export enum GraphCms_TermObjectsConnectionOrderbyEnum {
   Count = 'COUNT',
   Description = 'DESCRIPTION',
   Name = 'NAME',
@@ -14537,33 +14491,33 @@ export enum GraphCms_Wp_TermObjectsConnectionOrderbyEnum {
   TermOrder = 'TERM_ORDER',
 }
 
-export type GraphCms_Wp_TermObjectUnion =
-  | GraphCms_Wp_Category
-  | GraphCms_Wp_Tag
-  | GraphCms_Wp_ProductType
-  | GraphCms_Wp_VisibleProduct
-  | GraphCms_Wp_ProductCategory
-  | GraphCms_Wp_ProductTag
-  | GraphCms_Wp_ShippingClass
-  | GraphCms_Wp_PaHind
-  | GraphCms_Wp_PaHulk
-  | GraphCms_Wp_PaKasutusaeg
-  | GraphCms_Wp_PaKogus
-  | GraphCms_Wp_PaKontuur
-  | GraphCms_Wp_PaKoostisained
-  | GraphCms_Wp_PaLaadimisaeg
-  | GraphCms_Wp_PaMaterjal
-  | GraphCms_Wp_PaMuratasa
-  | GraphCms_Wp_PaOhutus
-  | GraphCms_Wp_PaPatareid
-  | GraphCms_Wp_PaSuurus
-  | GraphCms_Wp_PaVariant
-  | GraphCms_Wp_PaVarv
-  | GraphCms_Wp_PaVeekindlus;
+export type GraphCms_TermObjectUnion =
+  | GraphCms_Category
+  | GraphCms_Tag
+  | GraphCms_ProductType
+  | GraphCms_VisibleProduct
+  | GraphCms_ProductCategory
+  | GraphCms_ProductTag
+  | GraphCms_ShippingClass
+  | GraphCms_PaHind
+  | GraphCms_PaHulk
+  | GraphCms_PaKasutusaeg
+  | GraphCms_PaKogus
+  | GraphCms_PaKontuur
+  | GraphCms_PaKoostisained
+  | GraphCms_PaLaadimisaeg
+  | GraphCms_PaMaterjal
+  | GraphCms_PaMuratasa
+  | GraphCms_PaOhutus
+  | GraphCms_PaPatareid
+  | GraphCms_PaSuurus
+  | GraphCms_PaVariant
+  | GraphCms_PaVarv
+  | GraphCms_PaVeekindlus;
 
 /** A theme object */
-export type GraphCms_Wp_Theme = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_Theme';
+export type GraphCms_Theme = GraphCms_Node & {
+  __typename?: 'GraphCMS_Theme';
   /** Name of the theme author(s), could also be a company name. This field is
    * equivalent to WP_Theme-&gt;get( &quot;Author&quot; ).
    */
@@ -14599,7 +14553,7 @@ export type GraphCms_Wp_Theme = GraphCms_Wp_Node & {
 };
 
 /** Input for the UpdateCategory mutation */
-export type GraphCms_Wp_UpdateCategoryInput = {
+export type GraphCms_UpdateCategoryInput = {
   /** The slug that the category will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -14622,15 +14576,15 @@ export type GraphCms_Wp_UpdateCategoryInput = {
 };
 
 /** The payload for the UpdateCategory mutation */
-export type GraphCms_Wp_UpdateCategoryPayload = {
-  __typename?: 'GraphCMS_WP_UpdateCategoryPayload';
+export type GraphCms_UpdateCategoryPayload = {
+  __typename?: 'GraphCMS_UpdateCategoryPayload';
   /** The created category */
-  category?: Maybe<GraphCms_Wp_Category>;
+  category?: Maybe<GraphCms_Category>;
   clientMutationId: Scalars['String'];
 };
 
 /** Input for the updateComment mutation */
-export type GraphCms_Wp_UpdateCommentInput = {
+export type GraphCms_UpdateCommentInput = {
   /** User agent used to post the comment. */
   agent?: Maybe<Scalars['String']>;
   /** The approval status of the comment. */
@@ -14665,11 +14619,11 @@ export type GraphCms_Wp_UpdateCommentInput = {
 };
 
 /** The payload for the updateComment mutation */
-export type GraphCms_Wp_UpdateCommentPayload = {
-  __typename?: 'GraphCMS_WP_UpdateCommentPayload';
+export type GraphCms_UpdateCommentPayload = {
+  __typename?: 'GraphCMS_UpdateCommentPayload';
   clientMutationId: Scalars['String'];
   /** The comment that was created */
-  comment?: Maybe<GraphCms_Wp_Comment>;
+  comment?: Maybe<GraphCms_Comment>;
   /** Whether the mutation succeeded. If the comment is not approved, the server
    * will not return the comment to a non authenticated user, but a success message
    * can be returned if the create succeeded, and the client can optimistically add
@@ -14679,11 +14633,11 @@ export type GraphCms_Wp_UpdateCommentPayload = {
 };
 
 /** Input for the updateCustomer mutation */
-export type GraphCms_Wp_UpdateCustomerInput = {
+export type GraphCms_UpdateCustomerInput = {
   /** User's AOL IM account. */
   aim?: Maybe<Scalars['String']>;
   /** Customer billing information */
-  billing?: Maybe<GraphCms_Wp_CustomerAddressInput>;
+  billing?: Maybe<GraphCms_CustomerAddressInput>;
   clientMutationId: Scalars['String'];
   /** A string containing content about the user. */
   description?: Maybe<Scalars['String']>;
@@ -14717,7 +14671,7 @@ export type GraphCms_Wp_UpdateCustomerInput = {
   /** An array of roles to be assigned to the user. */
   roles?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** Customer shipping address */
-  shipping?: Maybe<GraphCms_Wp_CustomerAddressInput>;
+  shipping?: Maybe<GraphCms_CustomerAddressInput>;
   /** Customer shipping is identical to billing address */
   shippingSameAsBilling?: Maybe<Scalars['Boolean']>;
   /** A string containing the user's URL for the user's web site. */
@@ -14727,14 +14681,14 @@ export type GraphCms_Wp_UpdateCustomerInput = {
 };
 
 /** The payload for the updateCustomer mutation */
-export type GraphCms_Wp_UpdateCustomerPayload = {
-  __typename?: 'GraphCMS_WP_UpdateCustomerPayload';
+export type GraphCms_UpdateCustomerPayload = {
+  __typename?: 'GraphCMS_UpdateCustomerPayload';
   clientMutationId: Scalars['String'];
-  customer?: Maybe<GraphCms_Wp_Customer>;
+  customer?: Maybe<GraphCms_Customer>;
 };
 
 /** Input for the updateItemQuantity mutation */
-export type GraphCms_Wp_UpdateItemQuantityInput = {
+export type GraphCms_UpdateItemQuantityInput = {
   clientMutationId: Scalars['String'];
   /** Cart item being updated */
   key: Scalars['ID'];
@@ -14743,14 +14697,14 @@ export type GraphCms_Wp_UpdateItemQuantityInput = {
 };
 
 /** The payload for the updateItemQuantity mutation */
-export type GraphCms_Wp_UpdateItemQuantityPayload = {
-  __typename?: 'GraphCMS_WP_UpdateItemQuantityPayload';
-  cartItem?: Maybe<GraphCms_Wp_CartItem>;
+export type GraphCms_UpdateItemQuantityPayload = {
+  __typename?: 'GraphCMS_UpdateItemQuantityPayload';
+  cartItem?: Maybe<GraphCms_CartItem>;
   clientMutationId: Scalars['String'];
 };
 
 /** Input for the updateMediaItem mutation */
-export type GraphCms_Wp_UpdateMediaItemInput = {
+export type GraphCms_UpdateMediaItemInput = {
   /** Alternative text to display when mediaItem is not displayed */
   altText?: Maybe<Scalars['String']>;
   /** The userId to assign as the author of the mediaItem */
@@ -14769,7 +14723,7 @@ export type GraphCms_Wp_UpdateMediaItemInput = {
   /** The file name of the mediaItem */
   filePath?: Maybe<Scalars['String']>;
   /** The file type of the mediaItem */
-  fileType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  fileType?: Maybe<GraphCms_MimeTypeEnum>;
   /** The ID of the mediaItem object */
   id: Scalars['ID'];
   /** The WordPress post ID or the graphQL postId of the parent object */
@@ -14779,20 +14733,20 @@ export type GraphCms_Wp_UpdateMediaItemInput = {
   /** The slug of the mediaItem */
   slug?: Maybe<Scalars['String']>;
   /** The status of the mediaItem */
-  status?: Maybe<GraphCms_Wp_MediaItemStatusEnum>;
+  status?: Maybe<GraphCms_MediaItemStatusEnum>;
   /** The title of the mediaItem */
   title?: Maybe<Scalars['String']>;
 };
 
 /** The payload for the updateMediaItem mutation */
-export type GraphCms_Wp_UpdateMediaItemPayload = {
-  __typename?: 'GraphCMS_WP_UpdateMediaItemPayload';
+export type GraphCms_UpdateMediaItemPayload = {
+  __typename?: 'GraphCMS_UpdateMediaItemPayload';
   clientMutationId: Scalars['String'];
-  mediaItem?: Maybe<GraphCms_Wp_MediaItem>;
+  mediaItem?: Maybe<GraphCms_MediaItem>;
 };
 
 /** Input for the updatePage mutation */
-export type GraphCms_Wp_UpdatePageInput = {
+export type GraphCms_UpdatePageInput = {
   /** The userId to assign as the author of the post */
   authorId?: Maybe<Scalars['ID']>;
   clientMutationId: Scalars['String'];
@@ -14823,7 +14777,7 @@ export type GraphCms_Wp_UpdatePageInput = {
    * WP_Post->post_mime_type and the post_mime_type column in the "post_objects"
    * database table.
    */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** The ID of the parent object */
   parentId?: Maybe<Scalars['ID']>;
   /** The password used to protect the content of the object */
@@ -14835,7 +14789,7 @@ export type GraphCms_Wp_UpdatePageInput = {
   /** The slug of the object */
   slug?: Maybe<Scalars['String']>;
   /** The status of the object */
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** The title of the post */
   title?: Maybe<Scalars['String']>;
   /** URLs queued to be pinged. */
@@ -14843,14 +14797,14 @@ export type GraphCms_Wp_UpdatePageInput = {
 };
 
 /** The payload for the updatePage mutation */
-export type GraphCms_Wp_UpdatePagePayload = {
-  __typename?: 'GraphCMS_WP_UpdatePagePayload';
+export type GraphCms_UpdatePagePayload = {
+  __typename?: 'GraphCMS_UpdatePagePayload';
   clientMutationId: Scalars['String'];
-  page?: Maybe<GraphCms_Wp_Page>;
+  page?: Maybe<GraphCms_Page>;
 };
 
 /** Input for the UpdatePaHind mutation */
-export type GraphCms_Wp_UpdatePaHindInput = {
+export type GraphCms_UpdatePaHindInput = {
   /** The slug that the pa_hind will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -14871,15 +14825,15 @@ export type GraphCms_Wp_UpdatePaHindInput = {
 };
 
 /** The payload for the UpdatePaHind mutation */
-export type GraphCms_Wp_UpdatePaHindPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaHindPayload';
+export type GraphCms_UpdatePaHindPayload = {
+  __typename?: 'GraphCMS_UpdatePaHindPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_hind */
-  paHind?: Maybe<GraphCms_Wp_PaHind>;
+  paHind?: Maybe<GraphCms_PaHind>;
 };
 
 /** Input for the UpdatePaHulk mutation */
-export type GraphCms_Wp_UpdatePaHulkInput = {
+export type GraphCms_UpdatePaHulkInput = {
   /** The slug that the pa_hulk will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -14900,15 +14854,15 @@ export type GraphCms_Wp_UpdatePaHulkInput = {
 };
 
 /** The payload for the UpdatePaHulk mutation */
-export type GraphCms_Wp_UpdatePaHulkPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaHulkPayload';
+export type GraphCms_UpdatePaHulkPayload = {
+  __typename?: 'GraphCMS_UpdatePaHulkPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_hulk */
-  paHulk?: Maybe<GraphCms_Wp_PaHulk>;
+  paHulk?: Maybe<GraphCms_PaHulk>;
 };
 
 /** Input for the UpdatePaKasutusaeg mutation */
-export type GraphCms_Wp_UpdatePaKasutusaegInput = {
+export type GraphCms_UpdatePaKasutusaegInput = {
   /** The slug that the pa_kasutusaeg will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -14929,15 +14883,15 @@ export type GraphCms_Wp_UpdatePaKasutusaegInput = {
 };
 
 /** The payload for the UpdatePaKasutusaeg mutation */
-export type GraphCms_Wp_UpdatePaKasutusaegPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaKasutusaegPayload';
+export type GraphCms_UpdatePaKasutusaegPayload = {
+  __typename?: 'GraphCMS_UpdatePaKasutusaegPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_kasutusaeg */
-  paKasutusaeg?: Maybe<GraphCms_Wp_PaKasutusaeg>;
+  paKasutusaeg?: Maybe<GraphCms_PaKasutusaeg>;
 };
 
 /** Input for the UpdatePaKogus mutation */
-export type GraphCms_Wp_UpdatePaKogusInput = {
+export type GraphCms_UpdatePaKogusInput = {
   /** The slug that the pa_kogus will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -14958,15 +14912,15 @@ export type GraphCms_Wp_UpdatePaKogusInput = {
 };
 
 /** The payload for the UpdatePaKogus mutation */
-export type GraphCms_Wp_UpdatePaKogusPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaKogusPayload';
+export type GraphCms_UpdatePaKogusPayload = {
+  __typename?: 'GraphCMS_UpdatePaKogusPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_kogus */
-  paKogus?: Maybe<GraphCms_Wp_PaKogus>;
+  paKogus?: Maybe<GraphCms_PaKogus>;
 };
 
 /** Input for the UpdatePaKontuur mutation */
-export type GraphCms_Wp_UpdatePaKontuurInput = {
+export type GraphCms_UpdatePaKontuurInput = {
   /** The slug that the pa_kontuur will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -14987,15 +14941,15 @@ export type GraphCms_Wp_UpdatePaKontuurInput = {
 };
 
 /** The payload for the UpdatePaKontuur mutation */
-export type GraphCms_Wp_UpdatePaKontuurPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaKontuurPayload';
+export type GraphCms_UpdatePaKontuurPayload = {
+  __typename?: 'GraphCMS_UpdatePaKontuurPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_kontuur */
-  paKontuur?: Maybe<GraphCms_Wp_PaKontuur>;
+  paKontuur?: Maybe<GraphCms_PaKontuur>;
 };
 
 /** Input for the UpdatePaKoostisained mutation */
-export type GraphCms_Wp_UpdatePaKoostisainedInput = {
+export type GraphCms_UpdatePaKoostisainedInput = {
   /** The slug that the pa_koostisained will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15016,15 +14970,15 @@ export type GraphCms_Wp_UpdatePaKoostisainedInput = {
 };
 
 /** The payload for the UpdatePaKoostisained mutation */
-export type GraphCms_Wp_UpdatePaKoostisainedPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaKoostisainedPayload';
+export type GraphCms_UpdatePaKoostisainedPayload = {
+  __typename?: 'GraphCMS_UpdatePaKoostisainedPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_koostisained */
-  paKoostisained?: Maybe<GraphCms_Wp_PaKoostisained>;
+  paKoostisained?: Maybe<GraphCms_PaKoostisained>;
 };
 
 /** Input for the UpdatePaLaadimisaeg mutation */
-export type GraphCms_Wp_UpdatePaLaadimisaegInput = {
+export type GraphCms_UpdatePaLaadimisaegInput = {
   /** The slug that the pa_laadimisaeg will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15045,15 +14999,15 @@ export type GraphCms_Wp_UpdatePaLaadimisaegInput = {
 };
 
 /** The payload for the UpdatePaLaadimisaeg mutation */
-export type GraphCms_Wp_UpdatePaLaadimisaegPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaLaadimisaegPayload';
+export type GraphCms_UpdatePaLaadimisaegPayload = {
+  __typename?: 'GraphCMS_UpdatePaLaadimisaegPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_laadimisaeg */
-  paLaadimisaeg?: Maybe<GraphCms_Wp_PaLaadimisaeg>;
+  paLaadimisaeg?: Maybe<GraphCms_PaLaadimisaeg>;
 };
 
 /** Input for the UpdatePaMaterjal mutation */
-export type GraphCms_Wp_UpdatePaMaterjalInput = {
+export type GraphCms_UpdatePaMaterjalInput = {
   /** The slug that the pa_materjal will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15074,15 +15028,15 @@ export type GraphCms_Wp_UpdatePaMaterjalInput = {
 };
 
 /** The payload for the UpdatePaMaterjal mutation */
-export type GraphCms_Wp_UpdatePaMaterjalPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaMaterjalPayload';
+export type GraphCms_UpdatePaMaterjalPayload = {
+  __typename?: 'GraphCMS_UpdatePaMaterjalPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_materjal */
-  paMaterjal?: Maybe<GraphCms_Wp_PaMaterjal>;
+  paMaterjal?: Maybe<GraphCms_PaMaterjal>;
 };
 
 /** Input for the UpdatePaMuratasa mutation */
-export type GraphCms_Wp_UpdatePaMuratasaInput = {
+export type GraphCms_UpdatePaMuratasaInput = {
   /** The slug that the pa_muratasa will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15103,15 +15057,15 @@ export type GraphCms_Wp_UpdatePaMuratasaInput = {
 };
 
 /** The payload for the UpdatePaMuratasa mutation */
-export type GraphCms_Wp_UpdatePaMuratasaPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaMuratasaPayload';
+export type GraphCms_UpdatePaMuratasaPayload = {
+  __typename?: 'GraphCMS_UpdatePaMuratasaPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_muratasa */
-  paMuratasa?: Maybe<GraphCms_Wp_PaMuratasa>;
+  paMuratasa?: Maybe<GraphCms_PaMuratasa>;
 };
 
 /** Input for the UpdatePaOhutus mutation */
-export type GraphCms_Wp_UpdatePaOhutusInput = {
+export type GraphCms_UpdatePaOhutusInput = {
   /** The slug that the pa_ohutus will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15132,15 +15086,15 @@ export type GraphCms_Wp_UpdatePaOhutusInput = {
 };
 
 /** The payload for the UpdatePaOhutus mutation */
-export type GraphCms_Wp_UpdatePaOhutusPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaOhutusPayload';
+export type GraphCms_UpdatePaOhutusPayload = {
+  __typename?: 'GraphCMS_UpdatePaOhutusPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_ohutus */
-  paOhutus?: Maybe<GraphCms_Wp_PaOhutus>;
+  paOhutus?: Maybe<GraphCms_PaOhutus>;
 };
 
 /** Input for the UpdatePaPatareid mutation */
-export type GraphCms_Wp_UpdatePaPatareidInput = {
+export type GraphCms_UpdatePaPatareidInput = {
   /** The slug that the pa_patareid will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15161,15 +15115,15 @@ export type GraphCms_Wp_UpdatePaPatareidInput = {
 };
 
 /** The payload for the UpdatePaPatareid mutation */
-export type GraphCms_Wp_UpdatePaPatareidPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaPatareidPayload';
+export type GraphCms_UpdatePaPatareidPayload = {
+  __typename?: 'GraphCMS_UpdatePaPatareidPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_patareid */
-  paPatareid?: Maybe<GraphCms_Wp_PaPatareid>;
+  paPatareid?: Maybe<GraphCms_PaPatareid>;
 };
 
 /** Input for the UpdatePaSuurus mutation */
-export type GraphCms_Wp_UpdatePaSuurusInput = {
+export type GraphCms_UpdatePaSuurusInput = {
   /** The slug that the pa_suurus will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15190,15 +15144,15 @@ export type GraphCms_Wp_UpdatePaSuurusInput = {
 };
 
 /** The payload for the UpdatePaSuurus mutation */
-export type GraphCms_Wp_UpdatePaSuurusPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaSuurusPayload';
+export type GraphCms_UpdatePaSuurusPayload = {
+  __typename?: 'GraphCMS_UpdatePaSuurusPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_suurus */
-  paSuurus?: Maybe<GraphCms_Wp_PaSuurus>;
+  paSuurus?: Maybe<GraphCms_PaSuurus>;
 };
 
 /** Input for the UpdatePaVariant mutation */
-export type GraphCms_Wp_UpdatePaVariantInput = {
+export type GraphCms_UpdatePaVariantInput = {
   /** The slug that the pa_variant will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15219,15 +15173,15 @@ export type GraphCms_Wp_UpdatePaVariantInput = {
 };
 
 /** The payload for the UpdatePaVariant mutation */
-export type GraphCms_Wp_UpdatePaVariantPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaVariantPayload';
+export type GraphCms_UpdatePaVariantPayload = {
+  __typename?: 'GraphCMS_UpdatePaVariantPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_variant */
-  paVariant?: Maybe<GraphCms_Wp_PaVariant>;
+  paVariant?: Maybe<GraphCms_PaVariant>;
 };
 
 /** Input for the UpdatePaVarv mutation */
-export type GraphCms_Wp_UpdatePaVarvInput = {
+export type GraphCms_UpdatePaVarvInput = {
   /** The slug that the pa_varv will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15248,15 +15202,15 @@ export type GraphCms_Wp_UpdatePaVarvInput = {
 };
 
 /** The payload for the UpdatePaVarv mutation */
-export type GraphCms_Wp_UpdatePaVarvPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaVarvPayload';
+export type GraphCms_UpdatePaVarvPayload = {
+  __typename?: 'GraphCMS_UpdatePaVarvPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_varv */
-  paVarv?: Maybe<GraphCms_Wp_PaVarv>;
+  paVarv?: Maybe<GraphCms_PaVarv>;
 };
 
 /** Input for the UpdatePaVeekindlus mutation */
-export type GraphCms_Wp_UpdatePaVeekindlusInput = {
+export type GraphCms_UpdatePaVeekindlusInput = {
   /** The slug that the pa_veekindlus will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15277,19 +15231,19 @@ export type GraphCms_Wp_UpdatePaVeekindlusInput = {
 };
 
 /** The payload for the UpdatePaVeekindlus mutation */
-export type GraphCms_Wp_UpdatePaVeekindlusPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePaVeekindlusPayload';
+export type GraphCms_UpdatePaVeekindlusPayload = {
+  __typename?: 'GraphCMS_UpdatePaVeekindlusPayload';
   clientMutationId: Scalars['String'];
   /** The created pa_veekindlus */
-  paVeekindlus?: Maybe<GraphCms_Wp_PaVeekindlus>;
+  paVeekindlus?: Maybe<GraphCms_PaVeekindlus>;
 };
 
 /** Input for the updatePost mutation */
-export type GraphCms_Wp_UpdatePostInput = {
+export type GraphCms_UpdatePostInput = {
   /** The userId to assign as the author of the post */
   authorId?: Maybe<Scalars['ID']>;
   /** Set connections between the post and categories */
-  categories?: Maybe<GraphCms_Wp_PostCategoriesInput>;
+  categories?: Maybe<GraphCms_PostCategoriesInput>;
   clientMutationId: Scalars['String'];
   /** The number of comments. Even though WPGraphQL denotes this field as an
    * integer, in WordPress this field should be saved as a numeric string for compatibility.
@@ -15318,7 +15272,7 @@ export type GraphCms_Wp_UpdatePostInput = {
    * WP_Post->post_mime_type and the post_mime_type column in the "post_objects"
    * database table.
    */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** The ID of the parent object */
   parentId?: Maybe<Scalars['ID']>;
   /** The password used to protect the content of the object */
@@ -15330,9 +15284,9 @@ export type GraphCms_Wp_UpdatePostInput = {
   /** The slug of the object */
   slug?: Maybe<Scalars['String']>;
   /** The status of the object */
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Set connections between the post and tags */
-  tags?: Maybe<GraphCms_Wp_PostTagsInput>;
+  tags?: Maybe<GraphCms_PostTagsInput>;
   /** The title of the post */
   title?: Maybe<Scalars['String']>;
   /** URLs queued to be pinged. */
@@ -15340,14 +15294,14 @@ export type GraphCms_Wp_UpdatePostInput = {
 };
 
 /** The payload for the updatePost mutation */
-export type GraphCms_Wp_UpdatePostPayload = {
-  __typename?: 'GraphCMS_WP_UpdatePostPayload';
+export type GraphCms_UpdatePostPayload = {
+  __typename?: 'GraphCMS_UpdatePostPayload';
   clientMutationId: Scalars['String'];
-  post?: Maybe<GraphCms_Wp_Post>;
+  post?: Maybe<GraphCms_Post>;
 };
 
 /** Input for the UpdateProductCategory mutation */
-export type GraphCms_Wp_UpdateProductCategoryInput = {
+export type GraphCms_UpdateProductCategoryInput = {
   /** The slug that the product_cat will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15370,15 +15324,15 @@ export type GraphCms_Wp_UpdateProductCategoryInput = {
 };
 
 /** The payload for the UpdateProductCategory mutation */
-export type GraphCms_Wp_UpdateProductCategoryPayload = {
-  __typename?: 'GraphCMS_WP_UpdateProductCategoryPayload';
+export type GraphCms_UpdateProductCategoryPayload = {
+  __typename?: 'GraphCMS_UpdateProductCategoryPayload';
   clientMutationId: Scalars['String'];
   /** The created product_cat */
-  productCategory?: Maybe<GraphCms_Wp_ProductCategory>;
+  productCategory?: Maybe<GraphCms_ProductCategory>;
 };
 
 /** Input for the UpdateProductTag mutation */
-export type GraphCms_Wp_UpdateProductTagInput = {
+export type GraphCms_UpdateProductTagInput = {
   /** The slug that the product_tag will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15399,15 +15353,15 @@ export type GraphCms_Wp_UpdateProductTagInput = {
 };
 
 /** The payload for the UpdateProductTag mutation */
-export type GraphCms_Wp_UpdateProductTagPayload = {
-  __typename?: 'GraphCMS_WP_UpdateProductTagPayload';
+export type GraphCms_UpdateProductTagPayload = {
+  __typename?: 'GraphCMS_UpdateProductTagPayload';
   clientMutationId: Scalars['String'];
   /** The created product_tag */
-  productTag?: Maybe<GraphCms_Wp_ProductTag>;
+  productTag?: Maybe<GraphCms_ProductTag>;
 };
 
 /** Input for the UpdateProductType mutation */
-export type GraphCms_Wp_UpdateProductTypeInput = {
+export type GraphCms_UpdateProductTypeInput = {
   /** The slug that the product_type will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15428,15 +15382,15 @@ export type GraphCms_Wp_UpdateProductTypeInput = {
 };
 
 /** The payload for the UpdateProductType mutation */
-export type GraphCms_Wp_UpdateProductTypePayload = {
-  __typename?: 'GraphCMS_WP_UpdateProductTypePayload';
+export type GraphCms_UpdateProductTypePayload = {
+  __typename?: 'GraphCMS_UpdateProductTypePayload';
   clientMutationId: Scalars['String'];
   /** The created product_type */
-  productType?: Maybe<GraphCms_Wp_ProductType>;
+  productType?: Maybe<GraphCms_ProductType>;
 };
 
 /** Input for the updateSettings mutation */
-export type GraphCms_Wp_UpdateSettingsInput = {
+export type GraphCms_UpdateSettingsInput = {
   clientMutationId: Scalars['String'];
   /** Luba uute artiklite kommenteerimist */
   discussionSettingsDefaultCommentStatus?: Maybe<Scalars['String']>;
@@ -15471,18 +15425,18 @@ export type GraphCms_Wp_UpdateSettingsInput = {
 };
 
 /** The payload for the updateSettings mutation */
-export type GraphCms_Wp_UpdateSettingsPayload = {
-  __typename?: 'GraphCMS_WP_UpdateSettingsPayload';
-  allSettings?: Maybe<GraphCms_Wp_Settings>;
+export type GraphCms_UpdateSettingsPayload = {
+  __typename?: 'GraphCMS_UpdateSettingsPayload';
+  allSettings?: Maybe<GraphCms_Settings>;
   clientMutationId: Scalars['String'];
-  discussionSettings?: Maybe<GraphCms_Wp_DiscussionSettings>;
-  generalSettings?: Maybe<GraphCms_Wp_GeneralSettings>;
-  readingSettings?: Maybe<GraphCms_Wp_ReadingSettings>;
-  writingSettings?: Maybe<GraphCms_Wp_WritingSettings>;
+  discussionSettings?: Maybe<GraphCms_DiscussionSettings>;
+  generalSettings?: Maybe<GraphCms_GeneralSettings>;
+  readingSettings?: Maybe<GraphCms_ReadingSettings>;
+  writingSettings?: Maybe<GraphCms_WritingSettings>;
 };
 
 /** Input for the UpdateShippingClass mutation */
-export type GraphCms_Wp_UpdateShippingClassInput = {
+export type GraphCms_UpdateShippingClassInput = {
   /** The slug that the product_shipping_class will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15503,15 +15457,15 @@ export type GraphCms_Wp_UpdateShippingClassInput = {
 };
 
 /** The payload for the UpdateShippingClass mutation */
-export type GraphCms_Wp_UpdateShippingClassPayload = {
-  __typename?: 'GraphCMS_WP_UpdateShippingClassPayload';
+export type GraphCms_UpdateShippingClassPayload = {
+  __typename?: 'GraphCMS_UpdateShippingClassPayload';
   clientMutationId: Scalars['String'];
   /** The created product_shipping_class */
-  shippingClass?: Maybe<GraphCms_Wp_ShippingClass>;
+  shippingClass?: Maybe<GraphCms_ShippingClass>;
 };
 
 /** Input for the UpdateTag mutation */
-export type GraphCms_Wp_UpdateTagInput = {
+export type GraphCms_UpdateTagInput = {
   /** The slug that the post_tag will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15532,15 +15486,15 @@ export type GraphCms_Wp_UpdateTagInput = {
 };
 
 /** The payload for the UpdateTag mutation */
-export type GraphCms_Wp_UpdateTagPayload = {
-  __typename?: 'GraphCMS_WP_UpdateTagPayload';
+export type GraphCms_UpdateTagPayload = {
+  __typename?: 'GraphCMS_UpdateTagPayload';
   clientMutationId: Scalars['String'];
   /** The created post_tag */
-  tag?: Maybe<GraphCms_Wp_Tag>;
+  tag?: Maybe<GraphCms_Tag>;
 };
 
 /** Input for the updateUser mutation */
-export type GraphCms_Wp_UpdateUserInput = {
+export type GraphCms_UpdateUserInput = {
   /** User's AOL IM account. */
   aim?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15582,14 +15536,14 @@ export type GraphCms_Wp_UpdateUserInput = {
 };
 
 /** The payload for the updateUser mutation */
-export type GraphCms_Wp_UpdateUserPayload = {
-  __typename?: 'GraphCMS_WP_UpdateUserPayload';
+export type GraphCms_UpdateUserPayload = {
+  __typename?: 'GraphCMS_UpdateUserPayload';
   clientMutationId: Scalars['String'];
-  user?: Maybe<GraphCms_Wp_User>;
+  user?: Maybe<GraphCms_User>;
 };
 
 /** Input for the UpdateVisibleProduct mutation */
-export type GraphCms_Wp_UpdateVisibleProductInput = {
+export type GraphCms_UpdateVisibleProductInput = {
   /** The slug that the product_visibility will be an alias of */
   aliasOf?: Maybe<Scalars['String']>;
   clientMutationId: Scalars['String'];
@@ -15610,18 +15564,18 @@ export type GraphCms_Wp_UpdateVisibleProductInput = {
 };
 
 /** The payload for the UpdateVisibleProduct mutation */
-export type GraphCms_Wp_UpdateVisibleProductPayload = {
-  __typename?: 'GraphCMS_WP_UpdateVisibleProductPayload';
+export type GraphCms_UpdateVisibleProductPayload = {
+  __typename?: 'GraphCMS_UpdateVisibleProductPayload';
   clientMutationId: Scalars['String'];
   /** The created product_visibility */
-  visibleProduct?: Maybe<GraphCms_Wp_VisibleProduct>;
+  visibleProduct?: Maybe<GraphCms_VisibleProduct>;
 };
 
 /** A User object */
-export type GraphCms_Wp_User = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_User';
+export type GraphCms_User = GraphCms_Node & {
+  __typename?: 'GraphCMS_User';
   /** Avatar object for user. The avatar object can be retrieved in different sizes by specifying the size argument. */
-  avatar?: Maybe<GraphCms_Wp_Avatar>;
+  avatar?: Maybe<GraphCms_Avatar>;
   /** This field is the id of the user. The id of the user matches WP_User-&gt;ID
    * field and the value in the ID column for the &quot;users&quot; table in SQL.
    */
@@ -15629,7 +15583,7 @@ export type GraphCms_Wp_User = GraphCms_Wp_Node & {
   /** User metadata option name. Usually it will be &quot;wp_capabilities&quot;. */
   capKey?: Maybe<Scalars['String']>;
   /** Connection between the User type and the User type */
-  comments?: Maybe<GraphCms_Wp_UserToCommentConnection>;
+  comments?: Maybe<GraphCms_UserToCommentConnection>;
   /** Description of the user. */
   description?: Maybe<Scalars['String']>;
   /** Email of the user. This is equivalent to the WP_User-&gt;user_email property. */
@@ -15649,7 +15603,7 @@ export type GraphCms_Wp_User = GraphCms_Wp_Node & {
   /** The preferred language locale set for the user. Value derived from get_user_locale(). */
   locale?: Maybe<Scalars['String']>;
   /** Connection between the User type and the User type */
-  mediaItems?: Maybe<GraphCms_Wp_UserToMediaItemConnection>;
+  mediaItems?: Maybe<GraphCms_UserToMediaItemConnection>;
   /** Display name of the user. This is equivalent to the WP_User-&gt;dispaly_name property. */
   name?: Maybe<Scalars['String']>;
   /** The nicename for the user. This field is equivalent to WP_User-&gt;user_nicename */
@@ -15657,15 +15611,15 @@ export type GraphCms_Wp_User = GraphCms_Wp_Node & {
   /** Nickname of the user. */
   nickname?: Maybe<Scalars['String']>;
   /** Connection between the User type and the User type */
-  pages?: Maybe<GraphCms_Wp_UserToPageConnection>;
+  pages?: Maybe<GraphCms_UserToPageConnection>;
   /** Connection between the User type and the User type */
-  posts?: Maybe<GraphCms_Wp_UserToPostConnection>;
+  posts?: Maybe<GraphCms_UserToPostConnection>;
   /** The date the user registered or was created. The field follows a full ISO8601 date string format. */
   registeredDate?: Maybe<Scalars['String']>;
   /** Connection between the User type and the User type */
-  revisions?: Maybe<GraphCms_Wp_UserToRevisionConnection>;
+  revisions?: Maybe<GraphCms_UserToRevisionConnection>;
   /** Connection between the User type and the User type */
-  roles?: Maybe<GraphCms_Wp_UserToUserRoleConnection>;
+  roles?: Maybe<GraphCms_UserToUserRoleConnection>;
   /** The slug for the user. This field is equivalent to WP_User-&gt;user_nicename */
   slug?: Maybe<Scalars['String']>;
   /** A website url that is associated with the user. */
@@ -15677,59 +15631,59 @@ export type GraphCms_Wp_User = GraphCms_Wp_Node & {
 };
 
 /** A User object */
-export type GraphCms_Wp_UserAvatarArgs = {
+export type GraphCms_UserAvatarArgs = {
   size: Scalars['Int'];
   forceDefault?: Maybe<Scalars['Boolean']>;
-  rating?: Maybe<GraphCms_Wp_AvatarRatingEnum>;
+  rating?: Maybe<GraphCms_AvatarRatingEnum>;
 };
 
 /** A User object */
-export type GraphCms_Wp_UserCommentsArgs = {
+export type GraphCms_UserCommentsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_UserToCommentConnectionWhereArgs>;
+  where?: Maybe<GraphCms_UserToCommentConnectionWhereArgs>;
 };
 
 /** A User object */
-export type GraphCms_Wp_UserMediaItemsArgs = {
+export type GraphCms_UserMediaItemsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_UserToMediaItemConnectionWhereArgs>;
+  where?: Maybe<GraphCms_UserToMediaItemConnectionWhereArgs>;
 };
 
 /** A User object */
-export type GraphCms_Wp_UserPagesArgs = {
+export type GraphCms_UserPagesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_UserToPageConnectionWhereArgs>;
+  where?: Maybe<GraphCms_UserToPageConnectionWhereArgs>;
 };
 
 /** A User object */
-export type GraphCms_Wp_UserPostsArgs = {
+export type GraphCms_UserPostsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_UserToPostConnectionWhereArgs>;
+  where?: Maybe<GraphCms_UserToPostConnectionWhereArgs>;
 };
 
 /** A User object */
-export type GraphCms_Wp_UserRevisionsArgs = {
+export type GraphCms_UserRevisionsArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
   before?: Maybe<Scalars['String']>;
-  where?: Maybe<GraphCms_Wp_UserToRevisionConnectionWhereArgs>;
+  where?: Maybe<GraphCms_UserToRevisionConnectionWhereArgs>;
 };
 
 /** A User object */
-export type GraphCms_Wp_UserRolesArgs = {
+export type GraphCms_UserRolesArgs = {
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
   after?: Maybe<Scalars['String']>;
@@ -15737,8 +15691,8 @@ export type GraphCms_Wp_UserRolesArgs = {
 };
 
 /** A user role object */
-export type GraphCms_Wp_UserRole = {
-  __typename?: 'GraphCMS_WP_UserRole';
+export type GraphCms_UserRole = {
+  __typename?: 'GraphCMS_UserRole';
   /** The capabilities that belong to this role */
   capabilities?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** The globally unique identifier for the role */
@@ -15750,7 +15704,7 @@ export type GraphCms_Wp_UserRole = {
 };
 
 /** Names of available user roles */
-export enum GraphCms_Wp_UserRoleEnum {
+export enum GraphCms_UserRoleEnum {
   Author = 'AUTHOR',
   Contributor = 'CONTRIBUTOR',
   Customer = 'CUSTOMER',
@@ -15760,7 +15714,7 @@ export enum GraphCms_Wp_UserRoleEnum {
 }
 
 /** Column used for searching for users */
-export enum GraphCms_Wp_UsersConnectionSearchColumnEnum {
+export enum GraphCms_UsersConnectionSearchColumnEnum {
   Email = 'EMAIL',
   Id = 'ID',
   Login = 'LOGIN',
@@ -15769,27 +15723,27 @@ export enum GraphCms_Wp_UsersConnectionSearchColumnEnum {
 }
 
 /** Connection between the User type and the User type */
-export type GraphCms_Wp_UserToCommentConnection = {
-  __typename?: 'GraphCMS_WP_UserToCommentConnection';
+export type GraphCms_UserToCommentConnection = {
+  __typename?: 'GraphCMS_UserToCommentConnection';
   /** Edges for the UserToCommentConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_UserToCommentConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_UserToCommentConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Comment>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Comment>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_UserToCommentConnectionEdge = {
-  __typename?: 'GraphCMS_WP_UserToCommentConnectionEdge';
+export type GraphCms_UserToCommentConnectionEdge = {
+  __typename?: 'GraphCMS_UserToCommentConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Comment>;
+  node?: Maybe<GraphCms_Comment>;
 };
 
 /** Arguments for filtering the UserToCommentConnection connection */
-export type GraphCms_Wp_UserToCommentConnectionWhereArgs = {
+export type GraphCms_UserToCommentConnectionWhereArgs = {
   /** Comment author email address. */
   authorEmail?: Maybe<Scalars['String']>;
   /** Array of author IDs to include comments for. */
@@ -15835,9 +15789,9 @@ export type GraphCms_Wp_UserToCommentConnectionWhereArgs = {
   /** Array of content object statuses to retrieve affiliated comments for.
    * 							Pass 'any' to match any value.
    */
-  contentStatus?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
+  contentStatus?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
   /** Content object type or array of types to retrieve affiliated comments for. Pass 'any' to match any value. */
-  contentType?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
+  contentType?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
   /** Array of IDs or email addresses of users whose unapproved comments will be
    * returned by the query regardless of $status. Default empty
    */
@@ -15845,9 +15799,9 @@ export type GraphCms_Wp_UserToCommentConnectionWhereArgs = {
   /** Karma score to retrieve matching comments for. */
   karma?: Maybe<Scalars['Int']>;
   /** The cardinality of the order of the connection */
-  order?: Maybe<GraphCms_Wp_OrderEnum>;
+  order?: Maybe<GraphCms_OrderEnum>;
   /** Field to order the comments by. */
-  orderby?: Maybe<GraphCms_Wp_CommentsConnectionOrderbyEnum>;
+  orderby?: Maybe<GraphCms_CommentsConnectionOrderbyEnum>;
   /** Parent ID of comment to retrieve children of. */
   parent?: Maybe<Scalars['Int']>;
   /** Array of parent IDs of comments to retrieve children for. */
@@ -15865,29 +15819,29 @@ export type GraphCms_Wp_UserToCommentConnectionWhereArgs = {
 };
 
 /** Connection between the User type and the User type */
-export type GraphCms_Wp_UserToMediaItemConnection = {
-  __typename?: 'GraphCMS_WP_UserToMediaItemConnection';
+export type GraphCms_UserToMediaItemConnection = {
+  __typename?: 'GraphCMS_UserToMediaItemConnection';
   /** Edges for the UserToMediaItemConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_UserToMediaItemConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_UserToMediaItemConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_MediaItem>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_MediaItem>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_UserToMediaItemConnectionEdge = {
-  __typename?: 'GraphCMS_WP_UserToMediaItemConnectionEdge';
+export type GraphCms_UserToMediaItemConnectionEdge = {
+  __typename?: 'GraphCMS_UserToMediaItemConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_MediaItem>;
+  node?: Maybe<GraphCms_MediaItem>;
 };
 
 /** Arguments for filtering the UserToMediaItemConnection connection */
-export type GraphCms_Wp_UserToMediaItemConnectionWhereArgs = {
+export type GraphCms_UserToMediaItemConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -15913,7 +15867,7 @@ export type GraphCms_Wp_UserToMediaItemConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -15923,7 +15877,7 @@ export type GraphCms_Wp_UserToMediaItemConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -15933,7 +15887,7 @@ export type GraphCms_Wp_UserToMediaItemConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -15946,8 +15900,8 @@ export type GraphCms_Wp_UserToMediaItemConnectionWhereArgs = {
   password?: Maybe<Scalars['String']>;
   /** Show Posts based on a keyword search */
   search?: Maybe<Scalars['String']>;
-  stati?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  stati?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<Scalars['String']>;
   /** Use Tag ID */
@@ -15973,29 +15927,29 @@ export type GraphCms_Wp_UserToMediaItemConnectionWhereArgs = {
 };
 
 /** Connection between the User type and the User type */
-export type GraphCms_Wp_UserToPageConnection = {
-  __typename?: 'GraphCMS_WP_UserToPageConnection';
+export type GraphCms_UserToPageConnection = {
+  __typename?: 'GraphCMS_UserToPageConnection';
   /** Edges for the UserToPageConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_UserToPageConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_UserToPageConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Page>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Page>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_UserToPageConnectionEdge = {
-  __typename?: 'GraphCMS_WP_UserToPageConnectionEdge';
+export type GraphCms_UserToPageConnectionEdge = {
+  __typename?: 'GraphCMS_UserToPageConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Page>;
+  node?: Maybe<GraphCms_Page>;
 };
 
 /** Arguments for filtering the UserToPageConnection connection */
-export type GraphCms_Wp_UserToPageConnectionWhereArgs = {
+export type GraphCms_UserToPageConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -16021,7 +15975,7 @@ export type GraphCms_Wp_UserToPageConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -16031,7 +15985,7 @@ export type GraphCms_Wp_UserToPageConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -16041,7 +15995,7 @@ export type GraphCms_Wp_UserToPageConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -16054,8 +16008,8 @@ export type GraphCms_Wp_UserToPageConnectionWhereArgs = {
   password?: Maybe<Scalars['String']>;
   /** Show Posts based on a keyword search */
   search?: Maybe<Scalars['String']>;
-  stati?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  stati?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<Scalars['String']>;
   /** Use Tag ID */
@@ -16081,29 +16035,29 @@ export type GraphCms_Wp_UserToPageConnectionWhereArgs = {
 };
 
 /** Connection between the User type and the User type */
-export type GraphCms_Wp_UserToPostConnection = {
-  __typename?: 'GraphCMS_WP_UserToPostConnection';
+export type GraphCms_UserToPostConnection = {
+  __typename?: 'GraphCMS_UserToPostConnection';
   /** Edges for the UserToPostConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_UserToPostConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_UserToPostConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Post>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Post>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_UserToPostConnectionEdge = {
-  __typename?: 'GraphCMS_WP_UserToPostConnectionEdge';
+export type GraphCms_UserToPostConnectionEdge = {
+  __typename?: 'GraphCMS_UserToPostConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Post>;
+  node?: Maybe<GraphCms_Post>;
 };
 
 /** Arguments for filtering the UserToPostConnection connection */
-export type GraphCms_Wp_UserToPostConnectionWhereArgs = {
+export type GraphCms_UserToPostConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -16129,7 +16083,7 @@ export type GraphCms_Wp_UserToPostConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -16139,7 +16093,7 @@ export type GraphCms_Wp_UserToPostConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -16149,7 +16103,7 @@ export type GraphCms_Wp_UserToPostConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -16162,8 +16116,8 @@ export type GraphCms_Wp_UserToPostConnectionWhereArgs = {
   password?: Maybe<Scalars['String']>;
   /** Show Posts based on a keyword search */
   search?: Maybe<Scalars['String']>;
-  stati?: Maybe<Array<Maybe<GraphCms_Wp_PostStatusEnum>>>;
-  status?: Maybe<GraphCms_Wp_PostStatusEnum>;
+  stati?: Maybe<Array<Maybe<GraphCms_PostStatusEnum>>>;
+  status?: Maybe<GraphCms_PostStatusEnum>;
   /** Tag Slug */
   tag?: Maybe<Scalars['String']>;
   /** Use Tag ID */
@@ -16189,29 +16143,29 @@ export type GraphCms_Wp_UserToPostConnectionWhereArgs = {
 };
 
 /** Connection between the User type and the User type */
-export type GraphCms_Wp_UserToRevisionConnection = {
-  __typename?: 'GraphCMS_WP_UserToRevisionConnection';
+export type GraphCms_UserToRevisionConnection = {
+  __typename?: 'GraphCMS_UserToRevisionConnection';
   /** Edges for the UserToRevisionConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_UserToRevisionConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_UserToRevisionConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_Revision>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_Revision>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
   /** Information about the type of content being queried */
-  postTypeInfo?: Maybe<GraphCms_Wp_PostType>;
+  postTypeInfo?: Maybe<GraphCms_PostType>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_UserToRevisionConnectionEdge = {
-  __typename?: 'GraphCMS_WP_UserToRevisionConnectionEdge';
+export type GraphCms_UserToRevisionConnectionEdge = {
+  __typename?: 'GraphCMS_UserToRevisionConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_Revision>;
+  node?: Maybe<GraphCms_Revision>;
 };
 
 /** Arguments for filtering the UserToRevisionConnection connection */
-export type GraphCms_Wp_UserToRevisionConnectionWhereArgs = {
+export type GraphCms_UserToRevisionConnectionWhereArgs = {
   /** The user that's connected as the author of the object. Use the
    * 							userId for the author object.
    */
@@ -16237,7 +16191,7 @@ export type GraphCms_Wp_UserToRevisionConnectionWhereArgs = {
    */
   categoryNotIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Filter the connection based on dates */
-  dateQuery?: Maybe<GraphCms_Wp_DateQueryInput>;
+  dateQuery?: Maybe<GraphCms_DateQueryInput>;
   /** True for objects with passwords; False for objects without passwords;
    * 							null for all objects with or without passwords
    */
@@ -16247,7 +16201,7 @@ export type GraphCms_Wp_UserToRevisionConnectionWhereArgs = {
   /** Array of IDs for the objects to retrieve */
   in?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** Get objects with a specific mimeType property */
-  mimeType?: Maybe<GraphCms_Wp_MimeTypeEnum>;
+  mimeType?: Maybe<GraphCms_MimeTypeEnum>;
   /** Slug / post_name of the object */
   name?: Maybe<Scalars['String']>;
   /** Specify objects to retrieve. Use slugs */
@@ -16257,7 +16211,7 @@ export type GraphCms_Wp_UserToRevisionConnectionWhereArgs = {
    */
   notIn?: Maybe<Array<Maybe<Scalars['ID']>>>;
   /** What paramater to use to order the objects by. */
-  orderby?: Maybe<Array<Maybe<GraphCms_Wp_PostObjectsConnectionOrderbyInput>>>;
+  orderby?: Maybe<Array<Maybe<GraphCms_PostObjectsConnectionOrderbyInput>>>;
   /** Use ID to return only children. Use 0 to return only top-level
    * 							items
    */
@@ -16295,28 +16249,28 @@ export type GraphCms_Wp_UserToRevisionConnectionWhereArgs = {
 };
 
 /** Connection between the User type and the User type */
-export type GraphCms_Wp_UserToUserRoleConnection = {
-  __typename?: 'GraphCMS_WP_UserToUserRoleConnection';
+export type GraphCms_UserToUserRoleConnection = {
+  __typename?: 'GraphCMS_UserToUserRoleConnection';
   /** Edges for the UserToUserRoleConnection connection */
-  edges?: Maybe<Array<Maybe<GraphCms_Wp_UserToUserRoleConnectionEdge>>>;
+  edges?: Maybe<Array<Maybe<GraphCms_UserToUserRoleConnectionEdge>>>;
   /** The nodes of the connection, without the edges */
-  nodes?: Maybe<Array<Maybe<GraphCms_Wp_UserRole>>>;
+  nodes?: Maybe<Array<Maybe<GraphCms_UserRole>>>;
   /** Information about pagination in a connection. */
-  pageInfo?: Maybe<GraphCms_Wp_WpPageInfo>;
+  pageInfo?: Maybe<GraphCms_WpPageInfo>;
 };
 
 /** An edge in a connection */
-export type GraphCms_Wp_UserToUserRoleConnectionEdge = {
-  __typename?: 'GraphCMS_WP_UserToUserRoleConnectionEdge';
+export type GraphCms_UserToUserRoleConnectionEdge = {
+  __typename?: 'GraphCMS_UserToUserRoleConnectionEdge';
   /** A cursor for use in pagination */
   cursor?: Maybe<Scalars['String']>;
   /** The item at the end of the edge */
-  node?: Maybe<GraphCms_Wp_UserRole>;
+  node?: Maybe<GraphCms_UserRole>;
 };
 
 /** A product variation attribute object */
-export type GraphCms_Wp_VariationAttribute = {
-  __typename?: 'GraphCMS_WP_VariationAttribute';
+export type GraphCms_VariationAttribute = {
+  __typename?: 'GraphCMS_VariationAttribute';
   /** The Id of the order. Equivalent to WP_Post-&gt;ID */
   id?: Maybe<Scalars['Int']>;
   /** Name of attribute */
@@ -16326,8 +16280,8 @@ export type GraphCms_Wp_VariationAttribute = {
 };
 
 /** The visibleProduct type */
-export type GraphCms_Wp_VisibleProduct = GraphCms_Wp_Node & {
-  __typename?: 'GraphCMS_WP_VisibleProduct';
+export type GraphCms_VisibleProduct = GraphCms_Node & {
+  __typename?: 'GraphCMS_VisibleProduct';
   /** The number of objects connected to the object */
   count?: Maybe<Scalars['Int']>;
   /** The description of the object */
@@ -16343,7 +16297,7 @@ export type GraphCms_Wp_VisibleProduct = GraphCms_Wp_Node & {
   /** An alphanumeric identifier for the object unique to its type. */
   slug?: Maybe<Scalars['String']>;
   /** The name of the taxonomy this term belongs to */
-  taxonomy?: Maybe<GraphCms_Wp_Taxonomy>;
+  taxonomy?: Maybe<GraphCms_Taxonomy>;
   /** The ID of the term group that this term object belongs to */
   termGroupId?: Maybe<Scalars['Int']>;
   /** The taxonomy ID that the object is associated with */
@@ -16353,7 +16307,7 @@ export type GraphCms_Wp_VisibleProduct = GraphCms_Wp_Node & {
 };
 
 /** Field to order the connection by */
-export enum GraphCms_Wp_WcConnectionOrderbyEnum {
+export enum GraphCms_WcConnectionOrderbyEnum {
   /** Order by publish date */
   Date = 'DATE',
   /** Preserve the ID order given in the IN array */
@@ -16377,14 +16331,14 @@ export enum GraphCms_Wp_WcConnectionOrderbyEnum {
 }
 
 /** Options for ordering the connection */
-export type GraphCms_Wp_WcConnectionOrderbyInput = {
-  field: GraphCms_Wp_WcConnectionOrderbyEnum;
-  order?: Maybe<GraphCms_Wp_OrderEnum>;
+export type GraphCms_WcConnectionOrderbyInput = {
+  field: GraphCms_WcConnectionOrderbyEnum;
+  order?: Maybe<GraphCms_OrderEnum>;
 };
 
 /** Information about pagination in a connection. */
-export type GraphCms_Wp_WpPageInfo = {
-  __typename?: 'GraphCMS_WP_WPPageInfo';
+export type GraphCms_WpPageInfo = {
+  __typename?: 'GraphCMS_WPPageInfo';
   /** When paginating forwards, the cursor to continue. */
   endCursor?: Maybe<Scalars['String']>;
   /** When paginating forwards, are there more items? */
@@ -16396,8 +16350,8 @@ export type GraphCms_Wp_WpPageInfo = {
 };
 
 /** The writing setting type */
-export type GraphCms_Wp_WritingSettings = {
-  __typename?: 'GraphCMS_WP_WritingSettings';
+export type GraphCms_WritingSettings = {
+  __typename?: 'GraphCMS_WritingSettings';
   /** Vaikimisi rubriik. */
   defaultCategory?: Maybe<Scalars['Int']>;
   /** Vaikimisi postitusevorming */
@@ -17457,46 +17411,42 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 export type ProductForListingFragment = {
-  __typename?: 'GraphCMS_WP_Product';
-} & Pick<GraphCms_Wp_Product, 'name' | 'slug' | 'price' | 'salePrice'> & {
+  __typename?: 'GraphCMS_Product';
+} & Pick<GraphCms_Product, 'name' | 'slug' | 'price' | 'salePrice'> & {
     image: Maybe<
-      { __typename?: 'GraphCMS_WP_MediaItem' } & Pick<
-        GraphCms_Wp_MediaItem,
+      { __typename?: 'GraphCMS_MediaItem' } & Pick<
+        GraphCms_MediaItem,
         'srcSet'
       > & {
           mediaDetails: Maybe<
-            { __typename?: 'GraphCMS_WP_MediaDetails' } & Pick<
-              GraphCms_Wp_MediaDetails,
+            { __typename?: 'GraphCMS_MediaDetails' } & Pick<
+              GraphCms_MediaDetails,
               'width' | 'height'
             >
           >;
         }
     >;
     galleryImages: Maybe<
-      { __typename?: 'GraphCMS_WP_ProductToMediaItemConnection' } & {
+      { __typename?: 'GraphCMS_ProductToMediaItemConnection' } & {
         edges: Maybe<
           Array<
             Maybe<
-              {
-                __typename?: 'GraphCMS_WP_ProductToMediaItemConnectionEdge';
-              } & {
+              { __typename?: 'GraphCMS_ProductToMediaItemConnectionEdge' } & {
                 node: Maybe<
-                  { __typename?: 'GraphCMS_WP_MediaItem' } & Pick<
-                    GraphCms_Wp_MediaItem,
+                  { __typename?: 'GraphCMS_MediaItem' } & Pick<
+                    GraphCms_MediaItem,
                     'srcSet'
                   > & {
                       mediaDetails: Maybe<
-                        { __typename?: 'GraphCMS_WP_MediaDetails' } & Pick<
-                          GraphCms_Wp_MediaDetails,
+                        { __typename?: 'GraphCMS_MediaDetails' } & Pick<
+                          GraphCms_MediaDetails,
                           'width' | 'height'
                         > & {
                             sizes: Maybe<
                               Array<
                                 Maybe<
-                                  {
-                                    __typename?: 'GraphCMS_WP_MediaSize';
-                                  } & Pick<
-                                    GraphCms_Wp_MediaSize,
+                                  { __typename?: 'GraphCMS_MediaSize' } & Pick<
+                                    GraphCms_MediaSize,
                                     'width' | 'height' | 'sourceUrl'
                                   >
                                 >
@@ -17526,17 +17476,17 @@ export type MainLayoutQuery = { __typename?: 'Query' } & {
   >;
   cms: Maybe<
     { __typename?: 'GraphCMS' } & {
-      WP_productCategories: Maybe<
-        { __typename?: 'GraphCMS_WP_RootQueryToProductCategoryConnection' } & {
+      productCategories: Maybe<
+        { __typename?: 'GraphCMS_RootQueryToProductCategoryConnection' } & {
           edges: Maybe<
             Array<
               Maybe<
                 {
-                  __typename?: 'GraphCMS_WP_RootQueryToProductCategoryConnectionEdge';
+                  __typename?: 'GraphCMS_RootQueryToProductCategoryConnectionEdge';
                 } & {
                   node: Maybe<
-                    { __typename?: 'GraphCMS_WP_ProductCategory' } & Pick<
-                      GraphCms_Wp_ProductCategory,
+                    { __typename?: 'GraphCMS_ProductCategory' } & Pick<
+                      GraphCms_ProductCategory,
                       'name' | 'slug'
                     >
                   >;
@@ -17562,17 +17512,15 @@ export type IndexQueryQuery = { __typename?: 'Query' } & {
   >;
   cms: Maybe<
     { __typename?: 'GraphCMS' } & {
-      WP_products: Maybe<
-        { __typename?: 'GraphCMS_WP_RootQueryToProductConnection' } & {
+      products: Maybe<
+        { __typename?: 'GraphCMS_RootQueryToProductConnection' } & {
           edges: Maybe<
             Array<
               Maybe<
-                {
-                  __typename?: 'GraphCMS_WP_RootQueryToProductConnectionEdge';
-                } & {
+                { __typename?: 'GraphCMS_RootQueryToProductConnectionEdge' } & {
                   node: Maybe<
                     {
-                      __typename?: 'GraphCMS_WP_Product';
+                      __typename?: 'GraphCMS_Product';
                     } & ProductForListingFragment
                   >;
                 }
@@ -17599,24 +17547,22 @@ export type CategoryTemplateQuery = { __typename?: 'Query' } & {
   >;
   cms: Maybe<
     { __typename?: 'GraphCMS' } & {
-      WP_productCategory: Maybe<
-        { __typename?: 'GraphCMS_WP_ProductCategory' } & Pick<
-          GraphCms_Wp_ProductCategory,
+      productCategory: Maybe<
+        { __typename?: 'GraphCMS_ProductCategory' } & Pick<
+          GraphCms_ProductCategory,
           'name'
         > & {
             products: Maybe<
-              {
-                __typename?: 'GraphCMS_WP_ProductCategoryToProductConnection';
-              } & {
+              { __typename?: 'GraphCMS_ProductCategoryToProductConnection' } & {
                 edges: Maybe<
                   Array<
                     Maybe<
                       {
-                        __typename?: 'GraphCMS_WP_ProductCategoryToProductConnectionEdge';
+                        __typename?: 'GraphCMS_ProductCategoryToProductConnectionEdge';
                       } & {
                         node: Maybe<
                           {
-                            __typename?: 'GraphCMS_WP_Product';
+                            __typename?: 'GraphCMS_Product';
                           } & ProductForListingFragment
                         >;
                       }
@@ -17645,19 +17591,19 @@ export type ProductTemplateQuery = { __typename?: 'Query' } & {
   >;
   cms: Maybe<
     { __typename?: 'GraphCMS' } & {
-      WP_product: Maybe<
-        { __typename?: 'GraphCMS_WP_Product' } & Pick<
-          GraphCms_Wp_Product,
+      product: Maybe<
+        { __typename?: 'GraphCMS_Product' } & Pick<
+          GraphCms_Product,
           'id' | 'name' | 'description'
         > & {
             image: Maybe<
-              { __typename?: 'GraphCMS_WP_MediaItem' } & Pick<
-                GraphCms_Wp_MediaItem,
+              { __typename?: 'GraphCMS_MediaItem' } & Pick<
+                GraphCms_MediaItem,
                 'srcSet'
               > & {
                   mediaDetails: Maybe<
-                    { __typename?: 'GraphCMS_WP_MediaDetails' } & Pick<
-                      GraphCms_Wp_MediaDetails,
+                    { __typename?: 'GraphCMS_MediaDetails' } & Pick<
+                      GraphCms_MediaDetails,
                       'width' | 'height'
                     >
                   >;
